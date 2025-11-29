@@ -2,7 +2,7 @@
 .pools-hero{position:relative;overflow:hidden;height:100vh;background:#0000FF}
 .pools-hero-bg{position:absolute;inset:0;pointer-events:none}
 .pools-hero-texture{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:1;mix-blend-mode:lighten}
-.pools-hero-ascii{position:absolute;right:0;bottom:-160px;width:746px;height:auto;max-height:100vh;opacity:1}
+.pools-hero-ascii{position:absolute;right:0;bottom:-10px;width:846px;height:auto;max-height:100vh;opacity:1}
 .pools-hero-content{position:relative;height:100vh;display:flex;flex-direction:column;justify-content:center;padding:102px 0 84px}
 .pools-hero .container{max-width:none;margin:0;padding-left:64px;padding-right:24px}
 .pools-hero-text{max-width:520px}
@@ -42,6 +42,9 @@
 .pools-card-text{display:flex;flex-direction:column;gap:10px}
 .pools-card-title{font-size:24px;font-weight:400;line-height:0.583;color:#000;margin:0}
 .pools-card-desc{font-size:14px;font-weight:400;line-height:1;color:#6A6D78;margin:0}
+.pools-cards-button-wrapper{display:flex;justify-content:center;margin-top:48px;width:100%}
+.btn-create-pool{display:inline-flex;align-items:center;justify-content:center;background:#0000FF;color:#fff;font-size:22px;font-weight:400;line-height:1.1345;letter-spacing:-0.01745em;padding:10px 32px;border-radius:19px;text-decoration:none;height:auto;white-space:nowrap;transition:opacity 0.2s ease}
+.btn-create-pool:hover{opacity:0.9}
 
 /* Responsive - Pools Cards */
 @media (max-width: 960px){
@@ -57,24 +60,29 @@
   .pools-card-title{font-size:20px}
   .pools-card-desc{font-size:12px}
   .pools-card{padding:18px 12px}
+  .pools-cards-button-wrapper{margin-top:32px}
+  .btn-create-pool{font-size:18px;padding:8px 24px;width:100%;max-width:280px}
 }
 
 /* AthleteStash Section */
 .athletestash-section{background:#fff;padding:96px 0 100px;position:relative}
 .athletestash-container{max-width:1509px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:900px 1fr;gap:40px;align-items:flex-start}
 .athletestash-content{padding-right:0}
-.athletestash-title{font-size:48px;font-weight:500;line-height:.9375;letter-spacing:-0.025em;color:#4D4D4D;margin:0 0 9px}
-.athletestash-subtitle{font-size:16px;font-weight:400;line-height:1.3;letter-spacing:-0.02em;color:#4D4D4D;margin:0 0 78px;max-width:100%}
-.athletestash-buttons{display:flex;gap:25px;margin-bottom:75px;flex-wrap:nowrap}
-.btn-create-stash{display:inline-flex;align-items:center;justify-content:center;background:#0000FF;color:#fff;font-size:22px;font-weight:400;line-height:1.1345;letter-spacing:-0.01745em;padding:6px 24px;border-radius:19px;text-decoration:none;height:37px;white-space:nowrap;flex-shrink:0}
-.btn-support-athlete{display:inline-flex;align-items:center;justify-content:center;background:transparent;color:#0000FF;font-size:22px;font-weight:400;line-height:1.1345;letter-spacing:-0.01745em;padding:6px 24px;border-radius:19px;text-decoration:none;height:37px;border:1px solid #0000FF;white-space:nowrap;flex-shrink:0}
-.athletestash-details{max-width:100%}
-.athletestash-details p{font-size:16px;font-weight:400;line-height:1.3;letter-spacing:-0.02em;color:#4D4D4D;margin:0 0 20px}
-.athletestash-details p:last-of-type{margin-bottom:0}
-.athletestash-details strong{font-weight:400}
-.athletestash-list{list-style:decimal;padding-left:20px;margin:20px 0 0}
-.athletestash-list li{font-size:16px;font-weight:400;line-height:1.3;letter-spacing:-0.02em;color:#4D4D4D;margin-bottom:12px}
-.athletestash-list li:last-child{margin-bottom:0}
+.athletestash-title{font-size:48px;font-weight:500;line-height:.9375;letter-spacing:-0.025em;color:#4D4D4D;margin:0 0 32px}
+.athletestash-details{max-width:100%;margin-bottom:40px}
+.athletestash-problem-title{font-size:24px;font-weight:500;line-height:1.2;letter-spacing:-0.02em;color:#4D4D4D;margin:0 0 16px}
+.athletestash-problem-list{list-style:none;padding:0;margin:0 0 40px}
+.athletestash-problem-list li{font-size:16px;font-weight:400;line-height:1.5;letter-spacing:-0.01em;color:#4D4D4D;margin-bottom:12px;position:relative;padding-left:24px}
+.athletestash-problem-list li:before{content:"•";position:absolute;left:0;color:#4D4D4D;font-size:20px;line-height:1}
+.athletestash-problem-list li:last-child{margin-bottom:0}
+.athletestash-solution-title{font-size:24px;font-weight:500;line-height:1.2;letter-spacing:-0.02em;color:#4D4D4D;margin:0 0 16px}
+.athletestash-solution-list{list-style:none;padding:0;margin:0}
+.athletestash-solution-list li{font-size:16px;font-weight:400;line-height:1.5;letter-spacing:-0.01em;color:#4D4D4D;margin-bottom:12px;position:relative;padding-left:24px}
+.athletestash-solution-list li:before{content:"•";position:absolute;left:0;color:#4D4D4D;font-size:20px;line-height:1}
+.athletestash-solution-list li:last-child{margin-bottom:0}
+.athletestash-buttons{display:flex;gap:25px;flex-wrap:nowrap}
+.btn-create-pool-athletestash{display:inline-flex;align-items:center;justify-content:center;background:#0000FF;color:#fff;font-size:22px;font-weight:400;line-height:1.1345;letter-spacing:-0.01745em;padding:10px 32px;border-radius:19px;text-decoration:none;height:auto;white-space:nowrap;transition:opacity 0.2s ease}
+.btn-create-pool-athletestash:hover{opacity:0.9}
 .athletestash-image{display:flex;align-items:flex-start;justify-content:flex-end}
 .athletestash-image img{width:901px;height:auto;display:block;object-fit:contain}
 
@@ -87,34 +95,75 @@
 
 @media (max-width: 768px){
   .athletestash-buttons{flex-direction:column;gap:16px;flex-wrap:wrap}
-  .btn-create-stash,.btn-support-athlete{width:100%}
+  .btn-create-pool-athletestash{width:100%}
   .athletestash-title{font-size:36px}
-  .athletestash-subtitle{font-size:14px;margin-bottom:40px}
-  .athletestash-details p{font-size:14px}
-  .athletestash-list li{font-size:14px}
+  .athletestash-problem-title,.athletestash-solution-title{font-size:20px}
+  .athletestash-problem-list li,.athletestash-solution-list li{font-size:14px}
 }
 
 @media (max-width: 640px){
   .athletestash-section{padding:60px 0 80px}
   .athletestash-title{font-size:32px}
-  .athletestash-subtitle{font-size:13px}
-  .btn-create-stash,.btn-support-athlete{font-size:18px;width:100%}
+  .athletestash-problem-title,.athletestash-solution-title{font-size:18px}
+  .athletestash-problem-list li,.athletestash-solution-list li{font-size:13px}
+  .btn-create-pool-athletestash{font-size:18px;width:100%}
+}
+
+/* Pools Features Section */
+.pools-features-section{background:#fff;padding:96px 0 100px;position:relative}
+.pools-features-container{max-width:1509px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:48px}
+.pools-feature-wrapper{display:flex;flex-direction:column}
+.pools-feature-title{font-size:24px;font-weight:500;line-height:1.2;letter-spacing:-0.02em;color:#4D4D4D;margin:0 0 4px;text-align:center}
+.pools-feature-card{background:#0000ff00;border-radius:24px;padding:16px;display:flex;flex-direction:column;overflow:visible}
+.pools-feature-content{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0}
+.pools-image-wrapper{position:relative;width:100%;max-width:100%;height:400px;display:flex;align-items:center;justify-content:center}
+.pools-image-shadow{position:absolute;background:#0000FF;border-radius:20px;width:calc(100% - 24px);height:calc(100% - 24px);top:32px;left:42px;z-index:0}
+.pools-main-image{position:relative;z-index:1;border-radius:20px;max-width:calc(100% - 24px);max-height:calc(100% - 24px);width:auto;height:auto;display:block;object-fit:contain;margin-top:12px;margin-left:12px}
+.challenge-overlay{position:absolute;background:rgba(0,0,255,0.9);border-radius:12px;padding:12px 16px;color:#fff;font-size:14px;font-weight:500;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.3);z-index:2}
+.challenge-overlay-left{top:20px;left:20px;max-width:200px}
+.challenge-overlay-right{bottom:20px;right:20px}
+.challenge-button{background:#fff;color:#0000FF;border:none;border-radius:8px;padding:8px 16px;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap}
+.pools-features-button-wrapper{display:flex;justify-content:center;width:100%}
+.btn-join-pool{display:inline-flex;align-items:center;justify-content:center;background:#0000FF;color:#fff;font-size:22px;font-weight:400;line-height:1.1345;letter-spacing:-0.01745em;padding:10px 32px;border-radius:19px;text-decoration:none;height:auto;white-space:nowrap;transition:opacity 0.2s ease}
+.btn-join-pool:hover{opacity:0.9}
+
+/* Responsive - Pools Features */
+@media (max-width: 1200px){
+  .pools-features-container{grid-template-columns:1fr;gap:32px}
+}
+
+@media (max-width: 768px){
+  .pools-features-section{padding:60px 0 80px}
+  .pools-feature-card{padding:12px}
+  .pools-feature-title{font-size:20px}
+}
+
+@media (max-width: 640px){
+  .pools-features-container{padding:0 24px}
+  .pools-feature-card{padding:10px}
+  .pools-feature-title{font-size:18px}
+  .pools-image-wrapper{height:300px}
+  .pools-image-shadow{top:8px;left:8px}
+  .pools-main-image{margin-top:8px;margin-left:8px;max-width:calc(100% - 16px);max-height:calc(100% - 16px)}
+  .btn-join-pool{font-size:18px;padding:8px 24px;width:100%;max-width:280px}
 }
 
 /* ZeroCostSponsorship Section */
 .zerocost-section{background:#fff;padding:96px 0 100px;position:relative}
 .zerocost-container{max-width:1423px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:654px 1fr;gap:40px;align-items:flex-start}
 .zerocost-content{padding-right:0}
-.zerocost-title{font-size:48px;font-weight:500;line-height:.9375;letter-spacing:-0.025em;color:#4D4D4D;margin:0 0 9px}
-.zerocost-subtitle{font-size:16px;font-weight:400;line-height:1.3;letter-spacing:-0.02em;color:#4D4D4D;margin:0 0 78px;max-width:100%}
-.zerocost-buttons{display:flex;gap:25px;margin-bottom:75px}
-.btn-start-sponsorship{display:inline-flex;align-items:center;justify-content:center;background:#0000FF;color:#fff;font-size:22px;font-weight:400;line-height:1.1345;letter-spacing:-0.01745em;padding:6px 26px;border-radius:19px;text-decoration:none;height:37px;white-space:nowrap}
-.zerocost-details{max-width:100%}
+.zerocost-title{font-size:48px;font-weight:500;line-height:.9375;letter-spacing:-0.025em;color:#4D4D4D;margin:0 0 24px}
+.zerocost-details{max-width:100%;margin-bottom:32px}
 .zerocost-details p{font-size:16px;font-weight:400;line-height:1.3;letter-spacing:-0.02em;color:#4D4D4D;margin:0 0 20px}
 .zerocost-details p:last-of-type{margin-bottom:0}
-.zerocost-list{list-style:decimal;padding-left:20px;margin:20px 0 0}
-.zerocost-list li{font-size:16px;font-weight:400;line-height:1.3;letter-spacing:-0.02em;color:#4D4D4D;margin-bottom:12px}
-.zerocost-list li:last-child{margin-bottom:0}
+.zerocost-buttons{display:flex;gap:25px;margin-bottom:40px}
+.btn-talk-to-sales{display:inline-flex;align-items:center;justify-content:center;background:#0000FF;color:#fff;font-size:22px;font-weight:400;line-height:1.1345;letter-spacing:-0.01745em;padding:10px 32px;border-radius:19px;text-decoration:none;height:auto;white-space:nowrap;transition:opacity 0.2s ease}
+.btn-talk-to-sales:hover{opacity:0.9}
+.zerocost-live-for{display:flex;align-items:center;gap:16px}
+.live-for-label{font-size:16px;font-weight:400;line-height:1.3;letter-spacing:-0.02em;color:#4D4D4D}
+.live-for-logos{display:flex;align-items:center;gap:24px}
+.live-for-logo{display:flex;align-items:center}
+.blue-rising-logo,.fsp-games-logo{height:auto;max-height:40px;width:auto;display:block;object-fit:contain}
 .zerocost-image{display:flex;align-items:flex-start;justify-content:flex-end}
 .zerocost-image img{width:100%;height:auto;display:block;object-fit:contain}
 
@@ -127,54 +176,99 @@
 
 @media (max-width: 768px){
   .zerocost-title{font-size:36px}
-  .zerocost-subtitle{font-size:14px;margin-bottom:40px}
   .zerocost-details p{font-size:14px}
-  .zerocost-list li{font-size:14px}
-  .btn-start-sponsorship{width:100%;max-width:362px}
+  .zerocost-details{margin-bottom:24px}
+  .zerocost-buttons{margin-bottom:32px}
+  .btn-talk-to-sales{width:100%;max-width:362px}
+  .live-for-label{font-size:14px}
+  .blue-rising-logo,.fsp-games-logo{max-height:32px}
 }
 
 @media (max-width: 640px){
   .zerocost-section{padding:60px 0 80px}
   .zerocost-title{font-size:32px}
-  .zerocost-subtitle{font-size:13px}
-  .btn-start-sponsorship{font-size:18px;width:100%;max-width:100%}
+  .zerocost-details p{font-size:13px}
+  .btn-talk-to-sales{font-size:18px;width:100%;max-width:100%}
+  .zerocost-live-for{flex-direction:column;align-items:flex-start;gap:12px}
+  .live-for-logos{flex-wrap:wrap;gap:16px}
+  .live-for-label{font-size:13px}
+  .blue-rising-logo,.fsp-games-logo{max-height:28px}
 }
 
 /* FanControl Section */
 .fancontrol-section{background:#fff;padding:96px 0 100px;position:relative}
 .fancontrol-container{max-width:1725px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:654px 1fr;gap:40px;align-items:flex-start}
 .fancontrol-content{padding-right:0}
-.fancontrol-title{font-size:48px;font-weight:500;line-height:.9375;letter-spacing:-0.025em;color:#4D4D4D;margin:0 0 9px}
-.fancontrol-subtitle{font-size:16px;font-weight:400;line-height:1.3;letter-spacing:-0.02em;color:#4D4D4D;margin:0 0 78px;max-width:100%}
-.fancontrol-buttons{display:flex;gap:25px;margin-bottom:75px}
-.btn-integrate-fancontrol{display:inline-flex;align-items:center;justify-content:center;background:#0000FF;color:#fff;font-size:22px;font-weight:400;line-height:1.1345;letter-spacing:-0.01745em;padding:6px 83px;border-radius:19px;text-decoration:none;height:37px;white-space:nowrap}
-.fancontrol-details{max-width:100%}
-.fancontrol-details p{font-size:16px;font-weight:400;line-height:1.3;letter-spacing:-0.02em;color:#4D4D4D;margin:0 0 20px}
-.fancontrol-details p:last-of-type{margin-bottom:0}
-.fancontrol-list{list-style:decimal;padding-left:20px;margin:20px 0 0}
+.fancontrol-title{font-size:48px;font-weight:500;line-height:.9375;letter-spacing:-0.025em;color:#4D4D4D;margin:0 0 24px}
+.fancontrol-subtitle{font-size:16px;font-weight:400;line-height:1.3;letter-spacing:-0.02em;color:#4D4D4D;margin:0 0 20px;max-width:100%}
+.fancontrol-instruction{font-size:16px;font-weight:400;line-height:1.3;letter-spacing:-0.02em;color:#4D4D4D;margin:0 0 20px}
+.fancontrol-list{list-style:decimal;padding-left:20px;margin:0 0 32px}
 .fancontrol-list li{font-size:16px;font-weight:400;line-height:1.3;letter-spacing:-0.02em;color:#4D4D4D;margin-bottom:12px}
 .fancontrol-list li:last-child{margin-bottom:0}
+.fancontrol-buttons{display:flex;gap:25px;margin-bottom:40px}
+.btn-talk-to-sales-fancontrol{display:inline-flex;align-items:center;justify-content:center;background:#0000FF;color:#fff;font-size:22px;font-weight:400;line-height:1.1345;letter-spacing:-0.01745em;padding:10px 32px;border-radius:19px;text-decoration:none;height:auto;white-space:nowrap;transition:opacity 0.2s ease}
+.btn-talk-to-sales-fancontrol:hover{opacity:0.9}
+.fancontrol-live-for{display:flex;align-items:center;gap:16px}
 .fancontrol-image{display:flex;align-items:flex-start;justify-content:flex-end}
-.fancontrol-image img{width:100%;height:auto;display:block;object-fit:contain}
+.fancontrol-image-scaled{width:85%;height:auto;display:block;object-fit:contain}
 
 /* Responsive - FanControl */
 @media (max-width: 1200px){
   .fancontrol-container{grid-template-columns:1fr;gap:40px;max-width:654px}
   .fancontrol-image{justify-content:center}
-  .fancontrol-image img{width:100%;max-width:1106px}
+  .fancontrol-image-scaled{width:85%;max-width:940px}
 }
 
 @media (max-width: 768px){
   .fancontrol-title{font-size:36px}
-  .fancontrol-subtitle{font-size:14px;margin-bottom:40px}
-  .fancontrol-details p{font-size:14px}
+  .fancontrol-subtitle{font-size:14px;margin-bottom:20px}
+  .fancontrol-instruction{font-size:14px;margin-bottom:16px}
+  .fancontrol-list{margin-bottom:24px}
   .fancontrol-list li{font-size:14px}
-  .btn-integrate-fancontrol{width:100%;max-width:362px}
+  .fancontrol-buttons{margin-bottom:32px}
+  .btn-talk-to-sales-fancontrol{width:100%;max-width:362px}
+  .fancontrol-live-for{flex-direction:column;align-items:flex-start;gap:12px}
+  .fancontrol-image-scaled{width:90%}
 }
 
 @media (max-width: 640px){
   .fancontrol-section{padding:60px 0 80px}
   .fancontrol-title{font-size:32px}
   .fancontrol-subtitle{font-size:13px}
-  .btn-integrate-fancontrol{font-size:18px;width:100%;max-width:100%;padding:6px 24px}
+  .fancontrol-instruction{font-size:13px}
+  .fancontrol-list li{font-size:13px}
+  .btn-talk-to-sales-fancontrol{font-size:18px;width:100%;max-width:100%}
+  .fancontrol-image-scaled{width:100%}
+}
+
+/* Want More Pools Section */
+.want-more-pools-section{background:#fff;padding:96px 0 100px;position:relative}
+.want-more-pools-container{max-width:1509px;margin:0 auto;padding:0 40px}
+.want-more-pools-banner{position:relative;background:#0000FF;border-radius:24px;overflow:hidden;min-height:300px;display:flex;align-items:center;justify-content:center}
+.want-more-pools-bg{position:absolute;height:100%;object-fit:cover;opacity:0.8;z-index:0;top:0}
+.want-more-pools-bg-left{right:-20px;width:30%;object-position:left center}
+.want-more-pools-bg-right{left:-20px;width:30%;object-position:right center;transform:scaleX(-1)}
+.want-more-pools-content{position:relative;z-index:1;text-align:center;padding:60px 40px;max-width:800px}
+.want-more-pools-title{font-size:48px;font-weight:500;line-height:1.2;letter-spacing:-0.025em;color:#fff;margin:0 0 16px}
+.want-more-pools-subtitle{font-size:22px;font-weight:400;line-height:1.3;letter-spacing:-0.017em;color:#fff;margin:0 0 32px}
+.btn-share-ideas{display:inline-flex;align-items:center;justify-content:center;background:#fff;color:#0000FF;font-size:22px;font-weight:400;line-height:1.1345;letter-spacing:-0.01745em;padding:10px 48px;border-radius:999px;text-decoration:none;height:auto;white-space:nowrap;transition:opacity 0.2s ease}
+.btn-share-ideas:hover{opacity:0.9}
+
+/* Responsive - Want More Pools */
+@media (max-width: 768px){
+  .want-more-pools-section{padding:60px 0 80px}
+  .want-more-pools-content{padding:40px 24px}
+  .want-more-pools-title{font-size:36px}
+  .want-more-pools-subtitle{font-size:18px}
+  .btn-share-ideas{font-size:18px;padding:8px 32px}
+}
+
+@media (max-width: 640px){
+  .want-more-pools-section{padding:60px 0 80px}
+  .want-more-pools-container{padding:0 24px}
+  .want-more-pools-banner{min-height:250px}
+  .want-more-pools-content{padding:32px 20px}
+  .want-more-pools-title{font-size:32px;margin-bottom:12px}
+  .want-more-pools-subtitle{font-size:16px;margin-bottom:24px}
+  .btn-share-ideas{font-size:16px;padding:8px 24px;width:100%;max-width:200px}
 }
