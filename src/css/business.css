@@ -22,7 +22,7 @@
 .business-hero-buttons{display:flex;gap:20px;align-items:center}
 .btn-integrate-now{display:inline-flex;align-items:center;justify-content:center;background:#fff;color:#000;font-size:20px;font-weight:400;line-height:1.25;letter-spacing:-0.019em;padding:7px 40px;border-radius:20px;text-decoration:none;transition:opacity 0.2s ease}
 .btn-integrate-now:hover{opacity:0.9}
-.btn-contact-sales{display:inline-flex;align-items:center;justify-content:center;background:transparent;color:#000;font-size:20px;font-weight:400;line-height:1.25;letter-spacing:-0.019em;padding:7px 40px;border-radius:20px;border:1px solid #fff;text-decoration:none;transition:opacity 0.2s ease}
+.btn-contact-sales{display:inline-flex;align-items:center;justify-content:center;background:transparent;color:#fff;font-size:20px;font-weight:400;line-height:1.25;letter-spacing:-0.019em;padding:7px 40px;border-radius:20px;border:1px solid #fff;text-decoration:none;transition:opacity 0.2s ease}
 .btn-contact-sales:hover{opacity:0.9}
 
 /* Business Revenue Section */
@@ -43,20 +43,66 @@
 
 /* Responsive - Mobile */
 @media (max-width: 960px){
+  .business-hero{height:auto;min-height:100vh}
+  .business-hero-content{height:auto;min-height:100vh;padding:120px 0 80px}
+  .business-hero .container{padding-left:40px;padding-right:24px}
+  .business-hero-ascii{width:500px;right:-10%}
+  .business-hero-title{font-size:56px}
+  .business-hero-buttons{flex-direction:column;align-items:flex-start;gap:16px}
+  .btn-integrate-now,.btn-contact-sales{width:100%;max-width:280px}
+  .business-revenue-container{padding:0 24px}
   .business-revenue-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:0;overflow-x:visible}
-  .business-revenue-card{width:auto;min-width:auto;border-right:none;border-bottom:none}
+  .business-revenue-card{width:auto;min-width:auto;border-right:none;border-bottom:none;height:auto;min-height:220px}
   .business-revenue-card:nth-child(3n){border-right:1px solid #E5E7EB}
   .business-revenue-card:nth-child(1),.business-revenue-card:nth-child(2),.business-revenue-card:nth-child(3){border-top:1px solid #E5E7EB}
   .business-revenue-card:nth-child(4),.business-revenue-card:nth-child(5),.business-revenue-card:nth-child(6){border-top:none}
   .business-revenue-card:nth-child(7),.business-revenue-card:nth-child(8),.business-revenue-card:nth-child(9){border-top:none;border-bottom:1px solid #E5E7EB}
+  .deposit-to-earn .deposit-steps{grid-template-columns:1fr;gap:40px}
+  .business-tools-container{padding:0 24px}
+  .business-challenge-container{padding:0 24px}
+  .enterprise-dashboard-container{padding:0 24px}
+  .enterprise-dashboard-header{flex-direction:column;align-items:flex-start}
+  .btn-contact-sales-dashboard{width:100%;max-width:280px}
 }
 
 @media (max-width: 640px){
+  .business-hero{height:auto;min-height:100vh}
+  .business-hero-content{height:auto;min-height:100vh;padding:120px 0 60px}
+  .business-hero .container{padding-left:24px;padding-right:24px}
+  .business-hero-ascii{width:350px;opacity:0.6;right:-15%}
+  .business-hero-title{font-size:40px;line-height:1;margin-bottom:32px}
+  .business-hero-buttons{width:100%}
+  .btn-integrate-now,.btn-contact-sales{font-size:18px;width:100%;max-width:100%}
+  .business-revenue{padding:60px 0 80px}
+  .business-revenue-container{padding:0 20px}
+  .business-revenue-title{font-size:36px}
+  .business-revenue-pill{font-size:16px;padding:6px 20px}
   .business-revenue-cards{grid-template-columns:repeat(2,1fr)}
   .business-revenue-card:nth-child(3n){border-right:none}
   .business-revenue-card:nth-child(2n){border-right:1px solid #E5E7EB}
-  .business-revenue-title{font-size:36px}
-  .business-revenue-pill{font-size:18px}
+  .business-revenue-card{padding:16px 12px;min-height:200px}
+  .business-revenue-card .card-title{font-size:12px}
+  .business-revenue-card .card-desc{font-size:10px}
+  .deposit-to-earn{padding:60px 20px 80px}
+  .deposit-to-earn .deposit-title{font-size:36px}
+  .deposit-to-earn .deposit-subtitle{font-size:18px}
+  .business-tools{padding:60px 0 80px}
+  .business-tools-container{padding:0 20px}
+  .business-tools-title{font-size:32px}
+  .business-tools-list li{font-size:18px}
+  .business-tools-buttons{flex-direction:column;width:100%}
+  .btn-contact-sales-tools,.btn-developer-docs{width:100%;max-width:100%}
+  .business-challenge{padding:60px 0 80px}
+  .business-challenge-container{padding:0 20px}
+  .business-challenge-title{font-size:32px}
+  .business-challenge-list li{font-size:18px}
+  .business-challenge-buttons{width:100%}
+  .btn-contact-sales-challenge,.btn-integrate-challenge{width:100%;max-width:100%}
+  .enterprise-dashboard-section{padding:60px 0 80px}
+  .enterprise-dashboard-container{padding:0 20px}
+  .dashboard-title{font-size:36px}
+  .dashboard-subtitle,.dashboard-description{font-size:18px}
+  .btn-contact-sales-dashboard{width:100%;max-width:100%}
 }
 
 /* Business Challenge Section */
