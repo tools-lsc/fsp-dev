@@ -137,3 +137,74 @@
 .card-council-image::before{content:"";position:absolute;left:1px;bottom:0;width:334px;height:309px;background:#2DA2FF;border-radius:0 20px 0 19px;z-index:1}
 .council-profile-image{width:100%;height:100%;object-fit:cover;object-position:center top;position:relative;z-index:2}
 
+/* Responsive Styles for Apex/FSP Private */
+@media (max-width: 960px){
+  .apex-hero{height:auto;min-height:100vh}
+  .apex-hero-content{height:auto;min-height:100vh;padding:120px 0 80px}
+  .apex-hero .container{padding-left:40px;padding-right:24px}
+  .apex-hero-ascii{width:500px;right:-10%}
+  .apex-hero-title{font-size:56px}
+  .apex-hero-subtitle{font-size:56px}
+  .why-sports-grid{grid-template-columns:repeat(3,1fr)}
+  .why-sports-grid>.why-sports-card{border-right:none}
+  .why-sports-grid>.why-sports-card:nth-child(3n){border-right:1px solid #E6E6E6}
+  .why-sports-container{padding:0 24px}
+  .participation-container{padding:0 24px}
+  .fsp-note-container{padding:0 24px}
+  .fsp-note-cards{grid-template-columns:1fr;gap:20px}
+  .key-features-container{padding:0 24px}
+  .fsp-note-visual-container{padding:0 24px}
+  .fsp-council-container{padding:0 24px}
+  .fsp-council-featured{grid-template-columns:1fr;gap:40px}
+  .fsp-council-grid{grid-template-columns:repeat(2,1fr);gap:40px}
+}
+
+@media (max-width: 640px){
+  .apex-hero{height:auto;min-height:100vh}
+  .apex-hero-content{height:auto;min-height:100vh;padding:120px 0 60px}
+  .apex-hero .container{padding-left:24px;padding-right:24px}
+  .apex-hero-ascii{width:350px;opacity:0.6;right:-15%}
+  .apex-hero-title{font-size:40px;line-height:1}
+  .apex-hero-subtitle{font-size:40px;line-height:1;margin-bottom:32px}
+  .btn-invest-now{font-size:18px;width:auto;padding:8px 32px}
+  .why-sports{padding:60px 0 80px}
+  .why-sports-container{padding:0 20px}
+  .why-sports-title{font-size:36px}
+  .why-sports-desc{font-size:18px}
+  .why-sports-grid{grid-template-columns:1fr}
+  .why-sports-grid>.why-sports-card{border-right:1px solid #E6E6E6}
+  .why-sports-card{min-height:auto;padding:20px 16px}
+  .participation-section{padding:60px 0 80px}
+  .participation-container{padding:0 20px}
+  .participation-title{font-size:20px}
+  .bar-chart-container{width:100%;height:80px}
+  .segment-label{font-size:14px}
+  .segment-value{font-size:18px}
+  .participation-explanation{font-size:16px}
+  .fsp-note-section{padding:60px 0 80px}
+  .fsp-note-container{padding:0 20px}
+  .fsp-note-title{font-size:36px;margin-bottom:40px}
+  .fsp-note-cards{grid-template-columns:1fr;gap:16px}
+  .fsp-note-card{height:auto;min-height:400px}
+  .key-features-section{padding:60px 0 80px}
+  .key-features-title{font-size:36px;margin-bottom:40px}
+  .key-feature-card{width:300px;height:400px}
+  .fsp-note-visual-section{padding:60px 0 80px}
+  .fsp-note-visual-container{padding:0 20px}
+  .fsp-note-visual-title{font-size:36px;margin-bottom:40px}
+  .fsp-note-visual-image{width:100%}
+  .fsp-council{padding:60px 0 80px}
+  .fsp-council-container{padding:0 20px}
+  .fsp-council-title{font-size:36px}
+  .fsp-council-desc{font-size:18px}
+  .fsp-council-featured{gap:24px}
+  .fsp-council-card-large{flex-direction:column;height:auto;min-height:400px}
+  .card-large-image{width:100%;height:300px}
+  .card-bg-shape{width:100%;height:100%}
+  .card-person-image{width:100%;height:100%;object-fit:cover;top:0;left:0}
+  .card-large-content{padding:24px 20px}
+  .fsp-council-grid{grid-template-columns:1fr;gap:24px}
+  .fsp-council-card{height:auto;min-height:500px}
+  .card-council-image::before{width:100%}
+}
+

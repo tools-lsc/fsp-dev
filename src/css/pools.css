@@ -15,18 +15,19 @@
 /* Responsive - Pools Hero */
 @media (max-width: 960px){
   .pools-hero-ascii{width:600px}
-  .pools-hero .container{padding-left:40px}
+  .pools-hero .container{padding-left:40px;padding-right:24px}
   .pools-hero-title{font-size:56px}
   .pools-hero-subtitle{font-size:18px}
 }
 
 @media (max-width: 640px){
+  .pools-hero{height:auto;min-height:100vh}
+  .pools-hero-content{height:auto;min-height:100vh;padding:120px 0 80px}
   .pools-hero-ascii{width:400px;opacity:0.6}
-  .pools-hero .container{padding-left:24px}
+  .pools-hero .container{padding-left:24px;padding-right:24px}
   .pools-hero-title{font-size:40px}
   .pools-hero-subtitle{font-size:16px}
   .pools-hero-item{font-size:14px}
-  .pools-hero-content{padding:80px 0 60px}
 }
 
 /* Pools Cards Section */
@@ -48,6 +49,7 @@
 
 /* Responsive - Pools Cards */
 @media (max-width: 960px){
+  .pools-cards-container{padding:0 24px}
   .pools-cards{flex-direction:column;gap:0}
   .pools-card{border-right:1px solid #E5E7EB;border-bottom:none;height:auto;min-height:220px}
   .pools-card:last-child{border-bottom:1px solid #E5E7EB}
@@ -56,6 +58,7 @@
 
 @media (max-width: 640px){
   .pools-cards-section{padding:60px 0 80px}
+  .pools-cards-container{padding:0 20px}
   .pools-pill{font-size:16px;height:32px;padding:0 20px}
   .pools-card-title{font-size:20px}
   .pools-card-desc{font-size:12px}
@@ -88,12 +91,13 @@
 
 /* Responsive - AthleteStash */
 @media (max-width: 1200px){
-  .athletestash-container{grid-template-columns:1fr;gap:40px;max-width:900px}
+  .athletestash-container{grid-template-columns:1fr;gap:40px;max-width:900px;padding:0 24px}
   .athletestash-image{justify-content:center}
   .athletestash-image img{width:100%;max-width:801px}
 }
 
 @media (max-width: 768px){
+  .athletestash-container{padding:0 24px}
   .athletestash-buttons{flex-direction:column;gap:16px;flex-wrap:wrap}
   .btn-create-pool-athletestash{width:100%}
   .athletestash-title{font-size:36px}
@@ -103,6 +107,7 @@
 
 @media (max-width: 640px){
   .athletestash-section{padding:60px 0 80px}
+  .athletestash-container{padding:0 20px}
   .athletestash-title{font-size:32px}
   .athletestash-problem-title,.athletestash-solution-title{font-size:18px}
   .athletestash-problem-list li,.athletestash-solution-list li{font-size:13px}
@@ -129,17 +134,19 @@
 
 /* Responsive - Pools Features */
 @media (max-width: 1200px){
-  .pools-features-container{grid-template-columns:1fr;gap:32px}
+  .pools-features-container{grid-template-columns:1fr;gap:32px;padding:0 24px}
 }
 
 @media (max-width: 768px){
   .pools-features-section{padding:60px 0 80px}
+  .pools-features-container{padding:0 24px}
   .pools-feature-card{padding:12px}
   .pools-feature-title{font-size:20px}
 }
 
 @media (max-width: 640px){
-  .pools-features-container{padding:0 24px}
+  .pools-features-section{padding:60px 0 80px}
+  .pools-features-container{padding:0 20px}
   .pools-feature-card{padding:10px}
   .pools-feature-title{font-size:18px}
   .pools-image-wrapper{height:300px}
@@ -169,12 +176,13 @@
 
 /* Responsive - ZeroCostSponsorship */
 @media (max-width: 1200px){
-  .zerocost-container{grid-template-columns:1fr;gap:40px;max-width:654px}
+  .zerocost-container{grid-template-columns:1fr;gap:40px;max-width:654px;padding:0 24px}
   .zerocost-image{justify-content:center}
   .zerocost-image img{width:100%;max-width:769px}
 }
 
 @media (max-width: 768px){
+  .zerocost-container{padding:0 24px}
   .zerocost-title{font-size:36px}
   .zerocost-details p{font-size:14px}
   .zerocost-details{margin-bottom:24px}
@@ -186,6 +194,7 @@
 
 @media (max-width: 640px){
   .zerocost-section{padding:60px 0 80px}
+  .zerocost-container{padding:0 20px}
   .zerocost-title{font-size:32px}
   .zerocost-details p{font-size:13px}
   .btn-talk-to-sales{font-size:18px;width:100%;max-width:100%}
@@ -214,12 +223,13 @@
 
 /* Responsive - FanControl */
 @media (max-width: 1200px){
-  .fancontrol-container{grid-template-columns:1fr;gap:40px;max-width:654px}
+  .fancontrol-container{grid-template-columns:1fr;gap:40px;max-width:654px;padding:0 24px}
   .fancontrol-image{justify-content:center}
   .fancontrol-image-scaled{width:85%;max-width:940px}
 }
 
 @media (max-width: 768px){
+  .fancontrol-container{padding:0 24px}
   .fancontrol-title{font-size:36px}
   .fancontrol-subtitle{font-size:14px;margin-bottom:20px}
   .fancontrol-instruction{font-size:14px;margin-bottom:16px}
@@ -233,6 +243,7 @@
 
 @media (max-width: 640px){
   .fancontrol-section{padding:60px 0 80px}
+  .fancontrol-container{padding:0 20px}
   .fancontrol-title{font-size:32px}
   .fancontrol-subtitle{font-size:13px}
   .fancontrol-instruction{font-size:13px}
@@ -257,6 +268,7 @@
 /* Responsive - Want More Pools */
 @media (max-width: 768px){
   .want-more-pools-section{padding:60px 0 80px}
+  .want-more-pools-container{padding:0 24px}
   .want-more-pools-content{padding:40px 24px}
   .want-more-pools-title{font-size:36px}
   .want-more-pools-subtitle{font-size:18px}
@@ -265,7 +277,7 @@
 
 @media (max-width: 640px){
   .want-more-pools-section{padding:60px 0 80px}
-  .want-more-pools-container{padding:0 24px}
+  .want-more-pools-container{padding:0 20px}
   .want-more-pools-banner{min-height:250px}
   .want-more-pools-content{padding:32px 20px}
   .want-more-pools-title{font-size:32px;margin-bottom:12px}
