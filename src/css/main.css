@@ -24,6 +24,20 @@ body{
 /* active tab dot indicator */
 .main-nav a.active:after{content:"";position:absolute;bottom:-13px;left:50%;transform:translateX(-50%);width:7px;height:7px;background:#fff;border-radius:50%}
 
+/* Dropdown Navigation */
+.nav-dropdown{position:relative}
+.dropdown-toggle{cursor:pointer;position:relative;padding-right:16px}
+.dropdown-toggle:after{content:"";position:absolute;right:0;top:50%;transform:translateY(-50%);width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid rgba(255,255,255,.95);transition:transform 0.3s ease}
+.nav-dropdown.active .dropdown-toggle:after{transform:translateY(-50%) rotate(180deg)}
+.dropdown-menu{position:absolute;top:100%;left:0;background:#fff;border:1px solid #000;min-width:220px;padding:0;margin-top:16px;opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity 0.3s ease,transform 0.3s ease,visibility 0.3s ease;z-index:100;border-radius:0;display:flex;flex-direction:column;list-style:none}
+.nav-dropdown.active .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.dropdown-menu li{padding:0;margin:0;display:block;width:100%}
+.dropdown-menu li:before{display:none}
+.dropdown-menu a{display:block;padding:10px 20px;color:#0000FF;font-size:15px;white-space:nowrap;transition:background 0.2s ease;text-decoration:none;width:100%}
+.dropdown-menu a:hover{background:rgba(0,0,255,.05)}
+.dropdown-menu .coming-soon{opacity:.7;cursor:not-allowed;color:#0000FF}
+.dropdown-menu .coming-soon span{font-size:15px;opacity:.7;margin-left:4px}
+
 /* Hamburger Menu */
 .hamburger-btn{display:none;flex-direction:column;gap:5px;background:transparent;border:none;cursor:pointer;padding:8px;z-index:21;position:fixed;right:24px;top:32px}
 .hamburger-icon{width:24px;height:2px;background:#fff;transition:all 0.3s ease;display:block}
@@ -1592,6 +1606,11 @@ body{
   .main-nav li+li:before{display:none}
   .main-nav a{font-size:24px;opacity:1}
   .main-nav a.active:after{display:none}
+  .nav-dropdown{width:100%;text-align:center}
+  .dropdown-menu{position:static;opacity:1;visibility:visible;transform:none;background:transparent;border:none;padding:12px 0 0 0;margin-top:8px;box-shadow:none;min-width:auto;display:none}
+  .nav-dropdown.active .dropdown-menu{display:block}
+  .dropdown-menu a{font-size:20px;padding:8px 0;opacity:.8;color:rgba(255,255,255,.95)}
+  .dropdown-toggle:after{display:none}
   .main-nav .btn-join-mobile{display:inline-block !important;position:relative;transform:none;right:auto;top:auto;margin-top:40px;background:#fff;color:#000;padding:10px 40px;border-radius:999px;text-decoration:none;font-weight:600;font-size:16px}
   .btn-join-desktop{display:none !important}
   .hero-ascii{right:-35%;top:0;width:900px;opacity:.35}
