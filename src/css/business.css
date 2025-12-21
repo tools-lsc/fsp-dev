@@ -43,7 +43,7 @@
 
 /* Responsive - Mobile */
 @media (max-width: 960px){
-  .business-hero{height:auto;min-height:100vh}
+    .business-hero{height:auto;min-height:100vh}
   .business-hero-content{height:auto;min-height:100vh;padding:120px 0 80px}
   .business-hero .container{padding-left:40px;padding-right:24px}
   .business-hero-ascii{width:500px;right:-10%}
