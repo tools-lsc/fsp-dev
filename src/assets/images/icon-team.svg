@@ -1,0 +1,18 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Podium tiers -->
+  <rect x="8" y="44" width="12" height="8" rx="1" fill="#9B7FFF" opacity="0.4"/>
+  <text x="14" y="52" font-family="Arial" font-size="10" font-weight="bold" fill="#9B7FFF" text-anchor="middle">2</text>
+  
+  <rect x="22" y="36" width="12" height="16" rx="1" fill="#9B7FFF" opacity="0.6"/>
+  <text x="28" y="50" font-family="Arial" font-size="12" font-weight="bold" fill="#9B7FFF" text-anchor="middle">1</text>
+  
+  <rect x="36" y="40" width="12" height="12" rx="1" fill="#9B7FFF" opacity="0.4"/>
+  <text x="42" y="50" font-family="Arial" font-size="10" font-weight="bold" fill="#9B7FFF" text-anchor="middle">3</text>
+  
+  <!-- Trophy on top -->
+  <path d="M28 20L30 28H34L36 20" stroke="#9B7FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <rect x="30" y="24" width="4" height="6" rx="1" fill="#9B7FFF"/>
+  <ellipse cx="32" cy="32" rx="6" ry="2" fill="#9B7FFF" opacity="0.3"/>
+  <path d="M26 32L28 28M38 32L36 28" stroke="#9B7FFF" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
+

@@ -1601,16 +1601,22 @@ body{
   .hamburger-btn{display:flex}
   .main-nav{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,255,0.98);display:flex;flex-direction:column;align-items:center;justify-content:center;transform:translateX(-100%);transition:transform 0.3s ease;z-index:20}
   .main-nav[aria-hidden="false"]{transform:translateX(0)}
-  .main-nav ul{flex-direction:column;gap:30px;align-items:center;width:100%;margin:0;padding:0;list-style:none}
-  .main-nav li{padding:0}
+  .main-nav ul{flex-direction:column;gap:20px;align-items:stretch;width:100%;margin:0;padding:40px 24px;list-style:none;max-width:320px;margin:0 auto}
+  .main-nav li{padding:0;width:100%;text-align:left}
   .main-nav li+li:before{display:none}
-  .main-nav a{font-size:24px;opacity:1}
+  .main-nav > ul > li > a:not(.dropdown-toggle){font-size:24px;opacity:1;display:flex;align-items:center;padding:12px 20px;text-align:left;color:rgba(255,255,255,.95);text-decoration:none;min-height:44px}
   .main-nav a.active:after{display:none}
-  .nav-dropdown{width:100%;text-align:center}
-  .dropdown-menu{position:static;opacity:1;visibility:visible;transform:none;background:transparent;border:none;padding:12px 0 0 0;margin-top:8px;box-shadow:none;min-width:auto;display:none}
-  .nav-dropdown.active .dropdown-menu{display:block}
-  .dropdown-menu a{font-size:20px;padding:8px 0;opacity:.8;color:rgba(255,255,255,.95)}
-  .dropdown-toggle:after{display:none}
+  .nav-dropdown{width:100%;text-align:left;position:relative;margin:0 auto;max-width:280px}
+  .dropdown-toggle{width:100%;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px 20px;position:relative;min-height:44px;cursor:pointer;-webkit-tap-highlight-color:transparent;color:rgba(255,255,255,.95);font-size:24px}
+  .dropdown-toggle:after{display:block !important;content:"";width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-top:7px solid rgba(255,255,255,.95);transition:transform 0.3s ease;position:static;transform:none;flex-shrink:0;margin-left:auto}
+  .nav-dropdown.active .dropdown-toggle:after{transform:rotate(180deg)}
+  .dropdown-menu{position:static;opacity:1;visibility:visible;transform:none;background:#fff;border:1px solid #000;padding:8px 0;margin-top:12px;box-shadow:none;min-width:auto;display:none;width:100%;border-radius:0}
+  .nav-dropdown.active .dropdown-menu{display:flex;flex-direction:column}
+  .dropdown-menu li{width:100%;text-align:left;padding:0}
+  .dropdown-menu a{font-size:18px;padding:14px 20px;opacity:1;color:#0000FF;display:flex;align-items:center;justify-content:flex-start;width:100%;text-align:left;min-height:44px;-webkit-tap-highlight-color:transparent;text-decoration:none;transition:background 0.2s ease}
+  .dropdown-menu a:hover,.dropdown-menu a:active{background:rgba(0,0,255,.05);opacity:1}
+  .dropdown-menu .coming-soon{opacity:.7;color:#0000FF}
+  .dropdown-menu .coming-soon span{font-size:16px;opacity:.7;margin-left:4px}
   .main-nav .btn-join-mobile{display:inline-block !important;position:relative;transform:none;right:auto;top:auto;margin-top:40px;background:#fff;color:#000;padding:10px 40px;border-radius:999px;text-decoration:none;font-weight:600;font-size:16px}
   .btn-join-desktop{display:none !important}
   .hero-ascii{right:-35%;top:0;width:900px;opacity:.35}
@@ -1664,6 +1670,9 @@ body{
 @media (max-width: 640px){
   .hamburger-btn{right:16px;top:24px}
   .main-nav .btn-join{padding:10px 40px;font-size:16px}
+  .dropdown-toggle{font-size:22px;padding:10px 16px}
+  .dropdown-menu a{font-size:16px;padding:12px 16px}
+  .main-nav > ul > li > a:not(.dropdown-toggle){font-size:22px;padding:10px 16px}
   .hero-content{padding:56px 0 120px}
   .hero .container{padding-left:24px}
   .hero-subtitle{font-size:18px}

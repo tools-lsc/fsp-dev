@@ -1,0 +1,3290 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FK Grotesk Neue Trial - All Weights and Styles */
+/* Thin */
+@font-face {
+    font-family: 'FK Grotesk Neue';
+    src: url('../fonts/FK Grotesk Neue Trial/FKGroteskNeueTrial-Thin.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FK Grotesk Neue';
+    src: url('../fonts/FK Grotesk Neue Trial/FKGroteskNeueTrial-ThinItalic.otf') format('opentype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Light */
+@font-face {
+    font-family: 'FK Grotesk Neue';
+    src: url('../fonts/FK Grotesk Neue Trial/FKGroteskNeueTrial-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FK Grotesk Neue';
+    src: url('../fonts/FK Grotesk Neue Trial/FKGroteskNeueTrial-LightItalic.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Regular */
+@font-face {
+    font-family: 'FK Grotesk Neue';
+    src: url('../fonts/FK Grotesk Neue Trial/FKGroteskNeueTrial-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FK Grotesk Neue';
+    src: url('../fonts/FK Grotesk Neue Trial/FKGroteskNeueTrial-Italic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Medium */
+@font-face {
+    font-family: 'FK Grotesk Neue';
+    src: url('../fonts/FK Grotesk Neue Trial/FKGroteskNeueTrial-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FK Grotesk Neue';
+    src: url('../fonts/FK Grotesk Neue Trial/FKGroteskNeueTrial-MediumItalic.otf') format('opentype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Bold */
+@font-face {
+    font-family: 'FK Grotesk Neue';
+    src: url('../fonts/FK Grotesk Neue Trial/FKGroteskNeueTrial-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FK Grotesk Neue';
+    src: url('../fonts/FK Grotesk Neue Trial/FKGroteskNeueTrial-BoldItalic.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Black */
+@font-face {
+    font-family: 'FK Grotesk Neue';
+    src: url('../fonts/FK Grotesk Neue Trial/FKGroteskNeueTrial-Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FK Grotesk Neue';
+    src: url('../fonts/FK Grotesk Neue Trial/FKGroteskNeueTrial-BlackItalic.otf') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Base Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'FK Grotesk Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 120px;
+    height: auto;
+    display: block;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-menu > * {
+    margin: 0 20px;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    opacity: 0.7;
+}
+
+.chevron {
+    font-size: 12px;
+    display: inline-block;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.btn-get-started {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 0;
+    padding: 8px 16px;
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: auto;
+}
+
+.btn-get-started:hover {
+    background-color: #333333;
+}
+
+.nav-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh; /* Dynamic viewport height for mobile */
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/hero-bg.png');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.hero-texture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/hero-texture.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    opacity: 0.2;
+    mix-blend-mode: overlay;
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+.hero-title {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 500;
+    font-size: 100px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom:0px;
+    letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.2;
+    color: #ffffff;
+    max-width: 1072px;
+    padding: 0 20px;
+}
+
+/* Next Section */
+.next-section {
+    width: 100%;
+    background-color: #000000;
+    position: relative;
+    padding: 80px 20px 40px;
+    min-height: calc(100vh * 2.5 / 3);
+}
+
+.section-header {
+    max-width: 1440px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1;
+    color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.grid-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 137px;
+    column-gap: 22px;
+    row-gap: 22px;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 20px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 114px;
+}
+
+.card-merge-3 {
+    grid-row: span 3;
+    height: auto;
+}
+
+.card-merge-2 {
+    grid-row: span 2;
+    height: auto;
+}
+
+.card-merge-4 {
+    grid-column: span 4;
+}
+
+.grid-container-bottom {
+    max-width: 1440px;
+    margin: 60px auto 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: auto;
+    column-gap: 22px;
+    row-gap: 22px;
+    width: 100%;
+}
+
+.card-merge-4-bottom {
+    grid-column: span 4;
+}
+
+/* Athlete Cards */
+.grid-container-bottom .athlete-card {
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 !important;
+    height: auto;
+    background-color: transparent !important;
+    border-radius: 0;
+}
+
+.athlete-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+}
+
+.athlete-category {
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.athlete-name {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.athlete-description {
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+/* CTA Card */
+.grid-container-bottom .cta-card {
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    background-color: transparent !important;
+    border-radius: 0;
+}
+
+.cta-content {
+    text-align: center;
+    width: 100%;
+}
+
+.cta-title {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 30px;
+    line-height: 1.3;
+}
+
+.cta-button {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 0;
+    padding: 12px 40px;
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Compete and Win Big Section */
+.compete-section {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 80px 20px;
+    position: relative;
+}
+
+.compete-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.compete-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.compete-title {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 0.91em;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.compete-subtitle {
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.07em;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.compete-description {
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.07em;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.compete-steps {
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.07em;
+    color: #000000;
+    margin-bottom: 40px;
+    padding-left: 20px;
+}
+
+.compete-steps li {
+    margin-bottom: 15px;
+}
+
+.compete-button {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 0;
+    padding: 7px 6px;
+    width: 188px;
+    height: 29px;
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 0.91em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.compete-button:hover {
+    background-color: #333333;
+}
+
+.compete-disclaimer {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.32em;
+    color: #B1B1B1;
+    letter-spacing: -0.01em;
+}
+
+.compete-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.phone-mockup {
+    position: relative;
+}
+
+.phone-image {
+    width: auto;
+    height: auto;
+    max-width: 65%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Section with Background */
+.section-with-bg {
+    width: 100%;
+    height: 110vh;
+    background-image: url('../images/section4background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Section 5 with Background */
+.section-5-with-bg {
+    width: 100%;
+    height: 110vh;
+    background-image: url('../images/section5background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards-container {
+    max-width: 1440px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.gradient-card {
+    position: relative;
+    border-radius: 20px;
+    height: 100%;
+}
+
+.gradient-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.125) 0%, rgba(255, 255, 255, 0.125) 50%);
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.card-content {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 19px;
+    padding: 40px 40px 0 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    z-index: 3;
+}
+
+.card-content::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/card-texture.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    opacity: 0.2;
+    mix-blend-mode: overlay;
+    border-radius: 19px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Card Header */
+.card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.card-logo {
+    flex-shrink: 0;
+}
+
+.logo-img {
+    width: auto;
+    height: auto;
+    max-width: 150px;
+    display: block;
+}
+
+.card-header-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card-description {
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #ffffff;
+    margin: 0;
+}
+
+.card-button {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Card Grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    margin: 0 -40px 0 -40px;
+    padding: 0 40px 0 40px;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+    color: #ffffff;
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-size: 14px;
+    overflow: hidden;
+    height: 147px;
+    position: relative;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    border: 1px solid #ffffff;
+    padding: 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+    color: #ffffff;
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-size: 14px;
+    overflow: hidden;
+    height: 147px;
+    position: relative;
+    isolation: isolate;
+}
+
+.grid-image {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: right center;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.grid-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.5) 100%);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    z-index: 2;
+    border-radius: 12px 0 0 12px;
+    border-right: 1px solid #ffffff;
+    pointer-events: none;
+    will-change: backdrop-filter;
+}
+
+.grid-item.merged-row {
+    grid-column: span 2;
+}
+
+.grid-item.merged-row::before {
+    width: 70%;
+}
+
+.grid-text {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #ffffff;
+    text-transform: uppercase;
+    z-index: 3;
+    line-height: 1.2;
+    max-width: calc(50% - 40px);
+}
+
+.grid-item.merged-row .grid-text {
+    max-width: calc(70% - 40px);
+    font-size: 32px;
+}
+
+.text-large {
+    font-size: 48px;
+    display: block;
+    line-height: 1;
+}
+
+/* Section 6 - Our Sporting Philosophy */
+.section-6-philosophy {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../images/section6background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 80px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.philosophy-container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.7fr 1.8fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.philosophy-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 40px;
+}
+
+.philosophy-title {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 30px;
+    letter-spacing: -0.02em;
+}
+
+.philosophy-text {
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 24px;
+    line-height: 1;
+    color: #ffffff;
+    margin-bottom: 60px;
+}
+
+.philosophy-compass {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: auto;
+    height: auto;
+    max-width: 150px;
+    opacity: 0.9;
+    z-index: 10;
+}
+
+.philosophy-panels {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.philosophy-panel {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.panel-image {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 20px;
+}
+
+.panel-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.panel-title {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+    margin: 0;
+}
+
+.panel-description {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #ffffff;
+    margin: 0;
+}
+
+.panel-description a {
+    color: #ffffff;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .compete-container {
+        flex-direction: column;
+    }
+    
+    .compete-content {
+        flex: 1;
+        max-width: 100%;
+    }
+
+    .philosophy-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .philosophy-panels {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .philosophy-panel {
+        flex: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .philosophy-panels {
+        flex-direction: column;
+    }
+
+    .philosophy-title {
+        font-size: 40px;
+    }
+
+    .philosophy-text {
+        font-size: 20px;
+    }
+
+    .panel-title {
+        font-size: 20px;
+    }
+
+    .panel-description {
+        font-size: 12px;
+    }
+}
+
+/* Section 7 - Foundation for The Future of Sports */
+.ffs-section {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 80px 20px;
+    position: relative;
+}
+
+.ffs-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.ffs-image-container {
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ffs-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.ffs-content {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0;
+}
+
+.ffs-question {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.2;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.ffs-description {
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1;
+    color: #000000;
+    margin-bottom: 50px;
+}
+
+.ffs-acronym-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.ffs-acronym {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 1;
+    color: #0000FF;
+    margin: 0;
+}
+
+.ffs-arrow {
+    width: 24px;
+    height: 24px;
+    color: #0000FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ffs-arrow svg {
+    width: 100%;
+    height: 100%;
+    fill: #0000FF;
+}
+
+.ffs-full-name {
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1;
+    color: #000000;
+    margin: 0;
+}
+
+/* Responsive for FFS Section */
+@media (max-width: 1200px) {
+    .ffs-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .ffs-image-container {
+        min-height: 400px;
+    }
+
+    .ffs-acronym {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ffs-question {
+        font-size: 24px;
+    }
+
+    .ffs-description {
+        font-size: 16px;
+    }
+
+    .ffs-acronym {
+        font-size: 48px;
+    }
+
+    .ffs-full-name {
+        font-size: 20px;
+    }
+}
+
+/* Last Section with Background */
+.last-section {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../images/lastsection-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 80px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.last-section-container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.last-section-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.last-section-title {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.last-section-title-line {
+    display: block;
+}
+
+.last-section-subtitle {
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1;
+    color: #000000;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.last-section-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+    width: 100%;
+}
+
+.last-section-card {
+    background-color: rgba(25, 18, 18, 0.792);
+
+    padding: 40px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.last-section-card.card-row1 {
+    grid-column: span 3;
+}
+
+.last-section-card.card-row2 {
+    grid-column: span 2;
+}
+
+/* Responsive for Last Section */
+@media (max-width: 768px) {
+    .last-section-header {
+        margin-bottom: 40px;
+    }
+
+    .last-section-title {
+        font-size: 40px;
+    }
+
+    .last-section-subtitle {
+        font-size: 18px;
+    }
+
+    .last-section-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .last-section-card.card-row1,
+    .last-section-card.card-row2 {
+        grid-column: span 1;
+    }
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 60px 20px 30px;
+    position: relative;
+}
+
+.footer-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.footer-title {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1;
+    color: #ffffff;
+    margin-bottom: 60px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 40px;
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0;
+}
+
+.footer-link {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.footer-link:hover {
+    opacity: 0.7;
+}
+
+.footer-separator {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #ffffff;
+    margin: 0 10px;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-address {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-label {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.footer-phone {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.footer-email {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.footer-address-text {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.footer-copyright {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #999999;
+    text-align: right;
+    margin-top: 20px;
+}
+
+.scroll-to-top {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #cccccc;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.scroll-to-top:hover {
+    background-color: #aaaaaa;
+}
+
+.scroll-to-top svg {
+    width: 20px;
+    height: 20px;
+    color: #000000;
+}
+
+/* Responsive Footer */
+@media (max-width: 1200px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .footer-address {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 20px 20px;
+    }
+
+    .footer-title {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-address {
+        grid-column: span 1;
+    }
+
+    .scroll-to-top {
+        top: 40px;
+        right: 20px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .scroll-to-top svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .footer-copyright {
+        text-align: left;
+    }
+}
+
+/* World's Best Hero Section */
+.worlds-best-hero {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../images/section6background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+}
+
+.worlds-best-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 120px 80px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.worlds-best-content {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+}
+
+.worlds-best-title {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 30px;
+    letter-spacing: -0.02em;
+}
+
+.worlds-best-subtitle {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+.worlds-best-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 50px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.worlds-best-feature {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.checkmark-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    color: #ffffff;
+}
+
+.worlds-best-buttons {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.btn-get-started-hero {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 0;
+    padding: 12px 32px;
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-get-started-hero:hover {
+    background-color: #333333;
+}
+
+.btn-download-app-hero {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 0;
+    padding: 12px 32px;
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-download-app-hero:hover {
+    background-color: #333333;
+}
+
+.btn-download-app {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 0;
+    padding: 8px 16px;
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: auto;
+}
+
+.btn-download-app:hover {
+    background-color: #333333;
+}
+
+.app-store-badges {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.app-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.3;
+    transition: opacity 0.3s ease;
+}
+
+.app-badge:hover {
+    opacity: 0.8;
+}
+
+.badge-image {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.badge-text {
+    display: block;
+}
+
+.worlds-best-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-mockup-image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Responsive for World's Best Hero */
+@media (max-width: 1200px) {
+    .worlds-best-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 100px 40px 60px;
+    }
+
+    .worlds-best-title {
+        font-size: 60px;
+    }
+
+    .worlds-best-image {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .worlds-best-container {
+        padding: 80px 20px 40px;
+    }
+
+    .worlds-best-title {
+        font-size: 40px;
+    }
+
+    .worlds-best-subtitle {
+        font-size: 18px;
+    }
+
+    .worlds-best-buttons {
+        flex-direction: column;
+    }
+
+    .btn-get-started-hero,
+    .btn-download-app-hero {
+        width: 100%;
+    }
+}
+
+/* Carousel Section */
+.carousel-section {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 80px 0;
+}
+
+.carousel-header {
+    max-width: 1440px;
+    margin: 0 auto 10px;
+    text-align: center;
+}
+
+.carousel-badge {
+    background: linear-gradient(135deg, #0066FF 0%, #0044CC 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    padding: 8px 20px;
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.carousel-title {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 1.1;
+    color: #000000;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.carousel-description {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.carousel-link {
+    color: #0066FF;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.carousel-container {
+    width: 100%;
+    margin: 0;
+    position: relative;
+}
+
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding: 80px 0;
+    min-height: 600px;
+}
+
+.carousel-slide {
+    position: relative;
+    flex: 0 0 50%;
+    opacity: 0.5;
+    transform: scale(0.95);
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+    filter: blur(3px);
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.carousel-slide.prev {
+    order: 1;
+    margin-right: -25%;
+}
+
+.carousel-slide.prev .carousel-image {
+    margin-left: -50%;
+}
+
+.carousel-slide.active {
+    order: 2;
+    opacity: 1;
+    transform: scale(1.47);
+    z-index: 3;
+    filter: blur(0);
+    flex: 0 0 50%;
+    margin: 0;
+}
+
+.carousel-slide.next {
+    order: 3;
+    margin-left: -25%;
+}
+
+.carousel-slide.next .carousel-image {
+    margin-right: -50%;
+}
+
+.carousel-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+
+.carousel-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 0px;
+    padding: 0 40px;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-dots {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #000000;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-dot.active {
+    background-color: #000000;
+}
+
+.carousel-participate-btn {
+    background-color: #0066FF;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 40px;
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-participate-btn:hover {
+    background-color: #0052CC;
+}
+
+/* Responsive for Carousel */
+@media (max-width: 1200px) {
+    .carousel-slide {
+        flex: 0 0 25%;
+    }
+
+    .carousel-slide.active {
+        flex: 0 0 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-title {
+        font-size: 40px;
+    }
+
+    .carousel-description {
+        font-size: 16px;
+    }
+
+    .carousel-wrapper {
+        padding: 40px 0;
+        min-height: 400px;
+    }
+
+    .carousel-slide {
+        flex: 0 0 20%;
+        opacity: 0.3;
+        transform: scale(0.7);
+    }
+
+    .carousel-slide.active {
+        flex: 0 0 60%;
+    }
+
+    .carousel-navigation {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .carousel-participate-btn {
+        width: 100%;
+    }
+}
+
+/* World's Best Bowler Section */
+.bowler-section {
+    width: 100%;
+    height: 75vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.bowler-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/worlds-best-bowler-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.bowler-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%);
+    z-index: 2;
+}
+
+.bowler-container {
+    position: relative;
+    z-index: 3;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+}
+
+.bowler-content {
+    max-width: 600px;
+    color: #ffffff;
+}
+
+.bowler-category {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.bowler-title {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 1;
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+}
+
+.bowler-title-line {
+    display: block;
+}
+
+.bowler-description {
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 40px;
+    max-width: 550px;
+}
+
+.bowler-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.bowler-btn {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+
+    padding: 12px 32px;
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.bowler-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+}
+
+.bowler-btn-participate {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.bowler-btn-participate:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive for Bowler Section */
+@media (max-width: 1200px) {
+    .bowler-container {
+        padding: 0 40px;
+    }
+
+    .bowler-title {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .bowler-section {
+        height: 60vh;
+    }
+
+    .bowler-container {
+        padding: 0 20px;
+    }
+
+    .bowler-title {
+        font-size: 40px;
+    }
+
+    .bowler-description {
+        font-size: 16px;
+    }
+
+    .bowler-buttons {
+        flex-direction: column;
+    }
+
+    .bowler-btn {
+        width: 100%;
+    }
+}
+
+/* World's Best Squash Player Section */
+.squash-section {
+    width: 100%;
+    height: 75vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.squash-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/worlds-best-squash-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.squash-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%);
+    z-index: 2;
+}
+
+.squash-container {
+    position: relative;
+    z-index: 3;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+}
+
+.squash-content {
+    max-width: 600px;
+    color: #ffffff;
+}
+
+.squash-category {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.squash-title {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 1;
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+}
+
+.squash-title-line {
+    display: block;
+}
+
+.squash-description {
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 40px;
+    max-width: 550px;
+}
+
+.squash-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.squash-btn {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 12px 32px;
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.squash-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+}
+
+.squash-btn-explore {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.squash-btn-explore:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive for Squash Section */
+@media (max-width: 1200px) {
+    .squash-container {
+        padding: 0 40px;
+    }
+
+    .squash-title {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .squash-section {
+        height: 60vh;
+    }
+
+    .squash-container {
+        padding: 0 20px;
+    }
+
+    .squash-title {
+        font-size: 40px;
+    }
+
+    .squash-description {
+        font-size: 16px;
+    }
+
+    .squash-buttons {
+        flex-direction: column;
+    }
+
+    .squash-btn {
+        width: 100%;
+    }
+}
+
+/* World's Best Cricket Player Section */
+.cricket-section {
+    width: 100%;
+    height: 75vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.cricket-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/worlds-best-cricket-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.cricket-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%);
+    z-index: 2;
+}
+
+.cricket-container {
+    position: relative;
+    z-index: 3;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+}
+
+.cricket-content {
+    max-width: 600px;
+    color: #ffffff;
+}
+
+.cricket-category {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.cricket-title {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 1;
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+}
+
+.cricket-title-line {
+    display: block;
+}
+
+.cricket-description {
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 40px;
+    max-width: 550px;
+}
+
+.cricket-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cricket-btn {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 12px 32px;
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cricket-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+}
+
+.cricket-btn-explore {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.cricket-btn-explore:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive for Cricket Section */
+@media (max-width: 1200px) {
+    .cricket-container {
+        padding: 0 40px;
+    }
+
+    .cricket-title {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cricket-section {
+        height: 60vh;
+    }
+
+    .cricket-container {
+        padding: 0 20px;
+    }
+
+    .cricket-title {
+        font-size: 40px;
+    }
+
+    .cricket-description {
+        font-size: 16px;
+    }
+
+    .cricket-buttons {
+        flex-direction: column;
+    }
+
+    .cricket-btn {
+        width: 100%;
+    }
+}
+
+/* World's Best Club Section */
+.club-section {
+    width: 100%;
+    height: 75vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.club-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/worlds-best-club-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.club-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%);
+    z-index: 2;
+}
+
+.club-container {
+    position: relative;
+    z-index: 3;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+}
+
+.club-content {
+    max-width: 600px;
+    color: #ffffff;
+}
+
+.club-category {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.club-title {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 1;
+    color: #ffffff;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+}
+
+.club-title-line {
+    display: block;
+}
+
+.club-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.club-btn {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 12px 32px;
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.club-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+}
+
+.club-btn-explore {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.club-btn-explore:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive for Club Section */
+@media (max-width: 1200px) {
+    .club-container {
+        padding: 0 40px;
+    }
+
+    .club-title {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .club-section {
+        height: 60vh;
+    }
+
+    .club-container {
+        padding: 0 20px;
+    }
+
+    .club-title {
+        font-size: 40px;
+    }
+
+    .club-buttons {
+        flex-direction: column;
+    }
+
+    .club-btn {
+        width: 100%;
+    }
+}
+
+/* Redeem Your FSP Champion Points & Win Big Section */
+.redeem-win-big-section {
+    background: #fff;
+    padding: 80px 40px 100px;
+    position: relative;
+}
+
+.redeem-win-big-container {
+    max-width: 1310px;
+    margin: 0 auto;
+}
+
+.redeem-win-big-header {
+    text-align: center;
+    margin-bottom: 34px;
+}
+
+.redeem-win-big-title {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 0.9375;
+    letter-spacing: -0.025em;
+    color: #4D4D4D;
+    text-transform: capitalize;
+    margin-bottom: 12px;
+}
+
+.redeem-win-big-subtitle {
+    font-family: 'EB Garamond', serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.136;
+    letter-spacing: -0.0145em;
+    color: #4D4D4D;
+    text-align: center;
+}
+
+.redeem-win-big-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 0;
+}
+
+.redeem-grid-row {
+    display: grid;
+    gap: 43px;
+    margin-bottom: 0;
+}
+
+.redeem-grid-row:first-child {
+    grid-template-columns: 632px 632px;
+    margin-bottom: 0;
+}
+
+.redeem-grid-row:last-child {
+    grid-template-columns: 413px 413px 413px;
+    justify-content: center;
+    margin-top: 0;
+}
+
+.redeem-card-item {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.redeem-grid-row:first-child .redeem-card-item {
+    width: 632px;
+    height: 498px;
+}
+
+.redeem-grid-row:last-child .redeem-card-item {
+    width: 413px;
+    height: 325px;
+}
+
+.redeem-card-image {
+    width: 100%;
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.redeem-grid-row:first-child .redeem-card-image {
+    height: 391px;
+}
+
+.redeem-grid-row:last-child .redeem-card-image {
+    height: 250px;
+}
+
+.redeem-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.redeem-card-footer {
+    background: #0000FF;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 75px;
+}
+
+.redeem-grid-row:first-child .redeem-card-footer {
+    min-height: 107px;
+}
+
+.redeem-card-text {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 0.9;
+    color: #fff;
+    margin: 0;
+    flex: 1;
+}
+
+.redeem-grid-row:last-child .redeem-card-text {
+    font-size: 20px;
+}
+
+.btn-join-now {
+    background: #fff;
+    color: #0000FF;
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.56;
+    letter-spacing: -0.024em;
+    padding: 7px 19px;
+    border-radius: 20px;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.btn-join-now:hover {
+    opacity: 0.9;
+}
+
+.redeem-win-big-bottom {
+    display: grid;
+    grid-template-columns: 897px 413px;
+    gap: 0;
+    margin-top: 3px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.redeem-bottom-image {
+    width: 100%;
+    height: 224px;
+    overflow: hidden;
+}
+
+.redeem-bottom-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.redeem-bottom-cta {
+    background: #0000FF;
+    padding: 61px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    height: 224px;
+}
+
+.redeem-bottom-text {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 0.9;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+}
+
+.redeem-bottom-cta .btn-join-now {
+    width: 373px;
+    text-align: center;
+    justify-content: center;
+    padding: 7px 0;
+}
+
+/* Responsive for Redeem Section */
+@media (max-width: 1400px) {
+    .redeem-grid-row:first-child {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .redeem-grid-row:first-child .redeem-card-item {
+        width: 100%;
+    }
+
+    .redeem-grid-row:last-child {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .redeem-grid-row:last-child .redeem-card-item {
+        width: 100%;
+    }
+
+    .redeem-win-big-bottom {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .redeem-win-big-section {
+        padding: 60px 20px 80px;
+    }
+
+    .redeem-win-big-title {
+        font-size: 32px;
+    }
+
+    .redeem-win-big-subtitle {
+        font-size: 18px;
+    }
+
+    .redeem-grid-row:first-child,
+    .redeem-grid-row:last-child {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .redeem-grid-row:first-child .redeem-card-item,
+    .redeem-grid-row:last-child .redeem-card-item {
+        width: 100%;
+        height: auto;
+    }
+
+    .redeem-card-image {
+        height: 250px !important;
+    }
+
+    .redeem-card-footer {
+        min-height: auto !important;
+        padding: 16px;
+    }
+
+    .redeem-card-text {
+        font-size: 18px !important;
+    }
+
+    .redeem-win-big-bottom {
+        grid-template-columns: 1fr;
+    }
+
+    .redeem-bottom-cta {
+        height: auto;
+        padding: 40px 24px;
+    }
+
+    .redeem-bottom-cta .btn-join-now {
+        width: 100%;
+    }
+}
+
+/* Redeem Your Passion Points Section */
+.passion-points-section {
+    background: #fff;
+    padding: 80px 60px 100px;
+}
+
+.passion-points-container {
+    display: grid;
+    grid-template-columns: 728px 1fr;
+    gap: 50px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.passion-points-title {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 0.9375;
+    letter-spacing: -0.025em;
+    color: #4D4D4D;
+    text-transform: capitalize;
+    margin-bottom: 24px;
+}
+
+.passion-points-subtitle {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.15;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.passion-points-desc {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: #4D4D4D;
+    margin-bottom: 24px;
+    max-width: 424px;
+}
+
+.btn-start-earning-passion {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: #0000FF;
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.56;
+    letter-spacing: -0.024em;
+    padding: 7px 32px;
+    border-radius: 20px;
+    text-decoration: none;
+    width: 197px;
+    border: 1px solid #0000FF;
+    transition: all 0.3s ease;
+}
+
+.btn-start-earning-passion:hover {
+    background: #0000FF;
+    color: #fff;
+}
+
+.passion-points-right {
+    display: flex;
+    flex-direction: column;
+    gap: 67px;
+}
+
+.partners-row {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.partners-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.partners-title {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.15;
+    color: #000;
+    margin: 0;
+}
+
+.nav-arrows {
+    display: flex;
+    gap: 6px;
+}
+
+.nav-arrow {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #0000FF;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav-arrow:hover {
+    opacity: 0.8;
+}
+
+.partners-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 19px;
+}
+
+.partner-card {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 229px;
+}
+
+.partner-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Responsive for Passion Points Section */
+@media (max-width: 1400px) {
+    .passion-points-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .passion-points-section {
+        padding: 60px 20px 80px;
+    }
+
+    .passion-points-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .passion-points-title {
+        font-size: 32px;
+    }
+
+    .passion-points-subtitle {
+        font-size: 18px;
+    }
+
+    .passion-points-desc {
+        font-size: 14px;
+        max-width: 100%;
+    }
+
+    .btn-start-earning-passion {
+        width: 100%;
+    }
+
+    .partners-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .partner-card {
+        min-height: 180px;
+    }
+}
+
+/* Big Prizes & Daily Wins Section */
+.big-prizes-section {
+    background: #fff;
+    padding: 80px 20px;
+}
+
+.big-prizes-container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.big-prizes-title {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.1;
+    text-align: center;
+    color: #000000;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.big-prizes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.prize-card {
+    position: relative;
+ 
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 40px;
+    min-height: 300px;
+}
+
+.prize-card-merged {
+    grid-column: span 2;
+}
+
+.big-prizes-grid .prize-card:nth-child(1) {
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+
+.big-prizes-grid .prize-card:nth-child(2) {
+    grid-column: 3;
+    grid-row: 1;
+    background: #0000FF;
+    padding: 0;
+}
+
+.big-prizes-grid .prize-card:nth-child(2) .prize-card-overlay {
+    display: none;
+}
+
+.big-prizes-grid .prize-card:nth-child(2) .prize-card-image {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    width: auto;
+    height: auto;
+    max-width: 60%;
+    max-height: 60%;
+    object-fit: contain;
+    object-position: bottom right;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    top: auto;
+    left: auto;
+}
+
+.big-prizes-grid .prize-card:nth-child(2) .prize-card-content {
+    position: relative;
+    z-index: 2;
+    align-self: flex-start;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: auto;
+}
+
+.big-prizes-grid .prize-card:nth-child(3) {
+    grid-column: 1;
+    grid-row: 2;
+    background: #0000FF;
+    padding: 0;
+}
+
+.big-prizes-grid .prize-card:nth-child(3) .prize-card-overlay {
+    display: none;
+}
+
+.big-prizes-grid .prize-card:nth-child(3) .prize-card-image {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: auto;
+    height: auto;
+    max-width: 40%;
+    max-height: 40%;
+    object-fit: contain;
+    object-position: bottom right;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    top: auto;
+    left: auto;
+}
+
+.big-prizes-grid .prize-card:nth-child(3) .prize-card-content {
+    position: relative;
+    z-index: 2;
+    align-self: flex-start;
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: auto;
+    padding: 20px;
+}
+
+.big-prizes-grid .prize-card:nth-child(4) {
+    grid-column: 2 / 4;
+    grid-row: 2;
+}
+
+.prize-card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.prize-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(0, 0, 255, 1) 0%, rgba(0, 0, 255, 1) 40%, rgba(0, 0, 255, 0) 60%);
+    z-index: 2;
+}
+
+.prize-card-content {
+    position: relative;
+    z-index: 3;
+    color: #ffffff;
+    text-align: right;
+    max-width: 50%;
+}
+
+.prize-card-title {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.prize-card-subtitle {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #ffffff;
+    margin: 0;
+}
+
+.big-prizes-cta {
+    text-align: center;
+}
+
+.btn-download-app-prizes {
+    display: inline-block;
+    background: #0000FF;
+    color: #ffffff;
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 15px 40px;
+
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.btn-download-app-prizes:hover {
+    opacity: 0.9;
+}
+
+/* Responsive for Big Prizes Section */
+@media (max-width: 1024px) {
+    .big-prizes-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .big-prizes-grid .prize-card:nth-child(1),
+    .big-prizes-grid .prize-card:nth-child(2),
+    .big-prizes-grid .prize-card:nth-child(3),
+    .big-prizes-grid .prize-card:nth-child(4) {
+        grid-column: span 1;
+    }
+
+    .prize-card-title {
+        font-size: 28px;
+    }
+
+    .prize-card-subtitle {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .big-prizes-section {
+        padding: 60px 20px;
+    }
+
+    .big-prizes-title {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+    .big-prizes-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .big-prizes-grid .prize-card:nth-child(1),
+    .big-prizes-grid .prize-card:nth-child(2),
+    .big-prizes-grid .prize-card:nth-child(3),
+    .big-prizes-grid .prize-card:nth-child(4) {
+        grid-column: 1;
+    }
+
+    .prize-card {
+        padding: 30px;
+        min-height: 250px !important;
+    }
+
+    .prize-card-title {
+        font-size: 24px;
+    }
+
+    .prize-card-subtitle {
+        font-size: 16px;
+    }
+
+    .btn-download-app-prizes {
+        width: 100%;
+        padding: 15px 20px;
+    }
+}
+
+/* Get Golden Tickets Section */
+.golden-tickets-section {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.golden-tickets-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/golden-tier-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.golden-tickets-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+}
+
+.golden-tickets-content {
+    text-align: center;
+    color: #000000;
+}
+
+.golden-tickets-title {
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.golden-tickets-description {
+    font-family: 'EB Garamond', serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000000;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.golden-tickets-logo {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fsp-logo-image {
+    max-width: 200px;
+    height: auto;
+    display: block;
+}
+
+.btn-explore-membership {
+    display: inline-block;
+    background: #0000FF;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    font-family: 'FK Grotesk Neue', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 32px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-explore-membership:hover {
+    background: #0052CC;
+    border-color: #0052CC;
+}
+
+/* Responsive for Golden Tickets Section */
+@media (max-width: 768px) {
+    .golden-tickets-section {
+        height: 50vh;
+    }
+
+    .golden-tickets-title {
+        font-size: 36px;
+    }
+
+    .golden-tickets-description {
+        font-size: 18px;
+    }
+
+    .fsp-logo-image {
+        max-width: 150px;
+    }
+}
+

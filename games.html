@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Games — FSP</title>
+  <link rel="icon" type="image/svg+xml" href="./src/assets/images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/css/reset.css">
+  <link rel="stylesheet" href="./src/css/variables.css">
+  <link rel="stylesheet" href="./src/css/main.css">
+  <link rel="stylesheet" href="./src/css/games.css">
+  <link rel="stylesheet" href="./fsp-games/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="FSP Home">
+        <img src="./src/assets/images/logo.svg" alt="FSP logo">
+      </a>
+      <button class="hamburger-btn" aria-label="Toggle menu" aria-expanded="false">
+        <span class="hamburger-icon"></span>
+        <span class="hamburger-icon"></span>
+        <span class="hamburger-icon"></span>
+      </button>
+      <nav class="main-nav" aria-label="Primary" aria-hidden="true">
+        <ul>
+          <li><a href="index.html">Personal</a></li>
+          <li><a href="enterprise.html">Enterprise</a></li>
+          <li class="nav-dropdown">
+            <a href="#" class="dropdown-toggle">FSP Private</a>
+            <ul class="dropdown-menu">
+              <li><a href="pools.html">FSP Pools</a></li>
+              <li><a href="fsp-private.html">FSP Note</a></li>
+              <li><a href="#" class="coming-soon">FSP Capital <span>(coming soon)</span></a></li>
+            </ul>
+          </li>
+          <li><a href="games.html" class="active">Games</a></li>
+          <li class="nav-dropdown">
+            <a href="#" class="dropdown-toggle">Developers</a>
+            <ul class="dropdown-menu">
+              <li><a href="documentation.html">Documentation</a></li>
+              <li><a href="broadcast-production-automation.html">Broadcast and Production Automation</a></li>
+              <li><a href="#">AI Agents for Sports</a></li>
+            </ul>
+          </li>
+          <li class="nav-dropdown">
+            <a href="#" class="dropdown-toggle">About</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">League Sports Co</a></li>
+              <li><a href="#">FFS Foundation</a></li>
+            </ul>
+          </li>
+        </ul>
+        <a class="btn-join btn-join-mobile" href="#">Join</a>
+      </nav>
+      <a class="btn-join btn-join-desktop" href="#">Join</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="games-hero">
+      <div class="games-hero-bg">
+        <img src="./src/assets/images/games-hero.jpg" alt="Games hero background" class="games-hero-image">
+      </div>
+      <div class="games-hero-gradient-blue"></div>
+      <div class="games-hero-gradient-black"></div>
+      <div class="games-hero-content">
+        <div class="container">
+          <div class="games-hero-text">
+            <h1 class="games-hero-title">Sports Reborn</h1>
+            <p class="games-hero-subtitle">Leveling The Global Playing Field</p>
+          </div>
+        </div>
+      </div>
+      <div class="games-hero-nav">
+        <div class="container">
+          <nav class="games-nav">
+            <a href="#" class="games-nav-item active">FSP Games</a>
+            <a href="#" class="games-nav-item">World's Best</a>
+            <a href="#" class="games-nav-item">Finals</a>
+            <a href="#" class="games-nav-item">Athletes<span class="coming-soon-badge">(Announcing Soon)</span></a>
+          </nav>
+        </div>
+      </div>
+      <div class="games-hero-disclaimer">
+        <p>The content, information, audio/ visuals, pictures, images, elements, aspects, references, marks or copyrights being used herein are intended solely for the purpose of illustration and presentation; and LSC/WBL does not claim any rights, licenses or ownership in the same. No content or representation provided herein shall Constitute any binding agreement or reflect the finalized structure or offerings of WBL nor should be construed as definitive or absolute at this stage.</p>
+      </div>
+    </section>
+
+    <!-- FSP Games Content Section -->
+    <div id="fsp-games-content" class="games-content-section">
+      <!-- Next Section with Background -->
+      <section class="section-with-bg">
+        <div class="cards-container">
+          <div class="gradient-card">
+            <div class="card-content">
+              <div class="card-header">
+                <div class="card-logo">
+                  <img src="./fsp-games/images/wbl.svg" alt="WBL Logo" class="logo-img">
+                </div>
+                <div class="card-header-text">
+                  <p class="card-description">The Best Bowling League in the World.</p>
+                  <button class="card-button">Get Access To WBL</button>
+                </div>
+              </div>
+              <div class="card-grid">
+                <div class="grid-item merged-row">
+                  <div class="grid-text">MASSIVE PRIZE MONEY</div>
+                  <img src="./fsp-games/images/card_image1.jpg" alt="Card Image 1" class="grid-image">
+                </div>
+                <div class="grid-item">
+                  <div class="grid-text"><span class="text-large">24</span> LEADING ATHLETES</div>
+                  <img src="./fsp-games/images/card_image2.jpg" alt="Card Image 2" class="grid-image">
+                </div>
+                <div class="grid-item">
+                  <div class="grid-text">GLOBAL ICONIC VENUES</div>
+                  <img src="./fsp-games/images/card_image3.jpg" alt="Card Image 3" class="grid-image">
+                </div>
+                <div class="grid-item merged-row">
+                  <div class="grid-text">DYNAMIC FORMAT</div>
+                  <img src="./fsp-games/images/card_image1.jpg" alt="Card Image 1" class="grid-image">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gradient-card">
+            <div class="card-content">Card 2</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5 with Background -->
+      <section class="section-5-with-bg">
+        <div class="cards-container">
+          <div class="gradient-card">
+            <div class="card-content">
+              <div class="card-header">
+                <div class="card-logo">
+                  <img src="./fsp-games/images/wbl.svg" alt="WBL Logo" class="logo-img">
+                </div>
+                <div class="card-header-text">
+                  <p class="card-description">The Best Bowling League in the World.</p>
+                  <button class="card-button">Get Access To WBL</button>
+                </div>
+              </div>
+              <div class="card-grid">
+                <div class="grid-item merged-row">
+                  <div class="grid-text">MASSIVE PRIZE MONEY</div>
+                  <img src="./fsp-games/images/card_image1.jpg" alt="Card Image 1" class="grid-image">
+                </div>
+                <div class="grid-item">
+                  <div class="grid-text"><span class="text-large">24</span> LEADING ATHLETES</div>
+                  <img src="./fsp-games/images/card_image2.jpg" alt="Card Image 2" class="grid-image">
+                </div>
+                <div class="grid-item">
+                  <div class="grid-text">GLOBAL ICONIC VENUES</div>
+                  <img src="./fsp-games/images/card_image3.jpg" alt="Card Image 3" class="grid-image">
+                </div>
+                <div class="grid-item merged-row">
+                  <div class="grid-text">DYNAMIC FORMAT</div>
+                  <img src="./fsp-games/images/card_image1.jpg" alt="Card Image 1" class="grid-image">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gradient-card">
+            <div class="card-content">Card 2</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6 - Our Sporting Philosophy -->
+      <section class="section-6-philosophy">
+        <div class="philosophy-container">
+          <div class="philosophy-content">
+            <h2 class="philosophy-title">OUR SPORTING PHILOSOPHY</h2>
+            <p class="philosophy-text">We believe the future of sports belongs to all, not just a few. FSP's unique technology stack - AI vision, AI automation, payments & rewards makes all sports programmable. Sports will empower human purpose in the age of AI and FSP provides the building blocks.</p>
+          </div>
+
+          <div class="philosophy-panels">
+            <div class="philosophy-panel">
+              <img src="./fsp-games/images/programmable-sports.jpg" alt="Programmable Sports" class="panel-image">
+              <div class="panel-content">
+                <h3 class="panel-title">PROGRAMMABLE SPORTS</h3>
+                <p class="panel-description">FSP re-defines value in sports assets, creating sustainable value for athletes and asset owners.</p>
+              </div>
+            </div>
+            <div class="philosophy-panel">
+              <img src="./fsp-games/images/innovation-experience.jpg" alt="Innovation as Experience" class="panel-image">
+              <div class="panel-content">
+                <h3 class="panel-title">INNOVATION AS EXPERIENCE</h3>
+                <p class="panel-description">Athletes and participants of all skill levels are encouraged to participate. From Bowling Alone to sports with the world</p>
+              </div>
+            </div>
+            <div class="philosophy-panel">
+              <img src="./fsp-games/images/winning-awakening.jpg" alt="Winning as Awakening" class="panel-image">
+              <div class="panel-content">
+                <h3 class="panel-title">WINNING AS AWAKENING</h3>
+                <p class="panel-description">FSP events are geared towards peak performance & mindfulness in iconic venues to provide athletes & attendees more value than usual sporting events.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img src="./fsp-games/images/compass-rose.svg" alt="Compass Rose" class="philosophy-compass" onerror="this.style.display='none'">
+      </section>
+
+      <!-- Last Section -->
+      <section class="last-section">
+        <div class="last-section-container">
+          <div class="last-section-header">
+            <h2 class="last-section-title">
+              <span class="last-section-title-line">WHERE PERFORMANCE</span>
+              <span class="last-section-title-line">& PRESENCE ALIGN</span>
+            </h2>
+            <p class="last-section-subtitle">More than events. FSP is a sanctuary for inner mastery, physical excellence, and meaningful human connection.</p>
+          </div>
+          <div class="last-section-grid">
+            <div class="last-section-card card-row1">Card 1</div>
+            <div class="last-section-card card-row1">Card 2</div>
+            <div class="last-section-card card-row2">Card 3</div>
+            <div class="last-section-card card-row2">Card 4</div>
+            <div class="last-section-card card-row2">Card 5</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7 - Foundation for The Future of Sports -->
+      <section class="ffs-section">
+        <div class="ffs-container">
+          <div class="ffs-image-container">
+            <img src="./fsp-games/images/ffs-tennis-player.jpg" alt="Tennis Player" class="ffs-image">
+          </div>
+          <div class="ffs-content">
+            <h2 class="ffs-question">NEED SUPPORT IN YOUR JOURNEY?</h2>
+            <p class="ffs-description">The Foundation for The Future of Sports was created to assist leading global talent and drive education on the ever changing landscape of Tech and Finance. Reach out to The Foundation for assistance.</p>
+            <div class="ffs-acronym-container">
+              <h3 class="ffs-acronym">FFS</h3>
+              <div class="ffs-arrow">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 14L12 9L17 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <p class="ffs-full-name">Foundation for the Future of Sports</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- World's Best Content Section -->
+    <div id="worlds-best-content" class="games-content-section" style="display: none;">
+      <!-- World's Best Hero Section -->
+      <section class="worlds-best-hero">
+        <div class="worlds-best-container">
+          <div class="worlds-best-content">
+            <h1 class="worlds-best-title">WORLD'S BEST</h1>
+            <p class="worlds-best-subtitle">Prove that you are the world's best. Are you a complete modern athlete?</p>
+            
+            <ul class="worlds-best-features">
+              <li class="worlds-best-feature">
+                <svg class="checkmark-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Best Skills</span>
+              </li>
+              <li class="worlds-best-feature">
+                <svg class="checkmark-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Best Reach</span>
+              </li>
+              <li class="worlds-best-feature">
+                <svg class="checkmark-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Best Scale</span>
+              </li>
+            </ul>
+
+            <div class="worlds-best-buttons">
+              <button class="btn-get-started-hero">Get Started</button>
+              <button class="btn-download-app-hero">Download The App</button>
+            </div>
+
+            <div class="app-store-badges">
+              <a href="#" class="app-badge">
+                <img src="./fsp-games/images/google-play-badge.png" alt="Get it on Google Play" class="badge-image" onerror="this.style.display='none'">
+                <span class="badge-text">GET IT ON<br>Google Play</span>
+              </a>
+              <a href="#" class="app-badge">
+                <img src="./fsp-games/images/app-store-badge.png" alt="Download on the App Store" class="badge-image" onerror="this.style.display='none'">
+                <span class="badge-text">Download on the<br>App Store</span>
+              </a>
+            </div>
+          </div>
+          <div class="worlds-best-image">
+            <img src="./fsp-games/images/bestx-hero-image.png" alt="World's Best App Mockup" class="hero-mockup-image">
+          </div>
+        </div>
+      </section>
+
+      <!-- Image Carousel Section -->
+      <section class="carousel-section">
+        <div class="carousel-header">
+          <button class="carousel-badge">THE BEST</button>
+          <h2 class="carousel-title">CHAMPIONSHIP SPORTS REIMAGINED</h2>
+          <p class="carousel-description">The most sustainable approach to modern day leagues for both athletes and asset owners. <a href="#" class="carousel-link">Learn about the FSP ecosystem here</a></p>
+        </div>
+        
+        <div class="carousel-container">
+          <div class="carousel-wrapper">
+            <div class="carousel-slide active">
+              <img src="./fsp-games/images/ai-verified-global-challenges.jpg" alt="AI Verified Global Challenges" class="carousel-image">
+            </div>
+            <div class="carousel-slide">
+              <img src="./fsp-games/images/golden-ticket.jpg" alt="Golden Ticket" class="carousel-image">
+            </div>
+            <div class="carousel-slide">
+              <img src="./fsp-games/images/fsp-bank.jpg" alt="FSP Bank" class="carousel-image">
+            </div>
+          </div>
+          
+          <div class="carousel-navigation">
+            <div class="carousel-dots">
+              <span class="carousel-dot active" data-slide="0"></span>
+              <span class="carousel-dot" data-slide="1"></span>
+              <span class="carousel-dot" data-slide="2"></span>
+            </div>
+            <button class="carousel-participate-btn">Participate</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- World's Best Bowler Section -->
+      <section class="bowler-section">
+        <div class="bowler-background">
+          <div class="bowler-gradient-overlay"></div>
+        </div>
+        <div class="bowler-container">
+          <div class="bowler-content">
+            <div class="bowler-category">01. SPORTS</div>
+            <h2 class="bowler-title">
+              <span class="bowler-title-line">WORLD'S BEST</span>
+              <span class="bowler-title-line">BOWLER</span>
+            </h2>
+            <p class="bowler-description">Vision-AI measures ball speed, rev rate, entry angle, and pocket-hit consistency. Rise the ladder to purpose-built finals lanes; the Top 10 advance to the WBL draft pool.</p>
+            <div class="bowler-buttons">
+              <button class="bowler-btn bowler-btn-explore">Explore</button>
+              <button class="bowler-btn bowler-btn-participate">Participate</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- World's Best Squash Player Section -->
+      <section class="squash-section">
+        <div class="squash-background">
+          <div class="squash-gradient-overlay"></div>
+        </div>
+        <div class="squash-container">
+          <div class="squash-content">
+            <div class="squash-category">02. SPORTS</div>
+            <h2 class="squash-title">
+              <span class="squash-title-line">WORLD'S BEST</span>
+              <span class="squash-title-line">SQUASH PLAYER</span>
+            </h2>
+            <p class="squash-description">Vision-AI evaluates pace, accuracy, and movement economy in glass-court drills and rally scenarios. Rank globally and step onto a show court for finals; winners get a WPS access path.</p>
+            <div class="squash-buttons">
+              <button class="squash-btn squash-btn-explore">Explore</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- World's Best Cricket Player Section -->
+      <section class="cricket-section">
+        <div class="cricket-background">
+          <div class="cricket-gradient-overlay"></div>
+        </div>
+        <div class="cricket-container">
+          <div class="cricket-content">
+            <div class="cricket-category">03. SPORTS</div>
+            <h2 class="cricket-title">
+              <span class="cricket-title-line">WORLD'S BEST</span>
+              <span class="cricket-title-line">CRICKET PLAYER</span>
+            </h2>
+            <p class="cricket-description">Vision-AI scores shot timing, control, and range against pace and swing. Qualify remotely, climb a global ladder, and reach stadium finals; standouts enter pro showcases.</p>
+            <div class="cricket-buttons">
+              <button class="cricket-btn cricket-btn-explore">Explore</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- World's Best Club Section -->
+      <section class="club-section">
+        <div class="club-background">
+          <div class="club-gradient-overlay"></div>
+        </div>
+        <div class="club-container">
+          <div class="club-content">
+            <div class="club-category">04. SPORTS</div>
+            <h2 class="club-title">
+              <span class="club-title-line">WORLD'S BEST</span>
+              <span class="club-title-line">CLUB</span>
+            </h2>
+            <div class="club-buttons">
+              <button class="club-btn club-btn-explore">Explore</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Redeem Your FSP Champion Points & Win Big Section -->
+      <section class="redeem-win-big-section">
+        <div class="redeem-win-big-container">
+          <div class="redeem-win-big-header">
+            <h2 class="redeem-win-big-title">Redeem Your FSP Champion Points & Win Big</h2>
+            <p class="redeem-win-big-subtitle">FSP Pop access at global events, Courtside Tickets, E1 Pit experience, Signed Merchandize, Meet and Greets</p>
+          </div>
+          <div class="redeem-win-big-grid">
+            <div class="redeem-grid-row">
+              <!-- Card 1: Virat Kohli Signed Merchandise -->
+              <div class="redeem-card-item">
+                <div class="redeem-card-image">
+                  <img src="./fsp-games/images/virat-kohli-signed-merchandise.png" alt="Virat Kohli signing merchandise">
+                </div>
+                <div class="redeem-card-footer">
+                  <p class="redeem-card-text">Virat Kohli Signed Merchandise</p>
+                  <a href="#" class="btn-join-now">Join Now</a>
+                </div>
+              </div>
+              <!-- Card 2: Meet & Greet With Mookie Betts -->
+              <div class="redeem-card-item">
+                <div class="redeem-card-image">
+                  <img src="./fsp-games/images/mookie-betts-meet-greet.png" alt="Meet & Greet With Mookie Betts">
+                </div>
+                <div class="redeem-card-footer">
+                  <p class="redeem-card-text">Meet & Greet With Mookie Betts</p>
+                  <a href="#" class="btn-join-now">Join Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="redeem-grid-row">
+              <!-- Card 3: Chance to Play in World Bowling League -->
+              <div class="redeem-card-item">
+                <div class="redeem-card-image">
+                  <img src="./fsp-games/images/world-bowling-league.png" alt="World Bowling League">
+                </div>
+                <div class="redeem-card-footer">
+                  <p class="redeem-card-text">Chance to Play in World Bowling League</p>
+                  <a href="#" class="btn-join-now">Join Now</a>
+                </div>
+              </div>
+              <!-- Card 4: John Peeters E1 -->
+              <div class="redeem-card-item">
+                <div class="redeem-card-image">
+                  <img src="./fsp-games/images/john-peeters-e1.png" alt="John Peeters E1">
+                </div>
+                <div class="redeem-card-footer">
+                  <p class="redeem-card-text">John Peeters & get a chance to get pit experience at E1</p>
+                  <a href="#" class="btn-join-now">Join Now</a>
+                </div>
+              </div>
+              <!-- Card 5: World Premier Squash -->
+              <div class="redeem-card-item">
+                <div class="redeem-card-image">
+                  <img src="./fsp-games/images/world-premier-squash.png" alt="World Premier Squash">
+                </div>
+                <div class="redeem-card-footer">
+                  <p class="redeem-card-text">Chance to Play In World Premier Squash</p>
+                  <a href="#" class="btn-join-now">Join Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Full-width bottom section: FIFA World Cup -->
+          <div class="redeem-win-big-bottom">
+            <div class="redeem-bottom-image">
+              <img src="./fsp-games/images/fifa-world-cup-stadium.png" alt="FIFA World Cup 2026 Stadium">
+            </div>
+            <div class="redeem-bottom-cta">
+              <p class="redeem-bottom-text">Win a Free trip to Fifa World Cup 2026.</p>
+              <a href="#" class="btn-join-now">Join Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Redeem Your Passion Points Section -->
+      <section class="passion-points-section">
+        <div class="passion-points-container">
+          <div class="passion-points-left">
+            <h2 class="passion-points-title">Redeem Your Passion Points</h2>
+            <h3 class="passion-points-subtitle">Redeem on Connecting your Card</h3>
+            <p class="passion-points-desc">Earn points you can transfer to major airlines, redeem with hotel partners, and use for VIP tickets to top sports events.</p>
+            <a href="#" class="btn-start-earning-passion">Start Earning Today</a>
+          </div>
+          <div class="passion-points-right">
+            <div class="partners-row">
+              <div class="partners-header">
+                <h4 class="partners-title">Airline transfer partners (3)</h4>
+                <div class="nav-arrows">
+                  <button class="nav-arrow nav-arrow-prev">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none"><path d="M8.5 16L1 8.5L8.5 1" stroke="white" stroke-width="2"/></svg>
+                  </button>
+                  <button class="nav-arrow nav-arrow-next">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none"><path d="M8.5 1L16 8.5L8.5 16" stroke="white" stroke-width="2"/></svg>
+                  </button>
+                </div>
+              </div>
+              <div class="partners-cards">
+                <div class="partner-card">
+                  <img src="./fsp-games/images/delta-logo.svg" alt="Delta" class="partner-logo">
+                </div>
+                <div class="partner-card">
+                  <img src="./fsp-games/images/lufthansa-logo.png" alt="Lufthansa" class="partner-logo">
+                </div>
+                <div class="partner-card">
+                  <img src="./fsp-games/images/turkish-airlines-logo.png" alt="Turkish Airlines" class="partner-logo">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Big Prizes & Daily Wins Section -->
+      <section class="big-prizes-section">
+        <div class="big-prizes-container">
+          <h2 class="big-prizes-title">BIG PRIZES &<br>DAILY WINS</h2>
+          <div class="big-prizes-grid">
+            <!-- Row 1: Card 1 (merged 1-2) + Card 3 -->
+            <div class="prize-card prize-card-merged">
+              <img src="./fsp-games/images/lamborghini.jpg" alt="Lamborghini" class="prize-card-image">
+              <div class="prize-card-overlay"></div>
+              <div class="prize-card-content">
+                <h3 class="prize-card-title">Win a Lamborghini</h3>
+                <p class="prize-card-subtitle">Perfect Game Bonanza</p>
+              </div>
+            </div>
+            <div class="prize-card">
+              <img src="./fsp-games/images/iphone.png" alt="iPhone" class="prize-card-image">
+              <div class="prize-card-overlay"></div>
+              <div class="prize-card-content">
+                <h3 class="prize-card-title">Win an iPhone<br>(For first 5 Athletes)</h3>
+              </div>
+            </div>
+            <!-- Row 2: Card 4 + Card 5-6 (merged) -->
+            <div class="prize-card">
+              <img src="./fsp-games/images/wbl-member.png" alt="WBL Member" class="prize-card-image">
+              <div class="prize-card-overlay"></div>
+              <div class="prize-card-content">
+                <h3 class="prize-card-title">Win 2 Years of Free<br>WBL Membership</h3>
+                <p class="prize-card-subtitle">Margin Master Draw</p>
+              </div>
+            </div>
+            <div class="prize-card prize-card-merged">
+              <img src="./fsp-games/images/trip.jpg" alt="Trip to Switzerland/Dubai" class="prize-card-image">
+              <div class="prize-card-overlay"></div>
+              <div class="prize-card-content">
+                <h3 class="prize-card-title">A two-day trip to<br>Switzerland/Dubai</h3>
+              </div>
+            </div>
+          </div>
+          <div class="big-prizes-cta">
+            <a href="#" class="btn-download-app-prizes">Download App & Start Earning</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Get Golden Tickets Section -->
+      <section class="golden-tickets-section">
+        <div class="golden-tickets-background"></div>
+        <div class="golden-tickets-container">
+          <div class="golden-tickets-content">
+            <h2 class="golden-tickets-title">GET GOLDEN TICKETS</h2>
+            <p class="golden-tickets-description">Get more chances to win the challenge & leading prizes. Sign up to FSP & deposit</p>
+            <div class="golden-tickets-logo">
+              <img src="./fsp-games/images/fsp-logo.png" alt="Future of Sports" class="fsp-logo-image">
+            </div>
+            <a href="#" class="btn-explore-membership">Explore Membership Tiers</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <div class="footer-newsletter">
+            <span class="newsletter-label">Newsletter</span>
+            <p class="newsletter-text">Stay up-to-date with FSP's<br>latest news and updates.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your email" class="newsletter-input" required>
+              <button type="submit" class="btn-newsletter">Sign up</button>
+            </form>
+            <p class="newsletter-disclaimer">By clicking the "Enroll" button below, you agree you want to receive the <br>FSPs Newsletter and agree to the Terms of Services.</p>
+          </div>
+        </div>
+        
+        <div class="footer-right">
+          <img src="./src/assets/images/footer-logo.svg" alt="Future of Sports" class="footer-logo">
+        </div>
+      </div>
+      
+      <div class="footer-disclaimer">
+        [*] The tokenized assets referenced herein (OUSG, USDY and Global Markets assets) ("Tokenized Assets") are not registered under the US Securities Act of 1933, as amended ("Act") or pursuant to securities laws of any other jurisdiction. Tokenized Assets shall not be offered, sold or otherwise transferred in the US or to US persons unless registered under the Act or an exemption or exclusion from the registration requirements thereof is available. Additional restrictions may apply. The Tokenized Asset issuers are not registered as investment companies under the US Investment Company Act of 1940, as amended, or pursuant to analogous laws of any other jurisdiction. Ondo Chain and Ondo Global Markets ("GM") have not launched. GM Tokenized Assets ("GM Assets") will be backed by applicable securities; however, GM Assets and the underlying securities are distinct assets with their own respective performance and risk profiles. Providers of products, services or technologies on Ondo Chain (including but not limited to issuers of assets and providers of asset-related services) are responsible for their own products, services and technologies, including but not limited to the compliance of such products, services and technologies with applicable laws, rules and regulations. Ondo
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Hamburger Menu Toggle
+    const hamburgerBtn = document.querySelector('.hamburger-btn');
+    const mainNav = document.querySelector('.main-nav');
+    
+    if (hamburgerBtn && mainNav) {
+      hamburgerBtn.addEventListener('click', () => {
+        const isExpanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
+        hamburgerBtn.setAttribute('aria-expanded', !isExpanded);
+        mainNav.setAttribute('aria-hidden', isExpanded);
+        document.body.style.overflow = !isExpanded ? 'hidden' : '';
+      });
+      
+      // Close menu when clicking on a link or Join button (but not dropdown toggles)
+      const navLinks = mainNav.querySelectorAll('a:not(.dropdown-toggle)');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          hamburgerBtn.setAttribute('aria-expanded', 'false');
+          mainNav.setAttribute('aria-hidden', 'true');
+          document.body.style.overflow = '';
+        });
+      });
+      
+      // Close menu when clicking outside
+      mainNav.addEventListener('click', (e) => {
+        if (e.target === mainNav) {
+          hamburgerBtn.setAttribute('aria-expanded', 'false');
+          mainNav.setAttribute('aria-hidden', 'true');
+          document.body.style.overflow = '';
+        }
+      });
+    }
+
+    // Dropdown Toggle Functionality
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    const navDropdowns = document.querySelectorAll('.nav-dropdown');
+    const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
+
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const dropdown = this.closest('.nav-dropdown');
+        if (!dropdown) return;
+        
+        const isActive = dropdown.classList.contains('active');
+        
+        // Close all dropdowns first
+        navDropdowns.forEach(dd => {
+          dd.classList.remove('active');
+        });
+        
+        // If it wasn't active, open it
+        if (!isActive) {
+          dropdown.classList.add('active');
+        }
+      });
+    });
+
+    // Close dropdown when clicking on a dropdown link
+    dropdownLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        navDropdowns.forEach(dd => {
+          dd.classList.remove('active');
+        });
+      });
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(e) {
+      const target = e.target;
+      const isDropdownToggle = target.closest('.dropdown-toggle');
+      const isInDropdown = target.closest('.nav-dropdown');
+      
+      if (!isDropdownToggle && !isInDropdown) {
+        navDropdowns.forEach(dd => {
+          dd.classList.remove('active');
+        });
+      }
+    });
+
+    // Prevent clicks on "coming soon" links
+    const comingSoonLinks = document.querySelectorAll('.coming-soon');
+    comingSoonLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+      });
+    });
+
+    // Games Navigation Toggle
+    const gamesNavItems = document.querySelectorAll('.games-nav-item');
+    const fspGamesContent = document.getElementById('fsp-games-content');
+    const worldsBestContent = document.getElementById('worlds-best-content');
+
+    gamesNavItems.forEach(item => {
+      item.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Remove active class from all items
+        gamesNavItems.forEach(nav => nav.classList.remove('active'));
+        
+        // Add active class to clicked item
+        this.classList.add('active');
+        
+        // Get the text content (excluding coming soon badge)
+        const navText = this.textContent.trim();
+        const isFspGames = navText.includes('FSP Games');
+        const isWorldsBest = navText.includes("World's Best");
+        
+        // Show/hide content based on selection
+        if (isFspGames && fspGamesContent) {
+          fspGamesContent.style.display = 'block';
+          if (worldsBestContent) worldsBestContent.style.display = 'none';
+        } else if (isWorldsBest && worldsBestContent) {
+          worldsBestContent.style.display = 'block';
+          if (fspGamesContent) fspGamesContent.style.display = 'none';
+        } else {
+          // Hide all content for other nav items
+          if (fspGamesContent) fspGamesContent.style.display = 'none';
+          if (worldsBestContent) worldsBestContent.style.display = 'none';
+        }
+      });
+    });
+
+    // Show FSP Games content by default since it's active
+    if (fspGamesContent) {
+      fspGamesContent.style.display = 'block';
+    }
+    if (worldsBestContent) {
+      worldsBestContent.style.display = 'none';
+    }
+
+    // Carousel functionality for World's Best
+    const carouselSlides = document.querySelectorAll('#worlds-best-content .carousel-slide');
+    const carouselDots = document.querySelectorAll('#worlds-best-content .carousel-dot');
+    
+    if (carouselSlides.length > 0) {
+      let currentSlide = 0;
+
+      function updateCarouselSlideClasses() {
+        carouselSlides.forEach((slide, i) => {
+          slide.classList.remove('active', 'prev', 'next');
+          
+          if (i === currentSlide) {
+            slide.classList.add('active');
+          } else if (i === (currentSlide - 1 + carouselSlides.length) % carouselSlides.length) {
+            slide.classList.add('prev');
+          } else {
+            slide.classList.add('next');
+          }
+        });
+        
+        carouselDots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === currentSlide);
+        });
+      }
+
+      function showCarouselSlide(index) {
+        currentSlide = index;
+        updateCarouselSlideClasses();
+      }
+
+      function nextCarouselSlide() {
+        currentSlide = (currentSlide + 1) % carouselSlides.length;
+        updateCarouselSlideClasses();
+      }
+
+      carouselDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          showCarouselSlide(index);
+        });
+      });
+
+      // Auto-play carousel
+      setInterval(() => {
+        if (worldsBestContent && worldsBestContent.style.display !== 'none') {
+          nextCarouselSlide();
+        }
+      }, 5000);
+
+      // Initialize
+      updateCarouselSlideClasses();
+    }
+  </script>
+</body>
+</html>
+

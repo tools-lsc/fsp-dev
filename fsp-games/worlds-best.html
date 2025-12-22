@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World's Best - FSP Games</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- World's Best Hero Section -->
+    <section class="worlds-best-hero">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="images/logo.svg" alt="FSP Games Logo" class="logo-image">
+                </div>
+                <div class="nav-menu">
+                    <a href="worlds-best.html" class="nav-link">World's Best</a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link">FSP Games <span class="chevron">▼</span></a>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link">League Tech <span class="chevron">▼</span></a>
+                    </div>
+                    <a href="#" class="nav-link">About</a>
+                </div>
+                <button class="btn-download-app">Download The App</button>
+            </div>
+            <div class="nav-divider"></div>
+        </nav>
+
+        <div class="worlds-best-container">
+            <div class="worlds-best-content">
+                <h1 class="worlds-best-title">WORLD'S BEST</h1>
+                <p class="worlds-best-subtitle">Prove that you are the world's best. Are you a complete modern athlete?</p>
+                
+                <ul class="worlds-best-features">
+                    <li class="worlds-best-feature">
+                        <svg class="checkmark-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Best Skills</span>
+                    </li>
+                    <li class="worlds-best-feature">
+                        <svg class="checkmark-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Best Reach</span>
+                    </li>
+                    <li class="worlds-best-feature">
+                        <svg class="checkmark-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Best Scale</span>
+                    </li>
+                </ul>
+
+                <div class="worlds-best-buttons">
+                    <button class="btn-get-started-hero">Get Started</button>
+                    <button class="btn-download-app-hero">Download The App</button>
+                </div>
+
+                <div class="app-store-badges">
+                    <a href="#" class="app-badge">
+                        <img src="images/google-play-badge.png" alt="Get it on Google Play" class="badge-image" onerror="this.style.display='none'">
+                        <span class="badge-text">GET IT ON<br>Google Play</span>
+                    </a>
+                    <a href="#" class="app-badge">
+                        <img src="images/app-store-badge.png" alt="Download on the App Store" class="badge-image" onerror="this.style.display='none'">
+                        <span class="badge-text">Download on the<br>App Store</span>
+                    </a>
+                </div>
+            </div>
+            <div class="worlds-best-image">
+                <img src="images/bestx-hero-image.png" alt="World's Best App Mockup" class="hero-mockup-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Carousel Section -->
+    <section class="carousel-section">
+        <div class="carousel-header">
+            <button class="carousel-badge">THE BEST</button>
+            <h2 class="carousel-title">CHAMPIONSHIP SPORTS REIMAGINED</h2>
+            <p class="carousel-description">The most sustainable approach to modern day leagues for both athletes and asset owners. <a href="#" class="carousel-link">Learn about the FSP ecosystem here</a></p>
+        </div>
+        
+        <div class="carousel-container">
+            <div class="carousel-wrapper">
+                <div class="carousel-slide active">
+                    <img src="images/ai-verified-global-challenges.jpg" alt="AI Verified Global Challenges" class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/golden-ticket.jpg" alt="Golden Ticket" class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/fsp-bank.jpg" alt="FSP Bank" class="carousel-image">
+                </div>
+            </div>
+            
+            <div class="carousel-navigation">
+                <div class="carousel-dots">
+                    <span class="carousel-dot active" data-slide="0"></span>
+                    <span class="carousel-dot" data-slide="1"></span>
+                    <span class="carousel-dot" data-slide="2"></span>
+                </div>
+                <button class="carousel-participate-btn">Participate</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Carousel functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.carousel-dot');
+
+        function updateSlideClasses() {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active', 'prev', 'next');
+                
+                if (i === currentSlide) {
+                    slide.classList.add('active');
+                } else if (i === (currentSlide - 1 + slides.length) % slides.length) {
+                    slide.classList.add('prev');
+                } else {
+                    slide.classList.add('next');
+                }
+            });
+            
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentSlide);
+            });
+        }
+
+        function showSlide(index) {
+            currentSlide = index;
+            updateSlideClasses();
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateSlideClasses();
+        }
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+            });
+        });
+
+        // Auto-play carousel
+        setInterval(() => {
+            nextSlide();
+        }, 5000);
+
+        // Initialize
+        updateSlideClasses();
+    </script>
+
+    <!-- World's Best Bowler Section -->
+    <section class="bowler-section">
+        <div class="bowler-background">
+            <div class="bowler-gradient-overlay"></div>
+        </div>
+        <div class="bowler-container">
+            <div class="bowler-content">
+                <div class="bowler-category">01. SPORTS</div>
+                <h2 class="bowler-title">
+                    <span class="bowler-title-line">WORLD'S BEST</span>
+                    <span class="bowler-title-line">BOWLER</span>
+                </h2>
+                <p class="bowler-description">Vision-AI measures ball speed, rev rate, entry angle, and pocket-hit consistency. Rise the ladder to purpose-built finals lanes; the Top 10 advance to the WBL draft pool.</p>
+                <div class="bowler-buttons">
+                    <button class="bowler-btn bowler-btn-explore">Explore</button>
+                    <button class="bowler-btn bowler-btn-participate">Participate</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- World's Best Squash Player Section -->
+    <section class="squash-section">
+        <div class="squash-background">
+            <div class="squash-gradient-overlay"></div>
+        </div>
+        <div class="squash-container">
+            <div class="squash-content">
+                <div class="squash-category">02. SPORTS</div>
+                <h2 class="squash-title">
+                    <span class="squash-title-line">WORLD'S BEST</span>
+                    <span class="squash-title-line">SQUASH PLAYER</span>
+                </h2>
+                <p class="squash-description">Vision-AI evaluates pace, accuracy, and movement economy in glass-court drills and rally scenarios. Rank globally and step onto a show court for finals; winners get a WPS access path.</p>
+                <div class="squash-buttons">
+                    <button class="squash-btn squash-btn-explore">Explore</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- World's Best Cricket Player Section -->
+    <section class="cricket-section">
+        <div class="cricket-background">
+            <div class="cricket-gradient-overlay"></div>
+        </div>
+        <div class="cricket-container">
+            <div class="cricket-content">
+                <div class="cricket-category">03. SPORTS</div>
+                <h2 class="cricket-title">
+                    <span class="cricket-title-line">WORLD'S BEST</span>
+                    <span class="cricket-title-line">CRICKET PLAYER</span>
+                </h2>
+                <p class="cricket-description">Vision-AI scores shot timing, control, and range against pace and swing. Qualify remotely, climb a global ladder, and reach stadium finals; standouts enter pro showcases.</p>
+                <div class="cricket-buttons">
+                    <button class="cricket-btn cricket-btn-explore">Explore</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- World's Best Club Section -->
+    <section class="club-section">
+        <div class="club-background">
+            <div class="club-gradient-overlay"></div>
+        </div>
+        <div class="club-container">
+            <div class="club-content">
+                <div class="club-category">04. SPORTS</div>
+                <h2 class="club-title">
+                    <span class="club-title-line">WORLD'S BEST</span>
+                    <span class="club-title-line">CLUB</span>
+                </h2>
+                <div class="club-buttons">
+                    <button class="club-btn club-btn-explore">Explore</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Redeem Your FSP Champion Points & Win Big Section -->
+    <section class="redeem-win-big-section">
+        <div class="redeem-win-big-container">
+            <div class="redeem-win-big-header">
+                <h2 class="redeem-win-big-title">Redeem Your FSP Champion Points & Win Big</h2>
+                <p class="redeem-win-big-subtitle">FSP Pop access at global events, Courtside Tickets, E1 Pit experience, Signed Merchandize, Meet and Greets</p>
+            </div>
+            <div class="redeem-win-big-grid">
+                <div class="redeem-grid-row">
+                    <!-- Card 1: Virat Kohli Signed Merchandise -->
+                    <div class="redeem-card-item">
+                        <div class="redeem-card-image">
+                            <img src="images/virat-kohli-signed-merchandise.png" alt="Virat Kohli signing merchandise">
+                        </div>
+                        <div class="redeem-card-footer">
+                            <p class="redeem-card-text">Virat Kohli Signed Merchandise</p>
+                            <a href="#" class="btn-join-now">Join Now</a>
+                        </div>
+                    </div>
+                    <!-- Card 2: Meet & Greet With Mookie Betts -->
+                    <div class="redeem-card-item">
+                        <div class="redeem-card-image">
+                            <img src="images/mookie-betts-meet-greet.png" alt="Meet & Greet With Mookie Betts">
+                        </div>
+                        <div class="redeem-card-footer">
+                            <p class="redeem-card-text">Meet & Greet With Mookie Betts</p>
+                            <a href="#" class="btn-join-now">Join Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="redeem-grid-row">
+                    <!-- Card 3: Chance to Play in World Bowling League -->
+                    <div class="redeem-card-item">
+                        <div class="redeem-card-image">
+                            <img src="images/world-bowling-league.png" alt="World Bowling League">
+                        </div>
+                        <div class="redeem-card-footer">
+                            <p class="redeem-card-text">Chance to Play in World Bowling League</p>
+                            <a href="#" class="btn-join-now">Join Now</a>
+                        </div>
+                    </div>
+                    <!-- Card 4: John Peeters E1 -->
+                    <div class="redeem-card-item">
+                        <div class="redeem-card-image">
+                            <img src="images/john-peeters-e1.png" alt="John Peeters E1">
+                        </div>
+                        <div class="redeem-card-footer">
+                            <p class="redeem-card-text">John Peeters & get a chance to get pit experience at E1</p>
+                            <a href="#" class="btn-join-now">Join Now</a>
+                        </div>
+                    </div>
+                    <!-- Card 5: World Premier Squash -->
+                    <div class="redeem-card-item">
+                        <div class="redeem-card-image">
+                            <img src="images/world-premier-squash.png" alt="World Premier Squash">
+                        </div>
+                        <div class="redeem-card-footer">
+                            <p class="redeem-card-text">Chance to Play In World Premier Squash</p>
+                            <a href="#" class="btn-join-now">Join Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Full-width bottom section: FIFA World Cup -->
+            <div class="redeem-win-big-bottom">
+                <div class="redeem-bottom-image">
+                    <img src="images/fifa-world-cup-stadium.png" alt="FIFA World Cup 2026 Stadium">
+                </div>
+                <div class="redeem-bottom-cta">
+                    <p class="redeem-bottom-text">Win a Free trip to Fifa World Cup 2026.</p>
+                    <a href="#" class="btn-join-now">Join Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Redeem Your Passion Points Section -->
+    <section class="passion-points-section">
+        <div class="passion-points-container">
+            <div class="passion-points-left">
+                <h2 class="passion-points-title">Redeem Your Passion Points</h2>
+                <h3 class="passion-points-subtitle">Redeem on Connecting your Card</h3>
+                <p class="passion-points-desc">Earn points you can transfer to major airlines, redeem with hotel partners, and use for VIP tickets to top sports events.</p>
+                <a href="#" class="btn-start-earning-passion">Start Earning Today</a>
+            </div>
+            <div class="passion-points-right">
+                <div class="partners-row">
+                    <div class="partners-header">
+                        <h4 class="partners-title">Airline transfer partners (3)</h4>
+                        <div class="nav-arrows">
+                            <button class="nav-arrow nav-arrow-prev">
+                                <svg width="17" height="17" viewBox="0 0 17 17" fill="none"><path d="M8.5 16L1 8.5L8.5 1" stroke="white" stroke-width="2"/></svg>
+                            </button>
+                            <button class="nav-arrow nav-arrow-next">
+                                <svg width="17" height="17" viewBox="0 0 17 17" fill="none"><path d="M8.5 1L16 8.5L8.5 16" stroke="white" stroke-width="2"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="partners-cards">
+                        <div class="partner-card">
+                            <img src="images/delta-logo.svg" alt="Delta" class="partner-logo">
+                        </div>
+                        <div class="partner-card">
+                            <img src="images/lufthansa-logo.png" alt="Lufthansa" class="partner-logo">
+                        </div>
+                        <div class="partner-card">
+                            <img src="images/turkish-airlines-logo.png" alt="Turkish Airlines" class="partner-logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Big Prizes & Daily Wins Section -->
+    <section class="big-prizes-section">
+        <div class="big-prizes-container">
+            <h2 class="big-prizes-title">BIG PRIZES &<br>DAILY WINS</h2>
+            <div class="big-prizes-grid">
+                <!-- Row 1: Card 1 (merged 1-2) + Card 3 -->
+                <div class="prize-card prize-card-merged">
+                    <img src="images/lamborghini.jpg" alt="Lamborghini" class="prize-card-image">
+                    <div class="prize-card-overlay"></div>
+                    <div class="prize-card-content">
+                        <h3 class="prize-card-title">Win a Lamborghini</h3>
+                        <p class="prize-card-subtitle">Perfect Game Bonanza</p>
+                    </div>
+                </div>
+                <div class="prize-card">
+                    <img src="images/iphone.png" alt="iPhone" class="prize-card-image">
+                    <div class="prize-card-overlay"></div>
+                    <div class="prize-card-content">
+                        <h3 class="prize-card-title">Win an iPhone<br>(For first 5 Athletes)</h3>
+                    </div>
+                </div>
+                <!-- Row 2: Card 4 + Card 5-6 (merged) -->
+                <div class="prize-card">
+                    <img src="images/wbl-member.png" alt="WBL Member" class="prize-card-image">
+                    <div class="prize-card-overlay"></div>
+                    <div class="prize-card-content">
+                        <h3 class="prize-card-title">Win 2 Years of Free<br>WBL Membership</h3>
+                        <p class="prize-card-subtitle">Margin Master Draw</p>
+                    </div>
+                </div>
+                <div class="prize-card prize-card-merged">
+                    <img src="images/trip.jpg" alt="Trip to Switzerland/Dubai" class="prize-card-image">
+                    <div class="prize-card-overlay"></div>
+                    <div class="prize-card-content">
+                        <h3 class="prize-card-title">A two-day trip to<br>Switzerland/Dubai</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="big-prizes-cta">
+                <a href="#" class="btn-download-app-prizes">Download App & Start Earning</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Golden Tickets Section -->
+    <section class="golden-tickets-section">
+        <div class="golden-tickets-background"></div>
+        <div class="golden-tickets-container">
+            <div class="golden-tickets-content">
+                <h2 class="golden-tickets-title">GET GOLDEN TICKETS</h2>
+                <p class="golden-tickets-description">Get more chances to win the challenge & leading prizes. Sign up to FSP & deposit</p>
+                <div class="golden-tickets-logo">
+                    <img src="images/fsp-logo.png" alt="Future of Sports" class="fsp-logo-image">
+                </div>
+                <a href="#" class="btn-explore-membership">Explore Membership Tiers</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <button class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 14L12 9L17 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <div class="footer-container">
+            <div class="footer-title">FSP GAMES</div>
+            <div class="footer-content">
+                <div class="footer-nav">
+                    <a href="#" class="footer-link">Home</a>
+                    <span class="footer-separator">/</span>
+                    <a href="#" class="footer-link">Manifesto</a>
+                    <span class="footer-separator">/</span>
+                    <a href="#" class="footer-link">World's Best X</a>
+                    <span class="footer-separator">/</span>
+                    <a href="#" class="footer-link">Membership</a>
+                    <span class="footer-separator">/</span>
+                    <a href="#" class="footer-link">Blog</a>
+                </div>
+                <div class="footer-contact">
+                    <div class="footer-label">CONTACT US</div>
+                    <div class="footer-phone">+1 XXX 123-25-67</div>
+                    <div class="footer-label">EMAIL US AT</div>
+                    <div class="footer-email">hello@futureofsports.io</div>
+                </div>
+                <div class="footer-address">
+                    <div class="footer-label">ADDRESS</div>
+                    <div class="footer-address-text">DIFC, Dubai</div>
+                </div>
+            </div>
+            <div class="footer-copyright">© 2025 — Copyright</div>
+        </div>
+    </footer>
+</body>
+</html>
+

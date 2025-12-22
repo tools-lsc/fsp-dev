@@ -1,0 +1,235 @@
+/* Games Page Styles */
+
+/* Hero Section */
+.games-hero {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Background Image */
+.games-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.games-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Blue Gradient - Top 30% vertical gradient from #0000FF 100% to #0000FF 0% */
+.games-hero-gradient-blue {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30vh;
+  background: linear-gradient(180deg, #0000FF 0%, rgba(0, 0, 255, 0) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Black Gradient - Horizontal gradient from #000000 21% to #000000 80% (left to right) */
+.games-hero-gradient-black {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.21) 0%, rgba(0, 0, 0, 0.8) 100%);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Hero Content */
+.games-hero-content {
+  position: relative;
+  z-index: 4;
+  padding-top: 120px;
+  padding-bottom: 80px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.games-hero-content .container {
+  max-width: none;
+  margin: 0;
+  padding-left: 60px;
+  padding-right: 24px;
+}
+
+.games-hero-text {
+  max-width: 900px;
+  text-align: left;
+}
+
+.games-hero-title {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 500;
+  font-size: 70px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin: 0 0 24px;
+}
+
+.games-hero-subtitle {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 300;
+  font-size: 56px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin: 0;
+}
+
+/* Games Navigation */
+.games-hero-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.games-hero-nav .container {
+  max-width: none;
+  margin: 0;
+  padding-left: 60px;
+  padding-right: 24px;
+}
+
+.games-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.games-nav-item {
+  font-family: 'Archivo', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 20px;
+
+  transition: background 0.2s ease;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.games-nav-item:hover {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.games-nav-item.active {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+  color: #fff;
+}
+
+.games-nav-item.active:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  right: 0px;
+  height: 3px;
+  background: #fff;
+}
+
+.coming-soon-badge {
+  font-size: 14px;
+  opacity: 0.7;
+  font-weight: 300;
+}
+
+/* Disclaimer */
+.games-hero-disclaimer {
+  position: absolute;
+  bottom: 54px;
+  right: 24px;
+  max-width: 840px;
+  z-index: 6;
+}
+
+.games-hero-disclaimer p {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  text-align: right;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .games-hero-content {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+  
+  .games-hero-content .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .games-hero-title {
+    font-size: clamp(40px, 8vw, 70px);
+  }
+
+  .games-hero-subtitle {
+    font-size: clamp(32px, 7vw, 56px);
+  }
+
+  .games-hero-disclaimer {
+    bottom: 16px;
+    right: 16px;
+    max-width: calc(100% - 32px);
+  }
+
+  .games-hero-nav {
+    bottom: 60px;
+  }
+
+  .games-hero-nav .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .games-nav {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .games-nav-item {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  .games-hero-disclaimer {
+    bottom: 16px;
+    right: 16px;
+    max-width: calc(100% - 32px);
+  }
+
+  .games-hero-disclaimer p {
+    text-align: left;
+    font-size: 11px;
+  }
+}
+
+/* FSP Games Content Section */
+.games-content-section {
+  display: block;
+  background: #000;
+}
+
+.games-content-section[style*="display: none"] {
+  display: none !important;
+}
+

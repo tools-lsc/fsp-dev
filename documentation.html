@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Documentation — FSP</title>
+  <link rel="icon" type="image/svg+xml" href="./src/assets/images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/css/reset.css">
+  <link rel="stylesheet" href="./src/css/variables.css">
+  <link rel="stylesheet" href="./src/css/main.css">
+  <link rel="stylesheet" href="./src/css/documentation.css">
+</head>
+<body class="documentation-page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="FSP Home">
+        <img src="./src/assets/images/logo.svg" alt="FSP logo">
+      </a>
+      <button class="hamburger-btn" aria-label="Toggle menu" aria-expanded="false">
+        <span class="hamburger-icon"></span>
+        <span class="hamburger-icon"></span>
+        <span class="hamburger-icon"></span>
+      </button>
+      <nav class="main-nav" aria-label="Primary" aria-hidden="true">
+        <ul>
+          <li><a href="index.html">Personal</a></li>
+          <li><a href="enterprise.html">Enterprise</a></li>
+          <li class="nav-dropdown">
+            <a href="#" class="dropdown-toggle">FSP Private</a>
+            <ul class="dropdown-menu">
+              <li><a href="pools.html">FSP Pools</a></li>
+              <li><a href="fsp-private.html">FSP Note</a></li>
+              <li><a href="#" class="coming-soon">FSP Capital <span>(coming soon)</span></a></li>
+            </ul>
+          </li>
+          <li><a href="games.html">Games</a></li>
+          <li class="nav-dropdown">
+            <a href="#" class="dropdown-toggle">Developers</a>
+            <ul class="dropdown-menu">
+              <li><a href="documentation.html" class="active">Documentation</a></li>
+              <li><a href="broadcast-production-automation.html">Broadcast and Production Automation</a></li>
+              <li><a href="#">AI Agents for Sports</a></li>
+            </ul>
+          </li>
+          <li class="nav-dropdown">
+            <a href="#" class="dropdown-toggle">About</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">League Sports Co</a></li>
+              <li><a href="#">FFS Foundation</a></li>
+            </ul>
+          </li>
+        </ul>
+        <a class="btn-join btn-join-mobile" href="#">Join</a>
+      </nav>
+      <a class="btn-join btn-join-desktop" href="#">Join</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="documentation-hero">
+      <div class="documentation-hero-gradient"></div>
+      <div class="documentation-hero-content">
+        <div class="documentation-hero-container">
+          <div class="documentation-hero-left">
+            <!-- Left box - blank -->
+          </div>
+          <div class="documentation-hero-right">
+            <div class="documentation-hero-text">
+              <h1 class="documentation-hero-title">Start Integrating FSP Tools</h1>
+              <div class="documentation-hero-buttons">
+                <a href="#" class="btn-start-now">Start Now</a>
+                <a href="#" class="btn-explore-docs">Explore Documentation</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <div class="footer-newsletter">
+            <span class="newsletter-label">Newsletter</span>
+            <p class="newsletter-text">Stay up-to-date with FSP's<br>latest news and updates.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your email" class="newsletter-input" required>
+              <button type="submit" class="btn-newsletter">Sign up</button>
+            </form>
+            <p class="newsletter-disclaimer">By clicking the "Enroll" button below, you agree you want to receive the <br>FSPs Newsletter and agree to the Terms of Services.</p>
+          </div>
+        </div>
+        
+        <div class="footer-right">
+          <img src="./src/assets/images/footer-logo.svg" alt="Future of Sports" class="footer-logo">
+        </div>
+      </div>
+      
+      <div class="footer-disclaimer">
+        [*] The tokenized assets referenced herein (OUSG, USDY and Global Markets assets) ("Tokenized Assets") are not registered under the US Securities Act of 1933, as amended ("Act") or pursuant to securities laws of any other jurisdiction. Tokenized Assets shall not be offered, sold or otherwise transferred in the US or to US persons unless registered under the Act or an exemption or exclusion from the registration requirements thereof is available. Additional restrictions may apply. The Tokenized Asset issuers are not registered as investment companies under the US Investment Company Act of 1940, as amended, or pursuant to analogous laws of any other jurisdiction. Ondo Chain and Ondo Global Markets ("GM") have not launched. GM Tokenized Assets ("GM Assets") will be backed by applicable securities; however, GM Assets and the underlying securities are distinct assets with their own respective performance and risk profiles. Providers of products, services or technologies on Ondo Chain (including but not limited to issuers of assets and providers of asset-related services) are responsible for their own products, services and technologies, including but not limited to the compliance of such products, services and technologies with applicable laws, rules and regulations. Ondo
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Hamburger Menu Toggle
+    const hamburgerBtn = document.querySelector('.hamburger-btn');
+    const mainNav = document.querySelector('.main-nav');
+    
+    if (hamburgerBtn && mainNav) {
+      hamburgerBtn.addEventListener('click', () => {
+        const isExpanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
+        hamburgerBtn.setAttribute('aria-expanded', !isExpanded);
+        mainNav.setAttribute('aria-hidden', isExpanded);
+        document.body.style.overflow = !isExpanded ? 'hidden' : '';
+      });
+      
+      // Close menu when clicking on a link or Join button (but not dropdown toggles)
+      const navLinks = mainNav.querySelectorAll('a:not(.dropdown-toggle)');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          hamburgerBtn.setAttribute('aria-expanded', 'false');
+          mainNav.setAttribute('aria-hidden', 'true');
+          document.body.style.overflow = '';
+        });
+      });
+      
+      // Close menu when clicking outside
+      mainNav.addEventListener('click', (e) => {
+        if (e.target === mainNav) {
+          hamburgerBtn.setAttribute('aria-expanded', 'false');
+          mainNav.setAttribute('aria-hidden', 'true');
+          document.body.style.overflow = '';
+        }
+      });
+    }
+
+    // Dropdown Toggle Functionality
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    const navDropdowns = document.querySelectorAll('.nav-dropdown');
+    const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
+
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const dropdown = this.closest('.nav-dropdown');
+        if (!dropdown) return;
+        
+        const isActive = dropdown.classList.contains('active');
+        
+        // Close all dropdowns first
+        navDropdowns.forEach(dd => {
+          dd.classList.remove('active');
+        });
+        
+        // If it wasn't active, open it
+        if (!isActive) {
+          dropdown.classList.add('active');
+        }
+      });
+    });
+
+    // Close dropdown when clicking on a dropdown link
+    dropdownLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        navDropdowns.forEach(dd => {
+          dd.classList.remove('active');
+        });
+      });
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(e) {
+      const target = e.target;
+      const isDropdownToggle = target.closest('.dropdown-toggle');
+      const isInDropdown = target.closest('.nav-dropdown');
+      
+      if (!isDropdownToggle && !isInDropdown) {
+        navDropdowns.forEach(dd => {
+          dd.classList.remove('active');
+        });
+      }
+    });
+
+    // Prevent clicks on "coming soon" links
+    const comingSoonLinks = document.querySelectorAll('.coming-soon');
+    comingSoonLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+      });
+    });
+  </script>
+</body>
+</html>
+
