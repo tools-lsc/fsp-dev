@@ -352,14 +352,31 @@
   position:relative;
 }
 .business-tools-container{
-  max-width:1200px;
+  max-width:1310px;
   margin:0 auto;
   padding:0 40px;
+  display:grid;
+  grid-template-columns:1fr 496px;
+  gap:40px;
+  align-items:center;
 }
-.business-tools-content{
-  text-align:center;
-  max-width:900px;
-  margin:0 auto;
+.business-tools-left{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}
+.business-tools-right{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+}
+.business-tools-image{
+  width:100%;
+  max-width:496px;
+  height:auto;
+  display:block;
+  object-fit:cover;
+  border-radius:0;
 }
 .business-tools-title{
   font-size:clamp(36px, 4vw, 48px);
@@ -367,7 +384,7 @@
   line-height:1.1;
   letter-spacing:-0.025em;
   color:#4D4D4D;
-  margin:0 0 24px;
+  margin:0;
 }
 .business-tools-body{
   font-size:clamp(18px, 2vw, 22px);
@@ -375,10 +392,10 @@
   line-height:1.6;
   letter-spacing:-0.017em;
   color:#4D4D4D;
-  margin:0 0 40px;
+  margin:0;
 }
 .business-tools-cta{
-  margin-top:32px;
+  margin-top:8px;
 }
 .btn-read-docs{
   display:inline-flex;
@@ -394,6 +411,7 @@
   border-radius:999px;
   text-decoration:none;
   transition:opacity 0.2s ease;
+  width:fit-content;
 }
 .btn-read-docs:hover{
   opacity:0.9;
@@ -402,7 +420,15 @@
 /* Responsive - Business Tools */
 @media (max-width: 960px){
   .business-tools-container{
+    grid-template-columns:1fr;
+    gap:40px;
     padding:0 24px;
+  }
+  .business-tools-left{
+    justify-content:center;
+  }
+  .business-tools-image{
+    max-width:100%;
   }
 }
 
