@@ -1,13 +1,94 @@
-/* Deposit Section - Enterprise */
+/* Deposit Section - Enterprise (Digital Onboarding Flow) */
 .deposit-to-earn .deposit-header{display:block;text-align:center;margin-bottom:60px}
 .deposit-to-earn .deposit-header>div{display:block}
 .deposit-to-earn .deposit-title{text-align:center}
-.deposit-to-earn .deposit-subtitle{text-align:center}
-.deposit-to-earn .deposit-steps{align-items:stretch}
-.deposit-to-earn .deposit-step{display:flex;flex-direction:column;gap:20px;height:100%}
-.deposit-to-earn .deposit-step .step-text{margin-bottom:0;flex:1}
-.btn-deposit-now-enterprise,.btn-integrate-now-step,.btn-enroll-now{background:#fff;color:#0000FF;font-size:16px;font-weight:500;line-height:1.75;letter-spacing:-.02em;padding:10px 32px;border-radius:999px;text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;width:100%;margin-top:auto;transition:opacity 0.2s ease}
-.btn-deposit-now-enterprise:hover,.btn-integrate-now-step:hover,.btn-enroll-now:hover{opacity:0.9}
+.deposit-to-earn .deposit-subtitle{text-align:center;max-width:800px;margin-left:auto;margin-right:auto}
+.deposit-to-earn .deposit-steps{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:40px;
+  margin-bottom:48px;
+  position:relative;
+}
+.deposit-to-earn .deposit-steps::before{
+  content:"";
+  position:absolute;
+  top:80px;
+  left:0;
+  right:0;
+  height:2px;
+  background:rgba(255,255,255,0.3);
+  z-index:0;
+}
+.deposit-to-earn .deposit-step{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  height:100%;
+  position:relative;
+  z-index:1;
+}
+.deposit-to-earn .step-content{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  flex:1;
+}
+.deposit-to-earn .step-title{
+  font-size:24px;
+  font-weight:600;
+  line-height:1.3;
+  letter-spacing:-0.02em;
+  color:#fff;
+  margin:0;
+}
+.deposit-to-earn .step-subtitle{
+  font-size:18px;
+  font-weight:500;
+  line-height:1.4;
+  letter-spacing:-0.017em;
+  color:rgba(255,255,255,0.9);
+  margin:0;
+}
+.deposit-to-earn .step-text{
+  font-size:16px;
+  font-weight:400;
+  line-height:1.6;
+  letter-spacing:-0.01em;
+  color:rgba(255,255,255,0.8);
+  margin:0;
+  flex:1;
+}
+.deposit-to-earn .step-link{
+  color:#fff;
+  text-decoration:underline;
+  transition:opacity 0.2s ease;
+}
+.deposit-to-earn .step-link:hover{
+  opacity:0.8;
+}
+.deposit-to-earn .deposit-cta{
+  text-align:center;
+  margin-top:40px;
+}
+.btn-start-kyb{
+  background:#fff;
+  color:#0000FF;
+  font-size:16px;
+  font-weight:500;
+  line-height:1.75;
+  letter-spacing:-0.02em;
+  padding:10px 32px;
+  border-radius:999px;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  transition:opacity 0.2s ease;
+}
+.btn-start-kyb:hover{
+  opacity:0.9;
+}
 
 /* Business Hero Section */
 .business-hero{position:relative;overflow:hidden;height:100vh}
@@ -18,7 +99,7 @@
 .business-hero .container{max-width:none;margin:0;padding-left:64px;padding-right:24px}
 .business-hero-text{max-width:815px}
 .business-hero-title{font-weight:500;letter-spacing:-0.0571em;line-height:.83;font-size:70px;color:#FFFFFF;margin-bottom:41px}
-.business-hero-subtitle{font-weight:400;letter-spacing:-0.0571em;line-height:.83;font-size:70px;color:rgba(255,255,255,0.8);margin-bottom:41px}
+.business-hero-subtitle{font-weight:200;letter-spacing:-0.0171em;line-height:1.3;font-size:clamp(18px, 2.5vw, 24px);color:rgba(255,255,255,0.9);margin-bottom:41px;max-width:900px}
 .business-hero-buttons{display:flex;gap:20px;align-items:center}
 .btn-integrate-now{display:inline-flex;align-items:center;justify-content:center;background:#fff;color:#000;font-size:20px;font-weight:400;line-height:1.25;letter-spacing:-0.019em;padding:7px 40px;border-radius:20px;text-decoration:none;transition:opacity 0.2s ease}
 .btn-integrate-now:hover{opacity:0.9}
@@ -28,18 +109,93 @@
 /* Business Revenue Section */
 .business-revenue{background:#fff;padding:80px 0 100px;position:relative}
 .business-revenue-container{max-width:1396px;margin:0 auto;padding:0 40px}
-.business-revenue-title{font-size:48px;font-weight:500;line-height:.9375;letter-spacing:-0.025em;color:#4D4D4D;text-align:center;text-transform:capitalize;margin-bottom:24px}
-.business-revenue-pill{display:inline-flex;align-items:center;justify-content:center;background:#E6E6E6;color:#4D4D4D;font-size:22px;font-weight:400;line-height:1.1345;letter-spacing:-0.01745em;padding:8px 24px;border-radius:19px;margin:0 auto 60px;width:fit-content;display:block;text-align:center}
-.business-revenue-cards{display:flex;gap:0;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
-.business-revenue-cards::-webkit-scrollbar{display:none}
-.business-revenue-card{background:#fff;border:1px solid #E5E7EB;border-right:none;padding:21px 13px;display:flex;flex-direction:column;min-width:144px;width:144px;height:220px;flex-shrink:0}
-.business-revenue-card:first-child{border-left:1px solid #E5E7EB}
-.business-revenue-card:last-child{border-right:1px solid #E5E7EB}
-.business-revenue-card .card-icon{margin-bottom:32px;width:32px;height:32px}
-.business-revenue-card .card-icon img{display:block;width:100%;height:100%}
-.business-revenue-card .card-text{display:flex;flex-direction:column;gap:10px}
-.business-revenue-card .card-title{font-size:13px;font-weight:400;line-height:1.077;color:#000;margin:0}
-.business-revenue-card .card-desc{font-size:11px;font-weight:400;line-height:1.091;color:#6A6D78;margin:0}
+.business-revenue-title{
+  font-size:clamp(36px, 4vw, 48px);
+  font-weight:500;
+  line-height:1.1;
+  letter-spacing:-0.025em;
+  color:#4D4D4D;
+  text-align:center;
+  margin:0 0 16px;
+}
+.business-revenue-subtitle{
+  font-size:clamp(18px, 2vw, 22px);
+  font-weight:400;
+  line-height:1.4;
+  letter-spacing:-0.017em;
+  color:#4D4D4D;
+  text-align:center;
+  margin:0 0 48px;
+  max-width:800px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.business-revenue-cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0;
+  max-width:1200px;
+  margin:0 auto;
+}
+.business-revenue-card{
+  background:#fff;
+  border:1px solid #E6E6E6;
+  border-right:none;
+  padding:40px 32px;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  min-height:280px;
+  transition:background 0.2s ease, transform 0.2s ease;
+}
+.business-revenue-card:hover{
+  background:#FAFAFA;
+  transform:translateY(-2px);
+}
+.business-revenue-card:first-child{
+  border-left:1px solid #E6E6E6;
+  border-top-left-radius:8px;
+  border-bottom-left-radius:8px;
+}
+.business-revenue-card:last-child{
+  border-right:1px solid #E6E6E6;
+  border-top-right-radius:8px;
+  border-bottom-right-radius:8px;
+}
+.business-revenue-card .card-icon{
+  margin-bottom:8px;
+  width:40px;
+  height:40px;
+  flex-shrink:0;
+}
+.business-revenue-card .card-icon img,
+.business-revenue-card .card-icon svg{
+  display:block;
+  width:100%;
+  height:100%;
+}
+.business-revenue-card .card-text{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  flex:1;
+}
+.business-revenue-card .card-title{
+  font-size:20px;
+  font-weight:600;
+  line-height:1.3;
+  letter-spacing:-.02em;
+  color:#4D4D4D;
+  margin:0;
+}
+.business-revenue-card .card-desc{
+  font-size:16px;
+  font-weight:400;
+  line-height:1.6;
+  letter-spacing:-.01em;
+  color:#4D4D4D;
+  margin:0;
+}
 
 /* Responsive - Mobile */
 @media (max-width: 960px){
@@ -57,7 +213,13 @@
   .business-revenue-card:nth-child(1),.business-revenue-card:nth-child(2),.business-revenue-card:nth-child(3){border-top:1px solid #E5E7EB}
   .business-revenue-card:nth-child(4),.business-revenue-card:nth-child(5),.business-revenue-card:nth-child(6){border-top:none}
   .business-revenue-card:nth-child(7),.business-revenue-card:nth-child(8),.business-revenue-card:nth-child(9){border-top:none;border-bottom:1px solid #E5E7EB}
-  .deposit-to-earn .deposit-steps{grid-template-columns:1fr;gap:40px}
+  .deposit-to-earn .deposit-steps{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+  .deposit-to-earn .deposit-steps::before{
+    display:none;
+  }
   .business-tools-container{padding:0 24px}
   .business-challenge-container{padding:0 24px}
   .enterprise-dashboard-container{padding:0 24px}
@@ -76,22 +238,42 @@
   .business-revenue{padding:60px 0 80px}
   .business-revenue-container{padding:0 20px}
   .business-revenue-title{font-size:36px}
-  .business-revenue-pill{font-size:16px;padding:6px 20px}
-  .business-revenue-cards{grid-template-columns:repeat(2,1fr)}
-  .business-revenue-card:nth-child(3n){border-right:none}
-  .business-revenue-card:nth-child(2n){border-right:1px solid #E5E7EB}
-  .business-revenue-card{padding:16px 12px;min-height:200px}
-  .business-revenue-card .card-title{font-size:12px}
-  .business-revenue-card .card-desc{font-size:10px}
+  .business-revenue-cards{
+    grid-template-columns:1fr;
+    max-width:100%;
+  }
+  .business-revenue-card{
+    border-right:1px solid #E6E6E6;
+    border-left:1px solid #E6E6E6;
+    border-radius:8px;
+    margin-bottom:16px;
+    padding:24px 20px;
+    min-height:auto;
+  }
+  .business-revenue-card:first-child,
+  .business-revenue-card:nth-child(2),
+  .business-revenue-card:last-child{
+    border-radius:8px;
+  }
+  .business-revenue-card .card-title{
+    font-size:18px;
+  }
+  .business-revenue-card .card-desc{
+    font-size:14px;
+  }
   .deposit-to-earn{padding:60px 20px 80px}
   .deposit-to-earn .deposit-title{font-size:36px}
   .deposit-to-earn .deposit-subtitle{font-size:18px}
+  .deposit-to-earn .step-title{font-size:20px}
+  .deposit-to-earn .step-subtitle{font-size:16px}
+  .deposit-to-earn .step-text{font-size:15px}
+  .btn-start-kyb{
+    width:100%;
+    max-width:280px;
+  }
   .business-tools{padding:60px 0 80px}
   .business-tools-container{padding:0 20px}
   .business-tools-title{font-size:32px}
-  .business-tools-list li{font-size:18px}
-  .business-tools-buttons{flex-direction:column;width:100%}
-  .btn-contact-sales-tools,.btn-developer-docs{width:100%;max-width:100%}
   .business-challenge{padding:60px 0 80px}
   .business-challenge-container{padding:0 20px}
   .business-challenge-title{font-size:32px}
@@ -163,34 +345,84 @@
   .ai-vision-title{font-size:32px;padding-bottom:20px}
 }
 
-/* Business Tools Section */
-.business-tools{background:#fff;padding:80px 0 100px;position:relative}
-.business-tools-container{max-width:1310px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:496px 862px;gap:0;align-items:center}
-.business-tools-left{padding-right:40px}
-.business-tools-title{font-size:48px;font-weight:500;line-height:.9375;letter-spacing:-0.025em;color:#4D4D4D;margin-bottom:36px}
-.business-tools-subtitle{font-size:22px;font-weight:400;line-height:1.1345;letter-spacing:-0.01745em;color:#4D4D4D;margin-bottom:36px;max-width:457px}
-.business-tools-list{list-style:decimal;padding-left:20px;margin:0 0 36px;color:#4D4D4D}
-.business-tools-list li{font-size:22px;font-weight:400;line-height:1.3;letter-spacing:-0.017em;color:#4D4D4D;margin-bottom:16px}
-.business-tools-list li:last-child{margin-bottom:0}
-.business-tools-buttons{display:flex;gap:20px;align-items:center}
-.btn-contact-sales-tools{display:inline-flex;align-items:center;justify-content:center;background:#0000FF;color:#fff;font-size:16px;font-weight:500;line-height:1.75;letter-spacing:-0.02em;padding:6px 24px;border-radius:30px;text-decoration:none;width:168px;height:36px;transition:opacity 0.2s ease}
-.btn-contact-sales-tools:hover{opacity:0.9}
-.btn-developer-docs{display:inline-flex;align-items:center;justify-content:center;background:#fff;color:#0000FF;border:1px solid #0000FF;font-size:16px;font-weight:500;line-height:1.75;letter-spacing:-0.02em;padding:6px 24px;border-radius:30px;text-decoration:none;width:168px;height:36px;transition:opacity 0.2s ease}
-.btn-developer-docs:hover{opacity:0.9}
-.business-tools-right{display:flex;align-items:center;justify-content:flex-end}
-.business-tools-image{width:662px;height:auto;display:block;object-fit:cover;border-radius:0}
+/* Business Tools Section - Developer & API Callout */
+.business-tools{
+  background:#fff;
+  padding:80px 0 100px;
+  position:relative;
+}
+.business-tools-container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 40px;
+}
+.business-tools-content{
+  text-align:center;
+  max-width:900px;
+  margin:0 auto;
+}
+.business-tools-title{
+  font-size:clamp(36px, 4vw, 48px);
+  font-weight:500;
+  line-height:1.1;
+  letter-spacing:-0.025em;
+  color:#4D4D4D;
+  margin:0 0 24px;
+}
+.business-tools-body{
+  font-size:clamp(18px, 2vw, 22px);
+  font-weight:400;
+  line-height:1.6;
+  letter-spacing:-0.017em;
+  color:#4D4D4D;
+  margin:0 0 40px;
+}
+.business-tools-cta{
+  margin-top:32px;
+}
+.btn-read-docs{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:#0000FF;
+  color:#fff;
+  font-size:16px;
+  font-weight:500;
+  line-height:1.75;
+  letter-spacing:-0.02em;
+  padding:10px 32px;
+  border-radius:999px;
+  text-decoration:none;
+  transition:opacity 0.2s ease;
+}
+.btn-read-docs:hover{
+  opacity:0.9;
+}
 
 /* Responsive - Business Tools */
 @media (max-width: 960px){
-  .business-tools-container{grid-template-columns:1fr;gap:40px}
-  .business-tools-left{padding-right:0}
-  .business-tools-image{width:100%;height:auto;max-width:862px}
+  .business-tools-container{
+    padding:0 24px;
+  }
 }
 
 @media (max-width: 640px){
-  .business-tools-title{font-size:36px}
-  .business-tools-subtitle{font-size:18px}
-  .btn-developer-docs{font-size:14px;width:150px}
+  .business-tools{
+    padding:60px 0 80px;
+  }
+  .business-tools-container{
+    padding:0 20px;
+  }
+  .business-tools-title{
+    font-size:32px;
+  }
+  .business-tools-body{
+    font-size:18px;
+  }
+  .btn-read-docs{
+    width:100%;
+    max-width:280px;
+  }
 }
 
 /* Tournament Management Section */
@@ -223,5 +455,203 @@
   .tournament-card-title{font-size:18px}
   .tournament-card-desc{font-size:14px}
   .btn-request-access{font-size:18px;width:150px}
+}
+
+/* Enterprise Segment Sections */
+.enterprise-segment{
+  background:#fff;
+  padding:80px 0;
+  position:relative;
+  border-top:1px solid #E6E6E6;
+}
+.enterprise-segment:first-of-type{
+  border-top:none;
+  padding-top:100px;
+}
+.enterprise-segment:last-of-type{
+  padding-bottom:100px;
+}
+.enterprise-segment-container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 40px;
+}
+.enterprise-segment-header{
+  margin-bottom:40px;
+}
+.enterprise-segment-title{
+  font-size:clamp(36px, 4vw, 48px);
+  font-weight:500;
+  line-height:1.1;
+  letter-spacing:-0.025em;
+  color:#4D4D4D;
+  margin:0 0 12px;
+}
+.enterprise-segment-audience{
+  font-size:clamp(18px, 2vw, 22px);
+  font-weight:400;
+  line-height:1.4;
+  letter-spacing:-0.017em;
+  color:#4D4D4D;
+  margin:0;
+  font-style:italic;
+}
+.enterprise-segment-content{
+  display:flex;
+  flex-direction:column;
+  gap:32px;
+}
+.enterprise-segment-body{
+  font-size:clamp(18px, 2vw, 22px);
+  font-weight:400;
+  line-height:1.6;
+  letter-spacing:-0.017em;
+  color:#4D4D4D;
+  margin:0;
+  max-width:900px;
+}
+.enterprise-segment-features{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0;
+  margin-top:8px;
+  max-width:1200px;
+}
+.enterprise-feature-item{
+  background:#fff;
+  border:1px solid #E6E6E6;
+  border-right:none;
+  padding:40px 32px;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  min-height:280px;
+  transition:background 0.2s ease, transform 0.2s ease;
+}
+.enterprise-feature-item:hover{
+  background:#FAFAFA;
+  transform:translateY(-2px);
+}
+.enterprise-feature-item:first-child{
+  border-left:1px solid #E6E6E6;
+  border-top-left-radius:8px;
+  border-bottom-left-radius:8px;
+}
+.enterprise-feature-item:last-child{
+  border-right:1px solid #E6E6E6;
+  border-top-right-radius:8px;
+  border-bottom-right-radius:8px;
+}
+.enterprise-feature-icon{
+  margin-bottom:8px;
+  width:40px;
+  height:40px;
+  flex-shrink:0;
+}
+.enterprise-feature-icon img,
+.enterprise-feature-icon svg{
+  display:block;
+  width:100%;
+  height:100%;
+}
+.enterprise-feature-text{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  flex:1;
+}
+.enterprise-feature-title{
+  font-size:20px;
+  font-weight:600;
+  line-height:1.3;
+  letter-spacing:-0.02em;
+  color:#4D4D4D;
+  margin:0;
+}
+.enterprise-feature-desc{
+  font-size:16px;
+  font-weight:400;
+  line-height:1.6;
+  letter-spacing:-0.01em;
+  color:#4D4D4D;
+  margin:0;
+}
+.enterprise-segment-cta{
+  margin-top:8px;
+}
+.btn-upgrade-venue,
+.btn-empower-league,
+.btn-launch-campus{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:#0000FF;
+  color:#fff;
+  font-size:16px;
+  font-weight:500;
+  line-height:1.75;
+  letter-spacing:-0.02em;
+  padding:10px 32px;
+  border-radius:999px;
+  text-decoration:none;
+  transition:opacity 0.2s ease;
+}
+.btn-upgrade-venue:hover,
+.btn-empower-league:hover,
+.btn-launch-campus:hover{
+  opacity:0.9;
+}
+
+/* Responsive - Enterprise Segments */
+@media (max-width: 960px){
+  .enterprise-segment-container{padding:0 24px}
+  .enterprise-segment-features{
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+  .enterprise-segment{padding:60px 0 80px}
+}
+
+@media (max-width: 640px){
+  .enterprise-segment-container{
+    padding:24px 20px;
+  }
+  .enterprise-segment{
+    padding:60px 0;
+  }
+  .enterprise-segment:first-of-type{
+    padding-top:60px;
+  }
+  .enterprise-segment:last-of-type{
+    padding-bottom:60px;
+  }
+  .enterprise-segment-title{font-size:32px}
+  .enterprise-segment-audience{font-size:18px}
+  .enterprise-segment-body{font-size:18px}
+  .enterprise-segment-features{
+    grid-template-columns:1fr;
+    max-width:100%;
+  }
+  .enterprise-feature-item{
+    border-right:1px solid #E6E6E6;
+    border-left:1px solid #E6E6E6;
+    border-radius:8px;
+    margin-bottom:16px;
+    padding:24px 20px;
+    min-height:auto;
+  }
+  .enterprise-feature-item:first-child,
+  .enterprise-feature-item:nth-child(2),
+  .enterprise-feature-item:last-child{
+    border-radius:8px;
+  }
+  .enterprise-feature-title{font-size:18px}
+  .enterprise-feature-desc{font-size:14px}
+  .btn-upgrade-venue,
+  .btn-empower-league,
+  .btn-launch-campus{
+    width:100%;
+    max-width:280px;
+  }
 }
 
