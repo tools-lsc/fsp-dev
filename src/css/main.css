@@ -1707,12 +1707,20 @@ body{
   justify-content:space-between;
   gap:20px;
 }
+.faq-question-wrapper{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:20px;
+  width:100%;
+}
 .faq-question{
   font-size:20px;
   font-weight:500;
   line-height:1.15;
   color:#000;
   flex:1;
+  margin:0;
 }
 .faq-answer{
   font-size:16px;
@@ -1750,19 +1758,38 @@ body{
   opacity:.7;
 }
 .faq-category{
-  margin-top:32px;
-  margin-bottom:16px;
+  margin-top:48px;
+  margin-bottom:24px;
 }
 .faq-category:first-child{
   margin-top:0;
 }
 .faq-category-title{
-  font-size:18px;
+  font-size:20px;
   font-weight:600;
   color:#0000FF;
-  margin:0;
+  margin:0 0 24px;
   text-transform:uppercase;
   letter-spacing:0.05em;
+}
+.faq-items{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}
+.faq-question-wrapper{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:20px;
+}
+.faq-question{
+  font-size:20px;
+  font-weight:500;
+  line-height:1.15;
+  color:#000;
+  flex:1;
+  margin:0;
 }
 
 /* Footer */
@@ -1848,6 +1875,29 @@ body{
 }
 .footer-right{
   flex-shrink:0;
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+  align-items:flex-end;
+}
+.footer-trust{
+  text-align:right;
+}
+.footer-trust-title{
+  font-size:clamp(24px, 3vw, 32px);
+  font-weight:500;
+  line-height:1.2;
+  letter-spacing:-0.02em;
+  color:#000;
+  margin:0 0 12px;
+}
+.footer-tagline{
+  font-size:clamp(18px, 2vw, 22px);
+  font-weight:400;
+  line-height:1.4;
+  letter-spacing:-0.017em;
+  color:#4D4D4D;
+  margin:0;
 }
 .footer-logo{
   width:422px;
