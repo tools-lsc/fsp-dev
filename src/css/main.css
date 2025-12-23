@@ -986,7 +986,9 @@ body{
   gap:80px;
   align-items:center;
   max-width:1400px;
-  margin:0 auto;
+margin-top: 60px;
+
+
 }
 .spend-content{
   padding-right:40px;
@@ -1015,6 +1017,20 @@ body{
   color:#4D4D4D;
   margin-bottom:32px;
   max-width:457px;
+}
+.spend-features{
+  margin-bottom:32px;
+}
+.spend-features p{
+  font-size:18px;
+  font-weight:400;
+  line-height:1.5;
+  letter-spacing:-.017em;
+  color:#4D4D4D;
+  margin-bottom:12px;
+}
+.spend-features p:last-child{
+  margin-bottom:0;
 }
 .spend-cta-container{
   display:flex;
@@ -1122,6 +1138,7 @@ body{
 }
 .refer-header{
   margin-bottom:48px;
+  max-width:600px;
 }
 .refer-title{
   font-size:48px;
@@ -1129,7 +1146,7 @@ body{
   line-height:.9375;
   letter-spacing:-.025em;
   color:#fff;
-  margin-bottom:16px;
+  margin-bottom:8px;
 }
 .refer-subtitle{
   font-size:22px;
@@ -1137,6 +1154,23 @@ body{
   line-height:1.1345;
   letter-spacing:-.01745em;
   color:#fff;
+  margin-bottom:8px;
+}
+.refer-body{
+  font-size:18px;
+  font-weight:400;
+  line-height:1.4;
+  letter-spacing:-.017em;
+  color:#fff;
+  margin-bottom:8px;
+}
+.refer-desc{
+  font-size:16px;
+  font-weight:400;
+  line-height:1.5;
+  letter-spacing:-.017em;
+  color:#fff;
+  margin-bottom:0;
 }
 .section-heading{
   font-size:26px;

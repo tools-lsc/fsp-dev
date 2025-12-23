@@ -371,7 +371,7 @@
 .btn-stake-athlete:hover{
   opacity:0.9;
 }
-.athletestash-image{display:flex;align-items:flex-start;justify-content:flex-end}
+.athletestash-image{display:flex;align-items:flex-start;justify-content:flex-end;margin-bottom:60px}
 .athletestash-image img{width:901px;height:auto;display:block;object-fit:contain}
 
 /* Responsive - AthleteStash */
@@ -1042,6 +1042,7 @@
 .step-image-wrapper{
   width:100%;
   height:200px;
+    margin-top: 210px;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -1052,6 +1053,7 @@
 .step-image{
   width:100%;
   height:100%;
+
   object-fit:contain;
   max-width:180px;
 }
@@ -1067,7 +1069,9 @@
   gap:16px;
 }
 .step-number{
+  padding-top: 10px;
   font-size:48px;
+
   font-weight:700;
   line-height:1;
   letter-spacing:-0.02em;
