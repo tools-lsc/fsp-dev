@@ -1,93 +1,124 @@
-/* Deposit Section - Enterprise (Digital Onboarding Flow) */
-.deposit-to-earn .deposit-header{display:block;text-align:center;margin-bottom:60px}
-.deposit-to-earn .deposit-header>div{display:block}
-.deposit-to-earn .deposit-title{text-align:center}
-.deposit-to-earn .deposit-subtitle{text-align:center;max-width:800px;margin-left:auto;margin-right:auto}
-.deposit-to-earn .deposit-steps{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:40px;
-  margin-bottom:48px;
+/* How It Works Section - Enterprise (Digital Onboarding Flow) */
+.how-it-works-section{
+  background:#0000FF;
+  padding:96px 0 100px;
   position:relative;
+  overflow:hidden;
 }
-.deposit-to-earn .deposit-steps::before{
-  content:"";
+.how-it-works-bg{
   position:absolute;
-  top:80px;
-  left:0;
-  right:0;
-  height:2px;
-  background:rgba(255,255,255,0.3);
-  z-index:0;
+  inset:0;
+  pointer-events:none;
 }
-.deposit-to-earn .deposit-step{
-  display:flex;
-  flex-direction:column;
-  gap:20px;
+.how-it-works-texture{
+  position:absolute;
+  inset:0;
+  width:100%;
   height:100%;
+  object-fit:cover;
+  opacity:1;
+  mix-blend-mode:lighten;
+}
+.how-it-works-container{
+  max-width:1509px;
+  margin:0 auto;
+  padding:0 40px;
   position:relative;
   z-index:1;
 }
-.deposit-to-earn .step-content{
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-  flex:1;
+.how-it-works-header{
+  margin-bottom:64px;
 }
-.deposit-to-earn .step-title{
-  font-size:24px;
-  font-weight:600;
-  line-height:1.3;
-  letter-spacing:-0.02em;
-  color:#fff;
-  margin:0;
-}
-.deposit-to-earn .step-subtitle{
-  font-size:18px;
+.how-it-works-title{
+  font-size:clamp(36px, 4vw, 48px);
   font-weight:500;
-  line-height:1.4;
-  letter-spacing:-0.017em;
+  line-height:1.1;
+  letter-spacing:-0.025em;
+  color:#fff;
+  margin:0 0 16px 0;
+}
+.how-it-works-subtitle{
+  font-size:clamp(18px, 2vw, 22px);
+  font-weight:400;
+  line-height:1.5;
+  letter-spacing:-0.01em;
   color:rgba(255,255,255,0.9);
   margin:0;
+  max-width:800px;
 }
-.deposit-to-earn .step-text{
+.how-it-works-steps{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:24px;
+}
+.how-it-works-step{
+
+  border-radius:16px;
+  padding:32px 24px;
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+  min-height:400px;
+}
+.step-image-wrapper{
+  width:100%;
+  aspect-ratio:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  border-radius:8px;
+  background:#f5f5f5;
+}
+.step-image{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.step-content{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  flex:1;
+}
+.step-number-line{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+.step-number{
+  padding-top: 10px;
+  font-size:48px;
+  font-weight:700;
+  line-height:1;
+  letter-spacing:-0.02em;
+  color:#0000FF;
+  background:#fff;
+  padding:8px 16px;
+  border-radius:8px;
+  min-width:80px;
+  text-align:center;
+}
+.step-line{
+  flex:1;
+  height:2px;
+  background:rgba(255, 255, 255, 0.3);
+}
+.step-description{
   font-size:16px;
   font-weight:400;
   line-height:1.6;
   letter-spacing:-0.01em;
-  color:rgba(255,255,255,0.8);
-  margin:0;
-  flex:1;
-}
-.deposit-to-earn .step-link{
   color:#fff;
+  margin:0;
+}
+.step-link{
+  color:#0000FF;
   text-decoration:underline;
   transition:opacity 0.2s ease;
 }
-.deposit-to-earn .step-link:hover{
+.step-link:hover{
   opacity:0.8;
-}
-.deposit-to-earn .deposit-cta{
-  text-align:center;
-  margin-top:40px;
-}
-.btn-start-kyb{
-  background:#fff;
-  color:#0000FF;
-  font-size:16px;
-  font-weight:500;
-  line-height:1.75;
-  letter-spacing:-0.02em;
-  padding:10px 32px;
-  border-radius:999px;
-  text-decoration:none;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  transition:opacity 0.2s ease;
-}
-.btn-start-kyb:hover{
-  opacity:0.9;
 }
 
 /* Business Hero Section */
@@ -213,12 +244,9 @@
   .business-revenue-card:nth-child(1),.business-revenue-card:nth-child(2),.business-revenue-card:nth-child(3){border-top:1px solid #E5E7EB}
   .business-revenue-card:nth-child(4),.business-revenue-card:nth-child(5),.business-revenue-card:nth-child(6){border-top:none}
   .business-revenue-card:nth-child(7),.business-revenue-card:nth-child(8),.business-revenue-card:nth-child(9){border-top:none;border-bottom:1px solid #E5E7EB}
-  .deposit-to-earn .deposit-steps{
-    grid-template-columns:1fr;
-    gap:40px;
-  }
-  .deposit-to-earn .deposit-steps::before{
-    display:none;
+  .how-it-works-steps{
+    grid-template-columns:repeat(2, 1fr);
+    gap:32px;
   }
   .business-tools-container{padding:0 24px}
   .business-challenge-container{padding:0 24px}
@@ -261,15 +289,49 @@
   .business-revenue-card .card-desc{
     font-size:14px;
   }
-  .deposit-to-earn{padding:60px 20px 80px}
-  .deposit-to-earn .deposit-title{font-size:36px}
-  .deposit-to-earn .deposit-subtitle{font-size:18px}
-  .deposit-to-earn .step-title{font-size:20px}
-  .deposit-to-earn .step-subtitle{font-size:16px}
-  .deposit-to-earn .step-text{font-size:15px}
-  .btn-start-kyb{
-    width:100%;
-    max-width:280px;
+  .how-it-works-section{
+    padding:60px 0 80px;
+  }
+  .how-it-works-header{
+    margin-bottom:48px;
+  }
+  .how-it-works-title{
+    font-size:36px;
+  }
+  .how-it-works-subtitle{
+    font-size:18px;
+  }
+  .how-it-works-steps{
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+  .how-it-works-step{
+    min-height:auto;
+    padding:24px 20px;
+  }
+  .step-image-wrapper{
+    aspect-ratio:1;
+  }
+  .step-number{
+    font-size:40px;
+    min-width:70px;
+    padding:6px 12px;
+  }
+  .step-description{
+    font-size:15px;
+  }
+  .how-it-works-container{
+    padding:0 20px;
+  }
+  .how-it-works-title{
+    font-size:32px;
+  }
+  .step-number{
+    font-size:36px;
+    min-width:60px;
+  }
+  .step-description{
+    font-size:14px;
   }
   .business-tools{padding:60px 0 80px}
   .business-tools-container{padding:0 20px}

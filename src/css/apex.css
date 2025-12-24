@@ -22,23 +22,36 @@
 .why-sports-subtitle{font-size:clamp(20px, 2.5vw, 24px);font-weight:400;line-height:1.4;letter-spacing:-.017em;text-align:center;color:#4D4D4D;margin-bottom:32px;font-style:italic}
 .why-sports-body{max-width:1100px;margin:0 auto 48px}
 .why-sports-intro{font-size:clamp(18px, 2vw, 22px);font-weight:400;line-height:1.6;letter-spacing:-.017em;color:#000;margin:0 auto 32px;text-align:center}
-.why-sports-content{display:grid;grid-template-columns:repeat(3, 1fr);gap:24px;max-width:1200px;margin:0 auto}
-.why-sports-point{display:flex;flex-direction:column;gap:12px;padding:24px;background:#F5F5F5;border-radius:12px;border:1px solid #E6E6E6}
-.why-sports-point-title{font-size:20px;font-weight:600;line-height:1.3;letter-spacing:-.02em;color:#0000FF;margin:0}
-.why-sports-point-desc{font-size:16px;font-weight:400;line-height:1.6;letter-spacing:-.01em;color:#4D4D4D;margin:0}
+.why-sports-content{display:grid;grid-template-columns:repeat(3, 1fr);gap:0;max-width:1200px;margin:0 auto}
+.why-sports-point{display:flex;flex-direction:column;gap:20px;padding:40px 32px;background:#fff;border:1px solid #E6E6E6;border-right:none;min-height:280px;transition:background 0.2s ease, transform 0.2s ease}
+.why-sports-point:hover{background:#FAFAFA;transform:translateY(-2px)}
+.why-sports-point:first-child{border-left:1px solid #E6E6E6;border-top-left-radius:8px;border-bottom-left-radius:8px}
+.why-sports-point:last-child{border-right:1px solid #E6E6E6;border-top-right-radius:8px;border-bottom-right-radius:8px}
+.why-sports-point .card-icon{margin-bottom:8px;width:40px;height:40px;flex-shrink:0}
+.why-sports-point .card-icon svg{display:block;width:100%;height:100%}
+.why-sports-point .card-text{display:flex;flex-direction:column;gap:12px;flex:1}
+.why-sports-point .card-title{font-size:20px;font-weight:600;line-height:1.3;letter-spacing:-.02em;color:#4D4D4D;margin:0}
+.why-sports-point .card-desc{font-size:16px;font-weight:400;line-height:1.6;letter-spacing:-.01em;color:#4D4D4D;margin:0}
 .why-sports-cards-section{background:#fff;padding:80px 0 100px;position:relative}
 .why-sports-cards-title{font-size:clamp(36px, 4vw, 48px);font-weight:500;line-height:1.1;letter-spacing:-.025em;text-align:center;color:#4D4D4D;margin-bottom:16px}
 .why-sports-cards-body{font-size:clamp(18px, 2vw, 22px);font-weight:400;line-height:1.6;letter-spacing:-.017em;text-align:center;color:#000;max-width:1100px;margin:0 auto 48px}
-.why-sports-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1200px;margin:0 auto}
-.why-sports-card{background:#fff;border:1px solid #E6E6E6;border-radius:12px;padding:32px 28px;display:flex;flex-direction:column;gap:16px;min-height:280px;transition:transform 0.2s ease, box-shadow 0.2s ease}
+.why-sports-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1200px;margin:0 auto}
+.why-sports-card{background:#D9D9D9;border-radius:18px;height:459px;position:relative;overflow:hidden;display:flex;flex-direction:column;transition:transform 0.2s ease, box-shadow 0.2s ease}
 .why-sports-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,0.1)}
-.why-sports-icon{margin-bottom:0;flex-shrink:0}
-.why-sports-icon svg{display:block;width:40px;height:40px}
-.why-sports-card-title{font-size:20px;font-weight:600;line-height:1.3;letter-spacing:-.02em;color:#4D4D4D;margin:0}
-.why-sports-card-desc{font-size:16px;font-weight:400;line-height:1.6;letter-spacing:-.01em;color:#4D4D4D;margin:0}
+.why-sports-card .card-texture-overlay{position:absolute;inset:0;background-image:url('../assets/images/card-texture-e0eadf.png');background-size:cover;background-position:center;opacity:1;mix-blend-mode:soft-light;pointer-events:none;z-index:1}
+.why-sports-card .card-content{position:relative;z-index:2;padding:24px 30px;display:flex;flex-direction:column;height:100%}
+.why-sports-card .card-label{font-size:16px;font-weight:500;line-height:1.44;color:#fff;text-transform:uppercase;margin-bottom:10px}
+.why-sports-card .card-title{font-size:26px;font-weight:500;line-height:1.08;letter-spacing:-.012em;color:#fff;margin-bottom:16px}
+.why-sports-card .card-desc{font-size:16px;font-weight:400;line-height:1.6;letter-spacing:-.01em;color:#fff;margin:0 0 auto 0;opacity:0.9}
+.why-sports-card .btn-card-label{background:#fff;color:#4D4D4D;font-size:16px;font-weight:500;line-height:1.75;letter-spacing:-.02em;padding:6px 24px;border-radius:30px;text-decoration:none;text-align:center;width:168px;height:36px;display:flex;align-items:center;justify-content:center;margin-top:auto;margin-bottom:20px;transition:opacity 0.2s ease}
+.why-sports-card .btn-card-label:hover{opacity:0.9}
+/* Card gradients */
+.card-capital-preservation{background:linear-gradient(180deg, #0000FF 0%, #d2d2d2 100%)}
+.card-growing-value{background:linear-gradient(180deg, #0000FF 0%, #d2d2d2 100%)}
+.card-digital-liquidity{background:linear-gradient(180deg, #0000FF 0%, #d2d2d2 100%)}
 
 /* Participation Section */
-.participation-section{background:#fff;padding:80px 0 100px;position:relative}
+.participation-section{background:#fff;padding:10px 0 100px;position:relative}
 .participation-container{max-width:1310px;margin:0 auto;padding:0 40px}
 .participation-title{font-size:24px;font-weight:500;line-height:1.08;letter-spacing:-.0123em;color:#000;margin:0 auto 10px;text-align:left;max-width:1100px}
 .participation-bar-chart{margin-bottom:4px}
@@ -165,12 +178,18 @@
   .why-sports-title{font-size:36px}
   .why-sports-subtitle{font-size:20px}
   .why-sports-intro{font-size:18px}
-  .why-sports-content{grid-template-columns:1fr;gap:20px}
-  .why-sports-point-title{font-size:18px}
-  .why-sports-point-desc{font-size:15px}
+  .why-sports-content{grid-template-columns:repeat(3,1fr);gap:0;overflow-x:visible}
+  .why-sports-point{width:auto;min-width:auto;border-right:none;border-bottom:none;height:auto;min-height:220px}
+  .why-sports-point:nth-child(3n){border-right:1px solid #E5E7EB}
+  .why-sports-point:nth-child(1),.why-sports-point:nth-child(2),.why-sports-point:nth-child(3){border-top:1px solid #E5E7EB}
+  .why-sports-point:nth-child(4),.why-sports-point:nth-child(5),.why-sports-point:nth-child(6){border-top:none}
+  .why-sports-point:nth-child(7),.why-sports-point:nth-child(8),.why-sports-point:nth-child(9){border-top:none;border-bottom:1px solid #E5E7EB}
+  .why-sports-point .card-title{font-size:18px}
+  .why-sports-point .card-desc{font-size:15px}
   .why-sports-cards-title{font-size:36px}
   .why-sports-cards-body{font-size:18px}
   .why-sports-grid{grid-template-columns:repeat(3,1fr);gap:20px}
+  .why-sports-card{height:auto;min-height:400px}
   .why-sports-container{padding:0 24px}
   .participation-container{padding:0 24px}
   .fsp-note-container{padding:0 24px}
@@ -196,14 +215,16 @@
   .why-sports-title{font-size:32px}
   .why-sports-subtitle{font-size:20px}
   .why-sports-intro{font-size:18px}
-  .why-sports-content{grid-template-columns:1fr;gap:20px}
-  .why-sports-point-title{font-size:18px}
-  .why-sports-point-desc{font-size:15px}
+  .why-sports-content{grid-template-columns:1fr;max-width:100%}
+  .why-sports-point{border-right:1px solid #E6E6E6;border-left:1px solid #E6E6E6;border-radius:8px;margin-bottom:16px;padding:24px 20px;min-height:auto}
+  .why-sports-point:first-child,.why-sports-point:nth-child(2),.why-sports-point:last-child{border-radius:8px}
+  .why-sports-point .card-title{font-size:18px}
+  .why-sports-point .card-desc{font-size:14px}
   .why-sports-cards-title{font-size:32px}
   .why-sports-cards-body{font-size:18px}
-  .why-sports-grid{grid-template-columns:1fr;gap:20px}
-  .why-sports-card{min-height:auto;padding:24px 20px}
-  .participation-section{padding:60px 0 80px}
+  .why-sports-grid{grid-template-columns:1fr;gap:16px}
+  .why-sports-card{height:auto;min-height:400px}
+  .participation-section{padding:0px 0 0px}
   .participation-container{padding:0 20px}
   .participation-title{font-size:20px}
   .bar-chart-container{width:100%;height:80px}
