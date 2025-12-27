@@ -57,6 +57,7 @@
       </nav>
       <a class="btn-join btn-join-desktop" href="#">Join</a>
     </div>
+    <div class="nav-backdrop"></div>
   </header>
 
   <main>
@@ -385,7 +386,7 @@
           <div class="fsp-council-card-large">
             <div class="card-large-image">
               <img src="./src/assets/images/team-blue-rising-bg.svg" alt="" class="card-bg-shape">
-              <img src="./src/assets/images/team-blue-rising.svg" alt="" class="card-person-image">
+              <img src="./src/assets/images/team-blue-rising.png" alt="" class="card-person-image">
             </div>
             <div class="card-large-content">
               <span class="card-label-council">//COUNCIL</span>
@@ -747,41 +748,43 @@
   </footer>
 
   <script>
-    // Hamburger Menu Toggle
+    // Mobile Navigation
     const hamburgerBtn = document.querySelector('.hamburger-btn');
     const mainNav = document.querySelector('.main-nav');
+    const navBackdrop = document.querySelector('.nav-backdrop');
+    const navDropdowns = document.querySelectorAll('.nav-dropdown');
+    
+    function openMobileNav() {
+      hamburgerBtn.setAttribute('aria-expanded', 'true');
+      mainNav.setAttribute('aria-hidden', 'false');
+      navBackdrop?.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeMobileNav() {
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+      mainNav.setAttribute('aria-hidden', 'true');
+      navBackdrop?.classList.remove('active');
+      document.body.style.overflow = '';
+      navDropdowns.forEach(dd => dd.classList.remove('active'));
+    }
     
     if (hamburgerBtn && mainNav) {
       hamburgerBtn.addEventListener('click', () => {
         const isExpanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
-        hamburgerBtn.setAttribute('aria-expanded', !isExpanded);
-        mainNav.setAttribute('aria-hidden', isExpanded);
-        document.body.style.overflow = !isExpanded ? 'hidden' : '';
+        isExpanded ? closeMobileNav() : openMobileNav();
       });
       
-      // Close menu when clicking on a link or Join button (but not dropdown toggles)
+      navBackdrop?.addEventListener('click', closeMobileNav);
+      
       const navLinks = mainNav.querySelectorAll('a:not(.dropdown-toggle)');
       navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          hamburgerBtn.setAttribute('aria-expanded', 'false');
-          mainNav.setAttribute('aria-hidden', 'true');
-          document.body.style.overflow = '';
-        });
-      });
-      
-      // Close menu when clicking outside
-      mainNav.addEventListener('click', (e) => {
-        if (e.target === mainNav) {
-          hamburgerBtn.setAttribute('aria-expanded', 'false');
-          mainNav.setAttribute('aria-hidden', 'true');
-          document.body.style.overflow = '';
-        }
+        link.addEventListener('click', closeMobileNav);
       });
     }
 
     // Dropdown Toggle Functionality
     const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-    const navDropdowns = document.querySelectorAll('.nav-dropdown');
     const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
 
     dropdownToggles.forEach(toggle => {
@@ -793,47 +796,35 @@
         if (!dropdown) return;
         
         const isActive = dropdown.classList.contains('active');
+        const isMobile = window.innerWidth <= 960;
         
-        // Close all dropdowns first
-        navDropdowns.forEach(dd => {
-          dd.classList.remove('active');
-        });
+        if (!isMobile) {
+          navDropdowns.forEach(dd => dd.classList.remove('active'));
+        }
         
-        // If it wasn't active, open it
-        if (!isActive) {
-          dropdown.classList.add('active');
+        dropdown.classList.toggle('active', !isActive);
+      });
+    });
+
+    dropdownLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        if (window.innerWidth > 960) {
+          navDropdowns.forEach(dd => dd.classList.remove('active'));
         }
       });
     });
 
-    // Close dropdown when clicking on a dropdown link
-    dropdownLinks.forEach(link => {
-      link.addEventListener('click', function(e) {
-        navDropdowns.forEach(dd => {
-          dd.classList.remove('active');
-        });
-      });
-    });
-
-    // Close dropdowns when clicking outside
     document.addEventListener('click', function(e) {
-      const target = e.target;
-      const isDropdownToggle = target.closest('.dropdown-toggle');
-      const isInDropdown = target.closest('.nav-dropdown');
-      
-      if (!isDropdownToggle && !isInDropdown) {
-        navDropdowns.forEach(dd => {
-          dd.classList.remove('active');
-        });
+      if (window.innerWidth > 960) {
+        if (!e.target.closest('.nav-dropdown')) {
+          navDropdowns.forEach(dd => dd.classList.remove('active'));
+        }
       }
     });
 
-    // Prevent clicks on "coming soon" links
     const comingSoonLinks = document.querySelectorAll('.coming-soon');
     comingSoonLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-      });
+      link.addEventListener('click', (e) => e.preventDefault());
     });
 
     // FAQ Accordion Functionality
@@ -843,16 +834,8 @@
       if (toggle) {
         toggle.addEventListener('click', () => {
           const isActive = item.classList.contains('active');
-          
-          // Close all FAQ items
-          faqItems.forEach(otherItem => {
-            otherItem.classList.remove('active');
-          });
-          
-          // Open clicked item if it wasn't active
-          if (!isActive) {
-            item.classList.add('active');
-          }
+          faqItems.forEach(otherItem => otherItem.classList.remove('active'));
+          if (!isActive) item.classList.add('active');
         });
       }
     });

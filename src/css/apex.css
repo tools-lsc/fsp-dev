@@ -150,17 +150,18 @@
 .fsp-council-card-large{background:#fff;border:1px solid #404040;border-radius:20px;height:391px;display:flex;position:relative;overflow:hidden}
 .card-large-image{position:relative;width:287px;height:100%;flex-shrink:0}
 .card-bg-shape{position:absolute;left:1px;top:2px;width:287px;height:388px;border-radius:0 0 0 19px}
-.card-person-image{position:absolute;left:1px;top:-34px;width:306px;height:424px;z-index:2}
-.card-large-content{padding:73px 45px 45px 25px;display:flex;flex-direction:column;flex:1}
-.card-label-council{font-size:12px;font-weight:500;line-height:1;letter-spacing:.16em;text-transform:uppercase;color:#0F0F19;margin-bottom:3px;display:block}
-.card-large-title{font-size:20px;font-weight:500;line-height:1.088;letter-spacing:-.01em;text-transform:uppercase;color:#000;margin-bottom:15px}
-.card-badge{display:inline-block;border:1px solid #4E4E4E;border-radius:7px;padding:6px 7px;font-size:12px;font-weight:500;line-height:1.5;letter-spacing:.1em;text-transform:uppercase;color:#4E4E4E;text-align:center;margin-bottom:17px}
-.card-large-desc{font-size:16px;font-weight:400;line-height:1.1875;letter-spacing:-.02em;color:#4D4D4D;margin:0}
+.card-person-image{position:absolute;left:0;width:auto;height:auto; bottom:0;z-index:2}
+/* Team Blue Rising logo positioning - move more to the left */
+.card-large-content{padding:73px 45px 45px 25px;display:flex;flex-direction:column;flex:1;text-align:left}
+.card-label-council{font-size:12px;font-weight:500;line-height:1;letter-spacing:.16em;text-transform:uppercase;color:#0F0F19;margin-bottom:3px;display:block;text-align:left}
+.card-large-title{font-size:20px;font-weight:500;line-height:1.088;letter-spacing:-.01em;text-transform:uppercase;color:#000;margin-bottom:15px;text-align:left}
+.card-badge{display:inline-block;border:1px solid #4E4E4E;border-radius:7px;padding:6px 7px;font-size:12px;font-weight:500;line-height:1.5;letter-spacing:.1em;text-transform:uppercase;color:#4E4E4E;text-align:left;margin-bottom:17px}
+.card-large-desc{font-size:16px;font-weight:400;line-height:1.1875;letter-spacing:-.02em;color:#4D4D4D;margin:0;text-align:left}
 .fsp-council-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:63px}
 .fsp-council-card{background:#fff;border:1px solid #404040;border-radius:20px;height:580px;display:flex;flex-direction:column;overflow:hidden}
-.card-council-content{padding:38px 34px 0;flex-shrink:0}
-.card-council-name{font-size:20px;font-weight:500;line-height:1.088;letter-spacing:-.01em;text-transform:uppercase;color:#000;margin-bottom:11px}
-.card-council-desc{font-size:16px;font-weight:400;line-height:1.1875;letter-spacing:-.02em;color:#4D4D4D;margin:0 0 78px}
+.card-council-content{padding:38px 34px 0;flex-shrink:0;text-align:left}
+.card-council-name{font-size:20px;font-weight:500;line-height:1.088;letter-spacing:-.01em;text-transform:uppercase;color:#000;margin-bottom:11px;text-align:left}
+.card-council-desc{font-size:16px;font-weight:400;line-height:1.1875;letter-spacing:-.02em;color:#4D4D4D;margin:0 0 78px;text-align:left}
 .card-council-image{position:relative;width:100%;flex:1;overflow:hidden;border-radius:0 0 0 19px}
 .card-council-image::before{content:"";position:absolute;left:1px;bottom:0;width:334px;height:309px;background:#2DA2FF;border-radius:0 20px 0 19px;z-index:1}
 .council-profile-image{width:100%;height:100%;object-fit:cover;object-position:center top;position:relative;z-index:2}
