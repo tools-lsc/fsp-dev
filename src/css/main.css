@@ -10,7 +10,7 @@ body{
 .site-header{position:absolute;top:0;left:0;right:0;z-index:20}
 .header-inner{display:flex;align-items:center;gap:0;padding:32px 0}
 /* align header with hero content (no auto-centering) */
-.site-header .container{margin:0;max-width:none;padding-left:60px;padding-right:24px;position:relative}
+.site-header .container{margin:0;max-width:none;padding-left:28px;padding-right:28px;position:relative}
 .logo{display:inline-flex;align-items:center;border-right:1px solid rgba(255,255,255,.7);padding-right:16px;margin-right:16px}
 .logo img{height:38px}
 .main-nav ul{display:flex;gap:0}

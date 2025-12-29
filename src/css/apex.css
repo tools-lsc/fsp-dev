@@ -137,10 +137,12 @@
 .threshold-bar-image{width:100%;height:auto;display:block;max-width:1317px}
 
 /* FSP Council Section */
-.fsp-council{background:#fff;padding:80px 0 100px;position:relative}
-.fsp-council-container{max-width:1321px;margin:0 auto;padding:0 40px}
+.fsp-council{background:#fff;padding:80px 0 100px;position:relative;overflow:hidden}
+/* Gradient overlay for top 30% */
+.fsp-council-gradient{position:absolute;top:0;left:0;right:0;height:30vh;background:linear-gradient(180deg, #0000FF 0%, rgba(0, 0, 255, 0) 100%);pointer-events:none;z-index:1}
+.fsp-council-container{max-width:1321px;margin:0 auto;padding:0 40px;position:relative;z-index:2}
 .fsp-council-header{margin-bottom:56px;text-align:center}
-.fsp-council-title{font-size:clamp(36px, 4vw, 48px);font-weight:500;line-height:1.1;letter-spacing:-.025em;color:#4D4D4D;margin-bottom:16px}
+.fsp-council-title{font-size:clamp(36px, 4vw, 48px);font-weight:500;line-height:1.1;letter-spacing:-.025em;color:#4D4D4D;margin-top:60px;margin-bottom:16px}
 .fsp-council-subtitle{font-size:clamp(20px, 2.5vw, 24px);font-weight:400;line-height:1.4;letter-spacing:-.017em;color:#4D4D4D;margin-bottom:32px;font-style:italic}
 .fsp-council-desc{font-size:clamp(18px, 2vw, 22px);font-weight:400;line-height:1.6;letter-spacing:-.017em;color:#000;max-width:1100px;margin:0 auto}
 .fsp-council-link{text-align:center;margin-top:56px}
