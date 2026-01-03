@@ -2090,7 +2090,7 @@ body{
   .compete-container{grid-template-columns:1fr;gap:60px}
   .compete-images{height:400px}
   .compete-phone-large{width:240px;height:473px}
-  .compete-phone-small{width:170px;height:253px;right:240px}
+  .compete-phone-small{width:170px;height:253px;right:200px}
   .redeem-win-big-section{padding:60px 24px 80px}
   .redeem-grid-row:first-child{grid-template-columns:1fr;gap:24px}
   .redeem-grid-row:last-child{grid-template-columns:1fr;gap:24px}
