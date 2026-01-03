@@ -818,7 +818,7 @@ body{
 .redeem-win-big-bottom{
   display:grid;
   grid-template-columns:1fr 413px;
-  gap:24px;
+
   margin-top:24px;
   border-radius:20px;
   overflow:hidden;
