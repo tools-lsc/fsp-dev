@@ -14,11 +14,38 @@
 .btn-explore-pools{display:inline-flex;align-items:center;justify-content:center;background:transparent;color:#fff;font-size:20px;font-weight:400;line-height:1.25;letter-spacing:-0.019em;padding:7px 40px;border-radius:20px;border:1px solid #fff;text-decoration:none;transition:opacity 0.2s ease}
 .btn-explore-pools:hover{opacity:0.9}
 
+/* Pools action buttons */
+.btn-create-pool,
+.btn-stake-athlete,
+.btn-boost-prize,
+.btn-join-live-pool,
+.btn-start-sponsor-pool,
+.btn-join-pool{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+  font-weight:400;
+  line-height:1.25;
+  letter-spacing:-0.019em;
+  padding:7px 40px;
+  border-radius:20px;
+  text-decoration:none;
+  white-space:nowrap;
+  transition:opacity 0.2s ease;
+  font-style:normal;
+}
+
+.btn-create-pool{
+  background:#0000FF;
+  color:#fff;
+}
+
 /* Responsive - Pools Hero */
 @media (max-width: 960px){
   .pools-hero{height:auto;min-height:100vh}
-  .pools-hero-content{height:auto;min-height:100vh;padding:120px 0 80px}
-  .pools-hero-ascii{width:500px;right:-10%}
+  .pools-hero-content{height:auto;min-height:100vh;padding:80px 0 60px}
+  .pools-hero-ascii{width:500px;right:-12%}
   .pools-hero .container{padding-left:40px;padding-right:24px}
   .pools-hero-title{font-size:56px}
   .pools-hero-cta-container{flex-direction:column;align-items:flex-start;gap:16px}
@@ -27,8 +54,8 @@
 
 @media (max-width: 640px){
   .pools-hero{height:auto;min-height:100vh}
-  .pools-hero-content{height:auto;min-height:100vh;padding:120px 0 60px}
-  .pools-hero-ascii{width:350px;opacity:0.6;right:-15%}
+  .pools-hero-content{height:auto;min-height:100vh;padding:40px 0 90px}
+  .pools-hero-ascii{width:350px;opacity:0.6;right:6%}
   .pools-hero .container{padding-left:24px;padding-right:24px}
   .pools-hero-title{font-size:40px;line-height:1;margin-bottom:32px}
   .pools-hero-cta-container{width:100%}
@@ -252,7 +279,6 @@
 .pools-card-title{font-size:24px;font-weight:400;line-height:0.583;color:#000;margin:0}
 .pools-card-desc{font-size:14px;font-weight:400;line-height:1;color:#6A6D78;margin:0}
 .pools-cards-button-wrapper{display:flex;justify-content:center;margin-top:48px;width:100%}
-.btn-create-pool{display:inline-flex;align-items:center;justify-content:center;background:#0000FF;color:#fff;font-size:22px;font-weight:400;line-height:1.1345;letter-spacing:-0.01745em;padding:10px 32px;border-radius:19px;text-decoration:none;height:auto;white-space:nowrap;transition:opacity 0.2s ease}
 .btn-create-pool:hover{opacity:0.9}
 
 /* Responsive - Pools Cards */
@@ -270,7 +296,7 @@
   .pools-card-desc{font-size:12px}
   .pools-card{padding:18px 12px}
   .pools-cards-button-wrapper{margin-top:32px}
-  .btn-create-pool{font-size:18px;padding:8px 24px;width:100%;max-width:280px}
+  .btn-create-pool{font-size:18px;padding:7px 24px;width:100%;max-width:280px}
 }
 
 /* AthleteStash Section */
@@ -352,21 +378,8 @@
   flex-wrap:nowrap;
 }
 .btn-stake-athlete{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
   background:#0000FF;
   color:#fff;
-  font-size:16px;
-  font-weight:500;
-  line-height:1.75;
-  letter-spacing:-0.02em;
-  padding:10px 32px;
-  border-radius:999px;
-  text-decoration:none;
-  height:auto;
-  white-space:nowrap;
-  transition:opacity 0.2s ease;
 }
 .btn-stake-athlete:hover{
   opacity:0.9;
@@ -480,21 +493,8 @@
   flex-wrap:nowrap;
 }
 .btn-boost-prize{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
   background:#0000FF;
   color:#fff;
-  font-size:16px;
-  font-weight:500;
-  line-height:1.75;
-  letter-spacing:-0.02em;
-  padding:10px 32px;
-  border-radius:999px;
-  text-decoration:none;
-  height:auto;
-  white-space:nowrap;
-  transition:opacity 0.2s ease;
 }
 .btn-boost-prize:hover{
   opacity:0.9;
@@ -598,7 +598,10 @@
 .challenge-overlay-right{bottom:20px;right:20px}
 .challenge-button{background:#fff;color:#0000FF;border:none;border-radius:8px;padding:8px 16px;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap}
 .pools-features-button-wrapper{display:flex;justify-content:center;width:100%}
-.btn-join-pool{display:inline-flex;align-items:center;justify-content:center;background:#0000FF;color:#fff;font-size:22px;font-weight:400;line-height:1.1345;letter-spacing:-0.01745em;padding:10px 32px;border-radius:19px;text-decoration:none;height:auto;white-space:nowrap;transition:opacity 0.2s ease}
+.btn-join-pool{
+  background:#0000FF;
+  color:#fff;
+}
 .btn-join-pool:hover{opacity:0.9}
 
 /* Responsive - Pools Features */
@@ -701,21 +704,8 @@
   flex-wrap:nowrap;
 }
 .btn-start-sponsor-pool{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
   background:#0000FF;
   color:#fff;
-  font-size:16px;
-  font-weight:500;
-  line-height:1.75;
-  letter-spacing:-0.02em;
-  padding:10px 32px;
-  border-radius:999px;
-  text-decoration:none;
-  height:auto;
-  white-space:nowrap;
-  transition:opacity 0.2s ease;
 }
 .btn-start-sponsor-pool:hover{
   opacity:0.9;
@@ -883,21 +873,8 @@
   flex-wrap:nowrap;
 }
 .btn-join-live-pool{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
   background:#0000FF;
   color:#fff;
-  font-size:16px;
-  font-weight:500;
-  line-height:1.75;
-  letter-spacing:-0.02em;
-  padding:10px 32px;
-  border-radius:999px;
-  text-decoration:none;
-  height:auto;
-  white-space:nowrap;
-  transition:opacity 0.2s ease;
 }
 .btn-join-live-pool:hover{
   opacity:0.9;
@@ -1033,7 +1010,7 @@
 .how-it-works-step{
 
   border-radius:16px;
-  padding:32px 24px;
+ 
   display:flex;
   flex-direction:column;
   gap:24px;
@@ -1116,7 +1093,7 @@
   }
   .how-it-works-step{
     min-height:auto;
-    padding:24px 20px;
+   
   }
   .step-image-wrapper{
     aspect-ratio:1;
