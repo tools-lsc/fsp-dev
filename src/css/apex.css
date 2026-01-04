@@ -60,7 +60,7 @@
 .participation-segment{background:#0000FF;width:65%;color:#fff;border-right:2px solid #000}
 .spectator-segment{background:#fff;width:35%;color:#000}
 .bar-left-line-top{position:absolute;left:-1.4px;top:-40px;width:1.2px;height:40px;background:#000}
-.bar-left-line-bottom{position:absolute;left:-1.4px;top:90px;width:1.2px;height:40px;background:#000}
+.bar-left-line-bottom{position:absolute;left:-1.4px;top:40px;width:1.2px;height:100px;background:#000}
 .segment-content{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;width:100%;height:100%;padding:0 16px;position:relative;z-index:1}
 .segment-label{font-size:18px;font-weight:500;line-height:1.2;letter-spacing:-.01em;margin:0;text-align:center;white-space:nowrap}
 .segment-value{font-size:22px;font-weight:600;line-height:1.2;letter-spacing:-.012em;margin:0;text-align:center;white-space:nowrap}
@@ -229,11 +229,11 @@
   .why-sports-card{height:auto;min-height:400px}
   .participation-section{padding:0px 0 0px}
   .participation-container{padding:0 20px}
-  .participation-title{font-size:20px}
+  .participation-title{font-size:18px;padding-left:20px}
   .bar-chart-container{width:100%;height:80px}
   .segment-label{font-size:14px}
   .segment-value{font-size:18px}
-  .participation-explanation{font-size:16px}
+  .participation-explanation{font-size:14px;padding-left:20px;padding-right:20px}
   .fsp-note-section{padding:60px 0 80px}
   .fsp-note-container{padding:0 20px}
   .fsp-note-title{font-size:36px;margin-bottom:40px}
