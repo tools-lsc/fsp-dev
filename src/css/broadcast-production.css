@@ -12,6 +12,31 @@ body {
   overflow: hidden;
 }
 
+.broadcast-hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.broadcast-hero-texture {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  mix-blend-mode: lighten;
+}
+
+.broadcast-hero-ascii {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 700px;
+  height: 730px;
+  opacity: 1;
+}
+
 /* Gradient overlay for top 30% */
 .broadcast-hero-gradient {
   position: absolute;
@@ -113,13 +138,15 @@ body {
   background: #fff;
 }
 
-/* Dropdown menu text color - blue */
-.broadcast-page .dropdown-menu a {
-  color: #0000FF !important;
-}
+/* Dropdown menu text color - blue (desktop only) */
+@media (min-width: 961px) {
+  .broadcast-page .dropdown-menu a {
+    color: #0000FF !important;
+  }
 
-.broadcast-page .dropdown-menu .coming-soon {
-  color: #0000FF !important;
+  .broadcast-page .dropdown-menu .coming-soon {
+    color: #0000FF !important;
+  }
 }
 
 /* AI For Athletes & Teams Section */
@@ -234,6 +261,11 @@ body {
 }
 
 @media (max-width: 968px) {
+  .broadcast-hero-ascii {
+    width: 500px;
+    right: -10%;
+  }
+
   .ai-section-container {
     grid-template-columns: 1fr;
     gap: 60px;
@@ -245,6 +277,12 @@ body {
 }
 
 @media (max-width: 768px) {
+  .broadcast-hero-ascii {
+    width: 350px;
+    opacity: 0.6;
+    right: -15%;
+  }
+
   .broadcast-hero-content {
     padding-top: 100px;
     padding-bottom: 60px;
