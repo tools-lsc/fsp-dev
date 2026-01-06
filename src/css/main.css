@@ -1,3 +1,6 @@
+html{
+  scroll-behavior:smooth;
+}
 body{
   font-family:"Archivo",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   color:var(--text);
@@ -59,7 +62,7 @@ body{
 .hero-content{position:relative;height:100vh;display:flex;flex-direction:column;justify-content:center;padding:102px 0 84px}
 .hero .container{max-width:none;margin:0;padding-left:40px;padding-right:40px}
 .hero-title{font-weight:500;letter-spacing:-0.057em;line-height:.83;font-size:clamp(40px,6vw,70px)}
-.hero-subtitle{margin-top:24px;max-width:520px;font-size:22px;letter-spacing:-.017em;line-height:1.15;color:var(--text)}
+.hero-subtitle{margin-top:24px;max-width:600px;font-size:22px;letter-spacing:-.017em;line-height:1.4;color:var(--text);margin-bottom:0}
 .hero-subtitle-alt{
   margin-top:16px;
   max-width:700px;
@@ -71,7 +74,7 @@ body{
 .hero-cta-container{
   display:flex;
   gap:16px;
-  margin-top:32px;
+  margin-top:40px;
   flex-wrap:wrap;
 }
 .btn-start-competing{
@@ -113,7 +116,7 @@ body{
 .btn-explore-ecosystem:hover{
   opacity:0.9;
 }
-.hero-bullets{margin-top:28px;display:grid;gap:12px}
+.hero-bullets{margin-top:32px;display:grid;gap:12px}
 .hero-bullets li{display:flex;align-items:flex-start;gap:12px;color:var(--text-dim);font-size:16px;line-height:1.5}
 .hero-bullets svg{width:20px;height:20px;flex:0 0 20px;fill:#86EFAC}
 .hero-bullet-icon{width:20px;height:20px;flex:0 0 20px;display:block}
@@ -149,6 +152,44 @@ body{
   text-transform:capitalize;
   margin-bottom:16px;
 }
+.features-subtitle{
+  font-size:20px;
+  font-weight:400;
+  line-height:1.3;
+  letter-spacing:-.02em;
+  text-align:center;
+  color:#4D4D4D;
+  margin-bottom:48px;
+  max-width:800px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.features-cta-wrapper{
+  text-align:center;
+  margin-top:48px;
+}
+.btn-get-started{
+  background:#fff;
+  color:#0000FF;
+  font-size:20px;
+  font-weight:400;
+  line-height:1.25;
+  letter-spacing:-0.019em;
+  padding:7px 40px;
+  border-radius:20px;
+  text-decoration:none;
+  white-space:nowrap;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  transition:opacity 0.2s ease;
+  border:1px solid #0000FF;
+}
+.btn-get-started:hover{
+  opacity:0.9;
+  background:#0000FF;
+  color:#fff;
+}
 .features-pill{
   display:inline-flex;
   align-items:center;
@@ -168,10 +209,10 @@ body{
 }
 .features-grid{
   display:grid;
-  grid-template-columns:repeat(5,1fr);
+  grid-template-columns:repeat(6,1fr);
   gap:0;
   margin-bottom:48px;
-  max-width:1500px;
+  max-width:1800px;
   margin-left:auto;
   margin-right:auto;
 }
@@ -269,22 +310,25 @@ body{
 }
 .deposit-header{
   margin-bottom:48px;
+  text-align:center;
 }
 .deposit-title{
-  font-size:clamp(36px, 5vw, 56px);
+  font-size:clamp(28px, 4vw, 42px);
   font-weight:500;
-  line-height:1.1;
+  line-height:1.2;
   letter-spacing:-.025em;
   color:#fff;
-  margin:0 0 16px;
+  margin:0 0 12px;
+  text-align:center;
 }
 .deposit-subtitle{
-  font-size:clamp(18px, 2.5vw, 24px);
+  font-size:clamp(16px, 2vw, 20px);
   font-weight:400;
-  line-height:1.3;
+  line-height:1.4;
   letter-spacing:-.017em;
   color:rgba(255,255,255,0.9);
   margin:0;
+  text-align:center;
 }
 .deposit-content{
   display:flex;
@@ -293,6 +337,8 @@ body{
 }
 .deposit-intro{
   max-width:800px;
+  margin:0 auto;
+  text-align:center;
 }
 .deposit-body{
   font-size:clamp(18px, 2vw, 22px);
@@ -301,6 +347,7 @@ body{
   letter-spacing:-.01em;
   color:#fff;
   margin:0;
+  text-align:center;
 }
 .deposit-features{
   display:grid;
@@ -310,12 +357,12 @@ body{
 }
 .deposit-feature{
   display:flex;
-  gap:20px;
+  gap:16px;
   align-items:flex-start;
-  padding:24px;
+  padding:20px;
   background:rgba(255,255,255,0.05);
   border:1px solid rgba(255,255,255,0.1);
-  border-radius:16px;
+  border-radius:12px;
   backdrop-filter:blur(10px);
   transition:transform 0.3s ease, background 0.3s ease;
 }
@@ -325,28 +372,40 @@ body{
 }
 .deposit-feature-icon{
   flex-shrink:0;
+  width:28px;
+  height:28px;
+  margin-top:2px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.deposit-feature-icon img{
+  width:28px;
+  height:28px;
+  filter:brightness(0) invert(1);
+}
+.deposit-feature-icon svg{
   width:32px;
   height:32px;
-  margin-top:4px;
 }
 .deposit-feature-content{
   flex:1;
 }
 .deposit-feature-title{
-  font-size:clamp(20px, 2vw, 24px);
+  font-size:clamp(18px, 1.8vw, 20px);
   font-weight:600;
   line-height:1.3;
   letter-spacing:-.02em;
   color:#fff;
-  margin:0 0 12px;
+  margin:0 0 10px;
 }
 .deposit-feature-desc{
-  font-size:16px;
+  font-size:14px;
   font-weight:400;
-  line-height:1.6;
+  line-height:1.5;
   letter-spacing:-.01em;
   color:rgba(255,255,255,0.85);
-  margin:0 0 16px;
+  margin:0 0 12px;
 }
 .deposit-badge{
   display:inline-block;
@@ -362,10 +421,12 @@ body{
 }
 .deposit-cta-wrapper{
   display:flex;
-  justify-content:flex-start;
-  margin-top:16px;
+  justify-content:center;
+  gap:16px;
+  margin-top:32px;
+  flex-wrap:wrap;
 }
-.btn-open-vault{
+.btn-deposit-now{
   background:#fff;
   color:#0000FF;
   font-size:20px;
@@ -381,8 +442,44 @@ body{
   justify-content:center;
   transition:opacity 0.2s ease;
 }
-.btn-open-vault:hover{
+.btn-deposit-now:hover{
   opacity:0.9;
+}
+.btn-explore-tiers{
+  background:transparent;
+  color:#fff;
+  border:1px solid #fff;
+  font-size:20px;
+  font-weight:400;
+  line-height:1.25;
+  letter-spacing:-0.019em;
+  padding:7px 40px;
+  border-radius:20px;
+  text-decoration:none;
+  white-space:nowrap;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  transition:opacity 0.2s ease;
+}
+.btn-explore-tiers:hover{
+  opacity:0.9;
+  background:rgba(255,255,255,0.1);
+}
+.deposit-title sup,
+.deposit-body sup{
+  vertical-align:super;
+  font-size:0.6em;
+  line-height:0;
+}
+.deposit-asterisk{
+  color:#fff;
+  text-decoration:none;
+  border-bottom:1px solid rgba(255,255,255,0.5);
+  transition:border-color 0.2s ease;
+}
+.deposit-asterisk:hover{
+  border-bottom-color:#fff;
 }
 
 /* Deposit Section Responsive */
@@ -427,7 +524,8 @@ body{
     margin-top: 0;
   }
   
-  .btn-open-vault {
+  .btn-deposit-now,
+  .btn-explore-tiers {
     width: 100%;
     justify-content: center;
   }
@@ -513,28 +611,28 @@ body{
   letter-spacing:-.025em;
   color:#4D4D4D;
   text-transform:capitalize;
-  margin-bottom:48px;
+  margin-bottom:24px;
 }
 .compete-subtitle{
   font-size:20px;
   font-weight:500;
-  line-height:1.15;
+  line-height:1.3;
   color:#000;
-  margin-bottom:12px;
+  margin-bottom:24px;
 }
 .compete-desc{
   font-size:16px;
   font-weight:400;
-  line-height:1.3;
+  line-height:1.5;
   letter-spacing:-.02em;
   color:#4D4D4D;
-  margin-bottom:24px;
-  max-width:440px;
+  margin-bottom:32px;
+  max-width:500px;
 }
 .compete-list{
   list-style:decimal;
   padding-left:20px;
-  margin-bottom:32px;
+  margin-bottom:40px;
 }
 .compete-list li{
   font-size:16px;
@@ -557,8 +655,31 @@ body{
   padding:7px 40px;
   border-radius:20px;
   text-decoration:none;
-  margin-bottom:16px;
+  margin-bottom:0;
   transition:opacity 0.2s ease;
+}
+.compete-logos{
+  display:flex;
+  align-items:center;
+  gap:24px;
+  margin-top:32px;
+}
+.powered-by-fsp{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.powered-by-fsp span{
+  font-size:14px;
+  color:#666;
+}
+.powered-by-fsp img{
+  height:20px;
+  width:auto;
+}
+.apple-logo{
+  height:24px;
+  width:auto;
 }
 .compete-disclaimer{
   font-size:12px;
@@ -643,7 +764,7 @@ body{
 /* Redeem Your FSP Champion Points & Win Big Section */
 .redeem-win-big-section{
   background:#fff;
-  padding:80px 40px 100px;
+  padding:60px 40px 80px;
   position:relative;
 }
 .redeem-win-big-container{
@@ -652,35 +773,35 @@ body{
 }
 .redeem-win-big-header{
   text-align:center;
-  margin-bottom:60px;
-  padding-top:40px;
+  margin-bottom:40px;
+  padding-top:20px;
 }
 .redeem-win-big-title{
-  font-size:clamp(36px, 4vw, 56px);
+  font-size:clamp(28px, 3.5vw, 42px);
   font-weight:500;
-  line-height:1.1;
+  line-height:1.2;
   letter-spacing:-.025em;
   color:#000;
-  margin-bottom:20px;
+  margin-bottom:12px;
 }
 .redeem-win-big-subtitle{
-  font-size:clamp(20px, 2.5vw, 28px);
+  font-size:clamp(18px, 2vw, 24px);
   font-weight:400;
-  line-height:1.4;
+  line-height:1.3;
   letter-spacing:-.0145em;
   color:#4D4D4D;
   text-align:center;
-  margin-bottom:32px;
+  margin-bottom:12px;
   font-style:italic;
 }
 .redeem-win-big-body{
-  font-size:clamp(18px, 2vw, 22px);
+  font-size:clamp(16px, 1.8vw, 20px);
   font-weight:400;
-  line-height:1.7;
+  line-height:1.5;
   letter-spacing:-.017em;
   color:#000;
   max-width:900px;
-  margin:0 auto 48px;
+  margin:0 auto 32px;
   text-align:center;
 }
 .redeem-features{
@@ -998,7 +1119,7 @@ body{
 /* Spend to Earn Section */
 .spend-to-earn{
   background:#fff;
-  padding:40px 40px 100px;
+  padding:80px 40px 80px;
   position:relative;
 }
 .spend-container{
@@ -1020,6 +1141,22 @@ body{
   line-height:.94;
   letter-spacing:-.025em;
   color:#4D4D4D;
+  margin-bottom:16px;
+}
+.spend-subtitle{
+  font-size:24px;
+  font-weight:500;
+  line-height:1.2;
+  letter-spacing:-.02em;
+  color:#4D4D4D;
+  margin-bottom:8px;
+}
+.spend-subtitle-2{
+  font-size:20px;
+  font-weight:400;
+  line-height:1.3;
+  letter-spacing:-.017em;
+  color:#666;
   margin-bottom:24px;
 }
 .spend-subtitle-text{
@@ -1033,11 +1170,11 @@ body{
 .spend-desc{
   font-size:22px;
   font-weight:400;
-  line-height:1.13;
+  line-height:1.4;
   letter-spacing:-.017em;
   color:#4D4D4D;
   margin-bottom:32px;
-  max-width:457px;
+  max-width:600px;
 }
 .spend-features{
   margin-bottom:32px;
@@ -1096,6 +1233,46 @@ body{
   transition:opacity 0.2s ease;
 }
 .btn-view-tiers:hover{
+  opacity:0.9;
+}
+.btn-request-access{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:#0000FF;
+  color:#fff;
+  font-size:20px;
+  font-weight:400;
+  line-height:1.25;
+  letter-spacing:-0.019em;
+  padding:7px 40px;
+  border-radius:20px;
+  text-decoration:none;
+  text-align:center;
+  transition:opacity 0.2s ease;
+}
+.btn-request-access:hover{
+  opacity:0.9;
+}
+.btn-rewards-calculator{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:transparent;
+  color:#0000FF;
+  border:1px solid #0000FF;
+  font-size:20px;
+  font-weight:400;
+  line-height:1.25;
+  letter-spacing:-0.019em;
+  padding:7px 40px;
+  border-radius:20px;
+  text-decoration:none;
+  text-align:center;
+  transition:opacity 0.2s ease;
+  cursor:pointer;
+}
+.btn-rewards-calculator:hover{
   opacity:0.9;
 }
 .spend-cards{
@@ -1615,6 +1792,37 @@ body{
   margin-bottom:67px;
   gap:40px;
 }
+.calculator-header-right{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+.calculator-tier-toggle{
+  display:flex;
+  gap:8px;
+  background:rgba(255,255,255,0.1);
+  border-radius:12px;
+  padding:4px;
+}
+.tier-toggle-btn{
+  background:transparent;
+  border:none;
+  color:rgba(255,255,255,0.7);
+  font-size:16px;
+  font-weight:500;
+  padding:8px 20px;
+  border-radius:8px;
+  cursor:pointer;
+  transition:all 0.2s ease;
+}
+.tier-toggle-btn.active{
+  background:#fff;
+  color:#0000FF;
+}
+.tier-toggle-btn:hover:not(.active){
+  color:#fff;
+  background:rgba(255,255,255,0.1);
+}
 .calculator-title{
   font-size:48px;
   font-weight:500;
@@ -1627,10 +1835,8 @@ body{
 }
 .calculator-header-right{
   display:flex;
-  flex-direction:column;
-  align-items:flex-end;
+  align-items:center;
   gap:16px;
-  text-align:right;
 }
 .calculator-desc{
   font-size:22px;
@@ -1800,12 +2006,31 @@ body{
 .faq-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:24px;
+  gap:40px;
 }
 .faq-column{
   display:flex;
   flex-direction:column;
   gap:24px;
+}
+.btn-start-earning-passion{
+  background:#0000FF;
+  color:#fff;
+  font-size:20px;
+  font-weight:400;
+  line-height:1.25;
+  letter-spacing:-0.019em;
+  padding:7px 40px;
+  border-radius:20px;
+  text-decoration:none;
+  white-space:nowrap;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  transition:opacity 0.2s ease;
+}
+.btn-start-earning-passion:hover{
+  opacity:0.9;
 }
 .faq-item{
   position:relative;
@@ -2045,7 +2270,7 @@ body{
   .features-grid>.feature-card:first-child{border-top-left-radius:8px;border-bottom-left-radius:0}
   .features-grid>.feature-card:nth-child(3){border-top-right-radius:8px;border-bottom-right-radius:0}
   .features-grid>.feature-card:nth-child(4){border-top-left-radius:0;border-bottom-left-radius:8px}
-  .features-grid>.feature-card:nth-child(5){border-top-right-radius:0;border-bottom-right-radius:8px}
+  .features-grid>.feature-card:nth-child(6){border-top-right-radius:0;border-bottom-right-radius:8px}
 }
 @media (max-width: 960px){
   .hamburger-btn{display:flex;position:fixed;right:40px;top:32px;z-index:1001;width:44px;height:44px;padding:10px;justify-content:center;align-items:center;background:rgba(255,255,255,0.95);border:1px solid rgba(0,0,0,0.1);border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.15),0 0 0 1px rgba(0,0,0,0.05);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
@@ -2086,7 +2311,7 @@ body{
   .features-container{padding:0 24px}
   .features-grid>.feature-card{border-right:none}
   .features-grid>.feature-card:nth-child(2n){border-right:1px solid #E6E6E6}
-  .features-grid>.feature-card:nth-child(5){border-right:1px solid #E6E6E6}
+  .features-grid>.feature-card:nth-child(6){border-right:1px solid #E6E6E6}
   .compete-container{grid-template-columns:1fr;gap:60px}
   .compete-images{height:400px}
   .compete-phone-large{width:240px;height:473px}
@@ -2101,9 +2326,9 @@ body{
   .money-cards{grid-template-columns:1fr;gap:24px}
   .money-further{padding:30px 24px 80px}
   .spend-container{grid-template-columns:1fr;gap:60px}
-  .spend-to-earn{padding:40px 24px 80px}
+  .spend-to-earn{padding:80px 24px 80px}
   .spend-cta-container{flex-direction:column;gap:16px;width:100%}
-  .btn-explore-tiers,.btn-view-tiers{width:100%}
+  .btn-explore-tiers,.btn-view-tiers,.btn-request-access,.btn-rewards-calculator{width:100%}
   .credit-cards-image{width:520px;height:335px}
   .refer-steps{grid-template-columns:1fr;gap:24px}
   .refer-to-earn{padding:60px 24px 80px}
@@ -2170,8 +2395,8 @@ body{
     justify-content:center;
   }
   .deposit-steps{grid-template-columns:1fr;gap:40px}
-  .deposit-title{font-size:36px}
-  .deposit-subtitle{font-size:18px}
+  .deposit-title{font-size:28px}
+  .deposit-subtitle{font-size:16px}
   .deposit-header{flex-direction:column}
   .compete-title{font-size:36px}
   .compete-subtitle{font-size:18px}
@@ -2198,7 +2423,7 @@ body{
   .spend-desc{font-size:18px}
   .spend-content{padding-right:0}
   .spend-cta-container{flex-direction:column;gap:16px;width:100%}
-  .btn-explore-tiers,.btn-view-tiers{width:100%}
+  .btn-explore-tiers,.btn-view-tiers,.btn-request-access,.btn-rewards-calculator{width:100%}
   .credit-cards-image{width:100%;height:auto;max-width:400px}
   .refer-title{font-size:36px}
   .refer-subtitle{font-size:18px}
