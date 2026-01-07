@@ -5,109 +5,6 @@
     box-sizing: border-box;
 }
 
-/* FK Grotesk Neue Trial - All Weights and Styles */
-/* Thin */
-@font-face {
-    font-family: 'FK Grotesk Neue';
-    src: url('../fonts/FK Grotesk Neue Trial/FKGroteskNeueTrial-Thin.otf') format('opentype');
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'FK Grotesk Neue';
-    src: url('../fonts/FK Grotesk Neue Trial/FKGroteskNeueTrial-ThinItalic.otf') format('opentype');
-    font-weight: 100;
-    font-style: italic;
-    font-display: swap;
-}
-
-/* Light */
-@font-face {
-    font-family: 'FK Grotesk Neue';
-    src: url('../fonts/FK Grotesk Neue Trial/FKGroteskNeueTrial-Light.otf') format('opentype');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'FK Grotesk Neue';
-    src: url('../fonts/FK Grotesk Neue Trial/FKGroteskNeueTrial-LightItalic.otf') format('opentype');
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
-}
-
-/* Regular */
-@font-face {
-    font-family: 'FK Grotesk Neue';
-    src: url('../fonts/FK Grotesk Neue Trial/FKGroteskNeueTrial-Regular.otf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'FK Grotesk Neue';
-    src: url('../fonts/FK Grotesk Neue Trial/FKGroteskNeueTrial-Italic.otf') format('opentype');
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-}
-
-/* Medium */
-@font-face {
-    font-family: 'FK Grotesk Neue';
-    src: url('../fonts/FK Grotesk Neue Trial/FKGroteskNeueTrial-Medium.otf') format('opentype');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'FK Grotesk Neue';
-    src: url('../fonts/FK Grotesk Neue Trial/FKGroteskNeueTrial-MediumItalic.otf') format('opentype');
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-}
-
-/* Bold */
-@font-face {
-    font-family: 'FK Grotesk Neue';
-    src: url('../fonts/FK Grotesk Neue Trial/FKGroteskNeueTrial-Bold.otf') format('opentype');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'FK Grotesk Neue';
-    src: url('../fonts/FK Grotesk Neue Trial/FKGroteskNeueTrial-BoldItalic.otf') format('opentype');
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-}
-
-/* Black */
-@font-face {
-    font-family: 'FK Grotesk Neue';
-    src: url('../fonts/FK Grotesk Neue Trial/FKGroteskNeueTrial-Black.otf') format('opentype');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'FK Grotesk Neue';
-    src: url('../fonts/FK Grotesk Neue Trial/FKGroteskNeueTrial-BlackItalic.otf') format('opentype');
-    font-weight: 900;
-    font-style: italic;
-    font-display: swap;
-}
-
 /* Base Styles */
 html, body {
     height: 100%;
@@ -116,7 +13,7 @@ html, body {
 }
 
 body {
-    font-family: 'FK Grotesk Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #1a1a1a;
     color: #ffffff;
     overflow-x: hidden;
@@ -168,7 +65,7 @@ body {
 .nav-link {
     color: #ffffff;
     text-decoration: none;
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1;
@@ -198,7 +95,7 @@ body {
     border: none;
     border-radius: 0;
     padding: 8px 16px;
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1;
@@ -276,7 +173,7 @@ body {
 }
 
 .hero-title {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 500;
     font-size: 100px;
     line-height: 1;
@@ -287,7 +184,7 @@ body {
 }
 
 .hero-subtitle {
-    font-family: 'EB Garamond', serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 400;
     font-size: 24px;
     line-height: 1.2;
@@ -312,7 +209,7 @@ body {
 }
 
 .section-title {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 500;
     font-size: 60px;
     line-height: 1;
@@ -323,7 +220,7 @@ body {
 }
 
 .section-subtitle {
-    font-family: 'EB Garamond', serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 400;
     font-size: 24px;
     line-height: 1;
@@ -404,7 +301,7 @@ body {
 }
 
 .athlete-category {
-    font-family: 'EB Garamond', serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 400;
     font-style: italic;
     font-size: 16px;
@@ -413,7 +310,7 @@ body {
 }
 
 .athlete-name {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 700;
     font-size: 32px;
     text-transform: uppercase;
@@ -423,7 +320,7 @@ body {
 }
 
 .athlete-description {
-    font-family: 'EB Garamond', serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 400;
     font-size: 16px;
     color: #ffffff;
@@ -445,7 +342,7 @@ body {
 }
 
 .cta-title {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 500;
     font-size: 32px;
     text-transform: uppercase;
@@ -460,7 +357,7 @@ body {
     border: none;
     border-radius: 0;
     padding: 12px 40px;
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 500;
     font-size: 16px;
     text-transform: uppercase;
@@ -495,7 +392,7 @@ body {
 }
 
 .compete-title {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 500;
     font-size: 60px;
     line-height: 0.91em;
@@ -506,7 +403,7 @@ body {
 }
 
 .compete-subtitle {
-    font-family: 'EB Garamond', serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 400;
     font-size: 24px;
     line-height: 1.07em;
@@ -515,7 +412,7 @@ body {
 }
 
 .compete-description {
-    font-family: 'EB Garamond', serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 400;
     font-size: 24px;
     line-height: 1.07em;
@@ -524,7 +421,7 @@ body {
 }
 
 .compete-steps {
-    font-family: 'EB Garamond', serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 400;
     font-size: 24px;
     line-height: 1.07em;
@@ -545,7 +442,7 @@ body {
     padding: 7px 6px;
     width: 188px;
     height: 29px;
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 0.91em;
@@ -700,11 +597,11 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 
 .card-description {
-    font-family: 'EB Garamond', serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 400;
     font-size: 18px;
     color: #ffffff;
@@ -717,7 +614,7 @@ body {
     border: none;
     border-radius: 8px;
     padding: 12px 24px;
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 500;
     font-size: 14px;
     cursor: pointer;
@@ -727,6 +624,18 @@ body {
 
 .card-button:hover {
     background-color: #f0f0f0;
+}
+
+.card-button-wbb {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 0;
+    font-weight: 700;
+}
+
+.card-button-wbb:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Card Grid */
@@ -750,7 +659,7 @@ body {
     align-items: stretch;
     justify-content: flex-end;
     color: #ffffff;
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-size: 14px;
     overflow: hidden;
     height: 147px;
@@ -766,12 +675,76 @@ body {
     align-items: stretch;
     justify-content: flex-end;
     color: #ffffff;
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-size: 14px;
     overflow: hidden;
     height: 147px;
     position: relative;
     isolation: isolate;
+}
+
+/* Grid items with app store buttons or image placeholders should not have the image overlay */
+.grid-item:has(.app-store-buttons)::before,
+.grid-item:has(.grid-image-placeholder)::before {
+    display: none;
+}
+
+/* Download App Card Special Layout */
+.grid-item-download-app {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    border: 1px solid #ffffff;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.grid-item-download-app::before {
+    display: none;
+}
+
+.grid-item-download-app .grid-text-top {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    max-width: 100%;
+    margin-bottom: 20px;
+    z-index: 3;
+}
+
+.grid-item-download-app .grid-image-full {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.grid-item-download-app .grid-image-full .grid-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: bottom;
+    position: relative;
+    display: block;
+}
+
+.grid-item .app-store-buttons,
+.grid-item .grid-image-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.grid-item .grid-text {
+    z-index: 3;
 }
 
 .grid-image {
@@ -818,7 +791,7 @@ body {
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 700;
     font-size: 24px;
     color: #ffffff;
@@ -839,11 +812,145 @@ body {
     line-height: 1;
 }
 
+/* Best Bowler Card Styles */
+.best-bowler-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+}
+
+.best-bowler-f {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    color: #ffffff;
+    line-height: 1;
+}
+
+.best-bowler-title {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    text-transform: none;
+}
+
+/* WPS Logo Styles */
+.wps-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5px;
+}
+
+.wps-logo-text {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    color: #ffffff;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.wps-logo-subtext {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #ffffff;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.grid-text-title {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+.grid-item.merged-row .grid-text-title {
+    font-size: 32px;
+}
+
+.grid-text-subtitle {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #ffffff;
+    text-transform: uppercase;
+    opacity: 0.9;
+    line-height: 1.2;
+}
+
+.grid-image-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 147px;
+    position: relative;
+    z-index: 1;
+}
+
+.grid-item.merged-row .grid-image-placeholder {
+    min-height: 200px;
+}
+
+.app-store-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.app-store-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.3;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 180px;
+}
+
+.app-store-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.app-store-text {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
 /* Section 6 - Our Sporting Philosophy */
 .section-6-philosophy {
     width: 100%;
     min-height: 100vh;
-    background-image: url('../images/section6background.jpg');
+    background-image: url('../images/section7background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -872,7 +979,7 @@ body {
 }
 
 .philosophy-title {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 500;
     font-size: 60px;
     line-height: 1.1;
@@ -883,7 +990,7 @@ body {
 }
 
 .philosophy-text {
-    font-family: 'EB Garamond', serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 400;
     font-style: italic;
     font-size: 24px;
@@ -930,7 +1037,7 @@ body {
 }
 
 .panel-title {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 500;
     font-size: 24px;
     line-height: 1.2;
@@ -941,7 +1048,7 @@ body {
 }
 
 .panel-description {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.5;
@@ -1044,7 +1151,7 @@ body {
 }
 
 .ffs-question {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 700;
     font-size: 42px;
     line-height: 1.2;
@@ -1053,7 +1160,7 @@ body {
 }
 
 .ffs-description {
-    font-family: 'EB Garamond', serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 400;
     font-size: 28px;
     line-height: 1;
@@ -1069,7 +1176,7 @@ body {
 }
 
 .ffs-acronym {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 700;
     font-size: 72px;
     line-height: 1;
@@ -1093,7 +1200,7 @@ body {
 }
 
 .ffs-full-name {
-    font-family: 'EB Garamond', serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 400;
     font-size: 24px;
     line-height: 1;
@@ -1162,7 +1269,7 @@ body {
 }
 
 .last-section-title {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 500;
     font-size: 60px;
     line-height: 1;
@@ -1177,7 +1284,7 @@ body {
 }
 
 .last-section-subtitle {
-    font-family: 'EB Garamond', serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 400;
     font-size: 24px;
     line-height: 1;
@@ -1191,17 +1298,84 @@ body {
     grid-template-columns: repeat(6, 1fr);
     gap: 30px;
     width: 100%;
+    grid-auto-rows: 1fr;
 }
 
 .last-section-card {
-    background-color: rgba(25, 18, 18, 0.792);
-
-    padding: 40px;
-    min-height: 200px;
+    background-color: rgba(255, 255, 255, 0.514);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(2px);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: stretch;
+    overflow: hidden;
     color: #ffffff;
+  
+    min-height: 180px;
+}
+
+.last-section-card-image {
+    width: 40%;
+    flex-shrink: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.last-section-card-image .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.last-section-card-content {
+    width: 60%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.last-section-card-title {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #000000;
+    margin: 0 0 15px 0;
+    letter-spacing: -0.01em;
+}
+
+.last-section-card-description {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000000;
+    margin: 0;
+}
+
+.last-section-cta {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.last-section-button {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 40px;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.last-section-button:hover {
+    background-color: #333333;
 }
 
 .last-section-card.card-row1 {
@@ -1234,6 +1408,29 @@ body {
     .last-section-card.card-row1,
     .last-section-card.card-row2 {
         grid-column: span 1;
+        flex-direction: column;
+    }
+
+    .last-section-card-image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .last-section-card-content {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .last-section-card-title {
+        font-size: 20px;
+    }
+
+    .last-section-card-description {
+        font-size: 14px;
+    }
+
+    .last-section-cta {
+        margin-top: 40px;
     }
 }
 
@@ -1253,7 +1450,7 @@ body {
 }
 
 .footer-title {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 700;
     font-size: 48px;
     line-height: 1;
@@ -1276,7 +1473,7 @@ body {
 }
 
 .footer-link {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 400;
     font-size: 16px;
     color: #ffffff;
@@ -1289,7 +1486,7 @@ body {
 }
 
 .footer-separator {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 400;
     font-size: 16px;
     color: #ffffff;
@@ -1309,7 +1506,7 @@ body {
 }
 
 .footer-label {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 400;
     font-size: 12px;
     text-transform: uppercase;
@@ -1318,7 +1515,7 @@ body {
 }
 
 .footer-phone {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 400;
     font-size: 20px;
     color: #ffffff;
@@ -1326,21 +1523,21 @@ body {
 }
 
 .footer-email {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 400;
     font-size: 16px;
     color: #ffffff;
 }
 
 .footer-address-text {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 400;
     font-size: 16px;
     color: #ffffff;
 }
 
 .footer-copyright {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 400;
     font-size: 12px;
     color: #999999;
@@ -1427,13 +1624,38 @@ body {
 .worlds-best-hero {
     width: 100%;
     min-height: 100vh;
-    background-image: url('../images/section6background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: #0000FF;
     position: relative;
     padding: 0;
     overflow: hidden;
+}
+
+.worlds-best-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.worlds-best-background-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity:1;
+    z-index: 0;
+}
+
+.worlds-best-texture {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    mix-blend-mode: lighten;
+    z-index: 1;
 }
 
 .worlds-best-container {
@@ -1444,6 +1666,8 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
+    position: relative;
+    z-index: 2;
 }
 
 .worlds-best-content {
@@ -1453,7 +1677,7 @@ body {
 }
 
 .worlds-best-title {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 700;
     font-size: 80px;
     line-height: 1;
@@ -1463,8 +1687,12 @@ body {
     letter-spacing: -0.02em;
 }
 
+.worlds-best-title-line {
+    display: block;
+}
+
 .worlds-best-subtitle {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 400;
     font-size: 20px;
     line-height: 1.5;
@@ -1485,7 +1713,7 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 400;
     font-size: 18px;
     color: #ffffff;
@@ -1506,39 +1734,39 @@ body {
 }
 
 .btn-get-started-hero {
-    background-color: #000000;
-    color: #ffffff;
-    border: none;
-    border-radius: 0;
+    background-color: #ffffff;
+    color: #0000FF;
+    border: 1px solid #0000FF;
+    border-radius: 8px;
     padding: 12px 32px;
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 500;
     font-size: 16px;
     text-transform: uppercase;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .btn-get-started-hero:hover {
-    background-color: #333333;
+    background-color: #f0f0f0;
 }
 
 .btn-download-app-hero {
-    background-color: #000000;
+    background-color: transparent;
     color: #ffffff;
-    border: none;
-    border-radius: 0;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
     padding: 12px 32px;
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 500;
     font-size: 16px;
     text-transform: uppercase;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .btn-download-app-hero:hover {
-    background-color: #333333;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .btn-download-app {
@@ -1547,7 +1775,7 @@ body {
     border: none;
     border-radius: 0;
     padding: 8px 16px;
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1;
@@ -1566,13 +1794,19 @@ body {
     flex-wrap: wrap;
 }
 
+.app-store-badges-image {
+    max-width: 70%;
+    height: auto;
+    display: block;
+}
+
 .app-badge {
     display: flex;
     align-items: center;
     gap: 10px;
     text-decoration: none;
     color: #ffffff;
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.3;
@@ -1666,7 +1900,7 @@ body {
     border: none;
     border-radius: 25px;
     padding: 8px 20px;
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 500;
     font-size: 14px;
     text-transform: uppercase;
@@ -1675,7 +1909,7 @@ body {
 }
 
 .carousel-title {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 700;
     font-size: 60px;
     line-height: 1.1;
@@ -1685,7 +1919,7 @@ body {
 }
 
 .carousel-description {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.5;
@@ -1806,7 +2040,7 @@ body {
     border: none;
     border-radius: 8px;
     padding: 12px 40px;
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 500;
     font-size: 16px;
     text-transform: uppercase;
@@ -1911,7 +2145,7 @@ body {
 }
 
 .bowler-category {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 300;
     font-size: 20px;
     line-height: 1;
@@ -1922,7 +2156,7 @@ body {
 }
 
 .bowler-title {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 500;
     font-size: 60px;
     line-height: 1;
@@ -1937,7 +2171,7 @@ body {
 }
 
 .bowler-description {
-    font-family: 'EB Garamond', serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 400;
     font-size: 20px;
     line-height: 1.6;
@@ -1958,7 +2192,7 @@ body {
     border: 1px solid #ffffff;
 
     padding: 12px 32px;
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 500;
     font-size: 16px;
     cursor: pointer;
@@ -2063,7 +2297,7 @@ body {
 }
 
 .squash-category {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 300;
     font-size: 20px;
     line-height: 1;
@@ -2074,7 +2308,7 @@ body {
 }
 
 .squash-title {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 500;
     font-size: 60px;
     line-height: 1;
@@ -2089,7 +2323,7 @@ body {
 }
 
 .squash-description {
-    font-family: 'EB Garamond', serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 400;
     font-size: 20px;
     line-height: 1.6;
@@ -2109,7 +2343,7 @@ body {
     color: #ffffff;
     border: 1px solid #ffffff;
     padding: 12px 32px;
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 500;
     font-size: 16px;
     cursor: pointer;
@@ -2214,7 +2448,7 @@ body {
 }
 
 .cricket-category {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 300;
     font-size: 20px;
     line-height: 1;
@@ -2225,7 +2459,7 @@ body {
 }
 
 .cricket-title {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 500;
     font-size: 60px;
     line-height: 1;
@@ -2240,7 +2474,7 @@ body {
 }
 
 .cricket-description {
-    font-family: 'EB Garamond', serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 400;
     font-size: 20px;
     line-height: 1.6;
@@ -2260,7 +2494,7 @@ body {
     color: #ffffff;
     border: 1px solid #ffffff;
     padding: 12px 32px;
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 500;
     font-size: 16px;
     cursor: pointer;
@@ -2365,7 +2599,7 @@ body {
 }
 
 .club-category {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 300;
     font-size: 20px;
     line-height: 1;
@@ -2376,7 +2610,7 @@ body {
 }
 
 .club-title {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 500;
     font-size: 60px;
     line-height: 1;
@@ -2401,7 +2635,7 @@ body {
     color: #ffffff;
     border: 1px solid #ffffff;
     padding: 12px 32px;
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 500;
     font-size: 16px;
     cursor: pointer;
@@ -2457,7 +2691,7 @@ body {
 /* Redeem Your FSP Champion Points & Win Big Section */
 .redeem-win-big-section {
     background: #fff;
-    padding: 80px 40px 100px;
+    padding: 60px 40px 80px;
     position: relative;
 }
 
@@ -2468,51 +2702,61 @@ body {
 
 .redeem-win-big-header {
     text-align: center;
-    margin-bottom: 34px;
+    margin-bottom: 40px;
+    padding-top: 20px;
 }
 
 .redeem-win-big-title {
-    font-family: 'FK Grotesk Neue', sans-serif;
-    font-size: 48px;
+    font-size: clamp(28px, 3.5vw, 42px);
     font-weight: 500;
-    line-height: 0.9375;
+    line-height: 1.2;
     letter-spacing: -0.025em;
-    color: #4D4D4D;
-    text-transform: capitalize;
+    color: #000;
     margin-bottom: 12px;
 }
 
 .redeem-win-big-subtitle {
-    font-family: 'EB Garamond', serif;
-    font-size: 22px;
+    font-size: clamp(18px, 2vw, 24px);
     font-weight: 400;
-    line-height: 1.136;
+    line-height: 1.3;
     letter-spacing: -0.0145em;
     color: #4D4D4D;
+    text-align: center;
+    margin-bottom: 12px;
+    font-style: italic;
+}
+
+.redeem-win-big-body {
+    font-size: clamp(16px, 1.8vw, 20px);
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.017em;
+    color: #000;
+    max-width: 900px;
+    margin: 0 auto 32px;
     text-align: center;
 }
 
 .redeem-win-big-grid {
     display: flex;
     flex-direction: column;
-    gap: 0;
+    gap: 24px;
     margin-bottom: 0;
 }
 
 .redeem-grid-row {
     display: grid;
-    gap: 43px;
+    gap: 24px;
     margin-bottom: 0;
 }
 
 .redeem-grid-row:first-child {
-    grid-template-columns: 632px 632px;
+    grid-template-columns: repeat(2, 1fr);
     margin-bottom: 0;
 }
 
 .redeem-grid-row:last-child {
-    grid-template-columns: 413px 413px 413px;
-    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
     margin-top: 0;
 }
 
@@ -2523,15 +2767,14 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .redeem-grid-row:first-child .redeem-card-item {
-    width: 632px;
     height: 498px;
 }
 
 .redeem-grid-row:last-child .redeem-card-item {
-    width: 413px;
     height: 325px;
 }
 
@@ -2572,7 +2815,7 @@ body {
 }
 
 .redeem-card-text {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: "Archivo", system-ui, -apple-system, sans-serif;
     font-size: 24px;
     font-weight: 700;
     line-height: 0.9;
@@ -2588,12 +2831,11 @@ body {
 .btn-join-now {
     background: #fff;
     color: #0000FF;
-    font-family: 'FK Grotesk Neue', sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
-    line-height: 1.56;
-    letter-spacing: -0.024em;
-    padding: 7px 19px;
+    line-height: 1.25;
+    letter-spacing: -0.019em;
+    padding: 7px 40px;
     border-radius: 20px;
     text-decoration: none;
     white-space: nowrap;
@@ -2606,9 +2848,8 @@ body {
 
 .redeem-win-big-bottom {
     display: grid;
-    grid-template-columns: 897px 413px;
-    gap: 0;
-    margin-top: 3px;
+    grid-template-columns: 1fr 413px;
+    margin-top: 24px;
     border-radius: 20px;
     overflow: hidden;
 }
@@ -2638,7 +2879,7 @@ body {
 }
 
 .redeem-bottom-text {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-size: 20px;
     font-weight: 700;
     line-height: 0.9;
@@ -2655,77 +2896,76 @@ body {
 }
 
 /* Responsive for Redeem Section */
-@media (max-width: 1400px) {
-    .redeem-grid-row:first-child {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .redeem-grid-row:first-child .redeem-card-item {
-        width: 100%;
-    }
-
+@media (max-width: 1200px) {
     .redeem-grid-row:last-child {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
-
-    .redeem-grid-row:last-child .redeem-card-item {
-        width: 100%;
-    }
-
-    .redeem-win-big-bottom {
-        grid-template-columns: 1fr 1fr;
+    .redeem-grid-row:last-child .redeem-card-item:last-child {
+        grid-column: 1 / -1;
+        max-width: 413px;
+        margin: 0 auto;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
     .redeem-win-big-section {
-        padding: 60px 20px 80px;
+        padding: 60px 24px 80px;
     }
-
-    .redeem-win-big-title {
-        font-size: 32px;
+    .redeem-grid-row:first-child {
+        grid-template-columns: 1fr;
+        gap: 24px;
     }
-
-    .redeem-win-big-subtitle {
-        font-size: 18px;
-    }
-
-    .redeem-grid-row:first-child,
     .redeem-grid-row:last-child {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 24px;
     }
-
-    .redeem-grid-row:first-child .redeem-card-item,
-    .redeem-grid-row:last-child .redeem-card-item {
+    .redeem-grid-row:first-child .redeem-card-item {
         width: 100%;
+        max-width: 632px;
+        margin: 0 auto;
         height: auto;
     }
-
-    .redeem-card-image {
-        height: 250px !important;
+    .redeem-grid-row:last-child .redeem-card-item {
+        width: 100%;
+        max-width: 413px;
+        margin: 0 auto;
+        height: auto;
     }
-
-    .redeem-card-footer {
-        min-height: auto !important;
-        padding: 16px;
+    .redeem-grid-row:first-child .redeem-card-image {
+        height: auto;
+        min-height: 250px;
     }
-
-    .redeem-card-text {
-        font-size: 18px !important;
+    .redeem-grid-row:last-child .redeem-card-image {
+        height: auto;
+        min-height: 200px;
     }
 
     .redeem-win-big-bottom {
         grid-template-columns: 1fr;
-    }
-
-    .redeem-bottom-cta {
-        height: auto;
-        padding: 40px 24px;
     }
 
     .redeem-bottom-cta .btn-join-now {
         width: 100%;
+        max-width: 373px;
+    }
+}
+
+@media (max-width: 480px) {
+    .redeem-win-big-section {
+        padding: 40px 16px 60px;
+    }
+    .redeem-win-big-header {
+        margin-bottom: 32px;
+        padding-top: 20px;
+    }
+    .redeem-card-text {
+        font-size: 20px;
+    }
+    .redeem-grid-row:last-child .redeem-card-text {
+        font-size: 18px;
+    }
+    .redeem-bottom-text {
+        font-size: 18px;
     }
 }
 
@@ -2744,7 +2984,7 @@ body {
 }
 
 .passion-points-title {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-size: 48px;
     font-weight: 500;
     line-height: 0.9375;
@@ -2755,7 +2995,7 @@ body {
 }
 
 .passion-points-subtitle {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-size: 20px;
     font-weight: 500;
     line-height: 1.15;
@@ -2764,7 +3004,7 @@ body {
 }
 
 .passion-points-desc {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.3;
@@ -2780,7 +3020,7 @@ body {
     justify-content: center;
     background: #fff;
     color: #0000FF;
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.56;
@@ -2817,7 +3057,7 @@ body {
 }
 
 .partners-title {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-size: 20px;
     font-weight: 400;
     line-height: 1.15;
@@ -2916,16 +3156,17 @@ body {
 /* Big Prizes & Daily Wins Section */
 .big-prizes-section {
     background: #fff;
-    padding: 80px 20px;
+    padding: 40px 0 80px 0;
 }
 
 .big-prizes-container {
-    max-width: 1280px;
+    max-width: 100%;
     margin: 0 auto;
+    padding: 0;
 }
 
 .big-prizes-title {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-size: 60px;
     font-weight: 700;
     line-height: 1.1;
@@ -2933,118 +3174,44 @@ body {
     color: #000000;
     text-transform: uppercase;
     margin-bottom: 50px;
+    padding: 0 20px;
 }
 
-.big-prizes-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
+.big-prizes-ticker-wrapper {
+    overflow: hidden;
     margin-bottom: 40px;
+    position: relative;
+    width: 100%;
+    padding: 0;
+}
+
+.big-prizes-ticker {
+    display: flex;
+    gap: 20px;
+    animation: scroll-ticker 30s linear infinite;
+    width: fit-content;
+}
+
+@keyframes scroll-ticker {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-50% - 10px));
+    }
 }
 
 .prize-card {
     position: relative;
- 
+    border-radius: 20px;
     overflow: hidden;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    align-items: flex-end;
+    justify-content: flex-start;
     padding: 40px;
     min-height: 300px;
-}
-
-.prize-card-merged {
-    grid-column: span 2;
-}
-
-.big-prizes-grid .prize-card:nth-child(1) {
-    grid-column: 1 / 3;
-    grid-row: 1;
-}
-
-.big-prizes-grid .prize-card:nth-child(2) {
-    grid-column: 3;
-    grid-row: 1;
-    background: #0000FF;
-    padding: 0;
-}
-
-.big-prizes-grid .prize-card:nth-child(2) .prize-card-overlay {
-    display: none;
-}
-
-.big-prizes-grid .prize-card:nth-child(2) .prize-card-image {
-    position: absolute;
-    bottom: 0;
-    right: 20px;
-    width: auto;
-    height: auto;
-    max-width: 60%;
-    max-height: 60%;
-    object-fit: contain;
-    object-position: bottom right;
-    z-index: 1;
-    margin: 0;
-    padding: 0;
-    top: auto;
-    left: auto;
-}
-
-.big-prizes-grid .prize-card:nth-child(2) .prize-card-content {
-    position: relative;
-    z-index: 2;
-    align-self: flex-start;
-    width: 100%;
-    max-width: 100%;
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: auto;
-}
-
-.big-prizes-grid .prize-card:nth-child(3) {
-    grid-column: 1;
-    grid-row: 2;
-    background: #0000FF;
-    padding: 0;
-}
-
-.big-prizes-grid .prize-card:nth-child(3) .prize-card-overlay {
-    display: none;
-}
-
-.big-prizes-grid .prize-card:nth-child(3) .prize-card-image {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    width: auto;
-    height: auto;
-    max-width: 40%;
-    max-height: 40%;
-    object-fit: contain;
-    object-position: bottom right;
-    z-index: 1;
-    margin: 0;
-    padding: 0;
-    top: auto;
-    left: auto;
-}
-
-.big-prizes-grid .prize-card:nth-child(3) .prize-card-content {
-    position: relative;
-    z-index: 2;
-    align-self: flex-start;
-    width: 100%;
-    max-width: 100%;
-    text-align: left;
-    margin-top: 0;
-    margin-bottom: auto;
-    padding: 20px;
-}
-
-.big-prizes-grid .prize-card:nth-child(4) {
-    grid-column: 2 / 4;
-    grid-row: 2;
+    flex-shrink: 0;
+    width: 400px;
 }
 
 .prize-card-image {
@@ -3063,7 +3230,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to left, rgba(0, 0, 255, 1) 0%, rgba(0, 0, 255, 1) 40%, rgba(0, 0, 255, 0) 60%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%);
     z-index: 2;
 }
 
@@ -3071,12 +3238,13 @@ body {
     position: relative;
     z-index: 3;
     color: #ffffff;
-    text-align: right;
-    max-width: 50%;
+    text-align: left;
+    width: 100%;
+    padding-bottom: 0;
 }
 
 .prize-card-title {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-size: 36px;
     font-weight: 700;
     line-height: 1.1;
@@ -3085,7 +3253,7 @@ body {
 }
 
 .prize-card-subtitle {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-size: 20px;
     font-weight: 400;
     line-height: 1.2;
@@ -3095,13 +3263,14 @@ body {
 
 .big-prizes-cta {
     text-align: center;
+    padding: 0 20px;
 }
 
 .btn-download-app-prizes {
     display: inline-block;
     background: #0000FF;
     color: #ffffff;
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-size: 18px;
     font-weight: 500;
     padding: 15px 40px;
@@ -3116,15 +3285,17 @@ body {
 
 /* Responsive for Big Prizes Section */
 @media (max-width: 1024px) {
-    .big-prizes-grid {
-        grid-template-columns: 1fr 1fr;
+    .prize-card {
+        width: 350px;
     }
-
-    .big-prizes-grid .prize-card:nth-child(1),
-    .big-prizes-grid .prize-card:nth-child(2),
-    .big-prizes-grid .prize-card:nth-child(3),
-    .big-prizes-grid .prize-card:nth-child(4) {
-        grid-column: span 1;
+    
+    @keyframes scroll-ticker {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-50% - 10px));
+        }
     }
 
     .prize-card-title {
@@ -3138,7 +3309,7 @@ body {
 
 @media (max-width: 768px) {
     .big-prizes-section {
-        padding: 60px 20px;
+        padding: 60px 0;
     }
 
     .big-prizes-title {
@@ -3146,21 +3317,19 @@ body {
         margin-bottom: 30px;
     }
 
-    .big-prizes-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .big-prizes-grid .prize-card:nth-child(1),
-    .big-prizes-grid .prize-card:nth-child(2),
-    .big-prizes-grid .prize-card:nth-child(3),
-    .big-prizes-grid .prize-card:nth-child(4) {
-        grid-column: 1;
-    }
-
     .prize-card {
+        width: 320px;
         padding: 30px;
-        min-height: 250px !important;
+        min-height: 250px;
+    }
+    
+    @keyframes scroll-ticker {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-50% - 10px));
+        }
     }
 
     .prize-card-title {
@@ -3174,6 +3343,21 @@ body {
     .btn-download-app-prizes {
         width: 100%;
         padding: 15px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .prize-card {
+        width: 300px;
+    }
+    
+    @keyframes scroll-ticker {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-50% - 10px));
+        }
     }
 }
 
@@ -3216,7 +3400,7 @@ body {
 }
 
 .golden-tickets-title {
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-size: 60px;
     font-weight: 700;
     line-height: 1.1;
@@ -3227,7 +3411,7 @@ body {
 }
 
 .golden-tickets-description {
-    font-family: 'EB Garamond', serif;
+    font-family: 'Archivo', sans-serif;
     font-size: 20px;
     font-weight: 400;
     line-height: 1.5;
@@ -3256,7 +3440,7 @@ body {
     background: #0000FF;
     color: #ffffff;
     border: 1px solid #ffffff;
-    font-family: 'FK Grotesk Neue', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-size: 16px;
     font-weight: 500;
     padding: 12px 32px;

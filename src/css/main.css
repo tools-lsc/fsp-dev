@@ -909,7 +909,7 @@ body{
   min-height:107px;
 }
 .redeem-card-text{
-  font-family:"Bricolage Grotesque",system-ui,-apple-system,sans-serif;
+  font-family:"Archivo",system-ui,-apple-system,sans-serif;
   font-size:24px;
   font-weight:700;
   line-height:.9;
@@ -966,7 +966,7 @@ body{
   height:224px;
 }
 .redeem-bottom-text{
-  font-family:"Bricolage Grotesque",system-ui,-apple-system,sans-serif;
+  font-family:"Archivo",system-ui,-apple-system,sans-serif;
   font-size:20px;
   font-weight:700;
   line-height:.9;
@@ -2271,6 +2271,8 @@ body{
   .features-grid>.feature-card:nth-child(3){border-top-right-radius:8px;border-bottom-right-radius:0}
   .features-grid>.feature-card:nth-child(4){border-top-left-radius:0;border-bottom-left-radius:8px}
   .features-grid>.feature-card:nth-child(6){border-top-right-radius:0;border-bottom-right-radius:8px}
+  .redeem-grid-row:last-child{grid-template-columns:repeat(2, 1fr)}
+  .redeem-grid-row:last-child .redeem-card-item:last-child{grid-column:1 / -1;max-width:413px;margin:0 auto}
 }
 @media (max-width: 960px){
   .hamburger-btn{display:flex;position:fixed;right:40px;top:32px;z-index:1001;width:44px;height:44px;padding:10px;justify-content:center;align-items:center;background:rgba(255,255,255,0.95);border:1px solid rgba(0,0,0,0.1);border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.15),0 0 0 1px rgba(0,0,0,0.05);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
@@ -2319,8 +2321,10 @@ body{
   .redeem-win-big-section{padding:60px 24px 80px}
   .redeem-grid-row:first-child{grid-template-columns:1fr;gap:24px}
   .redeem-grid-row:last-child{grid-template-columns:1fr;gap:24px}
-  .redeem-grid-row:first-child .redeem-card-item{width:100%;max-width:632px;margin:0 auto}
-  .redeem-grid-row:last-child .redeem-card-item{width:100%;max-width:413px;margin:0 auto}
+  .redeem-grid-row:first-child .redeem-card-item{width:100%;max-width:632px;margin:0 auto;height:auto}
+  .redeem-grid-row:last-child .redeem-card-item{width:100%;max-width:413px;margin:0 auto;height:auto}
+  .redeem-grid-row:first-child .redeem-card-image{height:auto;min-height:250px}
+  .redeem-grid-row:last-child .redeem-card-image{height:auto;min-height:200px}
   .redeem-win-big-bottom{grid-template-columns:1fr}
   .redeem-bottom-cta .btn-join-now{width:100%;max-width:373px}
   .money-cards{grid-template-columns:1fr;gap:24px}
