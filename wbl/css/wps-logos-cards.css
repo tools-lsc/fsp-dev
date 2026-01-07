@@ -1,0 +1,74 @@
+/* WPS Logo Cards Styling */
+#wps-content .b-m-tech {
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+#wps-content .b-m-tech-thre-bx {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+#wps-content .bx-3-bm {
+  background: #0000FF;
+  border-radius: 12px;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  max-width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#wps-content .bx-3-bm:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 255, 0.3);
+}
+
+/* First logo - Blue background */
+#wps-content .bx-3-bm:first-child {
+  background: #0000FF;
+}
+
+/* Second logo - White background with blue outline */
+#wps-content .bx-3-bm.bx-3-bm-2 {
+  background: #FFFFFF;
+  border: 2px solid #0000FF;
+}
+
+/* Third logo - Blue background */
+#wps-content .bx-3-bm.bx-3-bm-3 {
+  background: #0000FF;
+}
+
+#wps-content .bx-3-bm img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  max-height: 80px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #wps-content .b-m-tech-thre-bx {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  #wps-content .bx-3-bm {
+    flex: 1 1 calc(33.333% - 15px);
+    min-width: 150px;
+    max-width: none;
+    padding: 15px 20px;
+  }
+
+  #wps-content .bx-3-bm img {
+    max-height: 60px;
+  }
+}

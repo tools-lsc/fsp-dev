@@ -1,0 +1,114 @@
+/* WBL Updates Infinite Ticker */
+.wbl-updates-ticker {
+  padding: 60px 0;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.wbl-updates-header {
+  padding: 0 5%;
+  margin-bottom: 40px;
+}
+
+.wbl-updates-header h2 {
+  font-family: "Barlow", sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: #ff6b35;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.wbl-ticker-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.wbl-ticker-track {
+  display: flex;
+  gap: 22px;
+  animation: wbl-ticker-scroll 30s linear infinite;
+  will-change: transform;
+}
+
+.wbl-ticker-card {
+  position: relative;
+  flex-shrink: 0;
+  width: 350px;
+  height: 420px;
+  overflow: hidden;
+ 
+}
+
+.wbl-ticker-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.wbl-card-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  font-family: "Barlow", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1.3;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  max-width: 90%;
+}
+
+@keyframes wbl-ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause animation on hover */
+.wbl-ticker-container:hover .wbl-ticker-track {
+  animation-play-state: paused;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .wbl-updates-header {
+    padding: 0 20px;
+    margin-bottom: 30px;
+  }
+
+  .wbl-updates-header h2 {
+    font-size: 32px;
+  }
+
+  .wbl-ticker-card {
+    width: 300px;
+    height: 225px;
+  }
+
+  .wbl-card-text {
+    font-size: 18px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wbl-ticker-card {
+    width: 280px;
+    height: 210px;
+  }
+
+  .wbl-card-text {
+    font-size: 16px;
+    padding: 12px;
+  }
+}

@@ -1,0 +1,268 @@
+*,
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.brand-color-text {
+  background: linear-gradient(269deg, #ffa400 11.72%, #e97200 99.27%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heading h2 {
+  color: #fff;
+  font-feature-settings: "liga" off;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 90px;
+  letter-spacing: -3.2px;
+  text-transform: uppercase;
+}
+
+.desc p {
+  color: #fff;
+  font-feature-settings: "liga" off;
+  font-family: "Tomorrow", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.16px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 12px 20px;
+  text-transform: uppercase;
+  font-family: NoirPro-Bold;
+}
+
+.ranking-section {
+  width: 100%;
+  height: 100%;
+  background: url("../assets/images/wbl-ranking-bg.webp") center center/cover
+    no-repeat;
+  padding: 5rem 0;
+}
+
+.ranking-section .custom-container {
+  width: 100vw;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ranking-section .ranking-logo {
+  margin-bottom: 4rem;
+}
+
+.ranking-section .ranking-logo img {
+  width: 171px;
+  height: auto;
+}
+
+.ranking-section .content-main {
+  margin-bottom: 5rem;
+}
+
+.ranking-section .content .text-bg {
+  color: #fff;
+  text-align: center;
+  font-feature-settings: "liga" off;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  text-transform: uppercase;
+  padding: 0.3rem 3rem;
+  background: linear-gradient(269deg, #ffa400 11.72%, #e97200 99.27%);
+}
+
+.ranking-section .content-main .desc p {
+  margin-top: 1rem;
+  width: 40%;
+}
+
+.ranking-section .banner {
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(27px);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.ranking-section .banner .text-bold {
+  font-feature-settings: "liga" off;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: -1.76px;
+  text-transform: uppercase;
+}
+
+.ranking-section .banner .desc p {
+  margin: 0;
+}
+
+.porfolio-section {
+  background-color: #f7f7f7;
+  padding: 50px 0;
+}
+
+.porfolio-section .custom-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.porfolio-section .content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.porfolio-section .heading {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.porfolio-section .image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  width: 100vw;
+  gap: 1rem;
+}
+
+.porfolio-section img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  object-fit: cover;
+}
+
+.porfolio-section .single-img {
+  position: relative;
+  flex: 2;
+}
+
+.porfolio-section .single-img,
+.porfolio-section .double-img > div {
+  height: 260px;
+}
+
+.porfolio-section .double-img {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 2;
+  gap: 1rem;
+}
+
+.porfolio-section .double-img > div {
+  position: relative;
+  flex: 1;
+}
+
+@media screen and (max-width: 992px) {
+  .heading h2 {
+    font-size: 65px;
+    letter-spacing: -2.2px;
+    line-height: 70px;
+  }
+
+  .ranking-section .banner {
+    flex-direction: column !important;
+    gap: 1.5rem;
+  }
+
+  .ranking-section .content-main .desc p {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heading h2 {
+    font-size: 55px;
+    letter-spacing: -1.2px;
+    line-height: 60px;
+  }
+
+  .ranking-section .content .text-bg {
+    font-size: 20px;
+    padding: 0.3rem 1rem;
+  }
+
+  .ranking-section .content-main .desc p {
+    width: 80%;
+  }
+
+  .ranking-section .banner .text-bold {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .ranking-section .content-main .desc p {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .ranking-section .banner .text-bold {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .heading h2 {
+    font-size: 45px;
+    letter-spacing: -0.2px;
+    line-height: 50px;
+  }
+
+  .ranking-section .content .text-bg {
+    font-size: 16px;
+    display: block;
+  }
+}
+
+@media (min-width: 0px) {
+  .custom-container {
+    padding: 0 0.6rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .custom-container {
+    padding: 0 2.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .custom-container {
+    padding: 0 5rem;
+  }
+}

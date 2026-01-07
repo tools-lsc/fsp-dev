@@ -14,6 +14,19 @@
   <link rel="stylesheet" href="./src/css/business.css">
   <link rel="stylesheet" href="./src/css/games.css">
   <link rel="stylesheet" href="./fsp-games/css/style.css">
+  <!-- WBL CSS Files -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./wbl/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./wbl/css/style.css">
+  <link rel="stylesheet" href="./wbl/css/style-new.css">
+  <link rel="stylesheet" href="./wbl/css/responsive.css">
+  <link rel="stylesheet" href="./wbl/css/navbar-left.css">
+  <link rel="stylesheet" href="./wbl/css/navbar-left-responsive.css">
+  <link rel="stylesheet" href="./wbl/css/wbl-light-theme.css">
+  <link rel="stylesheet" href="./wbl/css/wbl-hero-images.css">
+  <link rel="stylesheet" href="./wbl/css/wbl-updates-ticker.css">
+  <link rel="stylesheet" href="./wbl/css/wps-logos-cards.css">
 </head>
 <body>
   <header class="site-header">
@@ -83,7 +96,18 @@
           <nav class="games-nav">
             <a href="#" class="games-nav-item active">FSP Games</a>
             <a href="#" class="games-nav-item">World's Best</a>
-            <a href="#" class="games-nav-item">Finals</a>
+            <div class="games-nav-dropdown">
+              <a href="#" class="games-nav-item games-nav-dropdown-toggle">
+                Finals
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 4px;">
+                  <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <ul class="games-dropdown-menu">
+                <li><a href="#" class="games-nav-item" data-content="wbl">WBL</a></li>
+                <li><a href="#" class="games-nav-item" data-content="wps">WPS</a></li>
+              </ul>
+            </div>
             <a href="#" class="games-nav-item">Athletes<span class="coming-soon-badge">(Announcing Soon)</span></a>
           </nav>
         </div>
@@ -638,6 +662,8 @@
 
           <!-- Full-width bottom section: FIFA World Cup -->
           <div class="redeem-win-big-bottom">
+
+
             <div class="redeem-bottom-image">
               <img src="./src/assets/images/fifa-world-cup-stadium-28e60e.png" alt="FIFA World Cup 2026 Stadium">
             </div>
@@ -775,6 +801,451 @@
         </div>
       </section>
     </div>
+
+    <!-- WBL Content Section -->
+    <div id="wbl-content" class="games-content-section" style="display: none;">
+      <!-- WBL content will be inserted here - copying from wbl-landing-latest/index.html -->
+      <div class="wbl-page-container light">
+        <!-- WBL content starts here -->
+        <section class="unleasing-potential">
+          <!-- Hero Background Images -->
+          <div class="wbl-hero-images">
+            <img
+              src="./src/assets/images/wbl_hero_image.png"
+              class="wbl-hero-image-left"
+              alt="WBL Hero"
+            />
+            <img
+              src="./src/assets/images/wbl_hero_image-2.png"
+              class="wbl-hero-image-right"
+              alt="WBL Hero"
+            />
+          </div>
+          <div class="unleasing-potential-inner">
+            <img
+              src="./wbl/assets/images/unle-pot-banner-mobile.png"
+              class="img-fluid pot-mobile"
+              alt="Images"
+              data-aos="fade-up"
+            />
+            <h1>
+              <label class="un-lb-1" data-aos="fade-right">UNLEASHING</label>
+              <label class="un-lb-2" data-aos="fade-left" style="color: #E97200 !important">BOWLING&apos;S</label>
+              <label class="un-lb-3" data-aos="fade-right">GLOBAL</label>
+              <label class="un-lb-4" data-aos="fade-left">POTENTIAL</label>
+            </h1>
+            <div class="hero-btn-div">
+              <a
+                href="https://forms.gle/K7pfqrfJWYH7xF4UA"
+                target="_blank"
+                class="btn-black btn-1-n"
+              >
+                Join Waitlist</a
+              >
+            </div>
+            <p data-aos="zoom-in-left">
+              World Bowling League (WBL) is redefining the future of bowling - a
+              global sport having 200 million players worldwide.
+            </p>
+            <div id="mouse-scroll">
+              <div class="sdd">scroll down</div>
+              <div class="merge-in">
+                <div class="mouse">
+                  <div class="mouse-in"></div>
+                </div>
+                <div>
+                  <span class="down-arrow-1"></span>
+                  <span class="down-arrow-2"></span>
+                  <span class="down-arrow-3"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="wbl-welcome">
+          <div class="wbl-welcome-inner">
+            <div class="wbl-welcome-left">
+              <img
+                src="./wbl/assets/images/welcome-left-im.png"
+                class="img-fluid"
+                alt="Images"
+                data-aos="flip-up"
+              />
+              <img
+                src="./wbl/assets/images/welcome-right-im.png"
+                class="img-fluid"
+                alt="Images"
+                data-aos="flip-down"
+              />
+            </div>
+            <div class="wbl-welcome-right" data-aos="fade-left">
+              <h2><span>Welcome to the</span> World Bowling League</h2>
+              <p>
+                where every strike brings us closer. Powered by League Sports Co,
+                we're not just a league—we're a revolution in pins and lanes.
+              </p>
+              <p>
+                Join us as we strike a new path for the sport, globally. Ready to
+                roll?
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="w-global-n" id="global-n">
+          <div class="w-global-n-inner">
+            <div class="w-global-n-inner-left">
+              <h2 data-aos="fade-right">WBL Global</h2>
+              <a
+                href="https://vimeo.com/870749554/7bbbf2d029"
+                target="_blank"
+                data-aos="zoom-out-up"
+                >Learn More
+                <img
+                  src="./wbl/assets/images/arrow-g-right.svg"
+                  class="img-fluid"
+                  alt="Images"
+                />
+              </a>
+            </div>
+            <div class="w-global-n-inner-text" data-aos="fade-left">
+              <h2 data-aos="fade-right" class="show-in-mobile">WBL Global</h2>
+              <p>
+                A groundbreaking global event that elevates bowling to new
+                heights, with top bowling athletes participating in intense,
+                gender-balanced team competitions to determine the world bowling
+                champions.
+              </p>
+              <a
+                href="#"
+                data-aos="zoom-out-up"
+                class="show-in-mobile leanr-mo-bt"
+                >Learn More
+                <img
+                  src="./wbl/assets/images/arrow-g-right.svg"
+                  class="img-fluid"
+                  alt="Images"
+                />
+              </a>
+              <div class="video-w-g">
+                <img
+                  src="./wbl/assets/images/w-global-image.png"
+                  class="img-fluid"
+                  alt="Images"
+                />
+                <a href="https://vimeo.com/870749554/7bbbf2d029" target="_blank">
+                  <img
+                    src="./wbl/assets/images/trikon-white.svg"
+                    class="img-fluid"
+                    alt="Images"
+                  />
+                  Play Video
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- WBL Updates Infinite Ticker -->
+        <section class="wbl-updates-ticker">
+          <div class="wbl-updates-header">
+            <h2>UPDATES</h2>
+          </div>
+          <div class="wbl-ticker-container">
+            <div class="wbl-ticker-track">
+              <!-- First set of cards -->
+              <div class="wbl-ticker-card">
+                <img src="./src/assets/images/wbl_site_card_image_1.jpg" alt="Mookie Betts" />
+                <div class="wbl-card-text">MOOKIE BETTS JOIN WBL AS TEAM OWNER</div>
+              </div>
+              <div class="wbl-ticker-card">
+                <img src="./src/assets/images/wbl_site_card_image_2.jpg" alt="FSP Challenges" />
+                <div class="wbl-card-text">PLAY IN FSP CHALLENGES & WIN A CHANCE TO MEET MOOKIE BETTS</div>
+              </div>
+              <div class="wbl-ticker-card">
+                <img src="./src/assets/images/wbl_site_card_image_3.jpg" alt="FSP Challenges WBL" />
+                <div class="wbl-card-text">PLAY FSP CHALLENGES TO COMPETE IN WBL</div>
+              </div>
+              <div class="wbl-ticker-card">
+                <img src="./src/assets/images/wbl_site_card_image_4.jpg" alt="Virat Kohli" />
+                <div class="wbl-card-text">VIRAT KOHLI JOIN THE WORLD BOWLING LEAGUE</div>
+              </div>
+              <div class="wbl-ticker-card">
+                <img src="./src/assets/images/wbl_site_card_image_5.jpg" alt="WBL" />
+                <div class="wbl-card-text">PRESENTING WORLD BOWLING LEAGUE</div>
+              </div>
+              <!-- Duplicate set for seamless loop -->
+              <div class="wbl-ticker-card">
+                <img src="./src/assets/images/wbl_site_card_image_1.jpg" alt="Mookie Betts" />
+                <div class="wbl-card-text">MOOKIE BETTS JOIN WBL AS TEAM OWNER</div>
+              </div>
+              <div class="wbl-ticker-card">
+                <img src="./src/assets/images/wbl_site_card_image_2.jpg" alt="FSP Challenges" />
+                <div class="wbl-card-text">PLAY IN FSP CHALLENGES & WIN A CHANCE TO MEET MOOKIE BETTS</div>
+              </div>
+              <div class="wbl-ticker-card">
+                <img src="./src/assets/images/wbl_site_card_image_3.jpg" alt="FSP Challenges WBL" />
+                <div class="wbl-card-text">PLAY FSP CHALLENGES TO COMPETE IN WBL</div>
+              </div>
+              <div class="wbl-ticker-card">
+                <img src="./src/assets/images/wbl_site_card_image_4.jpg" alt="Virat Kohli" />
+                <div class="wbl-card-text">VIRAT KOHLI JOIN THE WORLD BOWLING LEAGUE</div>
+              </div>
+              <div class="wbl-ticker-card">
+                <img src="./src/assets/images/wbl_site_card_image_5.jpg" alt="WBL" />
+                <div class="wbl-card-text">PRESENTING WORLD BOWLING LEAGUE</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="elipse-s">
+          <h2 data-aos="zoom-in-down">
+            Strike into a new era with the World Bowling League – where passion,
+            precision, and prestige collide on a global scale.
+          </h2>
+        </section>
+
+        <section class="become-p-b" data-aos="zoom-in">
+          <div class="custom-container">
+            <div class="become-p-b-inner">
+              <h2 data-aos="fade-right" style="color: #FFF !important">Become The Part of Bowling Revolution</h2>
+              <a
+                href="https://forms.gle/K7pfqrfJWYH7xF4UA"
+                target="_blank"
+                class="become-m-bm"
+                data-aos="fade-right"
+                >Join Waitlist
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- WPS Content Section -->
+    <div id="wps-content" class="games-content-section" style="display: none;">
+      <!-- WPS content will be inserted here - copying from wbl-landing-latest/index.html -->
+      <div class="wbl-page-container light">
+        <!-- WPS content starts here -->
+        <section class="unleasing-potential">
+          <!-- Hero Background Images -->
+          <div class="wbl-hero-images">
+            <img
+              src="./src/assets/images/wps_hero_image_1.png"
+              class="wbl-hero-image-left"
+              alt="WPS Hero"
+            />
+            <img
+              src="./src/assets/images/wps_hero_image_2.png"
+              class="wbl-hero-image-right"
+              alt="WPS Hero"
+            />
+          </div>
+          <div class="unleasing-potential-inner">
+            <img
+              src="./wbl/assets/images/unle-pot-banner-mobile.png"
+              class="img-fluid pot-mobile"
+              alt="Images"
+              data-aos="fade-up"
+            />
+            <h1>
+              <label class="un-lb-1" data-aos="fade-right">UNLEASHING</label>
+              <label class="un-lb-2" data-aos="fade-left" style="color: #0000FF !important">SQUASH&apos;S</label>
+              <label class="un-lb-3" data-aos="fade-right">GLOBAL</label>
+              <label class="un-lb-4" data-aos="fade-left">POTENTIAL</label>
+            </h1>
+            <div class="hero-btn-div">
+              <a
+                href="https://forms.gle/K7pfqrfJWYH7xF4UA"
+                target="_blank"
+                class="btn-black btn-1-n"
+              >
+                Join Waitlist</a
+              >
+            </div>
+            <p data-aos="zoom-in-left">
+              World Premier Squash (WPS) is redefining the future of Squash - a global sport and a worldwide spectacle.
+            </p>
+            <div id="mouse-scroll">
+              <div class="sdd">scroll down</div>
+              <div class="merge-in">
+                <div class="mouse">
+                  <div class="mouse-in"></div>
+                </div>
+                <div>
+                  <span class="down-arrow-1"></span>
+                  <span class="down-arrow-2"></span>
+                  <span class="down-arrow-3"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="b-m-tech" id="tech-n">
+          <div class="custom-container">
+            <div class="b-m-tech-inner">
+              <h2>
+                <label class="bm-lb-1" data-aos="fade-right">GLOBAL</label>
+                <label class="bm-lb-2" data-aos="fade-left">GIANTS</label>
+                <label class="bm-lb-3" data-aos="fade-right" style="color: #0000FF !important">UNITES</label>
+              </h2>
+              <div class="b-m-tech-inner-text">
+                <p data-aos="fade-left">
+                  WPS is built on the combined strength of the sport's most influential institutions. LSC's innovation engine, the global reach of World Squash, and the competitive excellence of the professional tour come together to redefine how squash is played, watched, and experienced worldwide.
+                </p>
+                <div class="b-m-tech-thre-bx">
+                  <div
+                    class="bx-3-bm"
+                    data-aos="fade-left"
+                    data-aos-anchor="#example-anchor"
+                    data-aos-offset="500"
+                    data-aos-duration="500"
+                  >
+                    <img
+                      src="./src/assets/images/world-squash.png"
+                      class="img-fluid"
+                      alt="World Squash"
+                    />
+                  </div>
+                  <div
+                    class="bx-3-bm bx-3-bm-2"
+                    data-aos="fade-left"
+                    data-aos-anchor="#example-anchor"
+                    data-aos-offset="500"
+                    data-aos-duration="1000"
+                  >
+                    <img
+                      src="./src/assets/images/lsc-logo.png"
+                      class="img-fluid"
+                      alt="LSC League Sports Co"
+                    />
+                  </div>
+                  <div
+                    class="bx-3-bm bx-3-bm-3"
+                    data-aos="fade-left"
+                    data-aos-anchor="#example-anchor"
+                    data-aos-offset="500"
+                    data-aos-duration="1500"
+                  >
+                    <img
+                      src="./src/assets/images/psa-logo.png"
+                      class="img-fluid"
+                      alt="PSA Squash Tour"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="wbl-welcome">
+          <div class="wbl-welcome-inner">
+            <div class="wbl-welcome-left">
+              <img
+                src="./src/assets/images/wps-section-3-left.jpg"
+                class="img-fluid"
+                alt="World Premier Squash"
+                data-aos="flip-up"
+              />
+              <img
+                src="./src/assets/images/wps-section-3-right.jpg"
+                class="img-fluid"
+                alt="World Premier Squash"
+                data-aos="flip-down"
+              />
+            </div>
+            <div class="wbl-welcome-right" data-aos="fade-left">
+              <h2><span>Welcome to the</span> World Premier Squash</h2>
+              <p>
+                Where every rally brings us closer. Powered by League Sports Co,
+                we're not just a league — we're a new era for squash. Fast-paced, innovation-first, built for a global audience.
+              </p>
+              <p>
+                Join us as we redefine how the sport is played, watched, and experienced worldwide. Ready to step on court?
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- WBL Updates Infinite Ticker -->
+        <section class="wbl-updates-ticker">
+          <div class="wbl-updates-header">
+            <h2>UPDATES</h2>
+          </div>
+          <div class="wbl-ticker-container">
+            <div class="wbl-ticker-track">
+              <!-- First set of cards -->
+              <div class="wbl-ticker-card">
+                <img src="./src/assets/images/wbl_site_card_image_1.jpg" alt="Mookie Betts" />
+                <div class="wbl-card-text">MOOKIE BETTS JOIN WBL AS TEAM OWNER</div>
+              </div>
+              <div class="wbl-ticker-card">
+                <img src="./src/assets/images/wbl_site_card_image_2.jpg" alt="FSP Challenges" />
+                <div class="wbl-card-text">PLAY IN FSP CHALLENGES & WIN A CHANCE TO MEET MOOKIE BETTS</div>
+              </div>
+              <div class="wbl-ticker-card">
+                <img src="./src/assets/images/wbl_site_card_image_3.jpg" alt="FSP Challenges WBL" />
+                <div class="wbl-card-text">PLAY FSP CHALLENGES TO COMPETE IN WBL</div>
+              </div>
+              <div class="wbl-ticker-card">
+                <img src="./src/assets/images/wbl_site_card_image_4.jpg" alt="Virat Kohli" />
+                <div class="wbl-card-text">VIRAT KOHLI JOIN THE WORLD BOWLING LEAGUE</div>
+              </div>
+              <div class="wbl-ticker-card">
+                <img src="./src/assets/images/wbl_site_card_image_5.jpg" alt="WBL" />
+                <div class="wbl-card-text">PRESENTING WORLD BOWLING LEAGUE</div>
+              </div>
+              <!-- Duplicate set for seamless loop -->
+              <div class="wbl-ticker-card">
+                <img src="./src/assets/images/wbl_site_card_image_1.jpg" alt="Mookie Betts" />
+                <div class="wbl-card-text">MOOKIE BETTS JOIN WBL AS TEAM OWNER</div>
+              </div>
+              <div class="wbl-ticker-card">
+                <img src="./src/assets/images/wbl_site_card_image_2.jpg" alt="FSP Challenges" />
+                <div class="wbl-card-text">PLAY IN FSP CHALLENGES & WIN A CHANCE TO MEET MOOKIE BETTS</div>
+              </div>
+              <div class="wbl-ticker-card">
+                <img src="./src/assets/images/wbl_site_card_image_3.jpg" alt="FSP Challenges WBL" />
+                <div class="wbl-card-text">PLAY FSP CHALLENGES TO COMPETE IN WBL</div>
+              </div>
+              <div class="wbl-ticker-card">
+                <img src="./src/assets/images/wbl_site_card_image_4.jpg" alt="Virat Kohli" />
+                <div class="wbl-card-text">VIRAT KOHLI JOIN THE WORLD BOWLING LEAGUE</div>
+              </div>
+              <div class="wbl-ticker-card">
+                <img src="./src/assets/images/wbl_site_card_image_5.jpg" alt="WBL" />
+                <div class="wbl-card-text">PRESENTING WORLD BOWLING LEAGUE</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="elipse-s">
+          <h2 data-aos="zoom-in-down">
+           Step into a new era with the World Premier Squash League — where intensity, precision, and world-class talent converge on a global stage.
+          </h2>
+        </section>
+
+        <section class="become-p-b" data-aos="zoom-in">
+          <div class="custom-container">
+            <div class="become-p-b-inner">
+              <h2 data-aos="fade-right" style="color: #FFF !important">Become The Part of Squash Revolution</h2>
+              <a
+                href="https://forms.gle/K7pfqrfJWYH7xF4UA"
+                target="_blank"
+                class="become-m-bm"
+                data-aos="fade-right"
+                >Join Waitlist
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -887,10 +1358,38 @@
     const gamesNavItems = document.querySelectorAll('.games-nav-item');
     const fspGamesContent = document.getElementById('fsp-games-content');
     const worldsBestContent = document.getElementById('worlds-best-content');
+    const wblContent = document.getElementById('wbl-content');
+    const wpsContent = document.getElementById('wps-content');
+    const finalsDropdown = document.querySelector('.games-nav-dropdown');
+    const finalsDropdownToggle = document.querySelector('.games-nav-dropdown-toggle');
+
+    // Finals dropdown toggle
+    if (finalsDropdownToggle) {
+      finalsDropdownToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        finalsDropdown.classList.toggle('active');
+      });
+    }
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+      if (finalsDropdown && !finalsDropdown.contains(e.target)) {
+        finalsDropdown.classList.remove('active');
+      }
+    });
 
     gamesNavItems.forEach(item => {
       item.addEventListener('click', function(e) {
         e.preventDefault();
+        
+        // Don't toggle dropdown if clicking on Finals toggle itself
+        if (this === finalsDropdownToggle) {
+          return;
+        }
+
+        // Check if this is a dropdown item
+        const contentType = this.getAttribute('data-content');
         
         // Remove active class from all items
         gamesNavItems.forEach(nav => nav.classList.remove('active'));
@@ -898,22 +1397,33 @@
         // Add active class to clicked item
         this.classList.add('active');
         
+        // Close dropdown
+        if (finalsDropdown) {
+          finalsDropdown.classList.remove('active');
+        }
+        
         // Get the text content (excluding coming soon badge)
         const navText = this.textContent.trim();
         const isFspGames = navText.includes('FSP Games');
         const isWorldsBest = navText.includes("World's Best");
+        const isWBL = contentType === 'wbl';
+        const isWPS = contentType === 'wps';
         
-        // Show/hide content based on selection
+        // Hide all content first
+        if (fspGamesContent) fspGamesContent.style.display = 'none';
+        if (worldsBestContent) worldsBestContent.style.display = 'none';
+        if (wblContent) wblContent.style.display = 'none';
+        if (wpsContent) wpsContent.style.display = 'none';
+        
+        // Show selected content
         if (isFspGames && fspGamesContent) {
           fspGamesContent.style.display = 'block';
-          if (worldsBestContent) worldsBestContent.style.display = 'none';
         } else if (isWorldsBest && worldsBestContent) {
           worldsBestContent.style.display = 'block';
-          if (fspGamesContent) fspGamesContent.style.display = 'none';
-        } else {
-          // Hide all content for other nav items
-          if (fspGamesContent) fspGamesContent.style.display = 'none';
-          if (worldsBestContent) worldsBestContent.style.display = 'none';
+        } else if (isWBL && wblContent) {
+          wblContent.style.display = 'block';
+        } else if (isWPS && wpsContent) {
+          wpsContent.style.display = 'block';
         }
       });
     });
@@ -977,7 +1487,92 @@
       // Initialize
       updateCarouselSlideClasses();
     }
+
+    // WBL Scripts - Initialize AOS and other WBL functionality when WBL content is shown
+    function initWBLScripts() {
+      if (typeof AOS !== 'undefined') {
+        AOS.init({
+          duration: 800,
+          easing: 'ease-in-out',
+          once: true
+        });
+      }
+
+      // WBL is always in light theme - no toggle needed
+      const wblPageContainer = document.querySelector('#wbl-content .wbl-page-container');
+      if (wblPageContainer) {
+        // Set default to light theme
+        wblPageContainer.classList.add('light');
+      }
+    }
+
+    // WPS Scripts - Initialize AOS and other WPS functionality when WPS content is shown
+    function initWPSScripts() {
+      if (typeof AOS !== 'undefined') {
+        AOS.init({
+          duration: 800,
+          easing: 'ease-in-out',
+          once: true
+        });
+      }
+
+      // WPS is always in light theme - no toggle needed
+      const wpsPageContainer = document.querySelector('#wps-content .wbl-page-container');
+      if (wpsPageContainer) {
+        // Set default to light theme
+        wpsPageContainer.classList.add('light');
+      }
+    }
+
+    // Initialize WBL scripts when WBL content is displayed
+    const wblContentObserver = document.getElementById('wbl-content');
+    if (wblContentObserver) {
+      const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
+            if (wblContentObserver.style.display !== 'none') {
+              setTimeout(initWBLScripts, 100);
+            }
+          }
+        });
+      });
+
+      observer.observe(wblContentObserver, { attributes: true, attributeFilter: ['style'] });
+      // Also initialize immediately if WBL content is already visible
+      if (wblContentObserver.style.display !== 'none') {
+        setTimeout(initWBLScripts, 100);
+      }
+    }
+
+    // Initialize WPS scripts when WPS content is displayed
+    const wpsContentObserver = document.getElementById('wps-content');
+    if (wpsContentObserver) {
+      const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
+            if (wpsContentObserver.style.display !== 'none') {
+              setTimeout(initWPSScripts, 100);
+            }
+          }
+        });
+      });
+
+      observer.observe(wpsContentObserver, { attributes: true, attributeFilter: ['style'] });
+      // Also initialize immediately if WPS content is already visible
+      if (wpsContentObserver.style.display !== 'none') {
+        setTimeout(initWPSScripts, 100);
+      }
+    }
   </script>
+
+  <!-- WBL JavaScript Dependencies -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
+  <script src="./wbl/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./wbl/js/script.js"></script>
 </body>
 </html>
 

@@ -1,0 +1,429 @@
+@media(max-width:1680px){
+.tour-mg-bx-1 img {
+    max-width: 820px;
+}
+
+.tour-mg-bx-2 img {
+    max-width: 500px;
+}
+
+.tour-mg-bx-3 img {
+    max-width: 660px;
+}
+
+.tour-mg-bx-4 img {
+    max-width: 850px;
+}
+
+.tour-mg-bx-6 img {
+    max-width: 560px;
+}
+.experience h2 {
+    max-width: 70%;
+}
+
+
+
+
+}
+
+
+@media(max-width:1440px){
+.tour-mg-bx-1 img {
+    max-width: 700px;
+}
+
+.tour-mg-bx-2 img {
+    max-width: 380px;
+}
+
+.tour-mg-bx-3 img {
+    max-width: 560px;
+}
+
+.tour-mg-bx-4 img {
+    max-width: 640px;
+}
+
+.tour-mg-bx-6 img {
+    max-width: 460px;
+}
+
+.tour-mg-bx-5 img {
+    max-width: 650px;
+}
+
+
+
+
+}
+
+
+@media(max-width:1199px){
+.bowling-event-banner h1 {
+    font-size: 56px;
+}
+
+.bowling-event-banner h2 {
+    font-size: 29px;
+}
+
+.tour-mgt-title h2 {
+    font-size: 45px;
+}
+
+.oneplace-image-1 {
+    max-width: 210px;
+}
+
+.oneplace-section .custom-container-full h2 {
+    font-size: 45px;
+}
+
+.oneplace-image-7 {
+    max-width: 260px;
+}
+
+.oneplace-image-8 {
+    right: 25%;
+    bottom: 100px;
+}
+
+.tour-mgt-title p {
+    max-width: 100%;
+}
+
+.tour-mg-bx-1 img {
+    max-width: 540px;
+}
+
+.tour-mg-bx-2 img {
+    max-width: 320px;
+}
+
+.tour-mg-bx-3 img {
+    max-width: 450px;
+}
+
+.tour-mg-bx-4 img {
+    max-width: 530px;
+}
+
+.tour-mg-bx-5 img {
+    max-width: 530px;
+}
+
+.tour-mg-bx-6 img {
+    max-width: 360px;
+}
+
+.creation h2 {
+    font-size: 45px;
+}
+
+.creation p {
+    max-width: 100%;
+}
+
+.experience h2 {
+    max-width: 100%;
+}
+
+
+
+}
+
+
+
+@media(max-width:991px){
+        e0.bowling-event-banner h1 {
+    font-size: 42px;
+}
+
+.bowling-event-banner h2 {
+    font-size: 22px;
+}
+
+.oneplace-section .custom-container-full h2 {
+    font-size: 36px;
+}
+
+.oneplace-image-1 {
+    top: 40px;
+}
+
+.oneplace-image-2 {
+    max-width: 100px;
+}
+
+.oneplace-image-3 {
+    max-width: 230px;
+}
+
+.oneplace-image-4 {
+    max-width: 140px;
+    right: 15%;
+}
+
+.oneplace-image-5 {
+    max-width: 191px;
+}
+
+.oneplace-image-6 {
+    max-width: 100px;
+}
+
+.oneplace-image-7 {
+    max-width: 230px;
+    bottom: 80px;
+}
+
+.oneplace-image-8 {
+    max-width: 250px;
+    right: 30%;
+}
+
+.oneplace-image-10 {
+    max-width: 160px;
+}
+
+.oneplace-image-9 {
+    max-width: 150px;
+}
+
+.oneplace-image-11 {
+    max-width: 260px;
+}
+
+.tour-mgt-title h2 {
+    max-width: 100%;
+}
+
+.tour-mgt-l-r {
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+}
+
+.tour-mgt-r-orange-w, .tour-mgt-l-white, .tour-mgt-l-black {
+    width: 100%;
+}
+
+.tour-mg-bx-5 {
+    width: 100%;
+}
+
+.tour-mg-bx-1 img {
+    max-width: 100%;
+}
+
+.tour-mg-bx-2 img {
+    max-width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+.tour-mg-bx-3 img {
+    max-width: 100%;
+    left: 0;
+}
+
+.tour-mg-bx-4 img {
+    max-width: 100%;
+}
+
+.tour-mg-bx-5 img {
+    max-width: 100%;
+}
+
+.tour-mg-bx-6 img {
+    max-width: 100%;
+}
+.tour-mg-bx {
+    margin: 15px 0;
+}
+.creation h2 {
+    max-width: 100%;
+}
+
+.experience h2 {
+    font-size: 45px;
+}
+
+
+
+}
+
+
+
+@media(max-width:767px){
+.bowling-event-banner h1 {
+    font-size: 40px;
+}
+
+}
+
+
+@media(max-width:575px){
+.bowling-event-banner h1 {
+    font-size: 28px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.bowling-event-banner {
+    padding-top: 100px;
+}
+
+.bowling-event-banner h2 {
+    font-size: 16px;
+    max-width: 95%;
+    margin: 10px auto 16px;
+}
+
+.oneplace-section .custom-container-full h2 {
+    font-size: 26px;
+    max-width: 230px;
+    padding: 10px;
+}
+
+.oneplace-image-1 {
+    max-width: 130px;
+}
+
+.oneplace-image-2 {
+    max-width: 85px;
+    left: 37%;
+    top: 80px;
+}
+
+.oneplace-image-4 {
+    right: -30px;
+    max-width: 100px;
+}
+
+.oneplace-image-3 {
+    display: none;
+}
+
+.oneplace-image-5 {
+    display: none;
+}
+
+.oneplace-section .custom-container-full {
+    min-height: 480px;
+}
+
+.oneplace-image-6 {
+    display: none;
+}
+
+.oneplace-image-7 {
+    max-width: 200px;
+    bottom: 60px;
+}
+
+.oneplace-image-11 {
+    display: none;
+}
+
+.oneplace-image-8 {
+    display: none;
+}
+
+.oneplace-image-9 {
+    max-width: 120px;
+    left: 30px;
+    bottom: 80px;
+}
+
+.oneplace-section {
+    min-height: 630px;
+}
+
+.tour-mgt-title h2 {
+    font-size: 25px;
+}
+
+.tour-mgt-title p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.tour-mgt {padding: 40px 0;}
+
+
+
+.tour-mg-bx {
+    padding: 20px;
+}
+.tour-mg-bx h3 {
+    font-size: 22px;
+}
+.tour-mg-bx p {
+    font-size: 12px;
+}
+.tour-mg-bx-2 img {
+    bottom: -20px;
+    max-width: 115%;
+}
+
+.tour-mg-bx-4 img {
+    max-width: 121%;
+}
+
+.tour-mg-bx-3 img {
+    max-width: 120%;
+}
+
+.tour-mg-bx-1 img {
+    max-width: 122%;
+}
+
+.tour-mg-bx-5 img {
+    max-width: 120%;
+}
+
+.tour-mg-bx-6 img {
+    max-width: 120%;
+}
+
+.creation h2 {
+    font-size: 26px;
+}
+
+.creation p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.creation {
+    min-height: 100%;
+    padding: 50px 0 20px;
+}
+
+.experience h2 {
+    font-size: 26px;
+}
+
+.experience {
+    background-size: cover;
+    min-height: 360px;
+    display: flex;
+}
+
+.experience .custom-container {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.experience a {
+    margin-top: 20px;
+}
+
+
+
+    
+}

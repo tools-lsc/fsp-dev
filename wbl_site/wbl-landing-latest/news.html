@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News | WBL</title>
+    <link rel="stylesheet" href="./css/news.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="css/ranking.css" />
+    <link rel="stylesheet" href="css/navbar-left.css" />
+    <link rel="stylesheet" href="css/style-new.css" />
+    <link rel="stylesheet" href="css/navbar-left-responsive.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+  </head>
+  <body>
+    <!-- change -->
+    <div class="new-nav">
+      <form class="button-right ml-auto d-flex align-items-center">
+        <a
+          href="https://vimeo.com/worldbowlingleague/keynote"
+          target="_blank"
+          class="btn-black"
+        >
+          <img src="assets/images/trikon.svg" class="img-fluid" alt="Images" />
+          Watch Keynote</a
+        >
+      </form>
+    </div>
+
+    <div class="full-width-menu">
+      <a class="nav-logo-m" href="/">
+        <img src="assets/images/wbl-logo.webp" alt="" />
+      </a>
+      <button class="menu-toggle"></button>
+      <ul class="social-m-f">
+        <li>
+          <a href="#">
+            <img
+              src="assets/images/social-m-i-1.svg"
+              class="img-fluid"
+              alt="Image"
+            />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img
+              src="assets/images/social-m-i-2.svg"
+              class="img-fluid"
+              alt="Image"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
+    <nav class="new-menu">
+      <ul class="menu-n-a">
+        <li><a href="index.html"> Home </a></li>
+        <li><a href="#global-n" class="js-anchor-link"> WBL Global </a></li>
+        <li><a href="#tech-n" class="js-anchor-link"> WBL Technology </a></li>
+        <li>
+          <a href="https://tms.worldbowlingleague.org/">
+            WBL Tournament management system
+          </a>
+        </li>
+        <li>
+          <a href="https://million-dollor-roll.vercel.app/">
+            Million Dollar Roll
+          </a>
+        </li>
+        <li>
+          <a href="https://www.worldbowlingleague.org/news" target="_blank">
+            News
+          </a>
+        </li>
+        <li><a href="media-center.html"> MEDIA CENTER </a></li>
+        <li><a href="press.html">PRESS </a></li>
+      </ul>
+    </nav>
+
+    <section class="blog-banner" id="latest-post"></section>
+
+    <section class="blogs">
+      <div class="blogs-container">
+        <div class="sec-heading">
+          <h2>Latest News</h2>
+        </div>
+        <div class="blogs-wrapper" id="blog-posts"></div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container-fluid">
+        <div class="footer-content">
+          <div class="footer-inner">
+            <img
+              id="logo"
+              src="assets/images/footer-logo.webp"
+              class="img-fluid"
+              alt="League Sports Co Footer"
+            />
+          </div>
+          <div class="footer-email-link">
+            <ul class="list-inline">
+              <li class="list-inline-items"><a href="#">Disclaimer</a></li>
+              <li class="list-inline-items">
+                <a href="#"> Privacy Policy </a>
+              </li>
+              <li class="list-inline-items">
+                <a href="#"> Terms of Use </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <a href="#">
+            <img src="./assets/images/message-ic.svg" alt="Linkedin icon" />
+            contact@worldbowlingleague.com</a
+          >
+
+          <ul class="list-inline">
+            <li class="list-inline-items">
+              <a
+                href="https://www.instagram.com/world_bowling_league/"
+                target="_blank"
+              >
+                <img
+                  src="assets/images/instag-ic.svg"
+                  class="img-fluid"
+                  alt="Image"
+                />
+                world_bowling_league</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-lasts">
+          <p>© 2025 World Bowling League, All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      if (window.location.href.indexOf(".html") > -1) {
+        window.history.replaceState(
+          {},
+          document.title,
+          window.location.href.replace(/\.html$/, "")
+        );
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch(
+          "https://world-bowling-league.ghost.io/ghost/api/content/posts/?key=4593a7ea271ab769afc38c368e&fields=title,feature_image,published_at,url&include=tags"
+        )
+          .then((response) => response.json())
+          .then((result) => {
+            let postsHtml = "";
+
+            for (let post of result.posts) {
+              const tags = post.tags
+                ? post.tags.map((tag) => tag.name).join(", ")
+                : "";
+
+              postsHtml += `
+              <a href="${post.url}" target="_blank">
+                          <div class="blog-card" style="background-image: url('${
+                            post.feature_image
+                          }'); background-size: cover; background-position: center;">
+                                <div class="blog-content">
+                                  ${
+                                    tags
+                                      ? `<div class="blog-tags">${tags}</div>`
+                                      : ""
+                                  }
+                                      <div class="blog-heading">
+                                          <h3>${post.title}</h3>
+                                      </div>
+                                      <div class="date-published">${new Date(
+                                        post.published_at
+                                      ).toLocaleDateString()}</div>
+                                  </div>
+                                  </div>
+                                  </a>
+                      `;
+            }
+            let lTags = result.posts[0].tags
+              ? result.posts[0].tags.map((tag) => tag.name).join(", ")
+              : "";
+            let latestBlog = `
+            <div class="latest-blog" style="background-image: url('${
+              result.posts[0].feature_image
+            }'); background-size: cover; background-position: center;">
+              <div class="blog-content">
+                ${lTags ? `<div class="blog-tags">${lTags}</div>` : ""}
+                <div class="blog-heading">
+                  <h1>
+                    ${result.posts[0].title}
+                  </h1>
+              </div>
+              <div class="date-published">${new Date(
+                result.posts[0].published_at
+              ).toLocaleDateString()}</div>
+              </div>
+            </div>
+            `;
+
+            document.getElementById("blog-posts").innerHTML = postsHtml;
+            document.getElementById("latest-post").innerHTML = latestBlog;
+          })
+          .catch((error) => console.error("Error fetching posts:", error));
+      });
+    </script>
+    <script type="text/javascript">
+      $(".menu-toggle").on("click", function () {
+        $("body").toggleClass("open");
+      });
+    </script>
+  </body>
+</html>

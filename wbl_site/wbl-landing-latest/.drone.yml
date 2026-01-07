@@ -1,0 +1,27 @@
+---
+kind: pipeline
+type: docker
+name: default
+environment:
+  REGISTRY: 676999872964.dkr.ecr.ap-south-1.amazonaws.com
+  REPO_NAME: world-bowling-league
+steps:
+  - name: build
+    image: 676999872964.dkr.ecr.ap-south-1.amazonaws.com/drone-runner:v1
+    commands:
+      - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin $REGISTRY
+      - docker buildx build --push -t $REGISTRY/$REPO_NAME:${DRONE_COMMIT_BRANCH}-${DRONE_COMMIT_SHA:0:8}-${DRONE_BUILD_NUMBER} .
+    volumes:
+      - name: docker_sock
+        path: /var/run/docker.sock
+trigger:
+  branch:
+    - main
+  event:
+    include:
+      - push
+      - custom
+volumes:
+  - name: docker_sock
+    host:
+      path: /var/run/docker.sock

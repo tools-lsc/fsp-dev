@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="assets/images/favicon.webp" sizes="32x32" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="assets/images/favicon.webp"
+    />
+    <link
+      rel="preload"
+      href="./fonts/NoirPro-Regular.otf"
+      as="font"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./fonts/NoirPro-SemiBold.otf"
+      as="font"
+      crossorigin
+    />
+    <link rel="preload" href="./fonts/NoirPro-Bold.otf" as="font" crossorigin />
+    <link
+      rel="preload"
+      href="./fonts/NoirPro-Medium.otf"
+      as="font"
+      crossorigin
+    />
+    <meta name="msapplication-TileImage" href="assets/images/favicon.webp" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1.0, maximum-scale = 1.0, user-scalable = no"
+    />
+    <meta name="title" content="World Bowling League" />
+    <meta
+      name="description"
+      content="World Bowling League (WBL) is merging tradition with cutting-edge technology. Creating a unified platform for global competition. Envision precision AI capturing every strike, bowlers from all corners competing on a singular stage, & fans engaging like never before."
+    />
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-MP6796VT");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/ranking.css" />
+    <link rel="stylesheet" href="css/navbar-left.css" />
+    <link rel="stylesheet" href="css/style-new.css" />
+    <link rel="stylesheet" href="css/navbar-left-responsive.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <title>WBL</title>
+  </head>
+
+  <body style="background: #fff">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MP6796VT"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="new-nav">
+      <form class="button-right ml-auto d-flex align-items-center">
+        <a
+          href="https://vimeo.com/worldbowlingleague/keynote"
+          target="_blank"
+          class="btn-black"
+        >
+          <img src="assets/images/trikon.svg" class="img-fluid" alt="Images" />
+          Watch Keynote</a
+        >
+      </form>
+    </div>
+
+    <div class="full-width-menu">
+      <a class="nav-logo-m" href="/">
+        <img src="assets/images/wbl-logo.webp" alt="" />
+      </a>
+      <button class="menu-toggle"></button>
+      <ul class="social-m-f">
+        <li>
+          <a href="#">
+            <img
+              src="assets/images/social-m-i-1.svg"
+              class="img-fluid"
+              alt="Image"
+            />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img
+              src="assets/images/social-m-i-2.svg"
+              class="img-fluid"
+              alt="Image"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
+    <nav class="new-menu">
+      <ul class="menu-n-a">
+        <li><a href="index.html"> Home </a></li>
+        <li><a href="#global-n" class="js-anchor-link"> WBL Global </a></li>
+        <li><a href="#tech-n" class="js-anchor-link"> WBL Technology </a></li>
+        <li>
+          <a href="https://tms.worldbowlingleague.org/">
+            WBL Tournament management system
+          </a>
+        </li>
+        <li>
+          <a href="https://million-dollor-roll.vercel.app/">
+            Million Dollar Roll
+          </a>
+        </li>
+        <li>
+          <a href="https://www.worldbowlingleague.org/news" target="_blank">
+            News
+          </a>
+        </li>
+        <li><a href="media-center.html"> MEDIA CENTER </a></li>
+        <li><a href="press.html">PRESS </a></li>
+      </ul>
+    </nav>
+
+    <section class="matchround-banner">
+      <div class="custom-container">
+        <div class="matchround-banner-inner">
+          <div class="matchround-banner-inner-left">
+            <a href="ibf-wc-2023.html" class="arrow-back">
+              <img
+                src="assets/images/arrow-left.svg"
+                class="img-fluid"
+                alt="Images"
+              />
+            </a>
+            <div class="matchround-box">
+              <h1 id="singlesTitle">
+                singles <span>2023 IBF World Bowling championships</span>
+              </h1>
+            </div>
+          </div>
+          <div class="matchround-box-right">
+            <div class="mal-fem">
+              <input
+                type="radio"
+                id="male"
+                name="radio"
+                onchange="viewCat(event)"
+              />
+              <label for="male">Men’s</label>
+              <input
+                type="radio"
+                id="female"
+                name="radio"
+                onchange="viewCat(event)"
+              />
+              <label for="female">Women’s</label>
+            </div>
+            <div class="dropdown dropdown-matchround">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Single
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Double's</a>
+                <a class="dropdown-item" href="#">Trios</a>
+                <a class="dropdown-item" href="#">TEAM OF 5</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="round-tabs">
+      <div class="custom-container">
+        <div class="round-tabs-box">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                id="R1"
+                data-toggle="tab"
+                href="#home"
+                role="tab"
+                aria-controls="home"
+                aria-selected="true"
+                onclick="viewRound(event)"
+                >Round 1</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="R2"
+                data-toggle="tab"
+                href="#profile"
+                role="tab"
+                aria-controls="profile"
+                aria-selected="false"
+                onclick="viewRound(event)"
+                >Round 2</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="R3"
+                data-toggle="tab"
+                href="#contact"
+                role="tab"
+                aria-controls="contact"
+                aria-selected="false"
+                onclick="viewRound(event)"
+                >Semi Final</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="R4"
+                data-toggle="tab"
+                href="#contactn"
+                role="tab"
+                aria-controls="contactn"
+                aria-selected="false"
+                onclick="viewRound(event)"
+                >Final</a
+              >
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div
+              class="tab-pane fade show active"
+              id="home"
+              role="tabpanel"
+              aria-labelledby="home-tab"
+            >
+              <div class="series">
+                <h2>10th - 12th October, 2023</h2>
+                <div class="series-bx">
+                  <a
+                    href="#"
+                    class="series-bx-in"
+                    id="R1"
+                    onclick="viewGrp(event)"
+                  >
+                    View Scores
+                    <img
+                      src="assets/images/arrow-right-s.svg"
+                      class="img-fluid"
+                      alt="Images"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="profile"
+              role="tabpanel"
+              aria-labelledby="profile-tab"
+            >
+              <div class="series">
+                <h2>10th - 12th October, 2023</h2>
+                <div class="series-bx">
+                  <a
+                    href="#"
+                    class="series-bx-in"
+                    id="R2"
+                    onclick="viewGrp(event)"
+                  >
+                    View Scores
+                    <img
+                      src="assets/images/arrow-right-s.svg"
+                      class="img-fluid"
+                      alt="Images"
+                    />
+                  </a>
+                  <!-- Updating... -->
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="contact"
+              role="tabpanel"
+              aria-labelledby="contact-tab"
+            >
+              <div class="series">
+                <h2>10th - 12th October, 2023</h2>
+                <div class="series-bx">
+                  <a
+                    href="#"
+                    class="series-bx-in"
+                    id="R3"
+                    onclick="viewGrp(event)"
+                  >
+                    View Scores
+                    <img
+                      src="assets/images/arrow-right-s.svg"
+                      class="img-fluid"
+                      alt="Images"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="contactn"
+              role="tabpanel"
+              aria-labelledby="contact-tabn"
+            >
+              <div class="series">
+                <h2>10th - 12th October, 2023</h2>
+                <div class="series-bx">
+                  <a
+                    href="#"
+                    class="series-bx-in"
+                    id="R4"
+                    onclick="viewGrp(event)"
+                  >
+                    View Scores
+                    <img
+                      src="assets/images/arrow-right-s.svg"
+                      class="img-fluid"
+                      alt="Images"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container-fluid">
+        <div class="footer-content">
+          <div class="footer-inner">
+            <img
+              id="logo"
+              src="assets/images/footer-logo.webp"
+              class="img-fluid"
+              alt="League Sports Co Footer"
+            />
+          </div>
+          <div class="footer-email-link">
+            <ul class="list-inline">
+              <li class="list-inline-items"><a href="#">Disclaimer</a></li>
+              <li class="list-inline-items">
+                <a href="#"> Privacy Policy </a>
+              </li>
+              <li class="list-inline-items">
+                <a href="#"> Terms of Use </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <a href="#">
+            <img src="./assets/images/message-ic.svg" alt="Linkedin icon" />
+            contact@worldbowlingleague.com</a
+          >
+
+          <ul class="list-inline">
+            <li class="list-inline-items">
+              <a
+                href="https://www.instagram.com/world_bowling_league/"
+                target="_blank"
+              >
+                <img
+                  src="assets/images/instag-ic.svg"
+                  class="img-fluid"
+                  alt="Image"
+                />
+                world_bowling_league</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-lasts">
+          <p>© 2025 World Bowling League, All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        let match = localStorage.getItem("match");
+
+        if (match) {
+          let activeTab = $("#" + match);
+          if (activeTab.length) {
+            activeTab.tab("show");
+          }
+        }
+
+        let matchCat = localStorage.getItem("matchCat");
+        let format = localStorage.getItem("format");
+        const singlesTitle = document.getElementById("singlesTitle");
+
+        if (!match) {
+          localStorage.setItem("match", "1");
+        }
+
+        if (!matchCat) {
+          document.getElementById("male").checked = true;
+          localStorage.setItem("matchCat", "M");
+          singlesTitle.textContent = `Men’s ${format}`;
+        } else {
+          if (matchCat === "M") {
+            singlesTitle.textContent = `Men’s ${format}`;
+            document.getElementById("male").checked = true;
+          } else {
+            singlesTitle.textContent = `Women’s ${format}`;
+            document.getElementById("female").checked = true;
+          }
+        }
+        const championshipSpan = document.createElement("span");
+        championshipSpan.textContent = "2023 IBF World Bowling championships";
+        singlesTitle.appendChild(championshipSpan);
+      });
+
+      function viewRound(e) {
+        e.preventDefault();
+        $(event.currentTarget).tab("show");
+        localStorage.setItem("match", event.currentTarget.id);
+      }
+
+      function viewGrp(e) {
+        e.preventDefault();
+        var clickedID = $(event.currentTarget).attr("id");
+        let format = localStorage.getItem("format");
+
+        localStorage.setItem("matchround", clickedID);
+        if (format == "single") {
+          window.location.pathname = "/tournaments.html";
+        } else {
+          window.location.pathname = "/scores-tof.html";
+        }
+      }
+
+      function viewCat(e) {
+        e.preventDefault();
+
+        const clickedElement = e.target;
+        const btnId = clickedElement.id;
+        let format = localStorage.getItem("format");
+
+        if (btnId === "male") {
+          localStorage.setItem("matchCat", "M");
+          singlesTitle.textContent = `Men’s ${format}`;
+        } else if (btnId === "female") {
+          singlesTitle.textContent = `Women’s ${format}`;
+          localStorage.setItem("matchCat", "W");
+        }
+        const championshipSpan = document.createElement("span");
+        championshipSpan.textContent = "2023 IBF World Bowling championships";
+        singlesTitle.appendChild(championshipSpan);
+      }
+    </script>
+    <script>
+      (function () {
+        window.SM_PAGEIMPROVE = window.SM_PAGEIMPROVE || { ready: false };
+        window.addEventListener("pageimprove.initialized", function () {
+          window.SM_PAGEIMPROVE.ready = true;
+        });
+        var script = document.createElement("script");
+        script.id = "e3b30f25-06fe-4c9c-8330-399ae40620bb";
+        script.src = "https://pageimprove.io/react";
+        script.type = "module";
+        document.head.appendChild(script);
+      })();
+    </script>
+    <script type="text/javascript">
+      $(".menu-toggle").on("click", function () {
+        $("body").toggleClass("open");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="assets/images/favicon.webp" sizes="32x32" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="assets/images/favicon.webp"
+    />
+
+    <!-- <link rel="preload" href="./fonts/NoirPro-Bold.otf" as="font" crossorigin /> -->
+
+    <meta name="msapplication-TileImage" href="assets/images/favicon.webp" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1.0, maximum-scale = 1.0, user-scalable = no"
+    />
+    <meta name="title" content="World Bowling League" />
+    <meta
+      name="description"
+      content="World Bowling League (WBL) is merging tradition with cutting-edge technology. Creating a unified platform for global competition. Envision precision AI capturing every strike, bowlers from all corners competing on a singular stage, & fans engaging like never before."
+    />
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-MP6796VT");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/ranking.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <title>WBL</title>
+  </head>
+
+  <body onload="playVideo()">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MP6796VT"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <header class="gamer-header primary-nav nav-down" id="primary-nav">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="/">
+            <img src="assets/images/wbl-logo.webp" alt="" />
+          </a>
+          <button
+            class="navbar-toggler toggle"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="navbar-inner-bx">
+              <ul class="navbar-nav">
+                <!-- <li class="nav-item active">
+                  <a class="nav-link" href="#page-one">WBL Global</a>
+                </li> -->
+                <li class="nav-item">
+                  <a class="nav-link" href="#wbl-pro-tour">WBL Pro Tour</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#wbl-ranking">WBL Ranking</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#our-tech">Our TECH</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="https://https://www.worldbowlingleague.org/news"
+                    >News</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="https://tms.worldbowlingleague.org"
+                    target="_blank"
+                    >TMS</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="media-center.html">Media Center</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="tournaments.html">Tournaments </a>
+                </li>
+              </ul>
+              <form class="button-right ml-auto d-flex align-items-center">
+                <a
+                  href="https://vimeo.com/worldbowlingleague/keynote"
+                  target="_blank"
+                  class="btn-black"
+                  >Watch Keynote</a
+                >
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- <section id="section1" class="blue-slider blue-top-slider"> -->
+    <!-- <div class="owl-carousel owl-theme blue-top-slider"> -->
+    <!-- <div class="item">
+          <img src="assets/images/hero-bg.webp" class="img-fluid for-web" />
+          <img src="assets/images/hero-bg-mobile.webp" class="img-fluid for-mobile" />
+          <h1>Unleashing  Bowling's Global Potential</h1>
+        </div> -->
+    <!-- <div class="item"> -->
+    <!-- <img
+        src="assets/images/hero-bg-2.webp"
+        class="img-fluid for-web"
+        loading="eager"
+        alt="hero section backround"
+      />
+      <img
+        src="assets/images/hero-bg-2-mobile.webp"
+        class="img-fluid for-mobile"
+        loading="eager"
+        alt="hero section mobile backround"
+      />
+      <div class="hero-inner">
+        <div class="logo-banner">
+          <img
+            src="assets/images/banner-log-1.webp"
+            class="img-fluid"
+            alt="Images"
+            loading="eager"
+          />
+          <img
+            src="assets/images/banner-log-2.webp"
+            class="img-fluid banner-log-2"
+            alt="Images"
+            loading="eager"
+          />
+        </div>
+        <h1>IBF World<br />Championships</h1>
+        <h2>Tue, 3 oct - sun, 15 oct 2023</h2>
+        <div class="btn-bluetop">
+          <a href="https://ibfwc23.worldbowlingleague.org/" target="_blank">
+            <img src="assets/images/watch.svg" class="img-fluid" alt="Images" /> Watch
+            live</a
+          >
+          <a href="ibf-wc-2023.html" class="track-s">track Scores</a>
+        </div> -->
+
+    <!-- </div>
+        </div> -->
+    <!-- </div>
+    </section> -->
+
+    <!-- <section class="race-bird">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+              <div class="race-bird-text">
+                <h2>
+                 Revolutionizing Bowling’s Global Stage
+                </h2>
+                <p>World Bowling League (WBL) is more than a tournament. It's the future of bowling. Merging tradition with cutting-edge technology, we're creating a unified platform for global competition. Envision precision AI capturing every strike, bowlers from all corners competing on a singular stage, and fans engaging like never before. Welcome to WBL: where tradition meets innovation in a thrilling global showdown.</p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- <section id="section1" class="hero-section">
+      <div class="custom-container">
+        <div class="hero-content">
+          <h1>
+            Unleashing <br />
+            Bowling's Global <br />
+            Potential
+          </h1>
+        </div>
+      </div>
+    </section>
+
+    <section id="page-one" class="wbl-global">
+      <div class="global-image">
+        <img
+          src="assets/images/wbl-global-bg.webp"
+          class="img-fluid glob-bg for-web"
+          alt="Images"
+          loading="lazy"
+        />
+        <img
+          src="assets/images/wbl-global-bg-mobile.webp"
+          class="img-fluid glob-bg for-mobile"
+          alt="Images"
+          loading="lazy"
+        />
+        <div class="global-content">
+          <img
+            src="assets/images/wbl-g-logo.webp"
+            class="img-fluid"
+            alt="Images"
+            loading="lazy"
+          />
+          <span>Where Skill Meets Spectacle</span>
+          <h2>WBL GLOBAL</h2>
+          <p>
+            WBL Global is the grand stage of bowling, bringing together the
+            world's best talent in iconic venues. Experience the fusion of
+            traditional bowling values with contemporary entertainment, all in a
+            format designed for the digital-first generation.
+          </p>
+          <div class="wbl-global-btn">
+            <a href="https://vimeo.com/870749554/7bbbf2d029" target="_blank"
+              >Learn More</a
+            >
+          </div>
+        </div>
+        <div class="global-box">
+          <div class="owl-carousel owl-theme global-slider">
+            <div class="item">
+              <div class="global-box-inner">
+                <img
+                  src="assets/images/global-1.webp"
+                  class="img-fluid"
+                  alt="Images"
+                  loading="lazy"
+                />
+                <h3>Iconic Locations</h3>
+              </div>
+            </div>
+            <div class="item">
+              <div class="global-box-inner">
+                <img
+                  src="assets/images/global-2.webp"
+                  class="img-fluid"
+                  alt="Images"
+                  loading="lazy"
+                />
+                <h3>New Scoring Format</h3>
+              </div>
+            </div>
+            <div class="item">
+              <div class="global-box-inner">
+                <img
+                  src="assets/images/global-3.webp"
+                  class="img-fluid"
+                  alt="Images"
+                  loading="lazy"
+                />
+                <h3>Millions In Prize Pool</h3>
+              </div>
+            </div>
+            <div class="item">
+              <div class="global-box-inner">
+                <img
+                  src="assets/images/global-4.webp"
+                  class="img-fluid"
+                  alt="Images"
+                  loading="lazy"
+                />
+                <h3>Modular Lanes</h3>
+              </div>
+            </div>
+            <div class="item">
+              <div class="global-box-inner">
+                <img
+                  src="assets/images/global-5.webp"
+                  class="img-fluid"
+                  alt="Images"
+                  loading="lazy"
+                />
+                <h3>Gender Balanced Teams</h3>
+              </div>
+            </div>
+            <div class="item">
+              <div class="global-box-inner">
+                <img
+                  src="assets/images/global-6.webp"
+                  class="img-fluid"
+                  alt="Images"
+                  loading="lazy"
+                />
+                <h3>Sustainability</h3>
+              </div>
+            </div>
+            <div class="item">
+              <div class="global-box-inner">
+                <img
+                  src="assets/images/global-7.webp"
+                  class="img-fluid"
+                  alt="Images"
+                  loading="lazy"
+                />
+                <h3>High Quality Broadcasts</h3>
+              </div>
+            </div>
+            <div class="item">
+              <div class="global-box-inner">
+                <img
+                  src="assets/images/global-8.webp"
+                  class="img-fluid"
+                  alt="Images"
+                  loading="lazy"
+                />
+                <h3>360-degree View</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section id="wbl-pro-tour" class="wbl-protour wbl-protour-temporary">
+      <div class="wbl-protour-content">
+        <span>Charting the Path to Bowling Supremacy</span>
+        <h2>WBL Pro Tour</h2>
+        <p>
+          From Masters to Challengers, the WBL Pro Tour offers a structured
+          journey for every bowler. Dive into a world where every tournament is
+          a step closer to global recognition and where every strike counts.
+        </p>
+      </div>
+
+      <div class="wbl-protour-box">
+        <div class="owl-carousel owl-theme wbl-protour-slider">
+          <div class="item">
+            <img
+              src="assets/images/pro-slide-3.webp"
+              class="img-fluid for-web"
+              alt="Images"
+            />
+            <img
+              src="assets/images/pro-slide-3-mobile.webp"
+              class="img-fluid for-mobile"
+              alt="Images"
+            />
+          </div>
+          <div class="item">
+            <img
+              src="assets/images/pro-slide-2.webp"
+              class="img-fluid for-web"
+              alt="Images"
+            />
+            <img
+              src="assets/images/pro-slide-2-mobile.webp"
+              class="img-fluid for-mobile"
+              alt="Images"
+            />
+          </div>
+          <div class="item">
+            <img
+              src="assets/images/pro-slide-1.webp"
+              class="img-fluid for-web"
+              alt="Images"
+            />
+            <img
+              src="assets/images/pro-slide-1-mobile.webp"
+              class="img-fluid for-mobile"
+              alt="Images"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="wbl-protour-btn">
+        <a href="https://vimeo.com/870749195/1456fafb70" target="_blank"
+          >Learn More</a
+        >
+        <a href="#" target="_blank">Join Now</a>
+      </div>
+    </section>
+
+    <section id="wbl-ranking" class="ranking-section">
+      <div class="custom-container">
+        <div class="ranking-logo">
+          <img
+            src="assets/images/wbl-ranking-logo.webp"
+            alt="WBL Ranking Logo"
+          />
+        </div>
+        <div class="content content-main">
+          <div class="heading">
+            <h2><span class="brand-color-text">WBL</span> Rankings</h2>
+          </div>
+          <div>
+            <span class="text-bg"> Rise in Ranks, Shine on Global Stage </span>
+          </div>
+          <div class="desc">
+            <p>
+              With our Universal Bowling Performance Index (UBPI), we&apos;re
+              introducing a transparent, scientific ranking system. Whether
+              you&apos;re an emerging talent or a seasoned pro, see where you
+              stand on the global leaderboard.
+            </p>
+          </div>
+        </div>
+        <div class="banner">
+          <div class="content">
+            <div class="text-bold brand-color-text">
+              Shaping the Future of Bowling Ranking
+            </div>
+            <div class="desc">
+              <p>
+                Join us in our UBPI Roundtable sessions. Together, let's
+                finalize a ranking system that truly reflects skill, dedication,
+                and passion.
+              </p>
+            </div>
+          </div>
+          <div class="btn-wrapper">
+            <a
+              href="https://tally.so/r/wzM7GE"
+              target="_blank"
+              class="btn btn-light"
+              >Join Session</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="our-tech" class="tech-meets">
+      <div class="custom-container">
+        <div class="content">
+          <div class="heading">
+            <h2 class="brand-color-text">Tech meets bowling</h2>
+            <p>Revolution at the Intersection of Tech and Tradition</p>
+          </div>
+        </div>
+
+        <div class="tech-meets-2grid">
+          <div class="tech-meets-2grid-inner">
+            <video id="vid-1" preload="auto" autoplay muted loop playsinline>
+              <source
+                src="https://wbl-website-assets.s3.ap-south-1.amazonaws.com/wblTmsBg.mp4"
+                type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'
+              />
+            </video>
+            <div class="tech-meets-2grid-box">
+              <img
+                src="assets/images/logo-tech-1.webp"
+                class="img-fluid"
+                alt="Images"
+              />
+              <p>
+                A comprehensive suite for tournament organizers. Create
+                tournaments, publish to a global marketplace, manage financials
+                and much more.
+              </p>
+              <div class="btn-grid-s">
+                <a href="https://tms.worldbowlingleague.org/" target="_blank"
+                  >Learn More</a
+                >
+                <a
+                  href="https://calendly.com/wbl-tms/demo"
+                  target="_blank"
+                  class="patner-btn"
+                  >Early Bird Access</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="tech-meets-2grid-inner">
+            <video id="vid-2" preload="auto" autoplay muted loop playsinline>
+              <source
+                src="https://wbl-website-assets.s3.ap-south-1.amazonaws.com/wblAppBg.mp4"
+                type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'
+              />
+            </video>
+            <div class="tech-meets-2grid-box">
+              <img
+                src="assets/images/logo-tech-2.webp"
+                class="img-fluid logo-tech-2-i"
+                alt="Images"
+              />
+              <p>
+                The global hub for all bowlers in the world from global
+                professional athletes to casual bowlers. Watch, play, engage and
+                much more.
+              </p>
+              <div class="btn-grid-s">
+                <a
+                  href="https://vimeo.com/worldbowlingleague/keynote?ts=1357000&share=copy"
+                  target="_blank"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="tech-meets-1grid-inner">
+            <video id="vid-3" preload="auto" autoplay muted loop playsinline>
+              <source
+                src="https://wbl-website-assets.s3.ap-south-1.amazonaws.com/strikeVisionBg.mp4"
+                type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'
+              />
+            </video>
+            <div class="tech-meets-1grid-box">
+              <img
+                src="assets/images/logo-tech-3.webp"
+                class="img-fluid"
+                alt="Images"
+              />
+              <p>Join WBL StrikeVision AI Vanguard Program.</p>
+              <div class="btn-grid-s">
+                <a
+                  href="https://vimeo.com/worldbowlingleague/keynote?ts=1630000&share=copy"
+                  target="_blank"
+                  >Learn More</a
+                >
+                <a href="#" target="_blank" class="patner-btn"
+                  >Early Bird Access</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="porfolio-section">
+      <div class="custom-container">
+        <div class="content">
+          <div class="heading">
+            <h2 class="brand-color-text">Our Portfolio</h2>
+          </div>
+        </div>
+
+        <div class="image-wrapper">
+          <div class="single-img">
+            <img
+              src="assets/images/portfolio1.webp"
+              alt="img 1"
+              loading="lazy"
+            />
+          </div>
+          <div class="double-img">
+            <div>
+              <img
+                src="assets/images/portfolio2.webp"
+                alt="img 1"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <img
+                src="assets/images/portfolio3.webp"
+                alt="img 1"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="image-wrapper">
+          <div class="double-img">
+            <div>
+              <img
+                src="assets/images/portfolio4.webp"
+                alt="img 1"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <img
+                src="assets/images/portfolio5.webp"
+                alt="img 1"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="single-img">
+            <img
+              src="assets/images/portfolio6.webp"
+              alt="img 1"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="revolution-section">
+      <div class="custom-container">
+        <div class="content">
+          <div class="heading">
+            <h2>
+              Join the <br />
+              Bowling Revolution
+            </h2>
+          </div>
+          <div class="desc">
+            <p>
+              We're inviting global stakeholders to be a part of this
+              transformative journey. Together, let's elevate bowling to
+              unprecedented heights.
+            </p>
+          </div>
+          <div class="btn-wrapper">
+            <a href="#" target="_blank" class="btn btn-light">Join Session</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container-fluid">
+        <div class="footer-content">
+          <div class="footer-inner">
+            <img
+              id="logo"
+              src="assets/images/footer-logo.webp"
+              class="img-fluid"
+              alt="League Sports Co Footer"
+            />
+          </div>
+          <div class="footer-email-link">
+            <ul class="list-inline">
+              <li class="list-inline-items"><a href="#">Disclaimer</a></li>
+              <li class="list-inline-items">
+                <a href="#"> Privacy Policy </a>
+              </li>
+              <li class="list-inline-items">
+                <a href="#"> Terms of Use </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <a href="#">
+            <img src="./assets/images/message-ic.svg" alt="Linkedin icon" />
+            contact@worldbowlingleague.com</a
+          >
+
+          <ul class="list-inline">
+            <li class="list-inline-items">
+              <a
+                href="https://www.instagram.com/world_bowling_league/"
+                target="_blank"
+              >
+                <img
+                  src="assets/images/instag-ic.svg"
+                  class="img-fluid"
+                  alt="Image"
+                />
+                world_bowling_league</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-lasts">
+          <p>© 2025 World Bowling League, All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript">
+      function playVideo() {
+        const video = document.getElementById("vid-1");
+        video.play();
+        const video2 = document.getElementById("vid-2");
+        video2.play();
+        const video3 = document.getElementById("vid-3");
+        video3.play();
+
+        video2.addEventListener("suspend", () => {
+          video.play();
+          video2.play();
+          video3.play();
+          return;
+        });
+      }
+    </script>
+    <script>
+      (function () {
+        window.SM_PAGEIMPROVE = window.SM_PAGEIMPROVE || { ready: false };
+        window.addEventListener("pageimprove.initialized", function () {
+          window.SM_PAGEIMPROVE.ready = true;
+        });
+        var script = document.createElement("script");
+        script.id = "e3b30f25-06fe-4c9c-8330-399ae40620bb";
+        script.src = "https://pageimprove.io/react";
+        script.type = "module";
+        document.head.appendChild(script);
+      })();
+    </script>
+  </body>
+</html>

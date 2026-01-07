@@ -108,7 +108,6 @@
 }
 
 .games-nav-item {
-  font-family: 'Archivo', sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: #fff;
@@ -145,6 +144,72 @@
   font-size: 14px;
   opacity: 0.7;
   font-weight: 300;
+}
+
+/* Games Navigation Dropdown */
+.games-nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.games-nav-dropdown-toggle svg {
+  transition: transform 0.3s ease;
+}
+
+.games-nav-dropdown.active .games-nav-dropdown-toggle svg {
+  transform: rotate(180deg);
+}
+
+.games-dropdown-menu {
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: 0;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  min-width: 150px;
+  padding: 8px 0;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+  list-style: none;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.games-nav-dropdown.active .games-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.games-dropdown-menu li {
+  margin: 0;
+  padding: 0;
+}
+
+.games-dropdown-menu .games-nav-item {
+  display: block;
+  padding: 12px 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.2s ease;
+  border-bottom: none;
+}
+
+.games-dropdown-menu .games-nav-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.games-dropdown-menu .games-nav-item.active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.games-dropdown-menu .games-nav-item.active:after {
+  display: none;
 }
 
 /* Disclaimer */
@@ -231,4 +296,14 @@
 
 .games-content-section[style*="display: none"] {
   display: none !important;
+}
+
+/* Override WBL CSS to ensure navbar uses Archivo font */
+.site-header,
+.site-header *,
+.main-nav,
+.main-nav *,
+.header-inner,
+.header-inner * {
+  font-family: "Archivo", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif !important;
 }

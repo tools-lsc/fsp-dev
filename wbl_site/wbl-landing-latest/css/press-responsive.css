@@ -1,0 +1,626 @@
+@media (max-width: 1440px) {
+  .with-kivc-m-title p {
+    max-width: 280px;
+  }
+  .office-inner img {
+    height: auto;
+  }
+  .our-story-inner h2 {
+    -webkit-text-stroke: 1.5px rgb(255 255 255 / 50%);
+  }
+
+  .xtz-celebrity-right p {
+    max-width: 80%;
+  }
+
+  .with-kivc-4-text {
+    min-height: 350px;
+    margin-top: 0;
+  }
+
+  .with-kivc-3-text {
+    padding: 180px 0;
+  }
+
+  section.with-kivc:after {
+    width: 100%;
+    height: 55%;
+  }
+
+  .gamer-hub-banner-inner h1 {
+    padding-left: 0;
+    font-size: 50px;
+    line-height: 55px;
+  }
+
+  .what-we-do-inner h2 {
+    bottom: 0;
+  }
+
+  .with-kivc-1-text h2 {
+    padding: 100px 0;
+  }
+
+  .with-kivc-3-text,
+  .with-kivc-2-text {
+    margin: 0 auto;
+  }
+
+  video.image-mask.hero-banner-vd {
+    height: 100vh;
+  }
+
+  /* .gamer-hub-banner{height: 100%;} */
+
+  .gamer-hub-banner-inner h2 {
+    bottom: 20px;
+  }
+
+  .our-story-inner p {
+    max-width: 100%;
+  }
+
+  .sustain-right {
+    padding-left: 90px;
+  }
+
+  .title-sustain p {
+    max-width: 100%;
+  }
+
+  .gamer-links-footer {
+    padding-left: 170px;
+  }
+
+  .card-container .card img,
+  .info-section,
+  .info-container {
+    height: 220px;
+  }
+
+  .owl-carousel .owl-item .latest-inner-bg img {
+    height: 210px;
+  }
+
+  .our-asset-box-ti h3 {
+    max-width: 80%;
+  }
+
+  .our-asset-box-im a img {
+    height: 300px;
+  }
+
+  .team-xtz-inner p {
+    max-width: 100%;
+  }
+
+  .team-xtz {
+    min-height: 100%;
+  }
+
+  .with-kivc-m-title h2 {
+    max-width: 100%;
+    padding-left: 150px;
+  }
+
+  .name-list-v h3 {
+    font-size: 32px;
+    line-height: 36px;
+    padding-right: 40px;
+  }
+
+  .name-list-v {
+    left: 40px;
+    bottom: 27px;
+    width: 95%;
+  }
+
+  .team-xtz-inner,
+  .office-right {
+    min-height: 490px;
+  }
+
+  .nav-hamb__list-item a {
+    font-size: 70px;
+    line-height: 40px;
+  }
+
+  .with-kivc-2-image video,
+  .with-kivc-2-image img {
+    height: 380px;
+  }
+
+  .with-kivc-3-image video {
+    height: 380px;
+  }
+
+  .about-banner {
+    max-height: 100%;
+    padding-top: 250px;
+  }
+
+  .about-banner-text {
+    padding-top: 0;
+    max-width: 75%;
+  }
+
+  section.about-contribution:after {
+    height: 78%;
+    width: 96%;
+  }
+
+  .about-contribution-row {
+    padding: 50px 0;
+  }
+
+  .name-list-v h3:after {
+    right: 21px;
+  }
+
+  .lsc-logo-right {
+    min-width: 340px;
+    right: 0;
+  }
+  .who-we-are-box-text {
+    padding: 50px 0 50px 30px;
+  }
+
+  .who-we-are-box img {
+  }
+
+  .who-we-are-box-text p {
+    max-width: 90%;
+  }
+  .with-kivc-2-text h2 {
+    margin: 0 40px 0 auto;
+  }
+  .with-kivc-2-text p {
+    margin: 0 40px 0 auto;
+  }
+  .with-kivc-2-image video,
+  .with-kivc-2-image img {
+    width: 100%;
+  }
+  .where-we-box {
+    padding-left: 20px;
+    max-width: 90%;
+  }
+  .asset-bx-bg p {
+    font-size: 10px;
+    letter-spacing: 0;
+    font-weight: 600;
+  }
+  .asset-bx-bg h3 {
+    font-size: 9px;
+  }
+  .asset-bx img {
+    min-height: 280px;
+    max-height: 280px;
+  }
+
+  .asset-bx-6 img,
+  .asset-bx-7 img,
+  .asset-bx-8 img {
+    min-height: 180px;
+    max-height: 180px;
+  }
+}
+
+@media (max-width: 1400px) {
+}
+
+@media (max-width: 1280px) {
+  .about-contribution .with-kivc-2-text {
+    max-width: 100%;
+    margin-left: 40px !important;
+  }
+
+  .about-contribution .with-kivc-3-text {
+    max-width: 90%;
+  }
+  .sustain-right {
+    padding-left: 50px;
+  }
+
+  .name-list-v {
+    width: 95%;
+  }
+
+  .about-banner-text {
+    max-width: 67%;
+  }
+
+  .about-banner-text p {
+    font-size: 36px;
+    line-height: 49px;
+  }
+
+  .our-story-inner p {
+    font-size: 55px;
+    line-height: 70px;
+  }
+
+  .transactions-brand h3 {
+    font-size: 28px;
+  }
+  .with-kivc-m-title h2 {
+    padding-left: 140px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .team-members {
+    padding: 80px 50px;
+  }
+  .office-inners label {
+    font-size: 50px;
+  }
+
+  .sliding-text {
+    margin-top: 0;
+  }
+
+  .gamer-hub-banner:before {
+    background-size: 540px;
+  }
+
+  .gamer-hub-banner-inner h1 {
+    font-size: 36px;
+    line-height: 45px;
+  }
+
+  .gamer-hub-banner-inner h2 {
+    font-size: 24px;
+    max-width: 200px;
+  }
+
+  .with-kivc-3-text {
+    margin: 0 0px 0 auto;
+  }
+
+  .with-kivc-2-text {
+    margin: 0 0 0 auto;
+  }
+
+  .with-kivc-3-text {
+    padding: 100px 0;
+  }
+
+  .with-kivc-4-image {
+  }
+
+  .with-kivc-4-text {
+    margin-top: 0;
+    max-width: 100%;
+    margin-right: 20px;
+    padding: 10px 140px 10px 10px;
+    min-height: 280px;
+  }
+
+  .with-kivc-4-text a {
+    top: 40px;
+    max-width: 80px;
+  }
+
+  .left-right a img {
+    max-width: 167px;
+  }
+
+  .team-xtz-inner {
+    max-width: 100%;
+  }
+
+  .title-sustain h2 {
+    font-size: 70px;
+    line-height: 80px;
+  }
+
+  .footer-inner h2 {
+    font-size: 95px;
+    line-height: 100px;
+  }
+
+  .gamer-links-footer {
+    padding-left: 40px;
+  }
+
+  .lab label {
+    display: block;
+    margin: 10px 0 0;
+  }
+
+  .brand-left h2 {
+    font-size: 60px;
+  }
+
+  .brand-left p {
+    font-size: 17px;
+  }
+
+  .brand-left a span img {
+    max-width: 75px;
+  }
+
+  .left-keystate h2 {
+    font-size: 36px;
+  }
+
+  .transactions-brand h3 {
+    font-size: 22px;
+  }
+
+  .transactions-brand span {
+    font-size: 16px;
+  }
+
+  .right-keystate-bx h4 {
+    font-size: 20px;
+  }
+
+  .what-we-do-inner h2 {
+    bottom: 0;
+  }
+
+  section.with-kivc:after {
+    height: 57%;
+  }
+
+  .xtz-celebrity-left label {
+    font-size: 230px;
+  }
+
+  .xtz-celebrity-left:hover label:after {
+    font-size: 230px;
+  }
+
+  .with-kivc-1-text h2 {
+    margin: 0 20px;
+    max-width: 100%;
+  }
+
+  section.with-kivc:before {
+    height: 36%;
+  }
+
+  .our-story-inner p {
+    max-width: 100%;
+    font-size: 45px;
+    line-height: 60px;
+    margin-top: -20px;
+  }
+
+  .our-story-inner h2 {
+    font-size: 110px;
+  }
+
+  .title-sustain > img {
+    max-width: 440px;
+    margin-top: -113px;
+  }
+
+  .title-sustain h2 {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .card-container.team-kivc-block .card {
+    width: 47%;
+  }
+
+  .card-container.team-kivc-block .card img {
+    height: 190px;
+  }
+
+  .footer-bg-logo {
+    max-width: 380px;
+  }
+
+  .owl-carousel .owl-item .latest-inner-bg img {
+    height: 150px;
+  }
+
+  .our-asset-box-im a img {
+    height: 220px;
+  }
+
+  .our-asset-box-ti h3 {
+    font-size: 45px;
+  }
+
+  .our-asset-box {
+    margin: 60px 0;
+  }
+
+  .brand-sect-all .col-sm-12 .our-asset-box:nth-child(1) {
+    margin-top: 20px;
+  }
+
+  .our-asset-box-ti h3 span {
+    line-height: initial;
+  }
+
+  .collection-celeb {
+    padding-bottom: 150px;
+  }
+
+  .team-xtz-inner p {
+    max-width: 100%;
+  }
+
+  .team-xtz-inner h2 {
+    font-size: 50px;
+  }
+
+  .team-xtz-inner,
+  .office-right {
+    min-height: 570px;
+  }
+
+  .with-kivc-m-title h2 {
+    max-width: 100%;
+    font-size: 58px;
+  }
+
+  .brand-im-1 {
+    min-width: 170px;
+  }
+
+  .flip-card {
+    width: 100%;
+    height: 220px;
+  }
+
+  .flip-card-back h2 {
+    padding-top: 20px;
+    font-size: 11px;
+  }
+
+  .our-brand {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .name-list-v h3 {
+    font-size: 35px;
+    line-height: 35px;
+  }
+
+  .name-list-v {
+    width: 95%;
+  }
+
+  .with-kivc-2-image video,
+  .with-kivc-2-image img {
+    height: 310px;
+    width: 100%;
+  }
+
+  .with-kivc-3-image video {
+    width: 100%;
+    height: 310px;
+  }
+
+  .what-we h3 {
+    font-size: 80px;
+    max-width: 80%;
+    line-height: 80px;
+  }
+
+  .what-we p {
+    max-width: 70%;
+  }
+
+  .what-we {
+    position: relative;
+    right: -170px;
+  }
+
+  .about-banner {
+    max-height: 100%;
+    padding: 180px 100px 100px;
+  }
+
+  section.about-contribution:after {
+    height: 100%;
+    width: 100%;
+  }
+
+  .about-banner-text p {
+    font-size: 28px;
+    line-height: 44px;
+  }
+
+  .where-we-title h2 {
+    max-width: 100%;
+  }
+
+  .where-we-right {
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .where-we-title h3:after {
+    width: 50%;
+  }
+  .about-team-all {
+    padding: 100px 50px 140px;
+  }
+
+  section.about-contribution {
+    padding: 100px 50px 90px;
+  }
+
+  .where-we {
+    padding: 100px 50px 100px;
+  }
+
+  .where-we-title p {
+    margin-bottom: 0;
+  }
+  .about-contribution .with-kivc-2-text {
+    margin-left: 50px !important;
+  }
+
+  .about-contribution .with-kivc-2-text p {
+    margin-right: 0;
+  }
+
+  .about-contribution .with-kivc-3-text p {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 991px) {
+  body {
+    padding-left: 0;
+  }
+  .blog-title h3 {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .blog {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .blog-thumbnail img {
+    border-radius: 8px;
+  }
+
+  #articles .heading {
+    padding: 120px 0 50px;
+  }
+
+  #articles .heading h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .blog .col-sm {
+    flex-basis: auto;
+    width: 50% !important;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 575px) {
+  #articles .heading {
+    padding: 120px 0 50px;
+  }
+  .blog .col-sm {
+    width: 100% !important;
+    max-width: 100%;
+  }
+
+  .blog {
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+}

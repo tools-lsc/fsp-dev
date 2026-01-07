@@ -1,0 +1,163 @@
+/* WBL Light Theme Overrides - Default White Theme */
+#wbl-content {
+  background: #fff !important;
+}
+
+#wbl-content .wbl-page-container {
+  background: #fff !important;
+  color: #1f1f27 !important;
+}
+
+#wbl-content .wbl-page-container.light {
+  background: #fff !important;
+  color: #1f1f27 !important;
+}
+
+/* Override dark background from original WBL CSS */
+#wbl-content .wbl-page-container,
+#wbl-content .wbl-page-container * {
+  background-color: transparent;
+}
+
+/* Ensure all sections in WBL are white when light theme is active */
+#wbl-content .wbl-page-container.light,
+#wbl-content .wbl-page-container.light .unleasing-potential,
+#wbl-content .wbl-page-container.light .wbl-welcome,
+#wbl-content .wbl-page-container.light .w-global-n,
+
+#wbl-content .wbl-page-container.light,
+#wbl-content .wbl-page-container.light .become-p-b,
+#wbl-content .wbl-page-container.light .sliding-text {
+  background: #fff !important;
+}
+
+/* Text colors for light theme */
+#wbl-content .wbl-page-container.light h1,
+#wbl-content .wbl-page-container.light h2,
+#wbl-content .wbl-page-container.light h3,
+#wbl-content .wbl-page-container.light h4,
+#wbl-content .wbl-page-container.light h5,
+#wbl-content .wbl-page-container.light h6,
+#wbl-content .wbl-page-container.light p,
+#wbl-content .wbl-page-container.light label,
+#wbl-content .wbl-page-container.light span {
+  color: #000 !important;
+}
+
+/* Navigation toggle styling */
+#wbl-content .new-nav {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#wbl-content .new-nav .button-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Scroll down text color - black */
+#wbl-content .sdd {
+  color: #000 !important;
+}
+
+#wbl-content .light .sdd {
+  color: #000 !important;
+}
+
+/* Become The Part of Bowling Revolution section - white background */
+#wbl-content .become-p-b {
+  background: #fff !important;
+}
+
+#wbl-content .become-p-b-inner {
+  background: url(../../src/assets/images/wbl_last_section.jpg) no-repeat center !important;
+  background-size: cover !important;
+}
+
+#wbl-content .become-p-b-inner h2 {
+  color: #000 !important;
+}
+
+#wbl-content .become-p-b-inner h2:before {
+  background: #000 !important;
+}
+
+/* WPS Light Theme - Same as WBL */
+#wps-content {
+  background: #fff !important;
+}
+
+#wps-content .wbl-page-container {
+  background: #fff !important;
+  color: #1f1f27 !important;
+}
+
+#wps-content .wbl-page-container.light {
+  background: #fff !important;
+  color: #1f1f27 !important;
+}
+
+/* Override dark background from original WBL CSS for WPS */
+#wps-content .wbl-page-container,
+#wps-content .wbl-page-container * {
+  background-color: transparent;
+}
+
+/* Ensure all sections in WPS are white when light theme is active */
+#wps-content .wbl-page-container.light,
+#wps-content .wbl-page-container.light .unleasing-potential,
+#wps-content .wbl-page-container.light .wbl-welcome,
+#wps-content .wbl-page-container.light .w-global-n,
+#wps-content .wbl-page-container.light .b-m-tech,
+#wps-content .wbl-page-container.light .b-m-b-tech,
+#wps-content .wbl-page-container.light .elipse-s,
+#wps-content .wbl-page-container.light .become-p-b,
+#wps-content .wbl-page-container.light .sliding-text {
+  background: #fff !important;
+}
+
+/* Text colors for light theme in WPS */
+#wps-content .wbl-page-container.light h1,
+#wps-content .wbl-page-container.light h2,
+#wps-content .wbl-page-container.light h3,
+#wps-content .wbl-page-container.light h4,
+#wps-content .wbl-page-container.light h5,
+#wps-content .wbl-page-container.light h6,
+#wps-content .wbl-page-container.light p,
+#wps-content .wbl-page-container.light label,
+#wps-content .wbl-page-container.light span {
+  color: #000 !important;
+}
+
+/* Scroll down text color - black for WPS */
+#wps-content .sdd {
+  color: #000 !important;
+}
+
+#wps-content .light .sdd {
+  color: #000 !important;
+}
+
+/* Become The Part of Bowling Revolution section - white background for WPS */
+#wps-content .become-p-b {
+  background: #fff !important;
+}
+
+#wps-content .become-p-b-inner {
+  background: url(../../src/assets/images/wps-last-section.jpg) no-repeat center !important;
+  background-size: cover !important;
+}
+
+#wps-content .become-p-b-inner h2 {
+  color: #000 !important;
+}
+
+#wps-content .become-p-b-inner h2:before {
+  background: #000 !important;
+}

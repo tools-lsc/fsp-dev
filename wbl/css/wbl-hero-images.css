@@ -1,0 +1,45 @@
+/* WBL Hero Images - Behind Text */
+#wbl-content .unleasing-potential {
+  position: relative;
+  background: none !important; /* Override original background */
+  overflow: hidden;
+}
+
+.wbl-hero-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  display: flex;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.wbl-hero-image-left,
+.wbl-hero-image-right {
+  position: absolute;
+  top: 0;
+  height: 10%;
+  width: auto;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.wbl-hero-image-left {
+  left: 10%;
+  top: 20%;
+  width: 25%;
+  height: 65%;
+}
+
+.wbl-hero-image-right {
+  right: 10%;
+  top: 20%;
+  width: 20%;
+  height: 40%;
+}
+
+
+/* Ensure text is above images */
