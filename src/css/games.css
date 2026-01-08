@@ -251,14 +251,22 @@
     font-size: clamp(32px, 7vw, 56px);
   }
 
+  /* Move disclaimer above navigation on mobile */
   .games-hero-disclaimer {
-    bottom: 16px;
-    right: 16px;
-    max-width: calc(100% - 32px);
+    position: absolute;
+    bottom: 70px;
+    right: 24px;
+    left: 24px;
+    max-width: calc(100% - 48px);
+    margin-bottom: 0;
+    padding-bottom: 0;
+    z-index: 6;
   }
 
   .games-hero-nav {
-    bottom: 60px;
+    bottom: 0;
+    position: absolute;
+    padding-bottom: 16px;
   }
 
   .games-hero-nav .container {
@@ -267,24 +275,55 @@
   }
 
   .games-nav {
-    gap: 16px;
+    gap: 12px;
     flex-wrap: wrap;
+    justify-content: flex-start;
   }
 
   .games-nav-item {
     font-size: 14px;
     padding: 10px 16px;
-  }
-
-  .games-hero-disclaimer {
-    bottom: 16px;
-    right: 16px;
-    max-width: calc(100% - 32px);
+    white-space: nowrap;
   }
 
   .games-hero-disclaimer p {
     text-align: left;
     font-size: 11px;
+    margin-bottom: 0;
+  }
+
+  /* Fix dropdown menu alignment on mobile */
+  .games-dropdown-menu {
+    position: absolute;
+    bottom: calc(100% + 4px);
+    left: 0;
+    right: auto;
+    min-width: 120px;
+    width: auto;
+  }
+
+  .games-dropdown-menu .games-nav-item {
+    padding: 10px 16px;
+    white-space: nowrap;
+    display: block;
+    width: 100%;
+  }
+
+  /* Adjust hero section to accommodate disclaimer above nav */
+  .games-hero {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .games-hero-content {
+    flex: 1;
+  }
+
+  /* Container for disclaimer and nav on mobile */
+  .games-hero::after {
+    content: '';
+    display: block;
+    order: 2;
   }
 }
 
