@@ -162,12 +162,12 @@
 
 .games-dropdown-menu {
   position: absolute;
-  bottom: calc(100% + 4px);
+  bottom: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
+  border-radius: 4px 4px 0 0;
   min-width: 150px;
   padding: 8px 0;
   margin: 0;
@@ -184,6 +184,19 @@
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+  display: block;
+}
+
+/* Ensure dropdown items are always visible when dropdown is active */
+.games-nav-dropdown.active .games-dropdown-menu li {
+  display: block;
+  visibility: visible;
+}
+
+.games-nav-dropdown.active .games-dropdown-menu .games-nav-item {
+  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 .games-dropdown-menu li {
@@ -235,7 +248,7 @@
 @media (max-width: 768px) {
   .games-hero-content {
     padding-top: 100px;
-    padding-bottom: 60px;
+
   }
   
   .games-hero-content .container {
@@ -251,22 +264,25 @@
     font-size: clamp(32px, 7vw, 56px);
   }
 
-  /* Move disclaimer above navigation on mobile */
+  /* Move navigation tabs above disclaimer on mobile */
+  .games-hero-nav {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    z-index: 6;
+    padding-bottom: 0;
+  }
+
   .games-hero-disclaimer {
     position: absolute;
-    bottom: 70px;
+    bottom: 90px;
     right: 24px;
     left: 24px;
     max-width: calc(100% - 48px);
     margin-bottom: 0;
     padding-bottom: 0;
-    z-index: 6;
-  }
-
-  .games-hero-nav {
-    bottom: 0;
-    position: absolute;
-    padding-bottom: 16px;
+    z-index: 5;
   }
 
   .games-hero-nav .container {
@@ -286,6 +302,11 @@
     white-space: nowrap;
   }
 
+  /* Hide Athletes tab on mobile */
+  .games-nav-item:last-child {
+    display: none !important;
+  }
+
   .games-hero-disclaimer p {
     text-align: left;
     font-size: 11px;
@@ -295,18 +316,35 @@
   /* Fix dropdown menu alignment on mobile */
   .games-dropdown-menu {
     position: absolute;
-    bottom: calc(100% + 4px);
+    bottom: 0;
     left: 0;
     right: auto;
     min-width: 120px;
     width: auto;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    border-radius: 4px 4px 0 0;
+  }
+
+  .games-nav-dropdown.active .games-dropdown-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+  }
+
+  .games-dropdown-menu li {
+    display: block !important;
+    visibility: visible !important;
   }
 
   .games-dropdown-menu .games-nav-item {
     padding: 10px 16px;
     white-space: nowrap;
-    display: block;
+    display: block !important;
     width: 100%;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 
   /* Adjust hero section to accommodate disclaimer above nav */
