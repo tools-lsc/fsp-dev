@@ -3472,3 +3472,690 @@ body {
     }
 }
 
+/* ============================================
+   COMPREHENSIVE MOBILE RESPONSIVE STYLES
+   ============================================ */
+
+/* Mobile: Cards Container - Stack vertically (one card per line) */
+@media (max-width: 768px) {
+    /* Section with Background - Cards Container */
+    .section-with-bg,
+    .section-5-with-bg {
+        height: auto;
+        min-height: auto;
+        padding: 20px 16px;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        height: auto;
+    }
+
+    .gradient-card {
+        height: auto;
+        min-height: 400px;
+    }
+
+    .card-content {
+        padding: 24px 20px 0 20px;
+        min-height: 400px;
+    }
+
+    .card-header {
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 20px;
+    }
+
+    .card-logo {
+        width: 100%;
+    }
+
+    .logo-img {
+        max-width: 120px;
+    }
+
+    .card-description {
+        font-size: 16px;
+    }
+
+    .card-button {
+        font-size: 12px;
+        padding: 10px 20px;
+        width: 100%;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 12px;
+        margin: 0 -20px 0 -20px;
+        padding: 0 20px 20px 20px;
+    }
+
+    .grid-item {
+        height: 120px;
+    }
+
+    .grid-item.merged-row {
+        grid-column: span 1;
+    }
+
+    .grid-text {
+        font-size: 18px;
+        max-width: calc(100% - 40px);
+    }
+
+    .grid-item.merged-row .grid-text {
+        max-width: calc(100% - 40px);
+        font-size: 20px;
+    }
+
+    .grid-text-title {
+        font-size: 18px;
+    }
+
+    .grid-item.merged-row .grid-text-title {
+        font-size: 20px;
+    }
+
+    .grid-text-subtitle {
+        font-size: 12px;
+    }
+
+    .text-large {
+        font-size: 36px;
+    }
+
+    /* Section 6 - Philosophy */
+    .section-6-philosophy {
+        padding: 40px 16px;
+        min-height: auto;
+    }
+
+    .philosophy-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .philosophy-content {
+        padding-top: 0;
+    }
+
+    .philosophy-title {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .philosophy-text {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .philosophy-panels {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .philosophy-panel {
+        flex-direction: column;
+    }
+
+    .panel-image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .panel-content {
+        padding: 20px;
+    }
+
+    .panel-title {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .panel-description {
+        font-size: 14px;
+    }
+
+    .philosophy-compass {
+        display: none;
+    }
+
+    /* Last Section */
+    .last-section {
+        padding: 40px 16px;
+    }
+
+    .last-section-container {
+        max-width: 100%;
+    }
+
+    .last-section-title {
+        font-size: 32px;
+    }
+
+    .last-section-subtitle {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .last-section-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .last-section-card {
+        height: auto;
+        min-height: 300px;
+    }
+
+    .last-section-card-image {
+        height: 200px;
+    }
+
+    .last-section-card-title {
+        font-size: 20px;
+    }
+
+    .last-section-card-description {
+        font-size: 14px;
+    }
+
+    .last-section-button {
+        width: 100%;
+        padding: 14px 24px;
+        font-size: 14px;
+    }
+
+    /* FFS Section */
+    .ffs-section {
+        padding: 40px 16px;
+    }
+
+    .ffs-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .ffs-image-container {
+        width: 100%;
+    }
+
+    .ffs-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .ffs-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .ffs-question {
+        font-size: 28px;
+        margin-bottom: 16px;
+    }
+
+    .ffs-description {
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
+
+    .ffs-acronym {
+        font-size: 80px;
+    }
+
+    .ffs-full-name {
+        font-size: 14px;
+    }
+}
+
+/* World's Best - Mobile Responsive */
+@media (max-width: 768px) {
+    /* How It Works Section */
+    .how-it-works-section {
+        padding: 40px 16px;
+    }
+
+    .how-it-works-container {
+        padding: 0;
+    }
+
+    .how-it-works-header {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        margin-bottom: 30px;
+    }
+
+    .how-it-works-title {
+        font-size: 28px;
+    }
+
+    .btn-start-playing {
+        width: 100%;
+        text-align: center;
+    }
+
+    .how-it-works-steps {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .how-it-works-step {
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .step-image-wrapper {
+        width: 80px;
+        height: 80px;
+        flex-shrink: 0;
+    }
+
+    .step-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .step-content {
+        flex: 1;
+    }
+
+    .step-number {
+        font-size: 24px;
+    }
+
+    .step-description {
+        font-size: 14px;
+    }
+
+    /* Bowler Section */
+    .bowler-section {
+        padding: 40px 16px;
+        min-height: 60vh;
+    }
+
+    .bowler-container {
+        padding: 0;
+    }
+
+    .bowler-category {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    .bowler-title {
+        font-size: 32px;
+        margin-bottom: 16px;
+    }
+
+    .bowler-description {
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
+
+    .bowler-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .bowler-btn {
+        width: 100%;
+        padding: 14px 24px;
+        font-size: 14px;
+    }
+
+    /* Squash Section */
+    .squash-section {
+        padding: 40px 16px;
+        min-height: 60vh;
+    }
+
+    .squash-container {
+        padding: 0;
+    }
+
+    .squash-category {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    .squash-title {
+        font-size: 32px;
+        margin-bottom: 16px;
+    }
+
+    .squash-description {
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
+
+    .squash-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .squash-btn {
+        width: 100%;
+        padding: 14px 24px;
+        font-size: 14px;
+    }
+
+    /* Cricket Section */
+    .cricket-section {
+        padding: 40px 16px;
+        min-height: 60vh;
+    }
+
+    .cricket-container {
+        padding: 0;
+    }
+
+    .cricket-category {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    .cricket-title {
+        font-size: 32px;
+        margin-bottom: 16px;
+    }
+
+    .cricket-description {
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
+
+    .cricket-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .cricket-btn {
+        width: 100%;
+        padding: 14px 24px;
+        font-size: 14px;
+    }
+
+    /* Club Section */
+    .club-section {
+        padding: 40px 16px;
+        min-height: 60vh;
+    }
+
+    .club-container {
+        padding: 0;
+    }
+
+    .club-category {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    .club-title {
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+
+    .club-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .club-btn {
+        width: 100%;
+        padding: 14px 24px;
+        font-size: 14px;
+    }
+
+    /* Redeem Win Big Section */
+    .redeem-win-big-section {
+        padding: 40px 16px;
+    }
+
+    .redeem-win-big-container {
+        max-width: 100%;
+    }
+
+    .redeem-win-big-title {
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+
+    .redeem-win-big-subtitle {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+
+    .redeem-win-big-body {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .redeem-win-big-grid {
+        gap: 20px;
+    }
+
+    .redeem-grid-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .redeem-card-item {
+        width: 100%;
+    }
+
+    .redeem-card-image {
+        height: 200px;
+    }
+
+    .redeem-card-text {
+        font-size: 14px;
+    }
+
+    .btn-join-now {
+        font-size: 12px;
+        padding: 10px 20px;
+    }
+
+    .redeem-win-big-bottom {
+        margin-top: 30px;
+    }
+
+    .redeem-bottom-image {
+        height: 200px;
+    }
+
+    .redeem-bottom-text {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+
+    /* Passion Points Section */
+    .passion-points-section {
+        padding: 40px 16px;
+    }
+
+    .passion-points-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .passion-points-left,
+    .passion-points-right {
+        width: 100%;
+    }
+
+    .passion-points-title {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+
+    .passion-points-subtitle {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .passion-points-desc {
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
+
+    .btn-start-earning-passion {
+        width: 100%;
+        text-align: center;
+        padding: 14px 24px;
+        font-size: 14px;
+    }
+
+    .partners-header {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+
+    .partners-title {
+        font-size: 16px;
+    }
+
+    .partners-cards {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .partner-card {
+        width: 100%;
+        height: 80px;
+    }
+
+    /* Big Prizes Section */
+    .big-prizes-section {
+        padding: 40px 16px;
+    }
+
+    .big-prizes-title {
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+
+    .big-prizes-ticker-wrapper {
+        margin-bottom: 24px;
+    }
+
+    .prize-card {
+        min-width: 280px;
+        height: 300px;
+    }
+
+    .prize-card-title {
+        font-size: 18px;
+    }
+
+    .prize-card-subtitle {
+        font-size: 14px;
+    }
+
+    .btn-download-app-prizes {
+        width: 100%;
+        text-align: center;
+        padding: 14px 24px;
+        font-size: 14px;
+    }
+}
+
+/* Extra Small Mobile Devices */
+@media (max-width: 480px) {
+    .cards-container {
+        gap: 16px;
+    }
+
+    .card-content {
+        padding: 20px 16px 0 16px;
+        min-height: 350px;
+    }
+
+    .card-description {
+        font-size: 14px;
+    }
+
+    .card-button {
+        font-size: 11px;
+        padding: 8px 16px;
+    }
+
+    .grid-item {
+        height: 100px;
+    }
+
+    .grid-text {
+        font-size: 16px;
+        left: 12px;
+    }
+
+    .grid-text-title {
+        font-size: 16px;
+    }
+
+    .grid-item.merged-row .grid-text-title {
+        font-size: 18px;
+    }
+
+    .philosophy-title {
+        font-size: 24px;
+    }
+
+    .philosophy-text {
+        font-size: 16px;
+    }
+
+    .last-section-title {
+        font-size: 24px;
+    }
+
+    .worlds-best-title {
+        font-size: 32px;
+    }
+
+    .worlds-best-subtitle {
+        font-size: 16px;
+    }
+}
+
+/* Fix for Download App Card - Prevent Cropping */
+.grid-item-download-app {
+    padding: 16px !important;
+    min-height: 147px !important;
+}
+
+.grid-item-download-app .grid-text-top {
+    margin-bottom: 12px !important;
+    text-align: center !important;
+}
+
+.grid-item-download-app .grid-text-top .grid-text-title {
+    font-size: 18px !important;
+    line-height: 1.2 !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+}
+
+.grid-item-download-app .grid-image-full {
+    align-items: center !important;
+    overflow: visible !important;
+    min-height: 0 !important;
+    padding: 0 8px !important;
+}
+
+.grid-item-download-app .grid-image-full .grid-image {
+    max-width: 100% !important;
+    width: auto !important;
+    max-height: 60px !important;
+    object-fit: contain !important;
+    object-position: center !important;
+}
