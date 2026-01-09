@@ -593,6 +593,21 @@
       });
     }
 
+    // Submenu Toggle Functionality - Register FIRST to prevent other handlers from closing dropdown
+    const submenuToggles = document.querySelectorAll('.dropdown-submenu-toggle');
+    submenuToggles.forEach(toggle => {
+      toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        
+        const submenu = this.closest('.dropdown-submenu');
+        if (!submenu) return;
+        
+        submenu.classList.toggle('active');
+      }, true); // Use capture phase to run first
+    });
+
     // Dropdown Toggle Functionality
     const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
     const navDropdowns = document.querySelectorAll('.nav-dropdown');
@@ -652,19 +667,6 @@
       link.addEventListener('click', (e) => e.preventDefault());
     });
 
-    // Submenu Toggle Functionality
-    const submenuToggles = document.querySelectorAll('.dropdown-submenu-toggle');
-    submenuToggles.forEach(toggle => {
-      toggle.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        
-        const submenu = this.closest('.dropdown-submenu');
-        if (!submenu) return;
-        
-        submenu.classList.toggle('active');
-      });
-    });
 
     // FAQ Accordion Functionality
     const faqToggles = document.querySelectorAll('.faq-toggle');

@@ -1315,6 +1315,21 @@
       });
     }
 
+    // Submenu Toggle Functionality - Register FIRST to prevent other handlers from closing dropdown
+    const submenuToggles = document.querySelectorAll('.dropdown-submenu-toggle');
+    submenuToggles.forEach(toggle => {
+      toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        
+        const submenu = this.closest('.dropdown-submenu');
+        if (!submenu) return;
+        
+        submenu.classList.toggle('active');
+      }, true); // Use capture phase to run first
+    });
+
     // Dropdown Toggle Functionality
     const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
     const dropdownLinks = document.querySelectorAll('.dropdown-menu a:not(.dropdown-toggle):not(.dropdown-submenu-toggle)');
@@ -1364,19 +1379,6 @@
       }
     });
 
-    // Submenu Toggle Functionality
-    const submenuToggles = document.querySelectorAll('.dropdown-submenu-toggle');
-    submenuToggles.forEach(toggle => {
-      toggle.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        
-        const submenu = this.closest('.dropdown-submenu');
-        if (!submenu) return;
-        
-        submenu.classList.toggle('active');
-      });
-    });
 
     const comingSoonLinks = document.querySelectorAll('.coming-soon');
     comingSoonLinks.forEach(link => {
