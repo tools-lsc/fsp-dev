@@ -41,6 +41,17 @@ body{
 .dropdown-menu .coming-soon{opacity:.7;cursor:not-allowed;color:#0000FF}
 .dropdown-menu .coming-soon span{font-size:15px;opacity:.7;margin-left:4px}
 
+/* Submenu within Dropdown */
+.dropdown-submenu{position:relative}
+.dropdown-submenu-toggle{color:#0000FF;padding-right:32px;position:relative;cursor:pointer}
+.dropdown-submenu-toggle:after{content:">";position:absolute;right:12px;top:50%;transform:translateY(-50%);color:#0000FF;font-size:14px;transition:transform 0.3s ease}
+.dropdown-submenu.active .dropdown-submenu-toggle:after{transform:translateY(-50%) rotate(90deg)}
+.dropdown-submenu-items{max-height:0;overflow:hidden;transition:max-height 0.3s ease;padding:0;margin:0;list-style:none}
+.dropdown-submenu.active .dropdown-submenu-items{max-height:200px}
+.dropdown-submenu-items li{padding:0;margin:0}
+.dropdown-submenu-items a{padding:8px 20px 8px 40px;color:#0000FF;font-size:14px;display:block;text-decoration:none;transition:background 0.2s ease}
+.dropdown-submenu-items a:hover{background:rgba(0,0,255,.05)}
+
 /* Hamburger Menu */
 .hamburger-btn{display:none;flex-direction:column;gap:5px;background:rgba(255,255,255,0.95);border:1px solid rgba(0,0,0,0.1);border-radius:8px;cursor:pointer;padding:10px;z-index:1001;position:fixed;right:40px;top:32px;width:44px;height:44px;justify-content:center;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,0.15),0 0 0 1px rgba(0,0,0,0.05);transition:all 0.3s ease;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
 .hamburger-btn:hover{background:rgba(255,255,255,1);box-shadow:0 4px 12px rgba(0,0,0,0.2),0 0 0 1px rgba(0,0,0,0.1);transform:scale(1.05)}
@@ -2677,6 +2688,17 @@ body{
   .dropdown-menu a:hover,.dropdown-menu a:active{background:rgba(255,255,255,0.08);opacity:1}
   .dropdown-menu .coming-soon{opacity:0.5;color:#fff}
   .dropdown-menu .coming-soon span{font-size:13px;opacity:0.8;margin-left:6px}
+  /* Submenu in Mobile */
+  .dropdown-submenu{width:100%;position:relative}
+  .dropdown-submenu-toggle{color:#fff;padding:12px 28px 12px 44px;opacity:0.9;display:flex;align-items:center;justify-content:space-between;min-height:44px;cursor:pointer;-webkit-tap-highlight-color:transparent;text-decoration:none;transition:all 0.2s ease;background:transparent;font-weight:400}
+  .dropdown-submenu-toggle:hover,.dropdown-submenu-toggle:active{background:rgba(255,255,255,0.08);opacity:1}
+  .dropdown-submenu-toggle:after{content:"";width:8px;height:8px;border:none;border-right:2px solid rgba(255,255,255,0.7);border-bottom:2px solid rgba(255,255,255,0.7);transform:rotate(45deg);transition:transform 0.3s ease;position:static;flex-shrink:0}
+  .dropdown-submenu.active .dropdown-submenu-toggle:after{transform:rotate(-135deg)}
+  .dropdown-submenu-items{position:static;max-height:0;overflow:hidden;background:rgba(0,0,0,0.2);box-shadow:inset 0 1px 0 rgba(255,255,255,0.05);transition:max-height 0.35s cubic-bezier(0.4,0,0.2,1);padding:0;margin:0;list-style:none;width:100%}
+  .dropdown-submenu.active .dropdown-submenu-items{max-height:200px}
+  .dropdown-submenu-items li{width:100%;text-align:left;padding:0}
+  .dropdown-submenu-items a{padding:12px 28px 12px 60px;opacity:0.9;color:#fff;display:flex;align-items:center;justify-content:flex-start;width:100%;text-align:left;min-height:44px;-webkit-tap-highlight-color:transparent;text-decoration:none;transition:all 0.2s ease;background:transparent;font-weight:400;font-size:14px}
+  .dropdown-submenu-items a:hover,.dropdown-submenu-items a:active{background:rgba(255,255,255,0.08);opacity:1}
   .main-nav .btn-join-mobile{display:flex !important;align-items:center;justify-content:center;position:relative;transform:none;right:auto;top:auto;margin:0 28px 24px;background:#fff;color:#0000FF;padding:14px 24px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px;text-align:center;box-sizing:border-box;transition:all 0.2s ease;box-shadow:0 4px 12px rgba(0,0,0,0.15);flex-shrink:0;z-index:10}
   .main-nav .btn-join-mobile:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(0,0,0,0.2)}
   .btn-join-desktop{display:none !important}

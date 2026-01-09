@@ -42,7 +42,13 @@
             <a href="#" class="dropdown-toggle">Developers</a>
             <ul class="dropdown-menu">
               <li><a href="documentation.html">Documentation</a></li>
-              <li><a href="league-automation.html" class="active">League Automation</a></li>
+              <li class="dropdown-submenu">
+                <a href="#" class="dropdown-submenu-toggle">League Automations</a>
+                <ul class="dropdown-submenu-items">
+                  <li><a href="ai-agents-for-sports.html">AI Agents for Sports</a></li>
+                  <li><a href="broadcast-production-automation.html" class="active">Broadcast and Production Automation</a></li>
+                </ul>
+              </li>
             </ul>
           </li>
           <li class="nav-dropdown">
@@ -334,7 +340,7 @@
     // Dropdown Toggle Functionality
     const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
     const navDropdowns = document.querySelectorAll('.nav-dropdown');
-    const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
+    const dropdownLinks = document.querySelectorAll('.dropdown-menu a:not(.dropdown-toggle):not(.dropdown-submenu-toggle)');
 
     dropdownToggles.forEach(toggle => {
       toggle.addEventListener('click', function(e) {
@@ -346,9 +352,14 @@
         
         const isActive = dropdown.classList.contains('active');
         
-        // Close all dropdowns first
+        // Close sibling dropdowns (same level) but keep parent dropdowns open
+        const parentDropdown = dropdown.parentElement.closest('.nav-dropdown');
         navDropdowns.forEach(dd => {
-          dd.classList.remove('active');
+          // Only close if it's a sibling (same parent) or unrelated, not if it's a parent
+          const ddParent = dd.parentElement.closest('.nav-dropdown');
+          if (dd !== dropdown && ddParent === parentDropdown) {
+            dd.classList.remove('active');
+          }
         });
         
         // If it wasn't active, open it
@@ -371,9 +382,11 @@
     document.addEventListener('click', function(e) {
       const target = e.target;
       const isDropdownToggle = target.closest('.dropdown-toggle');
+      const isSubmenuToggle = target.closest('.dropdown-submenu-toggle');
       const isInDropdown = target.closest('.nav-dropdown');
+      const isInSubmenu = target.closest('.dropdown-submenu');
       
-      if (!isDropdownToggle && !isInDropdown) {
+      if (!isDropdownToggle && !isSubmenuToggle && !isInDropdown && !isInSubmenu) {
         navDropdowns.forEach(dd => {
           dd.classList.remove('active');
         });
@@ -385,6 +398,20 @@
     comingSoonLinks.forEach(link => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
+      });
+    });
+
+    // Submenu Toggle Functionality
+    const submenuToggles = document.querySelectorAll('.dropdown-submenu-toggle');
+    submenuToggles.forEach(toggle => {
+      toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const submenu = this.closest('.dropdown-submenu');
+        if (!submenu) return;
+        
+        submenu.classList.toggle('active');
       });
     });
   </script>
