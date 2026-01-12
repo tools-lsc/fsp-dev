@@ -638,6 +638,11 @@ body{
   display:block;
   white-space:nowrap;
 }
+@media (max-width: 768px) {
+  .compete-title-line{
+    white-space:normal;
+  }
+}
 .compete-subtitle{
   font-size:20px;
   font-weight:500;
@@ -2761,7 +2766,12 @@ body{
   .features-grid>.feature-card:nth-child(2n){border-right:1px solid #E6E6E6}
   .features-grid>.feature-card:nth-child(6){border-right:1px solid #E6E6E6}
   .compete-container{grid-template-columns:1fr;gap:60px}
-  .compete-images{height:400px}
+  .compete-title{font-size:40px;line-height:1.1}
+  .compete-subtitle{font-size:18px}
+  .compete-section{padding:80px 40px 100px;height:auto;min-height:auto}
+  .compete-content{padding-right:0}
+  .compete-desc{max-width:100%}
+  .compete-images{height:400px;justify-content:center}
   .compete-phone-large{width:240px;height:473px}
   .compete-phone-small{width:170px;height:253px;right:200px}
   .redeem-win-big-section{padding:60px 24px 80px}
@@ -2867,13 +2877,20 @@ body{
   .deposit-title-secondary{font-size:24px}
   .deposit-subtitle{font-size:16px}
   .deposit-header{flex-direction:column}
-  .compete-title{font-size:36px}
-  .compete-subtitle{font-size:18px}
-  .compete-section{padding:70px 24px 100px;height:auto;min-height:auto}
+  .compete-title{font-size:32px;line-height:1.1;margin-bottom:20px}
+  .compete-subtitle{font-size:16px;margin-bottom:20px}
+  .compete-section{padding:60px 20px 80px;height:auto;min-height:auto}
+  .compete-container{gap:40px}
   .compete-content{padding-right:0}
-  .compete-images{height:auto;min-height:400px;overflow:visible;padding-bottom:20px}
-  .compete-phone-large{width:240px;height:auto;max-height:473px}
-  .compete-phone-small{width:170px;height:auto;max-height:253px}
+  .compete-desc{font-size:15px;margin-bottom:24px;max-width:100%}
+  .compete-list{font-size:15px;margin-bottom:32px;padding-left:18px}
+  .compete-list li{font-size:15px;margin-bottom:12px;line-height:1.4}
+  .btn-play-now{font-size:18px;padding:10px 32px;width:100%;max-width:300px;margin-bottom:24px}
+  .compete-logos{flex-direction:column;align-items:flex-start;gap:16px;margin-top:24px}
+  .app-store-badge{width:100%;max-width:300px;justify-content:center}
+  .compete-images{height:auto;min-height:350px;overflow:visible;padding-bottom:20px;justify-content:center}
+  .compete-phone-large{width:200px;height:auto;max-height:394px}
+  .compete-phone-small{width:140px;height:auto;max-height:208px;right:auto;left:50%;transform:translate(-50%,-50%);margin-left:-80px}
   .redeem-win-big-title{font-size:36px}
   .redeem-win-big-subtitle{font-size:20px}
   .redeem-win-big-body{font-size:18px;margin-bottom:40px}
