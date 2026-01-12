@@ -29,6 +29,14 @@
 .how-it-works-header{
   margin-bottom:64px;
 }
+.how-it-works-kicker{
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:0.24em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,0.7);
+  margin:0 0 12px;
+}
 .how-it-works-title{
   font-size:clamp(36px, 4vw, 48px);
   font-weight:500;
@@ -51,6 +59,13 @@
   grid-template-columns:repeat(3, 1fr);
   gap:24px;
 }
+.how-it-works-actions{
+  margin-top:40px;
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  flex-wrap:wrap;
+}
 .how-it-works-step{
 
   border-radius:16px;
@@ -70,12 +85,12 @@
   background:#fff;
   border:1px solid rgba(255,255,255,0.3);
   padding:12px;
+  aspect-ratio:1 / 1;
 }
 .step-image{
   width:100%;
-  height:auto;
-  max-height:300px;
-  object-fit:contain;
+  height:100%;
+  object-fit:cover;
 }
 .step-content{
   display:flex;
@@ -106,6 +121,14 @@
   height:2px;
   background:rgba(255, 255, 255, 0.3);
 }
+.step-title{
+  font-size:18px;
+  font-weight:600;
+  line-height:1.3;
+  letter-spacing:-0.01em;
+  color:#fff;
+  margin:0;
+}
 .step-description{
   font-size:16px;
   font-weight:400;
@@ -124,21 +147,21 @@
 }
 
 /* Business Hero Section */
-.business-hero{position:relative;overflow:hidden;height:100vh;background:#0000FF}
-.business-hero::before{content:"";position:absolute;inset:0;background:#0000FF;z-index:0}
-.business-hero-bg{position:absolute;inset:0;pointer-events:none;z-index:1}
-.business-hero-texture{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.18;mix-blend-mode:soft-light}
+.business-hero{position:relative;overflow:hidden;height:100vh;background:var(--fsp-blue)}
+.business-hero::before{content:none}
+.business-hero-bg{position:absolute;inset:0;pointer-events:none}
+.business-hero-texture{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:1;mix-blend-mode:lighten}
 .business-hero-ascii{position:absolute;right:-40px;bottom:-20px;width:700px;height:730px;opacity:0.85}
-.business-hero-content{position:relative;z-index:2;height:100vh;display:flex;flex-direction:column;justify-content:center;padding:102px 0 84px}
-.business-hero .container{max-width:none;margin:0;padding-left:64px;padding-right:24px}
-.business-hero-text{max-width:900px}
+.business-hero-content{position:relative;height:100vh;display:flex;flex-direction:column;justify-content:center;padding:102px 0 84px}
+.business-hero .container{max-width:none;margin:0;padding-left:40px;padding-right:40px}
+.business-hero-text{max-width:none}
 .business-hero-kicker{font-size:12px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:rgba(255,255,255,0.7);margin:0 0 18px}
-.business-hero-title{font-weight:500;letter-spacing:-0.04em;line-height:1.02;font-size:70px;color:#FFFFFF;margin-bottom:24px}
-.business-hero-subtitle{font-weight:300;letter-spacing:-0.0171em;line-height:1.4;font-size:clamp(18px, 2.5vw, 24px);color:rgba(255,255,255,0.9);margin-bottom:36px;max-width:900px}
-.business-hero-buttons{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
-.btn-integrate-now{display:inline-flex;align-items:center;justify-content:center;background:#fff;color:#000;font-size:20px;font-weight:400;line-height:1.25;letter-spacing:-0.019em;padding:7px 40px;border-radius:20px;text-decoration:none;transition:opacity 0.2s ease}
+.business-hero-title{font-weight:500;letter-spacing:-0.057em;line-height:.83;font-size:clamp(40px,6vw,70px);color:var(--text);margin:0}
+.business-hero-subtitle{font-weight:400;letter-spacing:-.017em;line-height:1.4;font-size:22px;color:var(--text);margin:24px 0 0;max-width:600px}
+.business-hero-buttons{display:flex;gap:16px;margin-top:40px;flex-wrap:wrap;align-items:stretch}
+.btn-integrate-now{display:inline-flex;align-items:center;justify-content:center;background:#fff;color:#000;font-size:20px;font-weight:400;line-height:1.25;letter-spacing:-0.019em;padding:7px 40px;border-radius:20px;text-decoration:none;white-space:nowrap;transition:opacity 0.2s ease}
 .btn-integrate-now:hover{opacity:0.9}
-.btn-contact-sales{display:inline-flex;align-items:center;justify-content:center;background:transparent;color:#fff;font-size:20px;font-weight:400;line-height:1.25;letter-spacing:-0.019em;padding:7px 40px;border-radius:20px;border:1px solid #fff;text-decoration:none;transition:opacity 0.2s ease}
+.btn-contact-sales{display:inline-flex;align-items:center;justify-content:center;background:transparent;color:#fff;font-size:20px;font-weight:400;line-height:1.25;letter-spacing:-0.019em;padding:7px 40px;border-radius:20px;border:1px solid #fff;text-decoration:none;white-space:nowrap;transition:opacity 0.2s ease}
 .btn-contact-sales:hover{opacity:0.9}
 
 /* Business Revenue Section */
@@ -234,14 +257,8 @@
 
 /* Responsive - Mobile */
 @media (max-width: 960px){
-    .business-hero{height:auto;min-height:100vh}
-  .business-hero-content{height:auto;min-height:100vh;padding:120px 0 80px}
-  .business-hero .container{padding-left:40px;padding-right:24px}
   .business-hero-ascii{width:520px;right:-10%}
   .business-hero-kicker{font-size:11px}
-  .business-hero-title{font-size:54px}
-  .business-hero-buttons{flex-direction:column;align-items:flex-start;gap:16px}
-  .btn-integrate-now,.btn-contact-sales{width:100%;max-width:280px}
   .business-revenue-container{padding:0 24px}
   .business-revenue-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:0;overflow-x:visible}
   .business-revenue-card{width:auto;min-width:auto;border-right:none;height:auto;min-height:220px}
@@ -261,14 +278,13 @@
 }
 
 @media (max-width: 640px){
-  .business-hero{height:auto;min-height:100vh}
-  .business-hero-content{height:auto;min-height:100vh;padding:120px 0 60px}
-  .business-hero .container{padding-left:24px;padding-right:24px}
+  .business-hero-content{padding:56px 0 120px}
+  .business-hero .container{padding-left:24px}
   .business-hero-ascii{width:350px;opacity:0.6;right:-15%}
   .business-hero-kicker{font-size:10px}
-  .business-hero-title{font-size:38px;line-height:1.05;margin-bottom:28px}
-  .business-hero-buttons{width:100%}
-  .btn-integrate-now,.btn-contact-sales{font-size:18px;width:100%;max-width:100%}
+  .business-hero-subtitle{font-size:18px}
+  .business-hero-buttons{flex-direction:column;width:100%}
+  .btn-integrate-now,.btn-contact-sales{width:100%;justify-content:center}
   .business-revenue{padding:60px 0 80px}
   .business-revenue-container{padding:0 20px}
   .business-revenue-title{font-size:36px}
@@ -761,10 +777,17 @@
   padding:80px 0 60px;
 }
 .enterprise-macro-container{
-  max-width:1000px;
+  max-width:1400px;
   margin:0 auto;
   padding:0 40px;
-  text-align:center;
+  display:grid;
+  grid-template-columns:1.05fr 0.95fr;
+  gap:80px;
+  align-items:center;
+}
+.enterprise-macro-content{
+  text-align:left;
+  max-width:560px;
 }
 .enterprise-macro-title{
   font-size:clamp(32px, 4vw, 48px);
@@ -781,6 +804,16 @@
   letter-spacing:-0.017em;
   color:#4D4D4D;
   margin:0;
+}
+.enterprise-macro-media{
+  display:flex;
+  justify-content:flex-end;
+}
+.enterprise-macro-media img{
+  width:100%;
+  height:auto;
+  max-width:520px;
+  display:block;
 }
 
 /* Enterprise Stack */
@@ -1049,6 +1082,11 @@
   color:#000;
   margin:0;
 }
+.enterprise-tab-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
 .enterprise-tab-visual{
   display:flex;
   flex-direction:column;
@@ -1081,15 +1119,14 @@
   max-width:1200px;
   margin:0 auto;
   padding:0 40px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
-  align-items:center;
-}
-.enterprise-io-text{
   display:flex;
   flex-direction:column;
-  gap:20px;
+  align-items:center;
+  gap:32px;
+}
+.enterprise-io-header{
+  text-align:center;
+  max-width:720px;
 }
 .enterprise-io-title{
   font-size:clamp(36px, 4vw, 48px);
@@ -1107,10 +1144,35 @@
   color:#4D4D4D;
   margin:0;
 }
+.enterprise-io-visuals{
+  width:100%;
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:24px;
+}
+.enterprise-io-card{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  aspect-ratio:1272 / 1216;
+  border-radius:16px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:0 18px 40px rgba(0,0,0,0.12);
+}
+.enterprise-io-image{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.enterprise-io-image-dashboard{
+  object-position:top center;
+}
 .enterprise-io-actions{
   display:flex;
   flex-wrap:wrap;
   gap:16px;
+  justify-content:center;
 }
 .btn-contact-sales-outline{
   display:inline-flex;
@@ -1131,34 +1193,7 @@
 .btn-contact-sales-outline:hover{
   opacity:0.9;
 }
-.enterprise-io-visual{
-  position:relative;
-  display:flex;
-  align-items:flex-end;
-  justify-content:flex-end;
-  min-height:420px;
-}
-.enterprise-io-code,
-.enterprise-io-dashboard{
-  width:100%;
-  max-width:520px;
-  height:auto;
-  border-radius:16px;
-  box-shadow:0 18px 40px rgba(0,0,0,0.12);
-}
-.enterprise-io-code{
-  position:relative;
-  z-index:1;
-}
-.enterprise-io-dashboard{
-  position:absolute;
-  z-index:2;
-  right:0;
-  bottom:0;
-  width:72%;
-  max-width:420px;
-  box-shadow:0 18px 40px rgba(0,0,0,0.16);
-}/* Integration Strip */
+/* Integration Strip */
 .enterprise-integration-strip{
   background:#F5F7FF;
   padding:56px 0;
@@ -1363,14 +1398,27 @@
   .enterprise-cta-container{
     padding:0 24px;
   }
+  .enterprise-macro-container{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+  .enterprise-macro-content{
+    max-width:none;
+  }
+  .enterprise-macro-media{
+    justify-content:flex-start;
+  }
+  .enterprise-macro-media img{
+    max-width:520px;
+  }
   .stack-layer{gap:16px}
   .stack-layer-body{grid-template-columns:1fr}
   .enterprise-tab-content{display:flex;flex-direction:column;gap:32px}
   .enterprise-tab-visual{order:-1;align-items:center}
   .enterprise-tab-visual-note{text-align:center}
-  .enterprise-io-container{grid-template-columns:1fr}
-  .enterprise-io-visual{min-height:auto;position:static;align-items:center}
-  .enterprise-io-dashboard{position:static;width:100%;max-width:520px;margin-top:20px}
+  .enterprise-io-visuals{
+    grid-template-columns:1fr;
+  }
   .enterprise-io-actions .btn-read-docs{width:100%;max-width:280px}
   .btn-contact-sales-outline{width:100%;max-width:280px}
   .enterprise-integration-container{flex-direction:column;align-items:flex-start}
@@ -1384,6 +1432,7 @@
   .enterprise-tabs-controls{width:100%;justify-content:center}
   .enterprise-tab-visual{padding:0;border-radius:0}
   .enterprise-io{padding:60px 0 80px}
+  .enterprise-io-actions{width:100%}
   .enterprise-io-actions .btn-read-docs{width:100%;max-width:100%}
   .btn-contact-sales-outline{font-size:18px;width:100%;max-width:100%}
   .enterprise-integration-strip{padding:40px 0}

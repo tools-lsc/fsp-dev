@@ -25,7 +25,7 @@
       </button>
       <nav class="main-nav" aria-label="Primary" aria-hidden="true">
         <ul>
-          <li><a href="index.html" class="active">Personal</a></li>
+          <li><a href="index.html" class="active">Individual</a></li>
           <li><a href="enterprise.html">Enterprise</a></li>
           <!-- <li class="nav-dropdown">
             <a href="#" class="dropdown-toggle">FSP Private</a>
@@ -101,7 +101,7 @@
     <section class="features">
       <div class="features-container">
         <h2 class="features-title">One Account. Global League. Infinite Opportunity.</h2>
-        <p class="features-subtitle">Traditional pathways demand your money. FSP funds your ambition.</p>
+        <p class="features-subtitle">Traditional sports pathways demand your money. FSP funds your ambition.</p>
         
         <div class="features-grid">
           <!-- Meritocratic Rank -->
@@ -155,7 +155,7 @@
               <img src="./src/assets/images/spend-transfer-icon.svg" alt="" width="35" height="35">
             </div>
             <h3 class="feature-title">Global Spend</h3>
-            <p class="feature-desc">The FSP Card is your passport. Spend your yield worldwide and earn points towards "Money Can't Buy" experiences.</p>
+            <p class="feature-desc">The FSP Card is your passport. Spend and earn points worldwide and redeem points towards "Money Can't Buy" experiences</p>
           </div>
         </div>
         
@@ -170,7 +170,10 @@
     <section class="compete-section">
       <div class="compete-container">
         <div class="compete-content">
-          <h2 class="compete-title">The Only Referee That Matters.<br>Your Phone is your arena.</h2>
+          <h2 class="compete-title">
+            <span class="compete-title-line">The Only Referee That Matters.</span>
+            <span class="compete-title-line">Your Phone Is Your Arena.</span>
+          </h2>
           <p class="compete-subtitle">No politics. No bias. Just you, your phone, and the truth.</p>
           
           <div class="compete-info">
@@ -186,7 +189,10 @@
             <a href="#" class="btn-play-now">Verify Your Skill</a>
             
             <div class="compete-logos">
-              <img src="./src/assets/images/apple-logo.svg" alt="Apple" class="apple-logo">
+              <a class="app-store-badge" href="#">
+                <img src="./src/assets/images/apple-logo.svg" alt="" class="app-store-icon">
+                <span class="app-store-text">Download on the App Store</span>
+              </a>
               <div class="powered-by-fsp">
                 <span>Powered by</span>
                 <img src="./src/assets/images/fsp_games.svg" alt="FSP Games">
@@ -210,8 +216,9 @@
       <div class="deposit-container">
         <div class="deposit-header">
           <div>
-            <h2 class="deposit-title">You Are Skill Verified. Deposit to Join FSP NeoBank<sup><a href="#neobank-disclaimer" class="deposit-asterisk">*</a></sup> for the Only Path That Pays You Back.</h2>
-            <p class="deposit-subtitle">We built the financial infrastructure to turn your performance into purchasing power.</p>
+            <h1 class="deposit-title">You Are Skill Verified. Deposit to Join FSP NeoBank<sup><a href="#neobank-disclaimer" class="deposit-asterisk">*</a></sup></h1>
+            <h2 class="deposit-title-secondary">The Only Path That Pays You Back.</h2>
+            <h3 class="deposit-subtitle">We built the financial infrastructure to turn your performance into purchasing power.</h3>
           </div>
         </div>
 
@@ -268,7 +275,7 @@
           <h2 class="spend-title">The FSP League</h2>
           <p class="spend-subtitle">Are you in the league?</p>
           <p class="spend-subtitle-2">The most dynamic rewards card for sports</p>
-          <p class="spend-desc">FSP card holders are in a league of their own. Every swipe earns FSP Champion Points, subsidizing your travel and gear and making you eligible for golden wild card tickets to money can not buy. If you don't have the card, are you even in the league.</p>
+          <p class="spend-desc">FSP card holders are in a league of their own. Every swipe earns FSP Champion Points, subsidizing your travel and gear. The card also makes you eligible for golden wild card tickets to money can't buy sports access. If you don't have the card, are you even in the league?</p>
           <div class="spend-features">
             <p>• <strong>Instant Access upon approval:</strong> Virtual or Physical FSP Cards</p>
             <p>• <strong>Merit-Based Status:</strong> Climb the Global Leaderboard to unlock 2x, 3x, and 4x reward multipliers. Status isn't bought; it's earned on the field.</p>
@@ -349,7 +356,7 @@
 
     <div class="content-separator"></div>
 
-    <section class="refer-to-earn">
+    <!-- <section class="refer-to-earn">
       <div class="refer-card">
         <div class="refer-bg">
           <img class="refer-texture" src="./src/assets/images/hero-texture-56586a.png" alt="">
@@ -393,9 +400,121 @@
         <a href="#" class="btn-champion">Invite Your Team</a>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <div class="content-separator"></div>
+
+    <section class="pools-referrals-section" data-active="pools">
+      <div class="sticky-tab-strip" role="navigation" aria-label="Explore pools and referrals">
+        <div class="sticky-tab-inner">
+          <div class="sticky-tab-controls" role="tablist" aria-label="Pools and referrals">
+            <button class="sticky-tab-button active" type="button" role="tab" aria-selected="true" aria-controls="pools-panel" data-tab="pools">Pools</button>
+            <button class="sticky-tab-button" type="button" role="tab" aria-selected="false" aria-controls="referrals-panel" data-tab="referrals">Referrals</button>
+          </div>
+        </div>
+      </div>
+      <div class="pools-referrals-slider">
+        <div class="pools-referrals-panels">
+          <article class="pools-referrals-panel" id="pools-panel" role="tabpanel" aria-hidden="false" data-panel="pools">
+            <div class="pools-panel">
+              <div class="pools-panel-intro">
+                <h2 class="pools-panel-title">Use the collective power of your community to fast track your rewards and access via golden tickets.</h2>
+                <p class="pools-panel-subtitle">The more deposits you pool, the better your rewards.</p>
+              </div>
+
+              <div class="pools-stake">
+                <div class="pools-stake-content">
+                  <h3 class="pools-stake-title">Stake the Next Superstar.</h3>
+                  <p class="pools-stake-subtitle">Don't just watch their journey. Bankroll it.</p>
+                  <p class="pools-stake-intro">Talent is everywhere, but capital is scarce. AthleteStash replaces donations with deposits.</p>
+                  <div class="pools-stake-features">
+                    <div class="pools-stake-feature">
+                      <h4 class="pools-stake-feature-title">For Athletes:</h4>
+                      <p class="pools-stake-feature-desc">Build a permanent capital base. The yield from your supporters' deposits funds your travel, gear, and entry fees&mdash;forever.</p>
+                    </div>
+                    <div class="pools-stake-feature">
+                      <h4 class="pools-stake-feature-title">For Supporters:</h4>
+                      <p class="pools-stake-feature-desc">Deposit, don't donate. Stake your capital on an athlete. You retain full ownership of your principal, while your yield fuels their rise.</p>
+                    </div>
+                  </div>
+                  <div class="pools-stake-actions">
+                    <a href="#" class="btn-stake-athlete">Stake an Athlete</a>
+                  </div>
+                </div>
+                <div class="pools-stake-visual">
+                  <img src="./src/assets/images/athletestash-ascii-51a891.png" alt="AthleteStash visualization">
+                </div>
+              </div>
+
+              <div class="pools-flow">
+                <div class="pools-flow-bg">
+                  <img class="pools-flow-texture" src="./src/assets/images/hero-texture-56586a.png" alt="">
+                </div>
+                <div class="pools-flow-inner">
+                  <div class="pools-flow-step">
+                    <span class="pools-flow-number">01</span>
+                    <p class="pools-flow-text"><strong>Create:</strong> Select your goal (Athlete Support, Sponsorship, or Fan Vote).</p>
+                  </div>
+                  <div class="pools-flow-step">
+                    <span class="pools-flow-number">02</span>
+                    <p class="pools-flow-text"><strong>Invite:</strong> Share your unique Pool Link. Supporters deposit via Card or Crypto.</p>
+                  </div>
+                  <div class="pools-flow-step">
+                    <span class="pools-flow-number">03</span>
+                    <p class="pools-flow-text"><strong>Activate:</strong> Our smart contracts automatically route the yield or action based on the Pool's rules.</p>
+                  </div>
+                  <div class="pools-flow-step">
+                    <span class="pools-flow-number">04</span>
+                    <p class="pools-flow-text"><strong>Redeem:</strong> Contributors earn FSP Points, Rewards, and Status for every second their capital is active.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="pools-referrals-panel" id="referrals-panel" role="tabpanel" aria-hidden="true" data-panel="referrals">
+            <div class="squad-card">
+              <div class="squad-bg">
+                <img class="squad-texture" src="./src/assets/images/hero-texture-56586a.png" alt="">
+                <img class="squad-ascii" src="./src/assets/images/refer-ascii-art.svg" alt="">
+              </div>
+              <div class="squad-content">
+                <div class="squad-header">
+                  <h2 class="squad-title">Build Your Squad.</h2>
+                  <p class="squad-subtitle">The most powerful referral program in sports.</p>
+                  <p class="squad-body">Sports are tribal. Bring your team to FSP.</p>
+                  <p class="squad-desc">For every friend who joins and deposits, you both earn Golden Tickets into our monthly "Jackpot Draws" for trips to the World Cup, F1, and more.</p>
+                </div>
+                <h3 class="squad-heading">How It Works</h3>
+                <div class="squad-steps">
+                  <div class="squad-step-card">
+                    <svg class="squad-step-icon" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M12 2L14.59 8.26L21 9.27L16 13.97L17.18 20.3L12 16.77L6.82 20.3L8 13.97L3 9.27L9.41 8.26L12 2Z" fill="#000"/>
+                    </svg>
+                    <h4 class="squad-step-title">Become an affiliate</h4>
+                    <p class="squad-step-desc">After your application is approved you will get access to promotional</p>
+                  </div>
+                  <div class="squad-step-card">
+                    <svg class="squad-step-icon" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M12 2L14.59 8.26L21 9.27L16 13.97L17.18 20.3L12 16.77L6.82 20.3L8 13.97L3 9.27L9.41 8.26L12 2Z" fill="#000"/>
+                    </svg>
+                    <h4 class="squad-step-title">Promote FSP</h4>
+                    <p class="squad-step-desc">Link to FSP in articles, create new content, or place ads on your websites.</p>
+                  </div>
+                  <div class="squad-step-card">
+                    <svg class="squad-step-icon" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M12 2L14.59 8.26L21 9.27L16 13.97L17.18 20.3L12 16.77L6.82 20.3L8 13.97L3 9.27L9.41 8.26L12 2Z" fill="#000"/>
+                    </svg>
+                    <h4 class="squad-step-title">Earn Golden Tickets &amp; FSP points</h4>
+                    <p class="squad-step-desc">Earn Gold Tickets and FSP points whenever new friends join increasing your odds of winning life changing prizes</p>
+                  </div>
+                </div>
+                <a href="#" class="btn-invite-team">Invite Your Team</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
     <section class="redeem-win-big-section">
       <div class="redeem-win-big-container">
@@ -518,117 +637,7 @@
       </div>
     </section>
 
-    <section class="pools-referrals-section" data-active="pools">
-      <div class="sticky-tab-strip" role="navigation" aria-label="Explore pools and referrals">
-        <div class="sticky-tab-inner">
-          <div class="sticky-tab-controls" role="tablist" aria-label="Pools and referrals">
-            <button class="sticky-tab-button active" type="button" role="tab" aria-selected="true" aria-controls="pools-panel" data-tab="pools">Pools</button>
-            <button class="sticky-tab-button" type="button" role="tab" aria-selected="false" aria-controls="referrals-panel" data-tab="referrals">Referrals</button>
-          </div>
-        </div>
-      </div>
-      <div class="pools-referrals-slider">
-        <div class="pools-referrals-panels">
-          <article class="pools-referrals-panel" id="pools-panel" role="tabpanel" aria-hidden="false" data-panel="pools">
-            <div class="pools-panel">
-              <div class="pools-panel-intro">
-                <h2 class="pools-panel-title">Use the collective power of your community to fast track your rewards and access via golden tickets.</h2>
-                <p class="pools-panel-subtitle">The more deposits you pool, the better your rewards.</p>
-              </div>
-
-              <div class="pools-stake">
-                <div class="pools-stake-content">
-                  <h3 class="pools-stake-title">Stake the Next Superstar.</h3>
-                  <p class="pools-stake-subtitle">Don't just watch their journey. Bankroll it.</p>
-                  <p class="pools-stake-intro">Talent is everywhere, but capital is scarce. AthleteStash replaces donations with deposits.</p>
-                  <div class="pools-stake-features">
-                    <div class="pools-stake-feature">
-                      <h4 class="pools-stake-feature-title">For Athletes:</h4>
-                      <p class="pools-stake-feature-desc">Build a permanent capital base. The yield from your supporters' deposits funds your travel, gear, and entry fees&mdash;forever.</p>
-                    </div>
-                    <div class="pools-stake-feature">
-                      <h4 class="pools-stake-feature-title">For Supporters:</h4>
-                      <p class="pools-stake-feature-desc">Deposit, don't donate. Stake your capital on an athlete. You retain full ownership of your principal, while your yield fuels their rise.</p>
-                    </div>
-                  </div>
-                  <div class="pools-stake-actions">
-                    <a href="#" class="btn-stake-athlete">Stake an Athlete</a>
-                  </div>
-                </div>
-                <div class="pools-stake-visual">
-                  <img src="./src/assets/images/athletestash-ascii-51a891.png" alt="AthleteStash visualization">
-                </div>
-              </div>
-
-              <div class="pools-flow">
-                <div class="pools-flow-bg">
-                  <img class="pools-flow-texture" src="./src/assets/images/hero-texture-56586a.png" alt="">
-                </div>
-                <div class="pools-flow-inner">
-                  <div class="pools-flow-step">
-                    <span class="pools-flow-number">01</span>
-                    <p class="pools-flow-text"><strong>Create:</strong> Select your goal (Athlete Support, Sponsorship, or Fan Vote).</p>
-                  </div>
-                  <div class="pools-flow-step">
-                    <span class="pools-flow-number">02</span>
-                    <p class="pools-flow-text"><strong>Invite:</strong> Share your unique Pool Link. Supporters deposit via Card or Crypto.</p>
-                  </div>
-                  <div class="pools-flow-step">
-                    <span class="pools-flow-number">03</span>
-                    <p class="pools-flow-text"><strong>Activate:</strong> Our smart contracts automatically route the yield or action based on the Pool's rules.</p>
-                  </div>
-                  <div class="pools-flow-step">
-                    <span class="pools-flow-number">04</span>
-                    <p class="pools-flow-text"><strong>Redeem:</strong> Contributors earn FSP Points, Rewards, and Status for every second their capital is active.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-          <article class="pools-referrals-panel" id="referrals-panel" role="tabpanel" aria-hidden="true" data-panel="referrals">
-            <div class="squad-card">
-              <div class="squad-bg">
-                <img class="squad-texture" src="./src/assets/images/hero-texture-56586a.png" alt="">
-                <img class="squad-ascii" src="./src/assets/images/refer-ascii-art.svg" alt="">
-              </div>
-              <div class="squad-content">
-                <div class="squad-header">
-                  <h2 class="squad-title">Build Your Squad.</h2>
-                  <p class="squad-subtitle">The most powerful referral program in sports.</p>
-                  <p class="squad-body">Sports are tribal. Bring your team to FSP.</p>
-                  <p class="squad-desc">For every friend who joins and deposits, you both earn Golden Tickets into our monthly "Jackpot Draws" for trips to the World Cup, F1, and more.</p>
-                </div>
-                <h3 class="squad-heading">How It Works</h3>
-                <div class="squad-steps">
-                  <div class="squad-step-card">
-                    <svg class="squad-step-icon" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M12 2L14.59 8.26L21 9.27L16 13.97L17.18 20.3L12 16.77L6.82 20.3L8 13.97L3 9.27L9.41 8.26L12 2Z" fill="#000"/>
-                    </svg>
-                    <h4 class="squad-step-title">Become an affiliate</h4>
-                    <p class="squad-step-desc">After your application is approved you will get access to promotional</p>
-                  </div>
-                  <div class="squad-step-card">
-                    <svg class="squad-step-icon" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M12 2L14.59 8.26L21 9.27L16 13.97L17.18 20.3L12 16.77L6.82 20.3L8 13.97L3 9.27L9.41 8.26L12 2Z" fill="#000"/>
-                    </svg>
-                    <h4 class="squad-step-title">Promote FSP</h4>
-                    <p class="squad-step-desc">Link to FSP in articles, create new content, or place ads on your websites.</p>
-                  </div>
-                  <div class="squad-step-card">
-                    <svg class="squad-step-icon" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M12 2L14.59 8.26L21 9.27L16 13.97L17.18 20.3L12 16.77L6.82 20.3L8 13.97L3 9.27L9.41 8.26L12 2Z" fill="#000"/>
-                    </svg>
-                    <h4 class="squad-step-title">Earn Golden Tickets &amp; FSP points</h4>
-                    <p class="squad-step-desc">Earn Gold Tickets and FSP points whenever new friends join increasing your odds of winning life changing prizes</p>
-                  </div>
-                </div>
-                <a href="#" class="btn-invite-team">Invite Your Team</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+    
 
     <div class="content-separator"></div>
 
@@ -726,7 +735,7 @@
             
             <div class="faq-item">
               <div class="faq-question-wrapper">
-                <div class="faq-question">How do I get drafted for the Apex Gauntlet?</div>
+                <div class="faq-question">How do I get drafted for FSP Games</div>
                 <button class="faq-toggle" aria-label="Expand">
                   <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
                     <path d="M10.5 4.375V16.625M4.375 10.5H16.625" stroke="#0000FF" stroke-width="4" stroke-linecap="round"/>
