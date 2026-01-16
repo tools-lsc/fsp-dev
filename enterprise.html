@@ -84,7 +84,7 @@
     <section class="enterprise-macro">
       <div class="enterprise-macro-container">
         <div class="enterprise-macro-content">
-          <h2 class="enterprise-macro-title">The Passive Economy Has Hit a Ceiling.</h2>
+          <h2 class="enterprise-macro-title">The Passive Sports Economy Has Hit a Ceiling.</h2>
           <p class="enterprise-macro-subtitle">Traditional revenue models including broadcast rights, hourly rentals, or flat subscriptions are stagnant. The high growth has shifted to the <strong>Participation Economy</strong>. FSP provides the infrastructure to stop monetizing passive access and start monetizing active performance by unlocking new value from every active participant.</p>
         </div>
         <div class="enterprise-macro-media">
@@ -133,7 +133,9 @@
                 </div>
               </div>
               <div class="enterprise-tab-visual">
-                <img src="./src/assets/images/Venues.png" alt="Venue operations collage">
+                <div class="enterprise-tab-qr">
+                  <img src="./src/assets/images/fsp_qr.svg" alt="FSP Pay QR Code" class="qr-code-image">
+                </div>
                 <p class="enterprise-tab-visual-note">FSP Pay QR terminals for instant settlement.</p>
               </div>
             </div>
@@ -273,6 +275,18 @@
             </div>
           </article>
         </div>
+
+        <div class="case-studies-section">
+          <div class="case-studies-header">
+            <h2 class="case-studies-title">See FSP in Action</h2>
+            <p class="case-studies-subtitle">Real results from venues, teams, and platforms using our stack.</p>
+          </div>
+
+          <div class="case-studies-cta">
+            <a href="#" class="btn-case-studies" id="toggle-case-studies">View Case Studies</a>
+            <a href="#" class="btn-contact-sales-outline">Contact Sales</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -317,17 +331,6 @@
       </div>
     </section> -->
 
-    <section class="enterprise-social-proof">
-      <div class="enterprise-social-container">
-        <h2 class="enterprise-social-title">Battle-Tested at Scale.</h2>
-        <p class="enterprise-social-subtitle">We don't just build the tech. We run leagues &amp; teams that use it.</p>
-        <div class="enterprise-social-logos">
-          <img src="./src/assets/images/fsp_games.svg" alt="FSP Games logo">
-          <img src="./src/assets/images/Team Blue Rising Black Logo.svg" alt="Team Blue Rising logo">
-        </div>
-        <p class="enterprise-social-stat">Processing global payouts and verified matches across 3 continents.</p>
-      </div>
-    </section>
 
     <section class="how-it-works-section">
       <div class="how-it-works-bg">
@@ -556,6 +559,113 @@
     </div>
   </footer>
 
+  <!-- Case Studies Popup Modal -->
+  <div class="case-studies-popup" id="case-studies-popup" aria-hidden="true">
+    <div class="case-studies-popup-backdrop"></div>
+    <div class="case-studies-popup-content">
+      <div class="case-studies-popup-header">
+        <div class="case-studies-popup-title-section">
+          <h2 class="case-studies-popup-title">Battle-Tested at Scale.</h2>
+          <p class="case-studies-popup-subtitle">We don't just build the tech. We run leagues & teams that use it.</p>
+          <div class="case-studies-popup-logos">
+            <img src="./src/assets/images/fsp_games.svg" alt="FSP Games logo">
+            <img src="./src/assets/images/Team Blue Rising Black Logo.svg" alt="Team Blue Rising logo">
+          </div>
+          <p class="case-studies-popup-stat">Processing global payouts and verified matches across 3 continents.</p>
+        </div>
+        <button class="case-studies-popup-close" aria-label="Close case studies popup">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="case-studies-tabs-bar">
+        <div class="case-studies-tabs-controls" role="tablist" aria-label="Case Studies">
+          <button class="case-studies-tab-button active" role="tab" aria-selected="true" aria-controls="case-study-venue" id="tab-btn-venue" data-tab="venue">Strike Zone Bowling</button>
+          <button class="case-studies-tab-button" role="tab" aria-selected="false" aria-controls="case-study-team" id="tab-btn-team" data-tab="team">Blue Rising Athletics</button>
+          <button class="case-studies-tab-button" role="tab" aria-selected="false" aria-controls="case-study-platform" id="tab-btn-platform" data-tab="platform">SportSync Pro</button>
+        </div>
+      </div>
+
+      <div class="case-studies-tabs-panels">
+        <article class="case-studies-tab-panel active" role="tabpanel" id="case-study-venue" aria-labelledby="tab-btn-venue" data-tab="venue">
+          <div class="case-study-panel-content">
+            <div class="case-study-panel-header">
+              <span class="case-study-panel-category">Venue</span>
+              <h3 class="case-study-panel-title">Strike Zone Bowling</h3>
+              <p class="case-study-panel-location">Chicago, IL</p>
+            </div>
+            <div class="case-study-panel-body">
+              <div class="case-study-panel-metric">
+                <span class="case-study-panel-metric-value">45%</span>
+                <span class="case-study-panel-metric-label">Reduction in transaction fees</span>
+              </div>
+              <p class="case-study-panel-description">Strike Zone integrated FSP Pay QR terminals across all 32 lanes, replacing traditional card processors. The venue now runs automated "Perfect Game Challenges" using Vision AI, driving 30% more repeat visits during off-peak hours.</p>
+              <div class="case-study-panel-stack">
+                <span class="case-study-panel-stack-label">Modules Used:</span>
+                <div class="case-study-panel-stack-tags">
+                  <span class="stack-tag">Vision SDK</span>
+                  <span class="stack-tag">Financial Rails</span>
+                  <span class="stack-tag">Programmatic Rewards</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-studies-tab-panel" role="tabpanel" id="case-study-team" aria-labelledby="tab-btn-team" data-tab="team">
+          <div class="case-study-panel-content">
+            <div class="case-study-panel-header">
+              <span class="case-study-panel-category">Team</span>
+              <h3 class="case-study-panel-title">Blue Rising Athletics</h3>
+              <p class="case-study-panel-location">Global</p>
+            </div>
+            <div class="case-study-panel-body">
+              <div class="case-study-panel-metric">
+                <span class="case-study-panel-metric-value">$2.4M</span>
+                <span class="case-study-panel-metric-label">In verified challenge revenue</span>
+              </div>
+              <p class="case-study-panel-description">Blue Rising uses FSP's Vision AI to run global talent scouting challenges, identifying top performers from 47 countries. The team monetizes every verified challenge through sponsor CPAs, creating a new revenue stream while building their talent pipeline.</p>
+              <div class="case-study-panel-stack">
+                <span class="case-study-panel-stack-label">Modules Used:</span>
+                <div class="case-study-panel-stack-tags">
+                  <span class="stack-tag">Vision SDK</span>
+                  <span class="stack-tag">Programmatic Rewards</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-studies-tab-panel" role="tabpanel" id="case-study-platform" aria-labelledby="tab-btn-platform" data-tab="platform">
+          <div class="case-study-panel-content">
+            <div class="case-study-panel-header">
+              <span class="case-study-panel-category">Software Platform</span>
+              <h3 class="case-study-panel-title">SportSync Pro</h3>
+              <p class="case-study-panel-location">SaaS Platform</p>
+            </div>
+            <div class="case-study-panel-body">
+              <div class="case-study-panel-metric">
+                <span class="case-study-panel-metric-value">3.2x</span>
+                <span class="case-study-panel-metric-label">Increase in user LTV</span>
+              </div>
+              <p class="case-study-panel-description">SportSync embedded FSP's full stack into their league management platform. Users now have embedded wallets, instant payouts for verified matches, and access to global challenges. The platform transitioned from one-time registration fees to a stored-value economy with recurring engagement.</p>
+              <div class="case-study-panel-stack">
+                <span class="case-study-panel-stack-label">Modules Used:</span>
+                <div class="case-study-panel-stack-tags">
+                  <span class="stack-tag">Vision SDK</span>
+                  <span class="stack-tag">Financial Rails</span>
+                  <span class="stack-tag">Programmatic Rewards</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+
   <script>
     // Mobile Navigation
     const hamburgerBtn = document.querySelector('.hamburger-btn');
@@ -701,6 +811,79 @@
           faqItems.forEach(otherItem => otherItem.classList.remove('active'));
           if (!isActive) item.classList.add('active');
         });
+      }
+    });
+
+    // Case Studies Popup Functionality
+    const caseStudiesPopup = document.getElementById('case-studies-popup');
+    const toggleCaseStudiesBtn = document.getElementById('toggle-case-studies');
+    const caseStudiesPopupClose = document.querySelector('.case-studies-popup-close');
+    const caseStudiesPopupBackdrop = document.querySelector('.case-studies-popup-backdrop');
+    const caseStudiesTabButtons = document.querySelectorAll('.case-studies-tab-button');
+    const caseStudiesTabPanels = document.querySelectorAll('.case-studies-tab-panel');
+
+    function openCaseStudiesPopup() {
+      if (caseStudiesPopup) {
+        caseStudiesPopup.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeCaseStudiesPopup() {
+      if (caseStudiesPopup) {
+        caseStudiesPopup.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function setActiveCaseStudyTab(target) {
+      caseStudiesTabButtons.forEach(btn => {
+        const isActive = btn.getAttribute('data-tab') === target;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+
+      caseStudiesTabPanels.forEach(panel => {
+        const isActive = panel.getAttribute('data-tab') === target;
+        panel.classList.toggle('active', isActive);
+        panel.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+      });
+    }
+
+    // Open popup when clicking "View Case Studies" button
+    if (toggleCaseStudiesBtn) {
+      toggleCaseStudiesBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        openCaseStudiesPopup();
+      });
+    }
+
+    // Close popup when clicking close button
+    if (caseStudiesPopupClose) {
+      caseStudiesPopupClose.addEventListener('click', closeCaseStudiesPopup);
+    }
+
+    // Close popup when clicking backdrop
+    if (caseStudiesPopupBackdrop) {
+      caseStudiesPopupBackdrop.addEventListener('click', closeCaseStudiesPopup);
+    }
+
+    // Tab functionality
+    if (caseStudiesTabButtons.length && caseStudiesTabPanels.length) {
+      const initial = document.querySelector('.case-studies-tab-button.active')?.getAttribute('data-tab') || 'venue';
+      setActiveCaseStudyTab(initial);
+
+      caseStudiesTabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          setActiveCaseStudyTab(button.getAttribute('data-tab'));
+        });
+      });
+    }
+
+    // Close popup when pressing Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && caseStudiesPopup && caseStudiesPopup.getAttribute('aria-hidden') === 'false') {
+        closeCaseStudiesPopup();
       }
     });
   </script>
