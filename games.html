@@ -220,7 +220,7 @@
               </div>
               <div class="card-grid">
                 <div class="grid-item merged-row">
-                  <div class="grid-text">MASSIVE PRIZE MONEY</div>
+                  <div class="grid-text">DYNAMIC PRIZE MONEY</div>
                   <img src="./fsp-games/images/card_image1.jpg" alt="Card Image 1" class="grid-image">
                 </div>
                 <div class="grid-item">
@@ -302,7 +302,10 @@
               </div>
               <div class="card-grid">
                 <div class="grid-item merged-row">
-                  <div class="grid-text">MASSIVE PRIZE MONEY</div>
+                  <div class="grid-text">
+                    <div>MASSIVE PRIZE MONEY</div>
+                    <div class="grid-text-desc">STARTING PRIZE $200,000</div>
+                  </div>
                   <img src="./src/assets/images/prize-money.jpg" alt="Massive Prize Money" class="grid-image">
                 </div>
                 <div class="grid-item">
@@ -534,6 +537,7 @@
             </h2>
             <p class="bowler-description">Vision-AI measures ball speed, rev rate, entry angle, and pocket-hit consistency. Rise the ladder to purpose-built finals lanes; the Top 10 advance to the WBL draft pool.</p>
             <div class="bowler-buttons">
+              <button class="bowler-btn bowler-btn-rules" data-rules="bowler">Rules</button>
               <button class="bowler-btn bowler-btn-explore">Explore</button>
               <button class="bowler-btn bowler-btn-participate">Participate</button>
             </div>
@@ -555,6 +559,7 @@
             </h2>
             <p class="squash-description">Vision-AI evaluates pace, accuracy, and movement economy in glass-court drills and rally scenarios. Rank globally and step onto a show court for finals; winners get a WPS access path.</p>
             <div class="squash-buttons">
+              <button class="squash-btn squash-btn-rules" data-rules="squash">Rules</button>
               <button class="squash-btn squash-btn-explore">Explore</button>
               <button class="squash-btn squash-btn-participate">Participate</button>
             </div>
@@ -576,6 +581,7 @@
             </h2>
             <p class="cricket-description">Vision-AI scores shot timing, control, and range against pace and swing. Qualify remotely, climb a global ladder, and reach stadium finals; standouts enter pro showcases.</p>
             <div class="cricket-buttons">
+              <button class="cricket-btn cricket-btn-rules" data-rules="cricket">Rules</button>
               <button class="cricket-btn cricket-btn-explore">Explore</button>
               <button class="cricket-btn cricket-btn-participate">Participate</button>
             </div>
@@ -596,6 +602,7 @@
               <span class="club-title-line">PONG</span>
             </h2>
             <div class="club-buttons">
+              <button class="club-btn club-btn-rules" data-rules="water-pong">Rules</button>
               <button class="club-btn club-btn-explore">Explore</button>
               <button class="club-btn club-btn-participate">Participate</button>
             </div>
@@ -1405,6 +1412,143 @@
     </div>
   </div>
 
+  <!-- Competition Rules Popups -->
+  <!-- World's Best Bowler Rules Popup -->
+  <div class="rules-popup" id="rules-popup-bowler" aria-hidden="true">
+    <div class="rules-popup-backdrop"></div>
+    <div class="rules-popup-content">
+      <div class="rules-popup-header">
+        <div class="rules-popup-title-section">
+          <h2 class="rules-popup-title">World's Best Bowler</h2>
+          <p class="rules-popup-subtitle">Competition Rules & Guidelines</p>
+        </div>
+        <button class="rules-popup-close" aria-label="Close rules popup">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="rules-popup-body">
+        <div class="rules-content">
+          <h3 class="rules-section-title">Competition Rules</h3>
+          <p class="rules-placeholder">[Competition rules content placeholder - To be finalized]</p>
+          <ul class="rules-list">
+            <li>Rule 1: [Placeholder text]</li>
+            <li>Rule 2: [Placeholder text]</li>
+            <li>Rule 3: [Placeholder text]</li>
+            <li>Rule 4: [Placeholder text]</li>
+          </ul>
+        </div>
+        <div class="rules-cta-section">
+          <a href="#" class="btn-rules-cta-primary">Participate Now</a>
+          <a href="#" class="btn-rules-cta-secondary">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- World's Best Squash Player Rules Popup -->
+  <div class="rules-popup" id="rules-popup-squash" aria-hidden="true">
+    <div class="rules-popup-backdrop"></div>
+    <div class="rules-popup-content">
+      <div class="rules-popup-header">
+        <div class="rules-popup-title-section">
+          <h2 class="rules-popup-title">World's Best Squash Player</h2>
+          <p class="rules-popup-subtitle">Competition Rules & Guidelines</p>
+        </div>
+        <button class="rules-popup-close" aria-label="Close rules popup">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="rules-popup-body">
+        <div class="rules-content">
+          <h3 class="rules-section-title">Competition Rules</h3>
+          <p class="rules-placeholder">[Competition rules content placeholder - To be finalized]</p>
+          <ul class="rules-list">
+            <li>Rule 1: [Placeholder text]</li>
+            <li>Rule 2: [Placeholder text]</li>
+            <li>Rule 3: [Placeholder text]</li>
+            <li>Rule 4: [Placeholder text]</li>
+          </ul>
+        </div>
+        <div class="rules-cta-section">
+          <a href="#" class="btn-rules-cta-primary">Participate Now</a>
+          <a href="#" class="btn-rules-cta-secondary">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- World's Best Cricket Player Rules Popup -->
+  <div class="rules-popup" id="rules-popup-cricket" aria-hidden="true">
+    <div class="rules-popup-backdrop"></div>
+    <div class="rules-popup-content">
+      <div class="rules-popup-header">
+        <div class="rules-popup-title-section">
+          <h2 class="rules-popup-title">World's Best Cricket Player</h2>
+          <p class="rules-popup-subtitle">Competition Rules & Guidelines</p>
+        </div>
+        <button class="rules-popup-close" aria-label="Close rules popup">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="rules-popup-body">
+        <div class="rules-content">
+          <h3 class="rules-section-title">Competition Rules</h3>
+          <p class="rules-placeholder">[Competition rules content placeholder - To be finalized]</p>
+          <ul class="rules-list">
+            <li>Rule 1: [Placeholder text]</li>
+            <li>Rule 2: [Placeholder text]</li>
+            <li>Rule 3: [Placeholder text]</li>
+            <li>Rule 4: [Placeholder text]</li>
+          </ul>
+        </div>
+        <div class="rules-cta-section">
+          <a href="#" class="btn-rules-cta-primary">Participate Now</a>
+          <a href="#" class="btn-rules-cta-secondary">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- World Water Pong Rules Popup -->
+  <div class="rules-popup" id="rules-popup-water-pong" aria-hidden="true">
+    <div class="rules-popup-backdrop"></div>
+    <div class="rules-popup-content">
+      <div class="rules-popup-header">
+        <div class="rules-popup-title-section">
+          <h2 class="rules-popup-title">World Water Pong</h2>
+          <p class="rules-popup-subtitle">Competition Rules & Guidelines</p>
+        </div>
+        <button class="rules-popup-close" aria-label="Close rules popup">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="rules-popup-body">
+        <div class="rules-content">
+          <h3 class="rules-section-title">Competition Rules</h3>
+          <p class="rules-placeholder">[Competition rules content placeholder - To be finalized]</p>
+          <ul class="rules-list">
+            <li>Rule 1: [Placeholder text]</li>
+            <li>Rule 2: [Placeholder text]</li>
+            <li>Rule 3: [Placeholder text]</li>
+            <li>Rule 4: [Placeholder text]</li>
+          </ul>
+        </div>
+        <div class="rules-cta-section">
+          <a href="#" class="btn-rules-cta-primary">Participate Now</a>
+          <a href="#" class="btn-rules-cta-secondary">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
     // Mobile Navigation
     const hamburgerBtn = document.querySelector('.hamburger-btn');
@@ -1763,6 +1907,65 @@
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape' && tiersPopup && tiersPopup.getAttribute('aria-hidden') === 'false') {
         closeTiersPopup();
+      }
+    });
+
+    // Competition Rules Popup Functionality
+    const rulesButtons = document.querySelectorAll('[data-rules]');
+    const rulesPopups = document.querySelectorAll('.rules-popup');
+    const rulesPopupBackdrops = document.querySelectorAll('.rules-popup-backdrop');
+    const rulesPopupCloses = document.querySelectorAll('.rules-popup-close');
+
+    function openRulesPopup(rulesType) {
+      const popup = document.getElementById(`rules-popup-${rulesType}`);
+      if (popup) {
+        popup.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeRulesPopup(popup) {
+      if (popup) {
+        popup.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+    }
+
+    // Open popup when clicking Rules buttons
+    rulesButtons.forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        const rulesType = this.getAttribute('data-rules');
+        if (rulesType) {
+          openRulesPopup(rulesType);
+        }
+      });
+    });
+
+    // Close popup when clicking close buttons
+    rulesPopupCloses.forEach(closeBtn => {
+      closeBtn.addEventListener('click', function() {
+        const popup = this.closest('.rules-popup');
+        closeRulesPopup(popup);
+      });
+    });
+
+    // Close popup when clicking backdrop
+    rulesPopupBackdrops.forEach(backdrop => {
+      backdrop.addEventListener('click', function() {
+        const popup = this.closest('.rules-popup');
+        closeRulesPopup(popup);
+      });
+    });
+
+    // Close popup when pressing Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        rulesPopups.forEach(popup => {
+          if (popup.getAttribute('aria-hidden') === 'false') {
+            closeRulesPopup(popup);
+          }
+        });
       }
     });
   </script>

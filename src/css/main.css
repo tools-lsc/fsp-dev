@@ -819,7 +819,7 @@ body{
 /* Redeem Your FSP Champion Points & Win Big Section */
 .redeem-win-big-section{
   background:#fff;
-  padding:20px 40px 80px;
+  padding:40px 40px 80px;
   position:relative;
 }
 .redeem-win-big-container{
@@ -1826,7 +1826,7 @@ body{
 }
 .pools-referrals-slider{
   background:#fff;
-  padding:0 0 30px;
+  padding:0 0 100px;
   overflow-x:hidden;
   overflow-y:visible;
 }

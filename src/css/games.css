@@ -384,3 +384,251 @@
 .header-inner * {
   font-family: "Archivo", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif !important;
 }
+
+/* Competition Rules Popup Modal */
+.rules-popup{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  opacity:0;
+  visibility:hidden;
+  transition:opacity 0.3s ease,visibility 0.3s ease;
+  pointer-events:none;
+}
+.rules-popup[aria-hidden="false"]{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+}
+.rules-popup-backdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(4px);
+  -webkit-backdrop-filter:blur(4px);
+}
+.rules-popup-content{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  background:#fff;
+  border-radius:24px 24px 0 0;
+  max-height:90vh;
+  overflow-y:auto;
+  transform:translateY(100%);
+  transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);
+  padding:40px 24px 60px;
+  box-shadow:0 -4px 24px rgba(0,0,0,0.15);
+}
+.rules-popup[aria-hidden="false"] .rules-popup-content{
+  transform:translateY(0);
+}
+.rules-popup-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  margin-bottom:32px;
+  padding-bottom:24px;
+  border-bottom:1px solid rgba(0,0,0,0.1);
+  gap:24px;
+}
+.rules-popup-title-section{
+  flex:1;
+}
+.rules-popup-title{
+  font-size:32px;
+  font-weight:500;
+  line-height:1.2;
+  letter-spacing:-0.02em;
+  color:#000;
+  margin:0 0 8px 0;
+}
+.rules-popup-subtitle{
+  font-size:18px;
+  font-weight:400;
+  line-height:1.5;
+  color:#6A6D78;
+  margin:0;
+}
+.rules-popup-close{
+  background:transparent;
+  border:none;
+  cursor:pointer;
+  padding:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#000;
+  transition:opacity 0.2s ease;
+  border-radius:8px;
+  flex-shrink:0;
+}
+.rules-popup-close:hover{
+  opacity:0.7;
+  background:rgba(0,0,0,0.05);
+}
+.rules-popup-body{
+  display:flex;
+  flex-direction:column;
+  gap:32px;
+}
+.rules-content{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+.rules-section-title{
+  font-size:24px;
+  font-weight:600;
+  line-height:1.2;
+  color:#4D4D4D;
+  margin:0;
+}
+.rules-placeholder{
+  font-size:16px;
+  font-weight:400;
+  line-height:1.6;
+  color:#6A6D78;
+  margin:0;
+  font-style:italic;
+}
+.rules-list{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.rules-list li{
+  font-size:16px;
+  font-weight:400;
+  line-height:1.6;
+  color:#4D4D4D;
+  padding-left:24px;
+  position:relative;
+}
+.rules-list li:before{
+  content:"•";
+  position:absolute;
+  left:0;
+  color:#0000FF;
+  font-weight:600;
+}
+.rules-cta-section{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:16px;
+  flex-wrap:wrap;
+  padding-top:24px;
+  border-top:1px solid rgba(0,0,0,0.1);
+}
+.btn-rules-cta-primary{
+  background:#0000FF;
+  color:#fff;
+  font-size:16px;
+  font-weight:600;
+  line-height:1.25;
+  letter-spacing:-0.01em;
+  padding:12px 32px;
+  border-radius:12px;
+  text-decoration:none;
+  white-space:nowrap;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  transition:opacity 0.2s ease, transform 0.2s ease;
+  border:2px solid #0000FF;
+}
+.btn-rules-cta-primary:hover{
+  opacity:0.9;
+  transform:translateY(-2px);
+}
+.btn-rules-cta-secondary{
+  background:transparent;
+  color:#0000FF;
+  font-size:16px;
+  font-weight:600;
+  line-height:1.25;
+  letter-spacing:-0.01em;
+  padding:12px 32px;
+  border-radius:12px;
+  text-decoration:none;
+  white-space:nowrap;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  transition:all 0.2s ease;
+  border:2px solid #0000FF;
+}
+.btn-rules-cta-secondary:hover{
+  background:#0000FF;
+  color:#fff;
+  transform:translateY(-2px);
+}
+
+/* Rules Button Styles */
+.bowler-btn-rules,
+.squash-btn-rules,
+.cricket-btn-rules,
+.club-btn-rules{
+  background:transparent;
+  border:1px solid rgba(255,255,255,0.5);
+  color:#fff;
+  font-size:14px;
+  font-weight:500;
+  padding:8px 20px;
+  border-radius:8px;
+  cursor:pointer;
+  transition:all 0.2s ease;
+}
+.bowler-btn-rules:hover,
+.squash-btn-rules:hover,
+.cricket-btn-rules:hover,
+.club-btn-rules:hover{
+  background:rgba(255,255,255,0.1);
+  border-color:rgba(255,255,255,0.8);
+}
+
+/* Responsive Rules Popup */
+@media(max-width:960px){
+  .rules-popup-content{
+    padding:32px 20px 40px;
+    border-radius:20px 20px 0 0;
+  }
+  .rules-popup-title{
+    font-size:24px;
+  }
+  .rules-popup-subtitle{
+    font-size:16px;
+  }
+  .rules-cta-section{
+    flex-direction:column;
+    width:100%;
+  }
+  .btn-rules-cta-primary,
+  .btn-rules-cta-secondary{
+    width:100%;
+    max-width:280px;
+  }
+}
+@media(max-width:640px){
+  .rules-popup-content{
+    padding:24px 16px 32px;
+  }
+  .rules-popup-title{
+    font-size:20px;
+  }
+  .rules-popup-subtitle{
+    font-size:15px;
+  }
+  .rules-section-title{
+    font-size:20px;
+  }
+  .btn-rules-cta-primary,
+  .btn-rules-cta-secondary{
+    max-width:100%;
+  }
+}
