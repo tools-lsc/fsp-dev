@@ -11,6 +11,576 @@
   <link rel="stylesheet" href="./src/css/reset.css">
   <link rel="stylesheet" href="./src/css/variables.css">
   <link rel="stylesheet" href="./src/css/main.css">
+  <style>
+    .hero-cta-wrapper{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:12px;
+    }
+    .hero-app-link{
+      color:#fff;
+      font-size:16px;
+      line-height:1.5;
+      margin:0;
+      text-align:center;
+    }
+    .hero-app-link-text{
+      color:#fff;
+      text-decoration:underline;
+    }
+    .hero-app-link-text:hover{
+      opacity:0.8;
+    }
+    .snapchat-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:24px;
+      max-width:1400px;
+      margin:0 auto;
+      padding:0 40px;
+    }
+    .snapchat-card{
+      position:relative;
+      border-radius:20px;
+      overflow:hidden;
+      min-height:400px;
+      display:flex;
+      flex-direction:column;
+      cursor:pointer;
+      transition:transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .snapchat-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 8px 24px rgba(0,0,0,0.15);
+    }
+    .snapchat-card-bg{
+      position:absolute;
+      inset:0;
+      z-index:0;
+    }
+    .snapchat-bg-image{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      opacity:0.3;
+    }
+    .snapchat-card-content{
+      position:relative;
+      z-index:1;
+      flex:1;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      padding:32px;
+      background:linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.6) 100%);
+    }
+    .snapchat-card-heading{
+      font-size:28px;
+      font-weight:600;
+      line-height:1.2;
+      letter-spacing:-0.02em;
+      color:#fff;
+      margin:0 0 24px;
+      text-shadow:0 2px 8px rgba(0,0,0,0.3);
+    }
+    .snapchat-card-cta{
+      background:rgba(255,255,255,0.95);
+      color:#000;
+      font-size:18px;
+      font-weight:600;
+      padding:14px 28px;
+      border-radius:24px;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:fit-content;
+      transition:all 0.3s ease;
+      box-shadow:0 4px 12px rgba(0,0,0,0.2);
+    }
+    .snapchat-card-cta:hover{
+      background:#fff;
+      transform:scale(1.05);
+      box-shadow:0 6px 16px rgba(0,0,0,0.3);
+    }
+    @media (max-width:960px){
+      .snapchat-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+        padding:0 20px;
+      }
+      .snapchat-card{
+        min-height:350px;
+      }
+      .snapchat-card-heading{
+        font-size:24px;
+      }
+      .snapchat-card-cta{
+        font-size:16px;
+        padding:12px 24px;
+      }
+    }
+    .compete-cta-buttons{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+      margin-bottom:32px;
+    }
+    .btn-request-sport{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      background:transparent;
+      color:#0000FF;
+      border:1px solid #0000FF;
+      font-size:20px;
+      font-weight:400;
+      line-height:1.25;
+      letter-spacing:-0.019em;
+      padding:7px 40px;
+      border-radius:20px;
+      text-decoration:none;
+      transition:all 0.2s ease;
+    }
+    .btn-request-sport:hover{
+      background:#0000FF;
+      color:#fff;
+    }
+    @media (max-width:960px){
+      .compete-cta-buttons{
+        flex-direction:column;
+      }
+      .btn-play-now,
+      .btn-request-sport{
+        width:100%;
+      }
+    }
+    .sport-request-popup{
+      position:fixed;
+      inset:0;
+      z-index:10000;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      opacity:0;
+      visibility:hidden;
+      transition:opacity 0.3s ease, visibility 0.3s ease;
+    }
+    .sport-request-popup[aria-hidden="false"]{
+      opacity:1;
+      visibility:visible;
+    }
+    .sport-request-backdrop{
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.6);
+      backdrop-filter:blur(4px);
+    }
+    .sport-request-content{
+      position:relative;
+      background:#fff;
+      border-radius:20px;
+      max-width:500px;
+      width:90%;
+      max-height:90vh;
+      overflow-y:auto;
+      box-shadow:0 8px 32px rgba(0,0,0,0.2);
+      z-index:1;
+    }
+    .sport-request-header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:24px 32px;
+      border-bottom:1px solid #E6E6E6;
+    }
+    .sport-request-title{
+      font-size:24px;
+      font-weight:600;
+      color:#000;
+      margin:0;
+    }
+    .sport-request-close{
+      background:none;
+      border:none;
+      cursor:pointer;
+      padding:4px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#666;
+      transition:color 0.2s ease;
+    }
+    .sport-request-close:hover{
+      color:#000;
+    }
+    .sport-request-form{
+      padding:32px;
+    }
+    .form-group{
+      margin-bottom:24px;
+    }
+    .form-label{
+      display:block;
+      font-size:14px;
+      font-weight:500;
+      color:#4D4D4D;
+      margin-bottom:8px;
+    }
+    .form-input,
+    .form-textarea{
+      width:100%;
+      padding:12px 16px;
+      border:1px solid #E6E6E6;
+      border-radius:8px;
+      font-size:16px;
+      font-family:inherit;
+      transition:border-color 0.2s ease;
+      box-sizing:border-box;
+    }
+    .form-input:focus,
+    .form-textarea:focus{
+      outline:none;
+      border-color:#0000FF;
+    }
+    .form-textarea{
+      resize:vertical;
+      min-height:100px;
+    }
+    .form-submit-btn{
+      width:100%;
+      background:#0000FF;
+      color:#fff;
+      border:none;
+      font-size:18px;
+      font-weight:500;
+      padding:14px 24px;
+      border-radius:12px;
+      cursor:pointer;
+      transition:opacity 0.2s ease;
+      margin-top:8px;
+    }
+    .form-submit-btn:hover{
+      opacity:0.9;
+    }
+    @media (max-width:640px){
+      .sport-request-content{
+        width:95%;
+        max-height:95vh;
+      }
+      .sport-request-header{
+        padding:20px 24px;
+      }
+      .sport-request-form{
+        padding:24px;
+      }
+      .sport-request-title{
+        font-size:20px;
+      }
+    }
+    .revenue-table-link{
+      color:#fff;
+      text-decoration:underline;
+      font-weight:500;
+    }
+    .revenue-table-link:hover{
+      opacity:0.8;
+    }
+    .deposit-cta-wrapper .btn-rewards-calculator,
+    .deposit-cta-wrapper .btn-explore-tiers{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      background:#fff;
+      color:#0000FF;
+      font-size:20px;
+      font-weight:400;
+      line-height:1.25;
+      letter-spacing:-0.019em;
+      padding:7px 40px;
+      border-radius:20px;
+      text-decoration:none;
+      white-space:nowrap;
+      transition:all 0.2s ease;
+      border:none;
+    }
+    .deposit-cta-wrapper .btn-rewards-calculator:hover,
+    .deposit-cta-wrapper .btn-explore-tiers:hover{
+      background:#0000FF;
+      color:#fff;
+      opacity:0.95;
+    }
+    @media (max-width:960px){
+      .deposit-cta-wrapper{
+        flex-direction:column;
+        gap:16px;
+      }
+      .deposit-cta-wrapper .btn-rewards-calculator,
+      .deposit-cta-wrapper .btn-explore-tiers{
+        width:100%;
+        justify-content:center;
+      }
+    }
+    .calculator-inputs{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+      gap:17px;
+      margin-bottom:24px;
+    }
+    @media (max-width:960px){
+      .calculator-inputs{
+        grid-template-columns:1fr;
+      }
+    }
+    .inner-circle-section{
+      background:#fff;
+      padding:80px 40px;
+      position:relative;
+    }
+    .inner-circle-container{
+      max-width:1400px;
+      margin:0 auto;
+    }
+    .inner-circle-header{
+      text-align:center;
+      margin-bottom:60px;
+    }
+    .inner-circle-title{
+      font-size:clamp(36px, 4vw, 48px);
+      font-weight:500;
+      line-height:1.2;
+      letter-spacing:-.025em;
+      color:#000;
+      margin-bottom:12px;
+    }
+    .inner-circle-subtitle{
+      font-size:clamp(18px, 2vw, 24px);
+      font-weight:400;
+      line-height:1.3;
+      letter-spacing:-.0145em;
+      color:#4D4D4D;
+      text-align:center;
+      margin-bottom:12px;
+      font-style:italic;
+    }
+    .inner-circle-body{
+      font-size:clamp(16px, 1.8vw, 20px);
+      font-weight:400;
+      line-height:1.5;
+      letter-spacing:-.017em;
+      color:#000;
+      max-width:900px;
+      margin:0 auto;
+      text-align:center;
+    }
+    .inner-circle-category{
+      margin-bottom:60px;
+    }
+    .inner-circle-category:last-child{
+      margin-bottom:0;
+    }
+    .category-title{
+      font-size:clamp(24px, 3vw, 32px);
+      font-weight:600;
+      line-height:1.2;
+      letter-spacing:-.02em;
+      color:#000;
+      margin-bottom:24px;
+      text-align:center;
+    }
+    .category-cards{
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      gap:20px;
+    }
+    .inner-circle-card{
+      background:#fff;
+      border-radius:20px;
+      overflow:hidden;
+      position:relative;
+      display:flex;
+      flex-direction:column;
+      width:100%;
+      transition:transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    }
+    .inner-circle-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 8px 24px rgba(0,0,0,0.15);
+    }
+    .inner-circle-card-image{
+      width:100%;
+      flex:1;
+      overflow:hidden;
+      position:relative;
+      height:250px;
+    }
+    .card-image{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .inner-circle-card-footer{
+      background:#0000FF;
+      padding:16px 20px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:70px;
+    }
+    .inner-circle-card-label{
+      font-family:"Archivo",system-ui,-apple-system,sans-serif;
+      font-size:18px;
+      font-weight:600;
+      line-height:1.3;
+      letter-spacing:-0.01em;
+      color:#fff;
+      margin:0;
+      text-align:center;
+    }
+    .inner-circle-card-text-only{
+      height:352px;
+    }
+    .inner-circle-card-text-only .inner-circle-card-text{
+      height:100%;
+      background:#0000FF;
+      padding:24px;
+      text-align:center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .inner-circle-card-text{
+      background:#0000FF;
+      padding:20px 24px;
+      text-align:center;
+      min-height:100px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .card-text{
+      font-family:"Archivo",system-ui,-apple-system,sans-serif;
+      font-size:18px;
+      font-weight:600;
+      line-height:1.3;
+      letter-spacing:-0.01em;
+      color:#fff;
+      margin:0;
+    }
+    @media (max-width:1200px){
+      .category-cards{
+        grid-template-columns:repeat(2, 1fr);
+      }
+    }
+    @media (max-width:768px){
+      .inner-circle-section{
+        padding:60px 20px;
+      }
+      .inner-circle-header{
+        margin-bottom:40px;
+      }
+      .inner-circle-category{
+        margin-bottom:40px;
+      }
+      .category-cards{
+        grid-template-columns:1fr;
+        gap:16px;
+      }
+      .inner-circle-card-image{
+        height:200px;
+      }
+      .inner-circle-card-text-only{
+        height:288px;
+      }
+      .inner-circle-card-footer{
+        padding:14px 16px;
+        min-height:60px;
+      }
+      .inner-circle-card-label{
+        font-size:16px;
+      }
+      .inner-circle-card-text-only .inner-circle-card-text{
+        padding:20px;
+      }
+      .card-text{
+        font-size:16px;
+      }
+    }
+    .tier-card-free{
+      background:linear-gradient(135deg,#E6F2FF 0%,#D1E7FF 100%);
+      border-color:#0000FF;
+      color:#000;
+    }
+    .tier-card-free .tier-check-icon path{
+      stroke:#0000FF;
+    }
+    .tier-card-member{
+      background:linear-gradient(135deg,#0000FF 0%,#2c2cff 100%);
+      border-color:#0000FF;
+      color:#fff;
+    }
+    .tier-card-member .tier-check-icon path{
+      stroke:#fff;
+    }
+    .tier-card-movement-creator{
+      background:linear-gradient(135deg,#1a1a1a 0%,#2d2d2d 100%);
+      border-color:#0000FF;
+      color:#fff;
+    }
+    .tier-card-movement-creator .tier-check-icon path{
+      stroke:#fff;
+    }
+    .tier-card-free .tier-free-condition{
+      color:#000;
+      opacity:0.8;
+    }
+    .tier-card-cta-free{
+      background:#0000FF;
+      color:#fff;
+      border-color:#0000FF;
+    }
+    .tier-card-cta-free:hover{
+      background:#2c2cff;
+      transform:translateY(-2px);
+      box-shadow:0 4px 12px rgba(0,0,255,0.3);
+    }
+    .tier-card-cta-member{
+      background:#fff;
+      color:#0000FF;
+      border-color:#fff;
+    }
+    .tier-card-cta-member:hover{
+      background:rgba(255,255,255,0.9);
+      transform:translateY(-2px);
+      box-shadow:0 4px 12px rgba(255,255,255,0.3);
+    }
+    .tier-card-cta-movement-creator{
+      background:#0000FF;
+      color:#fff;
+      border-color:#0000FF;
+    }
+    .tier-card-cta-movement-creator:hover{
+      background:#2c2cff;
+      transform:translateY(-2px);
+      box-shadow:0 4px 12px rgba(0,0,255,0.3);
+    }
+    .tiers-cards-container{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:24px;
+      max-width:1400px;
+      margin:0 auto;
+    }
+    @media (max-width:1200px){
+      .tiers-cards-container{
+        grid-template-columns:1fr;
+        gap:32px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -71,7 +641,10 @@
             <h1 class="hero-title">The First Global Sports League<br>Where Everyone Can Play.</h1>
             <p class="hero-subtitle">Stop playing for free. Start playing for keeps. Turn your invisible effort into verified rankings, cash prizes, and a path to the pros.</p>
             <div class="hero-cta-container">
-              <a href="#" class="btn-start-competing">Start winning with  &nbsp<strong> FSP Games</strong></a>
+              <div class="hero-cta-wrapper">
+                <a href="#" class="btn-start-competing">Start winning with  &nbsp<strong> FSP Games</strong></a>
+                <p class="hero-app-link">Looking for the app? Get it <a href="#" class="hero-app-link-text">here</a>.</p>
+              </div>
             </div>
             <ul class="hero-bullets" role="list">
               <li>
@@ -94,67 +667,50 @@
 
     <section class="features">
       <div class="features-container">
-        <h2 class="features-title">One Account. Global League. Infinite Opportunity.</h2>
-        <p class="features-subtitle">Traditional sports pathways demand your money. FSP funds your ambition.</p>
-        
-        <div class="features-grid">
-          <!-- Meritocratic Rank -->
-          <div class="feature-card">
-            <div class="feature-icon">
-              <img src="./src/assets/images/compete-icon.svg" alt="" width="35" height="35">
+        <div class="snapchat-grid">
+          <!-- Card 1: Get Drafted -->
+          <div class="snapchat-card">
+            <div class="snapchat-card-bg">
+              <img src="./src/assets/images/hero-texture-56586a.png" alt="" class="snapchat-bg-image">
             </div>
-            <h3 class="feature-title">Meritocratic Rank (No Bias)</h3>
-            <p class="feature-desc">No politics. No bias. Your skill is verified by Edge AI and ranked against the world in real time. You earn strictly on your merit.</p>
+            <div class="snapchat-card-content">
+              <h3 class="snapchat-card-heading">Get Drafted into leading leagues (no bias & global discovery)</h3>
+              <a href="#" class="snapchat-card-cta">FSP Games Worlds Best</a>
+            </div>
           </div>
 
-          <!-- Global Discovery -->
-          <div class="feature-card">
-            <div class="feature-icon">
-              <img src="./src/assets/images/earn-icon.svg" alt="" width="35" height="35">
+          <!-- Card 2: Monetize -->
+          <div class="snapchat-card">
+            <div class="snapchat-card-bg">
+              <img src="./src/assets/images/hero-texture-56586a.png" alt="" class="snapchat-bg-image">
             </div>
-            <h3 class="feature-title">Global Discovery</h3>
-            <p class="feature-desc">You don't need a scout in the stands. You just need a phone. Be seen by the world's biggest leagues instantly.</p>
+            <div class="snapchat-card-content">
+              <h3 class="snapchat-card-heading">Monetize your journey - Start Earning today</h3>
+              <a href="#" class="snapchat-card-cta">Become a Movement Creator</a>
+            </div>
           </div>
 
-          <!-- The Ultimate Pathway -->
-          <div class="feature-card">
-            <div class="feature-icon">
-              <img src="./src/assets/images/invest-icon.svg" alt="" width="35" height="35">
+          <!-- Card 3: Win Prizes -->
+          <div class="snapchat-card">
+            <div class="snapchat-card-bg">
+              <img src="./src/assets/images/hero-texture-56586a.png" alt="" class="snapchat-bg-image">
             </div>
-            <h3 class="feature-title">The Ultimate Pathway</h3>
-            <p class="feature-desc">A real road to global success. Top the leaderboard to get drafted into leading leagues and leading prizes.</p>
+            <div class="snapchat-card-content">
+              <h3 class="snapchat-card-heading">Win life changing Prizes & Brand Bounties for every verified session</h3>
+              <a href="#" class="snapchat-card-cta">Join the Inner Circle</a>
+            </div>
           </div>
 
-          <!-- The Sports Vault -->
-          <div class="feature-card">
-            <div class="feature-icon">
-              <img src="./src/assets/images/spend-transfer-icon.svg" alt="" width="35" height="35">
+          <!-- Card 4: Get Refunds -->
+          <div class="snapchat-card">
+            <div class="snapchat-card-bg">
+              <img src="./src/assets/images/hero-texture-56586a.png" alt="" class="snapchat-bg-image">
             </div>
-            <h3 class="feature-title">The Sports Vault</h3>
-            <p class="feature-desc">A financial fortress for your career. Stake your funds to access opportunities, remove fees, and unlock "Pro" competition tiers.</p>
-          </div>
-
-          <!-- Career Subsidy -->
-          <div class="feature-card">
-            <div class="feature-icon">
-              <img src="./src/assets/images/gift-icon.svg" alt="" width="35" height="35">
+            <div class="snapchat-card-content">
+              <h3 class="snapchat-card-heading">Get Refunds and Subsidies - Audit your athleticism ( Track movement and spend)</h3>
+              <a href="#" class="snapchat-card-cta">Governments want you to play sports. Learn more</a>
             </div>
-            <h3 class="feature-title">Career Subsidy</h3>
-            <p class="feature-desc">Don't just spend; reload. Earn FSP Points on every transaction to subsidize your travel, gear, and tournament entries.</p>
           </div>
-
-          <!-- Global Spend -->
-          <div class="feature-card">
-            <div class="feature-icon">
-              <img src="./src/assets/images/spend-transfer-icon.svg" alt="" width="35" height="35">
-            </div>
-            <h3 class="feature-title">Global Spend</h3>
-            <p class="feature-desc">The FSP Card is your passport. Spend and earn points worldwide and redeem points towards "Money Can't Buy" experiences</p>
-          </div>
-        </div>
-        
-        <div class="features-cta-wrapper">
-          <a href="#" class="btn-get-started">Get started</a>
         </div>
       </div>
     </section>
@@ -178,19 +734,19 @@
               <li><strong>Verify:</strong> Our Edge AI tracks ballistics and skeletal mechanics in &lt;100ms.</li>
               <li><strong>Rank:</strong> Your verified score hits the Global Leaderboard instantly.</li>
               <li><strong>Win:</strong> Qualify for prizes, rewards, scholarships, and the league Drafts.</li>
+              <li><strong>Audit:</strong> Track, record and report your sessions</li>
             </ol>
 
-            <a href="#" class="btn-play-now">Verify Your Skill</a>
+            <div class="compete-cta-buttons">
+              <a href="#" class="btn-play-now" id="verify-skill-btn">Verify Your Skill</a>
+              <a href="#" class="btn-request-sport" id="request-sport-btn">Request New Sport</a>
+            </div>
             
             <div class="compete-logos">
               <a class="app-store-badge" href="#">
                 <img src="./src/assets/images/apple-logo.svg" alt="" class="app-store-icon">
                 <span class="app-store-text">Download on the App Store</span>
               </a>
-              <div class="powered-by-fsp">
-                <span>Powered by</span>
-                <img src="./src/assets/images/fsp_games.svg" alt="FSP Games">
-              </div>
             </div>
           </div>
         </div>
@@ -210,17 +766,13 @@
       <div class="deposit-container">
         <div class="deposit-header">
           <div>
-            <h1 class="deposit-title">You Are Skill Verified. Deposit to Join FSP NeoBank<sup><a href="#neobank-disclaimer" class="deposit-asterisk">*</a></sup></h1>
-            <h2 class="deposit-title-secondary">The Only Path That Pays You Back.</h2>
-            <h3 class="deposit-subtitle">We built the financial infrastructure to turn your performance into purchasing power.</h3>
+            <h1 class="deposit-title">You Are Skill Verified. Now become a Movement Creator</h1>
+            <h2 class="deposit-title-secondary">The Only Sports Path That Pays you back as you play</h2>
+            <h3 class="deposit-subtitle">Get your FSP Truth Score and start winning brand bounties, subsidies and golden tickets</h3>
           </div>
         </div>
 
         <div class="deposit-content">
-          <div class="deposit-intro">
-            <p class="deposit-body">Make your money go further with FSP Sports Neobank<sup><a href="#neobank-disclaimer" class="deposit-asterisk">*</a></sup>. The ultimate financial tool for the modern participant. We view your passion for sport as an asset class, creating a closed loop where your success on the courts subsidizes your cost of living off it.</p>
-          </div>
-          
           <div class="deposit-features">
             <div class="deposit-feature">
               <div class="deposit-feature-icon">
@@ -234,27 +786,29 @@
             
             <div class="deposit-feature">
               <div class="deposit-feature-icon">
-                <img src="./src/assets/images/spend-transfer-icon.svg" alt="Spend icon" width="35" height="35">
+                <img src="./src/assets/images/spend-transfer-icon.svg" alt="Movement Creator icon" width="35" height="35">
               </div>
               <div class="deposit-feature-content">
-                <h3 class="deposit-feature-title">Utilize for Daily Spend and Savings</h3>
-                <p class="deposit-feature-desc">Stop separating your life from your sport. Use FSP as your primary operating account to earn the highest reward points by depositing and spending. Turn your daily sports expenses into rewards to fund your next tournament, equipment or hotel stay along with other exclusive rewards.</p>
+                <h3 class="deposit-feature-title">Become a Movement Creator</h3>
+                <p class="deposit-feature-desc">Onboard 30 or more participants in your pool & accelerate your platform earnings. Here is a <a href="#" class="revenue-table-link">rev share breakdown for Movement creators</a>.</p>
+                <p class="deposit-feature-desc">Onboard your high school, college, your favorite team, your students in coaching, your local sports league & accelerate earnings for all.</p>
+                <p class="deposit-feature-desc">Set your share of earnings with the group. Sports meets Fintech</p>
               </div>
             </div>
             
             <div class="deposit-feature">
               <div class="deposit-feature-icon">
-                <img src="./src/assets/images/gift-icon.svg" alt="Rewards icon" width="35" height="35">
+                <img src="./src/assets/images/gift-icon.svg" alt="Referral icon" width="35" height="35">
               </div>
               <div class="deposit-feature-content">
-                <h3 class="deposit-feature-title">The Collective Rewards</h3>
-                <p class="deposit-feature-desc">Individually, you pay retail. Together, FSP commands the market. We aggregate the spending power of the entire ecosystem to unlock "Wholesale Status" on travel, equipment, and healthcare. Rates that no participant could access alone.</p>
+                <h3 class="deposit-feature-title">Refer and Earn</h3>
+                <p class="deposit-feature-desc">The Best referral program in sports. Earn bounties and golden tickets.</p>
               </div>
             </div>
           </div>
           
           <div class="deposit-cta-wrapper">
-            <a href="#" class="btn-deposit-now">Deposit Now</a>
+            <a href="#" class="btn-rewards-calculator" id="toggle-calculator-deposit">Rewards Calculator</a>
             <a href="#" class="btn-explore-tiers">Explore Tiers</a>
           </div>
         </div>
@@ -262,29 +816,6 @@
     </section>
 
     <div class="content-separator"></div>
-
-    <section class="spend-to-earn">
-      <div class="spend-container">
-        <div class="spend-content">
-          <h2 class="spend-title">The FSP League</h2>
-          <p class="spend-subtitle">Are you in the league?</p>
-          <p class="spend-subtitle-2">The most dynamic rewards card for sports</p>
-          <p class="spend-desc">FSP card holders are in a league of their own. Every swipe earns FSP Champion Points, subsidizing your travel and gear. The card also makes you eligible for golden wild card tickets to money can't buy sports access. If you don't have the card, are you even in the league?</p>
-          <div class="spend-features">
-            <p>• <strong>Instant Access upon approval:</strong> Virtual or Physical FSP Cards</p>
-            <p>• <strong>Merit-Based Status:</strong> Climb the Global Leaderboard to unlock 2x, 3x, and 4x reward multipliers. Status isn't bought; it's earned on the field.</p>
-          </div>
-          <div class="spend-cta-container">
-            <a href="#" class="btn-request-access">Request Access</a>
-            <a href="#" class="btn-rewards-calculator" id="toggle-calculator">Rewards Calculator</a>
-          </div>
-        </div>
-
-        <div class="spend-cards">
-          <img src="./src/assets/images/credit-cards-composed.svg" alt="FSP League Card" class="credit-cards-image">
-        </div>
-      </div>
-    </section>
 
     <section class="calculator-section" id="calculator-section" style="display: none;">
       <img class="calculator-texture" src="./src/assets/images/hero-texture-56586a.png" alt="">
@@ -295,47 +826,95 @@
           
           <div class="calculator-header-right">
             <div class="calculator-tier-toggle">
-              <button class="tier-toggle-btn active" data-tier="bronze">Bronze</button>
-              <button class="tier-toggle-btn" data-tier="silver">Silver</button>
-              <button class="tier-toggle-btn" data-tier="gold">Gold</button>
+              <button class="tier-toggle-btn active" data-tier="free">Free</button>
+              <button class="tier-toggle-btn" data-tier="member">Member</button>
+              <button class="tier-toggle-btn" data-tier="movement-creator">Movement Creator</button>
             </div>
           </div>
         </div>
 
-        <div class="calculator-inputs" data-tier="bronze">
+        <div class="calculator-inputs" data-tier="free">
+          <!-- Free Tier Cards -->
           <div class="calculator-card">
-            <label class="input-label">Deposit Value</label>
+            <label class="input-label">Brand Bounties</label>
             <div class="calculator-divider"></div>
-            <input type="text" class="calculator-input" value="$ 1,000">
-          </div>
-
-          <div class="calculator-card">
-            <label class="input-label">Monthly Card Spend</label>
-            <div class="calculator-divider"></div>
-            <input type="text" class="calculator-input" value="$ 1,000">
-          </div>
-
-          <div class="calculator-card">
-            <label class="input-label">Yearly Tournament Entry</label>
-            <div class="calculator-divider"></div>
-            <input type="text" class="calculator-input" value="$ 800">
-          </div>
-
-          <div class="calculator-card calculator-card-result">
-            <label class="input-label input-label-dark">Your Estimated Rewards Value*</label>
-            <div class="calculator-divider"></div>
-            <div class="result-value">$ 1,000</div>
-            <img src="./src/assets/images/earnings-chart-icon.svg" alt="Chart" class="chart-icon">
-            <svg class="fsp-logo-icon" width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15.5 0.625C7.5 0.625 1 7.125 1 15.125C1 23.125 7.5 29.625 15.5 29.625C23.5 29.625 30 23.125 30 15.125C30 7.125 23.5 0.625 15.5 0.625ZM15.5 27.125C8.875 27.125 3.5 21.75 3.5 15.125C3.5 8.5 8.875 3.125 15.5 3.125C22.125 3.125 27.5 8.5 27.5 15.125C27.5 21.75 22.125 27.125 15.5 27.125Z" fill="#0000FF"/>
-              <path d="M15.5 6.625C10.875 6.625 7.25 10.25 7.25 14.875C7.25 19.5 10.875 23.125 15.5 23.125C20.125 23.125 23.75 19.5 23.75 14.875C23.75 10.25 20.125 6.625 15.5 6.625Z" fill="#0000FF"/>
-            </svg>
+            <input type="text" class="calculator-input" value="$ 0">
           </div>
 
           <div class="calculator-card calculator-card-golden">
-            <label class="input-label">Golden Ticket(s)</label>
+            <label class="input-label">Golden Tickets (Wild Cards for inner circles)</label>
             <div class="calculator-divider"></div>
-            <div class="golden-ticket-value">02</div>
+            <div class="golden-ticket-value">00</div>
+            <svg class="ticket-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 2.07L34.05 2.07V33.93H18V2.07Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M11.8 10.71H19.25V15.96H11.8V10.71Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M14.8 15.91H22.25V21.16H14.8V15.91Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <div class="calculator-card">
+            <label class="input-label">Referral Bonus (3%)</label>
+            <div class="calculator-divider"></div>
+            <input type="text" class="calculator-input" value="$ 0">
+          </div>
+        </div>
+
+        <div class="calculator-inputs" data-tier="member" style="display: none;">
+          <!-- Member Tier Cards -->
+          <div class="calculator-card">
+            <label class="input-label">Brand Bounties</label>
+            <div class="calculator-divider"></div>
+            <input type="text" class="calculator-input" value="$ 0">
+          </div>
+
+          <div class="calculator-card calculator-card-golden">
+            <label class="input-label">Golden Tickets (Wild Cards for inner circles)</label>
+            <div class="calculator-divider"></div>
+            <div class="golden-ticket-value">00</div>
+            <svg class="ticket-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 2.07L34.05 2.07V33.93H18V2.07Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M11.8 10.71H19.25V15.96H11.8V10.71Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M14.8 15.91H22.25V21.16H14.8V15.91Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <div class="calculator-card">
+            <label class="input-label">Audit Data for Subsidies (Possible Savings)</label>
+            <div class="calculator-divider"></div>
+            <input type="text" class="calculator-input" value="$ 0">
+          </div>
+
+          <div class="calculator-card">
+            <label class="input-label">Referral Bonus (7%)</label>
+            <div class="calculator-divider"></div>
+            <input type="text" class="calculator-input" value="$ 0">
+          </div>
+        </div>
+
+        <div class="calculator-inputs" data-tier="movement-creator" style="display: none;">
+          <!-- Movement Creator Tier Cards -->
+          <div class="calculator-card">
+            <label class="input-label">Members in Pool</label>
+            <div class="calculator-divider"></div>
+            <input type="text" class="calculator-input" value="0">
+          </div>
+
+          <div class="calculator-card">
+            <label class="input-label">Creator Revenue Share</label>
+            <div class="calculator-divider"></div>
+            <input type="text" class="calculator-input" value="$ 0">
+          </div>
+
+          <div class="calculator-card">
+            <label class="input-label">Creator Ad Revenue Share from Brands</label>
+            <div class="calculator-divider"></div>
+            <input type="text" class="calculator-input" value="$ 0">
+          </div>
+
+          <div class="calculator-card calculator-card-golden">
+            <label class="input-label">Golden Tickets (Wild Cards for inner circles)</label>
+            <div class="calculator-divider"></div>
+            <div class="golden-ticket-value">00</div>
             <svg class="ticket-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M18 2.07L34.05 2.07V33.93H18V2.07Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M11.8 10.71H19.25V15.96H11.8V10.71Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
@@ -398,240 +977,123 @@
 
     <div class="content-separator"></div>
 
-    <section class="pools-referrals-section" data-active="pools">
-      <div class="sticky-tab-strip" role="navigation" aria-label="Explore pools and referrals">
-        <div class="sticky-tab-inner">
-          <div class="sticky-tab-controls" role="tablist" aria-label="Pools and referrals">
-            <button class="sticky-tab-button active" type="button" role="tab" aria-selected="true" aria-controls="pools-panel" data-tab="pools">Pools</button>
-            <button class="sticky-tab-button" type="button" role="tab" aria-selected="false" aria-controls="referrals-panel" data-tab="referrals">Referrals</button>
-          </div>
-        </div>
-      </div>
-      <div class="pools-referrals-slider">
-        <div class="pools-referrals-panels">
-          <article class="pools-referrals-panel" id="pools-panel" role="tabpanel" aria-hidden="false" data-panel="pools">
-            <div class="pools-panel">
-              <div class="pools-panel-intro">
-                <h2 class="pools-panel-title">Use the collective power of your community to fast track your rewards and access via golden tickets.</h2>
-                <p class="pools-panel-subtitle">The more deposits you pool, the better your rewards.</p>
-              </div>
-
-              <div class="pools-stake">
-                <div class="pools-stake-content">
-                  <h3 class="pools-stake-title">Stake the Next Superstar.</h3>
-                  <p class="pools-stake-subtitle">Don't just watch their journey. Bankroll it.</p>
-                  <p class="pools-stake-intro">Talent is everywhere, but capital is scarce. AthleteStash replaces donations with deposits.</p>
-                  <div class="pools-stake-features">
-                    <div class="pools-stake-feature">
-                      <h4 class="pools-stake-feature-title">For Athletes:</h4>
-                      <p class="pools-stake-feature-desc">Build a permanent capital base. The yield from your supporters' deposits funds your travel, gear, and entry fees&mdash;forever.</p>
-                    </div>
-                    <div class="pools-stake-feature">
-                      <h4 class="pools-stake-feature-title">For Supporters:</h4>
-                      <p class="pools-stake-feature-desc">Deposit, don't donate. Stake your capital on an athlete. You retain full ownership of your principal, while your yield fuels their rise.</p>
-                    </div>
-                  </div>
-                  <div class="pools-stake-actions">
-                    <a href="#" class="btn-stake-athlete">Stake an Athlete</a>
-                  </div>
-                </div>
-                <div class="pools-stake-visual">
-                  <img src="./src/assets/images/athletestash-ascii-51a891.png" alt="AthleteStash visualization">
-                </div>
-              </div>
-
-              <div class="pools-flow">
-                <div class="pools-flow-bg">
-                  <img class="pools-flow-texture" src="./src/assets/images/hero-texture-56586a.png" alt="">
-                </div>
-                <div class="pools-flow-inner">
-                  <div class="pools-flow-step">
-                    <span class="pools-flow-number">01</span>
-                    <p class="pools-flow-text"><strong>Create:</strong> Select your goal (Athlete Support, Sponsorship, or Fan Vote).</p>
-                  </div>
-                  <div class="pools-flow-step">
-                    <span class="pools-flow-number">02</span>
-                    <p class="pools-flow-text"><strong>Invite:</strong> Share your unique Pool Link. Supporters deposit via Card or Crypto.</p>
-                  </div>
-                  <div class="pools-flow-step">
-                    <span class="pools-flow-number">03</span>
-                    <p class="pools-flow-text"><strong>Activate:</strong> Our smart contracts automatically route the yield or action based on the Pool's rules.</p>
-                  </div>
-                  <div class="pools-flow-step">
-                    <span class="pools-flow-number">04</span>
-                    <p class="pools-flow-text"><strong>Redeem:</strong> Contributors earn FSP Points, Rewards, and Status for every second their capital is active.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-          <article class="pools-referrals-panel" id="referrals-panel" role="tabpanel" aria-hidden="true" data-panel="referrals">
-            <div class="squad-card">
-              <div class="squad-bg">
-                <img class="squad-texture" src="./src/assets/images/hero-texture-56586a.png" alt="">
-                <img class="squad-ascii" src="./src/assets/images/refer-ascii-art.svg" alt="">
-              </div>
-              <div class="squad-content">
-                <div class="squad-header">
-                  <h2 class="squad-title">Build Your Squad.</h2>
-                  <p class="squad-subtitle">The most powerful referral program in sports.</p>
-                  <p class="squad-body">Sports are tribal. Bring your team to FSP.</p>
-                  <p class="squad-desc">For every friend who joins and deposits, you both earn Golden Tickets into our monthly "Jackpot Draws" for trips to the World Cup, F1, and more.</p>
-                </div>
-                <h3 class="squad-heading">How It Works</h3>
-                <div class="squad-steps">
-                  <div class="squad-step-card">
-                    <svg class="squad-step-icon" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M12 2L14.59 8.26L21 9.27L16 13.97L17.18 20.3L12 16.77L6.82 20.3L8 13.97L3 9.27L9.41 8.26L12 2Z" fill="#000"/>
-                    </svg>
-                    <h4 class="squad-step-title">Become an affiliate</h4>
-                    <p class="squad-step-desc">After your application is approved you will get access to promotional</p>
-                  </div>
-                  <div class="squad-step-card">
-                    <svg class="squad-step-icon" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M12 2L14.59 8.26L21 9.27L16 13.97L17.18 20.3L12 16.77L6.82 20.3L8 13.97L3 9.27L9.41 8.26L12 2Z" fill="#000"/>
-                    </svg>
-                    <h4 class="squad-step-title">Promote FSP</h4>
-                    <p class="squad-step-desc">Link to FSP in articles, create new content, or place ads on your websites.</p>
-                  </div>
-                  <div class="squad-step-card">
-                    <svg class="squad-step-icon" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M12 2L14.59 8.26L21 9.27L16 13.97L17.18 20.3L12 16.77L6.82 20.3L8 13.97L3 9.27L9.41 8.26L12 2Z" fill="#000"/>
-                    </svg>
-                    <h4 class="squad-step-title">Earn Golden Tickets &amp; FSP points</h4>
-                    <p class="squad-step-desc">Earn Gold Tickets and FSP points whenever new friends join increasing your odds of winning life changing prizes</p>
-                  </div>
-                </div>
-                <a href="#" class="btn-invite-team">Invite Your Team</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="redeem-win-big-section">
-      <div class="redeem-win-big-container">
-        <div class="redeem-win-big-header">
-          <h2 class="redeem-win-big-title">The Inner Circle.</h2>
-          <p class="redeem-win-big-subtitle">Access has no price tag. FSP enables life changing moments.</p>
-          <p class="redeem-win-big-body">Your Champion Points & Golden Tickets unlock doors that are closed to everyone else. We don't offer generic perks; we offer the impossible. Draft into leading leagues, access to motorsports and other leading global events. You can't buy these tickets. You have to earn them.</p>
+    <section class="inner-circle-section">
+      <div class="inner-circle-container">
+        <div class="inner-circle-header">
+          <h2 class="inner-circle-title">The Inner Circle.</h2>
+          <p class="inner-circle-subtitle">Access has no price tag. FSP enables life changing moments.</p>
+          <p class="inner-circle-body">Your Champion Points & Golden Tickets unlock doors that are closed to everyone else. We don't offer generic perks; we offer the impossible. Draft into leading leagues, access to motorsports and other leading global events. You can't buy these tickets. You have to earn them.</p>
         </div>
 
-        <div class="redeem-win-big-grid">
-          <div class="redeem-grid-row">
-            <!-- Card 1: Virat Kohli Signed Merchandise -->
-            <div class="redeem-card-item">
-              <div class="redeem-card-image">
-                <img src="./src/assets/images/virat-kohli-signed-merchandise-4a7415.png" alt="Virat Kohli signing merchandise">
+        <!-- Get Drafted Category -->
+        <div class="inner-circle-category">
+          <h3 class="category-title">Get Drafted</h3>
+          <div class="category-cards">
+            <div class="inner-circle-card">
+              <div class="inner-circle-card-image">
+                <img src="./src/assets/images/world-bowling-league.png" alt="WBL" class="card-image">
               </div>
-              <div class="redeem-card-footer">
-                <p class="redeem-card-text">Virat Kohli Signed Merchandise</p>
-                <a href="#" class="btn-join-now">Join Now</a>
-              </div>
-            </div>
-
-            <!-- Card 2: Meet & Greet With Mookie Betts -->
-            <div class="redeem-card-item">
-              <div class="redeem-card-image">
-                <img src="./src/assets/images/mookie-betts-meet-greet-313567.png" alt="Meet & Greet With Mookie Betts">
-              </div>
-              <div class="redeem-card-footer">
-                <p class="redeem-card-text">Meet & Greet With Mookie Betts</p>
-                <a href="#" class="btn-join-now">Join Now</a>
+              <div class="inner-circle-card-footer">
+                <p class="inner-circle-card-label">WBL</p>
               </div>
             </div>
-          </div>
-
-          <div class="redeem-grid-row">
-            <!-- Card 3: Chance to Play in World Bowling League -->
-            <div class="redeem-card-item">
-              <div class="redeem-card-image">
-                <img src="./src/assets/images/world-bowling-league.png" alt="World Bowling League">
+            <div class="inner-circle-card">
+              <div class="inner-circle-card-image">
+                <img src="./src/assets/images/world-premier-squash.png" alt="WPS" class="card-image">
               </div>
-              <div class="redeem-card-footer">
-                <p class="redeem-card-text">Chance to Play in World Bowling League</p>
-                <a href="#" class="btn-join-now">Join Now</a>
+              <div class="inner-circle-card-footer">
+                <p class="inner-circle-card-label">WPS</p>
               </div>
             </div>
-
-            <!-- Card 4: John Peeters E1 -->
-            <div class="redeem-card-item">
-              <div class="redeem-card-image">
-                <img src="./src/assets/images/john-peeters-e1-4f1888.png" alt="John Peeters E1">
+            <div class="inner-circle-card">
+              <div class="inner-circle-card-image">
+                <img src="./src/assets/images/hero-texture-56586a.png" alt="Rivals: 1v1 Basketball" class="card-image">
               </div>
-              <div class="redeem-card-footer">
-                <p class="redeem-card-text">John Peeters & get a chance to get pit experience at E1</p>
-                <a href="#" class="btn-join-now">Join Now</a>
+              <div class="inner-circle-card-footer">
+                <p class="inner-circle-card-label">Rivals: 1v1 Basketball</p>
               </div>
             </div>
-
-            <!-- Card 5: World Premier Squash -->
-            <div class="redeem-card-item">
-              <div class="redeem-card-image">
-                <img src="./src/assets/images/world-premier-squash.png" alt="World Premier Squash">
-              </div>
-              <div class="redeem-card-footer">
-                <p class="redeem-card-text">Chance to Play In World Premier Squash</p>
-                <a href="#" class="btn-join-now">Join Now</a>
+            <div class="inner-circle-card inner-circle-card-text-only">
+              <div class="inner-circle-card-text">
+                <p class="card-text">More Sports<br>Powered by<br>FSP Games<br>and Movement<br>Creators</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Full-width bottom section: FIFA World Cup -->
-        <div class="redeem-win-big-bottom">
-          <div class="redeem-bottom-image">
-            <img src="./src/assets/images/fifa-world-cup-stadium-28e60e.png" alt="FIFA World Cup 2026 Stadium">
+        <!-- Learn from the Best Category -->
+        <div class="inner-circle-category">
+          <h3 class="category-title">Learn from the Best</h3>
+          <div class="category-cards">
+            <div class="inner-circle-card">
+              <div class="inner-circle-card-image">
+                <img src="./src/assets/images/mookie-betts-meet-greet-313567.png" alt="Baseball Session with Mookie Betts" class="card-image">
+              </div>
+              <div class="inner-circle-card-footer">
+                <p class="inner-circle-card-label">Baseball Session with Mookie Betts</p>
+              </div>
+            </div>
+            <div class="inner-circle-card">
+              <div class="inner-circle-card-image">
+                <img src="./src/assets/images/john-peeters-e1-4f1888.png" alt="E1 experience with JP" class="card-image">
+              </div>
+              <div class="inner-circle-card-footer">
+                <p class="inner-circle-card-label">E1 experience with JP</p>
+              </div>
+            </div>
+            <div class="inner-circle-card">
+              <div class="inner-circle-card-image">
+                <img src="./src/assets/images/world-premier-squash.png" alt="Squash Clinic with Saurav Ghosal" class="card-image">
+              </div>
+              <div class="inner-circle-card-footer">
+                <p class="inner-circle-card-label">Squash Clinic with Saurav Ghosal</p>
+              </div>
+            </div>
+            <div class="inner-circle-card inner-circle-card-text-only">
+              <div class="inner-circle-card-text">
+                <p class="card-text">Play More,<br>learn more,<br>meet your<br>idols</p>
+              </div>
+            </div>
           </div>
-          <div class="redeem-bottom-cta">
-            <p class="redeem-bottom-text">Win a Free trip to Fifa World Cup 2026.</p>
-            <a href="#" class="btn-join-now">Join Now</a>
+        </div>
+
+        <!-- Merchandise and Experiences Category -->
+        <div class="inner-circle-category">
+          <h3 class="category-title">Merchandise and Experiences</h3>
+          <div class="category-cards">
+            <div class="inner-circle-card">
+              <div class="inner-circle-card-image">
+                <img src="./src/assets/images/virat-kohli-signed-merchandise-4a7415.png" alt="VK bats" class="card-image">
+              </div>
+              <div class="inner-circle-card-footer">
+                <p class="inner-circle-card-label">VK bats</p>
+              </div>
+            </div>
+            <div class="inner-circle-card">
+              <div class="inner-circle-card-image">
+                <img src="./src/assets/images/fifa-world-cup-stadium-28e60e.png" alt="Fifa World Cup Finals Tickets" class="card-image">
+              </div>
+              <div class="inner-circle-card-footer">
+                <p class="inner-circle-card-label">Fifa World Cup Finals Tickets</p>
+              </div>
+            </div>
+            <div class="inner-circle-card">
+              <div class="inner-circle-card-image">
+                <img src="./src/assets/images/hero-texture-56586a.png" alt="Abu Dhabi F1 Tickets" class="card-image">
+              </div>
+              <div class="inner-circle-card-footer">
+                <p class="inner-circle-card-label">Abu Dhabi F1 Tickets</p>
+              </div>
+            </div>
+            <div class="inner-circle-card inner-circle-card-text-only">
+              <div class="inner-circle-card-text">
+                <p class="card-text">Money can't buy<br>experiences</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-
-    <section class="passion-points-section">
-      <div class="passion-points-container">
-        <div class="passion-points-left">
-          <h2 class="passion-points-title">Redeem Your Passion Points</h2>
-          <h3 class="passion-points-subtitle">Redeem on Connecting your Card</h3>
-          <p class="passion-points-desc">Earn points you can transfer to major airlines, redeem with hotel partners, and use for VIP tickets to top sports events.</p>
-          <a href="#" class="btn-start-earning-passion">Start Earning Today</a>
-        </div>
-
-        <div class="passion-points-right">
-          <div class="partners-row">
-            <div class="partners-header">
-              <h4 class="partners-title">Airline transfer partners (3)</h4>
-              <div class="nav-arrows">
-                <button class="nav-arrow nav-arrow-prev">
-                  <svg width="17" height="17" viewBox="0 0 17 17" fill="none"><path d="M8.5 16L1 8.5L8.5 1" stroke="white" stroke-width="2"/></svg>
-                </button>
-                <button class="nav-arrow nav-arrow-next">
-                  <svg width="17" height="17" viewBox="0 0 17 17" fill="none"><path d="M8.5 1L16 8.5L8.5 16" stroke="white" stroke-width="2"/></svg>
-                </button>
-              </div>
-            </div>
-            <div class="partners-cards">
-              <div class="partner-card">
-                <img src="./src/assets/images/delta-logo.svg" alt="Delta" class="partner-logo">
-              </div>
-              <div class="partner-card">
-                <img src="./src/assets/images/lufthansa-logo.png" alt="Lufthansa" class="partner-logo">
-              </div>
-              <div class="partner-card">
-                <img src="./src/assets/images/turkish-airlines-logo.png" alt="Turkish Airlines" class="partner-logo">
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    
 
     <div class="content-separator"></div>
 
@@ -825,25 +1287,17 @@
       </div>
       
       <div class="tiers-cards-container">
-        <!-- Bronze Plan Card -->
-        <div class="tier-card tier-card-bronze">
+        <!-- Free Tier Card -->
+        <div class="tier-card tier-card-free">
           <div class="tier-card-header">
-            <h3 class="tier-card-title">Bronze Plan</h3>
+            <h3 class="tier-card-title">Free</h3>
             <div class="tier-card-price">
-              <span class="tier-price-amount">$ 9</span>
-              <span class="tier-price-period">PER MONTH</span>
+              <span class="tier-price-amount tier-price-free-text">FREE</span>
             </div>
-            <p class="tier-price-free">or FREE</p>
-            <p class="tier-free-condition">Free if you keep at least $ 1,000 monthly in your account or if you transfer your salary to FSP.</p>
+            <p class="tier-free-condition">Start earning immediately with no deposit required.</p>
           </div>
           
           <div class="tier-card-benefits">
-            <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>All the benefits of your current plan and</span>
-            </div>
             <div class="tier-benefit-item">
               <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -854,33 +1308,39 @@
               <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-              <span>Up to 4%* interest per annum on savings</span>
+              <span>Brand Bounties for verified sessions</span>
             </div>
             <div class="tier-benefit-item">
               <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-              <span>1x FSP Champion Points on card spends</span>
+              <span>Golden Tickets (Wild Cards for inner circles)</span>
             </div>
             <div class="tier-benefit-item">
               <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-              <span>Eligibility for monthly Golden Ticket draws</span>
+              <span>Referral Bonus (3%)</span>
+            </div>
+            <div class="tier-benefit-item">
+              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Skill verification & FSP Truth Score</span>
             </div>
           </div>
           
-          <a href="#" class="tier-card-cta tier-card-cta-bronze">Start with Bronze Plan</a>
+          <a href="#" class="tier-card-cta tier-card-cta-free">Get Started Free</a>
         </div>
 
-        <!-- Silver Plan Card -->
-        <div class="tier-card tier-card-silver">
+        <!-- Member Tier Card -->
+        <div class="tier-card tier-card-member">
           <div class="tier-card-header">
-            <h3 class="tier-card-title">Silver Plan</h3>
+            <h3 class="tier-card-title">Member</h3>
             <div class="tier-card-price">
               <span class="tier-price-amount tier-price-free-text">FREE</span>
             </div>
-            <p class="tier-free-condition">If you transfer your salary to FSP within 2 months.</p>
+            <p class="tier-free-condition">Free if you keep at least $1,000 monthly in your account or transfer your salary to FSP.</p>
           </div>
           
           <div class="tier-card-benefits">
@@ -888,7 +1348,31 @@
               <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-              <span>Everything in the Bronze plan, and...</span>
+              <span>Everything in Free tier, and...</span>
+            </div>
+            <div class="tier-benefit-item">
+              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Brand Bounties with higher multipliers</span>
+            </div>
+            <div class="tier-benefit-item">
+              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Golden Tickets (Wild Cards for inner circles)</span>
+            </div>
+            <div class="tier-benefit-item">
+              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Audit Data for Subsidies (Possible Savings)</span>
+            </div>
+            <div class="tier-benefit-item">
+              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Referral Bonus (7%)</span>
             </div>
             <div class="tier-benefit-item">
               <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -900,25 +1384,105 @@
               <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-              <span>2x FSP Champion Points on card spends</span>
-            </div>
-            <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
               <span>Priority access to Pro Tier competitions</span>
-            </div>
-            <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Enhanced Golden Ticket allocation</span>
             </div>
           </div>
           
-          <a href="#" class="tier-card-cta tier-card-cta-silver">Start with Silver Plan</a>
+          <a href="#" class="tier-card-cta tier-card-cta-member">Become a Member</a>
+        </div>
+
+        <!-- Movement Creator Tier Card -->
+        <div class="tier-card tier-card-movement-creator">
+          <div class="tier-card-header">
+            <h3 class="tier-card-title">Movement Creator</h3>
+            <div class="tier-card-price">
+              <span class="tier-price-amount tier-price-free-text">FREE</span>
+            </div>
+            <p class="tier-free-condition">Onboard 30+ participants in your pool to unlock.</p>
+          </div>
+          
+          <div class="tier-card-benefits">
+            <div class="tier-benefit-item">
+              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Everything in Member tier, and...</span>
+            </div>
+            <div class="tier-benefit-item">
+              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Members in Pool tracking & management</span>
+            </div>
+            <div class="tier-benefit-item">
+              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Creator Revenue Share from pool earnings</span>
+            </div>
+            <div class="tier-benefit-item">
+              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Creator Ad Revenue Share from Brands</span>
+            </div>
+            <div class="tier-benefit-item">
+              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Golden Tickets (Wild Cards for inner circles)</span>
+            </div>
+            <div class="tier-benefit-item">
+              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Set your share of earnings with the group</span>
+            </div>
+            <div class="tier-benefit-item">
+              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Priority support & dedicated account manager</span>
+            </div>
+          </div>
+          
+          <a href="enterprise.html" class="tier-card-cta tier-card-cta-movement-creator">Become a Movement Creator</a>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- Request Sport Form Modal -->
+  <div class="sport-request-popup" id="sport-request-popup" aria-hidden="true">
+    <div class="sport-request-backdrop"></div>
+    <div class="sport-request-content">
+      <div class="sport-request-header">
+        <h2 class="sport-request-title">Request New Sport</h2>
+        <button class="sport-request-close" aria-label="Close form">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      
+      <form class="sport-request-form" id="sport-request-form">
+        <div class="form-group">
+          <label for="sport-name" class="form-label">Sport Name</label>
+          <input type="text" id="sport-name" name="sportName" class="form-input" placeholder="e.g., Basketball, Tennis, Soccer" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="sport-notes" class="form-label">Additional Notes (Optional)</label>
+          <textarea id="sport-notes" name="sportNotes" class="form-textarea" placeholder="Tell us why you'd like to see this sport on FSP..." rows="4"></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="user-email" class="form-label">Your Email (Optional)</label>
+          <input type="email" id="user-email" name="userEmail" class="form-input" placeholder="your.email@example.com">
+        </div>
+        
+        <button type="submit" class="form-submit-btn">Submit Request</button>
+      </form>
     </div>
   </div>
 
@@ -1076,23 +1640,40 @@
 
     // Calculator Toggle Functionality
     const calculatorToggle = document.getElementById('toggle-calculator');
+    const calculatorToggleDeposit = document.getElementById('toggle-calculator-deposit');
     const calculatorSection = document.getElementById('calculator-section');
     
+    function toggleCalculator(e) {
+      e.preventDefault();
+      if (calculatorSection.style.display === 'none' || !calculatorSection.style.display) {
+        calculatorSection.style.display = 'block';
+        calculatorSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        calculatorSection.style.display = 'none';
+      }
+    }
+    
     if (calculatorToggle && calculatorSection) {
-      calculatorToggle.addEventListener('click', function(e) {
-        e.preventDefault();
-        if (calculatorSection.style.display === 'none' || !calculatorSection.style.display) {
-          calculatorSection.style.display = 'block';
-          calculatorSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        } else {
-          calculatorSection.style.display = 'none';
-        }
-      });
+      calculatorToggle.addEventListener('click', toggleCalculator);
+    }
+    
+    if (calculatorToggleDeposit && calculatorSection) {
+      calculatorToggleDeposit.addEventListener('click', toggleCalculator);
     }
 
     // Tier Toggle Functionality
     const tierToggleButtons = document.querySelectorAll('.tier-toggle-btn');
-    const calculatorInputs = document.querySelector('.calculator-inputs');
+    const allCalculatorInputs = document.querySelectorAll('.calculator-inputs');
+    
+    // Initialize: Show free tier by default
+    allCalculatorInputs.forEach(inputs => {
+      const tier = inputs.getAttribute('data-tier');
+      if (tier === 'free') {
+        inputs.style.display = 'grid';
+      } else {
+        inputs.style.display = 'none';
+      }
+    });
     
     tierToggleButtons.forEach(button => {
       button.addEventListener('click', function() {
@@ -1104,26 +1685,15 @@
         // Get the tier from data attribute
         const tier = this.getAttribute('data-tier');
         
-        // Update calculator inputs data attribute
-        if (calculatorInputs) {
-          calculatorInputs.setAttribute('data-tier', tier);
-          
-          // Update calculator values based on tier
-          // You can customize these multipliers based on tier
-          const tierMultipliers = {
-            bronze: { deposit: 1, spend: 1, tournament: 1 },
-            silver: { deposit: 1.5, spend: 1.5, tournament: 1.5 },
-            gold: { deposit: 2, spend: 2, tournament: 2 }
-          };
-          
-          // Update result value (this is a placeholder - you can implement actual calculation)
-          const resultValue = calculatorInputs.querySelector('.result-value');
-          if (resultValue) {
-            // This is a simple example - you can implement actual calculation logic
-            const baseValue = 1000;
-            const multiplier = tierMultipliers[tier].deposit;
-            resultValue.textContent = '$ ' + Math.round(baseValue * multiplier).toLocaleString();
-          }
+        // Hide all calculator inputs
+        allCalculatorInputs.forEach(inputs => {
+          inputs.style.display = 'none';
+        });
+        
+        // Show the calculator inputs for the selected tier
+        const selectedInputs = document.querySelector(`.calculator-inputs[data-tier="${tier}"]`);
+        if (selectedInputs) {
+          selectedInputs.style.display = 'grid';
         }
       });
     });
@@ -1170,6 +1740,95 @@
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape' && tiersPopup && tiersPopup.getAttribute('aria-hidden') === 'false') {
         closeTiersPopup();
+      }
+    });
+
+    // Verify Your Skill Button - Link to App Download
+    const verifySkillBtn = document.getElementById('verify-skill-btn');
+    const appStoreBadge = document.querySelector('.app-store-badge');
+    if (verifySkillBtn && appStoreBadge) {
+      verifySkillBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        // Scroll to app store badge or trigger its click
+        appStoreBadge.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // Optionally trigger the app store link
+        setTimeout(() => {
+          appStoreBadge.click();
+        }, 500);
+      });
+    }
+
+    // Request Sport Form Modal
+    const sportRequestPopup = document.getElementById('sport-request-popup');
+    const requestSportBtn = document.getElementById('request-sport-btn');
+    const sportRequestClose = document.querySelector('.sport-request-close');
+    const sportRequestBackdrop = document.querySelector('.sport-request-backdrop');
+    const sportRequestForm = document.getElementById('sport-request-form');
+
+    function openSportRequestPopup() {
+      if (sportRequestPopup) {
+        sportRequestPopup.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeSportRequestPopup() {
+      if (sportRequestPopup) {
+        sportRequestPopup.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        // Reset form
+        if (sportRequestForm) {
+          sportRequestForm.reset();
+        }
+      }
+    }
+
+    // Open popup when clicking "Request New Sport" button
+    if (requestSportBtn) {
+      requestSportBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        openSportRequestPopup();
+      });
+    }
+
+    // Close popup when clicking close button
+    if (sportRequestClose) {
+      sportRequestClose.addEventListener('click', closeSportRequestPopup);
+    }
+
+    // Close popup when clicking backdrop
+    if (sportRequestBackdrop) {
+      sportRequestBackdrop.addEventListener('click', closeSportRequestPopup);
+    }
+
+    // Handle form submission
+    if (sportRequestForm) {
+      sportRequestForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(sportRequestForm);
+        const data = {
+          sportName: formData.get('sportName'),
+          sportNotes: formData.get('sportNotes'),
+          userEmail: formData.get('userEmail')
+        };
+        
+        // Log to console (you can replace this with actual API call)
+        console.log('Sport Request Submitted:', data);
+        
+        // Show success message (you can customize this)
+        alert('Thank you for your request! We\'ll review it and consider adding ' + data.sportName + ' to FSP.');
+        
+        // Close popup and reset form
+        closeSportRequestPopup();
+      });
+    }
+
+    // Close popup when pressing Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && sportRequestPopup && sportRequestPopup.getAttribute('aria-hidden') === 'false') {
+        closeSportRequestPopup();
       }
     });
   </script>

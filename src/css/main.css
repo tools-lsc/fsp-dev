@@ -88,6 +88,26 @@ body{
   margin-top:40px;
   flex-wrap:wrap;
 }
+.hero-cta-wrapper{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:12px;
+}
+.hero-app-link{
+  color:#fff;
+  font-size:16px;
+  line-height:1.5;
+  margin:0;
+  text-align:center;
+}
+.hero-app-link-text{
+  color:#fff;
+  text-decoration:underline;
+}
+.hero-app-link-text:hover{
+  opacity:0.8;
+}
 .btn-start-competing{
   background:#fff;
   color:#000;
