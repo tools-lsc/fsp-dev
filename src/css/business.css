@@ -485,7 +485,7 @@
 .enterprise-dashboard-image{width:100%;height:auto;max-width:100%;display:block;border-radius:0}
 
 /* Business AI Vision Section */
-.business-ai-vision{position:relative;width:100%;height:560px;background-image:url('../assets/images/ai-vision-live-bg.png');background-size:cover;background-position:center;background-repeat:no-repeat;background-attachment:fixed;display:flex;align-items:flex-end;padding:64px;overflow:hidden}
+.business-ai-vision{position:relative;width:100%;height:560px;background-image:url('../assets/images/freepik__enhance__23279.png');background-size:cover;background-position:center;background-repeat:no-repeat;background-attachment:fixed;display:flex;align-items:flex-end;padding:64px;overflow:hidden}
 .business-ai-vision::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.7));}
 .ai-vision-content{position:relative;z-index:1;max-width:540px}
 .ai-vision-kicker{font-size:12px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:rgba(255,255,255,0.8);margin:0 0 16px}

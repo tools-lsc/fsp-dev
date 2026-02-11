@@ -58,12 +58,18 @@
       position:absolute;
       inset:0;
       z-index:0;
+      overflow:hidden;
+      border-radius:20px;
     }
-    .snapchat-bg-image{
+    .snapchat-bg-image,
+    .snapchat-bg-video{
       width:100%;
       height:100%;
       object-fit:cover;
-      opacity:0.3;
+      filter:brightness(0.65);
+    }
+    .snapchat-bg-video{
+      object-position:center;
     }
     .snapchat-card-content{
       position:relative;
@@ -817,7 +823,7 @@
           <!-- Card 1: Get Drafted -->
           <div class="snapchat-card">
             <div class="snapchat-card-bg">
-              <img src="./src/assets/images/world-bowling-league-2.jpg" alt="Get drafted background" class="snapchat-bg-image">
+              <video class="snapchat-bg-video" src="./src/assets/freepik_ahtlete-on-a-basketball-court-making-a-jump-hoop-i_veo3_1_720p_16-9_24fps_23275.mp4" autoplay muted loop playsinline></video>
             </div>
             <div class="snapchat-card-content">
               <h3 class="snapchat-card-heading">Get Drafted into leading leagues (no bias & global discovery)</h3>
@@ -828,7 +834,7 @@
           <!-- Card 2: Monetize -->
           <div class="snapchat-card">
             <div class="snapchat-card-bg">
-              <img src="./src/assets/images/fsp_best_squash_image_1.jpg" alt="Movement creator background" class="snapchat-bg-image">
+              <video class="snapchat-bg-video" src="./src/assets/freepik_two-people-playing-squash-side-by-side-in-a-squahs_veo3_1_720p_9-16_24fps_23274.mp4" autoplay muted loop playsinline></video>
             </div>
             <div class="snapchat-card-content">
               <h3 class="snapchat-card-heading">Monetize your journey - Start Earning today</h3>
@@ -839,7 +845,7 @@
           <!-- Card 3: Win Prizes -->
           <div class="snapchat-card">
             <div class="snapchat-card-bg">
-              <img src="./src/assets/images/virat-kohli-signed-merchandise-4a7415.png" alt="Win prizes background" class="snapchat-bg-image">
+              <video class="snapchat-bg-video" src="./src/assets/freepik_a-person-bowling-at-a-bowling-alleyin-a-casual-sor_veo3_1_720p_9-16_24fps_23273.mp4" autoplay muted loop playsinline></video>
             </div>
             <div class="snapchat-card-content">
               <h3 class="snapchat-card-heading">Win life changing Prizes & Brand Bounties for every verified session</h3>
@@ -850,7 +856,7 @@
           <!-- Card 4: Get Refunds -->
           <div class="snapchat-card">
             <div class="snapchat-card-bg">
-              <img src="./src/assets/images/fifa-world-cup-stadium-28e60e.png" alt="Refunds and subsidies background" class="snapchat-bg-image">
+              <video class="snapchat-bg-video" src="./src/assets/freepik_a-female-person-playing-beer-pong-in-a-party-like-_veo3_1_720p_16-9_24fps_23276.mp4" autoplay muted loop playsinline></video>
             </div>
             <div class="snapchat-card-content">
               <h3 class="snapchat-card-heading">Get Refunds and Subsidies - Audit your athleticism ( Track movement and spend)</h3>
