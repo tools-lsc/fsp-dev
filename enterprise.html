@@ -326,51 +326,61 @@
             <button class="buyer-goal-item" data-goal="own-sport">Own the Sport</button>
           </div>
 
-          <!-- CENTER: Goal Visual (switches with tab) — Smartphone Mockup -->
+          <!-- CENTER: Goal Visual (switches with tab) — Landscape Smartphone Mockup with Videos -->
           <div class="buyer-goals-visual">
-            <div class="buyer-goals-phone-frame">
-              <div class="phone-frame-notch"></div>
-              <div class="phone-frame-screen">
+            <div class="buyer-goals-phone-frame buyer-goals-phone-landscape">
+              <div class="phone-frame-notch phone-frame-notch-landscape"></div>
+              <div class="phone-frame-screen phone-frame-screen-landscape">
                 <div class="buyer-goal-image active" data-goal="buy-results">
-                  <img src="./src/assets/images/buyer-buy-results.png" alt="AI verification of a bowler mid-strike with skeletal tracking overlay" loading="lazy">
+                  <video class="buyer-goal-video" autoplay muted loop playsinline>
+                    <source src="./src/assets/freepik_create-a-video_kling_1080p_16-9_24fps_80551.mp4" type="video/mp4">
+                  </video>
                 </div>
                 <div class="buyer-goal-image" data-goal="be-there">
-                  <img src="./src/assets/images/buyer-be-there.png" alt="Brand presence during live basketball dunk with holographic ad panels" loading="lazy">
+                  <video class="buyer-goal-video" autoplay muted loop playsinline>
+                    <source src="./src/assets/freepik_create-a-video_minimax_768p_16-9_24fps_80552.mp4" type="video/mp4">
+                  </video>
                 </div>
                 <div class="buyer-goal-image" data-goal="no-bots">
-                  <img src="./src/assets/images/buyer-no-bots.png" alt="AI human verification with green skeleton scan rejecting bot" loading="lazy">
+                  <video class="buyer-goal-video" autoplay muted loop playsinline>
+                    <source src="./src/assets/freepik_create-a-video_kling_1080p_16-9_24fps_80553.mp4" type="video/mp4">
+                  </video>
                 </div>
                 <div class="buyer-goal-image" data-goal="fund-dream">
-                  <img src="./src/assets/images/buyer-fund-dream.png" alt="Young athlete with holographic funding progress and gear materializing" loading="lazy">
+                  <video class="buyer-goal-video" autoplay muted loop playsinline>
+                    <source src="./src/assets/freepik_create-a-video_minimax_768p_16-9_24fps_80554.mp4" type="video/mp4">
+                  </video>
                 </div>
                 <div class="buyer-goal-image" data-goal="own-sport">
-                  <img src="./src/assets/images/buyer-own-sport.png" alt="Stadium at night with holographic crown showing brand category ownership" loading="lazy">
+                  <video class="buyer-goal-video" autoplay muted loop playsinline>
+                    <source src="./src/assets/freepik_create-a-video_minimax_768p_16-9_24fps_80555.mp4" type="video/mp4">
+                  </video>
                 </div>
               </div>
             </div>
-          </div>
-
-          <!-- RIGHT: Description for selected goal -->
-          <div class="buyer-goals-detail">
-            <div class="buyer-goal-detail active" data-goal="buy-results">
-              <h3 class="buyer-goal-detail-title">Pay only for verified performance</h3>
-              <p class="buyer-goal-detail-body">Stop paying for ads people scroll past. You only pay when a human actually makes a move&mdash;like a strike, a goal, or a perfect swing. Your budget only spends when a result is verified by our AI.</p>
-            </div>
-            <div class="buyer-goal-detail" data-goal="be-there">
-              <h3 class="buyer-goal-detail-title">Reach athletes at their best</h3>
-              <p class="buyer-goal-detail-body">Our grid puts your brand in the middle of the action. You reach your audience while they are training, competing, and showing off their skills in real-time.</p>
-            </div>
-            <div class="buyer-goal-detail" data-goal="no-bots">
-              <h3 class="buyer-goal-detail-title">100% real engagement you can trust</h3>
-              <p class="buyer-goal-detail-body">Our AI checks human movement in less than a second. You aren't buying fake clicks; you are buying real human effort that is physically impossible to fake or bot.</p>
-            </div>
-            <div class="buyer-goal-detail" data-goal="fund-dream">
-              <h3 class="buyer-goal-detail-title">Become a partner in their success</h3>
-              <p class="buyer-goal-detail-body">Your money directly pays for the athlete's gear, travel, and training. You aren't just an advertiser; you are helping participants all over the world reach the next level.</p>
-            </div>
-            <div class="buyer-goal-detail" data-goal="own-sport">
-              <h3 class="buyer-goal-detail-title">Be the main name in your category</h3>
-              <p class="buyer-goal-detail-body">Secure your spot as the first brand in your sport. By buying movement early, you own the "Truth Tax" and become the primary sponsor for every verified session in that sport.</p>
+            
+            <!-- Text descriptions below videos -->
+            <div class="buyer-goals-detail buyer-goals-detail-below">
+              <div class="buyer-goal-detail active" data-goal="buy-results">
+                <h3 class="buyer-goal-detail-title">Pay only for verified performance</h3>
+                <p class="buyer-goal-detail-body">Stop paying for ads people scroll past. You only pay when a human actually makes a move&mdash;like a strike, a goal, or a perfect swing. Your budget only spends when a result is verified by our AI.</p>
+              </div>
+              <div class="buyer-goal-detail" data-goal="be-there">
+                <h3 class="buyer-goal-detail-title">Reach athletes at their best</h3>
+                <p class="buyer-goal-detail-body">Our grid puts your brand in the middle of the action. You reach your audience while they are training, competing, and showing off their skills in real-time.</p>
+              </div>
+              <div class="buyer-goal-detail" data-goal="no-bots">
+                <h3 class="buyer-goal-detail-title">100% real engagement you can trust</h3>
+                <p class="buyer-goal-detail-body">Our AI checks human movement in less than a second. You aren't buying fake clicks; you are buying real human effort that is physically impossible to fake or bot.</p>
+              </div>
+              <div class="buyer-goal-detail" data-goal="fund-dream">
+                <h3 class="buyer-goal-detail-title">Become a partner in their success</h3>
+                <p class="buyer-goal-detail-body">Your money directly pays for the athlete's gear, travel, and training. You aren't just an advertiser; you are helping participants all over the world reach the next level.</p>
+              </div>
+              <div class="buyer-goal-detail" data-goal="own-sport">
+                <h3 class="buyer-goal-detail-title">Be the main name in your category</h3>
+                <p class="buyer-goal-detail-body">Secure your spot as the first brand in your sport. By buying movement early, you own the "Truth Tax" and become the primary sponsor for every verified session in that sport.</p>
+              </div>
             </div>
           </div>
         </div>

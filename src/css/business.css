@@ -2430,10 +2430,10 @@
 /* Buyer Goals — TikTok-style 3-Column Layout */
 .buyer-goals-grid{
   display:grid;
-  grid-template-columns:240px 1fr 1fr;
+  grid-template-columns:240px 1fr;
   gap:0;
-  align-items:center;
-  min-height:440px;
+  align-items:flex-start;
+  min-height:auto;
 }
 
 /* LEFT: Goal Nav */
@@ -2466,14 +2466,41 @@
   color:#fff;
 }
 
-/* CENTER: Buyer Goal Images */
+/* CENTER: Buyer Goal Videos (Landscape) */
 .buyer-goals-visual{
   position:relative;
   display:flex;
+  flex-direction:column;
   align-items:center;
-  justify-content:center;
+  justify-content:flex-start;
   padding:0 16px;
-  min-height:500px;
+  gap:32px;
+}
+.buyer-goals-phone-frame{
+  width:100%;
+  max-width:600px;
+  margin:0 auto;
+}
+.buyer-goals-phone-landscape{
+  background:#111;
+  border-radius:24px;
+  padding:16px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.4), inset 0 0 0 2px rgba(255,255,255,0.1);
+  position:relative;
+  aspect-ratio:16/9;
+  max-width:600px;
+  width:100%;
+}
+.phone-frame-notch-landscape{
+  display:none;
+}
+.phone-frame-screen-landscape{
+  width:100%;
+  height:100%;
+  border-radius:12px;
+  overflow:hidden;
+  background:#000;
+  position:relative;
 }
 .buyer-goal-image{
   position:absolute;
@@ -2492,19 +2519,21 @@
   transform:scale(1);
   pointer-events:auto;
 }
-.buyer-goal-image img{
+.buyer-goal-video{
   width:100%;
-  max-width:420px;
-  height:auto;
-  border-radius:16px;
+  height:100%;
   object-fit:cover;
+  border-radius:12px;
   box-shadow:0 8px 40px rgba(0,0,0,0.5), 0 0 60px rgba(0,255,136,0.06);
 }
 
-/* RIGHT: Goal Description */
-.buyer-goals-detail{
-  padding:0 0 0 32px;
-  align-self:center;
+/* Text descriptions below videos */
+.buyer-goals-detail-below{
+  padding:0;
+  width:100%;
+  max-width:600px;
+  margin:0 auto;
+  text-align:center;
 }
 .buyer-goal-detail{
   display:none;
@@ -3433,14 +3462,14 @@
   }
   .buyer-goals-visual{
     padding:0;
-    min-height:260px;
+    gap:24px;
   }
-  .buyer-goal-image img{
-    max-width:320px;
-    border-radius:12px;
+  .buyer-goals-phone-landscape{
+    max-width:100%;
+    aspect-ratio:16/9;
   }
-  .buyer-goals-detail{
-    padding:0;
+  .buyer-goals-detail-below{
+    padding:0 20px;
     text-align:center;
   }
   .fsp-sdk-container.fsp-sdk-two-col{
@@ -3902,59 +3931,53 @@
 /* ============================================================
    BUYER GOALS: Smartphone Frame
    ============================================================ */
-.buyer-goals-phone-frame{
-  width:100%;
-  max-width:300px;
-  margin:0 auto;
-  background:#111;
-  border-radius:36px;
-  padding:12px;
-  box-shadow:0 20px 60px rgba(0,0,0,0.4), inset 0 0 0 2px rgba(255,255,255,0.1);
-  position:relative;
-}
-.phone-frame-notch{
-  width:100px;
-  height:24px;
-  background:#111;
-  border-radius:0 0 14px 14px;
-  margin:0 auto;
-  position:relative;
-  z-index:2;
-}
-.phone-frame-screen{
-  background:#000;
-  border-radius:24px;
-  overflow:hidden;
-  aspect-ratio:9/16;
-  position:relative;
-}
-.phone-frame-screen .buyer-goal-image{
+/* Landscape phone frame styles */
+.buyer-goals-phone-landscape .phone-frame-screen-landscape .buyer-goal-image{
   position:absolute;
   inset:0;
-  display:none;
+  display:flex;
   opacity:0;
-  transform:none;
+  transform:scale(0.96);
   align-items:stretch;
   justify-content:stretch;
+  transition:opacity 0.45s ease, transform 0.45s ease;
 }
-.phone-frame-screen .buyer-goal-image.active{
+.buyer-goals-phone-landscape .phone-frame-screen-landscape .buyer-goal-image.active{
   position:absolute;
-  display:block;
+  display:flex;
   opacity:1;
-  transform:none;
+  transform:scale(1);
 }
-.phone-frame-screen .buyer-goal-image img{
+.buyer-goals-phone-landscape .phone-frame-screen-landscape .buyer-goal-video{
   width:100%;
   height:100%;
   object-fit:cover;
   border-radius:0;
-  max-width:none;
   box-shadow:none;
 }
 
 @media (max-width: 960px){
-  .buyer-goals-phone-frame{
-    max-width:240px;
+  .buyer-goals-grid{
+    grid-template-columns:1fr;
+    gap:40px;
+    min-height:auto;
+  }
+  .buyer-goals-nav{
+    flex-direction:row;
+    flex-wrap:wrap;
+    gap:0;
+    justify-content:center;
+  }
+  .buyer-goals-visual{
+    padding:0;
+    gap:24px;
+  }
+  .buyer-goals-phone-landscape{
+    max-width:100%;
+    aspect-ratio:16/9;
+  }
+  .buyer-goals-detail-below{
+    padding:0 20px;
   }
 }
 
