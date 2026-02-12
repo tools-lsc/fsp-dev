@@ -28,6 +28,113 @@
   <link rel="stylesheet" href="./wbl/css/wbl-hero-images.css">
   <link rel="stylesheet" href="./wbl/css/wbl-updates-ticker.css">
   <link rel="stylesheet" href="./wbl/css/wps-logos-cards.css">
+  <style>
+    .snapchat-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:24px;
+      max-width:1400px;
+      margin:0 auto;
+      padding:0 40px;
+    }
+    .snapchat-card{
+      position:relative;
+      border-radius:20px;
+      overflow:hidden;
+      min-height:400px;
+      display:flex;
+      flex-direction:column;
+      cursor:pointer;
+      transition:transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .snapchat-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 8px 24px rgba(0,0,0,0.15);
+    }
+    .snapchat-card-bg{
+      position:absolute;
+      inset:0;
+      z-index:0;
+      overflow:hidden;
+      border-radius:20px;
+    }
+    .snapchat-bg-image,
+    .snapchat-bg-video{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      filter:brightness(0.65);
+    }
+    .snapchat-bg-video{
+      object-position:center;
+    }
+    .snapchat-card-content{
+      position:relative;
+      z-index:1;
+      flex:1;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      padding:32px;
+      background:linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.6) 100%);
+    }
+    .snapchat-card-heading{
+      font-size:28px;
+      font-weight:600;
+      line-height:1.2;
+      letter-spacing:-0.02em;
+      color:#fff;
+      margin:0 0 24px;
+      text-shadow:0 2px 8px rgba(0,0,0,0.3);
+    }
+    .snapchat-card-cta{
+      background:rgba(255,255,255,0.95);
+      color:#000;
+      font-size:18px;
+      font-weight:600;
+      padding:14px 28px;
+      border-radius:24px;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:fit-content;
+      transition:all 0.3s ease;
+      box-shadow:0 4px 12px rgba(0,0,0,0.2);
+    }
+    .snapchat-card-cta:hover{
+      background:#fff;
+      transform:scale(1.05);
+      box-shadow:0 6px 16px rgba(0,0,0,0.3);
+    }
+    @media (max-width:960px){
+      .snapchat-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+        padding:0 20px;
+      }
+      .snapchat-card{
+        min-height:350px;
+      }
+      .snapchat-card-heading{
+        font-size:24px;
+      }
+      .snapchat-card-cta{
+        font-size:16px;
+        padding:12px 24px;
+      }
+    }
+    .section-6-philosophy .snapchat-grid{
+      margin-top:60px;
+      margin-bottom:40px;
+    }
+    @media (max-width:960px){
+      .section-6-philosophy .snapchat-grid{
+        margin-top:40px;
+        margin-bottom:30px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -129,29 +236,48 @@
             <p class="philosophy-text">We believe talent is evenly distributed, but opportunity is not. We built the infrastructure to remove luck, geography, and bias from the equation. FSP enables a world where the best athlete wins.</p>
           </div>
 
-          <div class="philosophy-panels">
-            <div class="philosophy-panel">
-              <img src="./src/assets/images/DEMOCRATIZED_ACCESS.jpg" alt="Democratized Access" class="panel-image" loading="lazy">
-              <div class="panel-content">
-                <h3 class="panel-title">DEMOCRATIZED ACCESS</h3>
-                <h4 class="panel-headline">The Driveway is the Stadium.</h4>
-                <p class="panel-description">The gatekeepers are gone. You no longer need to be in a Tier-1 city or an elite academy to be seen. Whether you are in a state-of-the-art facility or a backyard, if you have a smartphone, you have a chance to win.</p>
+          <div class="snapchat-grid">
+            <!-- Card 1: Democratized Access -->
+            <div class="snapchat-card">
+              <div class="snapchat-card-bg">
+                <img src="./src/assets/images/DEMOCRATIZED_ACCESS.jpg" alt="Democratized Access" class="snapchat-bg-image" loading="lazy">
+              </div>
+              <div class="snapchat-card-content">
+                <h3 class="snapchat-card-heading">The Driveway is the Stadium.</h3>
+                <a href="#" class="snapchat-card-cta">DEMOCRATIZED ACCESS</a>
               </div>
             </div>
-            <div class="philosophy-panel">
-              <img src="./src/assets/images/THE_UNBIASED_LENS.jpg" alt="The Unbiased Lens" class="panel-image" loading="lazy">
-              <div class="panel-content">
-                <h3 class="panel-title">THE UNBIASED LENS</h3>
-                <h4 class="panel-headline">Data Doesn't Have Favorites.</h4>
-                <p class="panel-description">Human referees have blind spots; advanced AI engines do not. Our Vision AI eliminates selection bias, politics, and human error. Your performance is judged solely on physics, ballistics & potential fraud. The only thing that matters is the score on the board.</p>
+
+            <!-- Card 2: The Unbiased Lens -->
+            <div class="snapchat-card">
+              <div class="snapchat-card-bg">
+                <img src="./src/assets/images/THE_UNBIASED_LENS.jpg" alt="The Unbiased Lens" class="snapchat-bg-image" loading="lazy">
+              </div>
+              <div class="snapchat-card-content">
+                <h3 class="snapchat-card-heading">Data Doesn't Have Favorites.</h3>
+                <a href="#" class="snapchat-card-cta">THE UNBIASED LENS</a>
               </div>
             </div>
-            <div class="philosophy-panel">
-              <img src="./src/assets/images/TANGIBLE_IMPACT.jpg" alt="Tangible Impact" class="panel-image" loading="lazy">
-              <div class="panel-content">
-                <h3 class="panel-title">TANGIBLE IMPACT</h3>
-                <h4 class="panel-headline">Potential into Payment.</h4>
-                <p class="panel-description">We don't just offer "exposure"—we offer liquidity. By connecting verified skills directly to prize pools, scholarships, and sponsorship CPAs, we provide the immediate financial pathways that turn a talented kid into a funded athlete.</p>
+
+            <!-- Card 3: Tangible Impact -->
+            <div class="snapchat-card">
+              <div class="snapchat-card-bg">
+                <img src="./src/assets/images/TANGIBLE_IMPACT.jpg" alt="Tangible Impact" class="snapchat-bg-image" loading="lazy">
+              </div>
+              <div class="snapchat-card-content">
+                <h3 class="snapchat-card-heading">Potential into Payment.</h3>
+                <a href="#" class="snapchat-card-cta">TANGIBLE IMPACT</a>
+              </div>
+            </div>
+
+            <!-- Card 4: Merit-Based Excellence -->
+            <div class="snapchat-card">
+              <div class="snapchat-card-bg">
+                <img src="./src/assets/images/worlds-best.jpg" alt="Merit-Based Excellence" class="snapchat-bg-image" loading="lazy">
+              </div>
+              <div class="snapchat-card-content">
+                <h3 class="snapchat-card-heading">The Best Athlete Wins. Always.</h3>
+                <a href="#" class="snapchat-card-cta">MERIT-BASED EXCELLENCE</a>
               </div>
             </div>
           </div>
