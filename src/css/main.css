@@ -222,6 +222,7 @@ body{
   align-items:center;
   justify-content:center;
   transition:opacity 0.2s ease;
+  max-width:100%;
 }
 .btn-explore-ecosystem{
   background:transparent;
@@ -239,6 +240,7 @@ body{
   align-items:center;
   justify-content:center;
   transition:opacity 0.2s ease;
+  max-width:100%;
 }
 .btn-start-competing:hover{
   opacity:0.9;
@@ -1895,6 +1897,11 @@ body{
   object-fit:contain;
 }
 
+/* Responsive - Passion Points */
+@media (max-width: 960px){
+  .passion-points-container{grid-template-columns:1fr}
+}
+
 /* Sticky Tabs */
 .sticky-tab-strip{
   position:sticky;
@@ -2312,6 +2319,11 @@ body{
   display:block;
 }
 
+/* Responsive - More Partners */
+@media (max-width: 960px){
+  .more-partners-container{grid-template-columns:1fr}
+}
+
 /* Calculator Section */
 .calculator-section{
   position:relative;
@@ -2537,19 +2549,24 @@ body{
 /* FAQ Section */
 .faq-section{
   background:#fff;
-  padding:80px 40px 100px;
+  padding:48px 40px 60px;
 }
 .faq-container{
-  max-width:1310px;
+  max-width:800px;
   margin:0 auto;
 }
 .faq-title{
-  font-size:48px;
+  font-size:32px;
   font-weight:500;
-  line-height:.9375;
+  line-height:1;
   letter-spacing:-.025em;
   color:#000;
-  margin-bottom:48px;
+  margin-bottom:32px;
+}
+.faq-list{
+  display:flex;
+  flex-direction:column;
+  gap:0;
 }
 .faq-grid{
   display:grid;
@@ -2582,9 +2599,10 @@ body{
 }
 .faq-item{
   position:relative;
-  border:1px solid #0000FF;
-  border-radius:10px;
-  padding:20px 24px;
+  border:none;
+  border-bottom:1px solid #E6E6E6;
+  border-radius:0;
+  padding:16px 0;
   display:flex;
   flex-direction:column;
   transition:all 0.3s ease;
@@ -2604,7 +2622,7 @@ body{
   min-height:32px;
 }
 .faq-question{
-  font-size:20px;
+  font-size:16px;
   font-weight:500;
   line-height:1.4;
   color:#000;
@@ -2615,7 +2633,7 @@ body{
   padding:0;
 }
 .faq-answer{
-  font-size:16px;
+  font-size:14px;
   font-weight:400;
   line-height:1.5;
   color:#4D4D4D;
@@ -2677,7 +2695,7 @@ body{
   min-height:32px;
 }
 .faq-question{
-  font-size:20px;
+  font-size:16px;
   font-weight:500;
   line-height:1.4;
   color:#000;
@@ -2691,7 +2709,7 @@ body{
 /* Footer */
 .site-footer{
   background:#ffffff;
-  padding:58px 64px 40px;
+  padding:40px 64px 32px;
   border-top:1px solid #E6E6E6;
 }
 .footer-container{
@@ -2702,35 +2720,32 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:flex-start;
-  margin-bottom:48px;
+  gap:40px;
 }
 .footer-left{
-  max-width:720px;
+  max-width:400px;
 }
-.newsletter-label{
-  font-size:14.1px;
-  font-weight:400;
-  line-height:1.1986;
-  color:rgba(0,0,0,0.5);
+.footer-logo{
+  width:200px;
+  height:auto;
   display:block;
-  margin-bottom:11px;
+  margin-bottom:12px;
 }
-.newsletter-text{
-  font-size:16px;
+.footer-tagline{
+  font-size:14px;
   font-weight:400;
-  line-height:1.3;
-  letter-spacing:-.02em;
-  color:#000;
-  margin:0 0 12px;
+  line-height:1.4;
+  color:#4D4D4D;
+  margin:0 0 20px;
 }
 .newsletter-form{
   position:relative;
-  width:340px;
+  width:300px;
   height:40px;
   border:1px solid #000;
   border-radius:0;
   display:flex;
-  margin-bottom:10px;
+  margin-bottom:8px;
 }
 .newsletter-input{
   flex:1;
@@ -2750,7 +2765,7 @@ body{
   background:#000;
   color:#fff;
   border:none;
-  padding:6px 29px;
+  padding:6px 24px;
   font-size:14px;
   font-weight:600;
   line-height:1.2;
@@ -2763,49 +2778,40 @@ body{
 }
 .newsletter-disclaimer{
   font-size:10px;
-  font-weight:600;
+  font-weight:400;
   line-height:1.2;
-  color:#000;
+  color:#999;
   margin:0;
-  max-width:325px;
 }
 .footer-right{
-  flex-shrink:0;
+  display:flex;
+  gap:48px;
+  align-items:flex-start;
+}
+.footer-links{
   display:flex;
   flex-direction:column;
-  gap:24px;
-  align-items:flex-end;
+  gap:10px;
 }
-.footer-trust{
-  text-align:right;
-}
-.footer-trust-title{
-  font-size:clamp(24px, 3vw, 32px);
-  font-weight:500;
-  line-height:1.2;
-  letter-spacing:-0.02em;
-  color:#000;
-  margin:0 0 12px;
-}
-.footer-tagline{
-  font-size:clamp(18px, 2vw, 22px);
+.footer-links a{
+  font-size:14px;
   font-weight:400;
-  line-height:1.4;
-  letter-spacing:-0.017em;
-  color:#4D4D4D;
-  margin:0;
+  color:#000;
+  text-decoration:none;
+  transition:opacity 0.2s ease;
 }
-.footer-logo{
-  width:422px;
-  height:auto;
-  display:block;
+.footer-links a:hover{
+  opacity:0.6;
 }
-.footer-disclaimer{
+.footer-bottom{
+  margin-top:32px;
+  padding-top:20px;
+  border-top:1px solid #E6E6E6;
+}
+.footer-copyright{
   font-size:12px;
   font-weight:400;
-  line-height:1.32;
-  letter-spacing:-.01em;
-  color:#B1B1B1;
+  color:#999;
   margin:0;
 }
 
@@ -2928,10 +2934,10 @@ body{
   .calculator-header-wrapper{flex-direction:column;gap:20px;margin-bottom:40px}
   .calculator-header-right{align-items:flex-start;text-align:left}
   .calculator-desc{text-align:left}
-  .faq-section{padding:60px 24px 80px}
+  .faq-section{padding:40px 24px 48px}
   .faq-grid{grid-template-columns:1fr;gap:20px}
-  .site-footer{padding:60px 24px 40px}
-  .footer-content{flex-direction:column;gap:40px;margin-bottom:40px}
+  .site-footer{padding:40px 24px 32px}
+  .footer-content{flex-direction:column;gap:32px}
   .footer-logo{width:300px}
 }
 @media (max-width: 640px){
@@ -2945,7 +2951,7 @@ body{
   .main-nav > ul > li > a:not(.dropdown-toggle){font-size:15px;padding:12px 24px;min-height:46px}
   .hero-content{padding:56px 0 120px}
   .hero .container{padding-left:24px}
-  .hero-ascii{right:auto;left:50%;transform:translateX(-50%);top:auto;bottom:0;width:100%;max-width:700px;opacity:.85}
+  .hero-ascii{right:auto;left:50%;transform:translateX(-50%);top:auto;bottom:0;width:100%;max-width:500px;opacity:0.6}
   .hero-subtitle{font-size:18px}
   .sticky-tab-strip{padding:12px 0}
   .sticky-tab-controls{width:100%;justify-content:center}
@@ -2989,6 +2995,7 @@ body{
   .btn-start-competing,
   .btn-explore-ecosystem{
     width:100%;
+    max-width:100%;
     justify-content:center;
   }
   .deposit-steps{grid-template-columns:1fr;gap:40px}
@@ -3048,14 +3055,14 @@ body{
   .calculator-section{padding:40px 16px 60px}
   .calculator-input{font-size:32px}
   .spending-input-group .calculator-input{font-size:24px}
-  .faq-title{font-size:36px}
-  .faq-section{padding:40px 16px 60px}
-  .faq-question{font-size:18px}
-  .faq-item{padding:4px 20px}
-  .site-footer{padding:40px 16px 30px}
-  .newsletter-form{width:100%;max-width:340px}
-  .footer-logo{width:250px}
-  .newsletter-text{font-size:14px}
+  .faq-title{font-size:24px}
+  .faq-section{padding:32px 16px 40px}
+  .faq-question{font-size:15px}
+  .faq-item{padding:12px 0}
+  .site-footer{padding:32px 16px 24px}
+  .newsletter-form{width:100%;max-width:300px}
+  .footer-logo{width:160px}
+  .footer-right{flex-direction:row;gap:32px}
   .newsletter-disclaimer{font-size:9px}
 }
 
@@ -3316,4 +3323,19 @@ body{
   .tier-price-free-text{
     font-size:32px;
   }
+}
+
+@media (max-width: 480px){
+  .hero-title{font-size:28px}
+  .hero-subtitle{font-size:16px}
+  .snapchat-card-heading{font-size:14px}
+  .snapchat-card-cta{font-size:12px;padding:8px 16px}
+  .btn-start-competing{font-size:16px;padding:12px 24px}
+  .subsidy-title{font-size:28px}
+  .compete-title{font-size:32px}
+  .calculator-section .calculator-title{font-size:28px}
+  .faq-title{font-size:22px}
+  .footer-logo{width:140px}
+  .tier-toggle-btn{font-size:12px;padding:6px 12px}
+  .sticky-tab-button{font-size:12px;padding:6px 12px}
 }

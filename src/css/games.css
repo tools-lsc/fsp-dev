@@ -68,7 +68,7 @@
 .games-hero-title {
   font-family: 'Archivo', sans-serif;
   font-weight: 500;
-  font-size: 70px;
+  font-size: clamp(36px, 6vw, 70px);
   line-height: 1.1;
   letter-spacing: -0.02em;
   color: #fff;
@@ -78,7 +78,7 @@
 .games-hero-subtitle {
   font-family: 'Archivo', sans-serif;
   font-weight: 300;
-  font-size: 56px;
+  font-size: clamp(28px, 4.5vw, 56px);
   line-height: 1.2;
   letter-spacing: -0.02em;
   color: #fff;
@@ -631,4 +631,14 @@
   .btn-rules-cta-secondary{
     max-width:100%;
   }
+}
+
+@media (max-width: 480px){
+  .games-hero-title{font-size:32px}
+  .games-hero-subtitle{font-size:24px}
+  .card-button{font-size:12px;padding:8px 16px}
+  .card-description{font-size:13px}
+  .grid-text-title{font-size:11px}
+  .worlds-best-buttons{flex-direction:column;gap:12px}
+  .btn-get-started-hero,.btn-download-app-hero{width:100%;font-size:14px}
 }

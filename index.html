@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FSP — Beyond Banking</title>
+  <meta name="description" content="The first global sports league where everyone can play. Verified skills, real rewards, and a path to the pros.">
   <link rel="icon" type="image/svg+xml" href="./src/assets/images/logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,19 +19,43 @@
       align-items:center;
       gap:12px;
     }
-    .hero-app-link{
+    .hero-app-cta{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      margin-top:28px;
+      padding-top:24px;
+      border-top:1px solid rgba(255,255,255,0.2);
+    }
+    .hero-app-cta-label{
+      color:rgba(255,255,255,0.8);
+      font-size:16px;
+      font-weight:400;
+      line-height:1.5;
+    }
+    .hero-app-cta-btn{
+      display:inline-flex;
+      align-items:center;
+      background:rgba(255,255,255,0.15);
+      border:1px solid rgba(255,255,255,0.4);
       color:#fff;
       font-size:16px;
-      line-height:1.5;
-      margin:0;
-      text-align:center;
+      font-weight:500;
+      padding:8px 24px;
+      border-radius:20px;
+      text-decoration:none;
+      transition:all 0.2s ease;
     }
-    .hero-app-link-text{
-      color:#fff;
-      text-decoration:underline;
+    .hero-app-cta-btn:hover{
+      background:rgba(255,255,255,0.25);
+      border-color:rgba(255,255,255,0.6);
     }
-    .hero-app-link-text:hover{
-      opacity:0.8;
+    @media (max-width:640px){
+      .hero-app-cta{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+      }
     }
     .snapchat-grid{
       display:grid;
@@ -286,7 +311,7 @@
       }
     }
     .revenue-table-link{
-      color:#fff;
+      color:#0000FF;
       text-decoration:underline;
       font-weight:500;
     }
@@ -678,6 +703,13 @@
     .tier-card-member .tier-check-icon path{
       stroke:#fff;
     }
+    .tier-card-member .tier-price-free-text{
+      color:#fff;
+    }
+    .tier-card-member .tier-free-condition{
+      color:#fff;
+      opacity:0.85;
+    }
     .tier-card-movement-creator{
       background:linear-gradient(135deg,#1a1a1a 0%,#2d2d2d 100%);
       border-color:#0000FF;
@@ -685,6 +717,13 @@
     }
     .tier-card-movement-creator .tier-check-icon path{
       stroke:#fff;
+    }
+    .tier-card-movement-creator .tier-price-free-text{
+      color:#00FF88;
+    }
+    .tier-card-movement-creator .tier-free-condition{
+      color:#fff;
+      opacity:0.85;
     }
     .tier-card-free .tier-free-condition{
       color:#000;
@@ -784,8 +823,8 @@
   <main>
     <section class="hero">
       <div class="hero-bg">
-        <img class="hero-texture" src="./src/assets/images/hero-texture-56586a.png" alt="">
-        <img class="hero-ascii" src="./src/assets/images/hero-ascii.svg" alt="">
+        <img class="hero-texture" src="./src/assets/images/hero-texture-56586a.png" alt="" loading="lazy">
+        <img class="hero-ascii" src="./src/assets/images/hero-ascii.svg" alt="" loading="lazy">
       </div>
       <div class="hero-content">
         <div class="container">
@@ -794,24 +833,27 @@
             <p class="hero-subtitle">Stop playing for free. Start playing for keeps. Turn your invisible effort into verified rankings, cash prizes, and a path to the pros.</p>
             <div class="hero-cta-container">
               <div class="hero-cta-wrapper">
-                <a href="#" class="btn-start-competing">Start winning with  &nbsp<strong> FSP Games</strong></a>
-                <p class="hero-app-link">Looking for the app? Get it <a href="#" class="hero-app-link-text">here</a>.</p>
+                <a href="#" class="btn-start-competing">Start Winning with FSP Games</a>
               </div>
             </div>
             <ul class="hero-bullets" role="list">
               <li>
-                <img src="./src/assets/images/bullet-icon.svg" alt="" class="hero-bullet-icon" aria-hidden="true">
+                <img src="./src/assets/images/bullet-icon.svg" alt="" class="hero-bullet-icon" aria-hidden="true" loading="lazy">
                 <span>Global Skills verified by Edge AI</span>
               </li>
               <li>
-                <img src="./src/assets/images/bullet-icon.svg" alt="" class="hero-bullet-icon" aria-hidden="true">
+                <img src="./src/assets/images/bullet-icon.svg" alt="" class="hero-bullet-icon" aria-hidden="true" loading="lazy">
                 <span>Real Rewards & Payouts</span>
               </li>
               <li>
-                <img src="./src/assets/images/bullet-icon.svg" alt="" class="hero-bullet-icon" aria-hidden="true">
+                <img src="./src/assets/images/bullet-icon.svg" alt="" class="hero-bullet-icon" aria-hidden="true" loading="lazy">
                 <span>Direct Path to the Sports "Inner Circle"</span>
               </li>
             </ul>
+            <div class="hero-app-cta">
+              <span class="hero-app-cta-label">Looking for the app?</span>
+              <a href="#" class="hero-app-cta-btn">Download Here</a>
+            </div>
           </div>
         </div>
       </div>
@@ -823,18 +865,18 @@
           <!-- Card 1: Get Drafted -->
           <div class="snapchat-card">
             <div class="snapchat-card-bg">
-              <video class="snapchat-bg-video" src="./src/assets/freepik_ahtlete-on-a-basketball-court-making-a-jump-hoop-i_veo3_1_720p_16-9_24fps_23275.mp4" autoplay muted loop playsinline></video>
+              <video class="snapchat-bg-video" src="./src/assets/freepik_ahtlete-on-a-basketball-court-making-a-jump-hoop-i_veo3_1_720p_16-9_24fps_23275.mp4" autoplay preload="metadata" muted loop playsinline></video>
             </div>
             <div class="snapchat-card-content">
               <h3 class="snapchat-card-heading">Get Drafted into leading leagues (no bias & global discovery)</h3>
-              <a href="#" class="snapchat-card-cta">FSP Games Worlds Best</a>
+              <a href="#" class="snapchat-card-cta">FSP Games World's Best</a>
             </div>
           </div>
 
           <!-- Card 2: Monetize -->
           <div class="snapchat-card">
             <div class="snapchat-card-bg">
-              <video class="snapchat-bg-video" src="./src/assets/freepik_two-people-playing-squash-side-by-side-in-a-squahs_veo3_1_720p_9-16_24fps_23274.mp4" autoplay muted loop playsinline></video>
+              <video class="snapchat-bg-video" src="./src/assets/freepik_two-people-playing-squash-side-by-side-in-a-squahs_veo3_1_720p_9-16_24fps_23274.mp4" autoplay preload="metadata" muted loop playsinline></video>
             </div>
             <div class="snapchat-card-content">
               <h3 class="snapchat-card-heading">Monetize your journey - Start Earning today</h3>
@@ -845,7 +887,7 @@
           <!-- Card 3: Win Prizes -->
           <div class="snapchat-card">
             <div class="snapchat-card-bg">
-              <video class="snapchat-bg-video" src="./src/assets/freepik_a-person-bowling-at-a-bowling-alleyin-a-casual-sor_veo3_1_720p_9-16_24fps_23273.mp4" autoplay muted loop playsinline></video>
+              <video class="snapchat-bg-video" src="./src/assets/freepik_a-person-bowling-at-a-bowling-alleyin-a-casual-sor_veo3_1_720p_9-16_24fps_23273.mp4" autoplay preload="metadata" muted loop playsinline></video>
             </div>
             <div class="snapchat-card-content">
               <h3 class="snapchat-card-heading">Win life changing Prizes & Brand Bounties for every verified session</h3>
@@ -856,54 +898,16 @@
           <!-- Card 4: Get Refunds -->
           <div class="snapchat-card">
             <div class="snapchat-card-bg">
-              <video class="snapchat-bg-video" src="./src/assets/freepik_a-female-person-playing-beer-pong-in-a-party-like-_veo3_1_720p_16-9_24fps_23276.mp4" autoplay muted loop playsinline></video>
+              <video class="snapchat-bg-video" src="./src/assets/freepik_a-female-person-playing-beer-pong-in-a-party-like-_veo3_1_720p_16-9_24fps_23276.mp4" autoplay preload="metadata" muted loop playsinline></video>
             </div>
             <div class="snapchat-card-content">
               <h3 class="snapchat-card-heading">Get Refunds and Subsidies - Audit your athleticism ( Track movement and spend)</h3>
-              <a href="#" class="snapchat-card-cta">Governments want you to play sports. Learn more</a>
+              <a href="#" class="snapchat-card-cta">Get Sports Subsidies</a>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <div class="content-separator"></div>
-
-    <section class="subsidy-section">
-      <div class="subsidy-container">
-        <div class="subsidy-header">
-          <p class="subsidy-kicker">Financial Aid</p>
-          <h2 class="subsidy-title">Get Subsidies from Government Programs or the FFS Foundation</h2>
-          <p class="subsidy-body">If the $399 Movement Creator license feels out of reach, you still have a path in. FSP partners with public wellness programs and the Foundation for the Future of Sports (FFS) to offset your onboarding cost. Pay $100 to reserve your spot, then use the options below to cover the rest.</p>
-        </div>
-
-        <div class="subsidy-grid">
-          <div class="subsidy-card">
-            <h3 class="subsidy-card-title"><a href="#" target="_blank" rel="noopener">PLAY Credits</a></h3>
-            <p class="subsidy-card-desc">For U.S. community programs. Submit your FSP Truth Score sessions to unlock municipal wellness credits that reimburse your license fee.</p>
-          </div>
-          <div class="subsidy-card">
-            <h3 class="subsidy-card-title"><a href="#" target="_blank" rel="noopener">HSA / FSA / LSA</a></h3>
-            <p class="subsidy-card-desc">Most Health, Flexible, or Lifestyle Spending Accounts treat FSP verification as eligible activity. File your monthly statement for reimbursement.</p>
-          </div>
-          <div class="subsidy-card">
-            <h3 class="subsidy-card-title"><a href="#" target="_blank" rel="noopener">International Government Grants</a></h3>
-            <p class="subsidy-card-desc">Outside the U.S.? Submit your national sport or youth development grant info and we will help route it directly to your Movement Creator fee.</p>
-          </div>
-          <div class="subsidy-card">
-            <h3 class="subsidy-card-title"><a href="#" target="_blank" rel="noopener">FFS Foundation Subsidy</a></h3>
-            <p class="subsidy-card-desc">The Foundation for the Future of Sports underwrites $399 licenses for qualified athletes and venues that are ready to prove their movement.</p>
-          </div>
-        </div>
-
-        <div class="subsidy-cta">
-          <a href="#" class="btn-subsidy-apply">Apply for a Subsidy</a>
-          <p class="subsidy-cta-note">Submit your details and we will connect you with the best program or FFS Foundation grant for your situation.</p>
-        </div>
-      </div>
-    </section>
-
-    <div class="content-separator"></div>
 
     <section class="compete-section">
       <div class="compete-container">
@@ -932,7 +936,7 @@
             
             <div class="compete-logos">
               <a class="app-store-badge" href="#">
-                <img src="./src/assets/images/apple-logo.svg" alt="" class="app-store-icon">
+                <img src="./src/assets/images/apple-logo.svg" alt="" class="app-store-icon" loading="lazy">
                 <span class="app-store-text">Download on the App Store</span>
               </a>
             </div>
@@ -940,121 +944,11 @@
         </div>
 
         <div class="compete-images">
-          <img src="./src/assets/images/compete-phone-large.svg" alt="Vision AI app on phone" class="compete-phone-large">
-          <img src="./src/assets/images/compete-phone-small.png" alt="Vision AI verification" class="compete-phone-small">
+          <img src="./src/assets/images/compete-phone-large.svg" alt="Vision AI app on phone" class="compete-phone-large" loading="lazy">
+          <img src="./src/assets/images/compete-phone-small.png" alt="Vision AI verification" class="compete-phone-small" loading="lazy">
         </div>
       </div>
       <div class="compete-divider"></div>
-    </section>
-
-    <section class="calculator-section" id="calculator-section" style="display: none;">
-      <img class="calculator-texture" src="./src/assets/images/hero-texture-56586a.png" alt="">
-      
-      <div class="calculator-container">
-        <div class="calculator-header-wrapper">
-          <h2 class="calculator-title">Rewards Calculator</h2>
-          
-          <div class="calculator-header-right">
-            <div class="calculator-tier-toggle">
-              <button class="tier-toggle-btn active" data-tier="free">Free</button>
-              <button class="tier-toggle-btn" data-tier="member">Member</button>
-              <button class="tier-toggle-btn" data-tier="movement-creator">Movement Creator</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="calculator-inputs" data-tier="free">
-          <!-- Free Tier Cards -->
-          <div class="calculator-card">
-            <label class="input-label">Brand Bounties</label>
-            <div class="calculator-divider"></div>
-            <input type="text" class="calculator-input" value="$ 0">
-          </div>
-
-          <div class="calculator-card calculator-card-golden">
-            <label class="input-label">Golden Tickets (Wild Cards for inner circles)</label>
-            <div class="calculator-divider"></div>
-            <div class="golden-ticket-value">00</div>
-            <svg class="ticket-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18 2.07L34.05 2.07V33.93H18V2.07Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M11.8 10.71H19.25V15.96H11.8V10.71Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M14.8 15.91H22.25V21.16H14.8V15.91Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-
-          <div class="calculator-card">
-            <label class="input-label">Referral Bonus (3%)</label>
-            <div class="calculator-divider"></div>
-            <input type="text" class="calculator-input" value="$ 0">
-          </div>
-        </div>
-
-        <div class="calculator-inputs" data-tier="member" style="display: none;">
-          <!-- Member Tier Cards -->
-          <div class="calculator-card">
-            <label class="input-label">Brand Bounties</label>
-            <div class="calculator-divider"></div>
-            <input type="text" class="calculator-input" value="$ 0">
-          </div>
-
-          <div class="calculator-card calculator-card-golden">
-            <label class="input-label">Golden Tickets (Wild Cards for inner circles)</label>
-            <div class="calculator-divider"></div>
-            <div class="golden-ticket-value">00</div>
-            <svg class="ticket-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18 2.07L34.05 2.07V33.93H18V2.07Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M11.8 10.71H19.25V15.96H11.8V10.71Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M14.8 15.91H22.25V21.16H14.8V15.91Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-
-          <div class="calculator-card">
-            <label class="input-label">Audit Data for Subsidies (Possible Savings)</label>
-            <div class="calculator-divider"></div>
-            <input type="text" class="calculator-input" value="$ 0">
-          </div>
-
-          <div class="calculator-card">
-            <label class="input-label">Referral Bonus (7%)</label>
-            <div class="calculator-divider"></div>
-            <input type="text" class="calculator-input" value="$ 0">
-          </div>
-        </div>
-
-        <div class="calculator-inputs" data-tier="movement-creator" style="display: none;">
-          <!-- Movement Creator Tier Cards -->
-          <div class="calculator-card">
-            <label class="input-label">Members in Pool</label>
-            <div class="calculator-divider"></div>
-            <input type="text" class="calculator-input" value="0">
-          </div>
-
-          <div class="calculator-card">
-            <label class="input-label">Creator Revenue Share</label>
-            <div class="calculator-divider"></div>
-            <input type="text" class="calculator-input" value="$ 0">
-          </div>
-
-          <div class="calculator-card">
-            <label class="input-label">Creator Ad Revenue Share from Brands</label>
-            <div class="calculator-divider"></div>
-            <input type="text" class="calculator-input" value="$ 0">
-          </div>
-
-          <div class="calculator-card calculator-card-golden">
-            <label class="input-label">Golden Tickets (Wild Cards for inner circles)</label>
-            <div class="calculator-divider"></div>
-            <div class="golden-ticket-value">00</div>
-            <svg class="ticket-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18 2.07L34.05 2.07V33.93H18V2.07Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M11.8 10.71H19.25V15.96H11.8V10.71Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M14.8 15.91H22.25V21.16H14.8V15.91Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-        </div>
-        
-        <p class="calculator-disclaimer">*please read terms and conditions carefully</p>
-      </div>
     </section>
 
     <div class="content-separator"></div>
@@ -1062,8 +956,8 @@
     <!-- <section class="refer-to-earn">
       <div class="refer-card">
         <div class="refer-bg">
-          <img class="refer-texture" src="./src/assets/images/hero-texture-56586a.png" alt="">
-          <img class="refer-ascii" src="./src/assets/images/refer-ascii-art.svg" alt="">
+          <img class="refer-texture" src="./src/assets/images/hero-texture-56586a.png" alt="" loading="lazy">
+          <img class="refer-ascii" src="./src/assets/images/refer-ascii-art.svg" alt="" loading="lazy">
         </div>
         <div class="refer-container">
         <div class="refer-header">
@@ -1122,7 +1016,7 @@
           <article class="pools-referrals-panel" id="movement-panel" role="tabpanel" aria-hidden="false" data-panel="movement">
             <section class="deposit-to-earn">
               <div class="deposit-bg">
-                <img class="deposit-texture" src="./src/assets/images/hero-texture-56586a.png" alt="">
+                <img class="deposit-texture" src="./src/assets/images/hero-texture-56586a.png" alt="" loading="lazy">
               </div>
               <div class="deposit-container">
                 <div class="deposit-header">
@@ -1137,7 +1031,7 @@
                   <div class="deposit-features">
                     <div class="deposit-feature">
                       <div class="deposit-feature-icon">
-                        <img src="./src/assets/images/earn-icon.svg" alt="Earn icon" width="35" height="35">
+                        <img src="./src/assets/images/earn-icon.svg" alt="Earn icon" width="35" height="35" loading="lazy">
                       </div>
                       <div class="deposit-feature-content">
                         <h3 class="deposit-feature-title">Earn While You Rise to the top</h3>
@@ -1147,7 +1041,7 @@
                     
                     <div class="deposit-feature">
                       <div class="deposit-feature-icon">
-                        <img src="./src/assets/images/spend-transfer-icon.svg" alt="Movement Creator icon" width="35" height="35">
+                        <img src="./src/assets/images/spend-transfer-icon.svg" alt="Movement Creator icon" width="35" height="35" loading="lazy">
                       </div>
                       <div class="deposit-feature-content">
                         <h3 class="deposit-feature-title">Become a Movement Creator</h3>
@@ -1159,7 +1053,7 @@
                     
                     <div class="deposit-feature">
                       <div class="deposit-feature-icon">
-                        <img src="./src/assets/images/gift-icon.svg" alt="Referral icon" width="35" height="35">
+                        <img src="./src/assets/images/gift-icon.svg" alt="Referral icon" width="35" height="35" loading="lazy">
                       </div>
                       <div class="deposit-feature-content">
                         <h3 class="deposit-feature-title">Refer and Earn</h3>
@@ -1203,13 +1097,13 @@
                   </div>
                 </div>
                 <div class="pools-stake-visual">
-                  <img src="./src/assets/images/athletestash-ascii-51a891.png" alt="AthleteStash visualization">
+                  <img src="./src/assets/images/athletestash-ascii-51a891.png" alt="AthleteStash visualization" loading="lazy">
                 </div>
               </div>
 
               <div class="pools-flow">
                 <div class="pools-flow-bg">
-                  <img class="pools-flow-texture" src="./src/assets/images/hero-texture-56586a.png" alt="">
+                  <img class="pools-flow-texture" src="./src/assets/images/hero-texture-56586a.png" alt="" loading="lazy">
                 </div>
                 <div class="pools-flow-inner">
                   <div class="pools-flow-step">
@@ -1235,8 +1129,8 @@
           <article class="pools-referrals-panel" id="rewards-panel" role="tabpanel" aria-hidden="true" data-panel="rewards">
             <div class="squad-card">
               <div class="squad-bg">
-                <img class="squad-texture" src="./src/assets/images/hero-texture-56586a.png" alt="">
-                <img class="squad-ascii" src="./src/assets/images/refer-ascii-art.svg" alt="">
+                <img class="squad-texture" src="./src/assets/images/hero-texture-56586a.png" alt="" loading="lazy">
+                <img class="squad-ascii" src="./src/assets/images/refer-ascii-art.svg" alt="" loading="lazy">
               </div>
               <div class="squad-content">
                 <div class="squad-header">
@@ -1293,7 +1187,7 @@
           <div class="category-cards">
             <div class="inner-circle-card">
               <div class="inner-circle-card-image">
-                <img src="./src/assets/images/world-bowling-league-2.jpg" alt="World Bowling League" class="card-image">
+                <img src="./src/assets/images/world-bowling-league-2.jpg" alt="World Bowling League" class="card-image" loading="lazy">
               </div>
               <div class="inner-circle-card-footer">
                 <p class="inner-circle-card-label">WBL</p>
@@ -1301,7 +1195,7 @@
             </div>
             <div class="inner-circle-card">
               <div class="inner-circle-card-image">
-                <img src="./src/assets/images/world-premier-squash-2.jpg" alt="WPS" class="card-image">
+                <img src="./src/assets/images/world-premier-squash-2.jpg" alt="WPS" class="card-image" loading="lazy">
               </div>
               <div class="inner-circle-card-footer">
                 <p class="inner-circle-card-label">WPS</p>
@@ -1309,7 +1203,7 @@
             </div>
             <div class="inner-circle-card">
               <div class="inner-circle-card-image">
-                <img src="./src/assets/images/hero-texture-56586a.png" alt="Rivals 1v1 Basketball" class="card-image">
+                <img src="./src/assets/images/hero-texture-56586a.png" alt="Rivals 1v1 Basketball" class="card-image" loading="lazy">
               </div>
               <div class="inner-circle-card-footer">
                 <p class="inner-circle-card-label">Rivals: 1v1 Basketball</p>
@@ -1338,7 +1232,7 @@
           <div class="category-cards">
             <div class="inner-circle-card">
               <div class="inner-circle-card-image">
-                <img src="./src/assets/images/mookie-betts-meet-greet-313567.png" alt="Baseball Session with Mookie Betts" class="card-image">
+                <img src="./src/assets/images/mookie-betts-meet-greet-313567.png" alt="Baseball Session with Mookie Betts" class="card-image" loading="lazy">
               </div>
               <div class="inner-circle-card-footer">
                 <p class="inner-circle-card-label">Baseball Session with Mookie Betts</p>
@@ -1346,7 +1240,7 @@
             </div>
             <div class="inner-circle-card">
               <div class="inner-circle-card-image">
-                <img src="./src/assets/images/john-peeters-e1-4f1888.png" alt="E1 experience with John Peeters" class="card-image">
+                <img src="./src/assets/images/john-peeters-e1-4f1888.png" alt="E1 experience with John Peeters" class="card-image" loading="lazy">
               </div>
               <div class="inner-circle-card-footer">
                 <p class="inner-circle-card-label">E1 experience with John Peeters</p>
@@ -1354,7 +1248,7 @@
             </div>
             <div class="inner-circle-card">
               <div class="inner-circle-card-image">
-                <img src="./src/assets/images/world-premier-squash.png" alt="Squash Clinic with Saurav Ghosal" class="card-image">
+                <img src="./src/assets/images/world-premier-squash.png" alt="Squash Clinic with Saurav Ghosal" class="card-image" loading="lazy">
               </div>
               <div class="inner-circle-card-footer">
                 <p class="inner-circle-card-label">Squash Clinic with Saurav Ghosal</p>
@@ -1383,7 +1277,7 @@
           <div class="category-cards">
             <div class="inner-circle-card">
               <div class="inner-circle-card-image">
-                <img src="./src/assets/images/virat-kohli-signed-merchandise-4a7415.png" alt="VK bats" class="card-image">
+                <img src="./src/assets/images/virat-kohli-signed-merchandise-4a7415.png" alt="VK bats" class="card-image" loading="lazy">
               </div>
               <div class="inner-circle-card-footer">
                 <p class="inner-circle-card-label">VK bats</p>
@@ -1391,7 +1285,7 @@
             </div>
             <div class="inner-circle-card">
               <div class="inner-circle-card-image">
-                <img src="./src/assets/images/fifa-world-cup-stadium-28e60e.png" alt="Fifa World Cup Finals Tickets" class="card-image">
+                <img src="./src/assets/images/fifa-world-cup-stadium-28e60e.png" alt="Fifa World Cup Finals Tickets" class="card-image" loading="lazy">
               </div>
               <div class="inner-circle-card-footer">
                 <p class="inner-circle-card-label">Fifa World Cup Finals Tickets</p>
@@ -1399,7 +1293,7 @@
             </div>
             <div class="inner-circle-card">
               <div class="inner-circle-card-image">
-                <img src="./src/assets/images/hero-texture-56586a.png" alt="Abu Dhabi F1 Tickets" class="card-image">
+                <img src="./src/assets/images/hero-texture-56586a.png" alt="Abu Dhabi F1 Tickets" class="card-image" loading="lazy">
               </div>
               <div class="inner-circle-card-footer">
                 <p class="inner-circle-card-label">Abu Dhabi F1 Tickets</p>
@@ -1426,135 +1320,218 @@
       </div>
     </section>
 
+    <section class="calculator-section" id="calculator-section" style="display: none;">
+      <img class="calculator-texture" src="./src/assets/images/hero-texture-56586a.png" alt="" loading="lazy">
+
+      <div class="calculator-container">
+        <div class="calculator-header-wrapper">
+          <h2 class="calculator-title">Rewards Calculator</h2>
+
+          <div class="calculator-header-right">
+            <div class="calculator-tier-toggle">
+              <button class="tier-toggle-btn active" data-tier="free">Free</button>
+              <button class="tier-toggle-btn" data-tier="member">Member</button>
+              <button class="tier-toggle-btn" data-tier="movement-creator">Movement Creator</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="calculator-inputs" data-tier="free">
+          <div class="calculator-card">
+            <label class="input-label">Brand Bounties</label>
+            <div class="calculator-divider"></div>
+            <input type="text" class="calculator-input" value="$ 0">
+          </div>
+          <div class="calculator-card calculator-card-golden">
+            <label class="input-label">Golden Tickets (Wild Cards for inner circles)</label>
+            <div class="calculator-divider"></div>
+            <div class="golden-ticket-value">00</div>
+            <svg class="ticket-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 2.07L34.05 2.07V33.93H18V2.07Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M11.8 10.71H19.25V15.96H11.8V10.71Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M14.8 15.91H22.25V21.16H14.8V15.91Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="calculator-card">
+            <label class="input-label">Referral Bonus (3%)</label>
+            <div class="calculator-divider"></div>
+            <input type="text" class="calculator-input" value="$ 0">
+          </div>
+        </div>
+
+        <div class="calculator-inputs" data-tier="member" style="display: none;">
+          <div class="calculator-card">
+            <label class="input-label">Brand Bounties</label>
+            <div class="calculator-divider"></div>
+            <input type="text" class="calculator-input" value="$ 0">
+          </div>
+          <div class="calculator-card calculator-card-golden">
+            <label class="input-label">Golden Tickets (Wild Cards for inner circles)</label>
+            <div class="calculator-divider"></div>
+            <div class="golden-ticket-value">00</div>
+            <svg class="ticket-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 2.07L34.05 2.07V33.93H18V2.07Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M11.8 10.71H19.25V15.96H11.8V10.71Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M14.8 15.91H22.25V21.16H14.8V15.91Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="calculator-card">
+            <label class="input-label">Audit Data for Subsidies (Possible Savings)</label>
+            <div class="calculator-divider"></div>
+            <input type="text" class="calculator-input" value="$ 0">
+          </div>
+          <div class="calculator-card">
+            <label class="input-label">Referral Bonus (7%)</label>
+            <div class="calculator-divider"></div>
+            <input type="text" class="calculator-input" value="$ 0">
+          </div>
+        </div>
+
+        <div class="calculator-inputs" data-tier="movement-creator" style="display: none;">
+          <div class="calculator-card">
+            <label class="input-label">Members in Pool</label>
+            <div class="calculator-divider"></div>
+            <input type="text" class="calculator-input" value="0">
+          </div>
+          <div class="calculator-card">
+            <label class="input-label">Creator Revenue Share</label>
+            <div class="calculator-divider"></div>
+            <input type="text" class="calculator-input" value="$ 0">
+          </div>
+          <div class="calculator-card">
+            <label class="input-label">Creator Ad Revenue Share from Brands</label>
+            <div class="calculator-divider"></div>
+            <input type="text" class="calculator-input" value="$ 0">
+          </div>
+          <div class="calculator-card calculator-card-golden">
+            <label class="input-label">Golden Tickets (Wild Cards for inner circles)</label>
+            <div class="calculator-divider"></div>
+            <div class="golden-ticket-value">00</div>
+            <svg class="ticket-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 2.07L34.05 2.07V33.93H18V2.07Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M11.8 10.71H19.25V15.96H11.8V10.71Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M14.8 15.91H22.25V21.16H14.8V15.91Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <p class="calculator-disclaimer">*please read terms and conditions carefully</p>
+      </div>
+    </section>
+
+    <div class="content-separator"></div>
+
+    <section class="subsidy-section">
+      <div class="subsidy-container">
+        <div class="subsidy-header">
+          <p class="subsidy-kicker">Financial Aid</p>
+          <h2 class="subsidy-title">Get Subsidies from Government Programs or the FFS Foundation</h2>
+          <p class="subsidy-body">If the $399 Movement Creator license feels out of reach, you still have a path in. FSP partners with public wellness programs and the Foundation for the Future of Sports (FFS) to offset your onboarding cost. Pay $100 to reserve your spot, then use the options below to cover the rest.</p>
+        </div>
+
+        <div class="subsidy-grid">
+          <div class="subsidy-card">
+            <h3 class="subsidy-card-title"><a href="#" target="_blank" rel="noopener">PLAY Credits</a></h3>
+            <p class="subsidy-card-desc">For U.S. community programs. Submit your FSP Truth Score sessions to unlock municipal wellness credits that reimburse your license fee.</p>
+          </div>
+          <div class="subsidy-card">
+            <h3 class="subsidy-card-title"><a href="#" target="_blank" rel="noopener">HSA / FSA / LSA</a></h3>
+            <p class="subsidy-card-desc">Most Health, Flexible, or Lifestyle Spending Accounts treat FSP verification as eligible activity. File your monthly statement for reimbursement.</p>
+          </div>
+          <div class="subsidy-card">
+            <h3 class="subsidy-card-title"><a href="#" target="_blank" rel="noopener">International Government Grants</a></h3>
+            <p class="subsidy-card-desc">Outside the U.S.? Submit your national sport or youth development grant info and we will help route it directly to your Movement Creator fee.</p>
+          </div>
+          <div class="subsidy-card">
+            <h3 class="subsidy-card-title"><a href="#" target="_blank" rel="noopener">FFS Foundation Subsidy</a></h3>
+            <p class="subsidy-card-desc">The Foundation for the Future of Sports underwrites $399 licenses for qualified athletes and venues that are ready to prove their movement.</p>
+          </div>
+        </div>
+
+        <div class="subsidy-cta">
+          <a href="#" class="btn-subsidy-apply">Apply for a Subsidy</a>
+          <p class="subsidy-cta-note">Submit your details and we will connect you with the best program or FFS Foundation grant for your situation.</p>
+        </div>
+      </div>
+    </section>
+
     <div class="content-separator"></div>
 
     <section class="faq-section">
       <div class="faq-container">
         <h2 class="faq-title">F.A.Q.</h2>
-        
-        <div class="faq-grid">
-          <div class="faq-column">
-            <div class="faq-item">
-              <div class="faq-question-wrapper">
-                <div class="faq-question">Is FSP a bank, a sports league, or a tech company?</div>
-                <button class="faq-toggle" aria-label="Expand">
-                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
-                    <path d="M10.5 4.375V16.625M4.375 10.5H16.625" stroke="#0000FF" stroke-width="4" stroke-linecap="round"/>
-                  </svg>
-                </button>
-              </div>
-              <div class="faq-answer">We are the financial operating system that powers all three. FSP replaces the fragmented world of sports where your money, your stats, and your rewards are in different places with a unified infrastructure. We use modern financial rails to hold your capital, AI technology to verify your skills, and a global network to provide the competition.</div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-question-wrapper">
+              <div class="faq-question">What is FSP?</div>
+              <button class="faq-toggle" aria-label="Expand">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
+                  <path d="M10.5 4.375V16.625M4.375 10.5H16.625" stroke="#0000FF" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+              </button>
             </div>
-            
-            <div class="faq-item">
-              <div class="faq-question-wrapper">
-                <div class="faq-question">What do you mean by "Infrastructure for Meritocracy"?</div>
-                <button class="faq-toggle" aria-label="Expand">
-                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
-                    <path d="M10.5 4.375V16.625M4.375 10.5H16.625" stroke="#0000FF" stroke-width="4" stroke-linecap="round"/>
-                  </svg>
-                </button>
-              </div>
-              <div class="faq-answer">Traditional sports rely on gatekeepers: scouts, expensive academies, and politics. FSP relies on data. We built the infrastructure (Edge AI and global leaderboards) to ensure that if you have the talent, you get seen, ranked, and rewarded on a global platform, regardless of where you live or who you know.</div>
-            </div>
-            
-            <div class="faq-item">
-              <div class="faq-question-wrapper">
-                <div class="faq-question">How does the "Vision App" verify my performance?</div>
-                <button class="faq-toggle" aria-label="Expand">
-                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
-                    <path d="M10.5 4.375V16.625M4.375 10.5H16.625" stroke="#0000FF" stroke-width="4" stroke-linecap="round"/>
-                  </svg>
-                </button>
-              </div>
-              <div class="faq-answer">We use proprietary Edge AI technology that runs directly on your smartphone. When you record a session (like bowling a frame or hitting a squash shot), our computer vision models track skeletal movement, ball trajectory, and physics in real-time. This data creates a Verified Score that cannot be faked, allowing you to compete globally from your local venue.</div>
-            </div>
-            
-            <div class="faq-item">
-              <div class="faq-question-wrapper">
-                <div class="faq-question">Can the AI be cheated?</div>
-                <button class="faq-toggle" aria-label="Expand">
-                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
-                    <path d="M10.5 4.375V16.625M4.375 10.5H16.625" stroke="#0000FF" stroke-width="4" stroke-linecap="round"/>
-                  </svg>
-                </button>
-              </div>
-              <div class="faq-answer">Our "Vision Stack" is built with anti-cheat protocols similar to elite esports. We analyze biomechanics and environmental consistency to flag anomalies. Furthermore, to qualify for high-stakes events like the Apex Gauntlet, finalists must replicate their performance in our sanctioned live events.</div>
-            </div>
-            
-            <div class="faq-item">
-              <div class="faq-question-wrapper">
-                <div class="faq-question">How is the FSP Vault different from a traditional savings account?</div>
-                <button class="faq-toggle" aria-label="Expand">
-                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
-                    <path d="M10.5 4.375V16.625M4.375 10.5H16.625" stroke="#0000FF" stroke-width="4" stroke-linecap="round"/>
-                  </svg>
-                </button>
-              </div>
-              <div class="faq-answer">Traditional banks use your deposits to fund their own loans, paying you pennies in interest. The FSP Vault is built on stablecoin financial rails, giving you access to institutional-grade yields. Your capital is principal-protected, meaning your initial deposit is secure, while the yield it generates fuels your rewards and competitive journey.</div>
-            </div>
+            <div class="faq-answer">FSP is the first global sports league where everyone can play. We use Edge AI to verify your skills, rank you on a global leaderboard, and reward you with real prizes, brand bounties, and a path to the pros.</div>
           </div>
 
-          <div class="faq-column">
-            <div class="faq-item">
-              <div class="faq-question-wrapper">
-                <div class="faq-question">What is an "AthleteStash"?</div>
-                <button class="faq-toggle" aria-label="Expand">
-                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
-                    <path d="M10.5 4.375V16.625M4.375 10.5H16.625" stroke="#0000FF" stroke-width="4" stroke-linecap="round"/>
-                  </svg>
-                </button>
-              </div>
-              <div class="faq-answer">Think of it as crowdfunding, but better. Instead of asking friends and family to donate money (which they lose), they can deposit money into your AthleteStash. They keep their principal, but the yield generated by that pool is directed to you to fund your training, travel, and gear. It's a sustainable way to fund your legacy.</div>
+          <div class="faq-item">
+            <div class="faq-question-wrapper">
+              <div class="faq-question">How does the Vision App verify my performance?</div>
+              <button class="faq-toggle" aria-label="Expand">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
+                  <path d="M10.5 4.375V16.625M4.375 10.5H16.625" stroke="#0000FF" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+              </button>
             </div>
-            
-            <div class="faq-item">
-              <div class="faq-question-wrapper">
-                <div class="faq-question">Is my money safe?</div>
-                <button class="faq-toggle" aria-label="Expand">
-                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
-                    <path d="M10.5 4.375V16.625M4.375 10.5H16.625" stroke="#0000FF" stroke-width="4" stroke-linecap="round"/>
-                  </svg>
-                </button>
-              </div>
-              <div class="faq-answer">Security is our infrastructure's foundation. All deposits are held in regulated, principal-protected instruments. We utilize audited stablecoin rails and partner with industry leaders like Bridge and Securitize to ensure asset transparency and safety.</div>
+            <div class="faq-answer">Our proprietary Edge AI runs directly on your smartphone. Point your camera at the lane, court, or field and our computer vision tracks ball trajectory, skeletal mechanics, and physics in real-time to produce a Verified Score you can trust.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question-wrapper">
+              <div class="faq-question">Can the AI be cheated?</div>
+              <button class="faq-toggle" aria-label="Expand">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
+                  <path d="M10.5 4.375V16.625M4.375 10.5H16.625" stroke="#0000FF" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+              </button>
             </div>
-            
-            <div class="faq-item">
-              <div class="faq-question-wrapper">
-                <div class="faq-question">How do I get drafted for FSP Games</div>
-                <button class="faq-toggle" aria-label="Expand">
-                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
-                    <path d="M10.5 4.375V16.625M4.375 10.5H16.625" stroke="#0000FF" stroke-width="4" stroke-linecap="round"/>
-                  </svg>
-                </button>
-              </div>
-              <div class="faq-answer">Qualification is purely meritocratic. It is based on a weighted mix of your Skill Score (from the Vision App), your Stash Score (your financial commitment), and your Referral Score (your community influence). The top-ranked athletes on the Global Leaderboard are invited to the draft for our live, broadcasted events.</div>
+            <div class="faq-answer">Our Vision Stack uses anti-cheat protocols similar to elite esports. We analyze biomechanics and environmental consistency to flag anomalies. For high-stakes events, finalists must replicate their performance in sanctioned live events.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question-wrapper">
+              <div class="faq-question">How do I get drafted for FSP Games?</div>
+              <button class="faq-toggle" aria-label="Expand">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
+                  <path d="M10.5 4.375V16.625M4.375 10.5H16.625" stroke="#0000FF" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+              </button>
             </div>
-            
-            <div class="faq-item">
-              <div class="faq-question-wrapper">
-                <div class="faq-question">What can I do with FSP Champion Points?</div>
-                <button class="faq-toggle" aria-label="Expand">
-                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
-                    <path d="M10.5 4.375V16.625M4.375 10.5H16.625" stroke="#0000FF" stroke-width="4" stroke-linecap="round"/>
-                  </svg>
-                </button>
-              </div>
-              <div class="faq-answer">FSP Points are the currency of status. Unlike generic cash-back, these points unlock access to the "Inner Circle" of sports. You can redeem them for signed gear from our partners (like Virat Kohli and Mookie Betts), VIP experiences at global events (E1, F1, World Cup), or "Challenge Tickets" to enter high-stakes tournaments.</div>
+            <div class="faq-answer">Qualification is purely meritocratic based on your Skill Score from the Vision App, your community influence, and your leaderboard ranking. Top-ranked athletes are invited to the draft for live, broadcasted events.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question-wrapper">
+              <div class="faq-question">What are FSP Champion Points?</div>
+              <button class="faq-toggle" aria-label="Expand">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
+                  <path d="M10.5 4.375V16.625M4.375 10.5H16.625" stroke="#0000FF" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+              </button>
             </div>
-            
-            <div class="faq-item">
-              <div class="faq-question-wrapper">
-                <div class="faq-question">Why do I need to deposit to compete?</div>
-                <button class="faq-toggle" aria-label="Expand">
-                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
-                    <path d="M10.5 4.375V16.625M4.375 10.5H16.625" stroke="#0000FF" stroke-width="4" stroke-linecap="round"/>
-                  </svg>
-                </button>
-              </div>
-              <div class="faq-answer">FSP is built on the belief that athletes should have "skin in the game." While anyone can play for free, depositing unlocks "Pro Tier" status. This gives you higher earning multipliers, more challenge tickets, and eligibility for the biggest prize pools. It signals your commitment to your own journey.</div>
+            <div class="faq-answer">Champion Points unlock access to the Inner Circle of sports. Redeem them for signed gear from our partners, VIP experiences at global events, or Challenge Tickets to enter high-stakes tournaments.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question-wrapper">
+              <div class="faq-question">What is a Movement Creator?</div>
+              <button class="faq-toggle" aria-label="Expand">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
+                  <path d="M10.5 4.375V16.625M4.375 10.5H16.625" stroke="#0000FF" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+              </button>
             </div>
+            <div class="faq-answer">Movement Creators are community leaders who onboard participants into their pool. Once you have 30+ members, you unlock revenue sharing, brand ad revenue, and the ability to set earnings distribution within your group.</div>
           </div>
         </div>
       </div>
@@ -1565,41 +1542,35 @@
     <div class="footer-container">
       <div class="footer-content">
         <div class="footer-left">
+          <img src="./src/assets/images/footer-logo.svg" alt="Future of Sports" class="footer-logo" loading="lazy">
+          <p class="footer-tagline">Fair. Open. Rewarding.</p>
           <div class="footer-newsletter">
-            <span class="newsletter-label">Newsletter</span>
-            <p class="newsletter-text">Stay up-to-date with FSP's<br>latest news and updates.</p>
             <form class="newsletter-form">
               <input type="email" placeholder="Your email" class="newsletter-input" required>
               <button type="submit" class="btn-newsletter">Sign up</button>
             </form>
-            <p class="newsletter-disclaimer">By clicking the "Enroll" button below, you agree you want to receive the <br>FSPs Newsletter and agree to the Terms of Services.</p>
+            <p class="newsletter-disclaimer">By signing up you agree to FSP's Terms of Service.</p>
           </div>
         </div>
-        
+
         <div class="footer-right">
-          <div class="footer-trust">
-            <h3 class="footer-trust-title">Backed by the Architects of Sport.</h3>
-            <div class="footer-trust-logos">
-              <!-- Logos placeholder - Visa, Bridge, Securitize -->
-              <div class="trust-logo">Visa</div>
-              <div class="trust-logo">Bridge</div>
-              <div class="trust-logo">Securitize</div>
-            </div>
-            <div class="footer-athletes">
-              <!-- Athlete photos placeholder - Virat Kohli, Mookie Betts, Jason Belmonte, Saurav Ghosal -->
-              <div class="athlete-photo">Virat Kohli</div>
-              <div class="athlete-photo">Mookie Betts</div>
-              <div class="athlete-photo">Jason Belmonte</div>
-              <div class="athlete-photo">Saurav Ghosal</div>
-            </div>
-            <p class="footer-tagline">FSP. The Future of Sports Participation.<br>Fair. Open. Rewarding.</p>
+          <div class="footer-links">
+            <a href="games.html">Games</a>
+            <a href="enterprise.html">Partners</a>
+            <a href="documentation.html">Developers</a>
+            <a href="council.html">Council</a>
           </div>
-          <img src="./src/assets/images/footer-logo.svg" alt="Future of Sports" class="footer-logo">
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="https://www.leaguesportsco.com/" target="_blank" rel="noopener noreferrer">League Sports Co</a>
+            <a href="https://www.futureofsportsfoundation.com/" target="_blank" rel="noopener noreferrer">FFS Foundation</a>
+          </div>
         </div>
       </div>
-      
-      <div class="footer-disclaimer" id="neobank-disclaimer">
-        [*] The tokenized assets referenced herein (OUSG, USDY and Global Markets assets) ("Tokenized Assets") are not registered under the US Securities Act of 1933, as amended ("Act") or pursuant to securities laws of any other jurisdiction. Tokenized Assets shall not be offered, sold or otherwise transferred in the US or to US persons unless registered under the Act or an exemption or exclusion from the registration requirements thereof is available. Additional restrictions may apply. The Tokenized Asset issuers are not registered as investment companies under the US Investment Company Act of 1940, as amended, or pursuant to analogous laws of any other jurisdiction. Ondo Chain and Ondo Global Markets ("GM") have not launched. GM Tokenized Assets ("GM Assets") will be backed by applicable securities; however, GM Assets and the underlying securities are distinct assets with their own respective performance and risk profiles. Providers of products, services or technologies on Ondo Chain (including but not limited to issuers of assets and providers of asset-related services) are responsible for their own products, services and technologies, including but not limited to the compliance of such products, services and technologies with applicable laws, rules and regulations. Ondo
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 Future of Sports Platform. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -1727,7 +1698,7 @@
           <div class="tier-card-header">
             <h3 class="tier-card-title">Movement Creator</h3>
             <div class="tier-card-price">
-              <span class="tier-price-amount tier-price-free-text">FREE</span>
+              <span class="tier-price-amount tier-price-free-text">EARN</span>
             </div>
             <p class="tier-free-condition">Onboard 30+ participants in your pool to unlock.</p>
           </div>
@@ -1978,7 +1949,7 @@
       e.preventDefault();
       if (calculatorSection.style.display === 'none' || !calculatorSection.style.display) {
         calculatorSection.style.display = 'block';
-        calculatorSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        calculatorSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       } else {
         calculatorSection.style.display = 'none';
       }

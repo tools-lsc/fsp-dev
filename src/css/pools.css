@@ -6,7 +6,7 @@
 .pools-hero-content{position:relative;height:100vh;display:flex;flex-direction:column;justify-content:center;padding:102px 0 84px}
 .pools-hero .container{max-width:none;margin:0;padding-left:64px;padding-right:24px}
 .pools-hero-text{max-width:815px}
-.pools-hero-title{font-weight:500;letter-spacing:-0.0571em;line-height:0.83;font-size:70px;color:#FFFFFF;margin-bottom:24px}
+.pools-hero-title{font-weight:500;letter-spacing:-0.0571em;line-height:0.83;font-size:clamp(36px, 6vw, 70px);color:#FFFFFF;margin-bottom:24px}
 .pools-hero-subtitle{font-weight:300;letter-spacing:-0.017em;line-height:1.4;font-size:clamp(18px, 2.5vw, 24px);color:rgba(255,255,255,0.9);margin-bottom:41px;max-width:900px}
 .pools-hero-cta-container{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
 .btn-start-pool{display:inline-flex;align-items:center;justify-content:center;background:#fff;color:#0000FF;font-size:20px;font-weight:400;line-height:1.25;letter-spacing:-0.019em;padding:7px 40px;border-radius:20px;text-decoration:none;transition:opacity 0.2s ease}
@@ -55,7 +55,7 @@
 @media (max-width: 640px){
   .pools-hero{height:auto;min-height:100vh}
   .pools-hero-content{height:auto;min-height:100vh;padding:40px 0 90px}
-  .pools-hero-ascii{width:350px;opacity:0.6;right:6%}
+  .pools-hero-ascii{width:100%;max-width:400px;opacity:0.5;right:6%}
   .pools-hero .container{padding-left:24px;padding-right:24px}
   .pools-hero-title{font-size:40px;line-height:1;margin-bottom:32px}
   .pools-hero-cta-container{width:100%}
