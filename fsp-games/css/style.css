@@ -1388,12 +1388,9 @@ body {
 .last-section {
     width: 100%;
     min-height: 100vh;
-    /* FSP core blue background with grain texture overlay */
+    /* FSP core blue background similar to home hero */
     background-color: #0000FF;
-    background-image: url('../../src/assets/images/hero-texture-56586a.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: repeat;
+    overflow: hidden;
     position: relative;
     padding: 80px 20px;
     display: flex;
@@ -1401,10 +1398,25 @@ body {
     justify-content: center;
 }
 
+/* Grain texture overlay, matching home-page style */
+.last-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../../src/assets/images/hero-texture-56586a.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6;
+    mix-blend-mode: lighten;
+    pointer-events: none;
+}
+
 .last-section-container {
     max-width: 1540px;
     width: 100%;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .last-section-header {
