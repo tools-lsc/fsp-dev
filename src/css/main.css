@@ -2072,10 +2072,12 @@ body{
 }
 .pools-stake-visual img{
   width:100%;
-  max-width:380px;
+  max-width:480px;
   height:auto;
   display:block;
-  object-fit:contain;
+  object-fit:cover;
+  border-radius:20px;
+  box-shadow:0 8px 32px rgba(0,0,0,0.18);
 }
 .pools-flow{
   max-width:1200px;
