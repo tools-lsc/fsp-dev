@@ -1388,10 +1388,12 @@ body {
 .last-section {
     width: 100%;
     min-height: 100vh;
-    background-image: url('../images/lastsection-background.jpg');
+    /* FSP core blue background with grain texture overlay */
+    background-color: #0000FF;
+    background-image: url('../../src/assets/images/hero-texture-56586a.png');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     position: relative;
     padding: 80px 20px;
     display: flex;
@@ -1416,7 +1418,7 @@ body {
     font-size: 60px;
     line-height: 1;
     text-transform: uppercase;
-    color: #000000;
+    color: #ffffff;
     margin-bottom: 20px;
     letter-spacing: -0.02em;
 }
@@ -1430,7 +1432,7 @@ body {
     font-weight: 400;
     font-size: 24px;
     line-height: 1;
-    color: #000000;
+    color: #ffffff;
     max-width: 700px;
     margin: 0 auto;
 }

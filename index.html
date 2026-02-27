@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FSP — Beyond Banking</title>
-  <meta name="description" content="The first global sports league where everyone can play. Verified skills, real rewards, and a path to the pros.">
+  <meta name="description" content="The first global sports league where everyone can play Verified skills, real rewards, and a path to the pros.">
   <link rel="icon" type="image/svg+xml" href="./src/assets/images/logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +25,7 @@
       gap:16px;
       margin-top:28px;
       padding-top:24px;
-      border-top:1px solid rgba(255,255,255,0.2);
+   
     }
     .hero-app-cta-label{
       color:rgba(255,255,255,0.8);
@@ -772,6 +772,27 @@
         gap:32px;
       }
     }
+    .squad-sp-badge{
+      position:absolute;
+      top:60px;
+      right:calc(12% + 20px);
+      background:#fff;
+      color:#0000FF;
+      font-size:18px;
+      font-weight:600;
+      padding:8px 16px;
+      border-radius:20px;
+      z-index:10;
+      box-shadow:0 4px 12px rgba(0,0,0,0.2);
+    }
+    @media (max-width:768px){
+      .squad-sp-badge{
+        top:50px;
+        right:calc(12% + 15px);
+        font-size:16px;
+        padding:6px 12px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -829,7 +850,7 @@
       <div class="hero-content">
         <div class="container">
           <div class="hero-text">
-            <h1 class="hero-title">The First Global Sports League<br>Where Everyone Can Play.</h1>
+            <h1 class="hero-title">The First Global Sports League<br>Where Everyone Can Play</h1>
             <p class="hero-subtitle">Stop playing for free. Start playing for keeps. Turn your invisible effort into verified rankings, cash prizes, and a path to the pros.</p>
             <div class="hero-cta-container">
               <div class="hero-cta-wrapper">
@@ -1007,7 +1028,7 @@
           <div class="sticky-tab-controls" role="tablist" aria-label="Pools and referrals">
             <button class="sticky-tab-button active" type="button" role="tab" aria-selected="true" aria-controls="movement-panel" data-tab="movement">Movement Creators</button>
             <button class="sticky-tab-button" type="button" role="tab" aria-selected="false" aria-controls="pools-panel" data-tab="pools">Pools</button>
-            <button class="sticky-tab-button" type="button" role="tab" aria-selected="false" aria-controls="rewards-panel" data-tab="rewards">Rewards</button>
+            <button class="sticky-tab-button" type="button" role="tab" aria-selected="false" aria-controls="rewards-panel" data-tab="rewards">SPs</button>
           </div>
         </div>
       </div>
@@ -1073,7 +1094,7 @@
           <article class="pools-referrals-panel" id="pools-panel" role="tabpanel" aria-hidden="true" data-panel="pools">
             <div class="pools-panel">
               <div class="pools-panel-intro">
-                <h2 class="pools-panel-title">Use the collective power of your community to fast track your rewards and access via golden tickets.</h2>
+                <h2 class="pools-panel-title">Use the collective power of your community to fast track your earnings as a movement creator.</h2>
                 <p class="pools-panel-subtitle">The more deposits you pool, the better your rewards.</p>
               </div>
 
@@ -1131,6 +1152,7 @@
               <div class="squad-bg">
                 <img class="squad-texture" src="./src/assets/images/hero-texture-56586a.png" alt="" loading="lazy">
                 <img class="squad-ascii" src="./src/assets/images/refer-ascii-art.svg" alt="" loading="lazy">
+                <div class="squad-sp-badge">+SP</div>
               </div>
               <div class="squad-content">
                 <div class="squad-header">
@@ -1145,25 +1167,25 @@
                     <svg class="squad-step-icon" viewBox="0 0 24 24" aria-hidden="true">
                       <path d="M12 2L14.59 8.26L21 9.27L16 13.97L17.18 20.3L12 16.77L6.82 20.3L8 13.97L3 9.27L9.41 8.26L12 2Z" fill="#000"/>
                     </svg>
-                    <h4 class="squad-step-title">Become an affiliate</h4>
-                    <p class="squad-step-desc">After your application is approved you will get access to promotional</p>
+                    <h4 class="squad-step-title">Earn SPs</h4>
+                    <p class="squad-step-desc">Earn SPs( Skill Points) with every verified action.</p>
                   </div>
                   <div class="squad-step-card">
                     <svg class="squad-step-icon" viewBox="0 0 24 24" aria-hidden="true">
                       <path d="M12 2L14.59 8.26L21 9.27L16 13.97L17.18 20.3L12 16.77L6.82 20.3L8 13.97L3 9.27L9.41 8.26L12 2Z" fill="#000"/>
                     </svg>
-                    <h4 class="squad-step-title">Promote FSP</h4>
-                    <p class="squad-step-desc">Link to FSP in articles, create new content, or place ads on your websites.</p>
+                    <h4 class="squad-step-title">Convert SPs</h4>
+                    <p class="squad-step-desc">Golden Tickets as wild card entries to the FSP inner Circle. To subsidise entry fees. Discounts to subsidize your spend.</p>
                   </div>
                   <div class="squad-step-card">
                     <svg class="squad-step-icon" viewBox="0 0 24 24" aria-hidden="true">
                       <path d="M12 2L14.59 8.26L21 9.27L16 13.97L17.18 20.3L12 16.77L6.82 20.3L8 13.97L3 9.27L9.41 8.26L12 2Z" fill="#000"/>
                     </svg>
-                    <h4 class="squad-step-title">Earn Golden Tickets &amp; FSP points</h4>
-                    <p class="squad-step-desc">Earn Gold Tickets and FSP points whenever new friends join increasing your odds of winning life changing prizes</p>
+                    <h4 class="squad-step-title">Gift SPs</h4>
+                    <p class="squad-step-desc">Share the SP love. The more you give, the more you get. The platform gives your account daily SPs to share distribute to the top profiles that inspire you.</p>
                   </div>
                 </div>
-                <a href="#" class="btn-invite-team">Invite Your Team</a>
+                <a href="#" class="btn-invite-team">Earn SPs Now</a>
               </div>
             </div>
           </article>
@@ -1280,7 +1302,7 @@
                 <img src="./src/assets/images/virat-kohli-signed-merchandise-4a7415.png" alt="VK bats" class="card-image" loading="lazy">
               </div>
               <div class="inner-circle-card-footer">
-                <p class="inner-circle-card-label">VK bats</p>
+                <p class="inner-circle-card-label">Virat Kohli Signed cricket bats by E1 Team Blue Rising</p>
               </div>
             </div>
             <div class="inner-circle-card">
@@ -1426,7 +1448,7 @@
         <div class="subsidy-header">
           <p class="subsidy-kicker">Financial Aid</p>
           <h2 class="subsidy-title">Get Subsidies from Government Programs or the FFS Foundation</h2>
-          <p class="subsidy-body">If the $399 Movement Creator license feels out of reach, you still have a path in. FSP partners with public wellness programs and the Foundation for the Future of Sports (FFS) to offset your onboarding cost. Pay $100 to reserve your spot, then use the options below to cover the rest.</p>
+          <p class="subsidy-body">If the $399 Movement Creator license feels out of reach, you still have a path in. FSP partners with public wellness programs and the Foundation for the Future of Sports (FFS) to offset your onboarding cost.</p>
         </div>
 
         <div class="subsidy-grid">
@@ -1471,7 +1493,7 @@
                 </svg>
               </button>
             </div>
-            <div class="faq-answer">FSP is the first global sports league where everyone can play. We use Edge AI to verify your skills, rank you on a global leaderboard, and reward you with real prizes, brand bounties, and a path to the pros.</div>
+            <div class="faq-answer">FSP is the first global sports league where everyone can play We use Edge AI to verify your skills, rank you on a global leaderboard, and reward you with real prizes, brand bounties, and a path to the pros.</div>
           </div>
 
           <div class="faq-item">
@@ -1512,7 +1534,7 @@
 
           <div class="faq-item">
             <div class="faq-question-wrapper">
-              <div class="faq-question">What are FSP Champion Points?</div>
+              <div class="faq-question">What are  SPs?</div>
               <button class="faq-toggle" aria-label="Expand">
                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
                   <path d="M10.5 4.375V16.625M4.375 10.5H16.625" stroke="#0000FF" stroke-width="4" stroke-linecap="round"/>
