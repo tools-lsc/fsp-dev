@@ -772,6 +772,115 @@
         gap:32px;
       }
     }
+    /* SPs Earnings Table */
+    .sp-earn-table-section{
+      background:#f5f5f7;
+      padding:72px 24px;
+    }
+    .sp-earn-table-inner{
+      max-width:960px;
+      margin:0 auto;
+      background:linear-gradient(145deg, #ffffff 0%, #f3f4ff 40%, #e5ecff 100%);
+      border-radius:24px;
+      box-shadow:0 18px 45px rgba(0,0,0,0.14);
+      padding:32px 32px 40px;
+      border:1px solid rgba(0,0,0,0.06);
+    }
+    .sp-earn-table-heading{
+      display:flex;
+      justify-content:space-between;
+      align-items:baseline;
+      margin-bottom:24px;
+      gap:16px;
+    }
+    .sp-earn-table-title{
+      font-size:24px;
+      font-weight:600;
+      letter-spacing:-0.02em;
+      color:#000;
+      margin:0;
+    }
+    .sp-earn-table-subtitle{
+      font-size:14px;
+      color:#4B5563;
+      margin:0;
+    }
+    .sp-earn-table{
+      width:100%;
+      border-collapse:separate;
+      border-spacing:0;
+      font-size:14px;
+      overflow:hidden;
+      border-radius:18px;
+      background:rgba(255,255,255,0.9);
+    }
+    .sp-earn-table thead{
+      background:#EEF2FF;
+    }
+    .sp-earn-table th,
+    .sp-earn-table td{
+      padding:14px 18px;
+      text-align:left;
+    }
+    .sp-earn-table th{
+      font-weight:600;
+      font-size:13px;
+      text-transform:uppercase;
+      letter-spacing:0.08em;
+      color:#111827;
+      border-bottom:1px solid rgba(15,23,42,0.08);
+    }
+    .sp-earn-table tbody tr:nth-child(even){
+      background:linear-gradient(90deg, rgba(249,250,251,0.9), rgba(239,246,255,0.9));
+    }
+    .sp-earn-table tbody tr:nth-child(odd){
+      background:rgba(255,255,255,0.9);
+    }
+    .sp-earn-table-activity{
+      font-weight:500;
+      color:#111827;
+    }
+    .sp-earn-pill{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:52px;
+      padding:6px 12px;
+      border-radius:999px;
+      font-weight:600;
+      letter-spacing:0.04em;
+      text-transform:uppercase;
+      font-size:11px;
+      background:#FBBF24;
+      color:#111827;
+      box-shadow:0 0 0 1px rgba(0,0,0,0.04);
+    }
+    .sp-earn-pill.pro{
+      background:#F59E0B;
+      color:#111827;
+    }
+    .sp-earn-legend{
+      margin-top:14px;
+      font-size:11px;
+      color:#6B7280;
+    }
+    @media (max-width:640px){
+      .sp-earn-table-inner{
+        padding:20px 16px 24px;
+      }
+      .sp-earn-table-heading{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:4px;
+      }
+      .sp-earn-table-title{
+        font-size:20px;
+      }
+      .sp-earn-table th,
+      .sp-earn-table td{
+        padding:10px 12px;
+      }
+    }
     .squad-sp-badge{
       position:absolute;
       top:60px;
@@ -1438,6 +1547,53 @@
         </div>
 
         <p class="calculator-disclaimer">*please read terms and conditions carefully</p>
+      </div>
+    </section>
+
+    <!-- SPs Earnings Table -->
+    <section class="sp-earn-table-section">
+      <div class="sp-earn-table-inner">
+        <div class="sp-earn-table-heading">
+          <h2 class="sp-earn-table-title">How SPs Add Up</h2>
+          <p class="sp-earn-table-subtitle">Different actions earn different amounts of Skill Points (SPs) depending on your plan.</p>
+        </div>
+        <table class="sp-earn-table">
+          <thead>
+            <tr>
+              <th scope="col">Activity</th>
+              <th scope="col">Free User</th>
+              <th scope="col">Pro Pass (2x)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="sp-earn-table-activity">Verified Session</td>
+              <td><span class="sp-earn-pill">+</span></td>
+              <td><span class="sp-earn-pill pro">+++</span></td>
+            </tr>
+            <tr>
+              <td class="sp-earn-table-activity">Truth Pass (90%+)</td>
+              <td><span class="sp-earn-pill">+</span></td>
+              <td><span class="sp-earn-pill pro">+++</span></td>
+            </tr>
+            <tr>
+              <td class="sp-earn-table-activity">Social Share</td>
+              <td><span class="sp-earn-pill">+</span></td>
+              <td><span class="sp-earn-pill pro">+++</span></td>
+            </tr>
+            <tr>
+              <td class="sp-earn-table-activity">Brand Challenge Win</td>
+              <td><span class="sp-earn-pill">+</span></td>
+              <td><span class="sp-earn-pill pro">+++</span></td>
+            </tr>
+            <tr>
+              <td class="sp-earn-table-activity">Gear / Receipt Scan</td>
+              <td><span class="sp-earn-pill">+</span></td>
+              <td><span class="sp-earn-pill pro">+++</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="sp-earn-legend">+ = base SPs earned • +++ = boosted SPs with Pro Pass.</p>
       </div>
     </section>
 
