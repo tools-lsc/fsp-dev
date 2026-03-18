@@ -14,6 +14,22 @@
   <link rel="stylesheet" href="./src/css/main.css">
   <link rel="stylesheet" href="./src/css/documentation.css">
   <link rel="stylesheet" href="./src/css/business.css">
+  <style>
+    .fsp-btn-locked{
+      pointer-events:none;
+      cursor:not-allowed;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      white-space:nowrap;
+    }
+    .fsp-lock-icon{
+      width:16px;
+      height:16px;
+      flex:0 0 auto;
+      opacity:0.95;
+    }
+  </style>
 </head>
 <body class="documentation-page">
   <header class="site-header">
@@ -54,9 +70,21 @@
             </ul>
           </li>
         </ul>
-        <a class="btn-join btn-join-mobile" href="#">Join</a>
+        <a class="btn-join btn-join-mobile fsp-btn-locked" href="#" aria-disabled="true" tabindex="-1">
+          <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            <rect x="6" y="11" width="12" height="10" rx="2" />
+          </svg>
+          Join
+        </a>
       </nav>
-      <a class="btn-join btn-join-desktop" href="#">Join</a>
+      <a class="btn-join btn-join-desktop fsp-btn-locked" href="#" aria-disabled="true" tabindex="-1">
+        <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+          <rect x="6" y="11" width="12" height="10" rx="2" />
+        </svg>
+        Join
+      </a>
     </div>
   </header>
 

@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -13,6 +13,22 @@
   <link rel="stylesheet" href="./src/css/variables.css">
   <link rel="stylesheet" href="./src/css/main.css">
   <link rel="stylesheet" href="./src/css/apex.css">
+  <style>
+    .fsp-btn-locked{
+      pointer-events:none;
+      cursor:not-allowed;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      white-space:nowrap;
+    }
+    .fsp-lock-icon{
+      width:16px;
+      height:16px;
+      flex:0 0 auto;
+      opacity:0.95;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -53,9 +69,21 @@
             </ul>
           </li>
         </ul>
-        <a class="btn-join btn-join-mobile" href="#">Join</a>
+        <a class="btn-join btn-join-mobile fsp-btn-locked" href="#" aria-disabled="true" tabindex="-1">
+          <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            <rect x="6" y="11" width="12" height="10" rx="2" />
+          </svg>
+          Join
+        </a>
       </nav>
-      <a class="btn-join btn-join-desktop" href="#">Join</a>
+      <a class="btn-join btn-join-desktop fsp-btn-locked" href="#" aria-disabled="true" tabindex="-1">
+        <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+          <rect x="6" y="11" width="12" height="10" rx="2" />
+        </svg>
+        Join
+      </a>
     </div>
     <div class="nav-backdrop"></div>
   </header>
@@ -153,16 +181,16 @@
             </div>
           </div>
 
-          <!-- Sourav Ghosal Card -->
+          <!-- Saurav Ghosal Card -->
           <div class="fsp-council-card">
             <div class="card-council-content">
               <span class="card-label-council">//COUNCIL</span>
-              <h3 class="card-council-name">Sourav Ghosal</h3>
+              <h3 class="card-council-name">Saurav Ghosal</h3>
               <span class="card-badge">OLYMPIC SPORTS</span>
               <p class="card-council-desc">Deep domain expertise in Olympic sports.</p>
             </div>
             <div class="card-council-image">
-              <img src="./src/assets/images/sourav-ghosal-1b4dcb.png" alt="Sourav Ghosal" class="council-profile-image" loading="lazy">
+              <img src="./src/assets/images/sourav-ghosal-1b4dcb.png" alt="Saurav Ghosal" class="council-profile-image" loading="lazy">
             </div>
           </div>
 

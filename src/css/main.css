@@ -3195,6 +3195,8 @@ body{
   .dropdown-submenu-items a:hover,.dropdown-submenu-items a:active{background:rgba(255,255,255,0.08);opacity:1}
   .main-nav .btn-join-mobile{display:flex !important;align-items:center;justify-content:center;position:relative;transform:none;right:auto;top:auto;margin:0 28px 24px;background:#fff;color:#0000FF;padding:14px 24px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px;text-align:center;box-sizing:border-box;transition:all 0.2s ease;box-shadow:0 4px 12px rgba(0,0,0,0.15);flex-shrink:0;z-index:10}
   .main-nav .btn-join-mobile:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(0,0,0,0.2)}
+  .main-nav .btn-join-mobile.fsp-btn-locked{pointer-events:none;gap:10px}
+  .main-nav .btn-join-mobile.fsp-btn-locked:hover{transform:none;box-shadow:0 4px 12px rgba(0,0,0,0.15)}
   .btn-join-desktop{display:none !important}
   .hero-ascii{right:-35%;top:0;width:900px;opacity:.35}
   .sticky-tab-inner{padding:0 24px}
@@ -3663,4 +3665,49 @@ body{
   .footer-logo{width:140px}
   .tier-toggle-btn{font-size:12px;padding:6px 12px}
   .sticky-tab-button{font-size:12px;padding:6px 12px}
+}
+
+/* ── Locked-button mobile fixes ── */
+.fsp-btn-locked{
+  pointer-events:none;
+  cursor:not-allowed;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  white-space:nowrap;
+}
+.fsp-lock-icon{
+  width:16px;
+  height:16px;
+  flex:0 0 auto;
+  opacity:0.95;
+}
+
+.tier-card-cta.fsp-btn-locked{
+  display:flex;
+  width:100%;
+  justify-content:center;
+  gap:10px;
+}
+
+@media (max-width:640px){
+  .vcard-cta.fsp-btn-locked{
+    white-space:normal;
+    text-align:center;
+    justify-content:center;
+    min-height:44px;
+    padding:10px 14px;
+    font-size:12px;
+  }
+  .fsp-btn-locked .fsp-lock-icon{
+    width:14px;
+    height:14px;
+  }
+}
+@media (max-width:480px){
+  .vcard-cta.fsp-btn-locked{
+    padding:8px 12px;
+    font-size:11px;
+    gap:6px;
+  }
 }

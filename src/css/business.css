@@ -4839,3 +4839,29 @@
     font-size:14px;
   }
 }
+@media(max-width:480px){
+  .path-row-actions{
+    flex-direction:column;
+    gap:12px;
+  }
+  .path-row .btn-partner-cta,
+  .path-row .btn-partner-cta-outline{
+    flex:none;
+    width:100%;
+    justify-content:center;
+  }
+  .path-row-actions .fsp-btn-locked{
+    white-space:normal;
+    text-align:center;
+  }
+  .business-hero-buttons .fsp-btn-locked{
+    white-space:normal;
+    text-align:center;
+    justify-content:center;
+  }
+  .fsp-sdk-actions .fsp-btn-locked{
+    white-space:normal;
+    text-align:center;
+    justify-content:center;
+  }
+}
