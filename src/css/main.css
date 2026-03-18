@@ -1965,6 +1965,329 @@ body{
 .pools-referrals-panel[aria-hidden="false"]{
   display:block;
 }
+
+/* Arena Panel */
+.arena-panel{
+  max-width:1200px;
+  margin:0 auto;
+  padding:64px 48px 80px;
+}
+.arena-panel-hero{
+  margin-bottom:56px;
+}
+.arena-hero-headline{
+  font-size:clamp(32px,4.5vw,52px);
+  font-weight:800;
+  line-height:1.12;
+  color:#1A1A2E;
+  max-width:820px;
+  margin-bottom:20px;
+  letter-spacing:-0.03em;
+}
+.arena-hero-sub{
+  font-size:18px;
+  color:#5C5C7A;
+  line-height:1.6;
+  max-width:600px;
+}
+.arena-section-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:48px;
+  align-items:start;
+}
+.arena-section-left{
+  display:flex;
+  flex-direction:column;
+  gap:32px;
+}
+.arena-section-title{
+  font-size:clamp(24px,3vw,34px);
+  font-weight:800;
+  color:#0A0A0A;
+  line-height:1.15;
+  margin-bottom:8px;
+  letter-spacing:-0.02em;
+}
+.arena-section-tagline{
+  font-size:16px;
+  font-style:italic;
+  color:#5C5C7A;
+  margin-bottom:16px;
+}
+.arena-section-body{
+  font-size:16px;
+  color:#1A1A2E;
+  line-height:1.7;
+  margin-bottom:20px;
+}
+.arena-audience-block{
+  margin-bottom:8px;
+}
+.arena-audience-label{
+  font-size:15px;
+  font-weight:800;
+  color:#0000FF;
+  text-decoration:underline;
+  text-underline-offset:3px;
+  margin-bottom:6px;
+}
+.arena-audience-desc{
+  font-size:15px;
+  color:#1A1A2E;
+  line-height:1.65;
+}
+.arena-cta-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:#0000FF;
+  color:#fff;
+  font-size:14px;
+  font-weight:700;
+  padding:12px 28px;
+  border-radius:40px;
+  border:none;
+  cursor:pointer;
+  margin-top:8px;
+  transition:background 0.2s;
+  text-decoration:none;
+}
+.arena-cta-btn:hover{
+  background:#2c2cff;
+}
+.arena-visual{
+  background:#0000FF;
+  border-radius:20px;
+  padding:36px 28px 32px;
+  position:relative;
+  overflow:hidden;
+  min-height:440px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+.arena-visual::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:radial-gradient(ellipse at 50% 45%,rgba(255,255,255,0.08) 0%,transparent 65%);
+}
+.arena-rings{
+  position:relative;
+  width:340px;
+  height:340px;
+}
+.arena-ring{
+  position:absolute;
+  border-radius:50%;
+  border:1.5px solid rgba(255,255,255,0.15);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.arena-ring-outer{
+  width:340px;
+  height:340px;
+  top:0;
+  left:0;
+}
+.arena-ring-mid{
+  width:240px;
+  height:240px;
+  top:50px;
+  left:50px;
+  border-color:rgba(255,255,255,0.22);
+}
+.arena-ring-inner{
+  width:150px;
+  height:150px;
+  top:95px;
+  left:95px;
+  border-color:rgba(255,255,255,0.3);
+}
+.arena-ring-core{
+  width:80px;
+  height:80px;
+  top:130px;
+  left:130px;
+  background:rgba(255,255,255,0.1);
+  border-color:rgba(255,255,255,0.4);
+  backdrop-filter:blur(4px);
+  -webkit-backdrop-filter:blur(4px);
+}
+.arena-ring-core-icon{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  z-index:5;
+}
+.arena-ring-core-icon svg{
+  width:28px;
+  height:28px;
+  color:#fff;
+  opacity:0.9;
+}
+.arena-ring-label{
+  position:absolute;
+  font-size:10px;
+  font-weight:700;
+  color:rgba(255,255,255,0.7);
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  white-space:nowrap;
+  z-index:4;
+}
+.arena-label-core{
+  top:118px;
+  left:50%;
+  transform:translateX(-50%);
+  color:rgba(255,255,255,0.95);
+  font-size:9px;
+}
+.arena-label-inner{
+  bottom:100px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:9px;
+}
+.arena-label-mid{
+  bottom:56px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:9px;
+}
+.arena-label-outer{
+  bottom:10px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:9px;
+}
+.arena-data-badge{
+  position:absolute;
+  font-size:8px;
+  font-weight:600;
+  color:rgba(255,255,255,0.55);
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.1);
+  padding:3px 8px;
+  border-radius:10px;
+  white-space:nowrap;
+  z-index:4;
+}
+.arena-caption{
+  position:relative;
+  z-index:4;
+  text-align:center;
+  margin-top:20px;
+}
+.arena-caption-title{
+  font-size:13px;
+  font-weight:700;
+  color:rgba(255,255,255,0.9);
+  margin-bottom:2px;
+}
+.arena-caption-sub{
+  font-size:10px;
+  color:rgba(255,255,255,0.5);
+}
+.arena-journey{
+  margin-top:56px;
+  border-top:1px solid #E4E4EE;
+  padding-top:40px;
+}
+.arena-journey-label{
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:#0000FF;
+  margin-bottom:24px;
+}
+.arena-journey-steps{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+.arena-step{
+  position:relative;
+}
+.arena-step-number{
+  font-size:32px;
+  font-weight:900;
+  color:#E4E4EE;
+  line-height:1;
+  margin-bottom:8px;
+}
+.arena-step-title{
+  font-size:14px;
+  font-weight:700;
+  color:#0A0A0A;
+  margin-bottom:4px;
+}
+.arena-step-desc{
+  font-size:13px;
+  color:#5C5C7A;
+  line-height:1.5;
+}
+.arena-step:not(:last-child)::after{
+  content:'→';
+  position:absolute;
+  right:-14px;
+  top:36px;
+  font-size:16px;
+  color:#E4E4EE;
+  font-weight:700;
+}
+
+/* Arena Responsive */
+@media(max-width:960px){
+  .arena-panel{padding:48px 24px 60px}
+  .arena-section-row{grid-template-columns:1fr;gap:40px}
+  .arena-visual{min-height:380px}
+  .arena-journey-steps{grid-template-columns:repeat(2,1fr);gap:24px}
+  .arena-step:not(:last-child)::after{display:none}
+}
+@media(max-width:640px){
+  .arena-panel{padding:40px 16px 48px}
+  .arena-hero-headline{font-size:28px}
+  .arena-hero-sub{font-size:16px}
+  .arena-section-title{font-size:24px}
+  .arena-section-body{font-size:15px}
+  .arena-audience-desc{font-size:14px}
+  .arena-visual{min-height:340px;padding:28px 20px 24px}
+  .arena-rings{width:280px;height:280px}
+  .arena-ring-outer{width:280px;height:280px}
+  .arena-ring-mid{width:200px;height:200px;top:40px;left:40px}
+  .arena-ring-inner{width:120px;height:120px;top:80px;left:80px}
+  .arena-ring-core{width:64px;height:64px;top:108px;left:108px}
+  .arena-label-core{top:96px}
+  .arena-label-inner{bottom:82px}
+  .arena-label-mid{bottom:44px}
+  .arena-label-outer{bottom:6px}
+  .arena-journey-steps{grid-template-columns:1fr}
+  .arena-journey-label{margin-bottom:16px}
+  .arena-cta-btn{width:100%;justify-content:center}
+}
+@media(max-width:480px){
+  .arena-panel{padding:32px 16px 40px}
+  .arena-hero-headline{font-size:24px}
+  .arena-section-title{font-size:22px}
+  .arena-rings{width:240px;height:240px}
+  .arena-ring-outer{width:240px;height:240px}
+  .arena-ring-mid{width:170px;height:170px;top:35px;left:35px}
+  .arena-ring-inner{width:100px;height:100px;top:70px;left:70px}
+  .arena-ring-core{width:56px;height:56px;top:92px;left:92px}
+  .arena-label-core{top:80px}
+  .arena-label-inner{bottom:70px}
+  .arena-label-mid{bottom:36px}
+  .arena-label-outer{bottom:2px}
+  .arena-data-badge{font-size:7px;padding:2px 6px}
+  .arena-step-number{font-size:24px}
+}
+
 .pools-panel{
   display:flex;
   flex-direction:column;

@@ -57,100 +57,84 @@
         gap:10px;
       }
     }
-    .snapchat-grid{
+    /* Vertical Video Cards — 1x4 grid */
+    .vcard-grid{
       display:grid;
-      grid-template-columns:repeat(2,1fr);
+      grid-template-columns:repeat(4, 1fr);
       gap:24px;
       max-width:1400px;
       margin:0 auto;
       padding:0 40px;
     }
-    .snapchat-card{
-      position:relative;
-      border-radius:20px;
-      overflow:hidden;
-      min-height:400px;
+    .vcard{
       display:flex;
       flex-direction:column;
-      cursor:pointer;
-      transition:transform 0.3s ease, box-shadow 0.3s ease;
+      gap:20px;
+      align-items:center;
     }
-    .snapchat-card:hover{
-      transform:translateY(-4px);
-      box-shadow:0 8px 24px rgba(0,0,0,0.15);
-    }
-    .snapchat-card-bg{
-      position:absolute;
-      inset:0;
-      z-index:0;
+    .vcard-phone{
+      width:100%;
+      aspect-ratio:9/16;
+      border-radius:24px;
       overflow:hidden;
-      border-radius:20px;
+      background:#000;
+      position:relative;
     }
-    .snapchat-bg-image,
-    .snapchat-bg-video{
+    .vcard-video{
       width:100%;
       height:100%;
       object-fit:cover;
-      filter:brightness(0.65);
+      display:block;
     }
-    .snapchat-bg-video{
-      object-position:center;
-    }
-    .snapchat-card-content{
-      position:relative;
-      z-index:1;
-      flex:1;
+    .vcard-info{
       display:flex;
       flex-direction:column;
-      justify-content:space-between;
-      padding:32px;
-      background:linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.6) 100%);
+      align-items:center;
+      gap:12px;
+      text-align:center;
+      padding:0 4px;
     }
-    .snapchat-card-heading{
-      font-size:28px;
+    .vcard-heading{
+      font-size:16px;
       font-weight:600;
-      line-height:1.2;
-      letter-spacing:-0.02em;
+      line-height:1.35;
+      letter-spacing:-0.01em;
+      color:#4D4D4D;
+      margin:0;
+    }
+    .vcard-cta{
+      background:#0000FF;
       color:#fff;
-      margin:0 0 24px;
-      text-shadow:0 2px 8px rgba(0,0,0,0.3);
-    }
-    .snapchat-card-cta{
-      background:rgba(255,255,255,0.95);
-      color:#000;
-      font-size:18px;
-      font-weight:600;
-      padding:14px 28px;
-      border-radius:24px;
+      font-size:14px;
+      font-weight:500;
+      padding:10px 24px;
+      border-radius:20px;
       text-decoration:none;
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      width:fit-content;
-      transition:all 0.3s ease;
-      box-shadow:0 4px 12px rgba(0,0,0,0.2);
+      transition:opacity 0.2s ease;
+      white-space:nowrap;
     }
-    .snapchat-card-cta:hover{
-      background:#fff;
-      transform:scale(1.05);
-      box-shadow:0 6px 16px rgba(0,0,0,0.3);
+    .vcard-cta:hover{
+      opacity:0.85;
     }
-    @media (max-width:960px){
-      .snapchat-grid{
-        grid-template-columns:1fr;
-        gap:20px;
-        padding:0 20px;
+    @media (max-width:1100px){
+      .vcard-grid{
+        grid-template-columns:repeat(2, 1fr);
+        gap:32px 20px;
+        padding:0 24px;
       }
-      .snapchat-card{
-        min-height:350px;
+    }
+    @media (max-width:640px){
+      .vcard-grid{
+        grid-template-columns:repeat(2, 1fr);
+        gap:20px 12px;
+        padding:0 16px;
       }
-      .snapchat-card-heading{
-        font-size:24px;
-      }
-      .snapchat-card-cta{
-        font-size:16px;
-        padding:12px 24px;
-      }
+      .vcard-phone{border-radius:16px}
+      .vcard-heading{font-size:14px}
+      .vcard-cta{font-size:13px;padding:8px 18px}
     }
     .compete-cta-buttons{
       display:flex;
@@ -907,7 +891,7 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="index.html" aria-label="FSP Home">
+      <a class="logo" href="/" aria-label="FSP Home">
         <img src="./src/assets/images/logo.svg" alt="FSP logo">
       </a>
       <button class="hamburger-btn" aria-label="Toggle menu" aria-expanded="false">
@@ -917,27 +901,27 @@
       </button>
       <nav class="main-nav" aria-label="Primary" aria-hidden="true">
         <ul>
-          <li><a href="index.html" class="active">Individual</a></li>
-          <li><a href="enterprise.html">Partners</a></li>
+          <li><a href="/" class="active">Individual</a></li>
+          <li><a href="partners">Partners</a></li>
           <!-- <li class="nav-dropdown">
             <a href="#" class="dropdown-toggle">FSP Private</a>
             <ul class="dropdown-menu">
-              <li><a href="pools.html">FSP Pools</a></li>
-              <li><a href="fsp-private.html">FSP Note</a></li>
+              <li><a href="pools">FSP Pools</a></li>
+              <li><a href="fsp-private">FSP Note</a></li>
               <li><a href="#" class="coming-soon">FSP Capital <span>(coming soon)</span></a></li>
             </ul>
           </li> -->
-          <li><a href="games.html">Games</a></li>
+          <li><a href="games">Games</a></li>
           <!-- <li class="nav-dropdown">
             <a href="#" class="dropdown-toggle">Developers</a>
             <ul class="dropdown-menu">
-              <li><a href="documentation.html">FSP SDK</a></li>
+              <li><a href="documentation">FSP SDK</a></li>
             </ul>
           </li> -->
           <li class="nav-dropdown">
             <a href="#" class="dropdown-toggle">About</a>
             <ul class="dropdown-menu">
-              <li><a href="council.html">FSP Council</a></li>
+              <li><a href="council">FSP Council</a></li>
               <li><a href="https://www.leaguesportsco.com/" target="_blank" rel="noopener noreferrer">League Sports Co</a></li>
               <li><a href="https://www.futureofsportsfoundation.com/" target="_blank" rel="noopener noreferrer">FFS Foundation</a></li>
             </ul>
@@ -991,50 +975,48 @@
 
     <section class="features">
       <div class="features-container">
-        <div class="snapchat-grid">
-          <!-- Card 1: Get Drafted -->
-          <div class="snapchat-card">
-            <div class="snapchat-card-bg">
-              <video class="snapchat-bg-video" src="./src/assets/freepik_ahtlete-on-a-basketball-court-making-a-jump-hoop-i_veo3_1_720p_16-9_24fps_23275.mp4" autoplay preload="metadata" muted loop playsinline></video>
+        <div class="vcard-grid">
+
+          <div class="vcard">
+            <div class="vcard-phone">
+              <video class="vcard-video" src="./src/assets/videos/card-1.mp4" autoplay muted loop playsinline></video>
             </div>
-            <div class="snapchat-card-content">
-              <h3 class="snapchat-card-heading">Get Drafted into leading leagues (no bias & global discovery)</h3>
-              <a href="#" class="snapchat-card-cta">FSP Games World's Best</a>
+            <div class="vcard-info">
+              <h3 class="vcard-heading">Get Drafted into leading leagues (no bias &amp; global discovery)</h3>
+              <a href="#" class="vcard-cta">FSP Games World's Best</a>
             </div>
           </div>
 
-          <!-- Card 2: Monetize -->
-          <div class="snapchat-card">
-            <div class="snapchat-card-bg">
-              <video class="snapchat-bg-video" src="./src/assets/freepik_two-people-playing-squash-side-by-side-in-a-squahs_veo3_1_720p_9-16_24fps_23274.mp4" autoplay preload="metadata" muted loop playsinline></video>
+          <div class="vcard">
+            <div class="vcard-phone">
+              <video class="vcard-video" src="./src/assets/videos/card-2.mp4" autoplay muted loop playsinline></video>
             </div>
-            <div class="snapchat-card-content">
-              <h3 class="snapchat-card-heading">Monetize your journey - Start Earning today</h3>
-              <a href="#" class="snapchat-card-cta">Become a Movement Creator</a>
-            </div>
-          </div>
-
-          <!-- Card 3: Win Prizes -->
-          <div class="snapchat-card">
-            <div class="snapchat-card-bg">
-              <video class="snapchat-bg-video" src="./src/assets/freepik_a-person-bowling-at-a-bowling-alleyin-a-casual-sor_veo3_1_720p_9-16_24fps_23273.mp4" autoplay preload="metadata" muted loop playsinline></video>
-            </div>
-            <div class="snapchat-card-content">
-              <h3 class="snapchat-card-heading">Win life changing Prizes & Brand Bounties for every verified session</h3>
-              <a href="#" class="snapchat-card-cta">Join the Inner Circle</a>
+            <div class="vcard-info">
+              <h3 class="vcard-heading">Monetize your journey &mdash; Start Earning today</h3>
+              <a href="#" class="vcard-cta">Become a Movement Creator</a>
             </div>
           </div>
 
-          <!-- Card 4: Get Refunds -->
-          <div class="snapchat-card">
-            <div class="snapchat-card-bg">
-              <video class="snapchat-bg-video" src="./src/assets/freepik_a-female-person-playing-beer-pong-in-a-party-like-_veo3_1_720p_16-9_24fps_23276.mp4" autoplay preload="metadata" muted loop playsinline></video>
+          <div class="vcard">
+            <div class="vcard-phone">
+              <video class="vcard-video" src="./src/assets/videos/card-3.mp4" autoplay muted loop playsinline></video>
             </div>
-            <div class="snapchat-card-content">
-              <h3 class="snapchat-card-heading">Get Refunds and Subsidies - Audit your athleticism ( Track movement and spend)</h3>
-              <a href="#" class="snapchat-card-cta">Get Sports Subsidies</a>
+            <div class="vcard-info">
+              <h3 class="vcard-heading">Win life changing Prizes &amp; Brand Bounties for every verified session</h3>
+              <a href="#" class="vcard-cta">Join the Inner Circle</a>
             </div>
           </div>
+
+          <div class="vcard">
+            <div class="vcard-phone">
+              <video class="vcard-video" src="./src/assets/videos/card-4.mp4" autoplay muted loop playsinline></video>
+            </div>
+            <div class="vcard-info">
+              <h3 class="vcard-heading">Get Refunds and Subsidies &mdash; Audit your athleticism (Track movement and spend)</h3>
+              <a href="#" class="vcard-cta">Get Sports Subsidies</a>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -1138,6 +1120,7 @@
             <button class="sticky-tab-button active" type="button" role="tab" aria-selected="true" aria-controls="movement-panel" data-tab="movement">Movement Creators</button>
             <button class="sticky-tab-button" type="button" role="tab" aria-selected="false" aria-controls="pools-panel" data-tab="pools">Pools</button>
             <button class="sticky-tab-button" type="button" role="tab" aria-selected="false" aria-controls="rewards-panel" data-tab="rewards">SPs</button>
+            <button class="sticky-tab-button" type="button" role="tab" aria-selected="false" aria-controls="arena-panel" data-tab="arena">Arena</button>
           </div>
         </div>
       </div>
@@ -1332,6 +1315,94 @@
                   </div>
                 </div>
                 <a href="#" class="btn-invite-team">Earn SPs Now</a>
+              </div>
+            </div>
+          </article>
+          <article class="pools-referrals-panel" id="arena-panel" role="tabpanel" aria-hidden="true" data-panel="arena">
+            <div class="arena-panel">
+              <div class="arena-panel-hero">
+                <h1 class="arena-hero-headline">Compete anywhere. Get verified by AI. Rise through the ranks of a global arena.</h1>
+                <p class="arena-hero-sub">The more players who enter, the bigger the arena becomes — and the greater the rewards for everyone who helped build it.</p>
+              </div>
+
+              <div class="arena-section-row">
+                <div class="arena-section-left">
+                  <div>
+                    <h2 class="arena-section-title">Enter the Arena.</h2>
+                    <p class="arena-section-tagline">Don't just watch the game. Compete in it.</p>
+                    <p class="arena-section-body">An Arena is a global, AI-verified competition environment where anyone can enter digital skill challenges from their phone — and the best rise through rankings to compete on the world stage.</p>
+                  </div>
+
+                  <div class="arena-audience-block">
+                    <div class="arena-audience-label">For Athletes:</div>
+                    <p class="arena-audience-desc">Own and activate your Arena. Your influence drives participation, and every player who enters generates revenue that flows back to you — permanently.</p>
+                  </div>
+
+                  <div class="arena-audience-block">
+                    <div class="arena-audience-label">For Participants:</div>
+                    <p class="arena-audience-desc">Enter challenges from your phone, get your performance AI-verified and scored, then climb global rankings. Top competitors advance to live championship finals on the world stage.</p>
+                  </div>
+
+                  <a href="#" class="arena-cta-btn">Enter an Arena</a>
+                </div>
+
+                <div class="arena-visual">
+                  <div class="arena-rings">
+                    <div class="arena-ring arena-ring-outer"></div>
+                    <div class="arena-ring arena-ring-mid"></div>
+                    <div class="arena-ring arena-ring-inner"></div>
+                    <div class="arena-ring arena-ring-core">
+                      <div class="arena-ring-core-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                      </div>
+                    </div>
+
+                    <div class="arena-ring-label arena-label-core">Arena</div>
+                    <div class="arena-ring-label arena-label-inner">Captains · Pro Athletes</div>
+                    <div class="arena-ring-label arena-label-mid">Challenger Captains</div>
+                    <div class="arena-ring-label arena-label-outer">Global Players · Fan Communities</div>
+
+                    <div class="arena-data-badge" style="top:20px;right:10px;">AI Verified</div>
+                    <div class="arena-data-badge" style="top:70px;left:-10px;">Global Rankings</div>
+                    <div class="arena-data-badge" style="top:160px;right:-20px;">$399 High Stakes</div>
+                    <div class="arena-data-badge" style="bottom:70px;left:-15px;">Free Entry</div>
+                    <div class="arena-data-badge" style="bottom:28px;right:20px;">Live Finals</div>
+                    <div class="arena-data-badge" style="top:110px;right:35px;">Speed · Accuracy</div>
+                    <div class="arena-data-badge" style="bottom:120px;right:-10px;">Media Rights</div>
+                    <div class="arena-data-badge" style="top:50px;left:60px;">Brand Sponsors</div>
+                  </div>
+
+                  <div class="arena-caption">
+                    <div class="arena-caption-title">Arena Ecosystem</div>
+                    <div class="arena-caption-sub">Every challenge played grows the arena</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="arena-journey">
+                <div class="arena-journey-label">How it works</div>
+                <div class="arena-journey-steps">
+                  <div class="arena-step">
+                    <div class="arena-step-number">01</div>
+                    <div class="arena-step-title">Enter a Challenge</div>
+                    <div class="arena-step-desc">Open the app, pick a sport, and record your skill challenge using your phone camera.</div>
+                  </div>
+                  <div class="arena-step">
+                    <div class="arena-step-number">02</div>
+                    <div class="arena-step-title">AI Verifies You</div>
+                    <div class="arena-step-desc">Skeletal tracking and video analysis score your performance — speed, accuracy, trajectory.</div>
+                  </div>
+                  <div class="arena-step">
+                    <div class="arena-step-number">03</div>
+                    <div class="arena-step-title">Climb the Rankings</div>
+                    <div class="arena-step-desc">Your score feeds into a global leaderboard. Top performers qualify for higher tiers and prize pools.</div>
+                  </div>
+                  <div class="arena-step">
+                    <div class="arena-step-number">04</div>
+                    <div class="arena-step-title">Compete Live</div>
+                    <div class="arena-step-desc">The best advance to championship finals in iconic global venues, competing alongside the Captains.</div>
+                  </div>
+                </div>
               </div>
             </div>
           </article>
@@ -1712,26 +1783,20 @@
       <div class="footer-content">
         <div class="footer-left">
           <img src="./src/assets/images/footer-logo.svg" alt="Future of Sports" class="footer-logo" loading="lazy">
-          <p class="footer-tagline">Fair. Open. Rewarding.</p>
-          <div class="footer-newsletter">
-            <form class="newsletter-form">
-              <input type="email" placeholder="Your email" class="newsletter-input" required>
-              <button type="submit" class="btn-newsletter">Sign up</button>
-            </form>
-            <p class="newsletter-disclaimer">By signing up you agree to FSP's Terms of Service.</p>
-          </div>
+          <p class="footer-tagline">Kinetic Truth Engine&trade;</p>
         </div>
 
         <div class="footer-right">
           <div class="footer-links">
-            <a href="games.html">Games</a>
-            <a href="enterprise.html">Partners</a>
-            <!-- <a href="documentation.html">Developers</a> -->
-            <a href="council.html">Council</a>
+            <a href="games">Games</a>
+            <a href="partners">Partners</a>
+            <!-- <a href="documentation">Developers</a> -->
+            <a href="council">Council</a>
           </div>
           <div class="footer-links">
             <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
+            <a href="terms-of-use">Terms of Service</a>
+            <a href="terms-and-conditions">Website T&amp;Cs</a>
             <a href="https://www.leaguesportsco.com/" target="_blank" rel="noopener noreferrer">League Sports Co</a>
             <a href="https://www.futureofsportsfoundation.com/" target="_blank" rel="noopener noreferrer">FFS Foundation</a>
           </div>
@@ -1749,7 +1814,8 @@
     <div class="tiers-popup-backdrop"></div>
     <div class="tiers-popup-content">
       <div class="tiers-popup-header">
-        <h2 class="tiers-popup-title">FIND THE PERFECT PLAN FOR YOU</h2>
+        <h2 class="tiers-popup-title">Turn Your Play into Income &mdash; Multiply What You Earn</h2>
+        <p class="tiers-popup-subtitle" style="font-size:15px;color:#6A6D78;line-height:1.6;margin:8px 0 0;max-width:680px">Start anywhere. Earn your way in. Unlock real competition, real rewards, and a path to the pros.</p>
         <button class="tiers-popup-close" aria-label="Close tiers popup">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1765,101 +1831,69 @@
             <div class="tier-card-price">
               <span class="tier-price-amount tier-price-free-text">FREE</span>
             </div>
-            <p class="tier-free-condition">Start earning immediately with no deposit required.</p>
+            <p class="tier-free-condition">Earn while you rise to the top. No cost. No gatekeepers.</p>
           </div>
-          
+
           <div class="tier-card-benefits">
             <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Access to FSP Games & Global Leaderboard</span>
+              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>AI-verified performance scoring</span>
             </div>
             <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Brand Bounties for verified sessions</span>
+              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Global leaderboard ranking</span>
             </div>
             <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Golden Tickets (Wild Cards for inner circles)</span>
+              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Earn SPs and build your player profile</span>
             </div>
             <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Referral Bonus (3%)</span>
-            </div>
-            <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Skill verification & FSP Truth Score</span>
+              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Compete for prizes &amp; brand bounties</span>
             </div>
           </div>
-          
+
+          <div class="tier-callout" style="font-size:12.5px;font-weight:600;padding:10px 14px;border-radius:10px;margin-bottom:16px;line-height:1.5;background:rgba(0,0,255,0.06);color:#0000FF">Your AI-verified scores trigger automatic performance payouts, turning effort into recurring earnings.</div>
+
           <a href="#" class="tier-card-cta tier-card-cta-free">Get Started Free</a>
         </div>
 
-        <!-- Member Tier Card -->
+        <!-- Pro Pass Tier Card -->
         <div class="tier-card tier-card-member">
           <div class="tier-card-header">
-            <h3 class="tier-card-title">Member</h3>
+            <h3 class="tier-card-title">Pro Pass</h3>
             <div class="tier-card-price">
-              <span class="tier-price-amount tier-price-free-text">FREE</span>
+              <span class="tier-price-amount tier-price-free-text">PAID</span>
             </div>
-            <p class="tier-free-condition">Free if you keep at least $1,000 monthly in your account or transfer your salary to FSP.</p>
+            <p class="tier-free-condition">Compete and accelerate your earnings with access to official leagues and real-world events.</p>
           </div>
-          
+
           <div class="tier-card-benefits">
             <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Everything in Free tier, and...</span>
+              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Everything in Free, and...</span>
             </div>
             <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Brand Bounties with higher multipliers</span>
+              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Accelerated earnings on prizes &amp; brand bounties</span>
             </div>
             <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Golden Tickets (Wild Cards for inner circles)</span>
+              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Play in official Arena Majors &amp; FSP leagues</span>
             </div>
             <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Audit Data for Subsidies (Possible Savings)</span>
+              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Access in-person events &amp; live Championship Finals</span>
             </div>
             <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Referral Bonus (7%)</span>
-            </div>
-            <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Up to 6%* interest per annum on savings</span>
-            </div>
-            <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Priority access to Pro Tier competitions</span>
+              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Global visibility for drafts &amp; pro pathways</span>
             </div>
           </div>
-          
-          <a href="#" class="tier-card-cta tier-card-cta-member">Become a Member</a>
+
+          <div class="tier-callout" style="font-size:12.5px;font-weight:600;padding:10px 14px;border-radius:10px;margin-bottom:16px;line-height:1.5;background:rgba(255,255,255,0.1);color:#00E87B">&#127942; Top players unlock &ldquo;Inner Circle&rdquo; access</div>
+
+          <a href="#" class="tier-card-cta tier-card-cta-member">Get Pro Pass</a>
         </div>
 
         <!-- Movement Creator Tier Card -->
@@ -1869,55 +1903,35 @@
             <div class="tier-card-price">
               <span class="tier-price-amount tier-price-free-text">EARN</span>
             </div>
-            <p class="tier-free-condition">Onboard 30+ participants in your pool to unlock.</p>
+            <p class="tier-free-condition">Scale your income beyond your own performance.</p>
           </div>
-          
+
           <div class="tier-card-benefits">
             <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Everything in Member tier, and...</span>
+              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Build your own arena and earn a share of every session</span>
             </div>
             <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Members in Pool tracking & management</span>
+              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Bring your team, friends, or local community</span>
             </div>
             <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Creator Revenue Share from pool earnings</span>
+              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>You control how your arena earns and grows</span>
             </div>
             <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Creator Ad Revenue Share from Brands</span>
+              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Creator revenue share from arena earnings</span>
             </div>
             <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Golden Tickets (Wild Cards for inner circles)</span>
-            </div>
-            <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Set your share of earnings with the group</span>
-            </div>
-            <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Priority support & dedicated account manager</span>
+              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Creator ad revenue share from brands</span>
             </div>
           </div>
-          
-          <a href="enterprise.html" class="tier-card-cta tier-card-cta-movement-creator">Become a Movement Creator</a>
+
+          <div class="tier-callout" style="font-size:12.5px;font-weight:600;padding:10px 14px;border-radius:10px;margin-bottom:16px;line-height:1.5;background:rgba(0,232,123,0.08);color:#00E87B">&#128176; Top creators earn 5&ndash;10x more</div>
+
+          <a href="partners" class="tier-card-cta tier-card-cta-movement-creator">Become a Movement Creator</a>
         </div>
       </div>
     </div>
