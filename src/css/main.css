@@ -3338,9 +3338,9 @@ body{
   .compete-desc{font-size:15px;margin-bottom:24px;max-width:100%}
   .compete-list{font-size:15px;margin-bottom:32px;padding-left:18px}
   .compete-list li{font-size:15px;margin-bottom:12px;line-height:1.4}
-  .btn-play-now{font-size:18px;padding:10px 32px;width:100%;max-width:300px;margin-bottom:24px}
+  .btn-play-now{font-size:16px;padding:12px 24px;width:100%;max-width:100%;margin-bottom:0}
   .compete-logos{flex-direction:column;align-items:flex-start;gap:16px;margin-top:24px}
-  .app-store-badge{width:100%;max-width:300px;justify-content:center}
+  .app-store-badge{width:auto;max-width:100%;justify-content:center}
   .compete-images{height:auto;min-height:350px;overflow:visible;padding-bottom:20px;justify-content:center}
   .compete-phone-large{width:200px;height:auto;max-height:394px}
   .compete-phone-small{width:140px;height:auto;max-height:208px;right:auto;left:50%;transform:translate(-50%,-50%);margin-left:-80px}
