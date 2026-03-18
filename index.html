@@ -50,6 +50,32 @@
       background:rgba(255,255,255,0.25);
       border-color:rgba(255,255,255,0.6);
     }
+
+    /* Generic disabled/locked CTA treatment */
+    .fsp-btn-disabled{
+      opacity:0.45;
+      pointer-events:none;
+      cursor:not-allowed;
+      filter:saturate(0.2);
+    }
+    .fsp-btn-disabled:hover{
+      opacity:0.45;
+    }
+
+    .fsp-btn-locked{
+      pointer-events:none;
+      cursor:not-allowed;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      white-space:nowrap;
+    }
+    .fsp-lock-icon{
+      width:16px;
+      height:16px;
+      flex:0 0 auto;
+      opacity:0.95;
+    }
     @media (max-width:640px){
       .hero-app-cta{
         flex-direction:column;
@@ -947,7 +973,13 @@
             <p class="hero-subtitle">Stop playing for free. Start playing for keeps. Turn your invisible effort into verified rankings, cash prizes, and a path to the pros.</p>
             <div class="hero-cta-container">
               <div class="hero-cta-wrapper">
-                <a href="#" class="btn-start-competing">Start Winning with FSP Games</a>
+                <a href="#" class="btn-start-competing fsp-btn-locked" aria-disabled="true" tabindex="-1">
+                  <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                    <rect x="6" y="11" width="12" height="10" rx="2" />
+                  </svg>
+                  Start Winning with FSP Games
+                </a>
               </div>
             </div>
             <ul class="hero-bullets" role="list">
@@ -966,7 +998,7 @@
             </ul>
             <div class="hero-app-cta">
               <span class="hero-app-cta-label">Looking for the app?</span>
-              <a href="#" class="hero-app-cta-btn">Download Here</a>
+              <a href="#" class="hero-app-cta-btn fsp-btn-disabled" aria-disabled="true" tabindex="-1">Download Here</a>
             </div>
           </div>
         </div>
@@ -983,7 +1015,7 @@
             </div>
             <div class="vcard-info">
               <h3 class="vcard-heading">Get Drafted into leading leagues (no bias &amp; global discovery)</h3>
-              <a href="#" class="vcard-cta">FSP Games World's Best</a>
+              <a href="games.html" class="vcard-cta">FSP Games World's Best</a>
             </div>
           </div>
 
@@ -993,7 +1025,13 @@
             </div>
             <div class="vcard-info">
               <h3 class="vcard-heading">Monetize your journey &mdash; Start Earning today</h3>
-              <a href="#" class="vcard-cta">Become a Movement Creator</a>
+              <a href="#" class="vcard-cta fsp-btn-locked" aria-disabled="true" tabindex="-1">
+                <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                  <rect x="6" y="11" width="12" height="10" rx="2" />
+                </svg>
+                Become a Movement Creator
+              </a>
             </div>
           </div>
 
@@ -1003,7 +1041,13 @@
             </div>
             <div class="vcard-info">
               <h3 class="vcard-heading">Win life changing Prizes &amp; Brand Bounties for every verified session</h3>
-              <a href="#" class="vcard-cta">Join the Inner Circle</a>
+              <a href="#" class="vcard-cta fsp-btn-locked" aria-disabled="true" tabindex="-1">
+                <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                  <rect x="6" y="11" width="12" height="10" rx="2" />
+                </svg>
+                Join the Inner Circle
+              </a>
             </div>
           </div>
 
@@ -1013,7 +1057,13 @@
             </div>
             <div class="vcard-info">
               <h3 class="vcard-heading">Get Refunds and Subsidies &mdash; Audit your athleticism (Track movement and spend)</h3>
-              <a href="#" class="vcard-cta">Get Sports Subsidies</a>
+              <a href="#" class="vcard-cta fsp-btn-locked" aria-disabled="true" tabindex="-1">
+                <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                  <rect x="6" y="11" width="12" height="10" rx="2" />
+                </svg>
+                Get Sports Subsidies
+              </a>
             </div>
           </div>
 
@@ -1042,12 +1092,18 @@
             </ol>
 
             <div class="compete-cta-buttons">
-              <a href="#" class="btn-play-now" id="verify-skill-btn">Verify Your Skill</a>
+              <a href="#" class="btn-play-now fsp-btn-locked" id="verify-skill-btn" aria-disabled="true" tabindex="-1">
+                <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                  <rect x="6" y="11" width="12" height="10" rx="2" />
+                </svg>
+                Verify Your Skill
+              </a>
               <a href="#" class="btn-request-sport" id="request-sport-btn">Request New Sport</a>
             </div>
             
             <div class="compete-logos">
-              <a class="app-store-badge" href="#">
+              <a class="app-store-badge fsp-btn-disabled" href="#" aria-disabled="true" tabindex="-1">
                 <img src="./src/assets/images/apple-logo.svg" alt="" class="app-store-icon" loading="lazy">
                 <span class="app-store-text">Download on the App Store</span>
               </a>
@@ -1458,7 +1514,7 @@
                   </div>
                   <p class="placeholder-title">More Sports Incoming</p>
                   <p class="placeholder-desc">Powered by FSP Games, Movement Creators, and your community.</p>
-                  <a href="#" class="placeholder-cta">Request Your Sport</a>
+                  <a href="#" class="placeholder-cta request-your-sport-btn" aria-label="Request your sport to be added">Request Your Sport</a>
                 </div>
               </div>
             </div>
@@ -1504,7 +1560,13 @@
                   </div>
                   <p class="placeholder-title">Train with Legends</p>
                   <p class="placeholder-desc">Unlock pro-led masterclasses, film study labs, and mentorship from the athletes shaping the future.</p>
-                  <a href="#" class="placeholder-cta">See Masterclasses</a>
+                  <a href="#" class="placeholder-cta fsp-btn-locked" aria-disabled="true" tabindex="-1">
+                    <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                      <rect x="6" y="11" width="12" height="10" rx="2" />
+                    </svg>
+                    See Masterclasses
+                  </a>
                 </div>
               </div>
             </div>
@@ -1551,7 +1613,13 @@
                   </div>
                   <p class="placeholder-title">Access the Impossible</p>
                   <p class="placeholder-desc">Redeem your Champion Points for once-in-a-lifetime drop-ins, paddock passes, and custom gear.</p>
-                  <a href="#" class="placeholder-cta">Unlock Rewards</a>
+                  <a href="#" class="placeholder-cta fsp-btn-locked" aria-disabled="true" tabindex="-1">
+                    <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                      <rect x="6" y="11" width="12" height="10" rx="2" />
+                    </svg>
+                    Unlock Rewards
+                  </a>
                 </div>
               </div>
             </div>
@@ -1689,7 +1757,13 @@
         </div>
 
         <div class="subsidy-cta">
-          <a href="#" class="btn-subsidy-apply">Apply for a Subsidy</a>
+          <a href="#" class="btn-subsidy-apply fsp-btn-locked" aria-disabled="true" tabindex="-1">
+            <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              <rect x="6" y="11" width="12" height="10" rx="2" />
+            </svg>
+            Apply for a Subsidy
+          </a>
           <p class="subsidy-cta-note">Submit your details and we will connect you with the best program or FFS Foundation grant for your situation.</p>
         </div>
       </div>
@@ -1855,7 +1929,13 @@
 
           <div class="tier-callout" style="font-size:12.5px;font-weight:600;padding:10px 14px;border-radius:10px;margin-bottom:16px;line-height:1.5;background:rgba(0,0,255,0.06);color:#0000FF">Your AI-verified scores trigger automatic performance payouts, turning effort into recurring earnings.</div>
 
-          <a href="#" class="tier-card-cta tier-card-cta-free">Get Started Free</a>
+          <a href="#" class="tier-card-cta tier-card-cta-free fsp-btn-locked" aria-disabled="true" tabindex="-1">
+            <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              <rect x="6" y="11" width="12" height="10" rx="2" />
+            </svg>
+            Get Started Free
+          </a>
         </div>
 
         <!-- Pro Pass Tier Card -->
@@ -1893,7 +1973,13 @@
 
           <div class="tier-callout" style="font-size:12.5px;font-weight:600;padding:10px 14px;border-radius:10px;margin-bottom:16px;line-height:1.5;background:rgba(255,255,255,0.1);color:#00E87B">&#127942; Top players unlock &ldquo;Inner Circle&rdquo; access</div>
 
-          <a href="#" class="tier-card-cta tier-card-cta-member">Get Pro Pass</a>
+          <a href="#" class="tier-card-cta tier-card-cta-member fsp-btn-locked" aria-disabled="true" tabindex="-1">
+            <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              <rect x="6" y="11" width="12" height="10" rx="2" />
+            </svg>
+            Get Pro Pass
+          </a>
         </div>
 
         <!-- Movement Creator Tier Card -->
@@ -1931,7 +2017,13 @@
 
           <div class="tier-callout" style="font-size:12.5px;font-weight:600;padding:10px 14px;border-radius:10px;margin-bottom:16px;line-height:1.5;background:rgba(0,232,123,0.08);color:#00E87B">&#128176; Top creators earn 5&ndash;10x more</div>
 
-          <a href="partners" class="tier-card-cta tier-card-cta-movement-creator">Become a Movement Creator</a>
+          <a href="partners" class="tier-card-cta tier-card-cta-movement-creator fsp-btn-locked" aria-disabled="true" tabindex="-1">
+            <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              <rect x="6" y="11" width="12" height="10" rx="2" />
+            </svg>
+            Become a Movement Creator
+          </a>
         </div>
       </div>
     </div>
@@ -2207,6 +2299,8 @@
     if (exploreTiersBtn) {
       exploreTiersBtn.addEventListener('click', function(e) {
         e.preventDefault();
+        // If the button is ever marked aria-disabled, do nothing.
+        if (this.getAttribute('aria-disabled') === 'true') return;
         openTiersPopup();
       });
     }
@@ -2234,11 +2328,15 @@
     if (verifySkillBtn && appStoreBadge) {
       verifySkillBtn.addEventListener('click', function(e) {
         e.preventDefault();
+        // Button is intentionally disabled/locked.
+        if (this.getAttribute('aria-disabled') === 'true') return;
         // Scroll to app store badge or trigger its click
         appStoreBadge.scrollIntoView({ behavior: 'smooth', block: 'center' });
         // Optionally trigger the app store link
         setTimeout(() => {
-          appStoreBadge.click();
+          if (appStoreBadge.getAttribute('aria-disabled') !== 'true') {
+            appStoreBadge.click();
+          }
         }, 500);
       });
     }
@@ -2275,6 +2373,15 @@
         openSportRequestPopup();
       });
     }
+
+    // Open popup when clicking "Request Your Sport" card/link (same modal)
+    const requestYourSportBtns = document.querySelectorAll('.request-your-sport-btn');
+    requestYourSportBtns.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        openSportRequestPopup();
+      });
+    });
 
     // Close popup when clicking close button
     if (sportRequestClose) {

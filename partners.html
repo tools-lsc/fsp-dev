@@ -13,6 +13,24 @@
   <link rel="stylesheet" href="./src/css/variables.css">
   <link rel="stylesheet" href="./src/css/main.css">
   <link rel="stylesheet" href="./src/css/business.css">
+ 
+  <style>
+    /* Local locked CTA treatment (matches index.html behavior, but no fading) */
+    .fsp-btn-locked{
+      pointer-events:none;
+      cursor:not-allowed;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      white-space:nowrap;
+    }
+    .fsp-lock-icon{
+      width:16px;
+      height:16px;
+      flex:0 0 auto;
+      opacity:0.95;
+    }
+  </style>
 </head>
 <body class="enterprise-page">
   <header class="site-header">
@@ -45,9 +63,21 @@
             </ul>
           </li>
         </ul>
-        <a class="btn-join btn-join-mobile" href="#">Join</a>
+        <a class="btn-join btn-join-mobile fsp-btn-locked" href="#" aria-disabled="true" tabindex="-1">
+          <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            <rect x="6" y="11" width="12" height="10" rx="2" />
+          </svg>
+          Join
+        </a>
       </nav>
-      <a class="btn-join btn-join-desktop" href="#">Join</a>
+      <a class="btn-join btn-join-desktop fsp-btn-locked" href="#" aria-disabled="true" tabindex="-1">
+        <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+          <rect x="6" y="11" width="12" height="10" rx="2" />
+        </svg>
+        Join
+      </a>
     </div>
     <div class="nav-backdrop"></div>
   </header>
@@ -92,8 +122,20 @@
             </div>
 
             <div class="business-hero-buttons hero-cta-container">
-              <a href="#creators" class="btn-integrate-now btn-start-competing">We Create Movement</a>
-              <a href="#buyers" class="btn-contact-sales btn-explore-ecosystem">We Buy Movement</a>
+              <a href="#creators" class="btn-integrate-now btn-start-competing fsp-btn-locked" aria-disabled="true" tabindex="-1">
+                <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                  <rect x="6" y="11" width="12" height="10" rx="2" />
+                </svg>
+                We Create Movement
+              </a>
+              <a href="#buyers" class="btn-contact-sales btn-explore-ecosystem fsp-btn-locked" aria-disabled="true" tabindex="-1">
+                <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                  <rect x="6" y="11" width="12" height="10" rx="2" />
+                </svg>
+                We Buy Movement
+              </a>
             </div>
           </div>
         </div>
@@ -123,10 +165,25 @@
             </div>
             <div class="path-hero-text">
               <div class="path-hero-label">Individual<span class="path-hero-arrow">&rarr;</span>FSP Solution</div>
-              <p class="path-hero-desc"><a href="#" class="path-hero-link">Start your arena</a> and start earning instantly</p>
+              <p class="path-hero-desc">
+                <a href="#" class="path-hero-link fsp-btn-locked" aria-disabled="true" tabindex="-1">
+                  <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                    <rect x="6" y="11" width="12" height="10" rx="2" />
+                  </svg>
+                  Start your arena
+                </a>
+                and start earning instantly
+              </p>
             </div>
           </div>
-          <a href="#" class="btn-partner-cta path-hero-cta">Start Earning</a>
+          <a href="#" class="btn-partner-cta path-hero-cta fsp-btn-locked" aria-disabled="true" tabindex="-1">
+            <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              <rect x="6" y="11" width="12" height="10" rx="2" />
+            </svg>
+            Start Earning
+          </a>
         </div>
 
         <!-- Partner Paths -->
@@ -141,7 +198,13 @@
             </div>
             <div class="path-row-actions">
               <a href="#" class="btn-partner-cta">Contact Sales</a>
-              <a href="#" class="btn-partner-cta-outline">Create Arena</a>
+              <a href="#" class="btn-partner-cta-outline fsp-btn-locked" aria-disabled="true" tabindex="-1">
+                <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                  <rect x="6" y="11" width="12" height="10" rx="2" />
+                </svg>
+                Create Arena
+              </a>
             </div>
           </div>
 
@@ -155,7 +218,13 @@
             </div>
             <div class="path-row-actions">
               <a href="#" class="btn-partner-cta">Contact Sales</a>
-              <a href="#" class="btn-partner-cta-outline">Create Arena</a>
+              <a href="#" class="btn-partner-cta-outline fsp-btn-locked" aria-disabled="true" tabindex="-1">
+                <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                  <rect x="6" y="11" width="12" height="10" rx="2" />
+                </svg>
+                Create Arena
+              </a>
             </div>
           </div>
 
@@ -169,7 +238,13 @@
             </div>
             <div class="path-row-actions">
               <a href="#" class="btn-partner-cta">Contact Sales</a>
-              <a href="#" class="btn-partner-cta-outline">Create Arena</a>
+              <a href="#" class="btn-partner-cta-outline fsp-btn-locked" aria-disabled="true" tabindex="-1">
+                <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                  <rect x="6" y="11" width="12" height="10" rx="2" />
+                </svg>
+                Create Arena
+              </a>
             </div>
           </div>
 
@@ -183,7 +258,13 @@
             </div>
             <div class="path-row-actions">
               <a href="#" class="btn-partner-cta">Contact Sales</a>
-              <a href="#" class="btn-partner-cta-outline">Create Arena</a>
+              <a href="#" class="btn-partner-cta-outline fsp-btn-locked" aria-disabled="true" tabindex="-1">
+                <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                  <rect x="6" y="11" width="12" height="10" rx="2" />
+                </svg>
+                Create Arena
+              </a>
             </div>
           </div>
         </div>
@@ -400,7 +481,15 @@
             </div>
           </div>
         </div>
-        <div style="text-align:center;margin-top:48px;position:relative;z-index:1"><a href="#" class="btn-partner-cta" style="font-size:20px;padding:12px 48px">Create Ad</a></div>
+        <div style="text-align:center;margin-top:48px;position:relative;z-index:1">
+          <a href="#" class="btn-partner-cta fsp-btn-locked" aria-disabled="true" tabindex="-1" style="font-size:20px;padding:12px 48px">
+            <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              <rect x="6" y="11" width="12" height="10" rx="2" />
+            </svg>
+            Create Ad
+          </a>
+        </div>
       </div>
     </section>
 
@@ -629,7 +718,13 @@
           </ul>
           <p class="fsp-sdk-body">FSP handles the AI engine, the ad tech, the engagement layer, and the payments. You bring the athletes.</p>
           <div class="fsp-sdk-actions">
-            <a href="#" class="btn-partner-cta">Launch an Arena</a>
+            <a href="#" class="btn-partner-cta fsp-btn-locked" aria-disabled="true" tabindex="-1">
+              <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                <rect x="6" y="11" width="12" height="10" rx="2" />
+              </svg>
+              Launch an Arena
+            </a>
             <a href="#" class="btn-partner-cta-outline">Contact Sales</a>
           </div>
         </div>
