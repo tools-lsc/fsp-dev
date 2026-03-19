@@ -2242,7 +2242,7 @@
 .rewards-calculator-container{
   max-width:1400px;
   margin:0 auto;
-  padding:0 80px;
+  padding:0 40px;
   position:relative;
   z-index:1;
 }
@@ -4501,7 +4501,8 @@
    ARENA STEPPED SLIDER + RESULTS
    ============================================================ */
 .arena-slider-wrapper{
-  max-width:100%;
+  max-width:900px;
+  width:100%;
   margin:0 auto 40px;
 }
 .arena-stepped-slider{
@@ -4515,7 +4516,7 @@
   padding:0 2px;
 }
 .arena-slider-ticks span{
-  font-size:12px;
+  font-size:14px;
   font-weight:500;
   color:rgba(255,255,255,0.4);
   cursor:pointer;
