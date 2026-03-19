@@ -112,6 +112,37 @@
       object-fit:cover;
       display:block;
     }
+    .vcard-overlay{
+      position:absolute;
+      bottom:0;
+      left:0;
+      right:0;
+      padding:72px 14px 16px;
+      background:linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.65) 55%, transparent 100%);
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+      z-index:2;
+    }
+    .vcard-overlay-h1{
+      font-size:15px;
+      font-weight:700;
+      line-height:1.3;
+      color:#fff;
+      margin:0;
+      letter-spacing:-0.01em;
+      min-height:calc(1.3em * 2);
+      display:flex;
+      align-items:flex-end;
+    }
+    .vcard-overlay-h2{
+      font-size:12px;
+      font-weight:400;
+      line-height:1.35;
+      color:rgba(255,255,255,0.7);
+      margin:3px 0 0;
+      min-height:calc(1.35em * 2);
+    }
     .vcard-info{
       display:flex;
       flex-direction:column;
@@ -123,14 +154,6 @@
     }
     .vcard-cta{
       margin-top:auto;
-    }
-    .vcard-heading{
-      font-size:16px;
-      font-weight:600;
-      line-height:1.35;
-      letter-spacing:-0.01em;
-      color:#4D4D4D;
-      margin:0;
     }
     .vcard-cta{
       background:#0000FF;
@@ -174,7 +197,9 @@
         padding:0 16px;
       }
       .vcard-phone{border-radius:16px}
-      .vcard-heading{font-size:13px}
+      .vcard-overlay-h1{font-size:14px}
+      .vcard-overlay-h2{font-size:11px}
+      .vcard-overlay{padding:36px 12px 14px}
       .vcard-cta{
         font-size:12px;
         padding:8px 14px;
@@ -192,7 +217,9 @@
         padding:0 12px;
       }
       .vcard{gap:12px}
-      .vcard-heading{font-size:12px}
+      .vcard-overlay-h1{font-size:13px}
+      .vcard-overlay-h2{font-size:10px}
+      .vcard-overlay{padding:30px 10px 12px}
       .vcard-cta{
         font-size:11px;
         padding:7px 10px;
@@ -208,7 +235,8 @@
         gap:28px;
         padding:0 20px;
       }
-      .vcard-heading{font-size:14px}
+      .vcard-overlay-h1{font-size:16px}
+      .vcard-overlay-h2{font-size:12px}
       .vcard-cta{font-size:13px;padding:10px 20px}
     }
     .compete-cta-buttons{
@@ -1120,9 +1148,12 @@
           <div class="vcard">
             <div class="vcard-phone">
               <video class="vcard-video" src="./src/assets/videos/card-1.mp4" autoplay muted loop playsinline></video>
+              <div class="vcard-overlay">
+                <h3 class="vcard-overlay-h1">Get Drafted Into Leading Leagues</h3>
+                <p class="vcard-overlay-h2">No bias &amp; global discovery</p>
+              </div>
             </div>
             <div class="vcard-info">
-              <h3 class="vcard-heading">Get Drafted into leading leagues (no bias &amp; global discovery)</h3>
               <a href="games" class="vcard-cta">FSP Games World's Best</a>
             </div>
           </div>
@@ -1130,9 +1161,12 @@
           <div class="vcard">
             <div class="vcard-phone">
               <video class="vcard-video" src="./src/assets/videos/card-2.mp4" autoplay muted loop playsinline></video>
+              <div class="vcard-overlay">
+                <h3 class="vcard-overlay-h1">Monetize Your Journey</h3>
+                <p class="vcard-overlay-h2">Start earning today</p>
+              </div>
             </div>
             <div class="vcard-info">
-              <h3 class="vcard-heading">Monetize your journey &mdash; Start Earning today</h3>
               <a href="#" class="vcard-cta fsp-btn-locked" aria-disabled="true" tabindex="-1">
                 <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M7 11V7a5 5 0 0 1 10 0v4" />
@@ -1146,9 +1180,12 @@
           <div class="vcard">
             <div class="vcard-phone">
               <video class="vcard-video" src="./src/assets/videos/card-3.mp4" autoplay muted loop playsinline></video>
+              <div class="vcard-overlay">
+                <h3 class="vcard-overlay-h1">Win Life Changing Prizes &amp; Bounties</h3>
+                <p class="vcard-overlay-h2">For every verified session</p>
+              </div>
             </div>
             <div class="vcard-info">
-              <h3 class="vcard-heading">Win life changing Prizes &amp; Brand Bounties for every verified session</h3>
               <a href="#" class="vcard-cta fsp-btn-locked" aria-disabled="true" tabindex="-1">
                 <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M7 11V7a5 5 0 0 1 10 0v4" />
@@ -1162,9 +1199,12 @@
           <div class="vcard">
             <div class="vcard-phone">
               <video class="vcard-video" src="./src/assets/videos/card-4.mp4" autoplay muted loop playsinline></video>
+              <div class="vcard-overlay">
+                <h3 class="vcard-overlay-h1">Get Refund &amp; Subsidies</h3>
+                <p class="vcard-overlay-h2">Audit your athleticism, track movement &amp; spend</p>
+              </div>
             </div>
             <div class="vcard-info">
-              <h3 class="vcard-heading">Get Refunds &amp; Subsidies &mdash; Audit your athleticism (Track movement &amp; spend)</h3>
               <a href="#" class="vcard-cta fsp-btn-locked" aria-disabled="true" tabindex="-1">
                 <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M7 11V7a5 5 0 0 1 10 0v4" />
