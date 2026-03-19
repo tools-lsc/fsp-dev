@@ -937,6 +937,391 @@ body{
 }
 .compete-divider{display:none}
 
+/* ── Player Cards / Social Proof Ticker ── */
+.player-cards-section{
+  background:#0a0a0a;
+  padding:80px 0 60px;
+  overflow:hidden;
+  position:relative;
+}
+.player-cards-container{
+  max-width:100%;
+  margin:0 auto;
+}
+.player-cards-header{
+  text-align:center;
+  padding:0 40px;
+  margin-bottom:48px;
+}
+.player-cards-title{
+  font-family:'Bricolage Grotesque','Archivo',sans-serif;
+  font-size:56px;
+  font-weight:800;
+  line-height:1.1;
+  margin-bottom:12px;
+}
+.player-cards-title-white{color:#fff}
+.player-cards-title-purple{color:#0000FF}
+.player-cards-subtitle{
+  font-family:'Archivo',sans-serif;
+  font-size:15px;
+  color:rgba(255,255,255,.55);
+  letter-spacing:.5px;
+  text-transform:none;
+}
+
+/* ── Player Stat Ticker (top row) ── */
+.player-stat-ticker{
+  overflow:hidden;
+  margin-bottom:40px;
+  mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+}
+.player-stat-track{
+  display:flex;
+  gap:16px;
+  width:max-content;
+  animation:playerStatScroll 35s linear infinite;
+}
+.player-stat-card{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:12px;
+  padding:12px 20px;
+  flex-shrink:0;
+  min-width:260px;
+  backdrop-filter:blur(8px);
+  transition:border-color .3s,background .3s;
+}
+.player-stat-card:hover{
+  border-color:rgba(0,0,255,.4);
+  background:rgba(0,0,255,.08);
+}
+.player-stat-avatar{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-family:'Archivo',sans-serif;
+  font-weight:700;
+  font-size:16px;
+  flex-shrink:0;
+}
+.player-stat-info{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+.player-stat-name{
+  font-family:'Archivo',sans-serif;
+  font-weight:600;
+  font-size:14px;
+  color:#fff;
+}
+.player-stat-location{
+  font-weight:400;
+  color:rgba(255,255,255,.5);
+}
+.player-stat-detail{
+  font-family:'Archivo',sans-serif;
+  font-size:13px;
+  color:#2c2cff;
+  font-weight:500;
+}
+
+@keyframes playerStatScroll{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-50%)}
+}
+
+/* ── Testimonial Ticker (bottom row) ── */
+.player-testimonial-ticker{
+  overflow:hidden;
+  mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);
+}
+.player-testimonial-track{
+  display:flex;
+  gap:16px;
+  width:max-content;
+  animation:playerTestiScroll 45s linear infinite;
+}
+.player-testi-card{
+  flex-shrink:0;
+  border-radius:16px;
+  overflow:hidden;
+  width:240px;
+  height:300px;
+}
+.player-testi-photo{
+  position:relative;
+}
+.player-testi-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.player-testi-review{
+  background:#0000FF;
+  padding:28px 24px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.player-testi-stars{
+  color:#FFD700;
+  font-size:20px;
+  letter-spacing:4px;
+  margin-bottom:8px;
+}
+.player-testi-quote{
+  font-family:'Bricolage Grotesque','Archivo',sans-serif;
+  font-size:22px;
+  font-weight:700;
+  color:#fff;
+  line-height:1.25;
+  flex:1;
+  display:flex;
+  align-items:center;
+}
+.player-testi-meta{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-top:16px;
+  font-family:'Archivo',sans-serif;
+  font-size:12px;
+  color:rgba(255,255,255,.7);
+}
+.player-testi-icon{
+  font-size:14px;
+}
+.player-testi-user{
+  font-weight:600;
+  color:#fff;
+}
+.player-testi-date{
+  margin-left:auto;
+}
+
+@keyframes playerTestiScroll{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-50%)}
+}
+
+/* Player Cards scroll indicator */
+.player-cards-indicator{
+  display:flex;
+  justify-content:center;
+  margin-top:32px;
+}
+.player-cards-dot{
+  width:40px;
+  height:6px;
+  border-radius:3px;
+  background:rgba(255,255,255,.25);
+}
+
+/* Pause ticker on hover */
+.player-stat-ticker:hover .player-stat-track{animation-play-state:paused}
+.player-testimonial-ticker:hover .player-testimonial-track{animation-play-state:paused}
+
+/* ── Player Cards Responsive ── */
+@media(max-width:1024px){
+  .player-cards-title{font-size:42px}
+  .player-cards-section{padding:60px 0 48px}
+}
+@media(max-width:768px){
+  .player-cards-title{font-size:32px}
+  .player-cards-section{padding:48px 0 40px}
+  .player-cards-header{margin-bottom:32px}
+  .player-testi-card{width:200px;height:260px}
+  .player-testi-quote{font-size:18px}
+  .player-stat-card{min-width:230px;padding:10px 16px}
+}
+@media(max-width:480px){
+  .player-cards-title{font-size:26px}
+  .player-testi-card{width:180px;height:240px}
+  .player-testi-quote{font-size:16px}
+  .player-stat-card{min-width:210px}
+}
+
+/* ── Turn Your Play into Income Section ── */
+.play-income-section{
+  background:#fff;
+  padding:100px 40px;
+  position:relative;
+  overflow:hidden;
+}
+.play-income-grain{
+  position:absolute;
+  inset:0;
+  background-image:url('../assets/images/card-texture-e0eadf.png');
+  background-size:cover;
+  background-position:center;
+  opacity:.35;
+  mix-blend-mode:soft-light;
+  pointer-events:none;
+  z-index:0;
+}
+.play-income-container{
+  max-width:1200px;
+  margin:0 auto;
+  position:relative;
+  z-index:1;
+}
+.play-income-header{
+  text-align:center;
+  margin-bottom:64px;
+}
+.play-income-title{
+  font-family:'Bricolage Grotesque','Archivo',sans-serif;
+  font-size:clamp(32px,4vw,52px);
+  font-weight:700;
+  line-height:1.15;
+  letter-spacing:-.03em;
+  color:#111;
+  margin-bottom:20px;
+}
+.play-income-subtitle{
+  font-family:'Archivo',sans-serif;
+  font-size:clamp(16px,1.6vw,20px);
+  font-weight:400;
+  line-height:1.5;
+  color:#555;
+  max-width:680px;
+  margin:0 auto;
+}
+.play-income-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+}
+.play-income-card{
+  background:#fff;
+  border:1px solid #E6E6E6;
+  border-radius:12px;
+  padding:36px 32px;
+  display:flex;
+  flex-direction:column;
+  transition:box-shadow .3s ease,transform .3s ease;
+}
+.play-income-card:hover{
+  box-shadow:0 12px 32px rgba(0,0,0,.08);
+  transform:translateY(-4px);
+}
+.play-income-card-title{
+  font-family:'Bricolage Grotesque','Archivo',sans-serif;
+  font-size:clamp(20px,2vw,24px);
+  font-weight:700;
+  color:#111;
+  margin-bottom:20px;
+  line-height:1.25;
+}
+.play-income-card-lead{
+  font-family:'Archivo',sans-serif;
+  font-size:16px;
+  color:#0000FF;
+  font-weight:600;
+  margin-bottom:16px;
+  line-height:1.4;
+}
+.play-income-list{
+  list-style:none;
+  padding:0;
+  margin:0 0 20px;
+}
+.play-income-list li{
+  font-family:'Archivo',sans-serif;
+  font-size:15px;
+  line-height:1.55;
+  color:#444;
+  padding:6px 0 6px 20px;
+  position:relative;
+}
+.play-income-list li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:13px;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#0000FF;
+}
+.play-income-list li strong{
+  color:#111;
+  font-weight:600;
+}
+.play-income-card-body{
+  font-family:'Archivo',sans-serif;
+  font-size:15px;
+  line-height:1.55;
+  color:#444;
+  margin-bottom:auto;
+  padding-bottom:20px;
+}
+.play-income-card-footer{
+  font-family:'Archivo',sans-serif;
+  font-size:14px;
+  font-weight:600;
+  color:#888;
+  margin-top:auto;
+  padding-top:16px;
+  border-top:1px solid #F0F0F0;
+  letter-spacing:.01em;
+}
+.play-income-card-footer--accent{
+  color:#0000FF;
+}
+.play-income-cta{
+  text-align:center;
+  margin-top:48px;
+}
+.play-income-cta .btn-explore-tiers{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 48px;
+  background:#0000FF;
+  color:#fff;
+  font-family:'Archivo',sans-serif;
+  font-size:16px;
+  font-weight:600;
+  border-radius:8px;
+  text-decoration:none;
+  transition:opacity .2s;
+  cursor:pointer;
+}
+.play-income-cta .btn-explore-tiers:hover{
+  opacity:.9;
+}
+
+/* Play Income Responsive */
+@media(max-width:1024px){
+  .play-income-section{padding:80px 32px}
+  .play-income-grid{gap:20px}
+  .play-income-card{padding:28px 24px}
+}
+@media(max-width:768px){
+  .play-income-section{padding:64px 20px}
+  .play-income-grid{grid-template-columns:1fr}
+  .play-income-header{margin-bottom:40px}
+  .play-income-card{padding:28px 24px}
+}
+@media(max-width:480px){
+  .play-income-section{padding:48px 16px}
+  .play-income-title{font-size:28px}
+  .play-income-card{padding:24px 20px}
+}
+
 /* Redeem Your FSP Champion Points & Win Big Section */
 .redeem-win-big-section{
   background:#fff;
@@ -1902,6 +2287,22 @@ body{
   .passion-points-container{grid-template-columns:1fr}
 }
 
+/* ── Earn SPs Standalone Section ── */
+.earn-sps-standalone{
+  padding:0 40px;
+  background:#fff;
+}
+.earn-sps-standalone .squad-card{
+  max-width:1200px;
+  margin:0 auto;
+}
+@media(max-width:768px){
+  .earn-sps-standalone{padding:0 20px}
+}
+@media(max-width:480px){
+  .earn-sps-standalone{padding:0 16px}
+}
+
 /* Sticky Tabs */
 .sticky-tab-strip{
   position:sticky;
@@ -1950,6 +2351,8 @@ body{
 .pools-referrals-section{
   background:#fff;
 }
+/* Hide tab strip when tabs are removed */
+.pools-referrals-section--no-tabs .sticky-tab-strip{display:none}
 .pools-referrals-slider{
   background:#fff;
   padding:0 0 100px;
@@ -1970,7 +2373,7 @@ body{
 .arena-panel{
   max-width:1200px;
   margin:0 auto;
-  padding:64px 48px 80px;
+  padding:64px 40px 80px;
 }
 .arena-panel-hero{
   margin-bottom:56px;

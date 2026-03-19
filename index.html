@@ -152,8 +152,13 @@
     .vcard-disclaimer{
       font-size:11px;
       color:#999;
-      margin:4px 0 0;
+      margin:20px 0 0;
       font-style:italic;
+      text-align:center;
+      padding:0 40px;
+      max-width:1400px;
+      margin-left:auto;
+      margin-right:auto;
     }
     @media (max-width:1100px){
       .vcard-grid{
@@ -338,7 +343,8 @@
       margin-bottom:8px;
     }
     .form-input,
-    .form-textarea{
+    .form-textarea,
+    select.form-input{
       width:100%;
       padding:12px 16px;
       border:1px solid #E6E6E6;
@@ -347,6 +353,7 @@
       font-family:inherit;
       transition:border-color 0.2s ease;
       box-sizing:border-box;
+      background:#fff;
     }
     .form-input:focus,
     .form-textarea:focus{
@@ -524,14 +531,34 @@
       flex:1;
       overflow:hidden;
       position:relative;
-      height:auto;
       min-height:0;
     }
     .card-image{
       width:100%;
       height:100%;
       object-fit:cover;
+      object-position:center 30%;
       display:block;
+    }
+    /* Rivals card — logo overlay on basketball backdrop */
+    .inner-circle-card--rivals .inner-circle-card-image{
+      background:#0a0a0a;
+    }
+    .rivals-logo-overlay{
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      width:70%;
+      max-width:240px;
+      height:auto;
+      object-fit:contain;
+      z-index:2;
+      filter:drop-shadow(0 4px 20px rgba(0,0,0,0.6));
+    }
+    .inner-circle-card--rivals .card-image{
+      opacity:0.45;
+      object-position:center;
     }
     .inner-circle-card-footer{
       background:#0000FF;
@@ -1049,8 +1076,8 @@
       <div class="hero-content">
         <div class="container">
           <div class="hero-text">
-            <h1 class="hero-title">The First Global Sports League<br>Where Everyone Can Play</h1>
-            <p class="hero-subtitle">Stop playing for free. Start playing for keeps. Turn your invisible effort into verified rankings, cash prizes, and a path to the pros.</p>
+            <h1 class="hero-title">Get Verified. Get Ranked.<br>Get Paid for Playing Your Sport.</h1>
+            <p class="hero-subtitle">Turn every session into verified rankings, rewards and a path to the pros.</p>
             <div class="hero-cta-container">
               <div class="hero-cta-wrapper">
                 <a href="#" class="btn-start-competing fsp-btn-locked" aria-disabled="true" tabindex="-1">
@@ -1095,7 +1122,7 @@
             </div>
             <div class="vcard-info">
               <h3 class="vcard-heading">Get Drafted into leading leagues (no bias &amp; global discovery)</h3>
-              <a href="games.html" class="vcard-cta">FSP Games World's Best</a>
+              <a href="games" class="vcard-cta">FSP Games World's Best</a>
             </div>
           </div>
 
@@ -1144,11 +1171,11 @@
                 </svg>
                 Get Sports Subsidies
               </a>
-              <p class="vcard-disclaimer">All brand representations are illustrative</p>
             </div>
           </div>
 
         </div>
+        <p class="vcard-disclaimer">All brand representations are illustrative</p>
       </div>
     </section>
 
@@ -1198,6 +1225,329 @@
         </div>
       </div>
       <div class="compete-divider"></div>
+    </section>
+
+    <!-- ── Player Cards / Social Proof Ticker ── -->
+    <section class="player-cards-section">
+      <div class="player-cards-container">
+        <!-- Headline -->
+        <div class="player-cards-header">
+          <h2 class="player-cards-title">
+            <span class="player-cards-title-white">20+ Million Players,</span><br>
+            <span class="player-cards-title-purple">Billions</span>
+            <span class="player-cards-title-white"> Paid Out</span>
+          </h2>
+          <p class="player-cards-subtitle">Player Picks Users and Winnings</p>
+        </div>
+
+        <!-- Player Stat Cards Ticker -->
+        <div class="player-stat-ticker">
+          <div class="player-stat-track">
+            <!-- Set 1 -->
+            <div class="player-stat-card">
+              <div class="player-stat-avatar" style="background:#0000FF;">J</div>
+              <div class="player-stat-info">
+                <span class="player-stat-name">Jake <span class="player-stat-location">(Chicago)</span></span>
+                <span class="player-stat-detail">Won $320 this month</span>
+              </div>
+            </div>
+            <div class="player-stat-card">
+              <div class="player-stat-avatar" style="background:#2c2cff;">A</div>
+              <div class="player-stat-info">
+                <span class="player-stat-name">Ananya <span class="player-stat-location">(Mumbai)</span></span>
+                <span class="player-stat-detail">Won Top 1% Squash ranking</span>
+              </div>
+            </div>
+            <div class="player-stat-card">
+              <div class="player-stat-avatar" style="background:#4444ff;">M</div>
+              <div class="player-stat-info">
+                <span class="player-stat-name">Marcus <span class="player-stat-location">(London)</span></span>
+                <span class="player-stat-detail">Won $1,200 lifetime on FSP</span>
+              </div>
+            </div>
+            <div class="player-stat-card">
+              <div class="player-stat-avatar" style="background:#0000cc;">S</div>
+              <div class="player-stat-info">
+                <span class="player-stat-name">Sofia <span class="player-stat-location">(S&atilde;o Paulo)</span></span>
+                <span class="player-stat-detail">Won 3x Golden Tickets</span>
+              </div>
+            </div>
+            <div class="player-stat-card">
+              <div class="player-stat-avatar" style="background:#1a1aff;">T</div>
+              <div class="player-stat-info">
+                <span class="player-stat-name">Tariq <span class="player-stat-location">(Dubai)</span></span>
+                <span class="player-stat-detail">Won $890 this month</span>
+              </div>
+            </div>
+            <div class="player-stat-card">
+              <div class="player-stat-avatar" style="background:#3333ff;">K</div>
+              <div class="player-stat-info">
+                <span class="player-stat-name">Kenji <span class="player-stat-location">(Tokyo)</span></span>
+                <span class="player-stat-detail">Won Top 5% Bowling ranking</span>
+              </div>
+            </div>
+            <div class="player-stat-card">
+              <div class="player-stat-avatar" style="background:#0000FF;">R</div>
+              <div class="player-stat-info">
+                <span class="player-stat-name">Riley <span class="player-stat-location">(Austin)</span></span>
+                <span class="player-stat-detail">Won $540 this month</span>
+              </div>
+            </div>
+            <div class="player-stat-card">
+              <div class="player-stat-avatar" style="background:#2c2cff;">N</div>
+              <div class="player-stat-info">
+                <span class="player-stat-name">Nia <span class="player-stat-location">(Nairobi)</span></span>
+                <span class="player-stat-detail">Won $2.4K as Movement Creator</span>
+              </div>
+            </div>
+            <!-- Duplicate set for seamless loop -->
+            <div class="player-stat-card">
+              <div class="player-stat-avatar" style="background:#0000FF;">J</div>
+              <div class="player-stat-info">
+                <span class="player-stat-name">Jake <span class="player-stat-location">(Chicago)</span></span>
+                <span class="player-stat-detail">Won $320 this month</span>
+              </div>
+            </div>
+            <div class="player-stat-card">
+              <div class="player-stat-avatar" style="background:#2c2cff;">A</div>
+              <div class="player-stat-info">
+                <span class="player-stat-name">Ananya <span class="player-stat-location">(Mumbai)</span></span>
+                <span class="player-stat-detail">Won Top 1% Squash ranking</span>
+              </div>
+            </div>
+            <div class="player-stat-card">
+              <div class="player-stat-avatar" style="background:#4444ff;">M</div>
+              <div class="player-stat-info">
+                <span class="player-stat-name">Marcus <span class="player-stat-location">(London)</span></span>
+                <span class="player-stat-detail">Won $1,200 lifetime on FSP</span>
+              </div>
+            </div>
+            <div class="player-stat-card">
+              <div class="player-stat-avatar" style="background:#0000cc;">S</div>
+              <div class="player-stat-info">
+                <span class="player-stat-name">Sofia <span class="player-stat-location">(S&atilde;o Paulo)</span></span>
+                <span class="player-stat-detail">Won 3x Golden Tickets</span>
+              </div>
+            </div>
+            <div class="player-stat-card">
+              <div class="player-stat-avatar" style="background:#1a1aff;">T</div>
+              <div class="player-stat-info">
+                <span class="player-stat-name">Tariq <span class="player-stat-location">(Dubai)</span></span>
+                <span class="player-stat-detail">Won $890 this month</span>
+              </div>
+            </div>
+            <div class="player-stat-card">
+              <div class="player-stat-avatar" style="background:#3333ff;">K</div>
+              <div class="player-stat-info">
+                <span class="player-stat-name">Kenji <span class="player-stat-location">(Tokyo)</span></span>
+                <span class="player-stat-detail">Won Top 5% Bowling ranking</span>
+              </div>
+            </div>
+            <div class="player-stat-card">
+              <div class="player-stat-avatar" style="background:#0000FF;">R</div>
+              <div class="player-stat-info">
+                <span class="player-stat-name">Riley <span class="player-stat-location">(Austin)</span></span>
+                <span class="player-stat-detail">Won $540 this month</span>
+              </div>
+            </div>
+            <div class="player-stat-card">
+              <div class="player-stat-avatar" style="background:#2c2cff;">N</div>
+              <div class="player-stat-info">
+                <span class="player-stat-name">Nia <span class="player-stat-location">(Nairobi)</span></span>
+                <span class="player-stat-detail">Won $2.4K as Movement Creator</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Ticker -->
+        <div class="player-testimonial-ticker">
+          <div class="player-testimonial-track">
+            <!-- Card 1 — Photo -->
+            <div class="player-testi-card player-testi-photo">
+              <img src="./src/assets/images/DEMOCRATIZED_ACCESS.jpg" alt="Fans at live FSP event" loading="lazy">
+            </div>
+            <!-- Card 2 — Review -->
+            <div class="player-testi-card player-testi-review">
+              <div class="player-testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="player-testi-quote">&ldquo;Won $450 on my bowling score alone. FSP is unreal.&rdquo;</p>
+              <div class="player-testi-meta">
+                <span class="player-testi-user">scooter1457</span>
+                <span class="player-testi-date">07/16/2025</span>
+              </div>
+            </div>
+            <!-- Card 3 — Photo -->
+            <div class="player-testi-card player-testi-photo">
+              <img src="./src/assets/images/TANGIBLE_IMPACT.jpg" alt="Player celebrating FSP win" loading="lazy">
+            </div>
+            <!-- Card 4 — Review -->
+            <div class="player-testi-card player-testi-review">
+              <p class="player-testi-quote">&ldquo;Cashed out $320 this week. Verified score, instant payout.&rdquo;</p>
+              <div class="player-testi-meta">
+                <span class="player-testi-user">bigwincruz</span>
+                <span class="player-testi-date">07/21/2025</span>
+              </div>
+            </div>
+            <!-- Card 5 — Photo -->
+            <div class="player-testi-card player-testi-photo">
+              <img src="./src/assets/images/THE_UNBIASED_LENS.jpg" alt="AI verified match on FSP" loading="lazy">
+            </div>
+            <!-- Card 6 — Review -->
+            <div class="player-testi-card player-testi-review">
+              <div class="player-testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="player-testi-quote">&ldquo;Hit the Global Leaderboard in squash. Won a Golden Ticket.&rdquo;</p>
+              <div class="player-testi-meta">
+                <span class="player-testi-user">jasonobee</span>
+                <span class="player-testi-date">07/25/2025</span>
+              </div>
+            </div>
+            <!-- Card 7 — Photo -->
+            <div class="player-testi-card player-testi-photo">
+              <img src="./src/assets/images/buyer-be-there.png" alt="Live FSP arena event" loading="lazy">
+            </div>
+            <!-- Card 8 — Review -->
+            <div class="player-testi-card player-testi-review">
+              <div class="player-testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="player-testi-quote">&ldquo;My pool earned $2K this month. Movement Creator life.&rdquo;</p>
+              <div class="player-testi-meta">
+                <span class="player-testi-user">strikequeen99</span>
+                <span class="player-testi-date">08/02/2025</span>
+              </div>
+            </div>
+            <!-- Card 9 — Photo -->
+            <div class="player-testi-card player-testi-photo">
+              <img src="./src/assets/images/buyer-own-sport.png" alt="FSP community" loading="lazy">
+            </div>
+            <!-- Card 10 — Review -->
+            <div class="player-testi-card player-testi-review">
+              <p class="player-testi-quote">&ldquo;Won the FSP Jackpot Draw &mdash; F1 trip to Monaco. Still can&rsquo;t believe it.&rdquo;</p>
+              <div class="player-testi-meta">
+                <span class="player-testi-user">poolkingmj</span>
+                <span class="player-testi-date">08/10/2025</span>
+              </div>
+            </div>
+            <!-- Duplicate set for seamless loop -->
+            <div class="player-testi-card player-testi-photo">
+              <img src="./src/assets/images/DEMOCRATIZED_ACCESS.jpg" alt="Fans at live FSP event" loading="lazy">
+            </div>
+            <div class="player-testi-card player-testi-review">
+              <div class="player-testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="player-testi-quote">&ldquo;Won $450 on my bowling score alone. FSP is unreal.&rdquo;</p>
+              <div class="player-testi-meta">
+                <span class="player-testi-user">scooter1457</span>
+                <span class="player-testi-date">07/16/2025</span>
+              </div>
+            </div>
+            <div class="player-testi-card player-testi-photo">
+              <img src="./src/assets/images/TANGIBLE_IMPACT.jpg" alt="Player celebrating FSP win" loading="lazy">
+            </div>
+            <div class="player-testi-card player-testi-review">
+              <p class="player-testi-quote">&ldquo;Cashed out $320 this week. Verified score, instant payout.&rdquo;</p>
+              <div class="player-testi-meta">
+                <span class="player-testi-user">bigwincruz</span>
+                <span class="player-testi-date">07/21/2025</span>
+              </div>
+            </div>
+            <div class="player-testi-card player-testi-photo">
+              <img src="./src/assets/images/THE_UNBIASED_LENS.jpg" alt="AI verified match on FSP" loading="lazy">
+            </div>
+            <div class="player-testi-card player-testi-review">
+              <div class="player-testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="player-testi-quote">&ldquo;Hit the Global Leaderboard in squash. Won a Golden Ticket.&rdquo;</p>
+              <div class="player-testi-meta">
+                <span class="player-testi-user">jasonobee</span>
+                <span class="player-testi-date">07/25/2025</span>
+              </div>
+            </div>
+            <div class="player-testi-card player-testi-photo">
+              <img src="./src/assets/images/buyer-be-there.png" alt="Live FSP arena event" loading="lazy">
+            </div>
+            <div class="player-testi-card player-testi-review">
+              <div class="player-testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="player-testi-quote">&ldquo;My pool earned $2K this month. Movement Creator life.&rdquo;</p>
+              <div class="player-testi-meta">
+                <span class="player-testi-user">strikequeen99</span>
+                <span class="player-testi-date">08/02/2025</span>
+              </div>
+            </div>
+            <div class="player-testi-card player-testi-photo">
+              <img src="./src/assets/images/buyer-own-sport.png" alt="FSP community" loading="lazy">
+            </div>
+            <div class="player-testi-card player-testi-review">
+              <p class="player-testi-quote">&ldquo;Won the FSP Jackpot Draw &mdash; F1 trip to Monaco. Still can&rsquo;t believe it.&rdquo;</p>
+              <div class="player-testi-meta">
+                <span class="player-testi-user">poolkingmj</span>
+                <span class="player-testi-date">08/10/2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll indicator dot -->
+        <div class="player-cards-indicator">
+          <span class="player-cards-dot"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Turn Your Play into Income ── -->
+    <section class="play-income-section">
+      <!-- Grain overlay -->
+      <div class="play-income-grain"></div>
+
+      <div class="play-income-container">
+        <!-- Section Header -->
+        <div class="play-income-header">
+          <h2 class="play-income-title">Turn Your Play into Income &mdash; Multiply What You Earn</h2>
+          <p class="play-income-subtitle">Start anywhere. Earn your way in. Unlock real competition, real rewards, and a path to the pros.</p>
+        </div>
+
+        <!-- 3-Column Card Grid -->
+        <div class="play-income-grid">
+
+          <!-- Card 1 — Earn While You Rise -->
+          <div class="play-income-card">
+            <h3 class="play-income-card-title">Earn While You Rise To The Top</h3>
+            <ul class="play-income-list">
+              <li><strong>AI verify</strong> your performance</li>
+              <li>Get <strong>ranked globally</strong></li>
+              <li>Earn <strong>SPs</strong> and build your profile</li>
+              <li>Compete for <strong>prizes &amp; brand bounties</strong></li>
+            </ul>
+            <p class="play-income-card-body">Your AI verified scores trigger automatic performance payouts, turning your effort into recurring earnings.</p>
+            <p class="play-income-card-footer">No cost. No gatekeepers.</p>
+          </div>
+
+          <!-- Card 2 — Participate to Win -->
+          <div class="play-income-card">
+            <h3 class="play-income-card-title">Participate to Win</h3>
+            <ul class="play-income-list">
+              <li><strong>Compete and accelerate</strong> your earnings for prizes &amp; brand bounties</li>
+              <li>Play in official <strong>FSP challenges &amp; leagues</strong></li>
+              <li>Access <strong>in-person events</strong> &amp; leading real-world competition</li>
+              <li>Get <strong>global visibility</strong> for drafts &amp; pro pathways</li>
+            </ul>
+            <p class="play-income-card-footer play-income-card-footer--accent">&#127942; Top players unlock &lsquo;Inner Circle&rsquo; access</p>
+          </div>
+
+          <!-- Card 3 — Movement Creator -->
+          <div class="play-income-card">
+            <h3 class="play-income-card-title">Become a Movement Creator</h3>
+            <p class="play-income-card-lead">Scale your income beyond your own performance &#128073;</p>
+            <ul class="play-income-list">
+              <li><strong>Build your own arena</strong> and earn a share of every session</li>
+              <li>Bring your team, friends, or local community &mdash; <strong>anyone who competes</strong></li>
+              <li><strong>You control</strong> how your arena earns and grows</li>
+            </ul>
+            <p class="play-income-card-footer play-income-card-footer--accent">&#128176; Top creators earn 5&ndash;10x more</p>
+          </div>
+
+        </div>
+
+        <div class="play-income-cta">
+          <a href="#" class="btn-explore-tiers">Explore Tiers</a>
+        </div>
+      </div>
     </section>
 
     <div class="content-separator"></div>
@@ -1250,212 +1600,12 @@
 
     <div class="content-separator"></div>
 
-    <section class="pools-referrals-section" data-active="movement">
-      <div class="sticky-tab-strip" role="navigation" aria-label="Explore pools and referrals">
-        <div class="sticky-tab-inner">
-          <div class="sticky-tab-controls" role="tablist" aria-label="Pools and referrals">
-            <button class="sticky-tab-button active" type="button" role="tab" aria-selected="true" aria-controls="movement-panel" data-tab="movement">Movement Creators</button>
-            <button class="sticky-tab-button" type="button" role="tab" aria-selected="false" aria-controls="pools-panel" data-tab="pools">Pools</button>
-            <button class="sticky-tab-button" type="button" role="tab" aria-selected="false" aria-controls="rewards-panel" data-tab="rewards">SPs</button>
-            <button class="sticky-tab-button" type="button" role="tab" aria-selected="false" aria-controls="arena-panel" data-tab="arena">Arena</button>
-          </div>
-        </div>
-      </div>
+    <!-- Tabs removed — Arena content shown directly -->
+    <section class="pools-referrals-section pools-referrals-section--no-tabs">
       <div class="pools-referrals-slider">
         <div class="pools-referrals-panels">
-          <article class="pools-referrals-panel" id="movement-panel" role="tabpanel" aria-hidden="false" data-panel="movement">
-            <section class="deposit-to-earn">
-              <div class="deposit-bg">
-                <img class="deposit-texture" src="./src/assets/images/hero-texture-56586a.png" alt="" loading="lazy">
-              </div>
-              <div class="deposit-container">
-                <div class="deposit-header">
-                  <div>
-                    <h1 class="deposit-title">You Are Skill Verified. Now become a Movement Creator</h1>
-                    <h2 class="deposit-title-secondary">The Only Sports Path That Pays you back as you play</h2>
-                    <h3 class="deposit-subtitle">Get your SP Score and start winning brand bounties, subsidies and golden tickets</h3>
-                  </div>
-                </div>
-
-                <div class="deposit-content">
-                  <div class="deposit-features">
-                    <div class="deposit-feature">
-                      <div class="deposit-feature-icon">
-                        <img src="./src/assets/images/earn-icon.svg" alt="Earn icon" width="35" height="35" loading="lazy">
-                      </div>
-                      <div class="deposit-feature-content">
-                        <h3 class="deposit-feature-title">Earn While You Rise to the top</h3>
-                        <p class="deposit-feature-desc">Unlike traditional pathways where you pay fees and hope for a break, FSP rewards you along the journey. Your verified scores trigger automatic performance payouts, turning your effort into a recurring dividend.</p>
-                      </div>
-                    </div>
-                    
-                    <div class="deposit-feature">
-                      <div class="deposit-feature-icon">
-                        <img src="./src/assets/images/spend-transfer-icon.svg" alt="Movement Creator icon" width="35" height="35" loading="lazy">
-                      </div>
-                      <div class="deposit-feature-content">
-                        <h3 class="deposit-feature-title">Become a Movement Creator</h3>
-                        <p class="deposit-feature-desc">Onboard 30 or more participants in your pool & accelerate your platform earnings. Here is a <a href="#" class="revenue-table-link">rev share breakdown for Movement creators</a>.</p>
-                        <p class="deposit-feature-desc">Onboard your high school, college, your favorite team, your students in coaching, your local sports league & accelerate earnings for all.</p>
-                        <p class="deposit-feature-desc">Set your share of earnings with the group. Sports meets Fintech</p>
-                      </div>
-                    </div>
-                    
-                    <div class="deposit-feature">
-                      <div class="deposit-feature-icon">
-                        <img src="./src/assets/images/gift-icon.svg" alt="Referral icon" width="35" height="35" loading="lazy">
-                      </div>
-                      <div class="deposit-feature-content">
-                        <h3 class="deposit-feature-title">Refer and Earn</h3>
-                        <p class="deposit-feature-desc">The Best referral program in sports. Earn bounties and golden tickets.</p>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div class="deposit-cta-wrapper">
-                    <a href="#" class="btn-rewards-calculator" id="toggle-calculator-deposit">Rewards Calculator</a>
-                    <a href="#" class="btn-explore-tiers">Explore Tiers</a>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </article>
-          <article class="pools-referrals-panel" id="pools-panel" role="tabpanel" aria-hidden="true" data-panel="pools">
-            <div class="pools-panel">
-              <div class="pools-panel-intro">
-                <h2 class="pools-panel-title">Use the collective power of your community to fast track your earnings as a movement creator.</h2>
-                <p class="pools-panel-subtitle">The more deposits you pool, the better your rewards.</p>
-              </div>
-
-              <div class="pools-stake">
-                <div class="pools-stake-content">
-                  <h3 class="pools-stake-title">Stake the Next Superstar.</h3>
-                  <p class="pools-stake-subtitle">Don't just watch their journey. Bankroll it.</p>
-                  <p class="pools-stake-intro">Talent is everywhere, but capital is scarce. AthleteStash replaces donations with deposits.</p>
-                  <div class="pools-stake-features">
-                    <div class="pools-stake-feature">
-                      <h4 class="pools-stake-feature-title">For Athletes:</h4>
-                      <p class="pools-stake-feature-desc">Build a permanent capital base. The yield from your supporters' deposits funds your travel, gear, and entry fees&mdash;forever.</p>
-                    </div>
-                    <div class="pools-stake-feature">
-                      <h4 class="pools-stake-feature-title">For Supporters:</h4>
-                      <p class="pools-stake-feature-desc">Deposit, don't donate. Stake your capital on an athlete. You retain full ownership of your principal, while your yield fuels their rise.</p>
-                    </div>
-                  </div>
-                  <div class="pools-stake-actions">
-                    <a href="#" class="btn-stake-athlete">Stake an Athlete</a>
-                  </div>
-                </div>
-                <div class="pools-stake-visual">
-                  <img src="./src/assets/images/7bbb0db6-fe0f-431c-99b6-e3d82028ad31.png" alt="AthleteStash visualization" loading="lazy">
-                </div>
-              </div>
-
-              <div class="pools-flow">
-                <div class="pools-flow-bg">
-                  <img class="pools-flow-texture" src="./src/assets/images/hero-texture-56586a.png" alt="" loading="lazy">
-                </div>
-                <div class="pools-flow-inner">
-                  <div class="pools-flow-step">
-                    <span class="pools-flow-number">01</span>
-                    <p class="pools-flow-text"><strong>Create:</strong> Select your goal (Athlete Support, Sponsorship, or Fan Vote).</p>
-                  </div>
-                  <div class="pools-flow-step">
-                    <span class="pools-flow-number">02</span>
-                    <p class="pools-flow-text"><strong>Invite:</strong> Share your unique Pool Link. Supporters deposit via Card or Crypto.</p>
-                  </div>
-                  <div class="pools-flow-step">
-                    <span class="pools-flow-number">03</span>
-                    <p class="pools-flow-text"><strong>Activate:</strong> Our smart contracts automatically route the yield or action based on the Pool's rules.</p>
-                  </div>
-                  <div class="pools-flow-step">
-                    <span class="pools-flow-number">04</span>
-                    <p class="pools-flow-text"><strong>Redeem:</strong> Contributors earn FSP Points, Rewards, and Status for every second their capital is active.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-          <article class="pools-referrals-panel" id="rewards-panel" role="tabpanel" aria-hidden="true" data-panel="rewards">
-            <div class="squad-card">
-              <div class="squad-bg">
-                <img class="squad-texture" src="./src/assets/images/hero-texture-56586a.png" alt="" loading="lazy">
-                <img class="squad-ascii" src="./src/assets/images/refer-ascii-art.svg" alt="" loading="lazy">
-                <div class="squad-sp-badge">+SP</div>
-              </div>
-              <div class="squad-content">
-                <div class="squad-header">
-                  <h2 class="squad-title">Earn SPs</h2>
-                  <p class="squad-subtitle">Earn SPs (Skill Points) with every verified action.</p>
-                </div>
-                <div style="margin-top:24px;">
-                  <table class="sp-earn-table">
-                    <thead>
-                      <tr>
-                        <th scope="col">Activity</th>
-                        <th scope="col">Free User</th>
-                        <th scope="col">Pro Pass (2x)</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="sp-earn-table-activity">Verified Session</td>
-                        <td><span class="sp-earn-pill">+</span></td>
-                        <td><span class="sp-earn-pill pro">+++</span></td>
-                      </tr>
-                      <tr>
-                        <td class="sp-earn-table-activity">Truth Pass (90%+)</td>
-                        <td><span class="sp-earn-pill">+</span></td>
-                        <td><span class="sp-earn-pill pro">+++</span></td>
-                      </tr>
-                      <tr>
-                        <td class="sp-earn-table-activity">Social Share</td>
-                        <td><span class="sp-earn-pill">+</span></td>
-                        <td><span class="sp-earn-pill pro">+++</span></td>
-                      </tr>
-                      <tr>
-                        <td class="sp-earn-table-activity">Brand Challenge Win</td>
-                        <td><span class="sp-earn-pill">+</span></td>
-                        <td><span class="sp-earn-pill pro">+++</span></td>
-                      </tr>
-                      <tr>
-                        <td class="sp-earn-table-activity">Gear / Receipt Scan</td>
-                        <td><span class="sp-earn-pill">+</span></td>
-                        <td><span class="sp-earn-pill pro">+++</span></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <p class="sp-earn-legend" style="color:#fff;text-align:center;">+ = base SPs earned • +++ = boosted SPs with Pro Pass.</p>
-                </div>
-                <h3 class="squad-heading">How It Works</h3>
-                <div class="squad-steps">
-                  <div class="squad-step-card">
-                    <svg class="squad-step-icon" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M12 2L14.59 8.26L21 9.27L16 13.97L17.18 20.3L12 16.77L6.82 20.3L8 13.97L3 9.27L9.41 8.26L12 2Z" fill="#000"/>
-                    </svg>
-                    <h4 class="squad-step-title">Earn SPs</h4>
-                    <p class="squad-step-desc">Earn SPs( Skill Points) with every verified action.</p>
-                  </div>
-                  <div class="squad-step-card">
-                    <svg class="squad-step-icon" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M12 2L14.59 8.26L21 9.27L16 13.97L17.18 20.3L12 16.77L6.82 20.3L8 13.97L3 9.27L9.41 8.26L12 2Z" fill="#000"/>
-                    </svg>
-                    <h4 class="squad-step-title">Convert SPs</h4>
-                    <p class="squad-step-desc">Golden Tickets as wild card entries to the FSP inner Circle. To subsidise entry fees. Discounts to subsidize your spend.</p>
-                  </div>
-                  <div class="squad-step-card">
-                    <svg class="squad-step-icon" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M12 2L14.59 8.26L21 9.27L16 13.97L17.18 20.3L12 16.77L6.82 20.3L8 13.97L3 9.27L9.41 8.26L12 2Z" fill="#000"/>
-                    </svg>
-                    <h4 class="squad-step-title">Gift SPs</h4>
-                    <p class="squad-step-desc">Share the SP love. The more you give, the more you get. The platform gives your account daily SPs to share distribute to the top profiles that inspire you.</p>
-                  </div>
-                </div>
-                <a href="#" class="btn-invite-team">Earn SPs Now</a>
-              </div>
-            </div>
-          </article>
-          <article class="pools-referrals-panel" id="arena-panel" role="tabpanel" aria-hidden="true" data-panel="arena">
+          <!-- Movement, Pools, SPs panels removed — Arena shown directly -->
+          <article class="pools-referrals-panel" id="arena-panel" role="tabpanel" aria-hidden="false" data-panel="arena">
             <div class="arena-panel">
               <div class="arena-panel-hero">
                 <h1 class="arena-hero-headline">Compete anywhere. Get verified by AI. Rise through the ranks of a global arena.</h1>
@@ -1549,12 +1699,95 @@
 
     <div class="content-separator"></div>
 
+    <!-- ── Earn SPs Section ── -->
+    <section class="earn-sps-standalone">
+      <div class="squad-card">
+        <div class="squad-bg">
+          <img class="squad-texture" src="./src/assets/images/hero-texture-56586a.png" alt="" loading="lazy">
+          <img class="squad-ascii" src="./src/assets/images/refer-ascii-art.svg" alt="" loading="lazy">
+          <div class="squad-sp-badge">+SP</div>
+        </div>
+        <div class="squad-content">
+          <div class="squad-header">
+            <h2 class="squad-title">Earn SPs</h2>
+            <p class="squad-subtitle">Earn SPs (Skill Points) with every verified action.</p>
+          </div>
+          <div style="margin-top:24px;">
+            <table class="sp-earn-table">
+              <thead>
+                <tr>
+                  <th scope="col">Activity</th>
+                  <th scope="col">Free User</th>
+                  <th scope="col">Pro Pass (2x)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="sp-earn-table-activity">Verified Session</td>
+                  <td><span class="sp-earn-pill">+</span></td>
+                  <td><span class="sp-earn-pill pro">+++</span></td>
+                </tr>
+                <tr>
+                  <td class="sp-earn-table-activity">Truth Pass (90%+)</td>
+                  <td><span class="sp-earn-pill">+</span></td>
+                  <td><span class="sp-earn-pill pro">+++</span></td>
+                </tr>
+                <tr>
+                  <td class="sp-earn-table-activity">Social Share</td>
+                  <td><span class="sp-earn-pill">+</span></td>
+                  <td><span class="sp-earn-pill pro">+++</span></td>
+                </tr>
+                <tr>
+                  <td class="sp-earn-table-activity">Brand Challenge Win</td>
+                  <td><span class="sp-earn-pill">+</span></td>
+                  <td><span class="sp-earn-pill pro">+++</span></td>
+                </tr>
+                <tr>
+                  <td class="sp-earn-table-activity">Gear / Receipt Scan</td>
+                  <td><span class="sp-earn-pill">+</span></td>
+                  <td><span class="sp-earn-pill pro">+++</span></td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="sp-earn-legend" style="color:#fff;text-align:center;">+ = base SPs earned &bull; +++ = boosted SPs with Pro Pass.</p>
+          </div>
+          <h3 class="squad-heading">How It Works</h3>
+          <div class="squad-steps">
+            <div class="squad-step-card">
+              <svg class="squad-step-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2L14.59 8.26L21 9.27L16 13.97L17.18 20.3L12 16.77L6.82 20.3L8 13.97L3 9.27L9.41 8.26L12 2Z" fill="#000"/>
+              </svg>
+              <h4 class="squad-step-title">Earn SPs</h4>
+              <p class="squad-step-desc">Earn SPs (Skill Points) with every verified action.</p>
+            </div>
+            <div class="squad-step-card">
+              <svg class="squad-step-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2L14.59 8.26L21 9.27L16 13.97L17.18 20.3L12 16.77L6.82 20.3L8 13.97L3 9.27L9.41 8.26L12 2Z" fill="#000"/>
+              </svg>
+              <h4 class="squad-step-title">Golden Tickets</h4>
+              <p class="squad-step-desc">Golden Tickets as wild card entries to the FSP Inner Circle. To subsidise entry fees. Discounts to subsidize your spend.</p>
+            </div>
+            <div class="squad-step-card">
+              <svg class="squad-step-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2L14.59 8.26L21 9.27L16 13.97L17.18 20.3L12 16.77L6.82 20.3L8 13.97L3 9.27L9.41 8.26L12 2Z" fill="#000"/>
+              </svg>
+              <h4 class="squad-step-title">Gift SPs</h4>
+              <p class="squad-step-desc">Share the SP love. The more you give, the more you get. The platform gives your account daily SPs to share distribute to the top profiles that inspire you.</p>
+            </div>
+          </div>
+          <a href="#" class="btn-invite-team">Earn SPs Now</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="content-separator"></div>
+
     <section class="inner-circle-section">
       <div class="inner-circle-container">
         <div class="inner-circle-header">
           <h2 class="inner-circle-title">The Inner Circle.</h2>
-          <p class="inner-circle-subtitle">Access has no price tag. FSP enables life changing moments.</p>
-          <p class="inner-circle-body">Your Champion Points & Golden Tickets unlock doors that are closed to everyone else. We don't offer generic perks; we offer the impossible. Draft into leading leagues, access to motorsports and other leading global events. You can't buy these tickets. You have to earn them.</p>
+          <p class="inner-circle-subtitle">Access has no price tag. With FSP, your performance unlocks life changing moments.</p>
+          <p class="inner-circle-body">Your Skill Points &amp; Golden Tickets open doors most people never get near. Not perks. Not giveaways. Real opportunities &mdash; earned through competing.</p>
         </div>
 
         <!-- Get Drafted Category -->
@@ -1577,9 +1810,10 @@
                 <p class="inner-circle-card-label">WPS</p>
               </div>
             </div>
-            <div class="inner-circle-card">
+            <div class="inner-circle-card inner-circle-card--rivals">
               <div class="inner-circle-card-image">
-                <img src="./src/assets/images/hero-texture-56586a.png" alt="Rivals 1v1 Basketball" class="card-image" loading="lazy">
+                <img src="./src/assets/images/basketball-court-77ae92.png" alt="Rivals 1v1 Basketball" class="card-image" loading="lazy">
+                <img src="./src/assets/images/rivals-logo.png" alt="Rivals logo" class="rivals-logo-overlay" loading="lazy">
               </div>
               <div class="inner-circle-card-footer">
                 <p class="inner-circle-card-label">Rivals: 1v1 Basketball</p>
@@ -1641,13 +1875,7 @@
                   </div>
                   <p class="placeholder-title">Train with Legends</p>
                   <p class="placeholder-desc">Unlock pro-led masterclasses, film study labs, and mentorship from the athletes shaping the future.</p>
-                  <a href="#" class="placeholder-cta fsp-btn-locked" aria-disabled="true" tabindex="-1">
-                    <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                      <rect x="6" y="11" width="12" height="10" rx="2" />
-                    </svg>
-                    See Masterclasses
-                  </a>
+                  <a href="#" class="placeholder-cta" id="see-masterclasses-btn">See Masterclasses</a>
                 </div>
               </div>
             </div>
@@ -1676,10 +1904,10 @@
             </div>
             <div class="inner-circle-card">
               <div class="inner-circle-card-image">
-                <img src="./src/assets/images/hero-texture-56586a.png" alt="Abu Dhabi F1 Tickets" class="card-image" loading="lazy">
+                <img src="./src/assets/images/f1-cars-racing.jpg" alt="F1 Pit Lane" class="card-image" loading="lazy">
               </div>
               <div class="inner-circle-card-footer">
-                <p class="inner-circle-card-label">Abu Dhabi F1 Tickets</p>
+                <p class="inner-circle-card-label">F1 Tickets</p>
               </div>
             </div>
             <div class="inner-circle-card inner-circle-card-text-only cta-card-placeholder cta-card--merch">
@@ -1709,104 +1937,7 @@
       </div>
     </section>
 
-    <section class="calculator-section" id="calculator-section" style="display: none;">
-      <img class="calculator-texture" src="./src/assets/images/hero-texture-56586a.png" alt="" loading="lazy">
-
-      <div class="calculator-container">
-        <div class="calculator-header-wrapper">
-          <h2 class="calculator-title">Rewards Calculator</h2>
-
-          <div class="calculator-header-right">
-            <div class="calculator-tier-toggle">
-              <button class="tier-toggle-btn active" data-tier="free">Free</button>
-              <button class="tier-toggle-btn" data-tier="member">Member</button>
-              <button class="tier-toggle-btn" data-tier="movement-creator">Movement Creator</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="calculator-inputs" data-tier="free">
-          <div class="calculator-card">
-            <label class="input-label">Brand Bounties</label>
-            <div class="calculator-divider"></div>
-            <input type="text" class="calculator-input" value="$ 0">
-          </div>
-          <div class="calculator-card calculator-card-golden">
-            <label class="input-label">Golden Tickets (Wild Cards for inner circles)</label>
-            <div class="calculator-divider"></div>
-            <div class="golden-ticket-value">00</div>
-            <svg class="ticket-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18 2.07L34.05 2.07V33.93H18V2.07Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M11.8 10.71H19.25V15.96H11.8V10.71Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M14.8 15.91H22.25V21.16H14.8V15.91Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="calculator-card">
-            <label class="input-label">Referral Bonus (3%)</label>
-            <div class="calculator-divider"></div>
-            <input type="text" class="calculator-input" value="$ 0">
-          </div>
-        </div>
-
-        <div class="calculator-inputs" data-tier="member" style="display: none;">
-          <div class="calculator-card">
-            <label class="input-label">Brand Bounties</label>
-            <div class="calculator-divider"></div>
-            <input type="text" class="calculator-input" value="$ 0">
-          </div>
-          <div class="calculator-card calculator-card-golden">
-            <label class="input-label">Golden Tickets (Wild Cards for inner circles)</label>
-            <div class="calculator-divider"></div>
-            <div class="golden-ticket-value">00</div>
-            <svg class="ticket-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18 2.07L34.05 2.07V33.93H18V2.07Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M11.8 10.71H19.25V15.96H11.8V10.71Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M14.8 15.91H22.25V21.16H14.8V15.91Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="calculator-card">
-            <label class="input-label">Audit Data for Subsidies (Possible Savings)</label>
-            <div class="calculator-divider"></div>
-            <input type="text" class="calculator-input" value="$ 0">
-          </div>
-          <div class="calculator-card">
-            <label class="input-label">Referral Bonus (7%)</label>
-            <div class="calculator-divider"></div>
-            <input type="text" class="calculator-input" value="$ 0">
-          </div>
-        </div>
-
-        <div class="calculator-inputs" data-tier="movement-creator" style="display: none;">
-          <div class="calculator-card">
-            <label class="input-label">Members in Pool</label>
-            <div class="calculator-divider"></div>
-            <input type="text" class="calculator-input" value="0">
-          </div>
-          <div class="calculator-card">
-            <label class="input-label">Creator Revenue Share</label>
-            <div class="calculator-divider"></div>
-            <input type="text" class="calculator-input" value="$ 0">
-          </div>
-          <div class="calculator-card">
-            <label class="input-label">Creator Ad Revenue Share from Brands</label>
-            <div class="calculator-divider"></div>
-            <input type="text" class="calculator-input" value="$ 0">
-          </div>
-          <div class="calculator-card calculator-card-golden">
-            <label class="input-label">Golden Tickets (Wild Cards for inner circles)</label>
-            <div class="calculator-divider"></div>
-            <div class="golden-ticket-value">00</div>
-            <svg class="ticket-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18 2.07L34.05 2.07V33.93H18V2.07Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M11.8 10.71H19.25V15.96H11.8V10.71Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M14.8 15.91H22.25V21.16H14.8V15.91Z" stroke="#000" stroke-width="2.14" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-        </div>
-
-        <p class="calculator-disclaimer">*please read terms and conditions carefully</p>
-      </div>
-    </section>
+    <!-- Rewards Calculator removed per docx instructions -->
 
     <div class="content-separator"></div>
 
@@ -1815,13 +1946,13 @@
         <div class="subsidy-header">
           <p class="subsidy-kicker">Financial Aid</p>
           <h2 class="subsidy-title">Get Subsidies from Government Programs or the FFS Foundation</h2>
-          <p class="subsidy-body">If the $399 Movement Creator license feels out of reach, you still have a path in. FSP partners with public wellness programs and the Foundation for the Future of Sports (FFS) to offset your onboarding cost.</p>
+          <p class="subsidy-body">If the Paid Movement Creator license feels out of reach, you still have a path in. FSP partners with public wellness programs and the Foundation for the Future of Sports (FFS) to offset your onboarding cost.</p>
         </div>
 
         <div class="subsidy-grid">
           <div class="subsidy-card">
-            <h3 class="subsidy-card-title"><a href="#" target="_blank" rel="noopener">PLAY Credits</a></h3>
-            <p class="subsidy-card-desc">For U.S. community programs. Submit your FSP Truth Score sessions to unlock municipal wellness credits that reimburse your license fee.</p>
+            <h3 class="subsidy-card-title"><a href="#" target="_blank" rel="noopener">Section 127 Grants</a></h3>
+            <p class="subsidy-card-desc">Employer-sponsored educational assistance programs that can cover qualified sports technology and performance training expenses.</p>
           </div>
           <div class="subsidy-card">
             <h3 class="subsidy-card-title"><a href="#" target="_blank" rel="noopener">HSA / FSA / LSA</a></h3>
@@ -1838,13 +1969,7 @@
         </div>
 
         <div class="subsidy-cta">
-          <a href="#" class="btn-subsidy-apply fsp-btn-locked" aria-disabled="true" tabindex="-1">
-            <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-              <rect x="6" y="11" width="12" height="10" rx="2" />
-            </svg>
-            Apply for a Subsidy
-          </a>
+          <a href="#" class="btn-subsidy-apply" id="apply-subsidy-btn">Apply for a Subsidy</a>
           <p class="subsidy-cta-note">Submit your details and we will connect you with the best program or FFS Foundation grant for your situation.</p>
         </div>
       </div>
@@ -1914,7 +2039,7 @@
                 </svg>
               </button>
             </div>
-            <div class="faq-answer">Champion Points unlock access to the Inner Circle of sports. Redeem them for signed gear from our partners, VIP experiences at global events, or Challenge Tickets to enter high-stakes tournaments.</div>
+            <div class="faq-answer">Skill Points unlock access to the Inner Circle of sports. Redeem them for signed gear from our partners, VIP experiences at global events, or Challenge Tickets to enter high-stakes tournaments.</div>
           </div>
 
           <div class="faq-item">
@@ -1926,7 +2051,28 @@
                 </svg>
               </button>
             </div>
-            <div class="faq-answer">Movement Creators are community leaders who onboard participants into their pool. Once you have 30+ members, you unlock revenue sharing, brand ad revenue, and the ability to set earnings distribution within your group.</div>
+            <div class="faq-answer">
+              <p>Movement Creators are community leaders who onboard participants into their arena. Once you have 30+ members, you unlock revenue sharing, brand ad revenue, and the ability to set earnings distribution within your group.</p>
+              <p style="margin-top:12px"><a href="#" class="fee-table-toggle" id="fee-table-toggle" style="color:#0000FF;text-decoration:underline;font-weight:500">View revenue share breakdown &darr;</a></p>
+              <div class="fee-table-wrapper" id="fee-table-wrapper" style="display:none;margin-top:16px;overflow-x:auto">
+                <table style="width:100%;border-collapse:collapse;font-size:14px;text-align:left">
+                  <thead>
+                    <tr style="border-bottom:2px solid #E6E6E6">
+                      <th style="padding:10px 16px;font-weight:600">Participants</th>
+                      <th style="padding:10px 16px;font-weight:600">Entry Fee %</th>
+                      <th style="padding:10px 16px;font-weight:600">Ad &amp; Bounty %</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style="border-bottom:1px solid #F0F0F0"><td style="padding:10px 16px">10,000+</td><td style="padding:10px 16px">15%</td><td style="padding:10px 16px">25%</td></tr>
+                    <tr style="border-bottom:1px solid #F0F0F0"><td style="padding:10px 16px">25,000+</td><td style="padding:10px 16px">25%</td><td style="padding:10px 16px">38%</td></tr>
+                    <tr style="border-bottom:1px solid #F0F0F0"><td style="padding:10px 16px">50,000+</td><td style="padding:10px 16px">40%</td><td style="padding:10px 16px">55%</td></tr>
+                    <tr style="border-bottom:1px solid #F0F0F0"><td style="padding:10px 16px">100,000+</td><td style="padding:10px 16px">50%</td><td style="padding:10px 16px">60%</td></tr>
+                    <tr><td style="padding:10px 16px">1,000,000+</td><td style="padding:10px 16px">55%</td><td style="padding:10px 16px">60%</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1949,7 +2095,7 @@
             <a href="council">Council</a>
           </div>
           <div class="footer-links">
-            <a href="#">Privacy Policy</a>
+            <a href="privacy-policy">Privacy Policy</a>
             <a href="terms-of-use">Terms of Service</a>
             <a href="terms-and-conditions">Website T&amp;Cs</a>
             <a href="https://www.leaguesportsco.com/" target="_blank" rel="noopener noreferrer">League Sports Co</a>
@@ -2144,6 +2290,80 @@
     </div>
   </div>
 
+  <!-- Masterclass Request Form Modal -->
+  <div class="sport-request-popup" id="masterclass-request-popup" aria-hidden="true">
+    <div class="sport-request-backdrop"></div>
+    <div class="sport-request-content">
+      <div class="sport-request-header">
+        <h2 class="sport-request-title">Request a Masterclass</h2>
+        <button class="sport-request-close masterclass-popup-close" aria-label="Close form">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <form class="sport-request-form" id="masterclass-request-form">
+        <div class="form-group">
+          <label for="masterclass-sport" class="form-label">Sport / Discipline</label>
+          <input type="text" id="masterclass-sport" name="masterclassSport" class="form-input" placeholder="e.g., Baseball, Squash, Basketball" required>
+        </div>
+        <div class="form-group">
+          <label for="masterclass-athlete" class="form-label">Athlete or Coach (Optional)</label>
+          <input type="text" id="masterclass-athlete" name="masterclassAthlete" class="form-input" placeholder="e.g., Mookie Betts, Saurav Ghosal">
+        </div>
+        <div class="form-group">
+          <label for="masterclass-notes" class="form-label">What would you like to learn? (Optional)</label>
+          <textarea id="masterclass-notes" name="masterclassNotes" class="form-textarea" placeholder="Tell us what kind of masterclass you'd love to see..." rows="4"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="masterclass-email" class="form-label">Your Email (Optional)</label>
+          <input type="email" id="masterclass-email" name="masterclassEmail" class="form-input" placeholder="your.email@example.com">
+        </div>
+        <button type="submit" class="form-submit-btn">Submit Request</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Subsidy Application Form Modal -->
+  <div class="sport-request-popup" id="subsidy-request-popup" aria-hidden="true">
+    <div class="sport-request-backdrop"></div>
+    <div class="sport-request-content">
+      <div class="sport-request-header">
+        <h2 class="sport-request-title">Apply for a Subsidy</h2>
+        <button class="sport-request-close subsidy-popup-close" aria-label="Close form">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <form class="sport-request-form" id="subsidy-request-form">
+        <div class="form-group">
+          <label for="subsidy-name" class="form-label">Full Name</label>
+          <input type="text" id="subsidy-name" name="subsidyName" class="form-input" placeholder="Your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="subsidy-email" class="form-label">Email</label>
+          <input type="email" id="subsidy-email" name="subsidyEmail" class="form-input" placeholder="your.email@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="subsidy-program" class="form-label">Preferred Subsidy Program</label>
+          <select id="subsidy-program" name="subsidyProgram" class="form-input" required>
+            <option value="" disabled selected>Select a program...</option>
+            <option value="ffs-foundation">FFS Foundation Subsidy</option>
+            <option value="section-127">Section 127 Grants</option>
+            <option value="hsa-fsa-lsa">HSA / FSA / LSA</option>
+            <option value="international">International Government Grants</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="subsidy-details" class="form-label">Tell us about your situation (Optional)</label>
+          <textarea id="subsidy-details" name="subsidyDetails" class="form-textarea" placeholder="Share any relevant details about your eligibility or circumstances..." rows="4"></textarea>
+        </div>
+        <button type="submit" class="form-submit-btn">Submit Application</button>
+      </form>
+    </div>
+  </div>
+
   <script>
     // Mobile Navigation
     const hamburgerBtn = document.querySelector('.hamburger-btn');
@@ -2296,69 +2516,11 @@
       });
     }
 
-    // Calculator Toggle Functionality
-    const calculatorToggle = document.getElementById('toggle-calculator');
-    const calculatorToggleDeposit = document.getElementById('toggle-calculator-deposit');
-    const calculatorSection = document.getElementById('calculator-section');
-    
-    function toggleCalculator(e) {
-      e.preventDefault();
-      if (calculatorSection.style.display === 'none' || !calculatorSection.style.display) {
-        calculatorSection.style.display = 'block';
-        calculatorSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      } else {
-        calculatorSection.style.display = 'none';
-      }
-    }
-    
-    if (calculatorToggle && calculatorSection) {
-      calculatorToggle.addEventListener('click', toggleCalculator);
-    }
-    
-    if (calculatorToggleDeposit && calculatorSection) {
-      calculatorToggleDeposit.addEventListener('click', toggleCalculator);
-    }
-
-    // Tier Toggle Functionality
-    const tierToggleButtons = document.querySelectorAll('.tier-toggle-btn');
-    const allCalculatorInputs = document.querySelectorAll('.calculator-inputs');
-    
-    // Initialize: Show free tier by default
-    allCalculatorInputs.forEach(inputs => {
-      const tier = inputs.getAttribute('data-tier');
-      if (tier === 'free') {
-        inputs.style.display = 'grid';
-      } else {
-        inputs.style.display = 'none';
-      }
-    });
-    
-    tierToggleButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        // Remove active class from all buttons
-        tierToggleButtons.forEach(btn => btn.classList.remove('active'));
-        // Add active class to clicked button
-        this.classList.add('active');
-        
-        // Get the tier from data attribute
-        const tier = this.getAttribute('data-tier');
-        
-        // Hide all calculator inputs
-        allCalculatorInputs.forEach(inputs => {
-          inputs.style.display = 'none';
-        });
-        
-        // Show the calculator inputs for the selected tier
-        const selectedInputs = document.querySelector(`.calculator-inputs[data-tier="${tier}"]`);
-        if (selectedInputs) {
-          selectedInputs.style.display = 'grid';
-        }
-      });
-    });
+    // (Calculator removed per docx instructions)
 
     // Tiers Popup Functionality
     const tiersPopup = document.getElementById('tiers-popup');
-    const exploreTiersBtn = document.querySelector('.btn-explore-tiers');
+    const exploreTiersBtns = document.querySelectorAll('.btn-explore-tiers');
     const tiersPopupClose = document.querySelector('.tiers-popup-close');
     const tiersPopupBackdrop = document.querySelector('.tiers-popup-backdrop');
 
@@ -2376,15 +2538,14 @@
       }
     }
 
-    // Open popup when clicking "Explore Tiers" button
-    if (exploreTiersBtn) {
-      exploreTiersBtn.addEventListener('click', function(e) {
+    // Open popup when clicking any "Explore Tiers" button
+    exploreTiersBtns.forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
         e.preventDefault();
-        // If the button is ever marked aria-disabled, do nothing.
         if (this.getAttribute('aria-disabled') === 'true') return;
         openTiersPopup();
       });
-    }
+    });
 
     // Close popup when clicking close button
     if (tiersPopupClose) {
@@ -2500,10 +2661,110 @@
 
     // Close popup when pressing Escape key
     document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && sportRequestPopup && sportRequestPopup.getAttribute('aria-hidden') === 'false') {
-        closeSportRequestPopup();
+      if (e.key === 'Escape') {
+        if (sportRequestPopup && sportRequestPopup.getAttribute('aria-hidden') === 'false') {
+          closeSportRequestPopup();
+        }
+        if (masterclassPopup && masterclassPopup.getAttribute('aria-hidden') === 'false') {
+          closeMasterclassPopup();
+        }
+        if (subsidyPopup && subsidyPopup.getAttribute('aria-hidden') === 'false') {
+          closeSubsidyPopup();
+        }
       }
     });
+
+    // Fee Table Toggle in FAQ
+    const feeTableToggle = document.getElementById('fee-table-toggle');
+    const feeTableWrapper = document.getElementById('fee-table-wrapper');
+    if (feeTableToggle && feeTableWrapper) {
+      feeTableToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (feeTableWrapper.style.display === 'none') {
+          feeTableWrapper.style.display = 'block';
+          feeTableToggle.innerHTML = 'Hide revenue share breakdown &uarr;';
+        } else {
+          feeTableWrapper.style.display = 'none';
+          feeTableToggle.innerHTML = 'View revenue share breakdown &darr;';
+        }
+      });
+    }
+
+    // Masterclass Request Form Modal
+    const masterclassPopup = document.getElementById('masterclass-request-popup');
+    const seeMasterclassesBtn = document.getElementById('see-masterclasses-btn');
+    const masterclassClose = document.querySelector('.masterclass-popup-close');
+    const masterclassBackdrop = masterclassPopup ? masterclassPopup.querySelector('.sport-request-backdrop') : null;
+    const masterclassForm = document.getElementById('masterclass-request-form');
+
+    function openMasterclassPopup() {
+      if (masterclassPopup) {
+        masterclassPopup.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+    function closeMasterclassPopup() {
+      if (masterclassPopup) {
+        masterclassPopup.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        if (masterclassForm) masterclassForm.reset();
+      }
+    }
+    if (seeMasterclassesBtn) {
+      seeMasterclassesBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        openMasterclassPopup();
+      });
+    }
+    if (masterclassClose) masterclassClose.addEventListener('click', closeMasterclassPopup);
+    if (masterclassBackdrop) masterclassBackdrop.addEventListener('click', closeMasterclassPopup);
+    if (masterclassForm) {
+      masterclassForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(masterclassForm);
+        console.log('Masterclass Request Submitted:', Object.fromEntries(formData));
+        alert('Thank you! We\'ll notify you when new masterclasses become available.');
+        closeMasterclassPopup();
+      });
+    }
+
+    // Subsidy Application Form Modal
+    const subsidyPopup = document.getElementById('subsidy-request-popup');
+    const applySubsidyBtn = document.getElementById('apply-subsidy-btn');
+    const subsidyClose = document.querySelector('.subsidy-popup-close');
+    const subsidyBackdrop = subsidyPopup ? subsidyPopup.querySelector('.sport-request-backdrop') : null;
+    const subsidyForm = document.getElementById('subsidy-request-form');
+
+    function openSubsidyPopup() {
+      if (subsidyPopup) {
+        subsidyPopup.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+    function closeSubsidyPopup() {
+      if (subsidyPopup) {
+        subsidyPopup.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        if (subsidyForm) subsidyForm.reset();
+      }
+    }
+    if (applySubsidyBtn) {
+      applySubsidyBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        openSubsidyPopup();
+      });
+    }
+    if (subsidyClose) subsidyClose.addEventListener('click', closeSubsidyPopup);
+    if (subsidyBackdrop) subsidyBackdrop.addEventListener('click', closeSubsidyPopup);
+    if (subsidyForm) {
+      subsidyForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(subsidyForm);
+        console.log('Subsidy Application Submitted:', Object.fromEntries(formData));
+        alert('Thank you for applying! We\'ll review your application and connect you with the best program for your situation.');
+        closeSubsidyPopup();
+      });
+    }
   </script>
 </body>
 </html>
