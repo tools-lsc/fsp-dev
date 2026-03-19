@@ -2310,9 +2310,8 @@ body{
   position:sticky;
   top:0;
   z-index:15;
-  background:#0000FF;
+  background:transparent;
   padding:14px 0;
-  box-shadow:0 8px 20px rgba(0,0,0,0.12);
 }
 .sticky-tab-inner{
   max-width:1200px;
@@ -2323,29 +2322,29 @@ body{
 }
 .sticky-tab-controls{
   display:flex;
-  gap:8px;
-  padding:6px;
+  gap:0;
+  padding:4px;
   border-radius:999px;
-  background:rgba(255,255,255,0.18);
+  background:#E8E8E8;
 }
 .sticky-tab-button{
   border:none;
   background:transparent;
-  color:#fff;
+  color:#666;
   font-size:16px;
   font-weight:500;
   letter-spacing:-0.01em;
-  padding:8px 24px;
+  padding:10px 28px;
   border-radius:999px;
   cursor:pointer;
   transition:background 0.2s ease, color 0.2s ease;
 }
 .sticky-tab-button.active{
-  background:#fff;
-  color:#0000FF;
+  background:#0000FF;
+  color:#fff;
 }
 .sticky-tab-button:focus-visible{
-  outline:2px solid rgba(255,255,255,0.9);
+  outline:2px solid #0000FF;
   outline-offset:2px;
 }
 
