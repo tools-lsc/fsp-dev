@@ -2281,7 +2281,9 @@
   letter-spacing:0.12em;
   text-transform:uppercase;
   color:rgba(255,255,255,0.7);
-  text-align:center;
+  text-align:left;
+  display:block;
+  padding-bottom:24px;
 }
 .rewards-slider{
   -webkit-appearance:none;
