@@ -2459,6 +2459,8 @@ body{
   margin-top:8px;
   transition:background 0.2s;
   text-decoration:none;
+  width:auto;
+  align-self:flex-start;
 }
 .arena-cta-btn:hover{
   background:#2c2cff;
@@ -2676,7 +2678,7 @@ body{
   .arena-label-outer{bottom:6px}
   .arena-journey-steps{grid-template-columns:1fr}
   .arena-journey-label{margin-bottom:16px}
-  .arena-cta-btn{width:100%;justify-content:center}
+  .arena-cta-btn{justify-content:center}
 }
 @media(max-width:480px){
   .arena-panel{padding:32px 16px 40px}
