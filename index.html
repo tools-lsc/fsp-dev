@@ -488,25 +488,32 @@
     }
     .inner-circle-header{
       text-align:center;
-      margin-bottom:60px;
+      margin-bottom:52px;
+    }
+    .inner-circle-eyebrow{
+      font-size:11px;
+      font-weight:700;
+      letter-spacing:0.14em;
+      text-transform:uppercase;
+      color:#1400FF;
+      margin-bottom:10px;
     }
     .inner-circle-title{
-      font-size:clamp(36px, 4vw, 48px);
-      font-weight:500;
-      line-height:1.2;
-      letter-spacing:-.025em;
-      color:#000;
-      margin-bottom:12px;
+      font-size:clamp(32px, 4vw, 40px);
+      font-weight:900;
+      line-height:1.1;
+      letter-spacing:-0.03em;
+      color:#0A0A0A;
+      margin-bottom:14px;
     }
     .inner-circle-subtitle{
-      font-size:clamp(18px, 2vw, 24px);
+      font-size:15px;
       font-weight:400;
-      line-height:1.3;
-      letter-spacing:-.0145em;
-      color:#4D4D4D;
+      line-height:1.55;
+      color:#5C5C7A;
       text-align:center;
-      margin-bottom:12px;
-      font-style:italic;
+      max-width:640px;
+      margin:0 auto;
     }
     .inner-circle-body{
       font-size:clamp(16px, 1.8vw, 20px);
@@ -605,6 +612,205 @@
       color:#fff;
       margin:0;
       text-align:center;
+    }
+    /* Golden Ticket Rewards & Pro-Led Training Cards */
+    .ic-section-divider{
+      text-align:center;
+      margin:56px 0 16px;
+    }
+    .ic-section-divider .ic-divider-label{
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:0.1em;
+      text-transform:uppercase;
+      color:#9A9AB0;
+      position:relative;
+      display:inline-block;
+    }
+    .ic-section-divider .ic-divider-label::before,
+    .ic-section-divider .ic-divider-label::after{
+      content:'';
+      position:absolute;
+      top:50%;
+      width:60px;
+      height:1px;
+      background:#E4E4EE;
+    }
+    .ic-section-divider .ic-divider-label::before{right:calc(100% + 16px)}
+    .ic-section-divider .ic-divider-label::after{left:calc(100% + 16px)}
+    .ic-section-header{
+      text-align:center;
+      margin-bottom:20px;
+    }
+    .ic-section-header p{
+      font-size:14px;
+      color:#5C5C7A;
+      max-width:520px;
+      margin:0 auto;
+      line-height:1.55;
+    }
+    .ic-row-label{
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      color:#9A9AB0;
+      margin-bottom:16px;
+    }
+    .ic-rewards-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+    .ic-reward-card{
+      border-radius:16px;
+      overflow:hidden;
+      border:1px solid #E4E4EE;
+      background:#fff;
+      display:flex;
+      flex-direction:column;
+      transition:box-shadow 0.3s ease;
+    }
+    .ic-reward-card:hover{box-shadow:0 8px 32px rgba(0,0,0,0.08)}
+    .ic-r-photo{
+      height:200px;
+      position:relative;
+      overflow:hidden;
+    }
+    .ic-r-photo .ic-r-bg{
+      position:absolute;
+      inset:0;
+      background-size:cover;
+      background-position:center;
+    }
+    .ic-r-photo .ic-r-overlay{
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,0.75) 100%);
+      z-index:1;
+    }
+    .ic-cat-tag{
+      position:absolute;
+      top:14px;
+      left:14px;
+      z-index:2;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      color:#fff;
+      background:rgba(20,0,255,0.8);
+      padding:4px 10px;
+      border-radius:6px;
+    }
+    .ic-cat-tag.ic-gold{background:rgba(201,149,43,0.85)}
+    .ic-gt-badge{
+      position:absolute;
+      top:14px;
+      right:14px;
+      z-index:2;
+      font-size:11px;
+      font-weight:700;
+      color:#fff;
+      background:rgba(0,0,0,0.5);
+      backdrop-filter:blur(8px);
+      padding:5px 12px;
+      border-radius:20px;
+      display:flex;
+      align-items:center;
+      gap:4px;
+    }
+    .ic-gt-badge svg{width:12px;height:12px}
+    .ic-r-title{
+      position:absolute;
+      bottom:14px;
+      left:16px;
+      right:16px;
+      z-index:2;
+      font-size:15px;
+      font-weight:700;
+      color:#fff;
+      line-height:1.3;
+    }
+    .ic-r-info{
+      padding:12px 16px 14px;
+    }
+    .ic-r-info-detailed{
+      padding:14px 16px 16px;
+    }
+    .ic-r-info-detailed .ic-r-detail-title{
+      font-size:14px;
+      font-weight:700;
+      color:#0A0A0A;
+      margin-bottom:6px;
+    }
+    .ic-r-info-detailed .ic-r-detail-desc{
+      font-size:12.5px;
+      color:#5C5C7A;
+      line-height:1.5;
+      margin-bottom:12px;
+    }
+    .ic-ticket-label{
+      display:flex;
+      align-items:center;
+      gap:6px;
+      font-size:12px;
+      font-weight:600;
+      color:#9A9AB0;
+    }
+    .ic-ticket-label svg{width:13px;height:13px}
+    .ic-cta-card{
+      border-radius:16px;
+      background:linear-gradient(160deg,#0A0A1A 0%,#1a1a3a 50%,#2a1a4a 100%);
+      padding:28px 24px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:#fff;
+    }
+    .ic-cta-card .ic-icon-ring{
+      width:44px;
+      height:44px;
+      border-radius:50%;
+      background:rgba(255,255,255,0.08);
+      border:1.5px solid rgba(255,255,255,0.15);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin-bottom:14px;
+    }
+    .ic-cta-card .ic-icon-ring svg{width:18px;height:18px;color:#fff}
+    .ic-cta-card h3{font-size:16px;font-weight:800;margin:0 0 6px}
+    .ic-cta-card p{
+      font-size:12px;
+      color:rgba(255,255,255,0.5);
+      line-height:1.55;
+      margin:0 0 16px;
+      max-width:200px;
+    }
+    .ic-cta-card .ic-btn-cta{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      background:#fff;
+      color:#0A0A0A;
+      font-size:12px;
+      font-weight:700;
+      padding:9px 18px;
+      border-radius:40px;
+      text-decoration:none;
+      transition:opacity 0.2s ease;
+    }
+    .ic-cta-card .ic-btn-cta svg{width:13px;height:13px}
+    .ic-cta-card .ic-btn-cta:hover{opacity:0.85}
+    @media (max-width:960px){
+      .ic-rewards-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:480px){
+      .ic-rewards-grid{grid-template-columns:1fr}
+      .ic-r-photo{height:180px}
     }
     /* Choose Your Arena — Sport Cards */
     .arena-header{
@@ -1913,10 +2119,9 @@
     <section class="inner-circle-section">
       <div class="inner-circle-container">
         <div class="inner-circle-header">
-          <h2 class="inner-circle-title">The Inner Circle</h2>
-          <p class="inner-circle-subtitle">Access has no price tag. With FSP, your performance unlocks life changing moments.</p>
-          <p class="inner-circle-body">Your Skill Points &amp; Golden Tickets open doors most people never get near.</p>
-          <p class="inner-circle-body" style="margin-top:12px;">Real opportunities &mdash; earned through competing.</p>
+          <p class="inner-circle-eyebrow">The Inner Circle</p>
+          <h2 class="inner-circle-title">Collect Golden Tickets. Access the Inner Circle.</h2>
+          <p class="inner-circle-subtitle">Earn SPs through verified play. Convert them into Golden Tickets. Use your Golden Tickets to enter arena competitions, win exclusive experiences, or access pro-led masterclasses.</p>
         </div>
 
         <!-- Choose Your Arena -->
@@ -1993,7 +2198,9 @@
             <!-- Pong -->
             <div class="arena-card">
               <div class="arena-card-image">
-                <div class="arena-bg arena-bg-pong"></div>
+                <div class="arena-bg arena-bg-pong">
+                  <img src="./src/assets/images/pong.png" alt="FSP Pong Arena" loading="lazy">
+                </div>
                 <div class="arena-overlay"></div>
                 <div class="arena-logo-text">Pong<span class="arena-sport-sub">FSP Pong Arena</span></div>
               </div>
@@ -2018,102 +2225,160 @@
           </div>
         </div>
 
-        <!-- Learn from the Best Category -->
-        <div class="inner-circle-category">
-          <h3 class="category-title">Learn from the Best</h3>
-          <div class="category-cards">
-            <div class="inner-circle-card">
-              <div class="inner-circle-card-image">
-                <img src="./src/assets/images/mookie-betts-meet-greet-313567.png" alt="Baseball Session with Mookie Betts" class="card-image" loading="lazy">
+        <!-- Golden Ticket Rewards -->
+        <div class="ic-section-divider"><span class="ic-divider-label">Golden Ticket Rewards</span></div>
+        <div class="ic-section-header">
+          <p>Use your Golden Tickets to enter draws for experiences, gear, and rewards that are normally out of reach.</p>
+        </div>
+
+        <div class="ic-row-label">Experiences &amp; Merchandise</div>
+        <div class="ic-rewards-grid">
+          <div class="ic-reward-card">
+            <div class="ic-r-photo">
+              <div class="ic-r-bg" style="background-image:url('./src/assets/images/virat-kohli-signed-merchandise-4a7415.png')"></div>
+              <div class="ic-r-overlay"></div>
+              <div class="ic-cat-tag">Merchandise</div>
+              <div class="ic-gt-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Golden Ticket Draw
               </div>
-              <div class="inner-circle-card-footer">
-                <p class="inner-circle-card-label">Baseball Session with Mookie Betts</p>
-              </div>
+              <div class="ic-r-title">Virat Kohli signed cricket bats by E1 Team Blue Rising</div>
             </div>
-            
-            <div class="inner-circle-card">
-              <div class="inner-circle-card-image">
-                <img src="./src/assets/images/john-peeters-e1-4f1888.png" alt="E1 experience with John Peeters" class="card-image" loading="lazy">
-              </div>
-              <div class="inner-circle-card-footer">
-                <p class="inner-circle-card-label">E1 experience with John Peeters</p>
-              </div>
-            </div>
-            <div class="inner-circle-card">
-              <div class="inner-circle-card-image">
-                <img src="./src/assets/images/world-premier-squash.png" alt="Squash Clinic with Saurav Ghosal" class="card-image" loading="lazy">
-              </div>
-              <div class="inner-circle-card-footer">
-                <p class="inner-circle-card-label">Squash Clinic with Saurav Ghosal</p>
-              </div>
-            </div>
-            <div class="inner-circle-card inner-circle-card-text-only cta-card-placeholder cta-card--learn">
-              <div class="inner-circle-card-text">
-                <div class="placeholder-content">
-                  <div class="placeholder-icon">
-                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M18 5L23 16H13L18 27" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </div>
-                  <p class="placeholder-title">Train with Legends</p>
-                  <p class="placeholder-desc">Unlock pro-led masterclasses, film study labs, and mentorship from the athletes shaping the future.</p>
-                  <a href="#" class="placeholder-cta" id="see-masterclasses-btn">See Masterclasses</a>
-                </div>
+            <div class="ic-r-info">
+              <div class="ic-ticket-label">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Enter with Golden Tickets
               </div>
             </div>
           </div>
+
+          <div class="ic-reward-card">
+            <div class="ic-r-photo">
+              <div class="ic-r-bg" style="background-image:url('./src/assets/images/messi-world-cup.jpg')"></div>
+              <div class="ic-r-overlay"></div>
+              <div class="ic-cat-tag">Experience</div>
+              <div class="ic-gt-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Golden Ticket Draw
+              </div>
+              <div class="ic-r-title">FIFA World Cup Finals Tickets</div>
+            </div>
+            <div class="ic-r-info">
+              <div class="ic-ticket-label">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Enter with Golden Tickets
+              </div>
+            </div>
+          </div>
+
+          <div class="ic-reward-card">
+            <div class="ic-r-photo">
+              <div class="ic-r-bg" style="background-image:url('./src/assets/images/f1-cars-racing.jpg')"></div>
+              <div class="ic-r-overlay"></div>
+              <div class="ic-cat-tag">Experience</div>
+              <div class="ic-gt-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Golden Ticket Draw
+              </div>
+              <div class="ic-r-title">F1 Tickets</div>
+            </div>
+            <div class="ic-r-info">
+              <div class="ic-ticket-label">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Enter with Golden Tickets
+              </div>
+            </div>
+          </div>
+
+          <div class="ic-cta-card">
+            <div class="ic-icon-ring">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3>Access the Impossible</h3>
+            <p>The more you play, the more Golden Tickets you earn. The more tickets you hold, the higher your chances.</p>
+            <a href="#" class="ic-btn-cta fsp-btn-locked" aria-disabled="true" tabindex="-1">
+              <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              Start Earning SPs
+            </a>
+          </div>
         </div>
 
-        <!-- Merchandise and Experiences Category -->
-        <div class="inner-circle-category">
-          <h3 class="category-title">Merchandise and Experiences</h3>
-          <div class="category-cards">
-            <div class="inner-circle-card">
-              <div class="inner-circle-card-image">
-                <img src="./src/assets/images/virat-kohli-signed-merchandise-4a7415.png" alt="VK bats" class="card-image" loading="lazy">
+        <!-- Pro-Led Training & Masterclasses -->
+        <div class="ic-row-label" style="margin-top:28px">Pro-Led Training &amp; Masterclasses</div>
+        <div class="ic-rewards-grid">
+          <div class="ic-reward-card">
+            <div class="ic-r-photo">
+              <div class="ic-r-bg" style="background-image:url('./src/assets/images/mookie-betts-meet-greet-313567.png')"></div>
+              <div class="ic-r-overlay"></div>
+              <div class="ic-cat-tag ic-gold">Masterclass</div>
+              <div class="ic-gt-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Golden Ticket Draw
               </div>
-              <div class="inner-circle-card-footer">
-                <p class="inner-circle-card-label">Virat Kohli signed cricket bats by E1 Team Blue Rising</p>
+              <div class="ic-r-title">Mookie Betts<span style="display:block;font-size:11px;font-weight:600;opacity:0.65;margin-top:2px;">MLB Superstar &middot; WBL Captain</span></div>
+            </div>
+            <div class="ic-r-info-detailed">
+              <div class="ic-r-detail-title">Baseball Session &amp; Bowling Masterclass</div>
+              <div class="ic-r-detail-desc">Technique breakdown, competitive drills, and behind-the-scenes with one of the greatest athletes of this generation.</div>
+              <div class="ic-ticket-label">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Enter with Golden Tickets
               </div>
             </div>
-            <div class="inner-circle-card">
-              <div class="inner-circle-card-image">
-                <img src="./src/assets/images/messi-world-cup.jpg" alt="Fifa World Cup Finals Tickets" class="card-image" loading="lazy">
+          </div>
+
+          <div class="ic-reward-card">
+            <div class="ic-r-photo">
+              <div class="ic-r-bg" style="background-image:url('./src/assets/images/john-peeters-e1-4f1888.png')"></div>
+              <div class="ic-r-overlay"></div>
+              <div class="ic-cat-tag ic-gold">Experience</div>
+              <div class="ic-gt-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Golden Ticket Draw
               </div>
-              <div class="inner-circle-card-footer">
-                <p class="inner-circle-card-label">Fifa World Cup Finals Tickets</p>
+              <div class="ic-r-title">John Peeters<span style="display:block;font-size:11px;font-weight:600;opacity:0.65;margin-top:2px;">E1 Series &middot; Team Blue Rising</span></div>
+            </div>
+            <div class="ic-r-info-detailed">
+              <div class="ic-r-detail-title">E1 Experience &mdash; On the Water</div>
+              <div class="ic-r-detail-desc">Get inside the cockpit of electric boat racing. Race strategy, telemetry, and what it takes to compete at the top.</div>
+              <div class="ic-ticket-label">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Enter with Golden Tickets
               </div>
             </div>
-            <div class="inner-circle-card">
-              <div class="inner-circle-card-image">
-                <img src="./src/assets/images/f1-cars-racing.jpg" alt="F1 Tickets" class="card-image" loading="lazy">
+          </div>
+
+          <div class="ic-reward-card">
+            <div class="ic-r-photo">
+              <div class="ic-r-bg" style="background-image:url('./src/assets/images/world-premier-squash.png')"></div>
+              <div class="ic-r-overlay"></div>
+              <div class="ic-cat-tag ic-gold">Clinic</div>
+              <div class="ic-gt-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Golden Ticket Draw
               </div>
-              <div class="inner-circle-card-footer">
-                <p class="inner-circle-card-label">F1 Tickets</p>
+              <div class="ic-r-title">Saurav Ghosal<span style="display:block;font-size:11px;font-weight:600;opacity:0.65;margin-top:2px;">World Top 10 &middot; WPS Captain</span></div>
+            </div>
+            <div class="ic-r-info-detailed">
+              <div class="ic-r-detail-title">Squash Clinic &mdash; Drills, Strategy &amp; Match IQ</div>
+              <div class="ic-r-detail-desc">Ghosting drills, drop shot technique, and match strategy from one of the world's best squash players.</div>
+              <div class="ic-ticket-label">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Enter with Golden Tickets
               </div>
             </div>
-            <div class="inner-circle-card inner-circle-card-text-only cta-card-placeholder cta-card--merch">
-              <div class="inner-circle-card-text">
-                <div class="placeholder-content">
-                  <div class="placeholder-icon">
-                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8 12L18 6L28 12V24L18 30L8 24V12Z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M8 12L18 18L28 12" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M18 18V30" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </div>
-                  <p class="placeholder-title">Access the Impossible</p>
-                  <p class="placeholder-desc">Redeem your Champion Points for once-in-a-lifetime drop-ins, paddock passes, and custom gear.</p>
-                  <a href="#" class="placeholder-cta fsp-btn-locked" aria-disabled="true" tabindex="-1">
-                    <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                      <rect x="6" y="11" width="12" height="10" rx="2" />
-                    </svg>
-                    Unlock Rewards
-                  </a>
-                </div>
-              </div>
+          </div>
+
+          <div class="ic-cta-card">
+            <div class="ic-icon-ring">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
             </div>
+            <h3>Train with Legends</h3>
+            <p>Win a spot in pro-led sessions through the same Golden Ticket draws. More SPs, more chances.</p>
+            <a href="#" class="ic-btn-cta fsp-btn-locked" aria-disabled="true" tabindex="-1">
+              <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>
+              Suggest a Masterclass
+            </a>
           </div>
         </div>
       </div>

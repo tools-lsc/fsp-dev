@@ -2381,21 +2381,23 @@ body{
 }
 .arena-panel-hero{
   margin-bottom:56px;
+  text-align:center;
 }
 .arena-hero-headline{
   font-size:clamp(32px,4.5vw,52px);
   font-weight:800;
   line-height:1.12;
   color:#1A1A2E;
-  max-width:820px;
-  margin-bottom:20px;
+  max-width:960px;
+  margin:0 auto 20px;
   letter-spacing:-0.03em;
 }
 .arena-hero-sub{
   font-size:18px;
   color:#5C5C7A;
   line-height:1.6;
-  max-width:600px;
+  max-width:1000px;
+  margin:0 auto;
 }
 .arena-section-row{
   display:grid;

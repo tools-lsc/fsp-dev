@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FSP — The Inner Circle</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+    background: #fff;
+    color: #1A1A2E;
+    -webkit-font-smoothing: antialiased;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 56px 40px 64px;
+  }
+
+  /* ========== HEADER ========== */
+  .hero-header {
+    text-align: center;
+    margin-bottom: 52px;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #1400FF;
+    margin-bottom: 10px;
+  }
+
+  .hero-header h1 {
+    font-size: 40px;
+    font-weight: 900;
+    color: #0A0A0A;
+    letter-spacing: -0.03em;
+    margin-bottom: 14px;
+    line-height: 1.1;
+  }
+
+  .hero-header .tagline {
+    font-size: 18px;
+    font-style: italic;
+    color: #5C5C7A;
+    line-height: 1.5;
+    max-width: 640px;
+    margin: 0 auto 12px;
+  }
+
+  .hero-header .sub-bold {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1A1A2E;
+    margin-bottom: 6px;
+  }
+
+  .hero-header .sub-light {
+    font-size: 14px;
+    color: #5C5C7A;
+    max-width: 580px;
+    margin: 0 auto;
+    line-height: 1.55;
+  }
+
+  /* ========== SECTION DIVIDERS ========== */
+  .section-divider {
+    text-align: center;
+    margin-bottom: 16px;
+    margin-top: 56px;
+  }
+
+  .section-divider .label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #9A9AB0;
+    position: relative;
+    display: inline-block;
+  }
+
+  .section-divider .label::before,
+  .section-divider .label::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 60px;
+    height: 1px;
+    background: #E4E4EE;
+  }
+
+  .section-divider .label::before { right: calc(100% + 16px); }
+  .section-divider .label::after { left: calc(100% + 16px); }
+
+  /* ========== SECTION HEADERS ========== */
+  .section-header {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+
+  .section-header h2 {
+    font-size: 30px;
+    font-weight: 900;
+    color: #0A0A0A;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+
+  .section-header p {
+    font-size: 14px;
+    color: #5C5C7A;
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.55;
+  }
+
+  /* ========== ARENA CARDS ========== */
+  .arena-row-top {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 18px;
+  }
+
+  .arena-row-bottom {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 18px;
+    margin-bottom: 0;
+  }
+
+  .sport-card {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #E4E4EE;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-image {
+    height: 170px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 16px;
+    overflow: hidden;
+  }
+
+  .card-image .bg { position: absolute; inset: 0; }
+  .card-image .overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.7) 100%);
+    z-index: 1;
+  }
+
+  .bg-wbl { background: linear-gradient(135deg, #1a0a2e 0%, #2d1052 50%, #0a0a1a 100%); }
+  .bg-wps { background: linear-gradient(135deg, #f5f0e8 0%, #e8e0d0 100%); }
+  .bg-rivals { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); }
+  .bg-pong { background: linear-gradient(135deg, #0a1628 0%, #0f2040 100%); }
+
+  .card-image .logo-text {
+    position: relative; z-index: 2;
+    font-size: 22px; font-weight: 900; color: #fff;
+    letter-spacing: -0.02em; text-transform: uppercase;
+  }
+  .card-image .logo-text .sport-sub {
+    display: block; font-size: 11px; font-weight: 600;
+    letter-spacing: 0.04em; opacity: 0.7; text-transform: none; margin-top: 2px;
+  }
+
+  .card-tab-bar {
+    border-bottom: 1px solid #E4E4EE;
+    padding: 12px 20px 0;
+  }
+  .card-tab-bar .tab-label {
+    display: inline-block; font-size: 12px; font-weight: 700;
+    letter-spacing: 0.04em; text-transform: uppercase; color: #1400FF;
+    padding-bottom: 10px; border-bottom: 2px solid #1400FF;
+  }
+
+  .card-body {
+    padding: 16px 20px 20px;
+    flex: 1; display: flex; flex-direction: column;
+  }
+
+  .status-badge {
+    display: inline-flex; align-items: center; background: #F5F5FA;
+    border-radius: 8px; padding: 8px 14px; margin-bottom: 12px; align-self: flex-start;
+  }
+  .status-badge .num { font-size: 15px; font-weight: 800; color: #0A0A0A; }
+  .status-badge .lbl { font-size: 10px; color: #9A9AB0; text-transform: uppercase; letter-spacing: 0.04em; margin-left: 8px; }
+
+  .card-body .desc {
+    font-size: 13px; color: #5C5C7A; line-height: 1.55; margin-bottom: 14px; flex: 1;
+  }
+
+  .entry-info {
+    font-size: 11.5px; color: #9A9AB0; margin-bottom: 14px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .entry-info svg { width: 13px; height: 13px; flex-shrink: 0; }
+
+  .card-btn {
+    display: flex; align-items: center; justify-content: center;
+    padding: 11px 20px; font-size: 13px; font-weight: 700;
+    border-radius: 10px; text-decoration: none; cursor: pointer;
+    background: #1400FF; color: #fff; border: none; margin-top: auto;
+  }
+  .card-btn:hover { opacity: 0.85; }
+
+  /* More sports */
+  .more-card {
+    border-radius: 16px;
+    background: linear-gradient(135deg, #1400FF 0%, #0800CC 100%);
+    padding: 28px 24px;
+    display: flex; flex-direction: column; align-items: center;
+    justify-content: center; text-align: center; color: #fff;
+  }
+  .more-card .plus {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: rgba(255,255,255,0.15); display: flex;
+    align-items: center; justify-content: center; font-size: 20px; margin-bottom: 12px;
+  }
+  .more-card h3 { font-size: 16px; font-weight: 800; margin-bottom: 6px; }
+  .more-card p { font-size: 12px; color: rgba(255,255,255,0.55); margin-bottom: 16px; line-height: 1.5; }
+  .more-card .btn-more {
+    background: #fff; color: #1400FF; padding: 9px 20px;
+    border-radius: 40px; font-size: 12px; font-weight: 700; text-decoration: none;
+  }
+
+  /* ========== REWARD CARDS ========== */
+  .rewards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 0;
+  }
+
+  .reward-card {
+    border-radius: 16px; overflow: hidden;
+    border: 1px solid #E4E4EE; background: #fff;
+    display: flex; flex-direction: column;
+  }
+  .reward-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
+
+  .r-photo {
+    height: 200px; position: relative; overflow: hidden;
+  }
+  .r-photo .bg { position: absolute; inset: 0; }
+  .r-photo .overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.75) 100%); z-index: 1;
+  }
+
+  .cat-tag {
+    position: absolute; top: 14px; left: 14px; z-index: 2;
+    font-size: 9px; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; color: #fff;
+    background: rgba(20, 0, 255, 0.8); padding: 4px 10px; border-radius: 6px;
+  }
+  .cat-tag.gold { background: rgba(201, 149, 43, 0.85); }
+
+  .gt-badge {
+    position: absolute; top: 14px; right: 14px; z-index: 2;
+    font-size: 11px; font-weight: 700; color: #fff;
+    background: rgba(0,0,0,0.5); backdrop-filter: blur(8px);
+    padding: 5px 12px; border-radius: 20px;
+    display: flex; align-items: center; gap: 4px;
+  }
+  .gt-badge svg { width: 12px; height: 12px; }
+
+  .r-photo .r-title {
+    position: absolute; bottom: 14px; left: 16px; right: 16px; z-index: 2;
+    font-size: 15px; font-weight: 700; color: #fff; line-height: 1.3;
+  }
+
+  .r-info {
+    padding: 12px 16px 14px;
+  }
+
+  .ticket-label {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 12px; font-weight: 600; color: #9A9AB0;
+  }
+  .ticket-label svg { width: 13px; height: 13px; }
+
+  /* CTA card in rewards */
+  .cta-card {
+    border-radius: 16px;
+    background: linear-gradient(160deg, #0A0A1A 0%, #1a1a3a 50%, #2a1a4a 100%);
+    padding: 28px 24px;
+    display: flex; flex-direction: column; align-items: center;
+    justify-content: center; text-align: center; color: #fff;
+  }
+  .cta-card .icon-ring {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: rgba(255,255,255,0.08); border: 1.5px solid rgba(255,255,255,0.15);
+    display: flex; align-items: center; justify-content: center; margin-bottom: 14px;
+  }
+  .cta-card .icon-ring svg { width: 18px; height: 18px; color: #fff; }
+  .cta-card h3 { font-size: 16px; font-weight: 800; margin-bottom: 6px; }
+  .cta-card p {
+    font-size: 12px; color: rgba(255,255,255,0.5);
+    line-height: 1.55; margin-bottom: 16px; max-width: 200px;
+  }
+  .cta-card .btn-cta {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: #fff; color: #0A0A0A; font-size: 12px; font-weight: 700;
+    padding: 9px 18px; border-radius: 40px; text-decoration: none;
+  }
+  .cta-card .btn-cta svg { width: 13px; height: 13px; }
+  .cta-card .btn-cta:hover { opacity: 0.85; }
+
+  /* Photo bgs for rewards */
+  .bg-kohli { background: linear-gradient(135deg, #2a1a0a 0%, #4a3020 60%, #2a1a0a 100%); }
+  .bg-worldcup { background: linear-gradient(135deg, #0a2a4a 0%, #1a4a7a 60%, #0a2a4a 100%); }
+  .bg-f1 { background: linear-gradient(135deg, #1a1a1a 0%, #3a2a1a 60%, #1a1a1a 100%); }
+  .bg-mookie { background: linear-gradient(135deg, #1a0a2e 0%, #2d1052 60%, #1a0a2e 100%); }
+  .bg-peeters { background: linear-gradient(135deg, #1a3050 0%, #2a5a80 60%, #1a3050 100%); }
+  .bg-saurav { background: linear-gradient(135deg, #f0e8e0 0%, #d8cec0 60%, #f0e8e0 100%); }
+
+  .star-svg { display: inline-block; }
+
+  .row-label-left {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #9A9AB0;
+    margin-bottom: 16px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== INNER CIRCLE HEADER ===================== -->
+<div class="hero-header">
+  <div class="eyebrow">The Inner Circle</div>
+  <h1>Collect Golden Tickets. Access the Inner Circle.</h1>
+  <p class="sub-light">Earn SPs through verified play. Convert them into Golden Tickets. Use your Golden Tickets to enter arena competitions, win exclusive experiences, or access pro-led masterclasses.</p>
+</div>
+
+<!-- ===================== CHOOSE YOUR ARENA ===================== -->
+<div class="section-divider"><span class="label">Choose Your Arena</span></div>
+
+<div class="section-header">
+  <h2>Compete. Learn. Get Drafted.</h2>
+  <p>Pick your sport and enter the arena. Use your Golden Tickets to compete, or pay to enter directly.</p>
+</div>
+
+<div class="arena-row-top">
+
+  <!-- WBL -->
+  <div class="sport-card">
+    <div class="card-image"><div class="bg bg-wbl"></div><div class="overlay"></div>
+      <div class="logo-text">WBL<span class="sport-sub">World Bowling League</span></div>
+    </div>
+    <div class="card-tab-bar"><span class="tab-label">Compete</span></div>
+    <div class="card-body">
+      <div class="status-badge"><span class="num">Coming Soon</span></div>
+      <p class="desc">AI-verified bowling from any lane. Compete in Arena Majors and climb the global leaderboard.</p>
+      <div class="entry-info">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        Use Golden Tickets or pay to enter
+      </div>
+      <a href="#" class="card-btn">Enter Arena</a>
+    </div>
+  </div>
+
+  <!-- WPS -->
+  <div class="sport-card">
+    <div class="card-image"><div class="bg bg-wps"></div><div class="overlay"></div>
+      <div class="logo-text">WPS<span class="sport-sub">World Premier Squash</span></div>
+    </div>
+    <div class="card-tab-bar"><span class="tab-label">Compete</span></div>
+    <div class="card-body">
+      <div class="status-badge"><span class="num">Coming Soon</span></div>
+      <p class="desc">The first AI-powered global squash league. Solo drills to live Championship Finals — your ranking starts on your phone.</p>
+      <div class="entry-info">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        Use Golden Tickets or pay to enter
+      </div>
+      <a href="#" class="card-btn">Enter Arena</a>
+    </div>
+  </div>
+
+  <!-- Rivals -->
+  <div class="sport-card">
+    <div class="card-image"><div class="bg bg-rivals"></div><div class="overlay"></div>
+      <div class="logo-text">Rivals<span class="sport-sub">1v1 Basketball</span></div>
+    </div>
+    <div class="card-tab-bar"><span class="tab-label">Compete</span></div>
+    <div class="card-body">
+      <div class="status-badge"><span class="num">Coming Soon</span></div>
+      <p class="desc">Head-to-head challenges, AI-scored crossovers, and a global leaderboard. Prove your handles anywhere.</p>
+      <div class="entry-info">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        Use Golden Tickets or pay to enter
+      </div>
+      <a href="#" class="card-btn">Enter Arena</a>
+    </div>
+  </div>
+
+</div>
+
+<div class="arena-row-bottom">
+
+  <!-- Pong -->
+  <div class="sport-card">
+    <div class="card-image"><div class="bg bg-pong"></div><div class="overlay"></div>
+      <div class="logo-text">Pong<span class="sport-sub">FSP Pong Arena</span></div>
+    </div>
+    <div class="card-tab-bar"><span class="tab-label">Compete</span></div>
+    <div class="card-body">
+      <div class="status-badge"><span class="num">Coming Soon</span></div>
+      <p class="desc">AI-verified precision sport in branded arenas. Compete, climb the ranks, and prove your accuracy on the global stage.</p>
+      <div class="entry-info">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        Use Golden Tickets or pay to enter
+      </div>
+      <a href="#" class="card-btn">Enter Arena</a>
+    </div>
+  </div>
+
+  <!-- More Sports -->
+  <div class="more-card">
+    <div class="plus">+</div>
+    <h3>More Sports Incoming</h3>
+    <p>Powered by FSP Games, Movement Creators, and your community.</p>
+    <a href="#" class="btn-more">Request Your Sport</a>
+  </div>
+
+</div>
+
+<!-- ===================== GOLDEN TICKET REWARDS ===================== -->
+<div class="section-divider"><span class="label">Golden Ticket Rewards</span></div>
+
+<div class="section-header" style="margin-bottom:20px;">
+  <p>Use your Golden Tickets to enter draws for experiences, gear, and rewards that are normally out of reach.</p>
+</div>
+
+<div class="row-label-left">Experiences & Merchandise</div>
+
+<div class="rewards-grid">
+
+  <!-- Virat Kohli -->
+  <div class="reward-card">
+    <div class="r-photo">
+      <div class="bg bg-kohli"></div><div class="overlay"></div>
+      <div class="cat-tag">Merchandise</div>
+      <div class="gt-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Golden Ticket Draw
+      </div>
+      <div class="r-title">Virat Kohli signed cricket bats by E1 Team Blue Rising</div>
+    </div>
+    <div class="r-info">
+      <div class="ticket-label">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Enter with Golden Tickets
+      </div>
+    </div>
+  </div>
+
+  <!-- FIFA -->
+  <div class="reward-card">
+    <div class="r-photo">
+      <div class="bg bg-worldcup"></div><div class="overlay"></div>
+      <div class="cat-tag">Experience</div>
+      <div class="gt-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Golden Ticket Draw
+      </div>
+      <div class="r-title">FIFA World Cup Finals Tickets</div>
+    </div>
+    <div class="r-info">
+      <div class="ticket-label">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Enter with Golden Tickets
+      </div>
+    </div>
+  </div>
+
+  <!-- F1 -->
+  <div class="reward-card">
+    <div class="r-photo">
+      <div class="bg bg-f1"></div><div class="overlay"></div>
+      <div class="cat-tag">Experience</div>
+      <div class="gt-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Golden Ticket Draw
+      </div>
+      <div class="r-title">F1 Tickets</div>
+    </div>
+    <div class="r-info">
+      <div class="ticket-label">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Enter with Golden Tickets
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-card">
+    <div class="icon-ring">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+    </div>
+    <h3>Access the Impossible</h3>
+    <p>The more you play, the more Golden Tickets you earn. The more tickets you hold, the higher your chances.</p>
+    <a href="#" class="btn-cta">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      Start Earning SPs
+    </a>
+  </div>
+
+</div>
+
+<!-- ===================== PRO-LED TRAINING ===================== -->
+<div class="row-label-left" style="margin-top:28px;">Pro-Led Training & Masterclasses</div>
+
+<div class="rewards-grid">
+
+  <!-- Mookie Betts -->
+  <div class="reward-card">
+    <div class="r-photo">
+      <div class="bg bg-mookie"></div><div class="overlay"></div>
+      <div class="cat-tag gold">Masterclass</div>
+      <div class="gt-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Golden Ticket Draw
+      </div>
+      <div class="r-title">Mookie Betts<span style="display:block;font-size:11px;font-weight:600;opacity:0.65;margin-top:2px;">MLB Superstar · WBL Captain</span></div>
+    </div>
+    <div class="r-info" style="padding:14px 16px 16px;">
+      <div style="font-size:14px;font-weight:700;color:#0A0A0A;margin-bottom:6px;">Baseball Session & Bowling Masterclass</div>
+      <div style="font-size:12.5px;color:#5C5C7A;line-height:1.5;margin-bottom:12px;">Technique breakdown, competitive drills, and behind-the-scenes with one of the greatest athletes of this generation.</div>
+      <div class="ticket-label">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Enter with Golden Tickets
+      </div>
+    </div>
+  </div>
+
+  <!-- John Peeters -->
+  <div class="reward-card">
+    <div class="r-photo">
+      <div class="bg bg-peeters"></div><div class="overlay"></div>
+      <div class="cat-tag gold">Experience</div>
+      <div class="gt-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Golden Ticket Draw
+      </div>
+      <div class="r-title">John Peeters<span style="display:block;font-size:11px;font-weight:600;opacity:0.65;margin-top:2px;">E1 Series · Team Blue Rising</span></div>
+    </div>
+    <div class="r-info" style="padding:14px 16px 16px;">
+      <div style="font-size:14px;font-weight:700;color:#0A0A0A;margin-bottom:6px;">E1 Experience — On the Water</div>
+      <div style="font-size:12.5px;color:#5C5C7A;line-height:1.5;margin-bottom:12px;">Get inside the cockpit of electric boat racing. Race strategy, telemetry, and what it takes to compete at the top.</div>
+      <div class="ticket-label">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Enter with Golden Tickets
+      </div>
+    </div>
+  </div>
+
+  <!-- Saurav Ghosal -->
+  <div class="reward-card">
+    <div class="r-photo">
+      <div class="bg bg-saurav"></div><div class="overlay"></div>
+      <div class="cat-tag gold">Clinic</div>
+      <div class="gt-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Golden Ticket Draw
+      </div>
+      <div class="r-title">Saurav Ghosal<span style="display:block;font-size:11px;font-weight:600;opacity:0.65;margin-top:2px;">World Top 10 · WPS Captain</span></div>
+    </div>
+    <div class="r-info" style="padding:14px 16px 16px;">
+      <div style="font-size:14px;font-weight:700;color:#0A0A0A;margin-bottom:6px;">Squash Clinic — Drills, Strategy & Match IQ</div>
+      <div style="font-size:12.5px;color:#5C5C7A;line-height:1.5;margin-bottom:12px;">Ghosting drills, drop shot technique, and match strategy from one of the world's best squash players.</div>
+      <div class="ticket-label">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Enter with Golden Tickets
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-card">
+    <div class="icon-ring">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+    </div>
+    <h3>Train with Legends</h3>
+    <p>Win a spot in pro-led sessions through the same Golden Ticket draws. More SPs, more chances.</p>
+    <a href="#" class="btn-cta">
+      Suggest a Masterclass
+    </a>
+  </div>
+
+</div>
+
+</body>
+</html>
