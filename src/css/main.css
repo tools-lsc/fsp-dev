@@ -2368,6 +2368,9 @@ body{
 .pools-referrals-panel[aria-hidden="false"]{
   display:block;
 }
+.play-income-section--in-tab{
+  padding-top:60px;
+}
 
 /* Arena Panel */
 .arena-panel{
