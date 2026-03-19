@@ -941,7 +941,7 @@ body{
 /* ── Player Cards / Social Proof Ticker ── */
 .player-cards-section{
   background:#0a0a0a;
-  padding:80px 0 60px;
+  padding:80px 0 120px;
   overflow:hidden;
   position:relative;
 }
