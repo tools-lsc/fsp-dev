@@ -122,20 +122,8 @@
             </div>
 
             <div class="business-hero-buttons hero-cta-container">
-              <a href="#creators" class="btn-integrate-now btn-start-competing fsp-btn-locked" aria-disabled="true" tabindex="-1">
-                <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                  <rect x="6" y="11" width="12" height="10" rx="2" />
-                </svg>
-                We Create Movement
-              </a>
-              <a href="#buyers" class="btn-contact-sales btn-explore-ecosystem fsp-btn-locked" aria-disabled="true" tabindex="-1">
-                <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                  <rect x="6" y="11" width="12" height="10" rx="2" />
-                </svg>
-                We Buy Movement
-              </a>
+              <a href="#creators" class="btn-integrate-now btn-start-competing">We Create Movement</a>
+              <a href="#buyers" class="btn-contact-sales btn-explore-ecosystem">We Buy Movement</a>
             </div>
           </div>
         </div>
@@ -628,8 +616,6 @@
           </div>
         </div>
         <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:48px;position:relative;z-index:1">
-          <a href="#creators" class="btn-partner-cta" style="font-size:18px;padding:12px 40px">Movement Creators</a>
-          <a href="#buyers" class="btn-partner-cta" style="font-size:18px;padding:12px 40px">Movement Buyers</a>
           <a href="#" class="btn-partner-cta fsp-btn-locked" aria-disabled="true" tabindex="-1" style="font-size:18px;padding:12px 40px">
             <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M7 11V7a5 5 0 0 1 10 0v4" />
@@ -645,13 +631,8 @@
     <section class="control-section">
       <div class="control-container">
         <h2 class="control-title">You Are Always in Control</h2>
-        <div class="control-toggle-bar">
-          <button class="control-toggle-btn active" data-control="creators">Movement Creators</button>
-          <button class="control-toggle-btn" data-control="buyers-ctrl">Movement Buyers</button>
-        </div>
         <div class="control-panels">
-          <!-- Movement Creators Dashboard (YouTube Studio-inspired) -->
-          <div class="control-panel active" data-control="creators">
+          <div class="control-panel active">
             <div class="control-panel-content">
               <div class="creator-dashboard">
                 <!-- Dashboard Header -->
@@ -749,105 +730,6 @@
             </div>
           </div>
 
-          <!-- Movement Buyers Dashboard (Master Matrix-informed) -->
-          <div class="control-panel" data-control="buyers-ctrl">
-            <div class="control-panel-content">
-              <div class="creator-dashboard buyer-dashboard">
-                <!-- Dashboard Header -->
-                <div class="creator-dash-header">
-                  <div class="creator-dash-logo">
-                    <img src="./src/assets/images/logo.svg" alt="FSP" loading="lazy">
-                    <span>Campaign Manager</span>
-                  </div>
-                  <div class="creator-dash-nav">
-                    <span class="creator-dash-nav-active">Overview</span>
-                    <span>Channels</span>
-                    <span>Bounties</span>
-                    <span>Payouts</span>
-                    <span>Impact</span>
-                  </div>
-                </div>
-
-                <!-- Buyer Summary Metrics -->
-                <div class="creator-dash-metrics">
-                  <div class="creator-metric-card">
-                    <span class="creator-metric-label">dROAS</span>
-                    <span class="creator-metric-value">6.8x</span>
-                    <svg class="creator-metric-spark" viewBox="0 0 80 24"><polyline fill="none" stroke="#00AA44" stroke-width="1.5" points="0,20 10,18 20,14 30,12 40,10 50,8 60,6 70,6 80,4"/></svg>
-                    <span class="creator-metric-trend trend-up">+1.2x</span>
-                  </div>
-                  <div class="creator-metric-card">
-                    <span class="creator-metric-label">Cost Per Action</span>
-                    <span class="creator-metric-value">$0.82</span>
-                    <svg class="creator-metric-spark" viewBox="0 0 80 24"><polyline fill="none" stroke="#0000FF" stroke-width="1.5" points="0,4 10,6 20,8 30,10 40,12 50,10 60,14 70,16 80,18"/></svg>
-                    <span class="creator-metric-trend trend-down">-$0.18</span>
-                  </div>
-                  <div class="creator-metric-card">
-                    <span class="creator-metric-label">Verified Actions</span>
-                    <span class="creator-metric-value">45,291</span>
-                    <svg class="creator-metric-spark" viewBox="0 0 80 24"><polyline fill="none" stroke="#0000FF" stroke-width="1.5" points="0,22 10,18 20,16 30,14 40,10 50,12 60,8 70,6 80,2"/></svg>
-                    <span class="creator-metric-trend trend-up">+22%</span>
-                  </div>
-                  <div class="creator-metric-card">
-                    <span class="creator-metric-label">Truth Tax</span>
-                    <span class="creator-metric-value">5%</span>
-                    <span class="creator-metric-sub">On all mediated payouts</span>
-                  </div>
-                </div>
-
-                <!-- Revenue Channels from Master Matrix -->
-                <div class="buyer-dash-channels">
-                  <h4 class="buyer-channels-title">Revenue Channels</h4>
-                  <div class="buyer-channel-grid">
-                    <div class="buyer-channel-card">
-                      <div class="buyer-channel-head">
-                        <span class="buyer-channel-name">AR Real Estate</span>
-                        <span class="buyer-channel-tag">Real-time</span>
-                      </div>
-                      <p class="buyer-channel-desc">Spatial persistence &mdash; ad units locked to skeletal mesh via ARKit+.</p>
-                      <div class="buyer-channel-gate">
-                        <span class="gate-label">Verification:</span>
-                        <span class="gate-value">Bio-Vigilante</span>
-                      </div>
-                    </div>
-                    <div class="buyer-channel-card">
-                      <div class="buyer-channel-head">
-                        <span class="buyer-channel-name">D2C Sales</span>
-                        <span class="buyer-channel-tag">Near Real-time</span>
-                      </div>
-                      <p class="buyer-channel-desc">Agentic affiliate routing with 3rd-party integration + Bounty Pool.</p>
-                      <div class="buyer-channel-gate">
-                        <span class="gate-label">Verification:</span>
-                        <span class="gate-value">Oracle Intent</span>
-                      </div>
-                    </div>
-                    <div class="buyer-channel-card">
-                      <div class="buyer-channel-head">
-                        <span class="buyer-channel-name">Deterministic</span>
-                        <span class="buyer-channel-tag">Milestone</span>
-                      </div>
-                      <p class="buyer-channel-desc">Game State triggers + Order Matching from the Hook Library (10k+ triggers).</p>
-                      <div class="buyer-channel-gate">
-                        <span class="gate-label">Verification:</span>
-                        <span class="gate-value">Ghost SDK</span>
-                      </div>
-                    </div>
-                    <div class="buyer-channel-card">
-                      <div class="buyer-channel-head">
-                        <span class="buyer-channel-name">Financial / L3 OCR</span>
-                        <span class="buyer-channel-tag">150ms</span>
-                      </div>
-                      <p class="buyer-channel-desc">Open Banking (Plaid) + OCR-L3 with Stripe Connect validation.</p>
-                      <div class="buyer-channel-gate">
-                        <span class="gate-label">Verification:</span>
-                        <span class="gate-value">Closed-Loop</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

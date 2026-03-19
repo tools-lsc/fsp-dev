@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FSP — Choose Your Arena</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+    background: #fff;
+    color: #1A1A2E;
+    -webkit-font-smoothing: antialiased;
+    padding: 48px 40px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .page-header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .page-header .eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #1400FF;
+    margin-bottom: 8px;
+  }
+
+  .page-header h1 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #0A0A0A;
+    letter-spacing: -0.03em;
+    margin-bottom: 8px;
+  }
+
+  .page-header p {
+    font-size: 15px;
+    color: #5C5C7A;
+  }
+
+  /* Top row: 3 cards */
+  .cards-row-top {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 18px;
+  }
+
+  /* Bottom row: Pong (2fr) + More Sports (1fr) */
+  .cards-row-bottom {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 18px;
+  }
+
+  /* Card */
+  .sport-card {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #E4E4EE;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+  }
+
+  .card-image {
+    height: 180px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 16px;
+    overflow: hidden;
+  }
+
+  .card-image .bg { position: absolute; inset: 0; }
+
+  .bg-wbl { background: linear-gradient(135deg, #1a0a2e 0%, #2d1052 50%, #0a0a1a 100%); }
+  .bg-wps { background: linear-gradient(135deg, #f5f0e8 0%, #e8e0d0 100%); }
+  .bg-rivals { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); }
+  .bg-pong { background: linear-gradient(135deg, #0a1628 0%, #0f2040 100%); }
+
+  .card-image .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.7) 100%);
+    z-index: 1;
+  }
+
+  .card-image .logo-text {
+    position: relative;
+    z-index: 2;
+    font-size: 24px;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+
+  .card-image .logo-text .sport-sub {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    opacity: 0.7;
+    text-transform: none;
+    margin-top: 2px;
+  }
+
+  /* Single tab bar — just COMPETE */
+  .card-tab-bar {
+    border-bottom: 1px solid #E4E4EE;
+    padding: 12px 20px 0;
+  }
+
+  .card-tab-bar .tab-label {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #1400FF;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #1400FF;
+  }
+
+  .card-body {
+    padding: 18px 20px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #F5F5FA;
+    border-radius: 8px;
+    padding: 10px 16px;
+    margin-bottom: 14px;
+    align-self: flex-start;
+  }
+
+  .status-badge .num {
+    font-size: 16px;
+    font-weight: 800;
+    color: #0A0A0A;
+  }
+
+  .status-badge .label {
+    font-size: 10px;
+    color: #9A9AB0;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-left: 8px;
+  }
+
+  .card-body .desc {
+    font-size: 13.5px;
+    color: #5C5C7A;
+    line-height: 1.55;
+    margin-bottom: 16px;
+    flex: 1;
+  }
+
+  .card-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 20px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    background: #1400FF;
+    color: #fff;
+    border: none;
+    margin-top: auto;
+  }
+
+  .card-btn:hover { opacity: 0.85; }
+
+  /* Pong card — horizontal layout since it's wider */
+  .sport-card.wide .card-image {
+    height: 180px;
+  }
+
+  /* More sports card */
+  .more-card {
+    border-radius: 16px;
+    background: linear-gradient(135deg, #1400FF 0%, #0800CC 100%);
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+  }
+
+  .more-card .plus {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .more-card h3 {
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 6px;
+  }
+
+  .more-card p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+
+  .more-card .btn {
+    background: #fff;
+    color: #1400FF;
+    padding: 9px 20px;
+    border-radius: 40px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+  }
+</style>
+</head>
+<body>
+
+  <div class="page-header">
+    <div class="eyebrow">Choose Your Arena</div>
+    <h1>Compete. Learn. Get Drafted.</h1>
+    <p>Pick your sport, enter the arena, and train with the athletes who built it.</p>
+  </div>
+
+  <!-- Top row: WBL, WPS, Rivals -->
+  <div class="cards-row-top">
+
+    <!-- WBL -->
+    <div class="sport-card">
+      <div class="card-image"><div class="bg bg-wbl"></div><div class="overlay"></div>
+        <div class="logo-text">WBL<span class="sport-sub">World Bowling League</span></div>
+      </div>
+      <div class="card-tab-bar"><span class="tab-label">Compete</span></div>
+      <div class="card-body">
+        <div class="status-badge"><span class="num">S1</span><span class="label">Season</span></div>
+        <p class="desc">AI-verified bowling from any lane. Compete in Arena Majors and climb the global leaderboard.</p>
+        <a href="#" class="card-btn">Enter Arena</a>
+      </div>
+    </div>
+
+    <!-- WPS -->
+    <div class="sport-card">
+      <div class="card-image"><div class="bg bg-wps"></div><div class="overlay"></div>
+        <div class="logo-text">WPS<span class="sport-sub">World Premier Squash</span></div>
+      </div>
+      <div class="card-tab-bar"><span class="tab-label">Compete</span></div>
+      <div class="card-body">
+        <div class="status-badge"><span class="num">Aug '26</span><span class="label">Launch</span></div>
+        <p class="desc">The first AI-powered global squash league. Solo drills to live Championship Finals — your ranking starts on your phone.</p>
+        <a href="#" class="card-btn">Enter Arena</a>
+      </div>
+    </div>
+
+    <!-- Rivals -->
+    <div class="sport-card">
+      <div class="card-image"><div class="bg bg-rivals"></div><div class="overlay"></div>
+        <div class="logo-text">Rivals<span class="sport-sub">1v1 Basketball</span></div>
+      </div>
+      <div class="card-tab-bar"><span class="tab-label">Compete</span></div>
+      <div class="card-body">
+        <div class="status-badge"><span class="num">Live</span><span class="label">Status</span></div>
+        <p class="desc">Head-to-head challenges, AI-scored crossovers, and a global leaderboard. Prove your handles anywhere.</p>
+        <a href="#" class="card-btn">Enter Arena</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom row: Pong (wider) + More Sports (smaller) -->
+  <div class="cards-row-bottom">
+
+    <!-- Pong -->
+    <div class="sport-card wide">
+      <div class="card-image"><div class="bg bg-pong"></div><div class="overlay"></div>
+        <div class="logo-text">Pong<span class="sport-sub">FSP Pong Arena</span></div>
+      </div>
+      <div class="card-tab-bar"><span class="tab-label">Compete</span></div>
+      <div class="card-body">
+        <div class="status-badge"><span class="num">Live</span><span class="label">Status</span></div>
+        <p class="desc">AI-verified precision sport in branded arenas. Compete, climb the ranks, and prove your accuracy on the global stage.</p>
+        <a href="#" class="card-btn">Enter Arena</a>
+      </div>
+    </div>
+
+    <!-- More Sports -->
+    <div class="more-card">
+      <div class="plus">+</div>
+      <h3>More Sports Incoming</h3>
+      <p>Powered by FSP Games, Movement Creators, and your community.</p>
+      <a href="#" class="btn">Request Your Sport</a>
+    </div>
+
+  </div>
+
+</body>
+</html>
