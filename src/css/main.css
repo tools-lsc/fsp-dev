@@ -731,10 +731,6 @@ body{
   background:#fff;
   padding:80px 40px 100px;
   position:relative;
-  height:100vh;
-  display:flex;
-  align-items:center;
-  overflow:hidden;
 }
 .compete-container{
   display:grid;
