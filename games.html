@@ -1863,429 +1863,296 @@
 
     <!-- WBL Content Section -->
     <div id="wbl-content" class="games-content-section" style="display: none;">
-      <!-- WBL content will be inserted here - copying from wbl-landing-latest/index.html -->
-      <div class="wbl-page-container light">
-        <!-- WBL content starts here -->
-        <section class="unleasing-potential">
-          <!-- Hero Background Images -->
-          <div class="wbl-hero-images">
-            <img
-              src="./src/assets/images/wbl_hero_image.png"
-              class="wbl-hero-image-left"
-              alt="WBL Hero" loading="lazy" />
-            <img
-              src="./src/assets/images/wbl_hero_image-2.png"
-              class="wbl-hero-image-right"
-              alt="WBL Hero" loading="lazy" />
-          </div>
-          <div class="unleasing-potential-inner">
-            <img
-              src="./wbl/assets/images/unle-pot-banner-mobile.png"
-              class="img-fluid pot-mobile"
-              alt="Images"
-              data-aos="fade-up" loading="lazy" />
-            <h1>
-              <label class="un-lb-1" data-aos="fade-right">UNLEASHING</label>
-              <label class="un-lb-2" data-aos="fade-left" style="color: #E97200 !important">BOWLING&apos;S</label>
-              <label class="un-lb-3" data-aos="fade-right">GLOBAL</label>
-              <label class="un-lb-4" data-aos="fade-left">POTENTIAL</label>
-            </h1>
-            <div class="hero-btn-div">
-              <a
-                href="https://forms.gle/K7pfqrfJWYH7xF4UA"
-                target="_blank"
-                class="btn-black btn-1-n"
-              >
-                Join Waitlist</a
-              >
-            </div>
-            <p data-aos="zoom-in-left">
-              World Bowling League (WBL) is redefining the future of bowling - a
-              global sport having 200 million players worldwide.
-            </p>
-            <div id="mouse-scroll">
-              <div class="sdd">scroll down</div>
-              <div class="merge-in">
-                <div class="mouse">
-                  <div class="mouse-in"></div>
-                </div>
-                <div>
-                  <span class="down-arrow-1"></span>
-                  <span class="down-arrow-2"></span>
-                  <span class="down-arrow-3"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+      <style>
+        .fl-wrap{font-family:'Archivo',system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased;background:#fff;color:#1A1A2E;padding:48px 40px 56px;max-width:1200px;margin:0 auto}
+        .fl-top-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:40px;padding-bottom:20px;border-bottom:1px solid #E4E4EE;flex-wrap:wrap;gap:16px}
+        .fl-brand-left{display:flex;align-items:center;gap:16px}
+        .fl-brand-right{display:flex;align-items:center;gap:16px}
+        .fl-join-btn{font-size:13px;font-weight:700;color:#fff;background:#0000FF;padding:10px 24px;border-radius:40px;text-decoration:none;transition:opacity .2s;display:inline-block}
+        .fl-join-btn:hover{opacity:.85}
+        .fl-panels{display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:stretch}
+        .fl-bridge{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 24px;gap:8px}
+        .fl-bridge-line{width:1px;flex:1;background:linear-gradient(180deg,#E4E4EE 0%,#0000FF 50%,#E4E4EE 100%)}
+        .fl-bridge-arrow{width:40px;height:40px;border-radius:50%;background:#0000FF;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+        .fl-bridge-arrow svg{width:18px;height:18px;color:#fff}
+        .fl-panel{display:flex;flex-direction:column;gap:16px}
+        .fl-panel-label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px;padding-bottom:8px;display:inline-block}
+        .fl-panel-label.fl-start{color:#0000FF;border-bottom:2px solid #0000FF}
+        .fl-panel-label.fl-goal{color:#C9952B;border-bottom:2px solid #C9952B}
+        .fl-card{border-radius:14px;border:1px solid #E4E4EE;padding:24px;background:#fff;transition:box-shadow .2s;position:relative}
+        .fl-card:hover{box-shadow:0 4px 20px rgba(0,0,0,.06)}
+        .fl-card-icon{position:absolute;top:20px;right:20px;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center}
+        .fl-card-icon svg{width:22px;height:22px}
+        .fl-card-icon.fl-sp{background:rgba(0,0,255,.06)}
+        .fl-card-icon.fl-sp svg{color:#0000FF}
+        .fl-card-icon.fl-dollar{background:rgba(16,185,129,.08)}
+        .fl-card-icon.fl-dollar svg{color:#059669}
+        .fl-card .fl-eyebrow{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9A9AB0;margin-bottom:10px}
+        .fl-card h3{font-size:19px;font-weight:800;color:#0A0A0A;letter-spacing:-.01em;line-height:1.2;margin-bottom:8px}
+        .fl-card p{font-size:13.5px;color:#5C5C7A;line-height:1.55;margin:0}
+        .fl-card .fl-cta{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:12px;font-weight:700;color:#0000FF;text-decoration:none}
+        .fl-card .fl-cta svg{width:14px;height:14px}
+        .fl-card-featured{background:#0A0A0A;border-color:#0A0A0A;color:#fff}
+        .fl-card-featured h3{color:#fff}
+        .fl-card-featured p{color:rgba(255,255,255,.6)}
+        .fl-card-featured .fl-eyebrow{color:#C9952B}
+        .fl-card-featured .fl-hl{color:#fff;font-weight:700}
+        .fl-stat-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+        .fl-stat-card{border-radius:12px;border:1px solid #E4E4EE;padding:18px 16px;text-align:center}
+        .fl-stat-num{font-size:24px;font-weight:900;color:#0A0A0A;margin-bottom:4px}
+        .fl-stat-label{font-size:11px;color:#9A9AB0;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+        .fl-card-goal{border-left:3px solid #C9952B}
+        .fl-card-goal .fl-eyebrow{color:#C9952B}
+        .fl-app-row{display:flex;align-items:center;gap:12px;padding:14px 18px;background:#F5F5FA;border-radius:12px;margin-top:4px}
+        .fl-app-label{font-size:11px;font-weight:700;color:#5C5C7A;text-transform:uppercase;letter-spacing:.06em;margin-right:auto}
+        .fl-app-badge{font-size:11px;font-weight:600;color:#0000FF;background:#fff;border:1px solid #E4E4EE;padding:6px 12px;border-radius:8px;text-decoration:none}
+        .fl-img-ph{width:100%;height:140px;background:#F0F0F5;border-radius:10px;margin-bottom:16px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#9A9AB0;letter-spacing:.04em;border:1px dashed #D8DAE5}
+        .fl-img-ph-dark{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);color:rgba(255,255,255,.3)}
+        @media(max-width:768px){
+          .fl-wrap{padding:32px 20px 40px}
+          .fl-panels{grid-template-columns:1fr;gap:32px}
+          .fl-bridge{flex-direction:row;padding:0;justify-content:center}
+          .fl-bridge-line{width:auto;height:1px;flex:1;background:linear-gradient(90deg,#E4E4EE 0%,#0000FF 50%,#E4E4EE 100%)}
+          .fl-top-bar{flex-direction:column;align-items:flex-start}
+        }
+        @media(max-width:480px){
+          .fl-wrap{padding:24px 16px 32px}
+          .fl-card h3{font-size:17px}
+          .fl-stat-num{font-size:20px}
+        }
+      </style>
 
-        <section class="wbl-welcome">
-          <div class="wbl-welcome-inner">
-            <div class="wbl-welcome-left">
-              <img
-                src="./wbl/assets/images/welcome-left-im.png"
-                class="img-fluid"
-                alt="Images"
-                data-aos="flip-up" loading="lazy" />
-              <img
-                src="./wbl/assets/images/welcome-right-im.png"
-                class="img-fluid"
-                alt="Images"
-                data-aos="flip-down" loading="lazy" />
+      <div class="fl-wrap">
+        <div class="fl-top-bar">
+          <div class="fl-brand-left">
+            <div style="width:160px;height:56px;background:#2D4A3A;border-radius:10px;display:flex;align-items:center;justify-content:center;gap:10px;padding:0 16px">
+              <svg viewBox="0 0 24 28" width="22" height="26" fill="none"><rect x="0" y="0" width="10" height="10" rx="1" fill="#fff"/><rect x="12" y="0" width="10" height="10" rx="1" fill="#fff"/><rect x="0" y="12" width="10" height="10" rx="1" fill="#fff"/><rect x="0" y="24" width="10" height="4" rx="1" fill="#fff"/></svg>
+              <div style="border-left:1px solid rgba(255,255,255,.3);height:28px"></div>
+              <div style="font-size:16px;font-weight:800;color:#fff;line-height:1.15">Best<br>Bowler</div>
             </div>
-            <div class="wbl-welcome-right" data-aos="fade-left">
-              <h2><span>Welcome to the</span> World Bowling League</h2>
-              <p>
-                where every strike brings us closer. Powered by League Sports Co,
-                we're not just a league—we're a revolution in pins and lanes.
-              </p>
-              <p>
-                Join us as we strike a new path for the sport, globally. Ready to
-                roll?
-              </p>
+            <a href="#" class="fl-join-btn fsp-btn-locked" aria-disabled="true" tabindex="-1">
+              <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>
+              Enter Arena
+            </a>
+          </div>
+          <div class="fl-brand-right">
+            <a href="#" class="fl-join-btn fsp-btn-locked" aria-disabled="true" tabindex="-1">
+              <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>
+              Join WBL
+            </a>
+            <div style="width:140px;height:56px;background:#6B5A3A;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-direction:column">
+              <div style="font-size:20px;font-weight:900;color:#fff;letter-spacing:.04em;line-height:1">WBL</div>
+              <div style="font-size:7px;font-weight:700;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.08em">World Bowling League</div>
             </div>
           </div>
-        </section>
+        </div>
 
-        <section class="w-global-n" id="global-n">
-          <div class="w-global-n-inner">
-            <div class="w-global-n-inner-left">
-              <h2 data-aos="fade-right">WBL Global</h2>
-              <a
-                href="https://vimeo.com/870749554/7bbbf2d029"
-                target="_blank"
-                data-aos="zoom-out-up"
-                >Learn More
-                <img
-                  src="./wbl/assets/images/arrow-g-right.svg"
-                  class="img-fluid"
-                  alt="Images" loading="lazy" />
+        <div class="fl-panels">
+          <div class="fl-panel">
+            <span class="fl-panel-label fl-start">Start Here</span>
+
+            <div class="fl-card">
+              <div class="fl-img-ph">Image: Player recording challenge at bowling lane</div>
+              <div class="fl-eyebrow">Show Your Skills</div>
+              <h3>Think You&rsquo;re the Best Bowler? Prove It</h3>
+              <p>Record your game from any lane in the world. AI verifies your score instantly. No judges, no politics &mdash; just your performance against the global leaderboard.</p>
+              <a href="#" class="fl-cta fsp-btn-locked" aria-disabled="true" tabindex="-1">
+                <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>
+                Enter the Arena
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
             </div>
-            <div class="w-global-n-inner-text" data-aos="fade-left">
-              <h2 data-aos="fade-right" class="show-in-mobile">WBL Global</h2>
-              <p>
-                A groundbreaking global event that elevates bowling to new
-                heights, with top bowling athletes participating in intense,
-                gender-balanced team competitions to determine the world bowling
-                champions.
-              </p>
-              <a
-                href="#"
-                data-aos="zoom-out-up"
-                class="show-in-mobile leanr-mo-bt"
-                >Learn More
-                <img
-                  src="./wbl/assets/images/arrow-g-right.svg"
-                  class="img-fluid"
-                  alt="Images" loading="lazy" />
-              </a>
-              <div class="video-w-g">
-                <img
-                  src="./wbl/assets/images/w-global-image.png"
-                  class="img-fluid"
-                  alt="Images" loading="lazy" />
-                <a href="https://vimeo.com/870749554/7bbbf2d029" target="_blank">
-                  <img
-                    src="./wbl/assets/images/trikon-white.svg"
-                    class="img-fluid"
-                    alt="Images" loading="lazy" />
-                  Play Video
-                </a>
+
+            <div class="fl-card">
+              <div class="fl-card-icon fl-sp">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
               </div>
+              <div class="fl-eyebrow">Earn as You Play</div>
+              <h3>Every Frame Earns SPs</h3>
+              <p>Every verified session generates SPs. Use them to enter Arena Majors, convert to Golden Tickets, or climb the competition tiers.</p>
             </div>
-          </div>
-        </section>
 
-        <!-- WBL Updates Infinite Ticker -->
-        <section class="wbl-updates-ticker">
-          <div class="wbl-updates-header">
-            <h2>UPDATES</h2>
-          </div>
-          <div class="wbl-ticker-container">
-            <div class="wbl-ticker-track">
-              <!-- First set of cards -->
-              <div class="wbl-ticker-card">
-                <img src="./src/assets/images/wbl_site_card_image_1.jpg" alt="Mookie Betts" loading="lazy" />
-                <div class="wbl-card-text">MOOKIE BETTS JOIN WBL AS TEAM OWNER</div>
+            <div class="fl-card">
+              <div class="fl-card-icon fl-dollar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
               </div>
-              <div class="wbl-ticker-card">
-                <img src="./src/assets/images/wbl_site_card_image_2.jpg" alt="FSP Challenges" loading="lazy" />
-                <div class="wbl-card-text">PLAY IN FSP CHALLENGES & WIN A CHANCE TO MEET MOOKIE BETTS</div>
-              </div>
-              <div class="wbl-ticker-card">
-                <img src="./src/assets/images/wbl_site_card_image_3.jpg" alt="FSP Challenges WBL" loading="lazy" />
-                <div class="wbl-card-text">PLAY FSP CHALLENGES TO COMPETE IN WBL</div>
-              </div>
-              <div class="wbl-ticker-card">
-                <img src="./src/assets/images/wbl_site_card_image_4.jpg" alt="Virat Kohli" loading="lazy" />
-                <div class="wbl-card-text">VIRAT KOHLI JOIN THE WORLD BOWLING LEAGUE</div>
-              </div>
-              <div class="wbl-ticker-card">
-                <img src="./src/assets/images/wbl_site_card_image_5.jpg" alt="WBL" loading="lazy" />
-                <div class="wbl-card-text">PRESENTING WORLD BOWLING LEAGUE</div>
-              </div>
-              <!-- Duplicate set for seamless loop -->
-              <div class="wbl-ticker-card">
-                <img src="./src/assets/images/wbl_site_card_image_1.jpg" alt="Mookie Betts" loading="lazy" />
-                <div class="wbl-card-text">MOOKIE BETTS JOIN WBL AS TEAM OWNER</div>
-              </div>
-              <div class="wbl-ticker-card">
-                <img src="./src/assets/images/wbl_site_card_image_2.jpg" alt="FSP Challenges" loading="lazy" />
-                <div class="wbl-card-text">PLAY IN FSP CHALLENGES & WIN A CHANCE TO MEET MOOKIE BETTS</div>
-              </div>
-              <div class="wbl-ticker-card">
-                <img src="./src/assets/images/wbl_site_card_image_3.jpg" alt="FSP Challenges WBL" loading="lazy" />
-                <div class="wbl-card-text">PLAY FSP CHALLENGES TO COMPETE IN WBL</div>
-              </div>
-              <div class="wbl-ticker-card">
-                <img src="./src/assets/images/wbl_site_card_image_4.jpg" alt="Virat Kohli" loading="lazy" />
-                <div class="wbl-card-text">VIRAT KOHLI JOIN THE WORLD BOWLING LEAGUE</div>
-              </div>
-              <div class="wbl-ticker-card">
-                <img src="./src/assets/images/wbl_site_card_image_5.jpg" alt="WBL" loading="lazy" />
-                <div class="wbl-card-text">PRESENTING WORLD BOWLING LEAGUE</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="elipse-s">
-          <h2 data-aos="zoom-in-down">
-            Strike into a new era with the World Bowling League – where passion,
-            precision, and prestige collide on a global scale.
-          </h2>
-        </section>
-
-        <section class="become-p-b" data-aos="zoom-in">
-          <div class="custom-container">
-            <div class="become-p-b-inner">
-              <h2 data-aos="fade-right" style="color: #FFF !important">Become The Part of Bowling Revolution</h2>
-              <a
-                href="https://forms.gle/K7pfqrfJWYH7xF4UA"
-                target="_blank"
-                class="become-m-bm"
-                data-aos="fade-right"
-                >Join Waitlist
+              <div class="fl-eyebrow">Movement Creator</div>
+              <h3>Start an Arena, Earn Payouts</h3>
+              <p>Build your own bowling arena on FSP. Every player who competes in your arena generates revenue that flows back to you.</p>
+              <a href="#" class="fl-cta fsp-btn-locked" aria-disabled="true" tabindex="-1">
+                <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>
+                Launch an Arena
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
             </div>
+
+            <div class="fl-app-row">
+              <span class="fl-app-label">Download FSP</span>
+              <a href="#" class="fl-app-badge fsp-btn-locked" aria-disabled="true" tabindex="-1">App Store</a>
+              <a href="#" class="fl-app-badge fsp-btn-locked" aria-disabled="true" tabindex="-1">Google Play</a>
+            </div>
           </div>
-        </section>
+
+          <div class="fl-bridge">
+            <div class="fl-bridge-line"></div>
+            <div class="fl-bridge-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+            <div class="fl-bridge-line"></div>
+          </div>
+
+          <div class="fl-panel">
+            <span class="fl-panel-label fl-goal">Where You&rsquo;re Heading</span>
+
+            <div class="fl-card fl-card-featured">
+              <div class="fl-img-ph fl-img-ph-dark">Image: Championship Finals stage / Mookie Betts</div>
+              <div class="fl-eyebrow">The Ultimate Prize</div>
+              <h3>Bowl in the Live Championship Finals</h3>
+              <p>Top players qualify for the <span class="fl-hl">live Championship Finals</span> &mdash; competing alongside <span class="fl-hl">Mookie Betts</span> and other world-class athletes for a <span class="fl-hl">$200,000* cash prize pool</span>. All expenses paid. Flight, hotel, everything.</p>
+            </div>
+
+            <div class="fl-stat-row">
+              <div class="fl-stat-card">
+                <div class="fl-stat-num">$200K*</div>
+                <div class="fl-stat-label">Cash Prize Pool</div>
+              </div>
+              <div class="fl-stat-card">
+                <div class="fl-stat-num">20+</div>
+                <div class="fl-stat-label">Leading Athletes</div>
+              </div>
+            </div>
+
+            <div class="fl-card fl-card-goal">
+              <div class="fl-eyebrow">The Path</div>
+              <h3>Arena Majors &rarr; Live Finals</h3>
+              <p>Compete in digital Arena Majors from any lane. The top-ranked bowlers advance to the live stage &mdash; mixed gender, all skill levels welcome.</p>
+            </div>
+
+            <div class="fl-card fl-card-goal">
+              <div class="fl-eyebrow">What You Get</div>
+              <h3>Fully Funded. No Catch.</h3>
+              <p>Qualifying players receive full travel coverage &mdash; flights, accommodation, and event access. You earned your spot. We cover the rest.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <!-- WPS Content Section -->
     <div id="wps-content" class="games-content-section" style="display: none;">
-      <!-- WPS content will be inserted here - copying from wbl-landing-latest/index.html -->
-      <div class="wbl-page-container light">
-        <!-- WPS content starts here -->
-        <section class="unleasing-potential">
-          <!-- Hero Background Images -->
-          <div class="wbl-hero-images">
-            <img
-              src="./src/assets/images/wps_hero_image_1.png"
-              class="wbl-hero-image-left"
-              alt="WPS Hero" loading="lazy" />
-            <img
-              src="./src/assets/images/wps_hero_image_2.png"
-              class="wbl-hero-image-right"
-              alt="WPS Hero" loading="lazy" />
-          </div>
-          <div class="unleasing-potential-inner">
-            <img
-              src="./wbl/assets/images/unle-pot-banner-mobile.png"
-              class="img-fluid pot-mobile"
-              alt="Images"
-              data-aos="fade-up" loading="lazy" />
-            <h1>
-              <label class="un-lb-1" data-aos="fade-right">UNLEASHING</label>
-              <label class="un-lb-2" data-aos="fade-left" style="color: #0000FF !important">SQUASH&apos;S</label>
-              <label class="un-lb-3" data-aos="fade-right">GLOBAL</label>
-              <label class="un-lb-4" data-aos="fade-left">POTENTIAL</label>
-            </h1>
-            <div class="hero-btn-div">
-              <a
-                href="https://forms.gle/K7pfqrfJWYH7xF4UA"
-                target="_blank"
-                class="btn-black btn-1-n"
-              >
-                Join Waitlist</a
-              >
+      <div class="fl-wrap">
+        <div class="fl-top-bar">
+          <div class="fl-brand-left">
+            <div style="width:160px;height:56px;background:#4A3A2D;border-radius:10px;display:flex;align-items:center;justify-content:center;gap:10px;padding:0 16px">
+              <svg viewBox="0 0 24 28" width="22" height="26" fill="none"><rect x="0" y="0" width="10" height="10" rx="1" fill="#fff"/><rect x="12" y="0" width="10" height="10" rx="1" fill="#fff"/><rect x="0" y="12" width="10" height="10" rx="1" fill="#fff"/><rect x="0" y="24" width="10" height="4" rx="1" fill="#fff"/></svg>
+              <div style="border-left:1px solid rgba(255,255,255,.3);height:28px"></div>
+              <div style="font-size:16px;font-weight:800;color:#fff;line-height:1.15">Best Squash<br>Player</div>
             </div>
-            <p data-aos="zoom-in-left">
-              World Premier Squash (WPS) is redefining the future of Squash - a global sport and a worldwide spectacle.
-            </p>
-            <div id="mouse-scroll">
-              <div class="sdd">scroll down</div>
-              <div class="merge-in">
-                <div class="mouse">
-                  <div class="mouse-in"></div>
-                </div>
-                <div>
-                  <span class="down-arrow-1"></span>
-                  <span class="down-arrow-2"></span>
-                  <span class="down-arrow-3"></span>
-                </div>
-              </div>
+            <a href="#" class="fl-join-btn fsp-btn-locked" aria-disabled="true" tabindex="-1">
+              <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>
+              Enter Arena
+            </a>
+          </div>
+          <div class="fl-brand-right">
+            <a href="#" class="fl-join-btn fsp-btn-locked" aria-disabled="true" tabindex="-1">
+              <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>
+              Join WPS
+            </a>
+            <div style="width:140px;height:56px;background:#5A4A3A;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-direction:column">
+              <div style="font-size:20px;font-weight:900;color:#fff;letter-spacing:.04em;line-height:1">WPS</div>
+              <div style="font-size:7px;font-weight:700;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.08em">World Premier Squash</div>
             </div>
           </div>
-        </section>
+        </div>
 
-        <section class="b-m-tech" id="tech-n">
-          <div class="custom-container">
-            <div class="b-m-tech-inner">
-              <h2>
-                <label class="bm-lb-1" data-aos="fade-right">GLOBAL</label>
-                <label class="bm-lb-2" data-aos="fade-left">GIANTS</label>
-                <label class="bm-lb-3" data-aos="fade-right" style="color: #0000FF !important">UNITES</label>
-              </h2>
-              <div class="b-m-tech-inner-text">
-                <p data-aos="fade-left">
-                  WPS is built on the combined strength of the sport's most influential institutions. LSC's innovation engine, the global reach of World Squash, and the competitive excellence of the professional tour come together to redefine how squash is played, watched, and experienced worldwide.
-                </p>
-                <div class="b-m-tech-thre-bx">
-                  <div
-                    class="bx-3-bm"
-                    data-aos="fade-left"
-                    data-aos-anchor="#example-anchor"
-                    data-aos-offset="500"
-                    data-aos-duration="500"
-                  >
-                    <img
-                      src="./src/assets/images/world-squash.png"
-                      class="img-fluid"
-                      alt="World Squash" loading="lazy" />
-                  </div>
-                  <div
-                    class="bx-3-bm bx-3-bm-2"
-                    data-aos="fade-left"
-                    data-aos-anchor="#example-anchor"
-                    data-aos-offset="500"
-                    data-aos-duration="1000"
-                  >
-                    <img
-                      src="./src/assets/images/lsc-logo.png"
-                      class="img-fluid"
-                      alt="LSC League Sports Co" loading="lazy" />
-                  </div>
-                  <div
-                    class="bx-3-bm bx-3-bm-3"
-                    data-aos="fade-left"
-                    data-aos-anchor="#example-anchor"
-                    data-aos-offset="500"
-                    data-aos-duration="1500"
-                  >
-                    <img
-                      src="./src/assets/images/psa-logo.png"
-                      class="img-fluid"
-                      alt="PSA Squash Tour" loading="lazy" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <div class="fl-panels">
+          <div class="fl-panel">
+            <span class="fl-panel-label fl-start">Start Here</span>
 
-        <section class="wbl-welcome">
-          <div class="wbl-welcome-inner">
-            <div class="wbl-welcome-left">
-              <img
-                src="./src/assets/images/wps-section-3-left.jpg"
-                class="img-fluid"
-                alt="World Premier Squash"
-                data-aos="flip-up" loading="lazy" />
-              <img
-                src="./src/assets/images/wps-section-3-right.jpg"
-                class="img-fluid"
-                alt="World Premier Squash"
-                data-aos="flip-down" loading="lazy" />
-            </div>
-            <div class="wbl-welcome-right" data-aos="fade-left">
-              <h2><span>Welcome to the</span> World Premier Squash</h2>
-              <p>
-                Where every rally brings us closer. Powered by League Sports Co,
-                we're not just a league — we're a new era for squash. Fast-paced, innovation-first, built for a global audience.
-              </p>
-              <p>
-                Join us as we redefine how the sport is played, watched, and experienced worldwide. Ready to step on court?
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- WPS Updates Infinite Ticker -->
-        <section class="wbl-updates-ticker">
-          <div class="wbl-updates-header">
-            <h2>UPDATES</h2>
-          </div>
-          <div class="wbl-ticker-container">
-            <div class="wbl-ticker-track">
-              <!-- First set of cards -->
-              <div class="wbl-ticker-card">
-                <img src="./src/assets/images/wps_site_card_image_1.jpg" alt="WPS Logo" loading="lazy" />
-                <div class="wbl-card-text">PRESENTING WORLD PREMIER SQUASH</div>
-              </div>
-              <div class="wbl-ticker-card">
-                <img src="./src/assets/images/wps_site_card_image_2.jpg" alt="Elite Athlete" loading="lazy" />
-                <div class="wbl-card-text">WORLD-CLASS ATHLETES JOIN WPS</div>
-              </div>
-              <div class="wbl-ticker-card">
-                <img src="./src/assets/images/wps_site_card_image_3.jpg" alt="Global Venues" loading="lazy" />
-                <div class="wbl-card-text">GLOBAL ICONIC VENUES & FUTURE ARENAS</div>
-              </div>
-              <div class="wbl-ticker-card">
-                <img src="./src/assets/images/wps_site_card_image_4.jpg" alt="Championship Victory" loading="lazy" />
-                <div class="wbl-card-text">CHAMPIONSHIP MOMENTS ON THE COURT</div>
-              </div>
-              <div class="wbl-ticker-card">
-                <img src="./src/assets/images/wps_site_card_image_5.jpg" alt="Premier Competition" loading="lazy" />
-                <div class="wbl-card-text">PREMIER ATHLETES COMPETE IN WPS</div>
-              </div>
-              <!-- Duplicate set for seamless loop -->
-              <div class="wbl-ticker-card">
-                <img src="./src/assets/images/wps_site_card_image_1.jpg" alt="WPS Logo" loading="lazy" />
-                <div class="wbl-card-text">PRESENTING WORLD PREMIER SQUASH</div>
-              </div>
-              <div class="wbl-ticker-card">
-                <img src="./src/assets/images/wps_site_card_image_2.jpg" alt="Elite Athlete" loading="lazy" />
-                <div class="wbl-card-text">WORLD-CLASS ATHLETES JOIN WPS</div>
-              </div>
-              <div class="wbl-ticker-card">
-                <img src="./src/assets/images/wps_site_card_image_3.jpg" alt="Global Venues" loading="lazy" />
-                <div class="wbl-card-text">GLOBAL ICONIC VENUES & FUTURE ARENAS</div>
-              </div>
-              <div class="wbl-ticker-card">
-                <img src="./src/assets/images/wps_site_card_image_4.jpg" alt="Championship Victory" loading="lazy" />
-                <div class="wbl-card-text">CHAMPIONSHIP MOMENTS ON THE COURT</div>
-              </div>
-              <div class="wbl-ticker-card">
-                <img src="./src/assets/images/wps_site_card_image_5.jpg" alt="Premier Competition" loading="lazy" />
-                <div class="wbl-card-text">PREMIER ATHLETES COMPETE IN WPS</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="elipse-s">
-          <h2 data-aos="zoom-in-down">
-           Step into a new era with the World Premier Squash League — where intensity, precision, and world-class talent converge on a global stage.
-          </h2>
-        </section>
-
-        <section class="become-p-b" data-aos="zoom-in">
-          <div class="custom-container">
-            <div class="become-p-b-inner">
-              <h2 data-aos="fade-right" style="color: #FFF !important">Become The Part of Squash Revolution</h2>
-              <a
-                href="https://forms.gle/K7pfqrfJWYH7xF4UA"
-                target="_blank"
-                class="become-m-bm"
-                data-aos="fade-right"
-                >Join Waitlist
+            <div class="fl-card">
+              <div class="fl-img-ph">Image: Player recording squash session on court</div>
+              <div class="fl-eyebrow">Show Your Skills</div>
+              <h3>Think You&rsquo;re the Best Squash Player? Prove It</h3>
+              <p>Record your session from any court in the world. AI verifies your score instantly. No judges, no politics &mdash; just your performance against the global squash leaderboard.</p>
+              <a href="#" class="fl-cta fsp-btn-locked" aria-disabled="true" tabindex="-1">
+                <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>
+                Enter the Arena
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
             </div>
+
+            <div class="fl-card">
+              <div class="fl-card-icon fl-sp">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <div class="fl-eyebrow">Earn as You Play</div>
+              <h3>Every Rally Earns SPs</h3>
+              <p>Every verified session generates SPs. Use them to enter Arena Majors, convert to Golden Tickets, or climb the competition tiers.</p>
+            </div>
+
+            <div class="fl-card">
+              <div class="fl-card-icon fl-dollar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <div class="fl-eyebrow">Movement Creator</div>
+              <h3>Start an Arena, Earn Payouts</h3>
+              <p>Build your own squash arena on FSP. Every player who competes in your arena generates revenue that flows back to you.</p>
+              <a href="#" class="fl-cta fsp-btn-locked" aria-disabled="true" tabindex="-1">
+                <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>
+                Launch an Arena
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+
+            <div class="fl-app-row">
+              <span class="fl-app-label">Download FSP</span>
+              <a href="#" class="fl-app-badge fsp-btn-locked" aria-disabled="true" tabindex="-1">App Store</a>
+              <a href="#" class="fl-app-badge fsp-btn-locked" aria-disabled="true" tabindex="-1">Google Play</a>
+            </div>
           </div>
-        </section>
+
+          <div class="fl-bridge">
+            <div class="fl-bridge-line"></div>
+            <div class="fl-bridge-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+            <div class="fl-bridge-line"></div>
+          </div>
+
+          <div class="fl-panel">
+            <span class="fl-panel-label fl-goal">Where You&rsquo;re Heading</span>
+
+            <div class="fl-card fl-card-featured">
+              <div class="fl-img-ph fl-img-ph-dark">Image: Championship Finals stage / Saurav Ghosal</div>
+              <div class="fl-eyebrow">The Ultimate Prize</div>
+              <h3>Play in the Live Championship Finals</h3>
+              <p>Top players qualify for the <span class="fl-hl">live Championship Finals</span> &mdash; competing alongside <span class="fl-hl">Saurav Ghosal</span> and other world-class athletes for a <span class="fl-hl">$200,000 cash prize pool</span>. All expenses paid. Flight, hotel, everything.</p>
+            </div>
+
+            <div class="fl-stat-row">
+              <div class="fl-stat-card">
+                <div class="fl-stat-num">$200K</div>
+                <div class="fl-stat-label">Cash Prize Pool</div>
+              </div>
+              <div class="fl-stat-card">
+                <div class="fl-stat-num">20+</div>
+                <div class="fl-stat-label">Leading Athletes</div>
+              </div>
+            </div>
+
+            <div class="fl-card fl-card-goal">
+              <div class="fl-eyebrow">The Path</div>
+              <h3>Arena Majors &rarr; Live Finals</h3>
+              <p>Compete in digital Arena Majors from any court. The top-ranked players advance to the live stage &mdash; mixed gender, all skill levels welcome.</p>
+            </div>
+
+            <div class="fl-card fl-card-goal">
+              <div class="fl-eyebrow">What You Get</div>
+              <h3>Fully Funded. No Catch.</h3>
+              <p>Qualifying players receive full travel coverage &mdash; flights, accommodation, and event access. You earned your spot. We cover the rest.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </main>
@@ -2407,10 +2274,6 @@
     </div>
   </div>
 
-  <div class="games-hero-disclaimer" style="max-width:1200px;margin:0 auto;padding:24px 40px 32px;font-size:12px;color:#999;line-height:1.5">
-    <p>The content, information, audio/ visuals, pictures, images, elements, aspects, references, marks or copyrights being used herein are intended solely for the purpose of illustration and presentation; and LSC/WBL does not claim any rights, licenses or ownership in the same. No content or representation provided herein shall Constitute any binding agreement or reflect the finalized structure or offerings of WBL nor should be construed as definitive or absolute at this stage.</p>
-  </div>
-
   <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-content">
@@ -2438,6 +2301,10 @@
 
       <div class="footer-bottom">
         <p class="footer-copyright">&copy; 2026 Future of Sports Platform. All rights reserved.</p>
+      </div>
+
+      <div style="padding:20px 0 0;margin-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:11px;color:#000;line-height:1.6">
+        <p>The content, information, audio/ visuals, pictures, images, elements, aspects, references, marks or copyrights being used herein are intended solely for the purpose of illustration and presentation; and LSC/WBL does not claim any rights, licenses or ownership in the same. No content or representation provided herein shall Constitute any binding agreement or reflect the finalized structure or offerings of WBL nor should be construed as definitive or absolute at this stage.</p>
       </div>
     </div>
   </footer>
