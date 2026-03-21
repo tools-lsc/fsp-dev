@@ -33,7 +33,7 @@
       display:grid;
       grid-template-columns:repeat(2,1fr);
       gap:24px;
-      max-width:1400px;
+      max-width:100%;
       margin:0 auto;
       padding:0 40px;
     }
@@ -257,8 +257,9 @@
     .kt-inner{
       position:relative;
       z-index:2;
-      max-width:1200px;
+      max-width:100%;
       margin:0 auto;
+      padding:0 clamp(20px,4vw,60px);
     }
     .kt-header{
       text-align:center;
@@ -274,10 +275,10 @@
       margin-bottom:16px;
     }
     .kt-subtitle{
-      font-size:16px;
-      color:rgba(255,255,255,0.6);
+      font-size:18px;
+      color:rgba(255,255,255,0.65);
       line-height:1.6;
-      max-width:620px;
+      max-width:720px;
       margin:0 auto;
     }
     .kt-cards-row{
@@ -319,17 +320,17 @@
       justify-content:center;
     }
     .kt-card-text h3{
-      font-size:18px;
+      font-size:22px;
       font-weight:900;
       color:#fff;
       text-transform:uppercase;
       letter-spacing:-0.01em;
       line-height:1.15;
-      margin:0 0 10px;
+      margin:0 0 12px;
     }
     .kt-card-text p{
-      font-size:13px;
-      color:rgba(255,255,255,0.55);
+      font-size:15px;
+      color:rgba(255,255,255,0.6);
       line-height:1.6;
       margin:0;
     }
@@ -369,9 +370,9 @@
     /* FFS Foundation Merged */
     .ffs-section.ffs-merged{padding:0}
     .ffs-merged-inner{
-      max-width:1200px;
+      max-width:100%;
       margin:0 auto;
-      padding:64px 40px 72px;
+      padding:64px clamp(20px,4vw,60px) 72px;
       font-family:'Archivo',system-ui,-apple-system,sans-serif;
     }
     .ffs-merged-inner *{font-family:inherit}
@@ -408,7 +409,7 @@
     .ffs-float-name{font-size:10px;color:#5C5C7A;line-height:1.4}
     .ffs-content-col{display:flex;flex-direction:column}
     .ffs-eyebrow{
-      font-size:11px;
+      font-size:13px;
       font-weight:700;
       letter-spacing:0.12em;
       text-transform:uppercase;
@@ -416,7 +417,7 @@
       margin-bottom:12px;
     }
     .ffs-merged-title{
-      font-size:32px;
+      font-size:clamp(28px,3.5vw,40px);
       font-weight:900;
       color:#0A0A0A;
       letter-spacing:-0.03em;
@@ -424,11 +425,11 @@
       margin-bottom:16px;
     }
     .ffs-lead{
-      font-size:15px;
+      font-size:17px;
       color:#5C5C7A;
       line-height:1.65;
       margin-bottom:24px;
-      max-width:440px;
+      max-width:520px;
     }
     .ffs-pills{display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
     .ffs-pill{
@@ -445,13 +446,13 @@
       display:flex;align-items:center;justify-content:center;flex-shrink:0;
     }
     .ffs-pill-icon svg{width:16px;height:16px;color:#1400FF}
-    .ffs-pill h4{font-size:13px;font-weight:700;color:#0A0A0A;margin:0 0 2px}
-    .ffs-pill p{font-size:12px;color:#5C5C7A;line-height:1.5;margin:0}
+    .ffs-pill h4{font-size:15px;font-weight:700;color:#0A0A0A;margin:0 0 4px}
+    .ffs-pill p{font-size:14px;color:#5C5C7A;line-height:1.55;margin:0}
     .ffs-cta-primary{
       display:inline-flex;align-items:center;gap:8px;
       background:#1400FF;color:#fff;
-      font-size:13px;font-weight:700;
-      padding:12px 24px;border-radius:40px;
+      font-size:15px;font-weight:700;
+      padding:14px 28px;border-radius:40px;
       text-decoration:none;transition:opacity 0.2s;
       align-self:flex-start;
     }
@@ -461,8 +462,8 @@
     .ffs-aid-section .ffs-eyebrow{margin-bottom:10px}
     .ffs-aid-section .ffs-merged-title{margin-bottom:12px}
     .ffs-aid-lead{
-      font-size:14px;color:#5C5C7A;line-height:1.6;
-      max-width:620px;margin:0 auto 36px;
+      font-size:16px;color:#5C5C7A;line-height:1.6;
+      max-width:720px;margin:0 auto 36px;
     }
     .ffs-aid-grid{
       display:grid;grid-template-columns:1fr 1fr;
@@ -473,13 +474,13 @@
       padding:24px;background:#fff;transition:box-shadow 0.2s;
     }
     .ffs-aid-card:hover{box-shadow:0 4px 20px rgba(0,0,0,0.06)}
-    .ffs-aid-card h4{font-size:15px;font-weight:800;color:#1400FF;margin:0 0 8px}
-    .ffs-aid-card p{font-size:13px;color:#5C5C7A;line-height:1.55;margin:0}
+    .ffs-aid-card h4{font-size:17px;font-weight:800;color:#1400FF;margin:0 0 10px}
+    .ffs-aid-card p{font-size:15px;color:#5C5C7A;line-height:1.55;margin:0}
     .ffs-aid-cta{
       display:inline-flex;align-items:center;gap:8px;
       background:#1400FF;color:#fff;
-      font-size:14px;font-weight:700;
-      padding:13px 28px;border-radius:40px;
+      font-size:16px;font-weight:700;
+      padding:14px 32px;border-radius:40px;
       text-decoration:none;transition:opacity 0.2s;
       margin-bottom:12px;
     }
@@ -589,21 +590,12 @@
     }
     .wb-hero-inner{
       position:relative;z-index:2;display:grid;
-      grid-template-columns:1fr 1fr;gap:64px;align-items:center;
-      max-width:1200px;margin:0 auto;width:100%;
+      grid-template-columns:1fr 1.25fr;gap:52px;align-items:center;
+      max-width:1280px;margin:0 auto;width:100%;
       font-family:'Archivo',system-ui,-apple-system,sans-serif;
     }
     .wb-hero-inner *{font-family:inherit}
     .wb-hero-left{display:flex;flex-direction:column}
-    .wb-brand-badge{
-      display:inline-flex;align-items:center;gap:12px;
-      margin-bottom:28px;width:fit-content;
-    }
-    .wb-f-icon{width:40px;height:44px;display:flex;flex-direction:column;gap:2px}
-    .wb-f-icon .row{display:flex;gap:2px}
-    .wb-f-icon .block{width:18px;height:14px;border-radius:2px;background:#fff}
-    .wb-f-icon .block-sm{width:18px;height:6px;border-radius:2px;background:#fff}
-    .wb-fdash-logo{height:auto;width:clamp(180px,30vw,300px)}
     .wb-hero-left h1{
       font-size:clamp(48px,7vw,80px);font-weight:900;color:#fff;
       text-transform:uppercase;letter-spacing:-0.04em;line-height:0.95;margin-bottom:20px;
@@ -640,32 +632,52 @@
     }
     .wb-btn-outline:hover{border-color:rgba(255,255,255,0.6);background:rgba(255,255,255,0.05)}
     .wb-app-row{display:flex;gap:10px;flex-wrap:wrap}
-    .wb-app-badge{
-      display:inline-flex;align-items:center;gap:8px;
-      background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);
-      padding:8px 16px;border-radius:10px;text-decoration:none;transition:background 0.2s;
-    }
-    .wb-app-badge:hover{background:rgba(255,255,255,0.12)}
-    .wb-app-badge svg{width:18px;height:18px;color:#fff}
-    .wb-app-badge .app-text{display:flex;flex-direction:column}
-    .wb-app-badge .app-text .small{font-size:8px;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.04em}
-    .wb-app-badge .app-text .store{font-size:13px;font-weight:700;color:#fff}
+    .wb-store-badges-link{display:inline-block;text-decoration:none}
+    .wb-store-badges-img{height:40px;width:auto;display:block}
     .wb-hero-right{display:flex;flex-direction:column;align-items:center;gap:20px}
-    .wb-sports-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;width:100%;max-width:420px}
+    .wb-sports-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;width:100%;max-width:580px}
     .wb-sport-tile{
-      border-radius:16px;padding:28px 20px;display:flex;flex-direction:column;
+      position:relative;border-radius:20px;padding:36px 24px;display:flex;flex-direction:column;
       align-items:center;justify-content:center;text-align:center;
-      border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04);
-      backdrop-filter:blur(4px);min-height:140px;transition:all 0.2s;
-      text-decoration:none;cursor:pointer;
+      border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.04);
+      backdrop-filter:blur(4px);min-height:220px;transition:all 0.25s ease;
+      text-decoration:none;cursor:pointer;overflow:hidden;
+      box-shadow:0 4px 20px rgba(0,0,0,0.15);
     }
-    .wb-sport-tile:hover{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.2)}
-    .wb-sport-tile .tile-logo{font-size:28px;font-weight:900;color:#fff;letter-spacing:0.02em;margin-bottom:4px}
-    .wb-sport-tile .tile-name{font-size:10px;font-weight:600;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:0.06em}
+    .wb-sport-tile:hover{
+      border-color:rgba(255,255,255,0.35);
+      transform:translateY(-4px);
+      box-shadow:0 8px 32px rgba(0,0,0,0.3);
+    }
+    .wb-tile-has-bg:hover{background:transparent}
+    .wb-tile-bg-img{
+      position:absolute;inset:0;width:100%;height:100%;
+      object-fit:cover;z-index:0;
+      transition:transform 0.4s ease;
+    }
+    .wb-sport-tile:hover .wb-tile-bg-img{transform:scale(1.05)}
+    .wb-tile-overlay{
+      position:absolute;inset:0;z-index:1;
+      background:linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.65) 100%);
+    }
+    .wb-tile-logo-img{
+      position:relative;z-index:2;
+      height:50px;width:auto;max-width:85%;
+      object-fit:contain;margin-bottom:10px;
+      filter:brightness(0) invert(1) drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+    }
+    .wb-tile-logo-natural{
+      filter:none;
+      drop-shadow:0 2px 8px rgba(0,0,0,0.5);
+    }
+    .wb-sport-tile .tile-logo{position:relative;z-index:2;font-size:38px;font-weight:900;color:#fff;letter-spacing:0.02em;margin-bottom:8px;text-shadow:0 2px 10px rgba(0,0,0,0.5)}
+    .wb-sport-tile .tile-name{position:relative;z-index:2;font-size:11px;font-weight:700;color:rgba(255,255,255,0.95);text-transform:uppercase;letter-spacing:0.08em;text-shadow:0 1px 6px rgba(0,0,0,0.6)}
     .wb-sport-tile .tile-status{
-      font-size:9px;font-weight:700;color:rgba(255,255,255,0.3);
-      background:rgba(255,255,255,0.06);padding:3px 10px;border-radius:20px;
-      margin-top:10px;text-transform:uppercase;letter-spacing:0.06em;
+      position:relative;z-index:2;
+      font-size:9px;font-weight:700;color:rgba(255,255,255,0.75);
+      background:rgba(255,255,255,0.15);padding:4px 12px;border-radius:20px;
+      margin-top:12px;text-transform:uppercase;letter-spacing:0.06em;
+      backdrop-filter:blur(4px);
     }
     .wb-sport-tile .tile-status.live{color:#00E87B;background:rgba(0,232,123,0.1)}
     .wb-sport-tile.more{border-style:dashed;border-color:rgba(255,255,255,0.1)}
@@ -675,7 +687,7 @@
       .wb-hero{padding:60px 32px;min-height:auto}
       .wb-hero-inner{grid-template-columns:1fr;gap:48px}
       .wb-hero-right{order:-1}
-      .wb-sports-grid{max-width:360px}
+      .wb-sports-grid{max-width:420px}
     }
     @media (max-width:640px){
       .wb-hero{padding:40px 20px}
@@ -683,11 +695,17 @@
       .wb-cta-row{flex-direction:column}
       .wb-btn-main,.wb-btn-outline{width:100%;justify-content:center;box-sizing:border-box}
       .wb-app-row{flex-direction:column}
-      .wb-app-badge{justify-content:center}
+      .wb-store-badges-img{height:36px}
       .wb-sports-grid{gap:10px}
-      .wb-sport-tile{padding:20px 14px;min-height:110px}
-      .wb-sport-tile .tile-logo{font-size:22px}
+      .wb-sport-tile{padding:24px 16px;min-height:160px}
+      .wb-sport-tile .tile-logo{font-size:28px}
+      .wb-tile-logo-img{height:38px}
     }
+    /* Sport Badges */
+    .sport-badges{display:flex;align-items:center;gap:8px;margin-bottom:20px}
+    .sport-badge{font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:5px 12px;border-radius:6px;display:inline-flex;align-items:center;gap:5px}
+    .sport-badge.league{background:rgba(20,0,255,0.8);color:#fff}
+    .sport-badge.status{background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.5);backdrop-filter:blur(4px)}
     /* How It Works */
     .wb-hiw-section{background:#fff;padding:72px 40px}
     .wb-hiw-inner{
@@ -809,6 +827,365 @@
       height:16px;
       flex:0 0 auto;
       opacity:0.95;
+    }
+    /* Tiers Popup Card Overrides */
+    .tier-card-free{
+      background:linear-gradient(135deg,#E6F2FF 0%,#D1E7FF 100%);
+      border-color:#0000FF;
+      color:#000;
+    }
+    .tier-card-free .tier-check-icon path{
+      stroke:#0000FF;
+    }
+    .tier-card-member{
+      background:linear-gradient(135deg,#0000FF 0%,#2c2cff 100%);
+      border-color:#0000FF;
+      color:#fff;
+    }
+    .tier-card-member .tier-check-icon path{
+      stroke:#fff;
+    }
+    .tier-card-member .tier-price-free-text{
+      color:#fff;
+    }
+    .tier-card-member .tier-free-condition{
+      color:#fff;
+      opacity:0.85;
+    }
+    .tier-card-movement-creator{
+      background:linear-gradient(135deg,#1a1a1a 0%,#2d2d2d 100%);
+      border-color:#0000FF;
+      color:#fff;
+    }
+    .tier-card-movement-creator .tier-check-icon path{
+      stroke:#fff;
+    }
+    .tier-card-movement-creator .tier-price-free-text{
+      color:#00FF88;
+    }
+    .tier-card-movement-creator .tier-free-condition{
+      color:#fff;
+      opacity:0.85;
+    }
+    .tier-card-free .tier-free-condition{
+      color:#000;
+      opacity:0.8;
+    }
+    .tier-card-cta-free{
+      background:#0000FF;
+      color:#fff;
+      border-color:#0000FF;
+    }
+    .tier-card-cta-free:hover{
+      background:#2c2cff;
+      transform:translateY(-2px);
+      box-shadow:0 4px 12px rgba(0,0,255,0.3);
+    }
+    .tier-card-cta-member{
+      background:#fff;
+      color:#0000FF;
+      border-color:#fff;
+    }
+    .tier-card-cta-member:hover{
+      background:rgba(255,255,255,0.9);
+      transform:translateY(-2px);
+      box-shadow:0 4px 12px rgba(255,255,255,0.3);
+    }
+    .tier-card-cta-movement-creator{
+      background:#0000FF;
+      color:#fff;
+      border-color:#0000FF;
+    }
+    .tier-card-cta-movement-creator:hover{
+      background:#2c2cff;
+      transform:translateY(-2px);
+      box-shadow:0 4px 12px rgba(0,0,255,0.3);
+    }
+    .tiers-cards-container{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:24px;
+      max-width:100%;
+      margin:0 auto;
+    }
+    @media (max-width:1200px){
+      .tiers-cards-container{
+        grid-template-columns:1fr;
+        gap:32px;
+      }
+    }
+
+    /* Sport Panel Layout (WBL / WPS sections) */
+    .sport-panel-section{
+      height:auto !important;
+      min-height:auto !important;
+      padding:60px clamp(20px,4vw,60px) !important;
+      display:block !important;
+      position:relative;
+    }
+    .sport-panel-section::before{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:rgba(10,10,30,0.45);
+      z-index:0;
+    }
+    .sport-panel-section > *{
+      position:relative;
+      z-index:1;
+    }
+    .sport-panel-topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:48px;
+      padding-bottom:24px;
+      border-bottom:1px solid rgba(255,255,255,0.15);
+      max-width:100%;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .sport-panel-brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+    .sport-panel-logo{
+      height:52px;
+      border-radius:10px;
+      object-fit:contain;
+    }
+    .sport-panel-cta{
+      font-size:15px;
+      font-weight:700;
+      color:#fff;
+      background:#1400FF;
+      padding:12px 28px;
+      border-radius:40px;
+      text-decoration:none;
+      transition:opacity 0.2s;
+      border:none;
+      cursor:pointer;
+      display:inline-flex;
+      align-items:center;
+    }
+    .sport-panel-cta:hover{opacity:0.85}
+    .sport-panel-cta.fsp-btn-locked{
+      background:rgba(20,0,255,0.5);
+      cursor:default;
+    }
+    .sport-panels{
+      display:grid;
+      grid-template-columns:1fr 60px 1fr;
+      gap:0;
+      align-items:start;
+      max-width:100%;
+      margin:0 auto;
+    }
+    .sport-flow-bridge{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      padding:40px 0;
+      gap:8px;
+      min-height:400px;
+    }
+    .sport-flow-line{
+      width:2px;
+      flex:1;
+      background:linear-gradient(180deg,transparent 0%,#1400FF 50%,transparent 100%);
+    }
+    .sport-flow-arrow{
+      width:44px;
+      height:44px;
+      border-radius:50%;
+      background:#1400FF;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-shrink:0;
+      box-shadow:0 0 20px rgba(20,0,255,0.4);
+    }
+    .sport-flow-arrow svg{width:18px;height:18px;color:#fff}
+    .sport-panel{
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+    }
+    .sport-panel-label{
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:0.1em;
+      text-transform:uppercase;
+      margin-bottom:8px;
+      padding-bottom:10px;
+      display:inline-block;
+    }
+    .sport-panel-label.start{color:#6366F1;border-bottom:2px solid #6366F1}
+    .sport-panel-label.goal{color:#C9952B;border-bottom:2px solid #C9952B}
+    .sp-card{
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,0.1);
+      padding:24px;
+      background:rgba(255,255,255,0.06);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+      transition:box-shadow 0.2s;
+      position:relative;
+    }
+    .sp-card:hover{box-shadow:0 4px 24px rgba(0,0,0,0.2)}
+    .sp-card-img{
+      width:100%;
+      height:160px;
+      object-fit:cover;
+      border-radius:12px;
+      margin-bottom:16px;
+    }
+    .sp-card-eyebrow{
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      color:rgba(255,255,255,0.6);
+      margin-bottom:12px;
+    }
+    .sp-card h3{
+      font-size:clamp(20px,2vw,26px);
+      font-weight:800;
+      color:#fff;
+      letter-spacing:-0.01em;
+      line-height:1.25;
+      margin-bottom:10px;
+    }
+    .sp-card p{
+      font-size:15px;
+      color:rgba(255,255,255,0.7);
+      line-height:1.6;
+    }
+    .sp-card-cta{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      margin-top:16px;
+      font-size:14px;
+      font-weight:700;
+      color:#818CF8;
+      text-decoration:none;
+      padding:10px 20px;
+      background:rgba(99,102,241,0.12);
+      border-radius:10px;
+      border:1px solid rgba(99,102,241,0.25);
+      transition:background 0.2s;
+    }
+    .sp-card-cta:hover{background:rgba(99,102,241,0.2)}
+    .sp-card-cta svg{width:16px;height:16px}
+    .sp-card-icon-badge{
+      position:absolute;
+      top:20px;
+      right:20px;
+      width:44px;
+      height:44px;
+      border-radius:12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .sp-card-icon-badge svg{width:22px;height:22px}
+    .sp-card-icon-badge.sp-badge{background:rgba(99,102,241,0.15)}
+    .sp-card-icon-badge.sp-badge svg{color:#818CF8}
+    .sp-card-icon-badge.dollar-badge{background:rgba(16,185,129,0.15)}
+    .sp-card-icon-badge.dollar-badge svg{color:#34D399}
+    .sp-card-featured{
+      background:rgba(10,10,10,0.85);
+      border-color:rgba(201,149,43,0.25);
+      backdrop-filter:blur(20px);
+      -webkit-backdrop-filter:blur(20px);
+    }
+    .sp-card-featured .sp-card-eyebrow{color:#C9952B}
+    .sp-card-featured .highlight{color:#fff;font-weight:700}
+    .sp-card-goal .sp-card-eyebrow{color:#C9952B}
+    .sp-stat-row{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+    .sp-stat-card{
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,0.1);
+      padding:22px 16px;
+      text-align:center;
+      background:rgba(255,255,255,0.05);
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+    }
+    .sp-stat-num{
+      font-size:32px;
+      font-weight:900;
+      color:#fff;
+      margin-bottom:6px;
+    }
+    .sp-stat-label{
+      font-size:13px;
+      color:rgba(255,255,255,0.6);
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:0.04em;
+    }
+    .sp-app-row{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      padding:16px 20px;
+      background:rgba(255,255,255,0.05);
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,0.08);
+      margin-top:4px;
+    }
+    .sp-app-label{
+      font-size:13px;
+      font-weight:700;
+      color:rgba(255,255,255,0.6);
+      text-transform:uppercase;
+      letter-spacing:0.06em;
+      margin-right:auto;
+    }
+    .sp-app-badge{
+      font-size:13px;
+      font-weight:600;
+      color:#818CF8;
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.12);
+      padding:8px 18px;
+      border-radius:10px;
+      text-decoration:none;
+    }
+    @media (max-width:900px){
+      .sport-panel-section{
+        padding:48px 20px !important;
+      }
+      .sport-panels{
+        grid-template-columns:1fr;
+        gap:32px;
+      }
+      .sport-flow-bridge{
+        flex-direction:row;
+        padding:12px 0;
+        min-height:auto;
+      }
+      .sport-flow-line{
+        width:auto;
+        height:2px;
+        flex:1;
+        background:linear-gradient(90deg,transparent 0%,#1400FF 50%,transparent 100%);
+      }
+      .sport-panel-topbar{
+        flex-direction:column;
+        gap:16px;
+        align-items:stretch;
+      }
     }
   </style>
 </head>
@@ -1005,168 +1382,221 @@
         <img src="./fsp-games/images/compass-rose.svg" alt="Compass Rose" class="philosophy-compass" onerror="this.style.display='none'" loading="lazy">
       </section>
 
-      <!-- Next Section with Background -->
-      <section class="section-with-bg">
-        <div class="cards-container">
-          <!-- Best Bowler Card (Left) -->
-          <div class="gradient-card">
-            <div class="card-content">
-              <div class="card-header">
-                <div class="card-logo">
-                  <img src="./src/assets/images/fsp_best_bowler_logo.png" alt="Best Bowler Logo" class="logo-img" loading="lazy">
-                </div>
-                <div class="card-header-text">
-                  <p class="card-description">Prove that you are the best bowler in the world.</p>
-                  <button class="card-button card-button-wbb">Join WBB</button>
-                </div>
+      <!-- WBL Section — Two Panel Layout -->
+      <section class="section-with-bg sport-panel-section">
+        <div class="sport-panel-topbar">
+          <div class="sport-panel-brand">
+            <img src="./src/assets/images/fsp_best_bowler_logo.png" alt="Best Bowler Logo" class="sport-panel-logo" loading="lazy">
+            <a href="#" class="sport-panel-cta fsp-btn-locked" aria-disabled="true" tabindex="-1">
+              <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:14px;height:14px;margin-right:4px"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>
+              Enter Arena
+            </a>
+          </div>
+          <div class="sport-panel-brand">
+            <a href="#" class="sport-panel-cta fsp-btn-locked" aria-disabled="true" tabindex="-1">
+              <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:14px;height:14px;margin-right:4px"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>
+              Join WBL
+            </a>
+            <img src="./fsp-games/images/wbl.svg" alt="WBL Logo" class="sport-panel-logo" loading="lazy">
+          </div>
+        </div>
+
+        <div class="sport-panels">
+          <!-- LEFT: Start Here -->
+          <div class="sport-panel">
+            <span class="sport-panel-label start">Start Here</span>
+
+            <div class="sp-card">
+              <img src="./src/assets/images/wbl-bowling-challenge.png" alt="Player recording bowling challenge" class="sp-card-img" loading="lazy">
+              <div class="sp-card-eyebrow">Show Your Skills</div>
+              <h3>Think You're the Best Bowler? Prove It</h3>
+              <p>Record your game from any lane in the world. AI verifies your score instantly. No judges, no politics &mdash; just your performance against the global leaderboard.</p>
+              <a href="#" class="sp-card-cta">
+                Enter the Arena
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+
+            <div class="sp-card">
+              <div class="sp-card-icon-badge sp-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
               </div>
-              <div class="card-grid">
-                <div class="grid-item merged-row">
-                  <div class="grid-text">
-                    <div class="grid-text-title">SHOW YOUR SKILLS</div>
-                   
-                  </div>
-                  <img src="./src/assets/images/fsp_best_bowler_image_1.jpg" alt="Show Your Skills" class="grid-image" loading="lazy">
-                </div>
-                <div class="grid-item merged-row">
-                  <div class="grid-text">
-                    <div class="grid-text-title">EARN SPs</div>
-                    <div class="grid-text-subtitle">START YOUR POOL</div>
-                  </div>
-                  <img src="./src/assets/images/ATHLETESTASH.jpg" alt="Deposit & Grow Your Athletestash" class="grid-image" loading="lazy">
-                </div>
-                <div class="grid-item">
-                  <div class="grid-text">
-                    <div class="grid-text-title">Start a Pool, Earn Payouts</div>
-                  </div>
-                  <img src="./src/assets/images/fsp_best_bowler_image_3.jpg" alt="Refer For Rewards" class="grid-image" loading="lazy">
-                </div>
-                <div class="grid-item grid-item-download-app">
-                  <div class="grid-text grid-text-top">
-                    <div class="grid-text-title">DOWNLOAD FSP APP</div>
-                  </div>
-                  <div class="grid-image-full">
-                    <img src="./src/assets/images/googleplaystore-appstore.png" alt="Download FSP App" class="grid-image" loading="lazy">
-                  </div>
-                </div>
+              <div class="sp-card-eyebrow">Earn as You Play</div>
+              <h3>Every Frame Earns SPs</h3>
+              <p>Every verified session generates SPs. Use them to enter Arena Majors, convert to Golden Tickets, or climb the competition tiers.</p>
+            </div>
+
+            <div class="sp-card">
+              <div class="sp-card-icon-badge dollar-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
               </div>
+              <div class="sp-card-eyebrow">Movement Creator</div>
+              <h3>Start an Arena, Earn Payouts</h3>
+              <p>Build your own bowling arena on FSP. Every player who competes in your arena generates revenue that flows back to you.</p>
+              <a href="#" class="sp-card-cta">
+                Launch an Arena
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+
+            <div class="sp-app-row">
+              <span class="sp-app-label">Download FSP</span>
+              <a href="#" class="sp-app-badge">App Store</a>
+              <a href="#" class="sp-app-badge">Google Play</a>
             </div>
           </div>
-          <!-- WBL Card (Right) -->
-          <div class="gradient-card">
-            <div class="card-content">
-              <div class="card-header">
-                <div class="card-logo">
-                  <img src="./fsp-games/images/wbl.svg" alt="WBL Logo" class="logo-img" loading="lazy">
-                </div>
-                <div class="card-header-text">
-                  <p class="card-description">The Best Bowling League in the World.</p>
-                  <button class="card-button card-button-wbb">Join WBL</button>
-                </div>
+
+          <!-- FLOW BRIDGE -->
+          <div class="sport-flow-bridge">
+            <div class="sport-flow-line"></div>
+            <div class="sport-flow-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+            <div class="sport-flow-line"></div>
+          </div>
+
+          <!-- RIGHT: Where You're Heading -->
+          <div class="sport-panel">
+            <span class="sport-panel-label goal">Where You're Heading</span>
+
+            <div class="sp-card sp-card-featured">
+              <img src="./src/assets/images/wbl-championship-finals.png" alt="Championship Finals Stage" class="sp-card-img" loading="lazy">
+              <div class="sp-card-eyebrow">The Ultimate Prize</div>
+              <h3>Bowl in the Live Championship Finals</h3>
+              <p>Top players qualify for the <span class="highlight">live Championship Finals</span> &mdash; competing alongside <span class="highlight">Mookie Betts</span> and other world-class athletes for a <span class="highlight">$200,000* cash prize pool</span>. All expenses paid. Flight, hotel, everything.</p>
+            </div>
+
+            <div class="sp-stat-row">
+              <div class="sp-stat-card">
+                <div class="sp-stat-num">$200K*</div>
+                <div class="sp-stat-label">Cash Prize Pool</div>
               </div>
-              <div class="card-grid">
-                <div class="grid-item merged-row">
-                  <div class="grid-text">DYNAMIC PRIZE MONEY</div>
-                  <img src="./fsp-games/images/card_image1.jpg" alt="Card Image 1" class="grid-image" loading="lazy">
-                </div>
-                <div class="grid-item">
-                  <div class="grid-text"><span class="text-large">20</span> LEADING ATHLETES</div>
-                  <img src="./fsp-games/images/card_image2.jpg" alt="Card Image 2" class="grid-image" loading="lazy">
-                </div>
-                <div class="grid-item">
-                  <div class="grid-text">GLOBAL ICONIC VENUES</div>
-                  <img src="./src/assets/images/hudson-yards.png" alt="Card Image 3" class="grid-image" loading="lazy">
-                </div>
-                <div class="grid-item merged-row">
-                  <div class="grid-text">DYNAMIC FORMAT</div>
-                  <img src="./src/assets/images/mixer-gender.jpg" alt="Card Image 1" class="grid-image" loading="lazy">
-                </div>
+              <div class="sp-stat-card">
+                <div class="sp-stat-num">20+</div>
+                <div class="sp-stat-label">Leading Athletes</div>
               </div>
+            </div>
+
+            <div class="sp-card sp-card-goal">
+              <div class="sp-card-eyebrow">The Path</div>
+              <h3>Arena Majors &rarr; Live Finals</h3>
+              <p>Compete in digital Arena Majors from any lane. The top-ranked bowlers advance to the live stage &mdash; mixed gender, all skill levels welcome.</p>
+            </div>
+
+            <div class="sp-card sp-card-goal">
+              <div class="sp-card-eyebrow">What You Get</div>
+              <h3>Fully Funded. No Catch.</h3>
+              <p>Qualifying players receive full travel coverage &mdash; flights, accommodation, and event access. You earned your spot. We cover the rest.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Section 5 with Background -->
-      <section class="section-5-with-bg">
-        <div class="cards-container">
-          <!-- Best Squash Player Card (Left) -->
-          <div class="gradient-card">
-            <div class="card-content">
-              <div class="card-header">
-                <div class="card-logo">
-                  <img src="./src/assets/images/fsp_best_squash_logo.png" alt="Best Squash Player Logo" class="logo-img" loading="lazy">
-                </div>
-                <div class="card-header-text">
-                  <p class="card-description">Prove that you are the best squash player in the world.</p>
-                  <button class="card-button card-button-wbb">Join WBS</button>
-                </div>
+      <!-- WPS Section — Two Panel Layout -->
+      <section class="section-5-with-bg sport-panel-section">
+        <div class="sport-panel-topbar">
+          <div class="sport-panel-brand">
+            <img src="./src/assets/images/fsp_best_squash_logo.png" alt="Best Squash Player Logo" class="sport-panel-logo" loading="lazy">
+            <a href="#" class="sport-panel-cta fsp-btn-locked" aria-disabled="true" tabindex="-1">
+              <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:14px;height:14px;margin-right:4px"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>
+              Enter Arena
+            </a>
+          </div>
+          <div class="sport-panel-brand">
+            <a href="#" class="sport-panel-cta fsp-btn-locked" aria-disabled="true" tabindex="-1">
+              <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:14px;height:14px;margin-right:4px"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>
+              Join WPS
+            </a>
+            <img src="./src/assets/images/wps_logo.png" alt="WPS Logo" class="sport-panel-logo" loading="lazy">
+          </div>
+        </div>
+
+        <div class="sport-panels">
+          <!-- LEFT: Start Here -->
+          <div class="sport-panel">
+            <span class="sport-panel-label start">Start Here</span>
+
+            <div class="sp-card">
+              <img src="./src/assets/images/wps-squash-challenge.png" alt="Player recording squash session" class="sp-card-img" loading="lazy">
+              <div class="sp-card-eyebrow">Show Your Skills</div>
+              <h3>Think You're the Best Squash Player? Prove It</h3>
+              <p>Record your session from any court in the world. AI verifies your score instantly. No judges, no politics &mdash; just your performance against the global squash leaderboard.</p>
+              <a href="#" class="sp-card-cta">
+                Enter the Arena
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+
+            <div class="sp-card">
+              <div class="sp-card-icon-badge sp-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
               </div>
-              <div class="card-grid">
-                <div class="grid-item merged-row">
-                  <div class="grid-text">
-                    <div class="grid-text-title">SHOW YOUR SKILLS</div>
-                    <div class="grid-text-subtitle">PARTICIPATE NOW</div>
-                  </div>
-                  <img src="./src/assets/images/fsp_best_squash_image_1.jpg" alt="Show Your Skills" class="grid-image" loading="lazy">
-                </div>
-                <div class="grid-item merged-row">
-                  <div class="grid-text">
-                    <div class="grid-text-title">EARN SPs</div>
-                    <div class="grid-text-subtitle">START YOUR POOL</div>
-                  </div>
-                  <img src="./src/assets/images/ATHLETESTASH.jpg" alt="Deposit & Grow Your Athletestash" class="grid-image" loading="lazy">
-                </div>
-                <div class="grid-item">
-                  <div class="grid-text">
-                    <div class="grid-text-title">Start a Pool, Earn Payouts</div>
-                  </div>
-                  <img src="./src/assets/images/fsp_best_squash_image_3.jpg" alt="Refer For Rewards" class="grid-image" loading="lazy">
-                </div>
-                <div class="grid-item grid-item-download-app">
-                  <div class="grid-text grid-text-top">
-                    <div class="grid-text-title">DOWNLOAD FSP APP</div>
-                  </div>
-                  <div class="grid-image-full">
-                    <img src="./src/assets/images/googleplaystore-appstore.png" alt="Download FSP App" class="grid-image" loading="lazy">
-                  </div>
-                </div>
+              <div class="sp-card-eyebrow">Earn as You Play</div>
+              <h3>Every Rally Earns SPs</h3>
+              <p>Every verified session generates SPs. Use them to enter Arena Majors, convert to Golden Tickets, or climb the competition tiers.</p>
+            </div>
+
+            <div class="sp-card">
+              <div class="sp-card-icon-badge dollar-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
               </div>
+              <div class="sp-card-eyebrow">Movement Creator</div>
+              <h3>Start an Arena, Earn Payouts</h3>
+              <p>Build your own squash arena on FSP. Every player who competes in your arena generates revenue that flows back to you.</p>
+              <a href="#" class="sp-card-cta">
+                Launch an Arena
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+
+            <div class="sp-app-row">
+              <span class="sp-app-label">Download FSP</span>
+              <a href="#" class="sp-app-badge">App Store</a>
+              <a href="#" class="sp-app-badge">Google Play</a>
             </div>
           </div>
-          <!-- WPS Card (Right) -->
-          <div class="gradient-card">
-            <div class="card-content">
-              <div class="card-header">
-                <div class="card-logo">
-                  <img src="./src/assets/images/wps_logo.png" alt="WPS Logo" class="logo-img" loading="lazy">
-                </div>
-                <div class="card-header-text">
-                  <p class="card-description">The Best Squash League in the World.</p>
-                  <button class="card-button card-button-wbb">Join WPS</button>
-                </div>
+
+          <!-- FLOW BRIDGE -->
+          <div class="sport-flow-bridge">
+            <div class="sport-flow-line"></div>
+            <div class="sport-flow-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+            <div class="sport-flow-line"></div>
+          </div>
+
+          <!-- RIGHT: Where You're Heading -->
+          <div class="sport-panel">
+            <span class="sport-panel-label goal">Where You're Heading</span>
+
+            <div class="sp-card sp-card-featured">
+              <img src="./src/assets/images/wps-championship-finals.png" alt="Championship Finals Stage" class="sp-card-img" loading="lazy">
+              <div class="sp-card-eyebrow">The Ultimate Prize</div>
+              <h3>Play in the Live Championship Finals</h3>
+              <p>Top players qualify for the <span class="highlight">live Championship Finals</span> &mdash; competing alongside <span class="highlight">Saurav Ghosal</span> and other world-class athletes for a <span class="highlight">$200,000 cash prize pool</span>. All expenses paid. Flight, hotel, everything.</p>
+            </div>
+
+            <div class="sp-stat-row">
+              <div class="sp-stat-card">
+                <div class="sp-stat-num">$200K</div>
+                <div class="sp-stat-label">Cash Prize Pool</div>
               </div>
-              <div class="card-grid">
-                <div class="grid-item merged-row">
-                  <div class="grid-text">
-                    <div>MASSIVE PRIZE MONEY</div>
-                    <div class="grid-text-desc">STARTING PRIZE $200,000</div>
-                  </div>
-                  <img src="./src/assets/images/prize-money.jpg" alt="Massive Prize Money" class="grid-image" loading="lazy">
-                </div>
-                <div class="grid-item">
-                  <div class="grid-text"><span class="text-large">20</span> LEADING ATHLETES</div>
-                  <img src="./src/assets/images/wps-image-2.jpg" alt="24 Leading Athletes" class="grid-image" loading="lazy">
-                </div>
-                <div class="grid-item">
-                  <div class="grid-text">GLOBAL ICONIC VENUES</div>
-                  <img src="./src/assets/images/hudson-yards.png" alt="Global Iconic Venues" class="grid-image" loading="lazy">
-                </div>
-                <div class="grid-item merged-row">
-                  <div class="grid-text">DYNAMIC FORMAT</div>
-                  <img src="./src/assets/images/wps-image-4.jpg" alt="Dynamic Format" class="grid-image" loading="lazy">
-                </div>
+              <div class="sp-stat-card">
+                <div class="sp-stat-num">20+</div>
+                <div class="sp-stat-label">Leading Athletes</div>
               </div>
+            </div>
+
+            <div class="sp-card sp-card-goal">
+              <div class="sp-card-eyebrow">The Path</div>
+              <h3>Arena Majors &rarr; Live Finals</h3>
+              <p>Compete in digital Arena Majors from any court. The top-ranked players advance to the live stage &mdash; mixed gender, all skill levels welcome.</p>
+            </div>
+
+            <div class="sp-card sp-card-goal">
+              <div class="sp-card-eyebrow">What You Get</div>
+              <h3>Fully Funded. No Catch.</h3>
+              <p>Qualifying players receive full travel coverage &mdash; flights, accommodation, and event access. You earned your spot. We cover the rest.</p>
             </div>
           </div>
         </div>
@@ -1183,10 +1613,7 @@
           <div class="kt-cards-row">
             <div class="kt-card">
               <div class="kt-card-img">
-                <div class="kt-bg kt-bg-verify"></div>
-                <div class="kt-img-label">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:40px;height:40px;color:rgba(255,255,255,0.5)"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-                </div>
+                <img src="./src/assets/images/kt-precision-verification.png" alt="AI precision verification tracking an athlete" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit">
               </div>
               <div class="kt-card-text">
                 <h3>Precision Verification</h3>
@@ -1196,10 +1623,7 @@
 
             <div class="kt-card">
               <div class="kt-card-img">
-                <div class="kt-bg kt-bg-compete"></div>
-                <div class="kt-img-label">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:40px;height:40px;color:rgba(255,255,255,0.5)"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                </div>
+                <img src="./src/assets/images/kt-global-competition.png" alt="Athletes competing on a global stage" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit">
               </div>
               <div class="kt-card-text">
                 <h3>Global Competition</h3>
@@ -1211,10 +1635,7 @@
           <div class="kt-cards-row">
             <div class="kt-card">
               <div class="kt-card-img">
-                <div class="kt-bg kt-bg-earn"></div>
-                <div class="kt-img-label">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:40px;height:40px;color:rgba(255,255,255,0.5)"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                </div>
+                <img src="./src/assets/images/kt-earn-day-one.png" alt="Athlete earning rewards from training" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit">
               </div>
               <div class="kt-card-text">
                 <h3>Earn From Day One</h3>
@@ -1224,10 +1645,7 @@
 
             <div class="kt-card">
               <div class="kt-card-img">
-                <div class="kt-bg kt-bg-access"></div>
-                <div class="kt-img-label">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:40px;height:40px;color:rgba(255,255,255,0.5)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                </div>
+                <img src="./src/assets/images/kt-inner-circle.png" alt="Exclusive VIP championship event" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit">
               </div>
               <div class="kt-card-text">
                 <h3>Access the Inner Circle</h3>
@@ -1383,10 +1801,6 @@
 
           <!-- Left -->
           <div class="wb-hero-left">
-            <div class="wb-brand-badge">
-              <img src="./src/assets/images/f-dash.svg" alt="World's Best" class="wb-fdash-logo">
-            </div>
-
             <h1>World's<br>Best</h1>
 
             <p class="wb-sub">Prove that you are the world's best. Compete across multiple sports, get AI-verified, and earn your place in the global rankings.</p>
@@ -1428,19 +1842,8 @@
             </div>
 
             <div class="wb-app-row">
-              <a href="#" class="wb-app-badge fsp-btn-locked" aria-disabled="true" tabindex="-1">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                <div class="app-text">
-                  <span class="small">Get it on</span>
-                  <span class="store">Google Play</span>
-                </div>
-              </a>
-              <a href="#" class="wb-app-badge fsp-btn-locked" aria-disabled="true" tabindex="-1">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 5-2.5 5-4.5 0-1-.5-1.5-1-2.5C18.5 13.5 17 12 17 10c0-3-2-5-5-5S7 7 7 10c0 2-1.5 3.5-3 5-.5 1-1 1.5-1 2.5 0 2 2 4.5 5 4.5 1.25 0 2.5-1.06 4-1.06z"/><path d="M12 2c1 1.5 2 3 2 5"/></svg>
-                <div class="app-text">
-                  <span class="small">Download on the</span>
-                  <span class="store">App Store</span>
-                </div>
+              <a href="#" class="wb-store-badges-link fsp-btn-locked" aria-disabled="true" tabindex="-1">
+                <img src="./src/assets/images/googleplaystore-appstore.png" alt="Download on Google Play and App Store" class="wb-store-badges-img" loading="lazy">
               </a>
             </div>
           </div>
@@ -1448,22 +1851,30 @@
           <!-- Right: Sports Grid -->
           <div class="wb-hero-right">
             <div class="wb-sports-grid">
-              <a href="#" class="wb-sport-tile">
-                <div class="tile-logo">WBL</div>
+              <a href="#" class="wb-sport-tile wb-tile-has-bg">
+                <img src="./src/assets/images/wbl_site_card_image_2.jpg" alt="" class="wb-tile-bg-img" loading="lazy">
+                <div class="wb-tile-overlay"></div>
+                <img src="./fsp-games/images/wbl.svg" alt="WBL" class="wb-tile-logo-img">
                 <div class="tile-name">World Bowling League</div>
                 <div class="tile-status">Coming Soon</div>
               </a>
-              <a href="#" class="wb-sport-tile">
-                <div class="tile-logo">WPS</div>
+              <a href="#" class="wb-sport-tile wb-tile-has-bg">
+                <img src="./fsp-games/images/worlds-best-squash-background.jpg" alt="" class="wb-tile-bg-img" loading="lazy">
+                <div class="wb-tile-overlay"></div>
+                <img src="./src/assets/images/wps_logo.png" alt="WPS" class="wb-tile-logo-img">
                 <div class="tile-name">World Premier Squash</div>
                 <div class="tile-status">Coming Soon</div>
               </a>
-              <a href="#" class="wb-sport-tile">
-                <div class="tile-logo">Rivals</div>
+              <a href="#" class="wb-sport-tile wb-tile-has-bg">
+                <img src="./src/assets/images/basketball-1v1.jpg" alt="" class="wb-tile-bg-img" loading="lazy">
+                <div class="wb-tile-overlay"></div>
+                <img src="./src/assets/images/rivals-logo.png" alt="Rivals" class="wb-tile-logo-img wb-tile-logo-natural">
                 <div class="tile-name">1v1 Basketball</div>
                 <div class="tile-status">Coming Soon</div>
               </a>
-              <a href="#" class="wb-sport-tile">
+              <a href="#" class="wb-sport-tile wb-tile-has-bg">
+                <img src="./src/assets/images/pong.png" alt="" class="wb-tile-bg-img" loading="lazy">
+                <div class="wb-tile-overlay"></div>
                 <div class="tile-logo">Pong</div>
                 <div class="tile-name">FSP Pong Arena</div>
                 <div class="tile-status">Coming Soon</div>
@@ -1512,15 +1923,17 @@
         <div class="bowler-container">
           <div class="bowler-content">
             <div class="bowler-category">01. Bowling</div>
+            <div class="sport-badges">
+              <span class="sport-badge league">World Bowling League</span>
+              <span class="sport-badge status">Coming Soon</span>
+            </div>
             <h2 class="bowler-title">
               <span class="bowler-title-line">WORLD'S BEST</span>
               <span class="bowler-title-line">BOWLER</span>
             </h2>
-            <p class="bowler-description">Vision-AI measures ball speed, rev rate, entry angle, and pocket-hit consistency. Rise the ladder to purpose-built finals lanes; the Top 10 advance to the WBL draft pool.</p>
+            <p class="bowler-description">AI-verified skill challenges from any lane in the world. Compete in solo sessions and league play, climb the global ladder, and rise to purpose-built championship lanes &mdash; where the top performers compete for a $200K* prize pool at the WBL Championship Finals.</p>
             <div class="bowler-buttons">
-              <button class="bowler-btn bowler-btn-rules" data-rules="bowler">Rules</button>
-              <button class="bowler-btn bowler-btn-explore">Explore</button>
-              <button class="bowler-btn bowler-btn-participate">Participate</button>
+              <a href="#" class="bowler-btn bowler-btn-participate" aria-disabled="true" tabindex="-1"><svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;margin-right:4px"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>Enter Arena</a>
             </div>
           </div>
         </div>
@@ -1534,58 +1947,86 @@
         <div class="squash-container">
           <div class="squash-content">
             <div class="squash-category">02. Squash</div>
+            <div class="sport-badges">
+              <span class="sport-badge league">World Premier Squash</span>
+              <span class="sport-badge status">Coming Soon</span>
+            </div>
             <h2 class="squash-title">
               <span class="squash-title-line">WORLD'S BEST</span>
               <span class="squash-title-line">SQUASH PLAYER</span>
             </h2>
-            <p class="squash-description">Vision-AI evaluates pace, accuracy, and movement economy in glass-court drills and rally scenarios. Rank globally and step onto a show court for finals; winners get a WPS access path.</p>
+            <p class="squash-description">AI-verified skill challenges from any court in the world. Compete in glass-court drills and ranked sessions, climb the global ladder, and step onto the show court &mdash; where 8 FSP Athletes and 12 AI-qualified challengers compete at the WPS Finals.</p>
             <div class="squash-buttons">
-              <button class="squash-btn squash-btn-rules" data-rules="squash">Rules</button>
-              <button class="squash-btn squash-btn-explore">Explore</button>
-              <button class="squash-btn squash-btn-participate">Participate</button>
+              <a href="#" class="squash-btn squash-btn-participate" aria-disabled="true" tabindex="-1"><svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;margin-right:4px"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>Enter Arena</a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- World's Best Cricket Player Section -->
+      <!-- World’s Best Cricket Player Section -->
       <section class="cricket-section">
         <div class="cricket-background">
           <div class="cricket-gradient-overlay"></div>
         </div>
         <div class="cricket-container">
           <div class="cricket-content">
-            <div class="cricket-category">03. World’s Best Cricket Player</div>
+            <div class="cricket-category">03. Cricket</div>
+            <div class="sport-badges">
+              <span class="sport-badge league">World’s Best Cricket Player</span>
+              <span class="sport-badge status">Coming Soon</span>
+            </div>
             <h2 class="cricket-title">
-              <span class="cricket-title-line">WORLD'S BEST</span>
+              <span class="cricket-title-line">WORLD’S BEST</span>
               <span class="cricket-title-line">CRICKET PLAYER</span>
             </h2>
-            <p class="cricket-description">Vision-AI scores shot timing, control, and range against pace and swing. Qualify remotely, climb a global ladder, and reach stadium finals; standouts enter pro showcases.</p>
+            <p class="cricket-description">AI-verified skill challenges from any pitch or net in the world. Compete in batting and bowling sessions, climb the global ladder, and reach the stadium stage &mdash; where the top performers compete at live Championship Finals.</p>
             <div class="cricket-buttons">
-              <button class="cricket-btn cricket-btn-rules" data-rules="cricket">Rules</button>
-              <button class="cricket-btn cricket-btn-explore">Explore</button>
-              <button class="cricket-btn cricket-btn-participate">Participate</button>
+              <a href="#" class="cricket-btn cricket-btn-participate" aria-disabled="true" tabindex="-1"><svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;margin-right:4px"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>Enter Arena</a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- World's Best Club Section -->
+      <!-- 1v1 Basketball Section -->
+      <section class="basketball-section" style="position:relative;min-height:500px;display:flex;align-items:flex-end;overflow:hidden;background:#0a0a1a">
+        <img src="./src/assets/images/basketball-1v1.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0.6" loading="lazy">
+        <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(90deg,rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.4) 50%,transparent 100%);z-index:1"></div>
+        <div style="position:relative;z-index:2;max-width:560px;padding:64px">
+          <div class="cricket-category" style="color:rgba(255,255,255,0.4)">04. 1v1 Basketball</div>
+          <div class="sport-badges">
+            <span class="sport-badge league">Rivals</span>
+            <span class="sport-badge status">Coming Soon</span>
+          </div>
+          <h2 style="font-size:clamp(36px,5vw,56px);font-weight:900;letter-spacing:-0.03em;line-height:1.05;color:#fff;text-transform:uppercase;margin-bottom:20px">
+            <span style="display:block">WORLD’S BEST</span>
+            <span style="display:block">1V1 PLAYER</span>
+          </h2>
+          <p style="font-size:15px;color:rgba(255,255,255,0.6);line-height:1.65;margin-bottom:32px">AI-verified skill challenges from any court in the world. Head-to-head sessions tracked and scored in real time. Compete, climb the global ladder, and advance to live Championship Finals.</p>
+          <div>
+            <a href="#" class="cricket-btn cricket-btn-participate" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:#0A0A0A;padding:14px 28px;border-radius:40px;font-size:13px;font-weight:700;text-decoration:none;border:none;cursor:pointer" aria-disabled="true" tabindex="-1"><svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;margin-right:4px"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>Enter Arena</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- World's Best Pong Section -->
       <section class="club-section">
         <div class="club-background">
           <div class="club-gradient-overlay"></div>
         </div>
         <div class="club-container">
           <div class="club-content">
-            <div class="club-category">04. World Water Pong</div>
+            <div class="club-category">05. Pong</div>
+            <div class="sport-badges">
+              <span class="sport-badge league">FSP Pong Arena</span>
+              <span class="sport-badge status">Coming Soon</span>
+            </div>
             <h2 class="club-title">
-              <span class="club-title-line">WORLD WATER</span>
-              <span class="club-title-line">PONG</span>
+              <span class="club-title-line">WORLD'S BEST</span>
+              <span class="club-title-line">PONG PLAYER</span>
             </h2>
+            <p class="club-description" style="font-size:15px;color:rgba(255,255,255,0.6);line-height:1.65;margin-bottom:32px">Every throw tracked and verified by AI. Compete across branded arena surfaces, climb the global leaderboard, and qualify for live finals.</p>
             <div class="club-buttons">
-              <button class="club-btn club-btn-rules" data-rules="water-pong">Rules</button>
-              <button class="club-btn club-btn-explore">Explore</button>
-              <button class="club-btn club-btn-participate">Participate</button>
+              <a href="#" class="club-btn club-btn-participate" aria-disabled="true" tabindex="-1"><svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;margin-right:4px"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>Enter Arena</a>
             </div>
           </div>
         </div>
@@ -2442,116 +2883,6 @@
     </div>
   </footer>
 
-  <!-- Tiers Popup Modal -->
-  <div class="tiers-popup" id="tiers-popup" aria-hidden="true">
-    <div class="tiers-popup-backdrop"></div>
-    <div class="tiers-popup-content">
-      <div class="tiers-popup-header">
-        <h2 class="tiers-popup-title">FIND THE PERFECT PLAN FOR YOU</h2>
-        <button class="tiers-popup-close" aria-label="Close tiers popup">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-      </div>
-      
-      <div class="tiers-cards-container">
-        <!-- Bronze Plan Card -->
-        <div class="tier-card tier-card-bronze">
-          <div class="tier-card-header">
-            <h3 class="tier-card-title">Bronze Plan</h3>
-            <div class="tier-card-price">
-              <span class="tier-price-amount">$ 9</span>
-              <span class="tier-price-period">PER MONTH</span>
-            </div>
-            <p class="tier-price-free">or FREE</p>
-            <p class="tier-free-condition">Free if you keep at least $ 1,000 monthly in your account or if you transfer your salary to FSP.</p>
-          </div>
-          
-          <div class="tier-card-benefits">
-            <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>All the benefits of your current plan and</span>
-            </div>
-            <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Access to FSP Games & Global Leaderboard</span>
-            </div>
-            <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Up to 4%* interest per annum on savings</span>
-            </div>
-            <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>1x FSP Champion Points on card spends</span>
-            </div>
-            <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Eligibility for monthly Golden Ticket draws</span>
-            </div>
-          </div>
-          
-          <a href="#" class="tier-card-cta tier-card-cta-bronze">Start with Bronze Plan</a>
-        </div>
-
-        <!-- Silver Plan Card -->
-        <div class="tier-card tier-card-silver">
-          <div class="tier-card-header">
-            <h3 class="tier-card-title">Silver Plan</h3>
-            <div class="tier-card-price">
-              <span class="tier-price-amount tier-price-free-text">FREE</span>
-            </div>
-            <p class="tier-free-condition">If you transfer your salary to FSP within 2 months.</p>
-          </div>
-          
-          <div class="tier-card-benefits">
-            <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Everything in the Bronze plan, and...</span>
-            </div>
-            <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Up to 6%* interest per annum on savings</span>
-            </div>
-            <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>2x FSP Champion Points on card spends</span>
-            </div>
-            <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Priority access to Pro Tier competitions</span>
-            </div>
-            <div class="tier-benefit-item">
-              <svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#0000FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Enhanced Golden Ticket allocation</span>
-            </div>
-          </div>
-          
-          <a href="#" class="tier-card-cta tier-card-cta-silver">Start with Silver Plan</a>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Competition Rules Popups -->
   <!-- World's Best Bowler Rules Popup -->

@@ -984,13 +984,14 @@ body {
 }
 
 .philosophy-container {
-    max-width: 1440px;
+    max-width: 100%;
     width: 100%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 0.7fr 1.8fr;
     gap: 80px;
     align-items: start;
+    padding: 0 clamp(20px, 4vw, 60px);
 }
 
 .philosophy-content {
@@ -1195,8 +1196,9 @@ body {
 }
 
 .ffs-container {
-    max-width: 1440px;
+    max-width: 100%;
     margin: 0 auto;
+    padding: 0 clamp(20px, 4vw, 60px);
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
@@ -1328,7 +1330,7 @@ body {
 }
 
 .cta-container {
-    max-width: 1440px;
+    max-width: 100%;
     width: 100%;
     text-align: center;
     display: flex;
@@ -1412,9 +1414,10 @@ body {
 }
 
 .last-section-container {
-    max-width: 1540px;
+    max-width: 100%;
     width: 100%;
     margin: 0 auto;
+    padding: 0 clamp(20px, 4vw, 60px);
     position: relative;
     z-index: 1;
 }
@@ -2873,8 +2876,9 @@ body {
 }
 
 .redeem-win-big-container {
-    max-width: 1310px;
+    max-width: 100%;
     margin: 0 auto;
+    padding: 0 clamp(0px, 2vw, 20px);
 }
 
 .redeem-win-big-header {
@@ -3156,7 +3160,7 @@ body {
     display: grid;
     grid-template-columns: 728px 1fr;
     gap: 50px;
-    max-width: 1440px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
