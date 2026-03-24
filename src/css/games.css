@@ -303,7 +303,8 @@
   }
 
   /* Hide Athletes tab on mobile */
-  .games-nav-item:last-child {
+  .games-nav > .games-nav-item:last-child,
+  .games-nav > .games-nav-disabled {
     display: none !important;
   }
 
