@@ -162,22 +162,22 @@
 
 .games-dropdown-menu {
   position: absolute;
-  bottom: 0;
+  top: 100%;
   left: 0;
-  background: rgba(0, 0, 0, 0.95);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 4px 4px 0 0;
-  min-width: 150px;
-  padding: 8px 0;
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  min-width: 140px;
+  padding: 6px 0;
   margin: 0;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(10px);
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  transform: translateY(-6px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
   z-index: 1000;
   list-style: none;
-  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
 }
 
 .games-nav-dropdown.active .games-dropdown-menu {
@@ -316,35 +316,20 @@
   /* Fix dropdown menu alignment on mobile */
   .games-dropdown-menu {
     position: absolute;
-    bottom: 0;
+    top: 100%;
+    bottom: auto;
     left: 0;
     right: auto;
     min-width: 120px;
     width: auto;
-    opacity: 1 !important;
-    visibility: visible !important;
-    display: block !important;
-    border-radius: 4px 4px 0 0;
-  }
-
-  .games-nav-dropdown.active .games-dropdown-menu {
-    opacity: 1 !important;
-    visibility: visible !important;
-    display: block !important;
-  }
-
-  .games-dropdown-menu li {
-    display: block !important;
-    visibility: visible !important;
+    border-radius: 0 0 8px 8px;
   }
 
   .games-dropdown-menu .games-nav-item {
     padding: 10px 16px;
     white-space: nowrap;
-    display: block !important;
+    display: block;
     width: 100%;
-    visibility: visible !important;
-    opacity: 1 !important;
   }
 
   /* Adjust hero section to accommodate disclaimer above nav */
