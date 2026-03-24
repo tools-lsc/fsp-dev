@@ -1206,9 +1206,7 @@
     }
     .fsp-hero-bg{
       position:absolute;inset:0;z-index:0;
-      background:linear-gradient(160deg,#0a0a1a,#0a0a2a,#1400FF,#0a1a3a);
-      background-size:300% 300%;
-      animation:fsp-hero-shift 14s ease-in-out infinite;
+      background:url('./src/assets/images/games-hero.jpg') center top / cover no-repeat;
     }
     .fsp-hero-bg::after{
       content:'';position:absolute;inset:0;
@@ -1511,7 +1509,6 @@
       <!-- FSP Games Hero -->
       <section class="fsp-hero">
         <div class="fsp-hero-bg" aria-hidden="true"></div>
-        <div class="fsp-hero-scans"></div>
         <div class="fsp-hero-content">
           <div class="fsp-hero-eyebrow">FSP Games</div>
           <h1 class="fsp-hero-h1">SPORTS<br><span class="blue">REBORN.</span></h1>
@@ -2555,7 +2552,9 @@
 
         <!-- HERO -->
         <section class="hero">
-          <div class="hero-bg" aria-hidden="true"></div>
+          <div class="hero-bg" aria-hidden="true">
+            <img src="./src/assets/images/unle-pot-banner.webp" alt="" class="wbl-hero-img" loading="lazy">
+          </div>
           <div class="hero-scans"></div>
           <div class="hero-content">
             <div class="hero-eyebrow">World Bowling League</div>
@@ -2739,14 +2738,14 @@
         <section class="updates fade-in">
           <div class="updates-header">
             <h2 class="updates-h2">Updates</h2>
-            <a href="https://www.worldbowlingleague.org/press.html" class="updates-all">View All <span>→</span></a>
+            <a href="https://www.leaguesportsco.com/press" class="updates-all" target="_blank" rel="noopener noreferrer">View All <span>→</span></a>
           </div>
           <div class="updates-track" id="wbl-v20-updates-track">
-            <a class="u-card" href="#"><div class="u-card-img"><img src="./src/assets/images/mookie-betts-meet-greet-313567.png" alt="Mookie Betts" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0" loading="lazy"><div class="u-card-content"><div class="u-card-tag">ESPN</div><div class="u-card-title">Dodgers Star Mookie Betts Buys WBL Franchise</div><div class="u-card-date">March 2025</div></div></div></a>
-            <a class="u-card" href="#"><div class="u-card-img"><img src="./src/assets/images/virat-kohli-signed-merchandise-4a7415.png" alt="Virat Kohli" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0" loading="lazy"><div class="u-card-content"><div class="u-card-tag">Reuters</div><div class="u-card-title">Virat Kohli Invests in World Bowling League</div><div class="u-card-date">May 2025</div></div></div></a>
-            <a class="u-card" href="#"><div class="u-card-img"><img src="./src/assets/images/wbl-championship-finals.png" alt="WBL championship lane" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0" loading="lazy"><div class="u-card-content"><div class="u-card-tag">Reuters</div><div class="u-card-title">Betts-Backed World Bowling League to Roll Out Next Year</div><div class="u-card-date">June 2025</div></div></div></a>
-            <a class="u-card" href="#"><div class="u-card-img"><img src="./src/assets/images/fsp_best_bowler_image_1.jpg" alt="Iconic bowling venue" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0" loading="lazy"><div class="u-card-content"><div class="u-card-tag">Bloomberg</div><div class="u-card-title">Dodgers Star Who's Bowled a 300 Game Buys Pro Team</div><div class="u-card-date">March 2025</div></div></div></a>
-            <a class="u-card" href="#"><div class="u-card-img"><img src="./src/assets/images/world-bowling-league.png" alt="WBL branding" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0" loading="lazy"><div class="u-card-content"><div class="u-card-tag">SportBusiness</div><div class="u-card-title">WBL's Transformative Plans for the Sport</div><div class="u-card-date">October 2023</div></div></div></a>
+            <a class="u-card" href="https://www.espn.com/mlb/story/_/id/44304093/dodgers-star-mookie-betts-purchases-world-bowling-league-franchise" target="_blank" rel="noopener noreferrer"><div class="u-card-img"><img src="./src/assets/images/mookie-betts-meet-greet-313567.png" alt="Mookie Betts" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0" loading="lazy"><div class="u-card-content"><div class="u-card-tag">ESPN</div><div class="u-card-title">Dodgers Star Mookie Betts Buys WBL Franchise</div><div class="u-card-date">March 2025</div></div></div></a>
+            <a class="u-card" href="https://www.reuters.com/sports/cricket/sports-from-batting-bowling-indias-kohli-invests-world-bowling-league-2025-05-28/" target="_blank" rel="noopener noreferrer"><div class="u-card-img"><img src="./src/assets/images/virat-kohli-signed-merchandise-4a7415.png" alt="Virat Kohli" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0" loading="lazy"><div class="u-card-content"><div class="u-card-tag">Reuters</div><div class="u-card-title">Virat Kohli Invests in World Bowling League</div><div class="u-card-date">May 2025</div></div></div></a>
+            <a class="u-card" href="https://www.reuters.com/sports/dodgers-star-mookie-betts-own-world-bowling-league-franchise-2025-03-18/" target="_blank" rel="noopener noreferrer"><div class="u-card-img"><img src="./src/assets/images/wbl-championship-finals.png" alt="WBL championship lane" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0" loading="lazy"><div class="u-card-content"><div class="u-card-tag">Reuters</div><div class="u-card-title">Mookie Betts to Own World Bowling League Franchise</div><div class="u-card-date">March 2025</div></div></div></a>
+            <a class="u-card" href="https://www.bloomberg.com/news/articles/2025-03-18/dodgers-star-mookie-betts-who-s-bowled-a-300-game-buys-pro-team" target="_blank" rel="noopener noreferrer"><div class="u-card-img"><img src="./src/assets/images/fsp_best_bowler_image_1.jpg" alt="Iconic bowling venue" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0" loading="lazy"><div class="u-card-content"><div class="u-card-tag">Bloomberg</div><div class="u-card-title">Dodgers Star Who's Bowled a 300 Game Buys Pro Team</div><div class="u-card-date">March 2025</div></div></div></a>
+            <a class="u-card" href="https://www.sportbusiness.com/2023/10/a-striking-proposition-the-world-bowling-leagues-transformative-plans-for-the-sport/" target="_blank" rel="noopener noreferrer"><div class="u-card-img"><img src="./src/assets/images/world-bowling-league.png" alt="WBL branding" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0" loading="lazy"><div class="u-card-content"><div class="u-card-tag">SportBusiness</div><div class="u-card-title">WBL's Transformative Plans for the Sport</div><div class="u-card-date">October 2023</div></div></div></a>
           </div>
         </section>
 
@@ -2798,7 +2797,9 @@
         <!-- ============================================ -->
         <section class="hero">
           <!-- Full-viewport background -->
-          <div class="hero-bg" aria-hidden="true"></div>
+          <div class="hero-bg" aria-hidden="true">
+            <img src="./src/assets/images/wps-last-section.jpg" alt="" class="wps-hero-img" loading="lazy">
+          </div>
           <!-- Kinetic Truth scan lines -->
           <div class="hero-scans"></div>
 
@@ -3132,64 +3133,64 @@
         <section class="updates-section fade-in">
           <div class="updates-header">
             <h2 class="updates-h2">Updates</h2>
-            <a href="#" class="updates-view-all">View All <span>→</span></a>
+            <a href="https://www.leaguesportsco.com/press" class="updates-view-all" target="_blank" rel="noopener noreferrer">View All <span>→</span></a>
           </div>
           <div class="updates-track" id="wps-v20-updates-track">
 
-            <div class="update-card">
-              <div class="update-card-img">
-                <img src="./src/assets/images/wps_logo.png" alt="WPS logo" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:24px;z-index:0" loading="lazy">
-                <div class="update-card-content">
-                  <div class="update-card-tag">Announcement</div>
-                  <div class="update-card-title">World Premier Squash Officially Launched</div>
-                  <div class="update-card-date">March 2026</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="update-card">
+            <a class="update-card" href="https://www.aninews.in/news/sports/others/saurav-ghosal-named-sports-commissioner-of-world-premier-squash20260319115052/" target="_blank" rel="noopener noreferrer">
               <div class="update-card-img">
                 <img src="./src/assets/images/saurav-ghosal-1b4dcb.png" alt="Saurav Ghosal" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0" loading="lazy">
                 <div class="update-card-content">
-                  <div class="update-card-tag">Leadership</div>
-                  <div class="update-card-title">Saurav Ghosal Named Sports Commissioner of WPS</div>
+                  <div class="update-card-tag">ANI News</div>
+                  <div class="update-card-title">Saurav Ghosal Named Sports Commissioner of World Premier Squash</div>
                   <div class="update-card-date">March 2026</div>
                 </div>
               </div>
-            </div>
+            </a>
 
-            <div class="update-card">
+            <a class="update-card" href="https://www.outlookindia.com/amp/story/sports/others/saurav-ghosal-named-world-premier-squash-sports-commissioner-reaction-access-stronger-coaching" target="_blank" rel="noopener noreferrer">
+              <div class="update-card-img">
+                <img src="./src/assets/images/saurav-ghosal-1b4dcb.png" alt="Saurav Ghosal" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0" loading="lazy">
+                <div class="update-card-content">
+                  <div class="update-card-tag">Outlook India</div>
+                  <div class="update-card-title">Ghosal Calls for Wider Access and Stronger Coaching as WPS Sports Commissioner</div>
+                  <div class="update-card-date">March 2026</div>
+                </div>
+              </div>
+            </a>
+
+            <a class="update-card" href="https://sportstar.thehindu.com/other-sports/squash-olympic-debut-2028-los-angeles-watershed-moment-saurav-ghosal/article70768447.ece" target="_blank" rel="noopener noreferrer">
               <div class="update-card-img">
                 <img src="./src/assets/images/wps-championship-finals.png" alt="Glass court venue" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0" loading="lazy">
                 <div class="update-card-content">
-                  <div class="update-card-tag">Venue</div>
-                  <div class="update-card-title">Global Iconic Venues &amp; Future Arenas</div>
-                  <div class="update-card-date">Coming Soon</div>
+                  <div class="update-card-tag">Sportstar</div>
+                  <div class="update-card-title">Squash's Olympic Debut a 'Watershed Moment', Says Saurav Ghosal</div>
+                  <div class="update-card-date">March 2026</div>
                 </div>
               </div>
-            </div>
+            </a>
 
-            <div class="update-card">
+            <a class="update-card" href="https://indiasportshub.com/league-sports-co-announces-world-premier-squash-a-global-innovation-first-league-endorsed-by-world-squash-and-psa/" target="_blank" rel="noopener noreferrer">
               <div class="update-card-img">
-                <img src="./src/assets/images/fsp_best_squash_image_3.jpg" alt="Championship celebration" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0" loading="lazy">
+                <img src="./src/assets/images/wps_logo.png" alt="WPS logo" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:24px;z-index:0" loading="lazy">
                 <div class="update-card-content">
-                  <div class="update-card-tag">Championship</div>
-                  <div class="update-card-title">Championship Moments on the Court</div>
-                  <div class="update-card-date">Coming Soon</div>
+                  <div class="update-card-tag">India Sports Hub</div>
+                  <div class="update-card-title">League Sports Co Announces "World Premier Squash" Endorsed by World Squash and PSA</div>
+                  <div class="update-card-date">November 2025</div>
                 </div>
               </div>
-            </div>
+            </a>
 
-            <div class="update-card">
+            <a class="update-card" href="https://www.thehindubusinessline.com/news/sports/lsc-announces-launch-of-the-world-squash-league/article70251690.ece" target="_blank" rel="noopener noreferrer">
               <div class="update-card-img">
-                <img src="./src/assets/images/world-premier-squash.png" alt="FSP Athletes competing" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0" loading="lazy">
+                <img src="./src/assets/images/world-premier-squash.png" alt="World Premier Squash" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0" loading="lazy">
                 <div class="update-card-content">
-                  <div class="update-card-tag">Athletes</div>
-                  <div class="update-card-title">FSP Athletes Compete in WPS</div>
-                  <div class="update-card-date">Coming Soon</div>
+                  <div class="update-card-tag">Business Line</div>
+                  <div class="update-card-title">LSC Announces Launch of the World Squash League</div>
+                  <div class="update-card-date">November 2025</div>
                 </div>
               </div>
-            </div>
+            </a>
 
           </div>
         </section>
