@@ -1,8 +1,8 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/games/vaunt", "destination": "/games.html" },
-    { "source": "/games/wbl", "destination": "/games.html" },
-    { "source": "/games/wps", "destination": "/games.html" }
+    { "source": "/games/vaunt", "destination": "/games" },
+    { "source": "/games/wbl", "destination": "/games" },
+    { "source": "/games/wps", "destination": "/games" }
   ]
 }
