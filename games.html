@@ -1563,6 +1563,7 @@
         <ul class="games-dropdown-menu">
           <li><a href="#" class="games-nav-item" data-content="wbl">WBL</a></li>
           <li><a href="#" class="games-nav-item" data-content="wps">WPS</a></li>
+          <li><a href="#" class="games-nav-item" data-content="vaunt">Vaunt</a></li>
         </ul>
       </div>
       <span class="games-nav-item games-nav-disabled">Athletes <span class="coming-soon-badge">(Announcing Soon)</span></span>
@@ -3254,6 +3255,218 @@
 })();
       </script>
     </div>
+
+    <!-- Vaunt Content Section — Coming Soon -->
+    <div id="vaunt-content" class="games-content-section" style="display: none;">
+      <div class="vaunt-coming-soon">
+        <section class="vaunt-cs-hero">
+          <div class="vaunt-cs-bg" aria-hidden="true">
+            <div class="vaunt-cs-gradient"></div>
+            <div class="vaunt-cs-grid-overlay"></div>
+          </div>
+          <div class="vaunt-cs-content">
+            <div class="vaunt-cs-badge">
+              <span class="vaunt-cs-dot"></span>
+              Coming Soon
+            </div>
+            <h1 class="vaunt-cs-title">VAUNT</h1>
+            <p class="vaunt-cs-subtitle">A new era of competitive gaming is approaching.<br>Stay tuned for something extraordinary.</p>
+            <div class="vaunt-cs-divider"></div>
+            <div class="vaunt-cs-stats">
+              <div class="vaunt-cs-stat">
+                <div class="vaunt-cs-stat-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div class="vaunt-cs-stat-label">Launching Soon</div>
+              </div>
+              <div class="vaunt-cs-stat">
+                <div class="vaunt-cs-stat-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2Z"/></svg>
+                </div>
+                <div class="vaunt-cs-stat-label">AI-Verified</div>
+              </div>
+              <div class="vaunt-cs-stat">
+                <div class="vaunt-cs-stat-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                </div>
+                <div class="vaunt-cs-stat-label">Details Dropping</div>
+              </div>
+            </div>
+            <a href="/games" class="vaunt-cs-back-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><path d="M19 12H5"/><polyline points="12 19 5 12 12 5"/></svg>
+              Back to FSP Games
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <style>
+        .vaunt-coming-soon{
+          min-height:100vh;
+          background:#0A0A0A;
+        }
+        .vaunt-cs-hero{
+          position:relative;
+          min-height:100vh;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          overflow:hidden;
+        }
+        .vaunt-cs-bg{
+          position:absolute;
+          inset:0;
+          z-index:0;
+        }
+        .vaunt-cs-gradient{
+          position:absolute;
+          inset:0;
+          background:
+            radial-gradient(ellipse 80% 60% at 50% 40%, rgba(99,102,241,0.15) 0%, transparent 70%),
+            radial-gradient(ellipse 60% 50% at 30% 60%, rgba(139,92,246,0.1) 0%, transparent 60%),
+            radial-gradient(ellipse 50% 40% at 70% 30%, rgba(59,130,246,0.08) 0%, transparent 50%),
+            linear-gradient(180deg, #0A0A0A 0%, #0d0d14 50%, #0A0A0A 100%);
+        }
+        .vaunt-cs-grid-overlay{
+          position:absolute;
+          inset:0;
+          background-image:
+            linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+          background-size:60px 60px;
+          mask-image:radial-gradient(ellipse 70% 60% at 50% 50%, black 20%, transparent 70%);
+          -webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 50%, black 20%, transparent 70%);
+        }
+        .vaunt-cs-content{
+          position:relative;
+          z-index:1;
+          text-align:center;
+          padding:40px 24px;
+          max-width:680px;
+        }
+        .vaunt-cs-badge{
+          display:inline-flex;
+          align-items:center;
+          gap:8px;
+          background:rgba(99,102,241,0.12);
+          border:1px solid rgba(99,102,241,0.25);
+          color:rgba(165,180,252,0.9);
+          font-family:'Archivo',sans-serif;
+          font-size:12px;
+          font-weight:600;
+          text-transform:uppercase;
+          letter-spacing:0.1em;
+          padding:8px 20px;
+          border-radius:40px;
+          margin-bottom:40px;
+        }
+        .vaunt-cs-dot{
+          width:6px;
+          height:6px;
+          border-radius:50%;
+          background:#818cf8;
+          animation:vauntPulse 2s ease-in-out infinite;
+        }
+        @keyframes vauntPulse{
+          0%,100%{opacity:0.4;transform:scale(0.9)}
+          50%{opacity:1;transform:scale(1.2)}
+        }
+        .vaunt-cs-title{
+          font-family:'Archivo',sans-serif;
+          font-size:clamp(64px,12vw,120px);
+          font-weight:900;
+          letter-spacing:-0.04em;
+          line-height:1;
+          color:#fff;
+          margin:0 0 24px;
+          text-transform:uppercase;
+          background:linear-gradient(135deg, #fff 0%, rgba(165,180,252,0.8) 50%, rgba(129,140,248,0.6) 100%);
+          -webkit-background-clip:text;
+          -webkit-text-fill-color:transparent;
+          background-clip:text;
+        }
+        .vaunt-cs-subtitle{
+          font-family:'Archivo',sans-serif;
+          font-size:clamp(16px,2.5vw,20px);
+          color:rgba(255,255,255,0.5);
+          line-height:1.7;
+          margin:0 0 40px;
+          font-weight:400;
+        }
+        .vaunt-cs-divider{
+          width:60px;
+          height:2px;
+          background:linear-gradient(90deg, transparent, rgba(99,102,241,0.5), transparent);
+          margin:0 auto 48px;
+        }
+        .vaunt-cs-stats{
+          display:flex;
+          justify-content:center;
+          gap:48px;
+          margin-bottom:56px;
+        }
+        .vaunt-cs-stat{
+          display:flex;
+          flex-direction:column;
+          align-items:center;
+          gap:12px;
+        }
+        .vaunt-cs-stat-icon{
+          width:40px;
+          height:40px;
+          border-radius:12px;
+          background:rgba(99,102,241,0.1);
+          border:1px solid rgba(99,102,241,0.2);
+          display:flex;
+          align-items:center;
+          justify-content:center;
+        }
+        .vaunt-cs-stat-icon svg{
+          width:20px;
+          height:20px;
+          stroke:rgba(165,180,252,0.7);
+        }
+        .vaunt-cs-stat-label{
+          font-family:'Archivo',sans-serif;
+          font-size:12px;
+          font-weight:600;
+          color:rgba(255,255,255,0.4);
+          text-transform:uppercase;
+          letter-spacing:0.06em;
+        }
+        .vaunt-cs-back-btn{
+          display:inline-flex;
+          align-items:center;
+          gap:10px;
+          background:rgba(255,255,255,0.06);
+          border:1px solid rgba(255,255,255,0.1);
+          color:rgba(255,255,255,0.7);
+          font-family:'Archivo',sans-serif;
+          font-size:14px;
+          font-weight:600;
+          padding:14px 28px;
+          border-radius:40px;
+          text-decoration:none;
+          transition:all 0.3s ease;
+        }
+        .vaunt-cs-back-btn:hover{
+          background:rgba(255,255,255,0.1);
+          border-color:rgba(255,255,255,0.2);
+          color:#fff;
+        }
+        @media (max-width:640px){
+          .vaunt-cs-stats{
+            gap:24px;
+          }
+          .vaunt-cs-stat-label{
+            font-size:11px;
+          }
+          .vaunt-cs-badge{
+            margin-bottom:32px;
+          }
+        }
+      </style>
+    </div>
   </main>
 
   <!-- Tiers Popup Modal -->
@@ -3658,6 +3871,7 @@
     const worldsBestContent = document.getElementById('worlds-best-content');
     const wblContent = document.getElementById('wbl-content');
     const wpsContent = document.getElementById('wps-content');
+    const vauntContent = document.getElementById('vaunt-content');
     const finalsDropdown = document.querySelector('.games-nav-dropdown');
     const finalsDropdownToggle = document.querySelector('.games-nav-dropdown-toggle');
 
@@ -3706,12 +3920,14 @@
         const isWorldsBest = navText.includes("World's Best");
         const isWBL = contentType === 'wbl';
         const isWPS = contentType === 'wps';
+        const isVaunt = contentType === 'vaunt';
         
         // Hide all content first
         if (fspGamesContent) fspGamesContent.style.display = 'none';
         if (worldsBestContent) worldsBestContent.style.display = 'none';
         if (wblContent) wblContent.style.display = 'none';
         if (wpsContent) wpsContent.style.display = 'none';
+        if (vauntContent) vauntContent.style.display = 'none';
         
         // Show selected content
         if (isFspGames && fspGamesContent) {
@@ -3722,16 +3938,39 @@
           wblContent.style.display = 'block';
         } else if (isWPS && wpsContent) {
           wpsContent.style.display = 'block';
+        } else if (isVaunt && vauntContent) {
+          vauntContent.style.display = 'block';
         }
       });
     });
 
-    // Show FSP Games content by default since it's active
-    if (fspGamesContent) {
-      fspGamesContent.style.display = 'block';
+    // URL-based routing for /games/wbl, /games/wps, /games/vaunt
+    function showContentByPath() {
+      var path = window.location.pathname.replace(/\/+$/, '').toLowerCase();
+      var segment = path.split('/').pop();
+      var contentMap = { wbl: wblContent, wps: wpsContent, vaunt: vauntContent };
+      var target = contentMap[segment];
+
+      if (target) {
+        if (fspGamesContent) fspGamesContent.style.display = 'none';
+        if (worldsBestContent) worldsBestContent.style.display = 'none';
+        if (wblContent) wblContent.style.display = 'none';
+        if (wpsContent) wpsContent.style.display = 'none';
+        if (vauntContent) vauntContent.style.display = 'none';
+        target.style.display = 'block';
+
+        gamesNavItems.forEach(function(nav) { nav.classList.remove('active'); });
+        var matchingNav = document.querySelector('[data-content="' + segment + '"]');
+        if (matchingNav) matchingNav.classList.add('active');
+        if (finalsDropdownToggle) finalsDropdownToggle.classList.add('active');
+        return true;
+      }
+      return false;
     }
-    if (worldsBestContent) {
-      worldsBestContent.style.display = 'none';
+
+    if (!showContentByPath()) {
+      if (fspGamesContent) fspGamesContent.style.display = 'block';
+      if (worldsBestContent) worldsBestContent.style.display = 'none';
     }
 
     // Carousel functionality for World's Best
