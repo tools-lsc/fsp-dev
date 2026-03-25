@@ -3935,7 +3935,7 @@
           history.pushState({ section: 'games' }, '', '/games');
         } else if (isWorldsBest && worldsBestContent) {
           worldsBestContent.style.display = 'block';
-          history.pushState({ section: 'games' }, '', '/games');
+          history.pushState({ section: 'worlds-best' }, '', '/games/worlds-best');
         } else if (isWBL && wblContent) {
           wblContent.style.display = 'block';
           history.pushState({ section: 'wbl' }, '', '/games/wbl');
@@ -3960,7 +3960,7 @@
     function showContentByPath() {
       var path = window.location.pathname.replace(/\/+$/, '').toLowerCase();
       var segment = path.split('/').pop();
-      var contentMap = { wbl: wblContent, wps: wpsContent, vaunt: vauntContent };
+      var contentMap = { wbl: wblContent, wps: wpsContent, vaunt: vauntContent, 'worlds-best': worldsBestContent };
       var target = contentMap[segment];
 
       if (target) {
@@ -3972,9 +3972,15 @@
         target.style.display = 'block';
 
         gamesNavItems.forEach(function(nav) { nav.classList.remove('active'); });
-        var matchingNav = document.querySelector('[data-content="' + segment + '"]');
-        if (matchingNav) matchingNav.classList.add('active');
-        if (finalsDropdownToggle) finalsDropdownToggle.classList.add('active');
+        if (segment === 'worlds-best') {
+          gamesNavItems.forEach(function(nav) {
+            if (nav.textContent.trim().includes("World's Best")) nav.classList.add('active');
+          });
+        } else {
+          var matchingNav = document.querySelector('[data-content="' + segment + '"]');
+          if (matchingNav) matchingNav.classList.add('active');
+          if (finalsDropdownToggle) finalsDropdownToggle.classList.add('active');
+        }
         return true;
       }
       return false;

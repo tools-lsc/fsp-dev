@@ -3,6 +3,7 @@
   "rewrites": [
     { "source": "/games/vaunt", "destination": "/games" },
     { "source": "/games/wbl", "destination": "/games" },
-    { "source": "/games/wps", "destination": "/games" }
+    { "source": "/games/wps", "destination": "/games" },
+    { "source": "/games/worlds-best", "destination": "/games" }
   ]
 }
