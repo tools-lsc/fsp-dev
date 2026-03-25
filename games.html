@@ -1504,26 +1504,26 @@
       <nav class="main-nav" aria-label="Primary" aria-hidden="true">
         <ul>
           <li><a href="/">Individual</a></li>
-          <li><a href="partners">Partners</a></li>
+          <li><a href="/partners">Partners</a></li>
           <!-- <li class="nav-dropdown">
             <a href="#" class="dropdown-toggle">FSP Private</a>
             <ul class="dropdown-menu">
-              <li><a href="pools">FSP Pools</a></li>
-              <li><a href="fsp-private">FSP Note</a></li>
+              <li><a href="/pools">FSP Pools</a></li>
+              <li><a href="/fsp-private">FSP Note</a></li>
               <li><a href="#" class="coming-soon">FSP Capital <span>(coming soon)</span></a></li>
             </ul>
           </li> -->
-          <li><a href="games" class="active">Games</a></li>
+          <li><a href="/games" class="active">Games</a></li>
           <!-- <li class="nav-dropdown">
             <a href="#" class="dropdown-toggle">Developers</a>
             <ul class="dropdown-menu">
-              <li><a href="documentation">FSP SDK</a></li>
+              <li><a href="/documentation">FSP SDK</a></li>
             </ul>
           </li> -->
           <li class="nav-dropdown">
             <a href="#" class="dropdown-toggle">About</a>
             <ul class="dropdown-menu">
-              <li><a href="council">FSP Council</a></li>
+              <li><a href="/council">FSP Council</a></li>
               <li><a href="https://www.leaguesportsco.com/" target="_blank" rel="noopener noreferrer">League Sports Co</a></li>
               <li><a href="https://www.futureofsportsfoundation.com/" target="_blank" rel="noopener noreferrer">FFS Foundation</a></li>
             </ul>
@@ -3537,7 +3537,7 @@
             <div class="tier-benefit-item"><svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Creator ad revenue share from brands</span></div>
           </div>
           <div class="tier-callout" style="font-size:12.5px;font-weight:600;padding:10px 14px;border-radius:10px;margin-bottom:16px;line-height:1.5;background:rgba(0,232,123,0.08);color:#00E87B">Top creators earn 5&ndash;10x more</div>
-          <a href="partners" class="tier-card-cta tier-card-cta-movement-creator fsp-btn-locked" aria-disabled="true" tabindex="-1">
+          <a href="/partners" class="tier-card-cta tier-card-cta-movement-creator fsp-btn-locked" aria-disabled="true" tabindex="-1">
             <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>
             Become a Movement Creator
           </a>
@@ -3596,15 +3596,15 @@
 
         <div class="footer-right">
           <div class="footer-links">
-            <a href="games">Games</a>
-            <a href="partners">Partners</a>
-            <!-- <a href="documentation">Developers</a> -->
-            <a href="council">Council</a>
+            <a href="/games">Games</a>
+            <a href="/partners">Partners</a>
+            <!-- <a href="/documentation">Developers</a> -->
+            <a href="/council">Council</a>
           </div>
           <div class="footer-links">
-            <a href="privacy-policy">Privacy Policy</a>
-            <a href="terms-of-use">Terms of Service</a>
-            <a href="terms-and-conditions">Website T&amp;Cs</a>
+            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/terms-of-use">Terms of Service</a>
+            <a href="/terms-and-conditions">Website T&amp;Cs</a>
             <a href="https://www.leaguesportsco.com/" target="_blank" rel="noopener noreferrer">League Sports Co</a>
             <a href="https://www.futureofsportsfoundation.com/" target="_blank" rel="noopener noreferrer">FFS Foundation</a>
           </div>
@@ -3929,19 +3929,31 @@
         if (wpsContent) wpsContent.style.display = 'none';
         if (vauntContent) vauntContent.style.display = 'none';
         
-        // Show selected content
+        // Show selected content and update URL
         if (isFspGames && fspGamesContent) {
           fspGamesContent.style.display = 'block';
+          history.pushState({ section: 'games' }, '', '/games');
         } else if (isWorldsBest && worldsBestContent) {
           worldsBestContent.style.display = 'block';
+          history.pushState({ section: 'games' }, '', '/games');
         } else if (isWBL && wblContent) {
           wblContent.style.display = 'block';
+          history.pushState({ section: 'wbl' }, '', '/games/wbl');
         } else if (isWPS && wpsContent) {
           wpsContent.style.display = 'block';
+          history.pushState({ section: 'wps' }, '', '/games/wps');
         } else if (isVaunt && vauntContent) {
           vauntContent.style.display = 'block';
+          history.pushState({ section: 'vaunt' }, '', '/games/vaunt');
         }
+
+        window.scrollTo(0, 0);
       });
+    });
+
+    // Handle browser back/forward buttons
+    window.addEventListener('popstate', function() {
+      showContentByPath();
     });
 
     // URL-based routing for /games/wbl, /games/wps, /games/vaunt
