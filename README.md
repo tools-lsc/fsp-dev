@@ -4,6 +4,7 @@
 
 ### Partners Page (enterprise.html → partners.html)
 
+
 **Hero Section**
 - Updated H1 to "Where Kinetic Truth™ Meets Brand Velocity."
 - Updated subtitle copy
