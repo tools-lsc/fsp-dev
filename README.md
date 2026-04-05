@@ -1,5 +1,5 @@
 # FSP Website — March 19, 2026 Update
-
+ 
 ## Changes since last pull
 
 ### Partners Page (enterprise.html → partners.html)
