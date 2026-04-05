@@ -2825,6 +2825,7 @@
     </div>
   </div>
 
+  <script src="/js/fsp-form-api.js"></script>
   <script>
     // Mobile Navigation
     const hamburgerBtn = document.querySelector('.hamburger-btn');
@@ -3044,6 +3045,29 @@
       });
     }
 
+    async function fspSubmitModalForm(form, formTag, successMessage, onSuccess) {
+      const btn = form.querySelector('button[type="submit"]');
+      const prevText = btn ? btn.textContent : '';
+      if (btn) {
+        btn.disabled = true;
+        btn.textContent = 'Sending...';
+      }
+      try {
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+        await window.fspSubmitForm(formTag, data);
+        alert(successMessage(data));
+        onSuccess();
+      } catch (err) {
+        alert('Something went wrong. Please try again.\n\n' + (err && err.message ? err.message : ''));
+      } finally {
+        if (btn) {
+          btn.disabled = false;
+          btn.textContent = prevText;
+        }
+      }
+    }
+
     // Request Sport Form Modal
     const sportRequestPopup = document.getElementById('sport-request-popup');
     const requestSportBtn = document.getElementById('request-sport-btn');
@@ -3096,27 +3120,18 @@
       sportRequestBackdrop.addEventListener('click', closeSportRequestPopup);
     }
 
-    // Handle form submission
+    // Handle form submission → FSP form API (formTag: index-request-sport)
     if (sportRequestForm) {
       sportRequestForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(sportRequestForm);
-        const data = {
-          sportName: formData.get('sportName'),
-          sportNotes: formData.get('sportNotes'),
-          userEmail: formData.get('userEmail')
-        };
-        
-        // Log to console (you can replace this with actual API call)
-        console.log('Sport Request Submitted:', data);
-        
-        // Show success message (you can customize this)
-        alert('Thank you for your request! We\'ll review it and consider adding ' + data.sportName + ' to FSP.');
-        
-        // Close popup and reset form
-        closeSportRequestPopup();
+        fspSubmitModalForm(
+          sportRequestForm,
+          'index-request-sport',
+          function (data) {
+            return 'Thank you for your request! We\'ll review it and consider adding ' + (data.sportName || 'your sport') + ' to FSP.';
+          },
+          closeSportRequestPopup
+        );
       });
     }
 
@@ -3182,10 +3197,14 @@
     if (masterclassForm) {
       masterclassForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        const formData = new FormData(masterclassForm);
-        console.log('Masterclass Request Submitted:', Object.fromEntries(formData));
-        alert('Thank you! We\'ll notify you when new masterclasses become available.');
-        closeMasterclassPopup();
+        fspSubmitModalForm(
+          masterclassForm,
+          'index-request-masterclass',
+          function () {
+            return 'Thank you! We\'ll notify you when new masterclasses become available.';
+          },
+          closeMasterclassPopup
+        );
       });
     }
 
@@ -3220,10 +3239,14 @@
     if (subsidyForm) {
       subsidyForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        const formData = new FormData(subsidyForm);
-        console.log('Subsidy Application Submitted:', Object.fromEntries(formData));
-        alert('Thank you for applying! We\'ll review your application and connect you with the best program for your situation.');
-        closeSubsidyPopup();
+        fspSubmitModalForm(
+          subsidyForm,
+          'index-subsidy-application',
+          function () {
+            return 'Thank you for applying! We\'ll review your application and connect you with the best program for your situation.';
+          },
+          closeSubsidyPopup
+        );
       });
     }
   </script>

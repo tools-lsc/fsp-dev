@@ -4167,6 +4167,7 @@
     </div>
   </div>
 
+  <script src="/js/fsp-form-api.js"></script>
   <script>
     // Mobile Navigation
     const hamburgerBtn = document.querySelector('.hamburger-btn');
@@ -4652,10 +4653,28 @@
     if (gamesSubsidyForm) {
       gamesSubsidyForm.addEventListener('submit', function(e) {
         e.preventDefault();
+        var btn = gamesSubsidyForm.querySelector('button[type="submit"]');
+        var prevText = btn ? btn.textContent : '';
+        if (btn) {
+          btn.disabled = true;
+          btn.textContent = 'Sending...';
+        }
         var formData = new FormData(gamesSubsidyForm);
-        console.log('Subsidy Application Submitted:', Object.fromEntries(formData));
-        alert('Thank you for applying! We\'ll review your application and connect you with the best program for your situation.');
-        closeGamesSubsidyPopup();
+        var data = Object.fromEntries(formData);
+        window.fspSubmitForm('games-subsidy-application', data)
+          .then(function () {
+            alert('Thank you for applying! We\'ll review your application and connect you with the best program for your situation.');
+            closeGamesSubsidyPopup();
+          })
+          .catch(function (err) {
+            alert('Something went wrong. Please try again.\n\n' + (err && err.message ? err.message : ''));
+          })
+          .finally(function () {
+            if (btn) {
+              btn.disabled = false;
+              btn.textContent = prevText;
+            }
+          });
       });
     }
   </script>
