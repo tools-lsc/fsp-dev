@@ -1215,7 +1215,11 @@
     }
     .fsp-hero-bg{
       position:absolute;inset:0;z-index:0;
-      background:url('./src/assets/images/games-hero.jpg') center top / cover no-repeat;
+      background:#000;
+    }
+    .fsp-hero-video{
+      position:absolute;inset:0;width:100%;height:100%;
+      object-fit:cover;object-position:center top;
     }
     .fsp-hero-bg::after{
       content:'';position:absolute;inset:0;
@@ -1286,6 +1290,7 @@
     .fsp-chyron-div{width:1px;height:28px;background:rgba(255,255,255,0.08)}
     @media(max-width:900px){
       .fsp-hero{padding:80px 24px 100px;min-height:80vh}
+      .fsp-hero-video{object-position:center center}
       .fsp-chyron{padding:16px 24px}
       .fsp-chyron-inner{flex-wrap:wrap;gap:20px}
       .fsp-kt-badge{position:static;margin-top:32px}
@@ -1471,6 +1476,9 @@
         min-height:70vh;
         padding:60px 20px 100px;
       }
+      .fsp-hero-video{
+        object-position:center center;
+      }
       .fsp-hero-h1{
         font-size:clamp(36px,10vw,60px);
       }
@@ -1539,22 +1547,16 @@
               <li><a href="/council">FSP Council</a></li>
               <li><a href="https://www.leaguesportsco.com/" target="_blank" rel="noopener noreferrer">League Sports Co</a></li>
               <li><a href="https://www.futureofsportsfoundation.com/" target="_blank" rel="noopener noreferrer">FFS Foundation</a></li>
+              <li><a href="arena">FSP Arena</a></li>
+              <li><a href="ads">FSP Ads</a></li>
             </ul>
           </li>
         </ul>
-        <a class="btn-join btn-join-mobile fsp-btn-locked" href="#" aria-disabled="true" tabindex="-1">
-          <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-            <rect x="6" y="11" width="12" height="10" rx="2" />
-          </svg>
+        <a class="btn-join btn-join-mobile" href="signup-player">
           Join
         </a>
       </nav>
-      <a class="btn-join btn-join-desktop fsp-btn-locked" href="#" aria-disabled="true" tabindex="-1">
-        <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-          <rect x="6" y="11" width="12" height="10" rx="2" />
-        </svg>
+      <a class="btn-join btn-join-desktop" href="signup-player">
         Join
       </a>
     </div>
@@ -1590,7 +1592,11 @@
 
       <!-- FSP Games Hero -->
       <section class="fsp-hero">
-        <div class="fsp-hero-bg" aria-hidden="true"></div>
+        <div class="fsp-hero-bg" aria-hidden="true">
+          <video class="fsp-hero-video" autoplay muted loop playsinline poster="./src/assets/images/games-hero.jpg">
+            <source src="./src/assets/videos/games-hero-bg.mp4" type="video/mp4">
+          </video>
+        </div>
         <div class="fsp-hero-content">
           <div class="fsp-hero-eyebrow">FSP Games</div>
           <h1 class="fsp-hero-h1">SPORTS<br><span class="blue">REBORN.</span></h1>
@@ -1713,7 +1719,7 @@
         <div class="sport-panel-topbar">
           <div class="sport-panel-brand">
             <img src="/src/assets/images/fsp_best_bowler_logo.png" alt="Best Bowler Logo" class="sport-panel-logo" loading="lazy">
-            <a href="#" class="sport-panel-cta fsp-btn-locked" aria-disabled="true" tabindex="-1">
+            <a href="signup-player" class="sport-panel-cta fsp-btn-locked" aria-disabled="true" tabindex="-1">
               <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:14px;height:14px;margin-right:4px"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>
               Enter Arena
             </a>
@@ -1823,7 +1829,7 @@
         <div class="sport-panel-topbar">
           <div class="sport-panel-brand">
             <img src="/src/assets/images/fsp_best_squash_logo.png" alt="Best Squash Player Logo" class="sport-panel-logo" loading="lazy">
-            <a href="#" class="sport-panel-cta fsp-btn-locked" aria-disabled="true" tabindex="-1">
+            <a href="signup-player" class="sport-panel-cta fsp-btn-locked" aria-disabled="true" tabindex="-1">
               <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:14px;height:14px;margin-right:4px"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>
               Enter Arena
             </a>
@@ -2090,7 +2096,7 @@
               Get Skill Verified
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
             </a>
-            <a href="#" class="games-btn-outline fsp-btn-locked" aria-disabled="true" tabindex="-1">
+            <a href="signup-arena" class="games-btn-outline fsp-btn-locked" aria-disabled="true" tabindex="-1">
               <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>
               Become a Movement Creator
             </a>
@@ -2250,7 +2256,7 @@
           <div class="sport-badges"><span class="sport-badge league">World Bowling League</span><span class="sport-badge status">Coming Soon</span></div>
           <h2 style="font-family:'Archivo',sans-serif;font-size:clamp(36px,5vw,56px);font-weight:900;letter-spacing:-0.03em;line-height:1.05;color:#fff;text-transform:uppercase;margin-bottom:20px"><span style="display:block">WORLD'S BEST</span><span style="display:block">BOWLER</span></h2>
           <p style="font-family:'Archivo',sans-serif;font-size:15px;color:rgba(255,255,255,0.6);line-height:1.65;margin-bottom:32px;max-width:520px">AI-verified skill challenges from any lane in the world. Compete in solo sessions and league play, climb the global ladder, and rise to purpose-built championship lanes &mdash; where the top performers compete for a $200K* prize pool at the WBL Championship Finals.</p>
-          <div><a href="#" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:#0A0A0A;padding:14px 28px;border-radius:40px;font-family:'Archivo',sans-serif;font-size:13px;font-weight:700;text-decoration:none;border:none;cursor:pointer" aria-disabled="true" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;margin-right:4px"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>Enter Arena</a></div>
+          <div><a href="signup-player" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:#0A0A0A;padding:14px 28px;border-radius:40px;font-family:'Archivo',sans-serif;font-size:13px;font-weight:700;text-decoration:none;border:none;cursor:pointer" aria-disabled="true" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;margin-right:4px"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>Enter Arena</a></div>
         </div>
       </section>
 
@@ -2263,7 +2269,7 @@
           <div class="sport-badges"><span class="sport-badge league">World Premier Squash</span><span class="sport-badge status">Coming Soon</span></div>
           <h2 style="font-family:'Archivo',sans-serif;font-size:clamp(36px,5vw,56px);font-weight:900;letter-spacing:-0.03em;line-height:1.05;color:#fff;text-transform:uppercase;margin-bottom:20px"><span style="display:block">WORLD'S BEST</span><span style="display:block">SQUASH PLAYER</span></h2>
           <p style="font-family:'Archivo',sans-serif;font-size:15px;color:rgba(255,255,255,0.6);line-height:1.65;margin-bottom:32px;max-width:520px">AI-verified skill challenges from any court in the world. Compete in glass-court drills and ranked sessions, climb the global ladder, and step onto the show court &mdash; where 8 FSP Athletes and 12 AI-qualified challengers compete at the WPS Finals.</p>
-          <div><a href="#" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:#0A0A0A;padding:14px 28px;border-radius:40px;font-family:'Archivo',sans-serif;font-size:13px;font-weight:700;text-decoration:none;border:none;cursor:pointer" aria-disabled="true" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;margin-right:4px"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>Enter Arena</a></div>
+          <div><a href="signup-player" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:#0A0A0A;padding:14px 28px;border-radius:40px;font-family:'Archivo',sans-serif;font-size:13px;font-weight:700;text-decoration:none;border:none;cursor:pointer" aria-disabled="true" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;margin-right:4px"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>Enter Arena</a></div>
         </div>
       </section>
 
@@ -2276,7 +2282,7 @@
           <div class="sport-badges"><span class="sport-badge league">World’s Best Cricket Player</span><span class="sport-badge status">Coming Soon</span></div>
           <h2 style="font-family:'Archivo',sans-serif;font-size:clamp(36px,5vw,56px);font-weight:900;letter-spacing:-0.03em;line-height:1.05;color:#fff;text-transform:uppercase;margin-bottom:20px"><span style="display:block">WORLD’S BEST</span><span style="display:block">CRICKET PLAYER</span></h2>
           <p style="font-family:'Archivo',sans-serif;font-size:15px;color:rgba(255,255,255,0.6);line-height:1.65;margin-bottom:32px;max-width:520px">AI-verified skill challenges from any pitch or net in the world. Compete in batting and bowling sessions, climb the global ladder, and reach the stadium stage — where the top performers compete at live Championship Finals.</p>
-          <div><a href="#" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:#0A0A0A;padding:14px 28px;border-radius:40px;font-family:'Archivo',sans-serif;font-size:13px;font-weight:700;text-decoration:none;border:none;cursor:pointer" aria-disabled="true" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;margin-right:4px"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>Enter Arena</a></div>
+          <div><a href="signup-player" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:#0A0A0A;padding:14px 28px;border-radius:40px;font-family:'Archivo',sans-serif;font-size:13px;font-weight:700;text-decoration:none;border:none;cursor:pointer" aria-disabled="true" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;margin-right:4px"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>Enter Arena</a></div>
         </div>
       </section>
 
@@ -2289,7 +2295,7 @@
           <div class="sport-badges"><span class="sport-badge league">Rivals</span><span class="sport-badge status">Coming Soon</span></div>
           <h2 style="font-family:'Archivo',sans-serif;font-size:clamp(36px,5vw,56px);font-weight:900;letter-spacing:-0.03em;line-height:1.05;color:#fff;text-transform:uppercase;margin-bottom:20px"><span style="display:block">WORLD’S BEST</span><span style="display:block">1V1 PLAYER</span></h2>
           <p style="font-family:'Archivo',sans-serif;font-size:15px;color:rgba(255,255,255,0.6);line-height:1.65;margin-bottom:32px;max-width:520px">AI-verified skill challenges from any court in the world. Head-to-head sessions tracked and scored in real time. Compete, climb the global ladder, and advance to live Championship Finals.</p>
-          <div><a href="#" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:#0A0A0A;padding:14px 28px;border-radius:40px;font-family:'Archivo',sans-serif;font-size:13px;font-weight:700;text-decoration:none;border:none;cursor:pointer" aria-disabled="true" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;margin-right:4px"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>Enter Arena</a></div>
+          <div><a href="signup-player" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:#0A0A0A;padding:14px 28px;border-radius:40px;font-family:'Archivo',sans-serif;font-size:13px;font-weight:700;text-decoration:none;border:none;cursor:pointer" aria-disabled="true" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;margin-right:4px"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>Enter Arena</a></div>
         </div>
       </section>
 
@@ -2302,7 +2308,7 @@
           <div class="sport-badges"><span class="sport-badge league">World Pong</span><span class="sport-badge status">Coming Soon</span></div>
           <h2 style="font-family:'Archivo',sans-serif;font-size:clamp(36px,5vw,56px);font-weight:900;letter-spacing:-0.03em;line-height:1.05;color:#fff;text-transform:uppercase;margin-bottom:20px"><span style="display:block">WORLD’S BEST</span><span style="display:block">PONG PLAYER</span></h2>
           <p style="font-family:'Archivo',sans-serif;font-size:15px;color:rgba(255,255,255,0.6);line-height:1.65;margin-bottom:32px;max-width:520px">Every throw tracked and verified by AI. Compete across branded arena surfaces, climb the global leaderboard, and qualify for live finals.</p>
-          <div><a href="#" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:#0A0A0A;padding:14px 28px;border-radius:40px;font-family:'Archivo',sans-serif;font-size:13px;font-weight:700;text-decoration:none;border:none;cursor:pointer" aria-disabled="true" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;margin-right:4px"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>Enter Arena</a></div>
+          <div><a href="signup-player" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:#0A0A0A;padding:14px 28px;border-radius:40px;font-family:'Archivo',sans-serif;font-size:13px;font-weight:700;text-decoration:none;border:none;cursor:pointer" aria-disabled="true" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;margin-right:4px"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>Enter Arena</a></div>
         </div>
       </section>
 
@@ -2785,7 +2791,7 @@
             <div><h3>Your Lane. Your Proof. The Finals.</h3><p>The first edition is coming. Qualification is open now.</p></div>
             <div class="cta-btns">
               <a href="#" class="btn-warm">Start Qualifying <span>→</span></a>
-              <a href="#" class="btn-ghost">Become a Movement Creator</a>
+              <a href="signup-arena" class="btn-ghost">Become a Movement Creator</a>
             </div>
           </div>
         </section>
@@ -3236,7 +3242,7 @@
             </div>
             <div class="cta-banner-buttons">
               <a href="#" class="btn-primary">Start Qualifying <span>→</span></a>
-              <a href="#" class="btn-outline-white">Become a Movement Creator</a>
+              <a href="signup-arena" class="btn-outline-white">Become a Movement Creator</a>
             </div>
           </div>
         </section>
@@ -3905,7 +3911,7 @@
             <div class="tier-benefit-item"><svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Compete for prizes &amp; brand bounties</span></div>
           </div>
           <div class="tier-callout" style="font-size:12.5px;font-weight:600;padding:10px 14px;border-radius:10px;margin-bottom:16px;line-height:1.5;background:rgba(0,0,255,0.06);color:#0000FF">Your AI-verified scores trigger automatic performance payouts, turning effort into recurring earnings.</div>
-          <a href="#" class="tier-card-cta tier-card-cta-free fsp-btn-locked" aria-disabled="true" tabindex="-1">
+          <a href="signup-player" class="tier-card-cta tier-card-cta-free fsp-btn-locked" aria-disabled="true" tabindex="-1">
             <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>
             Get Started Free
           </a>
@@ -3945,7 +3951,7 @@
             <div class="tier-benefit-item"><svg class="tier-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Creator ad revenue share from brands</span></div>
           </div>
           <div class="tier-callout" style="font-size:12.5px;font-weight:600;padding:10px 14px;border-radius:10px;margin-bottom:16px;line-height:1.5;background:rgba(0,232,123,0.08);color:#00E87B">Top creators earn 5&ndash;10x more</div>
-          <a href="/partners" class="tier-card-cta tier-card-cta-movement-creator fsp-btn-locked" aria-disabled="true" tabindex="-1">
+          <a href="signup-arena" class="tier-card-cta tier-card-cta-movement-creator fsp-btn-locked" aria-disabled="true" tabindex="-1">
             <svg class="fsp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="6" y="11" width="12" height="10" rx="2"/></svg>
             Become a Movement Creator
           </a>
