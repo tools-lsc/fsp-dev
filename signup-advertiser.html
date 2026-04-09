@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advertise on FSP — Sign Up</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blue: #1400FF;
+  --blue-light: rgba(20, 0, 255, 0.06);
+  --blue-mid: rgba(20, 0, 255, 0.12);
+  --dark: #1A1A2E;
+  --mid: #5C5C7A;
+  --muted: #9A9AB0;
+  --border: #E4E4EE;
+  --bg-light: #F5F5FA;
+  --bg-subtle: #F7F7FA;
+  --white: #FFFFFF;
+  --green: #059669;
+  --green-bg: rgba(5, 150, 105, 0.08);
+  --red: #DC2626;
+  --red-bg: rgba(220, 38, 38, 0.06);
+  --teal: #0F766E;
+  --teal-bg: #E1F5EE;
+  --r: 14px;
+  --rs: 10px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: var(--bg-subtle);
+  color: var(--dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 32px;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--dark);
+  text-decoration: none;
+}
+.nav-logo-icon {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+}
+.nav-logo-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--dark);
+  line-height: 1.15;
+}
+.nav-logo-text span {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+}
+.nav-login {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--mid);
+}
+.nav-login a {
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 700;
+}
+.nav-login a:hover { text-decoration: underline; }
+
+/* LAYOUT */
+.page {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 24px 60px;
+}
+.container {
+  width: 100%;
+  max-width: 520px;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--teal-bg);
+  color: var(--teal);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  letter-spacing: 0.03em;
+}
+.header h1 {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--dark);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+.header p {
+  font-size: 14px;
+  color: var(--mid);
+  line-height: 1.6;
+}
+
+/* CARD */
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+/* SECTION LABEL */
+.section-label {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+/* FORM FIELDS */
+.field {
+  margin-bottom: 18px;
+}
+.field-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+.field-hint {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--muted);
+  margin-left: 4px;
+}
+.field-input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: 500;
+  color: var(--dark);
+  background: var(--bg-subtle);
+  border: 1.5px solid var(--border);
+  border-radius: var(--rs);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.field-input:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(20, 0, 255, 0.08);
+}
+.field-input::placeholder {
+  color: var(--muted);
+  font-weight: 400;
+}
+.field-input.error {
+  border-color: var(--red);
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.08);
+}
+.field-error {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--red);
+  margin-top: 4px;
+  display: none;
+}
+
+/* HANDLE INPUT */
+.handle-wrap {
+  position: relative;
+}
+.handle-wrap .field-input {
+  padding-left: 28px;
+}
+.handle-at {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--muted);
+  pointer-events: none;
+}
+.handle-status {
+  display: none;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+.handle-status.available { display: flex; color: var(--green); }
+.handle-status.taken { display: flex; color: var(--red); }
+
+/* ACCOUNT TYPE TOGGLE */
+.acct-type-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.acct-type-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  background: var(--bg-subtle);
+  border: 1.5px solid var(--border);
+  border-radius: var(--rs);
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: inherit;
+}
+.acct-type-btn:hover { border-color: var(--blue); }
+.acct-type-btn.selected {
+  border-color: var(--blue);
+  background: var(--blue-light);
+  box-shadow: 0 0 0 3px rgba(20, 0, 255, 0.06);
+}
+.acct-type-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.acct-type-btn.selected .acct-type-icon {
+  background: var(--blue);
+  border-color: var(--blue);
+}
+.acct-type-btn.selected .acct-type-icon svg { stroke: #fff; }
+.acct-type-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--dark);
+}
+.acct-type-desc {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+/* SELECT STYLING */
+.field-select {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: 500;
+  color: var(--dark);
+  background: var(--bg-subtle);
+  border: 1.5px solid var(--border);
+  border-radius: var(--rs);
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%239A9AB0' stroke-width='2.5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.field-select:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(20, 0, 255, 0.08);
+}
+
+/* ROW */
+.field-row {
+  display: flex;
+  gap: 14px;
+}
+.field-row .field {
+  flex: 1;
+}
+
+/* PHONE INPUT */
+.phone-row {
+  display: flex;
+  gap: 0;
+}
+.phone-code {
+  width: 100px;
+  flex-shrink: 0;
+  padding: 12px 10px;
+  font-size: 13px;
+  font-family: inherit;
+  font-weight: 600;
+  color: var(--dark);
+  background: var(--bg-light);
+  border: 1.5px solid var(--border);
+  border-right: none;
+  border-radius: var(--rs) 0 0 var(--rs);
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%239A9AB0' stroke-width='2.5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  cursor: pointer;
+}
+.phone-number {
+  flex: 1;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: 500;
+  color: var(--dark);
+  background: var(--bg-subtle);
+  border: 1.5px solid var(--border);
+  border-radius: 0 var(--rs) var(--rs) 0;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.phone-number:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(20, 0, 255, 0.08);
+}
+
+/* CURRENCY AUTO-DETECT */
+.currency-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--green-bg);
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin-top: 8px;
+  transition: opacity 0.2s;
+}
+.currency-badge svg { flex-shrink: 0; }
+
+/* PASSWORD STRENGTH */
+.pw-strength {
+  display: flex;
+  gap: 4px;
+  margin-top: 8px;
+}
+.pw-bar {
+  flex: 1;
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+.pw-bar.weak { background: var(--red); }
+.pw-bar.medium { background: #D97706; }
+.pw-bar.strong { background: var(--green); }
+.pw-label {
+  font-size: 10px;
+  font-weight: 600;
+  margin-top: 4px;
+  transition: color 0.2s;
+}
+
+/* DIVIDER */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 24px 0;
+}
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+.divider-text {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* SOCIAL BUTTONS (OAuth) */
+.social-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.social-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 0;
+  font-size: 13px;
+  font-family: inherit;
+  font-weight: 600;
+  color: var(--dark);
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--rs);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.social-btn:hover {
+  border-color: var(--dark);
+  background: var(--bg-light);
+}
+
+/* T&C CHECKBOX */
+.tc-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 20px 0;
+  cursor: pointer;
+}
+.tc-box {
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  border: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+  transition: all 0.15s;
+}
+.tc-row.checked .tc-box {
+  background: var(--blue);
+  border-color: var(--blue);
+}
+.tc-row.checked .tc-box svg { opacity: 1; }
+.tc-box svg { opacity: 0; transition: opacity 0.15s; }
+.tc-text {
+  font-size: 12px;
+  color: var(--mid);
+  line-height: 1.6;
+}
+.tc-text a {
+  color: var(--blue);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.tc-text a:hover { color: #0b00cc; }
+
+/* SUBMIT */
+.submit-btn {
+  width: 100%;
+  padding: 14px 0;
+  font-size: 15px;
+  font-family: inherit;
+  font-weight: 800;
+  color: #fff;
+  background: var(--blue);
+  border: none;
+  border-radius: var(--rs);
+  cursor: pointer;
+  transition: all 0.15s;
+  box-shadow: 0 2px 8px rgba(20, 0, 255, 0.25);
+  position: relative;
+}
+.submit-btn:hover {
+  box-shadow: 0 4px 16px rgba(20, 0, 255, 0.35);
+  transform: translateY(-1px);
+}
+.submit-btn:disabled {
+  background: var(--border);
+  color: var(--muted);
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* FOOTER */
+.form-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.form-footer a {
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* FEATURES */
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 32px;
+  padding-top: 24px;
+}
+.feature {
+  text-align: center;
+}
+.feature-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--teal-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+}
+.feature-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 4px;
+}
+.feature-desc {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* SUCCESS OVERLAY */
+.success-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 26, 46, 0.6);
+  backdrop-filter: blur(6px);
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+}
+.success-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  max-width: 420px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+.success-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--green-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+.success-card h2 {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.success-card p {
+  font-size: 13px;
+  color: var(--mid);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+.success-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 28px;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: 800;
+  color: #fff;
+  background: var(--blue);
+  border: none;
+  border-radius: var(--rs);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(20, 0, 255, 0.25);
+  transition: all 0.15s;
+  text-decoration: none;
+}
+.success-btn:hover {
+  box-shadow: 0 4px 16px rgba(20, 0, 255, 0.35);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 580px) {
+  .card { padding: 24px 20px; }
+  .field-row { flex-direction: column; gap: 0; }
+  .social-row { flex-direction: column; }
+  .features { grid-template-columns: 1fr; gap: 16px; }
+  .acct-type-row { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="nav">
+  <a href="/" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="34" height="34" rx="4" fill="#1400FF"/>
+        <rect x="7" y="6" width="6" height="6" fill="white"/>
+        <rect x="14" y="6" width="6" height="6" fill="white"/>
+        <rect x="21" y="6" width="6" height="6" fill="white"/>
+        <rect x="7" y="13" width="6" height="6" fill="white"/>
+        <rect x="7" y="20" width="6" height="6" fill="white"/>
+        <rect x="14" y="20" width="6" height="6" fill="white"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text">Future of<span>Sports</span></div>
+  </a>
+  <div class="nav-login">Already have an account? <a href="#">Log in</a></div>
+</div>
+
+<!-- PAGE -->
+<div class="page">
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+      <div class="header-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+        Advertiser Account
+      </div>
+      <h1>Reach Athletes Where They Compete</h1>
+      <p>Create your advertiser account and start running campaigns across FSP arenas.</p>
+    </div>
+
+    <!-- FORM CARD -->
+    <div class="card">
+
+      <!-- ACCOUNT TYPE -->
+      <div class="section-label">Account Type</div>
+      <div class="acct-type-row">
+        <button class="acct-type-btn selected" onclick="setAcctType(this,'brand')">
+          <div class="acct-type-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+          <div><div class="acct-type-label">Brand</div><div class="acct-type-desc">Company, team, league, product</div></div>
+        </button>
+        <button class="acct-type-btn" onclick="setAcctType(this,'agency')">
+          <div class="acct-type-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <div><div class="acct-type-label">Agency</div><div class="acct-type-desc">Media buyer, marketing agency</div></div>
+        </button>
+      </div>
+
+      <!-- COMPANY INFO -->
+      <div class="section-label">Company Information</div>
+
+      <div class="field">
+        <label class="field-label">Company Name</label>
+        <input type="text" class="field-input" id="companyName" placeholder="e.g. Red Bull, IMG Media">
+      </div>
+
+      <div class="field">
+        <label class="field-label">Industry</label>
+        <select class="field-select" id="industry">
+          <option value="" disabled selected>Select your industry</option>
+          <option value="sports">Sports & Fitness</option>
+          <option value="beverages">Beverages</option>
+          <option value="apparel">Apparel & Footwear</option>
+          <option value="tech">Tech & Gaming</option>
+          <option value="finance">Finance & Insurance</option>
+          <option value="health">Health & Wellness</option>
+          <option value="entertainment">Entertainment & Media</option>
+          <option value="food">Food & Nutrition</option>
+          <option value="auto">Automotive</option>
+          <option value="travel">Travel & Hospitality</option>
+          <option value="education">Education</option>
+          <option value="retail">Retail & E-Commerce</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label class="field-label">Company Website</label>
+        <input type="url" class="field-input" id="website" placeholder="https://yourcompany.com">
+      </div>
+
+      <!-- CONTACT PERSON -->
+      <div class="section-label" style="margin-top:24px">Your Details</div>
+
+      <div class="field-row">
+        <div class="field">
+          <label class="field-label">Legal First Name</label>
+          <input type="text" class="field-input" id="firstName" placeholder="First name">
+        </div>
+        <div class="field">
+          <label class="field-label">Legal Last Name</label>
+          <input type="text" class="field-input" id="lastName" placeholder="Last name">
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="field-label">Date of Birth <span class="field-hint">Must be 18 or older</span></label>
+        <input type="date" class="field-input" id="dob">
+        <div class="field-error" id="dobError">You must be at least 18 years old to create an account.</div>
+      </div>
+
+      <div class="field">
+        <label class="field-label">Username</label>
+        <div class="handle-wrap">
+          <span class="handle-at">@</span>
+          <input type="text" class="field-input" id="handle" placeholder="Choose a username" oninput="checkHandle(this.value)">
+        </div>
+        <div class="handle-status" id="handleAvail"></div>
+        <div class="handle-status" id="handleTaken"></div>
+      </div>
+
+      <div class="field">
+        <label class="field-label">Job Title</label>
+        <input type="text" class="field-input" id="jobTitle" placeholder="e.g. Marketing Director, Media Buyer">
+      </div>
+
+      <div class="field">
+        <label class="field-label">Business Email</label>
+        <input type="email" class="field-input" id="email" placeholder="you@company.com">
+      </div>
+
+      <!-- COUNTRY & PHONE -->
+      <div class="field">
+        <label class="field-label">Country</label>
+        <select class="field-select" id="country" onchange="setCountry(this.value)">
+          <option value="" disabled selected>Select your country</option>
+          <option value="US">United States · $ USD</option>
+          <option value="GB">United Kingdom · £ GBP</option>
+          <option value="CA">Canada · $ CAD</option>
+          <option value="AU">Australia · $ AUD</option>
+          <option value="DE">Germany · € EUR</option>
+          <option value="FR">France · € EUR</option>
+          <option value="ES">Spain · € EUR</option>
+          <option value="IT">Italy · € EUR</option>
+          <option value="NL">Netherlands · € EUR</option>
+          <option value="SE">Sweden · kr SEK</option>
+          <option value="NO">Norway · kr NOK</option>
+          <option value="DK">Denmark · kr DKK</option>
+          <option value="CH">Switzerland · CHF</option>
+          <option value="IE">Ireland · € EUR</option>
+          <option value="AT">Austria · € EUR</option>
+          <option value="BE">Belgium · € EUR</option>
+          <option value="PT">Portugal · € EUR</option>
+          <option value="FI">Finland · € EUR</option>
+          <option value="PL">Poland · zł PLN</option>
+          <option value="CZ">Czech Republic · Kč CZK</option>
+          <option value="IN">India · ₹ INR</option>
+          <option value="JP">Japan · ¥ JPY</option>
+          <option value="KR">South Korea · ₩ KRW</option>
+          <option value="SG">Singapore · $ SGD</option>
+          <option value="HK">Hong Kong · $ HKD</option>
+          <option value="AE">UAE · د.إ AED</option>
+          <option value="SA">Saudi Arabia · ﷼ SAR</option>
+          <option value="QA">Qatar · ﷼ QAR</option>
+          <option value="KW">Kuwait · د.ك KWD</option>
+          <option value="BH">Bahrain · .د.ب BHD</option>
+          <option value="BR">Brazil · R$ BRL</option>
+          <option value="MX">Mexico · $ MXN</option>
+          <option value="AR">Argentina · $ ARS</option>
+          <option value="CO">Colombia · $ COP</option>
+          <option value="CL">Chile · $ CLP</option>
+          <option value="ZA">South Africa · R ZAR</option>
+          <option value="NG">Nigeria · ₦ NGN</option>
+          <option value="KE">Kenya · KSh KES</option>
+          <option value="EG">Egypt · £ EGP</option>
+          <option value="NZ">New Zealand · $ NZD</option>
+          <option value="TH">Thailand · ฿ THB</option>
+          <option value="MY">Malaysia · RM MYR</option>
+          <option value="PH">Philippines · ₱ PHP</option>
+          <option value="ID">Indonesia · Rp IDR</option>
+          <option value="TR">Turkey · ₺ TRY</option>
+          <option value="IL">Israel · ₪ ILS</option>
+        </select>
+        <div class="currency-badge" id="currencyBadge" style="display:none">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span id="currencyText">Billing currency: $ USD</span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="field-label">Phone Number</label>
+        <div class="phone-row">
+          <select class="phone-code" id="phoneCode">
+            <option value="+1">+1</option>
+            <option value="+44">+44</option>
+            <option value="+49">+49</option>
+            <option value="+33">+33</option>
+            <option value="+34">+34</option>
+            <option value="+39">+39</option>
+            <option value="+31">+31</option>
+            <option value="+46">+46</option>
+            <option value="+47">+47</option>
+            <option value="+45">+45</option>
+            <option value="+41">+41</option>
+            <option value="+353">+353</option>
+            <option value="+43">+43</option>
+            <option value="+32">+32</option>
+            <option value="+351">+351</option>
+            <option value="+358">+358</option>
+            <option value="+48">+48</option>
+            <option value="+420">+420</option>
+            <option value="+91">+91</option>
+            <option value="+81">+81</option>
+            <option value="+82">+82</option>
+            <option value="+65">+65</option>
+            <option value="+852">+852</option>
+            <option value="+971">+971</option>
+            <option value="+966">+966</option>
+            <option value="+974">+974</option>
+            <option value="+965">+965</option>
+            <option value="+973">+973</option>
+            <option value="+55">+55</option>
+            <option value="+52">+52</option>
+            <option value="+54">+54</option>
+            <option value="+57">+57</option>
+            <option value="+56">+56</option>
+            <option value="+27">+27</option>
+            <option value="+234">+234</option>
+            <option value="+254">+254</option>
+            <option value="+20">+20</option>
+            <option value="+64">+64</option>
+            <option value="+66">+66</option>
+            <option value="+60">+60</option>
+            <option value="+63">+63</option>
+            <option value="+62">+62</option>
+            <option value="+90">+90</option>
+            <option value="+972">+972</option>
+          </select>
+          <input type="tel" class="phone-number" id="phone" placeholder="Enter phone number">
+        </div>
+      </div>
+
+      <!-- ESTIMATED BUDGET -->
+      <div class="section-label" style="margin-top:24px">Campaign Budget</div>
+      <div class="field">
+        <label class="field-label">Estimated Monthly Ad Spend <span class="field-hint">Optional — helps us tailor your experience</span></label>
+        <select class="field-select" id="budget">
+          <option value="" disabled selected>Select a range</option>
+          <option value="under5k">Under $5,000 / month</option>
+          <option value="5k-25k">$5,000 – $25,000 / month</option>
+          <option value="25k-100k">$25,000 – $100,000 / month</option>
+          <option value="100k-500k">$100,000 – $500,000 / month</option>
+          <option value="500k+">$500,000+ / month</option>
+        </select>
+      </div>
+
+      <!-- PASSWORD -->
+      <div class="section-label" style="margin-top:24px">Account Security</div>
+
+      <div class="field">
+        <label class="field-label">Password</label>
+        <input type="password" class="field-input" id="password" placeholder="Min 8 characters" oninput="checkPw()">
+        <div class="pw-strength">
+          <div class="pw-bar" id="pw1"></div>
+          <div class="pw-bar" id="pw2"></div>
+          <div class="pw-bar" id="pw3"></div>
+          <div class="pw-bar" id="pw4"></div>
+        </div>
+        <div class="pw-label" id="pwLabel" style="color:var(--muted)"></div>
+      </div>
+
+      <div class="field">
+        <label class="field-label">Confirm Password</label>
+        <input type="password" class="field-input" id="confirmPassword" placeholder="Re-enter password">
+        <div class="field-error" id="confirmError">Passwords do not match.</div>
+      </div>
+
+      <!-- TERMS -->
+      <div class="tc-row" onclick="toggleTC()">
+        <div class="tc-box">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="tc-text">
+          I agree to the FSP <a href="terms-and-conditions" onclick="event.stopPropagation()">Advertising Terms of Service</a> and <a href="privacy-policy" onclick="event.stopPropagation()">Privacy Policy</a>
+        </div>
+      </div>
+
+      <!-- SUBMIT -->
+      <button class="submit-btn" onclick="submitForm()">Create Advertiser Account</button>
+
+      <div class="form-footer">
+        Want to host arenas instead? <a href="signup-arena">Create an Arena Host account</a>
+      </div>
+    </div>
+
+    <!-- FEATURES — FSP ADVERTISING USPs -->
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+        </div>
+        <div class="feature-title">dROAS</div>
+        <div class="feature-desc">Deterministic return on ad spend — traced from session to sale, not modelled</div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="feature-title">Zero Fraud</div>
+        <div class="feature-desc">Closed-loop attribution — every impression verified by real human movement</div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+        </div>
+        <div class="feature-title">New Ad Formats</div>
+        <div class="feature-desc">High-engagement placements, performance challenges, and sponsored arenas — built for active audiences</div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="feature-title">Captive Audiences</div>
+        <div class="feature-desc">Reach athletes at peak engagement — during live competition, not passive scrolling</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SUCCESS OVERLAY -->
+<div class="success-overlay" id="successOverlay">
+  <div class="success-card">
+    <div class="success-icon">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <h2>Welcome to FSP Ads</h2>
+    <p>Your advertiser account is ready. Head to the dashboard to create your first campaign and start reaching athletes.</p>
+    <a href="#" class="success-btn">
+      Go to Dashboard
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+</div>
+
+<script>
+// Handle availability check (400ms debounce)
+var handleTimer;
+var reserved = ['fsp','admin','support','ads','help','system','moderator','official'];
+function checkHandle(val) {
+  clearTimeout(handleTimer);
+  var avail = document.getElementById('handleAvail');
+  var taken = document.getElementById('handleTaken');
+  avail.className = 'handle-status'; avail.textContent = '';
+  taken.className = 'handle-status'; taken.textContent = '';
+  val = val.replace(/[^a-z0-9_]/gi, '').toLowerCase();
+  if (val.length < 3) return;
+  handleTimer = setTimeout(function() {
+    if (reserved.indexOf(val) !== -1) {
+      taken.className = 'handle-status taken';
+      taken.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg> @' + val + ' is reserved';
+    } else {
+      avail.className = 'handle-status available';
+      avail.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> @' + val + ' is available';
+    }
+  }, 400);
+}
+
+// Account type toggle
+var acctType = 'brand';
+function setAcctType(btn, type) {
+  acctType = type;
+  document.querySelectorAll('.acct-type-btn').forEach(function(b) { b.classList.remove('selected'); });
+  btn.classList.add('selected');
+  // Agency type selected — no additional fields needed at sign-up
+}
+
+// Country → currency + phone code mapping
+var countryData = {
+  'US': { currency: '$ USD', phone: '+1' }, 'GB': { currency: '£ GBP', phone: '+44' },
+  'CA': { currency: '$ CAD', phone: '+1' }, 'AU': { currency: '$ AUD', phone: '+61' },
+  'DE': { currency: '€ EUR', phone: '+49' }, 'FR': { currency: '€ EUR', phone: '+33' },
+  'ES': { currency: '€ EUR', phone: '+34' }, 'IT': { currency: '€ EUR', phone: '+39' },
+  'NL': { currency: '€ EUR', phone: '+31' }, 'SE': { currency: 'kr SEK', phone: '+46' },
+  'NO': { currency: 'kr NOK', phone: '+47' }, 'DK': { currency: 'kr DKK', phone: '+45' },
+  'CH': { currency: 'CHF', phone: '+41' }, 'IE': { currency: '€ EUR', phone: '+353' },
+  'AT': { currency: '€ EUR', phone: '+43' }, 'BE': { currency: '€ EUR', phone: '+32' },
+  'PT': { currency: '€ EUR', phone: '+351' }, 'FI': { currency: '€ EUR', phone: '+358' },
+  'PL': { currency: 'zł PLN', phone: '+48' }, 'CZ': { currency: 'Kč CZK', phone: '+420' },
+  'IN': { currency: '₹ INR', phone: '+91' }, 'JP': { currency: '¥ JPY', phone: '+81' },
+  'KR': { currency: '₩ KRW', phone: '+82' }, 'SG': { currency: '$ SGD', phone: '+65' },
+  'HK': { currency: '$ HKD', phone: '+852' }, 'AE': { currency: 'د.إ AED', phone: '+971' },
+  'SA': { currency: '﷼ SAR', phone: '+966' }, 'QA': { currency: '﷼ QAR', phone: '+974' },
+  'KW': { currency: 'د.ك KWD', phone: '+965' }, 'BH': { currency: '.د.ب BHD', phone: '+973' },
+  'BR': { currency: 'R$ BRL', phone: '+55' }, 'MX': { currency: '$ MXN', phone: '+52' },
+  'AR': { currency: '$ ARS', phone: '+54' }, 'CO': { currency: '$ COP', phone: '+57' },
+  'CL': { currency: '$ CLP', phone: '+56' }, 'ZA': { currency: 'R ZAR', phone: '+27' },
+  'NG': { currency: '₦ NGN', phone: '+234' }, 'KE': { currency: 'KSh KES', phone: '+254' },
+  'EG': { currency: '£ EGP', phone: '+20' }, 'NZ': { currency: '$ NZD', phone: '+64' },
+  'TH': { currency: '฿ THB', phone: '+66' }, 'MY': { currency: 'RM MYR', phone: '+60' },
+  'PH': { currency: '₱ PHP', phone: '+63' }, 'ID': { currency: 'Rp IDR', phone: '+62' },
+  'TR': { currency: '₺ TRY', phone: '+90' }, 'IL': { currency: '₪ ILS', phone: '+972' }
+};
+
+function setCountry(code) {
+  var d = countryData[code];
+  if (!d) return;
+  document.getElementById('currencyText').textContent = 'Billing currency: ' + d.currency;
+  document.getElementById('currencyBadge').style.display = 'inline-flex';
+  var sel = document.getElementById('phoneCode');
+  for (var i = 0; i < sel.options.length; i++) {
+    if (sel.options[i].value === d.phone) { sel.selectedIndex = i; break; }
+  }
+}
+
+// Password strength
+function checkPw() {
+  var pw = document.getElementById('password').value;
+  var score = 0;
+  if (pw.length >= 8) score++;
+  if (/[A-Z]/.test(pw)) score++;
+  if (/[0-9]/.test(pw)) score++;
+  if (/[^A-Za-z0-9]/.test(pw)) score++;
+
+  var bars = [document.getElementById('pw1'), document.getElementById('pw2'), document.getElementById('pw3'), document.getElementById('pw4')];
+  var label = document.getElementById('pwLabel');
+  bars.forEach(function(b) { b.className = 'pw-bar'; });
+
+  if (pw.length === 0) { label.textContent = ''; return; }
+  if (score <= 1) {
+    bars[0].classList.add('weak');
+    label.textContent = 'Weak'; label.style.color = 'var(--red)';
+  } else if (score === 2) {
+    bars[0].classList.add('medium'); bars[1].classList.add('medium');
+    label.textContent = 'Fair'; label.style.color = '#D97706';
+  } else if (score === 3) {
+    bars[0].classList.add('strong'); bars[1].classList.add('strong'); bars[2].classList.add('strong');
+    label.textContent = 'Good'; label.style.color = 'var(--green)';
+  } else {
+    bars.forEach(function(b) { b.classList.add('strong'); });
+    label.textContent = 'Strong'; label.style.color = 'var(--green)';
+  }
+}
+
+// T&C toggle
+function toggleTC() {
+  document.querySelector('.tc-row').classList.toggle('checked');
+}
+
+// Submit
+function submitForm() {
+  // Reset errors
+  document.querySelectorAll('.field-error').forEach(function(e) { e.style.display = 'none'; });
+  document.querySelectorAll('.field-input').forEach(function(e) { e.classList.remove('error'); });
+
+  var valid = true;
+
+  // DOB — must be 18+
+  var dob = document.getElementById('dob').value;
+  if (dob) {
+    var age = Math.floor((new Date() - new Date(dob)) / (365.25 * 24 * 60 * 60 * 1000));
+    if (age < 18) {
+      document.getElementById('dob').classList.add('error');
+      document.getElementById('dobError').style.display = 'block';
+      valid = false;
+    }
+  }
+
+  // Password match
+  var pw = document.getElementById('password').value;
+  var confirm = document.getElementById('confirmPassword').value;
+  if (pw !== confirm) {
+    document.getElementById('confirmError').style.display = 'block';
+    document.getElementById('confirmPassword').classList.add('error');
+    valid = false;
+  }
+
+  if (!valid) return;
+
+  if (!document.querySelector('.tc-row').classList.contains('checked')) {
+    alert('Please accept the Terms of Service and Privacy Policy.');
+    return;
+  }
+  document.getElementById('successOverlay').style.display = 'flex';
+}
+</script>
+
+</body>
+</html>

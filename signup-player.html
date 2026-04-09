@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join FSP — Sign Up</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blue: #1400FF;
+  --blue-light: rgba(20, 0, 255, 0.06);
+  --blue-mid: rgba(20, 0, 255, 0.12);
+  --dark: #1A1A2E;
+  --mid: #5C5C7A;
+  --muted: #9A9AB0;
+  --border: #E4E4EE;
+  --bg-light: #F5F5FA;
+  --bg-subtle: #F7F7FA;
+  --white: #FFFFFF;
+  --green: #059669;
+  --green-bg: rgba(5, 150, 105, 0.08);
+  --red: #DC2626;
+  --red-bg: rgba(220, 38, 38, 0.06);
+  --gold: #C9952B;
+  --gold-bg: rgba(201, 149, 43, 0.08);
+  --r: 14px;
+  --rs: 10px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: var(--bg-subtle);
+  color: var(--dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 32px;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--dark);
+  text-decoration: none;
+}
+.nav-logo-icon {
+  width: 34px;
+  height: 34px;
+  background: var(--blue);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-login {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--mid);
+}
+.nav-login a {
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 700;
+}
+.nav-login a:hover { text-decoration: underline; }
+
+/* LAYOUT */
+.page {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 24px 60px;
+}
+.container {
+  width: 100%;
+  max-width: 480px;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--blue-light);
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  letter-spacing: 0.03em;
+}
+.header h1 {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--dark);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+.header p {
+  font-size: 14px;
+  color: var(--mid);
+  line-height: 1.6;
+}
+
+/* INVITE BANNER */
+.invite-banner {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  background: var(--gold-bg);
+  border: 1.5px solid rgba(201, 149, 43, 0.2);
+  border-radius: var(--r);
+  padding: 14px 16px;
+  margin-bottom: 24px;
+}
+.invite-banner.show { display: flex; }
+.invite-ico {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--white);
+  border: 1.5px solid rgba(201, 149, 43, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.invite-info {
+  flex: 1;
+}
+.invite-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--dark);
+}
+.invite-detail {
+  font-size: 11px;
+  color: var(--mid);
+  margin-top: 2px;
+}
+.invite-badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--gold-bg);
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+/* CARD */
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+/* FORM FIELDS */
+.field {
+  margin-bottom: 18px;
+}
+.field-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+.field-hint {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--muted);
+  margin-left: 4px;
+}
+.field-input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: 500;
+  color: var(--dark);
+  background: var(--bg-subtle);
+  border: 1.5px solid var(--border);
+  border-radius: var(--rs);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.field-input:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(20, 0, 255, 0.08);
+}
+.field-input::placeholder {
+  color: var(--muted);
+  font-weight: 400;
+}
+.field-input.error {
+  border-color: var(--red);
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.08);
+}
+.field-error {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--red);
+  margin-top: 4px;
+  display: none;
+}
+
+/* SELECT */
+.field-select {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: 500;
+  color: var(--dark);
+  background: var(--bg-subtle);
+  border: 1.5px solid var(--border);
+  border-radius: var(--rs);
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%239A9AB0' stroke-width='2.5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.field-select:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(20, 0, 255, 0.08);
+}
+
+/* ROW */
+.field-row {
+  display: flex;
+  gap: 14px;
+}
+.field-row .field { flex: 1; }
+
+/* PHONE */
+.phone-row { display: flex; gap: 0; }
+.phone-code {
+  width: 100px;
+  flex-shrink: 0;
+  padding: 12px 10px;
+  font-size: 13px;
+  font-family: inherit;
+  font-weight: 600;
+  color: var(--dark);
+  background: var(--bg-light);
+  border: 1.5px solid var(--border);
+  border-right: none;
+  border-radius: var(--rs) 0 0 var(--rs);
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%239A9AB0' stroke-width='2.5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  cursor: pointer;
+}
+.phone-number {
+  flex: 1;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: 500;
+  color: var(--dark);
+  background: var(--bg-subtle);
+  border: 1.5px solid var(--border);
+  border-radius: 0 var(--rs) var(--rs) 0;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.phone-number:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(20, 0, 255, 0.08);
+}
+
+/* HANDLE */
+.handle-wrap { position: relative; }
+.handle-wrap .field-input { padding-left: 28px; }
+.handle-at {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--muted);
+  pointer-events: none;
+}
+.handle-status {
+  display: none;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+.handle-status.available { display: flex; color: var(--green); }
+.handle-status.taken { display: flex; color: var(--red); }
+
+/* CURRENCY BADGE */
+.currency-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--green-bg);
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin-top: 8px;
+  transition: opacity 0.2s;
+}
+
+/* PASSWORD STRENGTH */
+.pw-strength { display: flex; gap: 4px; margin-top: 8px; }
+.pw-bar { flex: 1; height: 4px; background: var(--border); border-radius: 2px; transition: background 0.2s; }
+.pw-bar.weak { background: var(--red); }
+.pw-bar.medium { background: #D97706; }
+.pw-bar.strong { background: var(--green); }
+.pw-label { font-size: 10px; font-weight: 600; margin-top: 4px; }
+
+/* DIVIDER */
+.divider { display: flex; align-items: center; gap: 12px; margin: 24px 0; }
+.divider-line { flex: 1; height: 1px; background: var(--border); }
+.divider-text { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+
+/* SOCIAL */
+.social-row { display: flex; gap: 10px; margin-bottom: 24px; }
+.social-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 0;
+  font-size: 13px;
+  font-family: inherit;
+  font-weight: 600;
+  color: var(--dark);
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--rs);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.social-btn:hover { border-color: var(--dark); background: var(--bg-light); }
+
+/* T&C */
+.tc-row { display: flex; align-items: flex-start; gap: 10px; margin: 20px 0; cursor: pointer; }
+.tc-box {
+  width: 18px; height: 18px; border-radius: 5px;
+  border: 2px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 1px; transition: all 0.15s;
+}
+.tc-row.checked .tc-box { background: var(--blue); border-color: var(--blue); }
+.tc-row.checked .tc-box svg { opacity: 1; }
+.tc-box svg { opacity: 0; transition: opacity 0.15s; }
+.tc-text { font-size: 12px; color: var(--mid); line-height: 1.6; }
+.tc-text a { color: var(--blue); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
+.tc-text a:hover { color: #0b00cc; }
+
+/* SUBMIT */
+.submit-btn {
+  width: 100%;
+  padding: 14px 0;
+  font-size: 15px;
+  font-family: inherit;
+  font-weight: 800;
+  color: #fff;
+  background: var(--blue);
+  border: none;
+  border-radius: var(--rs);
+  cursor: pointer;
+  transition: all 0.15s;
+  box-shadow: 0 2px 8px rgba(20, 0, 255, 0.25);
+}
+.submit-btn:hover { box-shadow: 0 4px 16px rgba(20, 0, 255, 0.35); transform: translateY(-1px); }
+
+/* FOOTER */
+.form-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.form-footer a { color: var(--blue); text-decoration: none; font-weight: 600; }
+
+/* INVITE CODE SECTION */
+.invite-section {
+  margin-bottom: 18px;
+}
+.invite-input-row {
+  display: flex;
+  gap: 10px;
+}
+.invite-input-row .field-input { flex: 1; }
+.invite-apply {
+  padding: 12px 18px;
+  font-size: 13px;
+  font-family: inherit;
+  font-weight: 700;
+  color: var(--blue);
+  background: var(--blue-light);
+  border: 1.5px solid rgba(20, 0, 255, 0.15);
+  border-radius: var(--rs);
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.invite-apply:hover { background: var(--blue-mid); }
+.invite-result {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 6px;
+}
+.invite-result.valid { display: flex; color: var(--green); }
+.invite-result.invalid { display: flex; color: var(--red); }
+
+/* SUCCESS OVERLAY */
+.success-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 26, 46, 0.6);
+  backdrop-filter: blur(6px);
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+}
+.success-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  max-width: 420px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+.success-icon {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--green-bg);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 16px;
+}
+.success-card h2 { font-size: 20px; font-weight: 800; margin-bottom: 8px; }
+.success-card p { font-size: 13px; color: var(--mid); line-height: 1.6; margin-bottom: 24px; }
+.success-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 28px;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: 800;
+  color: #fff;
+  background: var(--blue);
+  border: none;
+  border-radius: var(--rs);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(20, 0, 255, 0.25);
+  transition: all 0.15s;
+  text-decoration: none;
+}
+.success-btn:hover { box-shadow: 0 4px 16px rgba(20, 0, 255, 0.35); transform: translateY(-1px); }
+
+/* WHAT IS */
+.what-is {
+  margin-top: 28px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 20px 24px;
+}
+.what-is-title {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 12px;
+}
+.what-is-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.what-is-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.what-is-ico {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.what-is-ico.blue { background: var(--blue-light); }
+.what-is-ico.green { background: var(--green-bg); }
+.what-is-ico.gold { background: var(--gold-bg); }
+.what-is-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--dark);
+}
+.what-is-desc {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.4;
+  margin-top: 2px;
+}
+
+@media (max-width: 540px) {
+  .card { padding: 24px 20px; }
+  .field-row { flex-direction: column; gap: 0; }
+  .social-row { flex-direction: column; }
+  .what-is-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="nav">
+  <a href="/" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+    </div>
+    FSP
+  </a>
+  <div class="nav-login">Already have an account? <a href="#">Log in</a></div>
+</div>
+
+<!-- PAGE -->
+<div class="page">
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+      <div class="header-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        Future of Sports Protocol
+      </div>
+      <h1>Join FSP</h1>
+      <p>Sign up to compete in arenas, join captain networks, and earn rewards.</p>
+    </div>
+
+    <!-- INVITE BANNER (shown when arriving from invite link) -->
+    <div class="invite-banner" id="inviteBanner">
+      <div class="invite-ico">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <div class="invite-info">
+        <div class="invite-title" id="inviteTitle">You've been invited to NELK Boys Arena</div>
+        <div class="invite-detail" id="inviteDetail">Invited by @nelkboys as a Captain · World Pong</div>
+      </div>
+      <div class="invite-badge" id="inviteRole">Captain</div>
+    </div>
+
+    <!-- FORM CARD -->
+    <div class="card">
+
+      <!-- SOCIAL -->
+      <div class="social-row">
+        <button class="social-btn" onclick="alert('Google OAuth flow')">
+          <svg width="16" height="16" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          Google
+        </button>
+        <button class="social-btn" onclick="alert('Apple OAuth flow')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--dark)"><path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+          Apple
+        </button>
+      </div>
+
+      <div class="divider">
+        <div class="divider-line"></div>
+        <span class="divider-text">or sign up with email</span>
+        <div class="divider-line"></div>
+      </div>
+
+      <!-- NAME -->
+      <div class="field-row">
+        <div class="field">
+          <label class="field-label">First Name</label>
+          <input type="text" class="field-input" id="firstName" placeholder="e.g. Jake">
+        </div>
+        <div class="field">
+          <label class="field-label">Last Name</label>
+          <input type="text" class="field-input" id="lastName" placeholder="e.g. Paul">
+        </div>
+      </div>
+
+      <!-- HANDLE -->
+      <div class="field">
+        <label class="field-label">Display Name <span class="field-hint">Your public @handle on FSP</span></label>
+        <div class="handle-wrap">
+          <span class="handle-at">@</span>
+          <input type="text" class="field-input" id="handle" placeholder="e.g. jakepaul" oninput="checkHandle()">
+        </div>
+        <div class="handle-status" id="handleAvailable"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <span id="handleAvailText"></span></div>
+        <div class="handle-status" id="handleTaken"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> <span id="handleTakenText"></span></div>
+      </div>
+
+      <!-- DOB -->
+      <div class="field">
+        <label class="field-label">Date of Birth</label>
+        <input type="date" class="field-input" id="dob">
+      </div>
+
+      <!-- EMAIL -->
+      <div class="field">
+        <label class="field-label">Email Address</label>
+        <input type="email" class="field-input" id="email" placeholder="you@example.com">
+        <div class="field-error" id="emailError">Please enter a valid email address.</div>
+      </div>
+
+      <!-- COUNTRY -->
+      <div class="field">
+        <label class="field-label">Country</label>
+        <select class="field-select" id="country" onchange="onCountryChange()">
+          <option value="" disabled selected>Select your country</option>
+        </select>
+        <div class="currency-badge" id="currencyBadge" style="display:none">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span id="currencyText"></span>
+        </div>
+      </div>
+
+      <!-- PHONE -->
+      <div class="field">
+        <label class="field-label">Phone Number</label>
+        <div class="phone-row">
+          <select class="phone-code" id="phoneCode"></select>
+          <input type="tel" class="phone-number" id="phone" placeholder="Enter phone number">
+        </div>
+      </div>
+
+      <!-- PASSWORD -->
+      <div class="field">
+        <label class="field-label">Password</label>
+        <input type="password" class="field-input" id="password" placeholder="Min 8 characters" oninput="checkPw()">
+        <div class="pw-strength">
+          <div class="pw-bar" id="pw1"></div>
+          <div class="pw-bar" id="pw2"></div>
+          <div class="pw-bar" id="pw3"></div>
+          <div class="pw-bar" id="pw4"></div>
+        </div>
+        <div class="pw-label" id="pwLabel" style="color:var(--muted)"></div>
+      </div>
+
+      <div class="field">
+        <label class="field-label">Confirm Password</label>
+        <input type="password" class="field-input" id="confirmPassword" placeholder="Re-enter password">
+        <div class="field-error" id="confirmError">Passwords do not match.</div>
+      </div>
+
+      <!-- INVITE / ARENA CODE -->
+      <div class="invite-section">
+        <label class="field-label">Invite or Arena Code <span class="field-hint">Optional</span></label>
+        <div class="invite-input-row">
+          <input type="text" class="field-input" id="inviteCode" placeholder="e.g. NELK2026 or paste invite link">
+          <button class="invite-apply" onclick="applyCode()">Apply</button>
+        </div>
+        <div class="invite-result" id="inviteValid"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <span id="inviteValidText"></span></div>
+        <div class="invite-result" id="inviteInvalid"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Code not recognised — you can still sign up without one.</div>
+      </div>
+
+      <!-- T&C -->
+      <div class="tc-row" id="tcRow" onclick="toggleTC()">
+        <div class="tc-box"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="tc-text">I agree to FSP's <a href="terms-and-conditions" onclick="event.stopPropagation()">Terms of Service</a> and <a href="privacy-policy" onclick="event.stopPropagation()">Privacy Policy</a></div>
+      </div>
+
+      <!-- SUBMIT -->
+      <button class="submit-btn" onclick="submitForm()">Create Account</button>
+
+      <div class="form-footer">
+        Want to host your own arena instead? <a href="signup-arena">Sign up as an Arena Host</a>
+      </div>
+    </div>
+
+    <!-- WHAT IS FSP -->
+    <div class="what-is">
+      <div class="what-is-title">What can you do on FSP?</div>
+      <div class="what-is-grid">
+        <div class="what-is-item">
+          <div class="what-is-ico blue"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+          <div><div class="what-is-label">Compete</div><div class="what-is-desc">Play in arenas across 8 sports and climb the rankings</div></div>
+        </div>
+        <div class="what-is-item">
+          <div class="what-is-ico gold"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <div><div class="what-is-label">Captain</div><div class="what-is-desc">Lead a team, recruit challengers, and earn from the captain pool</div></div>
+        </div>
+        <div class="what-is-item">
+          <div class="what-is-ico green"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <div><div class="what-is-label">Earn</div><div class="what-is-desc">Win cash prizes, sponsor rewards, and custom prizes</div></div>
+        </div>
+        <div class="what-is-item">
+          <div class="what-is-ico blue"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <div><div class="what-is-label">Rise</div><div class="what-is-desc">Get promoted from Challenger to Premier division based on performance</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SUCCESS OVERLAY -->
+<div class="success-overlay" id="successOverlay">
+  <div class="success-card">
+    <div class="success-icon">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <h2 id="successTitle">You're in</h2>
+    <p id="successDesc">Your FSP account is ready. Explore arenas, join as a challenger, or accept your captain invite.</p>
+    <a href="arena" class="success-btn" id="successBtn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      Explore Arenas
+    </a>
+  </div>
+</div>
+
+<script>
+// ═══ COUNTRY + CURRENCY DATA ═══
+const COUNTRIES = [
+  { name: 'United States', code: 'US', dial: '+1', currency: 'USD', symbol: '$' },
+  { name: 'United Kingdom', code: 'GB', dial: '+44', currency: 'GBP', symbol: '£' },
+  { name: 'Canada', code: 'CA', dial: '+1', currency: 'CAD', symbol: 'CA$' },
+  { name: 'Australia', code: 'AU', dial: '+61', currency: 'AUD', symbol: 'A$' },
+  { name: 'India', code: 'IN', dial: '+91', currency: 'INR', symbol: '₹' },
+  { name: 'Germany', code: 'DE', dial: '+49', currency: 'EUR', symbol: '€' },
+  { name: 'France', code: 'FR', dial: '+33', currency: 'EUR', symbol: '€' },
+  { name: 'Spain', code: 'ES', dial: '+34', currency: 'EUR', symbol: '€' },
+  { name: 'Italy', code: 'IT', dial: '+39', currency: 'EUR', symbol: '€' },
+  { name: 'Netherlands', code: 'NL', dial: '+31', currency: 'EUR', symbol: '€' },
+  { name: 'Belgium', code: 'BE', dial: '+32', currency: 'EUR', symbol: '€' },
+  { name: 'Austria', code: 'AT', dial: '+43', currency: 'EUR', symbol: '€' },
+  { name: 'Ireland', code: 'IE', dial: '+353', currency: 'EUR', symbol: '€' },
+  { name: 'Portugal', code: 'PT', dial: '+351', currency: 'EUR', symbol: '€' },
+  { name: 'Finland', code: 'FI', dial: '+358', currency: 'EUR', symbol: '€' },
+  { name: 'Greece', code: 'GR', dial: '+30', currency: 'EUR', symbol: '€' },
+  { name: 'Switzerland', code: 'CH', dial: '+41', currency: 'CHF', symbol: 'CHF' },
+  { name: 'Sweden', code: 'SE', dial: '+46', currency: 'SEK', symbol: 'kr' },
+  { name: 'Norway', code: 'NO', dial: '+47', currency: 'NOK', symbol: 'kr' },
+  { name: 'Denmark', code: 'DK', dial: '+45', currency: 'DKK', symbol: 'kr' },
+  { name: 'Japan', code: 'JP', dial: '+81', currency: 'JPY', symbol: '¥' },
+  { name: 'South Korea', code: 'KR', dial: '+82', currency: 'KRW', symbol: '₩' },
+  { name: 'China', code: 'CN', dial: '+86', currency: 'CNY', symbol: '¥' },
+  { name: 'Singapore', code: 'SG', dial: '+65', currency: 'SGD', symbol: 'S$' },
+  { name: 'Hong Kong', code: 'HK', dial: '+852', currency: 'HKD', symbol: 'HK$' },
+  { name: 'New Zealand', code: 'NZ', dial: '+64', currency: 'NZD', symbol: 'NZ$' },
+  { name: 'Brazil', code: 'BR', dial: '+55', currency: 'BRL', symbol: 'R$' },
+  { name: 'Mexico', code: 'MX', dial: '+52', currency: 'MXN', symbol: 'MX$' },
+  { name: 'Argentina', code: 'AR', dial: '+54', currency: 'ARS', symbol: 'AR$' },
+  { name: 'Colombia', code: 'CO', dial: '+57', currency: 'COP', symbol: 'COL$' },
+  { name: 'Chile', code: 'CL', dial: '+56', currency: 'CLP', symbol: 'CL$' },
+  { name: 'South Africa', code: 'ZA', dial: '+27', currency: 'ZAR', symbol: 'R' },
+  { name: 'Nigeria', code: 'NG', dial: '+234', currency: 'NGN', symbol: '₦' },
+  { name: 'Kenya', code: 'KE', dial: '+254', currency: 'KES', symbol: 'KSh' },
+  { name: 'Ghana', code: 'GH', dial: '+233', currency: 'GHS', symbol: 'GH₵' },
+  { name: 'Egypt', code: 'EG', dial: '+20', currency: 'EGP', symbol: 'E£' },
+  { name: 'Morocco', code: 'MA', dial: '+212', currency: 'MAD', symbol: 'MAD' },
+  { name: 'United Arab Emirates', code: 'AE', dial: '+971', currency: 'AED', symbol: 'AED' },
+  { name: 'Saudi Arabia', code: 'SA', dial: '+966', currency: 'SAR', symbol: 'SAR' },
+  { name: 'Qatar', code: 'QA', dial: '+974', currency: 'QAR', symbol: 'QAR' },
+  { name: 'Israel', code: 'IL', dial: '+972', currency: 'ILS', symbol: '₪' },
+  { name: 'Turkey', code: 'TR', dial: '+90', currency: 'TRY', symbol: '₺' },
+  { name: 'Poland', code: 'PL', dial: '+48', currency: 'PLN', symbol: 'zł' },
+  { name: 'Czech Republic', code: 'CZ', dial: '+420', currency: 'CZK', symbol: 'Kč' },
+  { name: 'Romania', code: 'RO', dial: '+40', currency: 'RON', symbol: 'lei' },
+  { name: 'Hungary', code: 'HU', dial: '+36', currency: 'HUF', symbol: 'Ft' },
+  { name: 'Thailand', code: 'TH', dial: '+66', currency: 'THB', symbol: '฿' },
+  { name: 'Malaysia', code: 'MY', dial: '+60', currency: 'MYR', symbol: 'RM' },
+  { name: 'Indonesia', code: 'ID', dial: '+62', currency: 'IDR', symbol: 'Rp' },
+  { name: 'Philippines', code: 'PH', dial: '+63', currency: 'PHP', symbol: '₱' },
+  { name: 'Vietnam', code: 'VN', dial: '+84', currency: 'VND', symbol: '₫' },
+  { name: 'Pakistan', code: 'PK', dial: '+92', currency: 'PKR', symbol: 'Rs' },
+  { name: 'Bangladesh', code: 'BD', dial: '+880', currency: 'BDT', symbol: '৳' },
+  { name: 'Sri Lanka', code: 'LK', dial: '+94', currency: 'LKR', symbol: 'Rs' },
+  { name: 'Taiwan', code: 'TW', dial: '+886', currency: 'TWD', symbol: 'NT$' },
+];
+
+COUNTRIES.sort((a, b) => a.name.localeCompare(b.name));
+
+// Populate country select
+const countryEl = document.getElementById('country');
+const phoneCodeEl = document.getElementById('phoneCode');
+
+COUNTRIES.forEach(c => {
+  const opt = document.createElement('option');
+  opt.value = c.code;
+  opt.textContent = `${c.name}  ·  ${c.symbol} ${c.currency}`;
+  countryEl.appendChild(opt);
+});
+
+// Populate phone codes
+const uniqueDials = [];
+COUNTRIES.forEach(c => {
+  if (!uniqueDials.find(d => d.dial === c.dial)) {
+    uniqueDials.push({ dial: c.dial, code: c.code, name: c.name });
+  }
+});
+uniqueDials.sort((a, b) => a.name.localeCompare(b.name));
+uniqueDials.forEach(d => {
+  const opt = document.createElement('option');
+  opt.value = d.dial;
+  opt.textContent = d.dial;
+  opt.title = d.name;
+  phoneCodeEl.appendChild(opt);
+});
+
+// Country change
+function onCountryChange() {
+  const code = countryEl.value;
+  const country = COUNTRIES.find(c => c.code === code);
+  if (!country) return;
+  document.getElementById('currencyBadge').style.display = 'inline-flex';
+  document.getElementById('currencyText').textContent = `Currency: ${country.symbol} ${country.currency}`;
+  phoneCodeEl.value = country.dial;
+}
+
+// Handle check (simulated)
+let handleTimer;
+function checkHandle() {
+  const val = document.getElementById('handle').value.trim().toLowerCase().replace(/[^a-z0-9_]/g, '');
+  document.getElementById('handle').value = val;
+  document.getElementById('handleAvailable').className = 'handle-status';
+  document.getElementById('handleTaken').className = 'handle-status';
+  if (val.length < 3) return;
+  clearTimeout(handleTimer);
+  handleTimer = setTimeout(() => {
+    const taken = ['fsp', 'nike', 'admin', 'support', 'nelkboys'];
+    if (taken.includes(val)) {
+      document.getElementById('handleTaken').className = 'handle-status taken';
+      document.getElementById('handleTakenText').textContent = '@' + val + ' is taken';
+    } else {
+      document.getElementById('handleAvailable').className = 'handle-status available';
+      document.getElementById('handleAvailText').textContent = '@' + val + ' is available';
+    }
+  }, 400);
+}
+
+// Invite code (simulated)
+function applyCode() {
+  const code = document.getElementById('inviteCode').value.trim();
+  document.getElementById('inviteValid').className = 'invite-result';
+  document.getElementById('inviteInvalid').className = 'invite-result';
+  if (!code) return;
+
+  // Simulated: "NELK2026" is a valid captain invite, "ARENA123" is a valid arena code
+  const validCodes = {
+    'NELK2026': { type: 'Captain Invite', arena: 'NELK Boys Arena', sport: 'World Pong' },
+    'ARENA123': { type: 'Arena Code', arena: 'Street Hoops League', sport: 'Basketball' },
+  };
+
+  const match = validCodes[code.toUpperCase()];
+  if (match) {
+    document.getElementById('inviteValid').className = 'invite-result valid';
+    document.getElementById('inviteValidText').textContent = `${match.type} — ${match.arena} · ${match.sport}`;
+    // Show banner
+    const banner = document.getElementById('inviteBanner');
+    banner.classList.add('show');
+    document.getElementById('inviteTitle').textContent = `You've been invited to ${match.arena}`;
+    document.getElementById('inviteDetail').textContent = `${match.type} · ${match.sport}`;
+    document.getElementById('inviteRole').textContent = match.type.split(' ')[0];
+  } else {
+    document.getElementById('inviteInvalid').className = 'invite-result invalid';
+  }
+}
+
+// T&C
+let tcAccepted = false;
+function toggleTC() {
+  tcAccepted = !tcAccepted;
+  document.getElementById('tcRow').classList.toggle('checked', tcAccepted);
+}
+
+// Password strength
+function checkPw() {
+  const pw = document.getElementById('password').value;
+  const bars = [document.getElementById('pw1'), document.getElementById('pw2'), document.getElementById('pw3'), document.getElementById('pw4')];
+  const label = document.getElementById('pwLabel');
+  bars.forEach(b => b.className = 'pw-bar');
+  label.textContent = '';
+  if (pw.length === 0) return;
+  let score = 0;
+  if (pw.length >= 8) score++;
+  if (/[A-Z]/.test(pw)) score++;
+  if (/[0-9]/.test(pw)) score++;
+  if (/[^A-Za-z0-9]/.test(pw)) score++;
+  const levels = ['', 'weak', 'medium', 'medium', 'strong'];
+  const labels = ['', 'Weak', 'Fair', 'Good', 'Strong'];
+  const colors = ['', 'var(--red)', '#D97706', '#D97706', 'var(--green)'];
+  for (let i = 0; i < score; i++) bars[i].classList.add(levels[score]);
+  label.textContent = labels[score];
+  label.style.color = colors[score];
+}
+
+// Submit
+function submitForm() {
+  const firstName = document.getElementById('firstName').value.trim();
+  const lastName = document.getElementById('lastName').value.trim();
+  const handle = document.getElementById('handle').value.trim();
+  const dob = document.getElementById('dob').value;
+  const email = document.getElementById('email').value.trim();
+  const country = document.getElementById('country').value;
+  const password = document.getElementById('password').value;
+  const confirm = document.getElementById('confirmPassword').value;
+
+  document.querySelectorAll('.field-error').forEach(e => e.style.display = 'none');
+  document.querySelectorAll('.field-input').forEach(e => e.classList.remove('error'));
+
+  let valid = true;
+  if (!firstName || !lastName) valid = false;
+  if (!handle || handle.length < 3) valid = false;
+  if (!dob) valid = false;
+  if (!email || !email.includes('@')) {
+    document.getElementById('email').classList.add('error');
+    document.getElementById('emailError').style.display = 'block';
+    valid = false;
+  }
+  if (!country) valid = false;
+  if (password.length < 8) valid = false;
+  if (password !== confirm) {
+    document.getElementById('confirmPassword').classList.add('error');
+    document.getElementById('confirmError').style.display = 'block';
+    valid = false;
+  }
+  if (!tcAccepted) {
+    alert('Please accept the Terms of Service and Privacy Policy.');
+    valid = false;
+  }
+  if (!valid) return;
+
+  // Customise success based on invite
+  const banner = document.getElementById('inviteBanner');
+  if (banner.classList.contains('show')) {
+    document.getElementById('successTitle').textContent = 'Welcome to the arena';
+    document.getElementById('successDesc').textContent = 'Your account is ready. Accept your invite and start competing.';
+    document.getElementById('successBtn').textContent = '  Accept Invite & Enter Arena';
+  }
+
+  document.getElementById('successOverlay').style.display = 'flex';
+}
+
+// Check URL for invite param on load (simulated)
+(function() {
+  const params = new URLSearchParams(window.location.search);
+  const invite = params.get('invite');
+  if (invite) {
+    document.getElementById('inviteCode').value = invite;
+    applyCode();
+  }
+})();
+</script>
+
+</body>
+</html>
