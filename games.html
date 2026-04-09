@@ -24,8 +24,22 @@
   <link rel="stylesheet" href="/src/css/main.css">
   <link rel="stylesheet" href="/src/css/business.css">
   <link rel="stylesheet" href="/src/css/games.css">
+  <link rel="stylesheet" href="/src/css/wps-landing-v20.css">
+  <link rel="stylesheet" href="/src/css/wbl-landing-v20.css">
   <link rel="stylesheet" href="/fsp-games/css/style.css">
-  <!-- WBL/WPS CSS loaded dynamically when their tabs are activated (prevents Bootstrap pollution) -->
+  <!-- WBL CSS Files (legacy) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/wbl/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/wbl/css/style.css">
+  <link rel="stylesheet" href="/wbl/css/style-new.css">
+  <link rel="stylesheet" href="/wbl/css/responsive.css">
+  <link rel="stylesheet" href="/wbl/css/navbar-left.css">
+  <link rel="stylesheet" href="/wbl/css/navbar-left-responsive.css">
+  <link rel="stylesheet" href="/wbl/css/wbl-light-theme.css">
+  <link rel="stylesheet" href="/wbl/css/wbl-hero-images.css">
+  <link rel="stylesheet" href="/wbl/css/wbl-updates-ticker.css">
+  <link rel="stylesheet" href="/wbl/css/wps-logos-cards.css">
   <style>
     .snapchat-grid{
       display:grid;
@@ -4266,43 +4280,6 @@
       link.addEventListener('click', (e) => e.preventDefault());
     });
 
-    // Dynamic CSS loader for WBL/WPS sections (prevents Bootstrap pollution)
-    var _wblCssLoaded = false;
-    var _wpsCssLoaded = false;
-    function loadWblCss() {
-      if (_wblCssLoaded) return;
-      _wblCssLoaded = true;
-      var wblSheets = [
-        'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css',
-        'https://unpkg.com/aos@2.3.1/dist/aos.css',
-        '/wbl/css/bootstrap.min.css',
-        '/wbl/css/style.css',
-        '/wbl/css/style-new.css',
-        '/wbl/css/responsive.css',
-        '/wbl/css/navbar-left.css',
-        '/wbl/css/navbar-left-responsive.css',
-        '/wbl/css/wbl-light-theme.css',
-        '/wbl/css/wbl-hero-images.css',
-        '/wbl/css/wbl-updates-ticker.css',
-        '/wbl/css/wps-logos-cards.css',
-        '/src/css/wbl-landing-v20.css'
-      ];
-      wblSheets.forEach(function(href) {
-        var link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = href;
-        document.head.appendChild(link);
-      });
-    }
-    function loadWpsCss() {
-      if (_wpsCssLoaded) return;
-      _wpsCssLoaded = true;
-      var link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.href = '/src/css/wps-landing-v20.css';
-      document.head.appendChild(link);
-    }
-
     // Games Navigation Toggle
     const gamesNavItems = document.querySelectorAll('.games-nav-item');
     const fspGamesContent = document.getElementById('fsp-games-content');
@@ -4375,11 +4352,9 @@
           worldsBestContent.style.display = 'block';
           history.pushState({ section: 'worlds-best' }, '', '/games/worlds-best');
         } else if (isWBL && wblContent) {
-          loadWblCss();
           wblContent.style.display = 'block';
           history.pushState({ section: 'wbl' }, '', '/games/wbl');
         } else if (isWPS && wpsContent) {
-          loadWpsCss();
           wpsContent.style.display = 'block';
           history.pushState({ section: 'wps' }, '', '/games/wps');
         } else if (isVaunt && vauntContent) {
@@ -4404,8 +4379,6 @@
       var target = contentMap[segment];
 
       if (target) {
-        if (segment === 'wbl') loadWblCss();
-        if (segment === 'wps') loadWpsCss();
         if (fspGamesContent) fspGamesContent.style.display = 'none';
         if (worldsBestContent) worldsBestContent.style.display = 'none';
         if (wblContent) wblContent.style.display = 'none';
